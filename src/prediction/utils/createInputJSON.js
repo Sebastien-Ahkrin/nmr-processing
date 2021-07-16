@@ -2,11 +2,10 @@ import {
   getGroupedDiastereotopicAtomIDs,
   getHoseCodesFromDiastereotopicID,
 } from 'openchemlib-utils';
-import OCL from 'openchemlib/minimal';
 
 export function createInputJSON(molecule, options) {
   const { levels } = options;
-
+  const OCL = molecule.getOCL();
   let diaIDs = getGroupedDiastereotopicAtomIDs(molecule);
 
   diaIDs = diaIDs
