@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.5.1](https://www.github.com/cheminfo/nmr-processing/compare/v1.5.0...v1.5.1) (2021-07-16)
+
+
+### Bug Fixes
+
+* don't need openchemlib as dependency ([edecc62](https://www.github.com/cheminfo/nmr-processing/commit/edecc621b47b2c34982b807334429b4344d714b0))
+
 ## [1.5.0](https://www.github.com/cheminfo/nmr-processing/compare/v1.4.0...v1.5.0) (2021-07-15)
 
 
