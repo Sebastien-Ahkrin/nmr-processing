@@ -55,6 +55,7 @@ describe('predictProton', () => {
       'joinedSignals',
       'signals',
       'ranges',
+      'molecule',
     ]);
     let firstSignal = prediction.signals[0];
     expect(firstSignal).toStrictEqual({

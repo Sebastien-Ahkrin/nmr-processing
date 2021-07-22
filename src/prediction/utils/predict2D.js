@@ -118,6 +118,7 @@ export async function predict2D(molecule, options = {}) {
     joinedSignals,
     signals: splitSignals(joinedSignals),
     zones,
+    molecule,
   };
 }
 
