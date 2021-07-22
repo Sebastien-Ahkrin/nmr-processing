@@ -14,7 +14,7 @@ import { signalsToRanges } from '../signals/signalsToRanges.js';
  * @param {Molecule} molecule - OCL Molecule instance.
  * @param {object} [options={}]
  * @param {function} [options.cache] A callback receiving a molfile and the result
- * @return {Promise<Array>}
+ * @returns {Promise<object>} - object with molfile, diaIDs, signals, joined signals by diaIDs and ranges.
  */
 export async function predictProton(molecule, options = {}) {
   const { cache } = options;
