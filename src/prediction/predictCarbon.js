@@ -61,6 +61,7 @@ export async function predictCarbon(molecule, options = {}) {
     joinedSignals,
     signals,
     ranges: signalsToRanges(joinedSignals),
+    molecule,
   };
 }
 
