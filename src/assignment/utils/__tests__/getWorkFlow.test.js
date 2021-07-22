@@ -27,7 +27,6 @@ describe('getWorkflow', () => {
         hasHSQC: true,
       },
     };
-    console.log(result)
     result.experimentTypes.types.sort();
     expect(result).toStrictEqual(desired);
   });

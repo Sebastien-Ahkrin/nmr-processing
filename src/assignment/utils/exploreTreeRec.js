@@ -46,13 +46,14 @@ export function exploreTreeRec(props, predictionIndex, partial, store) {
           score: score,
         };
 
-        if (store.solutions.length >= maxSolutions) {
+        if (store.nSolutions >= maxSolutions) {
           if (store.score > store.solutions.last().score) {
             store.solutions.pollLast();
             store.solutions.add(solution);
           }
         } else {
           store.solutions.add(solution);
+          store.nSolutions++;
         }
       } else {
         exploreTreeRec(

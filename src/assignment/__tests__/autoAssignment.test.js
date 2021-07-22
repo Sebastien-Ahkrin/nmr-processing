@@ -1,11 +1,11 @@
 import OCL from 'openchemlib';
 
 import { autoAssignment } from '../autoAssignment';
-import arbutinData from '../data/ethyl-benzene.json';
+import ethylbenzeneData from '../data/ethyl-benzene.json';
 
 describe('automatic assignment', () => {
-  const molfile = String(arbutinData.molecules[0].molfile);
-  const correlationData = arbutinData.correlations.values;
+  const molfile = String(ethylbenzeneData.molecules[0].molfile);
+  const correlationData = ethylbenzeneData.correlations.values;
   const molecule = OCL.Molecule.fromMolfile(molfile);
   it('simple assignment', async () => {
     let result = await autoAssignment(molecule, {

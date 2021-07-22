@@ -1,9 +1,8 @@
-export function createMapPossibleAssignment(props) {
+export function createMapPossibleAssignment(expandMap, props) {
   const { restrictionByCS, predictions, targets } = props;
 
   const { tolerance: toleranceCS, chemicalShiftRestriction } = restrictionByCS;
 
-  let expandMap = {};
   let errorAbs = Math.abs(toleranceCS);
   const atomTypes = Object.keys(predictions);
 
@@ -39,7 +38,7 @@ export function createMapPossibleAssignment(props) {
               !chemicalShiftRestriction ||
               typeof prediction.delta === 'undefined'
             ) {
-              console.log('pasa aqui');
+              // console.log('pasa aqui');
               // Chemical shift is not a restriction
               expandMap[predictionID].push(targetID);
             } else {
@@ -47,9 +46,9 @@ export function createMapPossibleAssignment(props) {
               if (prediction.error) {
                 error = Math.max(error, prediction.error);
               }
-              console.log(
-                `error ${error}, errorAbs ${target.signal.delta} predict delta ${prediction.delta} targetID ${targetID} predID ${predictionID}`,
-              );
+              // console.log(
+              //   `error ${error}, errorAbs ${target.signal.delta} predict delta ${prediction.delta} targetID ${targetID} predID ${predictionID}`,
+              // );
               let distAfterLimit = Math.abs(
                 prediction.delta - target.signal.delta - errorAbs,
               );

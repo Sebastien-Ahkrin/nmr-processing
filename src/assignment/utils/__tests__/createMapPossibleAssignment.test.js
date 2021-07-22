@@ -7,7 +7,8 @@ const { targets } = formatCorrelations(correlationData);
 
 describe('AutoAssignment - createMapPossibleAssignment', () => {
   it('create map', () => {
-    const result = createMapPossibleAssignment({
+    const result = {}
+    createMapPossibleAssignment(result, {
       restrictionByCS: {
         tolerance: 0.3,
         useChemicalShiftScore: true,

@@ -5,7 +5,7 @@
  * @param {*} justAssign
  */
 
-function getAtomTypesToPredict(correlations, justAssign = []) {
+function getWorkFlow(correlations, justAssign = []) {
 
   if (!Array.isArray(justAssign)) justAssign = [ justAssign ];
 
@@ -31,7 +31,7 @@ function getAtomTypesToPredict(correlations, justAssign = []) {
   return workFlow;
 }
 
-export default getAtomTypesToPredict;
+export default getWorkFlow;
 
 function extractExperimentType(correlations) {
   const experimentTypes = { types: [] };
