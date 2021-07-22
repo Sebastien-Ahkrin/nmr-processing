@@ -15,7 +15,7 @@ export function signalsToSpinSystem(signals) {
   }
   //create the coupling matrix
   for (let i = 0; i < nSpins; i++) {
-    let { assignment: signalAssignment, j: jCoupling } = signals[i];
+    let { assignment: signalAssignment, js: jCoupling } = signals[i];
     for (let k = 0; k < jCoupling.length; k++) {
       let { coupling, assignment } = jCoupling[k];
       couplingConstants.set(ids[signalAssignment], ids[assignment], coupling);

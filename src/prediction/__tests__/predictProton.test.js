@@ -62,7 +62,7 @@ describe('predictProton', () => {
       diaID: ['did@`@f\\bbRaih@J@A~dHBIU@'],
       nbAtoms: 1,
       delta: 7.26,
-      j: [
+      js: [
         {
           coupling: 7.758,
           assignment: [10],
@@ -100,7 +100,7 @@ describe('predictProton', () => {
       multiplicity: 't',
       diaID: ['did@`@fTeYWaj@@@GzP`HeT'],
       assignment: [15, 16, 17],
-      j: [
+      js: [
         {
           coupling: 7.392,
           multiplicity: 't',
@@ -112,7 +112,7 @@ describe('predictProton', () => {
     expect(prediction.ranges).toHaveLength(3);
     let lastRange = prediction.ranges[2];
     expect(lastRange.integration).toBe(5);
-    expect(lastRange.signal).toHaveLength(3);
-    expect(lastRange.signal[0].j).toHaveLength(4);
+    expect(lastRange.signals).toHaveLength(3);
+    expect(lastRange.signals[0].js).toHaveLength(4);
   });
 });

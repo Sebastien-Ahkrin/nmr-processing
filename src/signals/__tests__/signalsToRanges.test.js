@@ -9,7 +9,7 @@ describe('signalsToRanges', function () {
         from: 0.95,
         to: 1.05,
         integration: 1,
-        signal: [{ delta: 1, nbAtoms: 1 }],
+        signals: [{ delta: 1, nbAtoms: 1 }],
       },
     ]);
   });
@@ -24,7 +24,7 @@ describe('signalsToRanges', function () {
         from: 0.95,
         to: 1.07,
         integration: 3,
-        signal: [
+        signals: [
           { delta: 1, nbAtoms: 1 },
           { delta: 1.02, nbAtoms: 2 },
         ],
@@ -35,9 +35,9 @@ describe('signalsToRanges', function () {
     const signals = [
       { delta: 1, nbAtoms: 1 },
       { delta: 1.02, nbAtoms: 2 },
-      { delta: 2, nbAtoms: 1, j: [{ coupling: 10 }] },
-      { delta: 2.06, nbAtoms: 2, j: [{ coupling: 10 }] },
-      { delta: 2.1, nbAtoms: 3, j: [{ coupling: 10 }, { coupling: 40 }] },
+      { delta: 2, nbAtoms: 1, js: [{ coupling: 10 }] },
+      { delta: 2.06, nbAtoms: 2, js: [{ coupling: 10 }] },
+      { delta: 2.1, nbAtoms: 3, js: [{ coupling: 10 }, { coupling: 40 }] },
     ];
     const ranges = signalsToRanges(signals);
     expect(ranges).toStrictEqual([
@@ -45,7 +45,7 @@ describe('signalsToRanges', function () {
         from: 0.95,
         to: 1.07,
         integration: 3,
-        signal: [
+        signals: [
           { delta: 1, nbAtoms: 1 },
           { delta: 1.02, nbAtoms: 2 },
         ],
@@ -54,10 +54,10 @@ describe('signalsToRanges', function () {
         from: 1.9375,
         to: 2.2125,
         integration: 6,
-        signal: [
-          { delta: 2, nbAtoms: 1, j: [{ coupling: 10 }] },
-          { delta: 2.1, nbAtoms: 3, j: [{ coupling: 10 }, { coupling: 40 }] },
-          { delta: 2.06, nbAtoms: 2, j: [{ coupling: 10 }] },
+        signals: [
+          { delta: 2, nbAtoms: 1, js: [{ coupling: 10 }] },
+          { delta: 2.1, nbAtoms: 3, js: [{ coupling: 10 }, { coupling: 40 }] },
+          { delta: 2.06, nbAtoms: 2, js: [{ coupling: 10 }] },
         ],
       },
     ]);

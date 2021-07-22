@@ -1,7 +1,7 @@
 {
   "nbAtoms": 1,
   "delta": 3,
-  "j": [
+  "js": [
     {
       "coupling": 1,
       "multiplicity": "d",

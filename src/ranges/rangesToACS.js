@@ -95,14 +95,14 @@ function pushDelta(range, acsRanges, options) {
   let parenthesis = [];
   let fromTo = [range.from, range.to];
 
-  if (Array.isArray(range.signal)) {
-    range.signal = range.signal.filter(
+  if (Array.isArray(range.signals)) {
+    range.signals = range.signals.filter(
       (signal) => !uselessKind(signal.kind, options.filter),
     );
   }
 
-  if (Array.isArray(range.signal) && range.signal.length > 0) {
-    let signals = range.signal;
+  if (Array.isArray(range.signals) && range.signals.length > 0) {
+    let signals = range.signals;
     if (signals.length > 1) {
       if (options.ascending === true) {
         signals.sort((a, b) => {
@@ -215,13 +215,13 @@ function formatAssignment(assignment) {
 }
 
 function pushCoupling(signal, parenthesis, options) {
-  if (Array.isArray(signal.j) && signal.j.length > 0) {
-    signal.j.sort(function (a, b) {
+  if (Array.isArray(signal.js) && signal.js.length > 0) {
+    signal.js.sort(function (a, b) {
       return b.coupling - a.coupling;
     });
 
     let values = [];
-    for (let j of signal.j) {
+    for (let j of signal.js) {
       if (j.coupling !== undefined) {
         values.push(j.coupling.toFixed(options.nbDecimalJ));
       }

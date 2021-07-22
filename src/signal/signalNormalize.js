@@ -12,8 +12,8 @@ export function signalNormalize(signal) {
   if (signal.diaID && !Array.isArray(signal.diaID)) {
     signal.diaID = [signal.diaID];
   }
-  if (signal.j) {
-    let couplings = signal.j;
+  if (signal.js) {
+    let couplings = signal.js;
     for (let coupling of couplings) {
       if (coupling.assignment && !Array.isArray(coupling.assignment)) {
         coupling.assignment = [coupling.assignment];
@@ -22,7 +22,7 @@ export function signalNormalize(signal) {
         coupling.diaID = [coupling.diaID];
       }
     }
-    signal.j = signal.j.sort((a, b) => b.coupling - a.coupling);
+    signal.js = signal.js.sort((a, b) => b.coupling - a.coupling);
   }
   return signal;
 }

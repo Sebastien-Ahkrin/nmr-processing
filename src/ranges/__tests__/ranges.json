@@ -3,7 +3,7 @@
     "from": 2.9207911403931033,
     "to": 3.005342719673898,
     "integration": 3.05464,
-    "signal": [
+    "signals": [
       {
         "nbAtoms": 0,
         "diaID": [],
@@ -12,7 +12,7 @@
         "remark": "",
         "delta": 2.96306693,
         "assignment": "COCH3",
-        "j": [
+        "js": [
           {
             "coupling": 2.7202333074737908,
             "multiplicity": "d"
@@ -30,7 +30,7 @@
     "to": 1.3121201215410911,
     "integration": 1.2945124056168826,
     "kind": "solvent",
-    "signal": [
+    "signals": [
       {
         "nbAtoms": 0,
         "diaID": [],
@@ -38,7 +38,7 @@
         "kind": "",
         "remark": "",
         "delta": 1.2945,
-        "j": [
+        "js": [
           {
             "coupling": 4.531576643179051,
             "multiplicity": "t"
@@ -51,7 +51,7 @@
     "from": 3.2022,
     "to": 3.5045,
     "integration": 3.231412397661983,
-    "signal": [
+    "signals": [
       {
         "nbAtoms": 0,
         "diaID": [],
@@ -60,7 +60,7 @@
         "delta": 3.3541,
         "remark": "",
         "pubAssignment": "CH3OH",
-        "j": [
+        "js": [
           {
             "coupling": 5.194226872123636,
             "multiplicity": "d"
@@ -73,14 +73,14 @@
     "from": 4.0935,
     "to": 4.341,
     "integration": 3.231412397661983,
-    "signal": [
+    "signals": [
       {
         "nbAtoms": 0,
         "diaID": [],
         "multiplicity": "d",
         "kind": "",
         "remark": "",
-        "j": [
+        "js": [
           {
             "coupling": 5.194226872123636,
             "multiplicity": "d"
@@ -94,7 +94,7 @@
         "multiplicity": "t",
         "kind": "",
         "remark": "",
-        "j": [
+        "js": [
           {
             "coupling": 5.194226872123636,
             "multiplicity": "d"
@@ -113,7 +113,7 @@
     "to": 4.79123,
     "kind": "impurity",
     "integration": 3.231412397661983,
-    "signal": [
+    "signals": [
       {
         "nbAtoms": 0,
         "diaID": [],
@@ -122,7 +122,7 @@
         "remark": "",
         "pubAssignment": "D2O",
         "delta": 4.80465,
-        "j": [
+        "js": [
           {
             "coupling": 5.194226872123636,
             "multiplicity": "d"
@@ -135,13 +135,13 @@
     "from": 5.4234,
     "to": 5.6423,
     "integration": 3.231412397661983,
-    "signal": [
+    "signals": [
       {
         "nbAtoms": 0,
         "diaID": [],
         "kind": "",
         "remark": "",
-        "j": [
+        "js": [
           {
             "coupling": 5.194226872123636,
             "multiplicity": "d"
@@ -154,7 +154,7 @@
         "diaID": [],
         "kind": "",
         "remark": "",
-        "j": [
+        "js": [
           {
             "coupling": 5.194226872123636,
             "multiplicity": "d"

@@ -74,7 +74,7 @@ function formatSignals(predictions) {
       diaID: diaIDs,
       nbAtoms,
       statistic,
-      j: [],
+      js: [],
     });
   }
   return signals;

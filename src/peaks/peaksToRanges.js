@@ -130,7 +130,7 @@ export function peaksToRanges(data, peakList, options = {}) {
       from: signal.integralData.from,
       to: signal.integralData.to,
       integration: signal.integralData.value,
-      signal: [
+      signals: [
         {
           kind: signal.kind || 'signal',
           multiplicity: signal.multiplicity,
@@ -138,13 +138,13 @@ export function peaksToRanges(data, peakList, options = {}) {
       ],
     };
     if (keepPeaks) {
-      ranges[i].signal[0].peak = signal.peaks;
+      ranges[i].signals[0].peak = signal.peaks;
     }
     if (signal.nmrJs) {
-      ranges[i].signal[0].j = signal.nmrJs;
+      ranges[i].signals[0].js = signal.nmrJs;
     }
     if (!signal.asymmetric || signal.multiplicity === 'm') {
-      ranges[i].signal[0].delta = signal.delta1;
+      ranges[i].signals[0].delta = signal.delta1;
     }
   }
 

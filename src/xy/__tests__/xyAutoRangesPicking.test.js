@@ -14,10 +14,10 @@ describe('xyAutoRangesPicking', function () {
         from: 1.96744,
         to: 2.03298,
         integration: 40,
-        signal: [
+        signals: [
           {
             multiplicity: 'q',
-            j: [{ coupling: 7, multiplicity: 'q' }],
+            js: [{ coupling: 7, multiplicity: 'q' }],
             delta: 2,
           },
         ],
@@ -29,10 +29,10 @@ describe('xyAutoRangesPicking', function () {
         from: 0.97588,
         to: 1.02378,
         integration: 60,
-        signal: [
+        signals: [
           {
             multiplicity: 't',
-            j: [{ coupling: 7, multiplicity: 't' }],
+            js: [{ coupling: 7, multiplicity: 't' }],
             delta: 1,
           },
         ],
