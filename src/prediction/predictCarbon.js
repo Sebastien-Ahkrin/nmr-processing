@@ -9,7 +9,7 @@ import { queryByHose } from './utils/queryByHOSE';
 const cache = {};
 
 async function loadDB(
-  url = 'https://www.lactame.com/lib/nmr-processing/data/20210711/carbon.js',
+  url = 'https://www.lactame.com/lib/nmr-processing-data/20210711/carbon.js',
 ) {
   if (cache[url]) {
     return cache[url];
