@@ -8,7 +8,7 @@ describe('signalsToRanges', function () {
       {
         from: 0.95,
         to: 1.05,
-        integral: 1,
+        integration: 1,
         signal: [{ delta: 1, nbAtoms: 1 }],
       },
     ]);
@@ -23,7 +23,7 @@ describe('signalsToRanges', function () {
       {
         from: 0.95,
         to: 1.07,
-        integral: 3,
+        integration: 3,
         signal: [
           { delta: 1, nbAtoms: 1 },
           { delta: 1.02, nbAtoms: 2 },
@@ -44,7 +44,7 @@ describe('signalsToRanges', function () {
       {
         from: 0.95,
         to: 1.07,
-        integral: 3,
+        integration: 3,
         signal: [
           { delta: 1, nbAtoms: 1 },
           { delta: 1.02, nbAtoms: 2 },
@@ -53,7 +53,7 @@ describe('signalsToRanges', function () {
       {
         from: 1.9375,
         to: 2.2125,
-        integral: 6,
+        integration: 6,
         signal: [
           { delta: 2, nbAtoms: 1, j: [{ coupling: 10 }] },
           { delta: 2.1, nbAtoms: 3, j: [{ coupling: 10 }, { coupling: 40 }] },

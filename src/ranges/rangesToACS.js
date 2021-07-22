@@ -148,19 +148,19 @@ function pushDelta(range, acsRanges, options) {
 }
 
 function getIntegral(range, options) {
-  let integral = '';
+  let integration = '';
   if (range.pubIntegral) {
-    integral = range.pubIntegral;
-  } else if (range.integral) {
-    integral =
-      range.integral.toFixed(0) + options.nucleus[options.nucleus.length - 1];
+    integration = range.pubIntegral;
+  } else if (range.integration) {
+    integration =
+      range.integration.toFixed(0) + options.nucleus[options.nucleus.length - 1];
   }
-  return integral;
+  return integration;
 }
 
 function pushIntegral(range, parenthesis, options) {
-  let integral = getIntegral(range, options);
-  if (integral.length > 0) parenthesis.push(integral);
+  let integration = getIntegral(range, options);
+  if (integration.length > 0) parenthesis.push(integration);
 }
 
 function pushMultiplicityFromSignal(signal, parenthesis) {

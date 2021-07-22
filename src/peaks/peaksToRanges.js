@@ -5,11 +5,11 @@ import jAnalyzer from './util/jAnalyzer';
 import { joinRanges } from './util/joinRanges';
 
 /**
- * This function clustering peaks and calculate the integral value for each range from the peak list returned from extractPeaks function.
+ * This function clustering peaks and calculate the integration value for each range from the peak list returned from extractPeaks function.
  * @param {Object} data - spectra data
  * @param {Array} peakList - nmr signals
  * @param {Object} [options={}] - options object with some parameter for GSD, detectSignal functions.
- * @param {Number} [options.integrationSum=100] - Number of hydrogens or some number to normalize the integral data. If it's zero return the absolute integral value
+ * @param {Number} [options.integrationSum=100] - Number of hydrogens or some number to normalize the integration data. If it's zero return the absolute integration value
  * @param {String} [options.integralType='sum'] - option to chose between approx area with peaks or the sum of the points of given range ('sum', 'peaks')
  * @param {Number} [options.frequencyCluster=16] - distance limit to clustering peaks.
  * @param {Number} [options.clean=0.4] - If exits it remove all the signals with integration < clean value
@@ -129,7 +129,7 @@ export function peaksToRanges(data, peakList, options = {}) {
     ranges[i] = {
       from: signal.integralData.from,
       to: signal.integralData.to,
-      integral: signal.integralData.value,
+      integration: signal.integralData.value,
       signal: [
         {
           kind: signal.kind || 'signal',
@@ -158,7 +158,7 @@ export function peaksToRanges(data, peakList, options = {}) {
  * @param {object} data - spectra data
  * @param {array} peakList - nmr signals
  * @param {object} [options = {}]
- * @param {number} [options.integrationSum='100'] - Number of hydrogens or some number to normalize the integration data, If it's zero return the absolute integral value
+ * @param {number} [options.integrationSum='100'] - Number of hydrogens or some number to normalize the integration data, If it's zero return the absolute integration value
  * @param {string} [options.integralType='sum'] - option to chose between approx area with peaks or the sum of the points of given range
  * @param {number} [options.frequencyCluster=16] - distance limit to clustering the peaks.
  * range = frequencyCluster / observeFrequency -> Peaks withing this range are considered to belongs to the same signal1D
@@ -231,7 +231,7 @@ function detectSignals(data, peakList, options = {}) {
 
   for (let i = 0; i < signals.length; i++) {
     peaks = signals[i].peaks;
-    let integral = signals[i].integralData;
+    let integration = signals[i].integralData;
     let chemicalShift = 0;
     let integralPeaks = 0;
 
@@ -243,21 +243,21 @@ function detectSignals(data, peakList, options = {}) {
     signals[i].delta1 = chemicalShift / integralPeaks;
 
     if (integralType === 'sum') {
-      integral.value = xyIntegration(data, {
-        from: integral.from,
-        to: integral.to,
+      integration.value = xyIntegration(data, {
+        from: integration.from,
+        to: integration.to,
       });
     } else {
-      integral.value = integralPeaks;
+      integration.value = integralPeaks;
     }
-    spectrumIntegral += integral.value;
+    spectrumIntegral += integration.value;
   }
 
   if (integrationSum > 0) {
     let integralFactor = integrationSum / spectrumIntegral;
     for (let i = 0; i < signals.length; i++) {
-      let integral = signals[i].integralData;
-      integral.value *= integralFactor;
+      let integration = signals[i].integralData;
+      integration.value *= integralFactor;
     }
   }
 

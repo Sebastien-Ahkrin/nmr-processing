@@ -13,7 +13,7 @@ describe('xyAutoRangesPicking', function () {
       {
         from: 1.96744,
         to: 2.03298,
-        integral: 40,
+        integration: 40,
         signal: [
           {
             multiplicity: 'q',
@@ -28,7 +28,7 @@ describe('xyAutoRangesPicking', function () {
       {
         from: 0.97588,
         to: 1.02378,
-        integral: 60,
+        integration: 60,
         signal: [
           {
             multiplicity: 't',

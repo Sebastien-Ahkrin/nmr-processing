@@ -22,12 +22,12 @@ export function signalsToRanges(signals, options = {}) {
       range = {
         from: signal.from,
         to: signal.to,
-        integral: signal.original.nbAtoms,
+        integration: signal.original.nbAtoms,
         signal: [signal.original],
       };
       ranges.push(range);
     } else {
-      range.integral += signal.original.nbAtoms;
+      range.integration += signal.original.nbAtoms;
       if (signal.to > range.to) range.to = signal.to;
       range.signal.push(signal.original);
     }
