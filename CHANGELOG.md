@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.6.0](https://www.github.com/cheminfo/nmr-processing/compare/v1.5.2...v1.6.0) (2021-07-22)
+
+
+### Features
+
+* **prediction:** prediction 2D  ([#68](https://www.github.com/cheminfo/nmr-processing/issues/68)) ([fed091b](https://www.github.com/cheminfo/nmr-processing/commit/fed091b48e21cf29624d7322ddc952d590f16495))
+
+
+### Bug Fixes
+
+* database in json format ([9adb6bf](https://www.github.com/cheminfo/nmr-processing/commit/9adb6bfec39eb22b4f238e538cb972462204e2e0))
+
 ### [1.5.2](https://www.github.com/cheminfo/nmr-processing/compare/v1.5.1...v1.5.2) (2021-07-22)
 
 
