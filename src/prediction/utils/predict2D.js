@@ -69,7 +69,7 @@ export async function predict2D(molecule, options = {}) {
   const signalsByDiaID = { x: {}, y: {} };
   for (const axis in signalsByDiaID) {
     for (const signal of spectra[axis].joinedSignals) {
-      signalsByDiaID[axis][signal.diaID[0]] = signal;
+      signalsByDiaID[axis][signal.diaIDs[0]] = signal;
     }
   }
 
@@ -98,7 +98,7 @@ export async function predict2D(molecule, options = {}) {
       for (let axis in fromToDiaID) {
         let diaID = fromToDiaID[axis].oclID;
         signal[axis].delta = signalsByDiaID[axis][diaID].delta;
-        signal[axis].diaID = [diaID];
+        signal[axis].diaIDs = [diaID];
         signal[axis].atoms = signalsByDiaID[axis][diaID].assignment;
       }
 
@@ -148,7 +148,7 @@ function addSelftCorrelation(group, options) {
     for (let axis of ['x', 'y']) {
       let diaID = atom.oclID;
       signal[axis].delta = signalsByDiaID[axis][diaID].delta;
-      signal[axis].diaID = [diaID];
+      signal[axis].diaIDs = [diaID];
       signal[axis].atoms = signalsByDiaID[axis][diaID].assignment;
     }
 

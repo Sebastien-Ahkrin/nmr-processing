@@ -45,10 +45,10 @@ export function signalJoinCouplings(signal, options = {}) {
         .map((group) => group.assignment)
         .flat(),
     );
-    let diaID = distinctValues(
+    let diaIDs = distinctValues(
       group
-        .filter((group) => group.diaID && group.diaID.length > 0)
-        .map((group) => group.diaID)
+        .filter((group) => group.diaIDs && group.diaIDs.length > 0)
+        .map((group) => group.diaIDs)
         .flat(),
     );
     let distances = distinctValues(group.map((group) => group.distance));
@@ -58,7 +58,7 @@ export function signalJoinCouplings(signal, options = {}) {
       coupling,
       multiplicity,
     };
-    if (diaID.length > 0) newJ.diaID = diaID;
+    if (diaIDs.length > 0) newJ.diaIDs = diaIDs;
     if (distances.length === 1 && distances[0]) newJ.distance = distances[0];
     if (assignment.length > 0) newJ.assignment = assignment;
     signal.js.push(newJ);

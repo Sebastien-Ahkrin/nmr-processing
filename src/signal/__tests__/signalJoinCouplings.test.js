@@ -42,11 +42,11 @@ describe('signalJoinCouplings', () => {
       nbAtoms: 1,
       delta: 3,
       js: [
-        { coupling: 9, multiplicity: 'd', diaID: ['D'] },
+        { coupling: 9, multiplicity: 'd', diaIDs: ['D'] },
         {
           coupling: 2,
           multiplicity: 'q',
-          diaID: ['C', 'B', 'A'],
+          diaIDs: ['C', 'B', 'A'],
         },
       ],
     });
@@ -58,17 +58,17 @@ describe('signalJoinCouplings', () => {
       nbAtoms: 1,
       delta: 3,
       assignment: [2],
-      diaID: ['C'],
+      diaIDs: ['C'],
       js: [
         {
           coupling: 8.5,
           multiplicity: 'quint',
-          diaID: ['D', 'C'],
+          diaIDs: ['D', 'C'],
         },
         {
           coupling: 1.5,
           multiplicity: 'quint',
-          diaID: ['B', 'A'],
+          diaIDs: ['B', 'A'],
           assignment: ['def', 'abc'],
         },
       ],

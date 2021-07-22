@@ -1,6 +1,6 @@
 {
   "nbAtoms": 1,
-  "diaID": ["A"],
+  "diaIDs": ["A"],
   "multiplicity": "d",
   "delta": 3,
   "js": [

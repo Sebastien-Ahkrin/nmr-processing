@@ -1,5 +1,5 @@
 /**
- * Ensure that assignment and diaID are arrays and coupling are sorted
+ * Ensure that assignment and diaIDs are arrays and coupling are sorted
  * @param {object} signal
  * @returns signal
  */
@@ -9,8 +9,8 @@ export function signalNormalize(signal) {
   if (signal.assignment && !Array.isArray(signal.assignment)) {
     signal.assignment = [signal.assignment];
   }
-  if (signal.diaID && !Array.isArray(signal.diaID)) {
-    signal.diaID = [signal.diaID];
+  if (signal.diaIDs && !Array.isArray(signal.diaIDs)) {
+    signal.diaIDs = [signal.diaIDs];
   }
   if (signal.js) {
     let couplings = signal.js;
@@ -18,8 +18,8 @@ export function signalNormalize(signal) {
       if (coupling.assignment && !Array.isArray(coupling.assignment)) {
         coupling.assignment = [coupling.assignment];
       }
-      if (coupling.diaID && !Array.isArray(coupling.diaID)) {
-        coupling.diaID = [coupling.diaID];
+      if (coupling.diaIDs && !Array.isArray(coupling.diaIDs)) {
+        coupling.diaIDs = [coupling.diaIDs];
       }
     }
     signal.js = signal.js.sort((a, b) => b.coupling - a.coupling);

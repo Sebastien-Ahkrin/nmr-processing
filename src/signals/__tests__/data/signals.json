@@ -3,19 +3,19 @@
     "nbAtoms": 1,
     "delta": 3,
     "assignment": "a",
-    "diaID": "D",
+    "diaIDs": "D",
     "js": [
       {
         "coupling": 5,
         "multiplicity": "d",
         "distance": 3,
-        "diaID": "A"
+        "diaIDs": "A"
       },
       {
         "coupling": 3,
         "multiplicity": "d",
         "distance": 3,
-        "diaID": "B"
+        "diaIDs": "B"
       }
     ]
   },
@@ -23,38 +23,38 @@
     "nbAtoms": 1,
     "delta": 3.5,
     "assignment": "b",
-    "diaID": "D",
+    "diaIDs": "D",
     "js": [
       {
         "coupling": 1,
         "multiplicity": "d",
         "distance": 3,
-        "diaID": "A"
+        "diaIDs": "A"
       },
       {
         "coupling": 1,
         "multiplicity": "d",
         "distance": 3,
-        "diaID": "B"
+        "diaIDs": "B"
       }
     ]
   },
   {
     "nbAtoms": 1,
     "delta": 3.5,
-    "diaID": "X",
+    "diaIDs": "X",
     "js": [
       {
         "coupling": 1,
         "multiplicity": "d",
         "distance": 3,
-        "diaID": "C"
+        "diaIDs": "C"
       },
       {
         "coupling": 1.001,
         "multiplicity": "d",
         "distance": 3,
-        "diaID": "B"
+        "diaIDs": "B"
       }
     ]
   }
