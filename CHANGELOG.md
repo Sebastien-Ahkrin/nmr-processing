@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.5.2](https://www.github.com/cheminfo/nmr-processing/compare/v1.5.1...v1.5.2) (2021-07-22)
+
+
+### Bug Fixes
+
+* deal with new data path ([1b0c7b7](https://www.github.com/cheminfo/nmr-processing/commit/1b0c7b74c6ba48d60584074ea1f5465aca2e0846))
+
 ### [1.5.1](https://www.github.com/cheminfo/nmr-processing/compare/v1.5.0...v1.5.1) (2021-07-16)
 
 
