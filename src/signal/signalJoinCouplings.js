@@ -18,13 +18,13 @@ export function signalJoinCouplings(signal, options = {}) {
   const { tolerance = 0.05 } = options;
   signal = signalNormalize(signal);
 
-  if (!signal.j || signal.j.length < 2) return signal;
+  if (!signal.js || signal.js.length < 2) return signal;
 
   // we group the couplings that are less than the expected tolerance
-  let currentGroup = [signal.j[0]];
+  let currentGroup = [signal.js[0]];
   let groups = [currentGroup];
-  for (let i = 1; i < signal.j.length; i++) {
-    let currentJ = signal.j[i];
+  for (let i = 1; i < signal.js.length; i++) {
+    let currentJ = signal.js[i];
     if (
       currentGroup[currentGroup.length - 1].coupling - currentJ.coupling <
       tolerance
@@ -36,7 +36,7 @@ export function signalJoinCouplings(signal, options = {}) {
     }
   }
 
-  signal.j = [];
+  signal.js = [];
   for (let group of groups) {
     let coupling = sum(group.map((group) => group.coupling)) / group.length;
     let assignment = distinctValues(
@@ -61,7 +61,7 @@ export function signalJoinCouplings(signal, options = {}) {
     if (diaID.length > 0) newJ.diaID = diaID;
     if (distances.length === 1 && distances[0]) newJ.distance = distances[0];
     if (assignment.length > 0) newJ.assignment = assignment;
-    signal.j.push(newJ);
+    signal.js.push(newJ);
   }
 
   return signal;

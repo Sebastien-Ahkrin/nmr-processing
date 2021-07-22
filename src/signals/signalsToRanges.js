@@ -5,7 +5,7 @@ export function signalsToRanges(signals, options = {}) {
   }));
   wrapped.forEach((signal) => {
     let halfWidth =
-      (signal.original.j || []).reduce(
+      (signal.original.js || []).reduce(
         (total, j) => (total += j.coupling / frequency),
         0,
       ) /
@@ -22,14 +22,14 @@ export function signalsToRanges(signals, options = {}) {
       range = {
         from: signal.from,
         to: signal.to,
-        integral: signal.original.nbAtoms,
-        signal: [signal.original],
+        integration: signal.original.nbAtoms,
+        signals: [signal.original],
       };
       ranges.push(range);
     } else {
-      range.integral += signal.original.nbAtoms;
+      range.integration += signal.original.nbAtoms;
       if (signal.to > range.to) range.to = signal.to;
-      range.signal.push(signal.original);
+      range.signals.push(signal.original);
     }
   }
   return ranges;

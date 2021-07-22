@@ -22,7 +22,7 @@ import { xyAutoPeaksPicking } from './xyAutoPeaksPicking';
  * @param {Boolean} [options.peakPicking.smoothY=true] - Select the peak intensities from a smoothed version of the independent variables?
  * @param {Boolean} [options.peakPicking.optimize=true] - if it's true adjust an train of gaussian or lorentzian shapes to spectrum.
  * @param {Boolean} [options.peakPicking.optimize=true] - if it's true adjust an train of gaussian or lorentzian shapes to spectrum.
- * @param {Number}  [options.ranges.integrationSum=100] - Number of hydrogens or some number to normalize the integral data. If it's zero return the absolute integral value
+ * @param {Number}  [options.ranges.integrationSum=100] - Number of hydrogens or some number to normalize the integration data. If it's zero return the absolute integration value
  * @param {String}  [options.ranges.integralType='sum'] - option to chose between approx area with peaks or the sum of the points of given range ('sum', 'peaks')
  * @param {Number}  [options.ranges.frequencyCluster=16] - distance limit to clustering peaks.
  * @param {Number}  [options.ranges.clean=0.4] - If exits it remove all the signals with integration < clean value
@@ -33,7 +33,7 @@ import { xyAutoPeaksPicking } from './xyAutoPeaksPicking';
  * @param {object}  [options.impurities={}] - impurities options.
  * @param {string}  [options.impurities.solvent=''] - solvent name.
  * @param {string}  [options.impurities.error=0.025] - tolerance in ppm to assign a impurity.
- * @returns {array} - Array of ranges with {from, to, integral, signals: [{delta, j, multiplicity, peaks}]}
+ * @returns {array} - Array of ranges with {from, to, integration, signals: [{delta, j, multiplicity, peaks}]}
  */
 
 export function xyAutoRangesPicking(data, options = {}) {

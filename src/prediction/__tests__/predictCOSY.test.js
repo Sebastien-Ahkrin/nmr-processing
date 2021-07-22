@@ -2,66 +2,54 @@ import OCL from 'openchemlib/minimal';
 
 import { predictCOSY } from '../predictCOSY';
 
-const molfile = `Benzene, ethyl-, ID: C100414
-  NIST    16081116462D 1   1.00000     0.00000
-Copyright by the U.S. Sec. Commerce on behalf of U.S.A. All rights reserved.
-  8  8  0     0  0              1 V2000
-    0.5015    0.0000    0.0000 C   0  0  0  0  0  0           0  0  0
-    0.0000    0.8526    0.0000 C   0  0  0  0  0  0           0  0  0
-    1.5046    0.0000    0.0000 C   0  0  0  0  0  0           0  0  0
-    2.0062    0.8526    0.0000 C   0  0  0  0  0  0           0  0  0
-    3.0092    0.8526    0.0000 C   0  0  0  0  0  0           0  0  0
-    1.5046    1.7554    0.0000 C   0  0  0  0  0  0           0  0  0
-    0.5015    1.7052    0.0000 C   0  0  0  0  0  0           0  0  0
-    3.5108    0.0000    0.0000 C   0  0  0  0  0  0           0  0  0
-  1  2  2  0     0  0
-  3  1  1  0     0  0
-  2  7  1  0     0  0
-  4  3  2  0     0  0
-  4  5  1  0     0  0
-  6  4  1  0     0  0
-  5  8  1  0     0  0
-  7  6  2  0     0  0
-M  END
-`;
-
 describe('prediction of 2D nmr spectrum', () => {
-  const molecule = OCL.Molecule.fromMolfile(molfile);
+  const molecule = OCL.Molecule.fromSmiles('CCc1ccccc1');
   it('predict cosy', async () => {
     const result = await predictCOSY(molecule);
     const signals = result.joinedSignals;
-    const deltas = signals.map((e) => [
-      e.x.delta,
-      e.y.delta,
-    ]);
-    expect(deltas).toStrictEqual([
-      [ 7.26, 7.196 ],
-      [ 7.26, 7.162 ],
-      [ 7.196, 7.26 ],
-      [ 7.162, 7.26 ],
-      [ 2.653, 0.992 ],
-      [ 0.992, 2.653 ],
-      [ 7.26, 7.26 ],
-      [ 7.196, 7.196 ],
-      [ 7.162, 7.162 ],
-      [ 2.653, 2.653 ],
-      [ 0.992, 0.992 ]
-    ]);
+
+    const expectedDeltas = [
+      [7.26, 7.196],
+      [7.26, 7.162],
+      [7.196, 7.26],
+      [7.162, 7.26],
+      [2.653, 0.992],
+      [0.992, 2.653],
+      [7.26, 7.26],
+      [7.196, 7.196],
+      [7.162, 7.162],
+      [2.653, 2.653],
+      [0.992, 0.992],
+    ];
+    const stringDeltas = expectedDeltas.map((d) =>
+      d.map((e) => e.toFixed(3)).join('-'),
+    );
+    const deltas = signals.map(
+      (signal) => `${signal.x.delta.toFixed(3)}-${signal.y.delta.toFixed(3)}`,
+    );
+    stringDeltas.sort();
+    deltas.sort();
+    expect(stringDeltas).toStrictEqual(deltas);
   });
   it('predict cosy without diagonal', async () => {
     const result = await predictCOSY(molecule, { includeDiagonal: false });
     const signals = result.joinedSignals;
-    const deltas = signals.map((e) => [
-      e.x.delta,
-      e.y.delta,
-    ]);
-    expect(deltas).toStrictEqual([
-      [ 7.26, 7.196 ],
-      [ 7.26, 7.162 ],
-      [ 7.196, 7.26 ],
-      [ 7.162, 7.26 ],
-      [ 2.653, 0.992 ],
-      [ 0.992, 2.653 ],
-    ]);
+    const expectedDeltas = [
+      [7.26, 7.196],
+      [7.26, 7.162],
+      [7.196, 7.26],
+      [7.162, 7.26],
+      [2.653, 0.992],
+      [0.992, 2.653],
+    ];
+    const stringDeltas = expectedDeltas.map((d) =>
+      d.map((e) => e.toFixed(3)).join('-'),
+    );
+    const deltas = signals.map(
+      (signal) => `${signal.x.delta.toFixed(3)}-${signal.y.delta.toFixed(3)}`,
+    );
+    stringDeltas.sort();
+    deltas.sort();
+    expect(stringDeltas).toStrictEqual(deltas);
   });
 });

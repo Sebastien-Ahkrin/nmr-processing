@@ -10,7 +10,7 @@ describe('signalNormalize', () => {
       delta: 3,
       assignment: [2],
       diaID: ['C'],
-      j: [
+      js: [
         { coupling: 9, multiplicity: 't', diaID: ['D'] },
         { coupling: 8, multiplicity: 't', diaID: ['C'] },
         {

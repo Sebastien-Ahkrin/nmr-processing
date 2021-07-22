@@ -66,18 +66,18 @@ function protonParser(result, molecule, diaIDs) {
       diaID: [diaIDs[atom]],
       nbAtoms: 1,
       delta: Number(fields[2]),
-      j: [],
+      js: [],
     };
     for (let i = 0; i < couplings.length; i += 3) {
       let linked = Number(couplings[i] - 1);
-      signal.j.push({
+      signal.js.push({
         coupling: Number(couplings[i + 2]),
         assignment: [linked],
         diaID: [diaIDs[linked]],
         multiplicity: 'd',
         distance: distanceMatrix[atom][linked],
       });
-      signal.j.sort((a, b) => b.coupling - a.coupling);
+      signal.js.sort((a, b) => b.coupling - a.coupling);
     }
     signals.push(signal);
   }

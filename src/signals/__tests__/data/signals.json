@@ -4,7 +4,7 @@
     "delta": 3,
     "assignment": "a",
     "diaID": "D",
-    "j": [
+    "js": [
       {
         "coupling": 5,
         "multiplicity": "d",
@@ -24,7 +24,7 @@
     "delta": 3.5,
     "assignment": "b",
     "diaID": "D",
-    "j": [
+    "js": [
       {
         "coupling": 1,
         "multiplicity": "d",
@@ -43,7 +43,7 @@
     "nbAtoms": 1,
     "delta": 3.5,
     "diaID": "X",
-    "j": [
+    "js": [
       {
         "coupling": 1,
         "multiplicity": "d",
