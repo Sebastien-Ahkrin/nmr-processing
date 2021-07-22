@@ -2,7 +2,7 @@ import OCL from 'openchemlib/minimal';
 
 import { predictHSQC } from '../predictHSQC';
 
-import carbonDB from './data/carbonDB-withoutStatistic';
+import carbonDB from './data/carbonDB-withoutStatistic.json';
 
 const molfile = `Benzene, ethyl-, ID: C100414
   NIST    16081116462D 1   1.00000     0.00000
@@ -38,10 +38,7 @@ describe('prediction of 2D nmr spectrum', () => {
       },
     });
     const signals = result.joinedSignals;
-    const deltas = signals.map((e) => [
-      e.x.delta,
-      e.y.delta,
-    ]);
+    const deltas = signals.map((e) => [e.x.delta, e.y.delta]);
 
     expect(deltas).toStrictEqual([
       [7.26, 128.4],

@@ -2,7 +2,7 @@ import OCL from 'openchemlib/minimal';
 
 import { predictAll } from '../predictAll';
 
-import carbonDB from './data/carbonDB-withoutStatistic';
+import carbonDB from './data/carbonDB-withoutStatistic.json';
 
 const molfile = `Benzene, ethyl-, ID: C100414
   NIST    16081116462D 1   1.00000     0.00000
@@ -68,30 +68,24 @@ describe('predict all nmr spectrum', () => {
     expect(stringDeltas).toStrictEqual(deltas);
 
     const cosySignals = result.cosy.joinedSignals;
-    const cosyDeltas = cosySignals.map((e) => [
-      e.x.delta,
-      e.y.delta,
-    ]);
+    const cosyDeltas = cosySignals.map((e) => [e.x.delta, e.y.delta]);
 
     expect(cosyDeltas).toStrictEqual([
-      [ 7.26, 7.196 ],
-      [ 7.26, 7.162 ],
-      [ 7.196, 7.26 ],
-      [ 7.162, 7.26 ],
-      [ 2.653, 0.992 ],
-      [ 0.992, 2.653 ],
-      [ 7.26, 7.26 ],
-      [ 7.196, 7.196 ],
-      [ 7.162, 7.162 ],
-      [ 2.653, 2.653 ],
-      [ 0.992, 0.992 ]
+      [7.26, 7.196],
+      [7.26, 7.162],
+      [7.196, 7.26],
+      [7.162, 7.26],
+      [2.653, 0.992],
+      [0.992, 2.653],
+      [7.26, 7.26],
+      [7.196, 7.196],
+      [7.162, 7.162],
+      [2.653, 2.653],
+      [0.992, 0.992],
     ]);
 
     const hsqcSignals = result.hsqc.joinedSignals;
-    const hsqcDeltas = hsqcSignals.map((e) => [
-      e.x.delta,
-      e.y.delta,
-    ]);
+    const hsqcDeltas = hsqcSignals.map((e) => [e.x.delta, e.y.delta]);
 
     expect(hsqcDeltas).toStrictEqual([
       [7.26, 128.4],
