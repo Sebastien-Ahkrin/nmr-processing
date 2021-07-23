@@ -44,7 +44,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.14.5",
     "@types/jest": "^26.0.24",
     "cheminfo-build": "^1.1.11",
-    "eslint": "^7.30.0",
+    "eslint": "^7.31.0",
     "eslint-config-cheminfo": "^5.2.4",
     "esm": "^3.2.25",
     "jest": "^27.0.6",
@@ -54,7 +54,7 @@
     "nmr-xy-testdata": "^0.2.1",
     "openchemlib": "^7.4.0",
     "prettier": "^2.3.2",
-    "rollup": "^2.53.2"
+    "rollup": "^2.53.3"
   },
   "dependencies": {
     "assign-deep": "^1.0.1",
@@ -74,7 +74,7 @@
     "ml-peak-shape-generator": "^1.0.0",
     "ml-simple-clustering": "^0.1.0",
     "ml-sparse-matrix": "^2.1.0",
-    "ml-spectra-processing": "^6.7.1",
+    "ml-spectra-processing": "^6.8.0",
     "openchemlib-utils": "^1.2.0",
     "spectrum-generator": "^4.7.1"
   }
