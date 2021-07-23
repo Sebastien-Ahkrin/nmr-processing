@@ -32,7 +32,7 @@ import { Gaussian2D, getShapeGenerator } from 'ml-peak-shape-generator';
 
 import { SpectrumGenerator } from './SpectrumGenerator';
 
-import { xyzAutoPeaksPicking } from './index';
+import { xyzAutoPeaksPicking } from '../index';
 
 let minX = 0;
 let minY = 0;
