@@ -8,22 +8,22 @@ test('signalsJoin', () => {
     {
       nbAtoms: 2,
       delta: 3.25,
-      diaID: ['D'],
+      diaIDs: ['D'],
       multiplicity: 'dd',
       assignment: ['a', 'b'],
-      j: [
-        { diaID: ['A'], distance: 3, multiplicity: 'd', coupling: 3 },
-        { diaID: ['B'], distance: 3, multiplicity: 'd', coupling: 2 },
+      js: [
+        { diaIDs: ['A'], distance: 3, multiplicity: 'd', coupling: 3 },
+        { diaIDs: ['B'], distance: 3, multiplicity: 'd', coupling: 2 },
       ],
     },
     {
       nbAtoms: 1,
       delta: 3.5,
-      diaID: ['X'],
+      diaIDs: ['X'],
       multiplicity: 't',
       assignment: [],
-      j: [
-        { diaID: ['B', 'C'], multiplicity: 't', distance: 3, coupling: 1.0005 },
+      js: [
+        { diaIDs: ['B', 'C'], multiplicity: 't', distance: 3, coupling: 1.0005 },
       ],
     },
   ]);

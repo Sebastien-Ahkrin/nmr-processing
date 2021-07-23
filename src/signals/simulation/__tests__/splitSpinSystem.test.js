@@ -6,7 +6,7 @@ const butaneSignals = [
     assignment: 4,
     nbAtoms: 1,
     delta: 1,
-    j: [
+    js: [
       { coupling: 18, assignment: 5 },
       { coupling: 18, assignment: 6 },
       { coupling: 7, assignment: 7 },
@@ -17,7 +17,7 @@ const butaneSignals = [
     assignment: 5,
     nbAtoms: 1,
     delta: 1,
-    j: [
+    js: [
       { coupling: 18, assignment: 4 },
       { coupling: 18, assignment: 6 },
       { coupling: 7, assignment: 7 },
@@ -28,7 +28,7 @@ const butaneSignals = [
     assignment: 6,
     nbAtoms: 1,
     delta: 1,
-    j: [
+    js: [
       { coupling: 18, assignment: 4 },
       { coupling: 18, assignment: 5 },
       { coupling: 7, assignment: 7 },
@@ -39,7 +39,7 @@ const butaneSignals = [
     assignment: 7,
     nbAtoms: 1,
     delta: 1.5,
-    j: [
+    js: [
       { coupling: 18, assignment: 8 },
       { coupling: 7, assignment: 4 },
       { coupling: 7, assignment: 5 },
@@ -52,7 +52,7 @@ const butaneSignals = [
     assignment: 8,
     nbAtoms: 1,
     delta: 1.5,
-    j: [
+    js: [
       { coupling: 18, assignment: 7 },
       { coupling: 7, assignment: 4 },
       { coupling: 7, assignment: 5 },
@@ -65,7 +65,7 @@ const butaneSignals = [
     assignment: 9,
     nbAtoms: 1,
     delta: 1.5,
-    j: [
+    js: [
       { coupling: 18, assignment: 10 },
       { coupling: 7, assignment: 7 },
       { coupling: 7, assignment: 8 },
@@ -78,7 +78,7 @@ const butaneSignals = [
     assignment: 10,
     nbAtoms: 1,
     delta: 1.5,
-    j: [
+    js: [
       { coupling: 18, assignment: 9 },
       { coupling: 7, assignment: 7 },
       { coupling: 7, assignment: 8 },
@@ -91,7 +91,7 @@ const butaneSignals = [
     assignment: 11,
     nbAtoms: 1,
     delta: 1,
-    j: [
+    js: [
       { coupling: 18, assignment: 13 },
       { coupling: 18, assignment: 12 },
       { coupling: 7, assignment: 9 },
@@ -102,7 +102,7 @@ const butaneSignals = [
     assignment: 12,
     nbAtoms: 1,
     delta: 1,
-    j: [
+    js: [
       { coupling: 18, assignment: 11 },
       { coupling: 18, assignment: 13 },
       { coupling: 7, assignment: 9 },
@@ -113,7 +113,7 @@ const butaneSignals = [
     assignment: 13,
     nbAtoms: 1,
     delta: 1,
-    j: [
+    js: [
       { coupling: 18, assignment: 11 },
       { coupling: 18, assignment: 12 },
       { coupling: 7, assignment: 9 },
@@ -127,7 +127,7 @@ const propylCloride = [
     assignment: 4,
     nbAtoms: 1,
     delta: 1,
-    j: [
+    js: [
       { coupling: 18, assignment: 5 },
       { coupling: 18, assignment: 6 },
       { coupling: 7, assignment: 7 },
@@ -138,7 +138,7 @@ const propylCloride = [
     assignment: 5,
     nbAtoms: 1,
     delta: 1,
-    j: [
+    js: [
       { coupling: 18, assignment: 4 },
       { coupling: 18, assignment: 6 },
       { coupling: 7, assignment: 7 },
@@ -149,7 +149,7 @@ const propylCloride = [
     assignment: 6,
     nbAtoms: 1,
     delta: 1,
-    j: [
+    js: [
       { coupling: 18, assignment: 4 },
       { coupling: 18, assignment: 5 },
       { coupling: 7, assignment: 7 },
@@ -161,7 +161,7 @@ const propylCloride = [
     assignment: 7,
     nbAtoms: 1,
     delta: 1.5,
-    j: [
+    js: [
       { coupling: 18, assignment: 8 },
       { coupling: 7, assignment: 4 },
       { coupling: 7, assignment: 5 },
@@ -174,7 +174,7 @@ const propylCloride = [
     assignment: 8,
     nbAtoms: 1,
     delta: 1.5,
-    j: [
+    js: [
       { coupling: 18, assignment: 7 },
       { coupling: 7, assignment: 4 },
       { coupling: 7, assignment: 5 },
@@ -188,7 +188,7 @@ const propylCloride = [
     assignment: 9,
     nbAtoms: 1,
     delta: 4.5,
-    j: [
+    js: [
       { coupling: 18, assignment: 10 },
       { coupling: 7, assignment: 7 },
       { coupling: 7, assignment: 8 },
@@ -198,7 +198,7 @@ const propylCloride = [
     assignment: 10,
     nbAtoms: 1,
     delta: 4.5,
-    j: [
+    js: [
       { coupling: 18, assignment: 9 },
       { coupling: 7, assignment: 7 },
       { coupling: 7, assignment: 8 },

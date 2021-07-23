@@ -14,7 +14,7 @@ import { signalsToRanges } from '../signals/signalsToRanges.js';
  * @param {Molecule} molecule - OCL Molecule instance.
  * @param {object} [options={}]
  * @param {function} [options.cache] A callback receiving a molfile and the result
- * @return {Promise<Array>}
+ * @returns {Promise<object>} - object with molfile, diaIDs, signals, joined signals by diaIDs and ranges.
  */
 export async function predictProton(molecule, options = {}) {
   const { cache } = options;
@@ -49,6 +49,7 @@ export async function predictProton(molecule, options = {}) {
     joinedSignals,
     signals,
     ranges: signalsToRanges(joinedSignals),
+    molecule,
   };
 }
 
@@ -62,21 +63,21 @@ function protonParser(result, molecule, diaIDs) {
     let atom = fields[0] - 1;
     let signal = {
       assignment: [atom],
-      diaID: [diaIDs[atom]],
+      diaIDs: [diaIDs[atom]],
       nbAtoms: 1,
       delta: Number(fields[2]),
-      j: [],
+      js: [],
     };
     for (let i = 0; i < couplings.length; i += 3) {
       let linked = Number(couplings[i] - 1);
-      signal.j.push({
+      signal.js.push({
         coupling: Number(couplings[i + 2]),
         assignment: [linked],
-        diaID: [diaIDs[linked]],
+        diaIDs: [diaIDs[linked]],
         multiplicity: 'd',
         distance: distanceMatrix[atom][linked],
       });
-      signal.j.sort((a, b) => b.coupling - a.coupling);
+      signal.js.sort((a, b) => b.coupling - a.coupling);
     }
     signals.push(signal);
   }

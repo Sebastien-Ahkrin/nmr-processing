@@ -55,39 +55,40 @@ describe('predictProton', () => {
       'joinedSignals',
       'signals',
       'ranges',
+      'molecule',
     ]);
     let firstSignal = prediction.signals[0];
     expect(firstSignal).toStrictEqual({
       assignment: [8],
-      diaID: ['did@`@f\\bbRaih@J@A~dHBIU@'],
+      diaIDs: ['did@`@f\\bbRaih@J@A~dHBIU@'],
       nbAtoms: 1,
       delta: 7.26,
-      j: [
+      js: [
         {
           coupling: 7.758,
           assignment: [10],
-          diaID: ['did@`@fTfYUn`HH@GzP`HeT'],
+          diaIDs: ['did@`@fTfYUn`HH@GzP`HeT'],
           multiplicity: 'd',
           distance: 3,
         },
         {
           coupling: 7.718,
           assignment: [9],
-          diaID: ['did@`@fTfUvf`@h@GzP`HeT'],
+          diaIDs: ['did@`@fTfUvf`@h@GzP`HeT'],
           multiplicity: 'd',
           distance: 3,
         },
         {
           coupling: 1.596,
           assignment: [14],
-          diaID: ['did@`@f\\bbRaih@J@A~dHBIU@'],
+          diaIDs: ['did@`@f\\bbRaih@J@A~dHBIU@'],
           multiplicity: 'd',
           distance: 4,
         },
         {
           coupling: 0.507,
           assignment: [13],
-          diaID: ['did@`@fTfYUn`HH@GzP`HeT'],
+          diaIDs: ['did@`@fTfYUn`HH@GzP`HeT'],
           multiplicity: 'd',
           distance: 5,
         },
@@ -98,21 +99,21 @@ describe('predictProton', () => {
       nbAtoms: 3,
       delta: 0.992,
       multiplicity: 't',
-      diaID: ['did@`@fTeYWaj@@@GzP`HeT'],
+      diaIDs: ['did@`@fTeYWaj@@@GzP`HeT'],
       assignment: [15, 16, 17],
-      j: [
+      js: [
         {
           coupling: 7.392,
           multiplicity: 't',
-          diaID: ['did@`@fTf[Waj@@bJ@_iB@bUP'],
+          diaIDs: ['did@`@fTf[Waj@@bJ@_iB@bUP'],
           distance: 3,
         },
       ],
     });
     expect(prediction.ranges).toHaveLength(3);
     let lastRange = prediction.ranges[2];
-    expect(lastRange.integral).toBe(5);
-    expect(lastRange.signal).toHaveLength(3);
-    expect(lastRange.signal[0].j).toHaveLength(4);
+    expect(lastRange.integration).toBe(5);
+    expect(lastRange.signals).toHaveLength(3);
+    expect(lastRange.signals[0].js).toHaveLength(4);
   });
 });

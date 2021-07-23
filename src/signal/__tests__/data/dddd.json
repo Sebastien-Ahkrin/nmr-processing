@@ -1,9 +1,9 @@
 {
   "nbAtoms": 1,
-  "diaID": ["A"],
+  "diaIDs": ["A"],
   "multiplicity": "d",
   "delta": 3,
-  "j": [
+  "js": [
     {
       "coupling": 7,
       "multiplicity": "d"

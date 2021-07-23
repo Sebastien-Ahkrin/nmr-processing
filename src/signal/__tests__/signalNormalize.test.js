@@ -9,20 +9,20 @@ describe('signalNormalize', () => {
       nbAtoms: 1,
       delta: 3,
       assignment: [2],
-      diaID: ['C'],
-      j: [
-        { coupling: 9, multiplicity: 't', diaID: ['D'] },
-        { coupling: 8, multiplicity: 't', diaID: ['C'] },
+      diaIDs: ['C'],
+      js: [
+        { coupling: 9, multiplicity: 't', diaIDs: ['D'] },
+        { coupling: 8, multiplicity: 't', diaIDs: ['C'] },
         {
           coupling: 2,
           multiplicity: 't',
-          diaID: ['B'],
+          diaIDs: ['B'],
           assignment: ['def'],
         },
         {
           coupling: 1,
           multiplicity: 't',
-          diaID: ['A'],
+          diaIDs: ['A'],
           assignment: ['abc'],
         },
       ],
