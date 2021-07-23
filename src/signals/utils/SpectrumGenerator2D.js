@@ -1,7 +1,7 @@
 import { Matrix } from 'ml-matrix';
 import { getShapeGenerator } from 'ml-peak-shape-generator';
 
-export class SpectrumGenerator {
+export class SpectrumGenerator2D {
   /**
    *
    * @param {object} [options={}]
@@ -14,37 +14,50 @@ export class SpectrumGenerator {
    * @param {object} [options.shape.options] options for the shape (like `mu` for pseudovoigt)
    */
   constructor(options = {}) {
-    const {
-      from = { x: 0, y: 0 },
-      to = { x: 10, y: 10 },
-      nbPoints = { x: 512, y: 512 },
-      peakWidthFct = () => 5,
-      shape = {
-        kind: 'gaussian2D',
+    options = Object.assign(
+      {},
+      {
+        fromX: 0,
+        toX: 1000,
+        nbPointsX: 10001,
+        fromY: 0,
+        toY: 1000,
+        nbPointsY: 10001,
+        peakWidthFct: () => 5,
+        shape: {
+          kind: 'gaussian2D',
+        },
       },
-    } = options;
+      options,
+    );
 
-    for (const axis of ['x', 'y']) {
-      assertNumber(from[axis], `from-${axis}`);
-      assertNumber(to[axis], `to-${axis}`);
-      assertInteger(nbPoints[axis], `nbPoints-${axis}`);
-    }
-
-    this.from = from;
-    this.to = to;
-    this.nbPoints = nbPoints;
-    this.interval = calculeIntervals(from, to, nbPoints);
-
-    this.peakWidthFct = peakWidthFct;
+    this.fromX = options.fromX;
+    this.toX = options.toX;
+    this.nbPointsX = options.nbPointsX;
+    this.fromY = options.fromY;
+    this.toY = options.toY;
+    this.nbPointsY = options.nbPointsY;
+    this.intervalX = (this.toX - this.fromX) / (this.nbPointsX - 1);
+    this.intervalY = (this.toY - this.fromY) / (this.nbPointsY - 1);
+    this.peakWidthFct = options.peakWidthFct;
     this.maxPeakHeight = Number.MIN_SAFE_INTEGER;
 
-    let shapeGenerator = getShapeGenerator(shape);
+    let shapeGenerator = getShapeGenerator(options.shape);
     this.shape = shapeGenerator;
 
-    for (const axis of ['x', 'y']) {
-      if (this.to[axis] <= this.from[axis]) {
-        throw new RangeError('to option must be larger than from');
-      }
+    assertNumber(this.fromX, 'fromX');
+    assertNumber(this.toX, 'toX');
+    assertInteger(this.nbPointsX, 'nbPointsX');
+    assertNumber(this.fromY, 'fromY');
+    assertNumber(this.toY, 'toY');
+    assertInteger(this.nbPointsY, 'nbPointsY');
+
+    if (this.toX <= this.fromX) {
+      throw new RangeError('to option must be larger than from');
+    }
+
+    if (this.toY <= this.fromY) {
+      throw new RangeError('to option must be larger than from');
     }
 
     if (typeof this.peakWidthFct !== 'function') {
@@ -81,13 +94,11 @@ export class SpectrumGenerator {
       peakOptions = peak.options;
     }
 
-    const position = { x: xPosition, y: yPosition };
-
     if (intensity > this.maxPeakHeight) this.maxPeakHeight = intensity;
 
     let {
       width = peakWidth === undefined
-        ? this.peakWidthFct(xPosition, yPosition)
+        ? this.peakWidthFct(xPosition)
         : peakWidth,
       widthLeft,
       widthRight,
@@ -105,31 +116,11 @@ export class SpectrumGenerator {
     if (!widthLeft) widthLeft = width;
     if (!widthRight) widthRight = width;
 
-    if (typeof widthLeft !== 'object')
-      widthLeft = { x: widthLeft, y: widthLeft };
-    if (typeof widthRight !== 'object')
-      widthRight = { x: widthRight, y: widthRight };
-
     let factor =
       options.factor === undefined
         ? shapeGenerator.getFactor()
         : options.factor;
 
-    const firstPoint = {};
-    const lastPoint = {};
-    const middlePoint = {};
-    for (const axis of ['x', 'y']) {
-      const first = position[axis] - (widthLeft[axis] / 2) * factor;
-      const last = position[axis] + (widthLeft[axis] / 2) * factor;
-      firstPoint[axis] = Math.max(
-        0,
-        Math.floor((first - this.from[axis]) / this.interval[axis]),
-      );
-      lastPoint[axis] = Math.min(
-        this.nbPointsX - 1,
-        Math.ceil((lastValueX - this.fromX) / this.intervalX),
-      );
-    }
     const firstValueX = xPosition - (widthLeft / 2) * factor;
     const lastValueX = xPosition + (widthRight / 2) * factor;
 
@@ -189,14 +180,6 @@ export class SpectrumGenerator {
     }
     return this;
   }
-}
-
-function calculeIntervals(from, to, nbPoints) {
-  const intervals = {};
-  for (const axis in from) {
-    intervals[axis] = (to[axis] - from[axis]) / (nbPoints[axis] - 1);
-  }
-  return intervals;
 }
 
 function assertInteger(value, name) {
