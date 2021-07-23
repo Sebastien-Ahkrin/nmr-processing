@@ -117,7 +117,6 @@ export class SpectrumGenerator {
 
     const firstPoint = {};
     const lastPoint = {};
-    const middlePoint = {};
     for (const axis of ['x', 'y']) {
       const first = position[axis] - (widthLeft[axis] / 2) * factor;
       const last = position[axis] + (widthLeft[axis] / 2) * factor;
@@ -129,37 +128,45 @@ export class SpectrumGenerator {
         this.nbPoints[axis] - 1,
         Math.ceil((last - this.from[axis]) / this.interval[axis]),
       );
-      const middlePointX = Math.round((position[axis] - this.from[axis]) / this.interval[axis]);
     }
 
-
-    const middlePointX = Math.round((xPosition - this.fromX) / this.intervalX);
-
-    const firstValueY = yPosition - (widthLeft / 2) * factor;
-    const lastValueY = yPosition + (widthRight / 2) * factor;
-
-    const firstPointY = Math.max(
-      0,
-      Math.floor((firstValueY - this.fromY) / this.intervalY),
+    const middlePoint = Math.round(
+      (position.x - this.from.x) / this.interval.x,
     );
-    const lastPointY = Math.min(
-      this.nbPointsY - 1,
-      Math.ceil((lastValueY - this.fromY) / this.intervalY),
-    );
-    const middlePointY = Math.round((yPosition - this.fromY) / this.intervalY);
-    // PEAK SHAPE MAY BE ASYMMETRC (widthLeft and widthRight) !
-    // we calculate the left part of the shape
 
-    shapeGenerator.setFWHM(widthLeft);
-    for (let xIndex = firstPointX; xIndex < lastPointX; xIndex++) {
-      for (let yIndex = firstPointY; yIndex < lastPointY; yIndex++) {
+    const fillZData = (xIndex) => {
+      for (let yIndex = firstPoint.y; yIndex < lastPoint.y; yIndex++) {
         this.data.z[xIndex][yIndex] +=
           intensity *
           shapeGenerator.fct(
-            this.data.x[xIndex] - xPosition,
-            this.data.y[yIndex] - yPosition,
+            this.data.x[xIndex] - position.x,
+            this.data.y[yIndex] - position.y,
           );
       }
+    };
+
+    // PEAK SHAPE MAY BE ASYMMETRC (widthLeft and widthRight) !
+    // we calculate the left part of the shape
+    for (const axis in widthLeft) {
+      shapeGenerator.setFWHM(widthLeft[axis], axis);
+    }
+    for (
+      let xIndex = firstPoint.x;
+      xIndex < Math.max(middlePoint.x, 0);
+      xIndex++
+    ) {
+      fillZData(xIndex);
+    }
+
+    for (const axis in widthRight) {
+      shapeGenerator.setFWHM(widthRight[axis], axis);
+    }
+    for (
+      let xIndex = Math.min(middlePoint.x, lastPoint.x);
+      xIndex < lastPointX;
+      xIndex++
+    ) {
+      fillZData(xIndex);
     }
 
     return this;
