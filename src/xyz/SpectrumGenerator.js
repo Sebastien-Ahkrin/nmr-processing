@@ -126,21 +126,13 @@ export class SpectrumGenerator {
         Math.floor((first - this.from[axis]) / this.interval[axis]),
       );
       lastPoint[axis] = Math.min(
-        this.nbPointsX - 1,
-        Math.ceil((lastValueX - this.fromX) / this.intervalX),
+        this.nbPoints[axis] - 1,
+        Math.ceil((last - this.from[axis]) / this.interval[axis]),
       );
+      const middlePointX = Math.round((position[axis] - this.from[axis]) / this.interval[axis]);
     }
-    const firstValueX = xPosition - (widthLeft / 2) * factor;
-    const lastValueX = xPosition + (widthRight / 2) * factor;
 
-    const firstPointX = Math.max(
-      0,
-      Math.floor((firstValueX - this.fromX) / this.intervalX),
-    );
-    const lastPointX = Math.min(
-      this.nbPointsX - 1,
-      Math.ceil((lastValueX - this.fromX) / this.intervalX),
-    );
+
     const middlePointX = Math.round((xPosition - this.fromX) / this.intervalX);
 
     const firstValueY = yPosition - (widthLeft / 2) * factor;
