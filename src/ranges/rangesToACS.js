@@ -153,7 +153,8 @@ function getIntegral(range, options) {
     integration = range.pubIntegral;
   } else if (range.integration) {
     integration =
-      range.integration.toFixed(0) + options.nucleus[options.nucleus.length - 1];
+      range.integration.toFixed(0) +
+      options.nucleus[options.nucleus.length - 1];
   }
   return integration;
 }
@@ -233,9 +234,7 @@ function pushCoupling(signal, parenthesis, options) {
 }
 
 function pushAssignment(signal, parenthesis) {
-  if (signal.pubAssignment) {
-    parenthesis.push(formatAssignment(signal.pubAssignment));
-  } else if (signal.assignment) {
+  if (signal.assignment) {
     parenthesis.push(formatAssignment(signal.assignment));
   }
 }
