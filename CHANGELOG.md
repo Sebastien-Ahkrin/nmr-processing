@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.1](https://www.github.com/cheminfo/nmr-processing/compare/v2.0.0...v2.0.1) (2021-07-25)
+
+
+### Bug Fixes
+
+* spectrum generation parameter names ([f86175d](https://www.github.com/cheminfo/nmr-processing/commit/f86175deb66b439043622bc300e5263d0b8e63fc))
+
 ## [2.0.0](https://www.github.com/cheminfo/nmr-processing/compare/v1.5.2...v2.0.0) (2021-07-23)
 
 
