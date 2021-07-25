@@ -12,36 +12,38 @@ const smallValue = 1e-2;
  * @param {object} spinSystem - The SpinSystem object to be simulated
  * @param {object} [options={}] - options.
  * @param {number} [options.frequency=400] - The frequency in Mhz of the fake spectrometer that records the spectrum.
+ * @param {number} [options.maxClusterSize=8] - Maximum number of atoms on each cluster that can be considered to be simulated together. It affects the the quality and speed of the simulation.
  * @param {number} [options.lineWidth=1] - The linewidth of the output spectrum, expresed in Hz.
- * @param {object} options.shape - options for spectrum-generator.
+ * @param {object} [options.shape={}]
  * @param {string} [options.shape.kind='gaussian'] - kind of shape to generate the spectrum.
- * @param {object} options.shape.options - spectrum and shape options. See spectrum-generator for more information about shape options.
+ * @param {object} [options.shape.options={}] - spectrum and shape options. See spectrum-generator for more information about shape options.
  * @param {number} [options.from=0] - The low limit of the ordinate variable.
  * @param {number} [options.to=10] - The upper limit of the ordinate variable.
  * @param {number} [options.nbPoints=16*1024] - Number of points of the output spectrum.
- * @param {number} [options.maxClusterSize=8] - Maximum number of atoms on each cluster that can be considered to be simulated together. It affects the the quality and speed of the simulation.
  * @return {object}
  */
 export default function simulate1D(spinSystem, options) {
   let {
     lineWidth = 1,
-    maxClusterSize = 10,
+    maxClusterSize = 8,
     frequency: frequencyMHz = 400,
+    from = 0,
+    to = 10,
+    nbPoints = 1024,
     shape = {
       kind: 'gaussian',
-      options: {
-        from: 0,
-        to: 10,
-        nbPoints: 1024,
-      },
     },
   } = options;
 
-  let { options: shapeOptions } = shape;
   let peakWidth = lineWidth / frequencyMHz;
 
-  shapeOptions.peakWidthFct = () => peakWidth;
-  let spectrumGenerator = new SpectrumGenerator(shapeOptions);
+  let spectrumGenerator = new SpectrumGenerator({
+    from,
+    to,
+    nbPoints,
+    shape,
+    peakWidthFct: () => peakWidth,
+  });
 
   const chemicalShifts = spinSystem.chemicalShifts.slice();
   for (let i = 0; i < chemicalShifts.length; i++) {

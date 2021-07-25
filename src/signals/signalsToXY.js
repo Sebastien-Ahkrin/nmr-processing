@@ -8,10 +8,16 @@ import { splitSpinSystem } from './simulation/splitSpinSystem';
  * Generate a spectrum from an array of singals
  * @param {array} signals
  * @param {object} [options={}]
- * @param {number} [options.frequency=400] Frequency (in MHz) of the simulated spectrum
  * @param {number} [options.maxValue=1e8] Default height of the simulated spectrum
- * @param {number} [options.maxClusterSize=8] Maximal size of a cluster before dividing the problem. Smaller value increase the speed but reduce the quality
- * @param {object} [options.shape] Shape of the peaks, by default gaussian shape
+ * @param {number} [options.frequency=400] - The frequency in Mhz of the fake spectrometer that records the spectrum.
+ * @param {number} [options.maxClusterSize=8] - Maximum number of atoms on each cluster that can be considered to be simulated together. It affects the the quality and speed of the simulation.
+ * @param {number} [options.lineWidth=1] - The linewidth of the output spectrum, expresed in Hz.
+ * @param {object} [options.shape={}]
+ * @param {string} [options.shape.kind='gaussian'] - kind of shape to generate the spectrum.
+ * @param {object} [options.shape.options={}] - spectrum and shape options. See spectrum-generator for more information about shape options.
+ * @param {number} [options.from=0] - The low limit of the ordinate variable.
+ * @param {number} [options.to=10] - The upper limit of the ordinate variable.
+ * @param {number} [options.nbPoints=16*1024] - Number of points of the output spectrum.
  * @returns  {object} an object of the kind {x:[], y:[]}
  */
 export function signalsToXY(signals, options = {}) {
@@ -19,12 +25,11 @@ export function signalsToXY(signals, options = {}) {
     frequency = 400,
     shape = {
       kind: 'gaussian',
-      options: {
-        from: 0,
-        to: 10,
-        nbPoints: 16 * 1024,
-      },
     },
+    from = 0,
+    to = 10,
+    lineWidth = 1,
+    nbPoints = 16 * 1024,
     maxValue = 1e8,
     maxClusterSize = 8,
   } = options;
@@ -38,6 +43,10 @@ export function signalsToXY(signals, options = {}) {
 
   let spectrum = simulate1D(spinSystem, {
     frequency,
+    from,
+    to,
+    nbPoints,
+    lineWidth,
     shape,
   });
 

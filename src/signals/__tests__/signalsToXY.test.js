@@ -120,11 +120,15 @@ describe('spectrum from prediction', () => {
     const spectrum = signalsToXY(signals, {
       shape: {
         kind: 'gaussian',
-        options: { from: 0, to: 10, nbPoints: 16 * 1024 },
       },
+      from: -1,
+      to: 11,
+      nbPoints: 16 * 1024,
     });
     expect(spectrum.x).toHaveLength(16 * 1024);
-    expect(Math.max(...spectrum.y)).toBe(1e8);
+    expect(spectrum.x[0]).toStrictEqual(-1);
+    expect(spectrum.x[spectrum.x.length - 1]).toStrictEqual(11);
+    expect(Math.max(...spectrum.y)).toBeCloseTo(1e8);
   });
 
   it('small cluster', async function () {
