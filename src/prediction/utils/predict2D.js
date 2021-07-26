@@ -46,7 +46,7 @@ export async function predict2D(molecule, options = {}) {
   const paths = getPathsInfo(molecule, {
     fromLabel: from,
     toLabel: to,
-    minLength: 1,
+    minLength,
     maxLength,
   });
 
@@ -74,7 +74,6 @@ export async function predict2D(molecule, options = {}) {
   }
 
   let group = {};
-  let forbiddenPaths = [];
   for (let i = 0; i < diaIDs.length; i++) {
     const atom = diaIDs[i].atomInfo;
     if (atom.paths.length < 1) continue;
@@ -83,10 +82,7 @@ export async function predict2D(molecule, options = {}) {
       let fromToDiaID = { x: atom, y: paths[path.to] };
       const key = `${fromToDiaID.x.oclID}-${fromToDiaID.y.oclID}`;
 
-      if (path.length < minLength) forbiddenPaths.push(key);
-
       if (
-        forbiddenPaths.includes(key) ||
         key === `${atom.oclID}-${atom.oclID}` ||
         group[key]
       ) {
@@ -99,7 +95,7 @@ export async function predict2D(molecule, options = {}) {
         let diaID = fromToDiaID[axis].oclID;
         signal[axis].delta = signalsByDiaID[axis][diaID].delta;
         signal[axis].diaIDs = [diaID];
-        signal[axis].atoms = signalsByDiaID[axis][diaID].assignment;
+        signal[axis].atoms = signalsByDiaID[axis][diaID].atomIDs;
       }
 
       group[key] = signal;
@@ -150,7 +146,7 @@ function addSelftCorrelation(group, options) {
       let diaID = atom.oclID;
       signal[axis].delta = signalsByDiaID[axis][diaID].delta;
       signal[axis].diaIDs = [diaID];
-      signal[axis].atoms = signalsByDiaID[axis][diaID].assignment;
+      signal[axis].atoms = signalsByDiaID[axis][diaID].atomIDs;
     }
 
     group[`${atom.oclID}-${atom.oclID}`] = signal;

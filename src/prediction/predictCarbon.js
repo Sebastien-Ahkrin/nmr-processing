@@ -71,7 +71,7 @@ function formatSignals(predictions) {
     const { atomIDs, nbAtoms, delta, diaIDs, statistic } = prediction;
     signals.push({
       delta,
-      assignment: atomIDs,
+      atomIDs,
       diaIDs: diaIDs,
       nbAtoms,
       statistic,
@@ -89,7 +89,7 @@ function joinSignalByDiaID(signals) {
       joinedSignals[diaID] = JSON.parse(JSON.stringify(signal));
     } else {
       joinedSignals[diaID].nbAtoms += signal.nbAtoms;
-      joinedSignals[diaID].assignment.push(...signal.assignment);
+      joinedSignals[diaID].atomIDs.push(...signal.atomIDs);
     }
   }
   return Object.values(joinedSignals);

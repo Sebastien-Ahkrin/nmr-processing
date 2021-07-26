@@ -39,12 +39,17 @@ export function signalJoinCouplings(signal, options = {}) {
   signal.js = [];
   for (let group of groups) {
     let coupling = sum(group.map((group) => group.coupling)) / group.length;
+    let atomIDs = distinctValues(
+      group
+        .filter((group) => group.atomIDs && group.atomIDs.length > 0)
+        .map((group) => group.atomIDs)
+        .flat(),
+    );
     let assignment = distinctValues(
       group
         .filter((group) => group.assignment && group.assignment.length > 0)
-        .map((group) => group.assignment)
-        .flat(),
-    );
+        .map((group) => group.assignment),
+    ).join(' ');
     let diaIDs = distinctValues(
       group
         .filter((group) => group.diaIDs && group.diaIDs.length > 0)
@@ -61,6 +66,7 @@ export function signalJoinCouplings(signal, options = {}) {
     if (diaIDs.length > 0) newJ.diaIDs = diaIDs;
     if (distances.length === 1 && distances[0]) newJ.distance = distances[0];
     if (assignment.length > 0) newJ.assignment = assignment;
+    if (atomIDs.length > 0) newJ.atomIDs = atomIDs;
     signal.js.push(newJ);
   }
 

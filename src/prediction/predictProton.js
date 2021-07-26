@@ -66,7 +66,7 @@ function protonParser(result, molecule, diaIDs) {
     let couplings = fields.slice(4);
     let atom = fields[0] - 1;
     let signal = {
-      assignment: [atom],
+      atomIDs: [atom],
       diaIDs: [diaIDs[atom]],
       nbAtoms: 1,
       delta: Number(fields[2]),
@@ -76,7 +76,7 @@ function protonParser(result, molecule, diaIDs) {
       let linked = Number(couplings[i] - 1);
       signal.js.push({
         coupling: Number(couplings[i + 2]),
-        assignment: [linked],
+        atomIDs: [linked],
         diaIDs: [diaIDs[linked]],
         multiplicity: 'd',
         distance: distanceMatrix[atom][linked],

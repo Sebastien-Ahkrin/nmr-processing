@@ -56,16 +56,25 @@ export function signalsJoin(signals, options = {}) {
       });
     }
 
-    newSignals.push({
+    let signal = {
       nbAtoms: sum(group.map((item) => item.nbAtoms)),
       delta: mean(group.map((item) => item.delta)),
       diaIDs: group[0].diaIDs,
-      assignment: group
-        .map((item) => item.assignment)
-        .flat()
-        .filter((item) => item),
+      atomIDs: group
+      .map((item) => item.atomIDs)
+      .flat()
+      .filter((item) => item),
       js,
-    });
+    };
+
+    const assignment = group
+      .map((item) => item.assignment)
+      .filter((item) => item)
+      .join(' ');
+
+    if (assignment.length > 0) signal.assignment = assignment;
+
+    newSignals.push(signal);
   }
   newSignals = newSignals
     .map((signal) => {

@@ -138,7 +138,7 @@ export function peaksToRanges(data, peakList, options = {}) {
       ],
     };
     if (keepPeaks) {
-      ranges[i].signals[0].peak = signal.peaks;
+      ranges[i].signals[0].peaks = signal.peaks;
     }
     if (signal.nmrJs) {
       ranges[i].signals[0].js = signal.nmrJs;

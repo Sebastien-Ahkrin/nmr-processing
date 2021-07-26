@@ -25,13 +25,13 @@ describe('signalJoinCouplings', () => {
   it('dddd to ddt with assignment', () => {
     const result = signalJoinCouplings(ddddAssignment);
     expect(result).toBeDeepCloseTo({
-      assignment: [8],
+      atomIDs: [8],
       nbAtoms: 1,
       delta: 7.26,
       js: [
-        { coupling: 9, multiplicity: 'd', assignment: [13] },
-        { coupling: 8, multiplicity: 'd', assignment: [14] },
-        { coupling: 7.0005, multiplicity: 't', assignment: [9, 10] },
+        { coupling: 9, multiplicity: 'd', atomIDs: [13] },
+        { coupling: 8, multiplicity: 'd', atomIDs: [14] },
+        { coupling: 7.0005, multiplicity: 't', atomIDs: [9, 10] },
       ],
     });
   });
@@ -57,7 +57,7 @@ describe('signalJoinCouplings', () => {
     expect(result).toStrictEqual({
       nbAtoms: 1,
       delta: 3,
-      assignment: [2],
+      atomIDs: [2],
       diaIDs: ['C'],
       js: [
         {
@@ -69,7 +69,7 @@ describe('signalJoinCouplings', () => {
           coupling: 1.5,
           multiplicity: 'quint',
           diaIDs: ['B', 'A'],
-          assignment: ['def', 'abc'],
+          assignment: 'def abc',
         },
       ],
     });

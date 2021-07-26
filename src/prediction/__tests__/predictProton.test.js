@@ -58,36 +58,37 @@ describe('predictProton', () => {
       'molecule',
     ]);
     let firstSignal = prediction.signals[0];
+
     expect(firstSignal).toStrictEqual({
-      assignment: [8],
+      atomIDs: [8],
       diaIDs: ['did@`@f\\bbRaih@J@A~dHBIU@'],
       nbAtoms: 1,
       delta: 7.26,
       js: [
         {
           coupling: 7.758,
-          assignment: [10],
+          atomIDs: [10],
           diaIDs: ['did@`@fTfYUn`HH@GzP`HeT'],
           multiplicity: 'd',
           distance: 3,
         },
         {
           coupling: 7.718,
-          assignment: [9],
+          atomIDs: [9],
           diaIDs: ['did@`@fTfUvf`@h@GzP`HeT'],
           multiplicity: 'd',
           distance: 3,
         },
         {
           coupling: 1.596,
-          assignment: [14],
+          atomIDs: [14],
           diaIDs: ['did@`@f\\bbRaih@J@A~dHBIU@'],
           multiplicity: 'd',
           distance: 4,
         },
         {
           coupling: 0.507,
-          assignment: [13],
+          atomIDs: [13],
           diaIDs: ['did@`@fTfYUn`HH@GzP`HeT'],
           multiplicity: 'd',
           distance: 5,
@@ -100,7 +101,7 @@ describe('predictProton', () => {
       delta: 0.992,
       multiplicity: 't',
       diaIDs: ['did@`@fTeYWaj@@@GzP`HeT'],
-      assignment: [15, 16, 17],
+      atomIDs: [15, 16, 17],
       js: [
         {
           coupling: 7.392,
