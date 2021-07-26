@@ -1,5 +1,13 @@
 # Changelog
 
+### [2.0.2](https://www.github.com/cheminfo/nmr-processing/compare/v2.0.1...v2.0.2) (2021-07-26)
+
+
+### Bug Fixes
+
+* deal correctly with empty molecules ([0ac2ec3](https://www.github.com/cheminfo/nmr-processing/commit/0ac2ec3b69fb3b432654551a68629e7bf1efffe9))
+* deal with empty molecules ([01b32f9](https://www.github.com/cheminfo/nmr-processing/commit/01b32f9ed40fa0a52644703b49ffbebc4f2e59a2))
+
 ### [2.0.1](https://www.github.com/cheminfo/nmr-processing/compare/v2.0.0...v2.0.1) (2021-07-25)
 
 
