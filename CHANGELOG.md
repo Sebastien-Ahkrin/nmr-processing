@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.1.1](https://www.github.com/cheminfo/nmr-processing/compare/v2.1.0...v2.1.1) (2021-07-26)
+
+
+### Bug Fixes
+
+* plural name in joinRanges function ([2a33761](https://www.github.com/cheminfo/nmr-processing/commit/2a337617a81deb04f9af0a5ea6ae6de5497fa8e5))
+
 ## [2.1.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.0.1...v2.1.0) (2021-07-26)
 
 
