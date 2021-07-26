@@ -54,6 +54,10 @@ export async function predictProton(molecule, options = {}) {
 }
 
 function protonParser(result, molecule, diaIDs) {
+  if (molecule.getAllAtoms() === 0) return [];
+  if (result.includes('ERR')) {
+    throw Error(`Spinus optimization: ${result}`);
+  }
   let distanceMatrix = getConnectivityMatrix(molecule, { pathLength: true });
   let lines = result.split('\n').filter((line) => line);
   let signals = [];
