@@ -54,6 +54,7 @@ export async function predictProton(molecule, options = {}) {
 }
 
 function protonParser(result, molecule, diaIDs) {
+  if (result.includes('ERR')) return [];
   let distanceMatrix = getConnectivityMatrix(molecule, { pathLength: true });
   let lines = result.split('\n').filter((line) => line);
   let signals = [];

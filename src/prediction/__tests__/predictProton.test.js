@@ -116,4 +116,14 @@ describe('predictProton', () => {
     expect(lastRange.signals).toHaveLength(3);
     expect(lastRange.signals[0].js).toHaveLength(4);
   });
+  it('empty molecule', async () => {
+    const molecule = new OCL.Molecule(16, 16);
+    const result = await predictProton(molecule);
+    expect(result.diaIDs).toStrictEqual([]);
+    expect(result.joinedSignals).toStrictEqual([]);
+    expect(result.signals).toStrictEqual([]);
+    expect(result.ranges).toStrictEqual([]);
+    expect(result.molecule.getAllAtoms()).toBe(0);
+    expect(result.molecule.getAllBonds()).toBe(0);
+  });
 });
