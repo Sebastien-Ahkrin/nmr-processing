@@ -11,15 +11,15 @@ export function signalsToSpinSystem(signals) {
   for (let i = 0; i < nSpins; i++) {
     multiplicity[i] = 2;
     chemicalShifts[i] = signals[i].delta;
-    ids[signals[i].assignment] = i;
+    ids[signals[i].atomIDs] = i;
   }
   //create the coupling matrix
   for (let i = 0; i < nSpins; i++) {
-    let { assignment: signalAssignment, js: jCoupling } = signals[i];
+    let { atomIDs: signalAssignment, js: jCoupling } = signals[i];
     for (let k = 0; k < jCoupling.length; k++) {
-      let { coupling, assignment } = jCoupling[k];
-      couplingConstants.set(ids[signalAssignment], ids[assignment], coupling);
-      couplingConstants.set(ids[assignment], ids[signalAssignment], coupling);
+      let { coupling, atomIDs } = jCoupling[k];
+      couplingConstants.set(ids[signalAssignment], ids[atomIDs], coupling);
+      couplingConstants.set(ids[atomIDs], ids[signalAssignment], coupling);
     }
   }
 
