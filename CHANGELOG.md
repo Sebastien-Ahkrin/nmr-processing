@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.1.2](https://www.github.com/cheminfo/nmr-processing/compare/v2.1.1...v2.1.2) (2021-07-27)
+
+
+### Bug Fixes
+
+* **signalsToXY:** atomsIDs instead assignment ([47f2abd](https://www.github.com/cheminfo/nmr-processing/commit/47f2abdce42d29d519459e941cfe6a644335eabc))
+
 ### [2.1.1](https://www.github.com/cheminfo/nmr-processing/compare/v2.1.0...v2.1.1) (2021-07-26)
 
 
