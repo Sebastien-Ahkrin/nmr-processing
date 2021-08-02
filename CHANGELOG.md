@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.1.2...v2.2.0) (2021-08-02)
+
+
+### Features
+
+* add webserviceURL option ([de87821](https://www.github.com/cheminfo/nmr-processing/commit/de87821d0b1c661ce1689a787aa5d8ab6734d617))
+
 ### [2.1.2](https://www.github.com/cheminfo/nmr-processing/compare/v2.1.1...v2.1.2) (2021-07-27)
 
 
