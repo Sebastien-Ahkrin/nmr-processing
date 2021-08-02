@@ -2,6 +2,7 @@ import fetch from 'cross-fetch';
 
 import { signalsToRanges } from '../signals/signalsToRanges';
 
+import { fetchPrediction } from './utils/fetchPrediction';
 import { flatGroupedDiaIDs } from './utils/flatGroupedDiaIDs';
 import { getFilteredIDiaIDs } from './utils/getFilteredIDiaIDs';
 import { queryByHose } from './utils/queryByHOSE';
@@ -22,17 +23,22 @@ async function loadDB(
 /**
  * Make a query to a hose code based database to predict carbon chemical shift
  * @param {Molecule} molecule - openchemlib molecule instance.
- * @param {object} options
- * @param {string} options.url - url of a custom database.
+ * @param {object} [options={}]
+ * @param {string} [options.url] url of a custom database.
  * @param {object} options.database - custom database, each entry in the levels should has
  * an array as value [median] or [median, mean, sd, min, max, nb] for statistic purpose.
  * @param {number} options.maxSphereSize - max level to take into account in the query. If is not specified
  * the max level in the database will be used.
+ * @param {string} [options.webserviceURL]
  * @returns {Promise<object>} - object with molfile, diaIDs, signals, joined signals by diaIDs and ranges.
  */
 
 export async function predictCarbon(molecule, options = {}) {
-  let { url, database } = options;
+  let { url, database, webserviceURL } = options;
+
+  if (webserviceURL) {
+    return fetchPrediction(molecule, { webserviceURL });
+  }
 
   database = database || (await loadDB(url));
 

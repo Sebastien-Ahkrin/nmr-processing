@@ -37,4 +37,17 @@ describe('carbon prediction', () => {
     expect(result.molecule.getAllAtoms()).toBe(0);
     expect(result.molecule.getAllBonds()).toBe(0);
   });
+  it('webserviceURL', async () => {
+    const molecule = OCL.Molecule.fromSmiles('CCOCC');
+    const result = await predictCarbon(molecule, {
+      webserviceURL:
+        'https://nmr-prediction.service.zakodium.com/v1/predict/carbon',
+    });
+    expect(result.diaIDs).toHaveLength(15);
+    expect(result.joinedSignals).toHaveLength(2);
+    expect(result.signals).toHaveLength(4);
+    expect(result.ranges).toHaveLength(2);
+    expect(result.molecule.getAllAtoms()).toBe(15);
+    expect(result.molecule.getAllBonds()).toBe(14);
+  });
 });
