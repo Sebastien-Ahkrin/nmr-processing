@@ -15,6 +15,7 @@ export * from './prediction/predictCarbon';
 export * from './prediction/predictCOSY';
 export * from './prediction/predictHSQC';
 export * from './prediction/predictHMBC';
+export * from './prediction/predictAll';
 export * from './xyz/xyzAutoPeaksPicking';
 export * from './constants/gyromagneticRatio';
 export * from './constants/impurities';
