@@ -27,7 +27,7 @@ export async function predictAll(molecule, options = {}) {
     predictor = { H: predictProton, C: predictCarbon },
     predictions = {},
     joinDistance = { H: 0.05, C: 0.5 },
-    predictOptions,
+    predictOptions = {},
   } = options;
 
   if (!predictions[from]) {

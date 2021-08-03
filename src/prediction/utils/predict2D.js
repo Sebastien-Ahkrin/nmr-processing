@@ -41,7 +41,7 @@ export async function predict2D(molecule, options = {}) {
 
   molecule.addImplicitHydrogens();
 
-  const diaIDs = getGroupedDiastereotopicAtomIDs(molecule);
+  let diaIDs = getGroupedDiastereotopicAtomIDs(molecule);
 
   const paths = getPathsInfo(molecule, {
     fromLabel: from,
@@ -77,20 +77,22 @@ export async function predict2D(molecule, options = {}) {
   for (let i = 0; i < diaIDs.length; i++) {
     const atom = diaIDs[i].atomInfo;
     if (atom.paths.length < 1) continue;
+
+    if (!signalsByDiaID.x[atom.oclID]) continue;
+
     const currentPaths = atom.paths;
     for (const path of currentPaths) {
+      if (!signalsByDiaID.y[paths[path.to].oclID]) continue;
+
       let fromToDiaID = { x: atom, y: paths[path.to] };
+
       const key = `${fromToDiaID.x.oclID}-${fromToDiaID.y.oclID}`;
 
-      if (
-        key === `${atom.oclID}-${atom.oclID}` ||
-        group[key]
-      ) {
+      if (key === `${atom.oclID}-${atom.oclID}` || group[key]) {
         continue;
       }
 
       let signal = { x: {}, y: {} };
-
       for (let axis in fromToDiaID) {
         let diaID = fromToDiaID[axis].oclID;
         signal[axis].delta = signalsByDiaID[axis][diaID].delta;
@@ -138,12 +140,14 @@ function addSelftCorrelation(group, options) {
   const { paths = [], signalsByDiaID } = options;
   for (const atom of paths) {
     if (atom.paths.length < 1) continue;
-    if (group[`${atom.oclID}-${atom.oclID}`]) continue;
+
+    let diaID = atom.oclID;
+    if (!signalsByDiaID.x[diaID]) continue;
+    if (group[`${diaID}-${diaID}`]) continue;
 
     let signal = { x: {}, y: {} };
 
     for (let axis of ['x', 'y']) {
-      let diaID = atom.oclID;
       signal[axis].delta = signalsByDiaID[axis][diaID].delta;
       signal[axis].diaIDs = [diaID];
       signal[axis].atoms = signalsByDiaID[axis][diaID].atomIDs;
