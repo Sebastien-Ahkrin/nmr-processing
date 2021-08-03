@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.3.3](https://www.github.com/cheminfo/nmr-processing/compare/v2.3.2...v2.3.3) (2021-08-03)
+
+
+### Bug Fixes
+
+* add nucleus property to predictProton result ([46e5939](https://www.github.com/cheminfo/nmr-processing/commit/46e5939711751b9d6a9244705deacd82001cbf55))
+
 ### [2.3.2](https://www.github.com/cheminfo/nmr-processing/compare/v2.3.1...v2.3.2) (2021-08-03)
 
 
