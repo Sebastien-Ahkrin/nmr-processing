@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.3.1](https://www.github.com/cheminfo/nmr-processing/compare/v2.3.0...v2.3.1) (2021-08-03)
+
+
+### Bug Fixes
+
+* predict2D - avoid not predicted nucleus e.g labiles ([5612173](https://www.github.com/cheminfo/nmr-processing/commit/56121732965b315eb98c0d24793aad5b19166d44))
+
 ## [2.3.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.2.0...v2.3.0) (2021-08-03)
 
 
