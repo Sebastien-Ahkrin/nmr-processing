@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.2.0...v2.3.0) (2021-08-03)
+
+
+### Features
+
+* export predictAll function ([d84c1ee](https://www.github.com/cheminfo/nmr-processing/commit/d84c1ee3ad223ded3e64767af15c13d0fff4df06))
+
 ## [2.2.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.1.2...v2.2.0) (2021-08-02)
 
 
