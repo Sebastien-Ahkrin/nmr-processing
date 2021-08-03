@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.3.4](https://www.github.com/cheminfo/nmr-processing/compare/v2.3.3...v2.3.4) (2021-08-03)
+
+
+### Bug Fixes
+
+* use singlet multiplicity to predictCarbon ([b2a45e3](https://www.github.com/cheminfo/nmr-processing/commit/b2a45e3c502e7f8d65173cd6a39f7394b1015fc3))
+
 ### [2.3.3](https://www.github.com/cheminfo/nmr-processing/compare/v2.3.2...v2.3.3) (2021-08-03)
 
 
