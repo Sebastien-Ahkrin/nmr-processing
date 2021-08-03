@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.3.2](https://www.github.com/cheminfo/nmr-processing/compare/v2.3.1...v2.3.2) (2021-08-03)
+
+
+### Bug Fixes
+
+* export nuclues in prediction ([e9f780b](https://www.github.com/cheminfo/nmr-processing/commit/e9f780b2ba9fc8c85ca8e73e346c6c539bf8534b))
+
 ### [2.3.1](https://www.github.com/cheminfo/nmr-processing/compare/v2.3.0...v2.3.1) (2021-08-03)
 
 
