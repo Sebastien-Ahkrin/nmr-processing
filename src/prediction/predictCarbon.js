@@ -80,6 +80,7 @@ function formatSignals(predictions) {
       delta,
       atomIDs,
       diaIDs: diaIDs,
+      multiplicity: 's',
       nbAtoms,
       statistic,
       js: [],
