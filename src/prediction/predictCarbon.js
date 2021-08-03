@@ -63,6 +63,7 @@ export async function predictCarbon(molecule, options = {}) {
   const joinedSignals = joinSignalByDiaID(signals);
   return {
     molfile,
+    nucleus: '13C',
     diaIDs: flatGroupedDiaIDs(groupedDiaIDs),
     joinedSignals,
     signals,

@@ -5,6 +5,9 @@ import {
   getPathsInfo,
 } from 'openchemlib-utils';
 
+import { getNucleus } from './getNucleus';
+
+
 /**
  * Generate the correlation bidimensional nmr peaks based on the number of bonds between a pair of atoms
  * @param {Molecule} molecule - openchemlib molecule instance
@@ -113,6 +116,7 @@ export async function predict2D(molecule, options = {}) {
   return {
     molfile: molecule.toMolfile(),
     diaIDs: spectra.x.diaIDs,
+    nucleus: getNucleus({from, to}),
     joinedSignals,
     signals: splitSignals(joinedSignals),
     zones,

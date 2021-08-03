@@ -30,6 +30,7 @@ describe('prediction of 2D nmr spectrum', () => {
     stringDeltas.sort();
     deltas.sort();
     expect(stringDeltas).toStrictEqual(deltas);
+    expect(result.nucleus).toStrictEqual(['1H', '1H']);
   });
   it('predict cosy without diagonal', async () => {
     const result = await predictCOSY(molecule, { includeDiagonal: false });
