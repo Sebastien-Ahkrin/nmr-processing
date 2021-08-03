@@ -46,6 +46,7 @@ export async function predictProton(molecule, options = {}) {
   return {
     molfile,
     diaIDs,
+    nucleus: '1H',
     joinedSignals,
     signals,
     ranges: signalsToRanges(joinedSignals),
