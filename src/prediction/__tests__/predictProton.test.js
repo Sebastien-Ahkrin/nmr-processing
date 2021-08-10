@@ -52,6 +52,7 @@ describe('predictProton', () => {
     expect(Object.keys(prediction)).toStrictEqual([
       'molfile',
       'diaIDs',
+      'nucleus',
       'joinedSignals',
       'signals',
       'ranges',
