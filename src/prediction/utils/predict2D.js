@@ -7,7 +7,6 @@ import {
 
 import { getNucleus } from './getNucleus';
 
-
 /**
  * Generate the correlation bidimensional nmr peaks based on the number of bonds between a pair of atoms
  * @param {Molecule} molecule - openchemlib molecule instance
@@ -116,7 +115,7 @@ export async function predict2D(molecule, options = {}) {
   return {
     molfile: molecule.toMolfile(),
     diaIDs: spectra.x.diaIDs,
-    nucleus: getNucleus({from, to}),
+    nucleus: getNucleus({ from, to }),
     joinedSignals,
     signals: splitSignals(joinedSignals),
     zones,
@@ -187,13 +186,22 @@ function createZones(signals, options) {
     if (cluster.isLeaf) signal.push(signals[cluster.index]);
     for (const child of cluster.children) {
       for (const index of child.indices()) {
-        signal.push(signals[index]);
+        signal.push({
+          ...signals[index],
+          peaks: [
+            {
+              x: signals[index].x.delta,
+              y: signals[index].y.delta,
+              z: 1,
+            },
+          ],
+        });
       }
     }
 
     zones.push({
       ...fromTo(signal, { joinDistance, from, to }),
-      signal,
+      signals: signal,
     });
   }
   return zones;

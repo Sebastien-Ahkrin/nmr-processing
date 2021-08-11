@@ -24,7 +24,12 @@ test('signalsJoin', () => {
       multiplicity: 't',
       atomIDs: [],
       js: [
-        { diaIDs: ['B', 'C'], multiplicity: 't', distance: 3, coupling: 1.0005 },
+        {
+          diaIDs: ['B', 'C'],
+          multiplicity: 't',
+          distance: 3,
+          coupling: 1.0005,
+        },
       ],
     },
   ]);

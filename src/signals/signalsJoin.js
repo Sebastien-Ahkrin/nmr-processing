@@ -61,9 +61,9 @@ export function signalsJoin(signals, options = {}) {
       delta: mean(group.map((item) => item.delta)),
       diaIDs: group[0].diaIDs,
       atomIDs: group
-      .map((item) => item.atomIDs)
-      .flat()
-      .filter((item) => item),
+        .map((item) => item.atomIDs)
+        .flat()
+        .filter((item) => item),
       js,
     };
 

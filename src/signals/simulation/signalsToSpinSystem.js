@@ -1,4 +1,4 @@
-import {Matrix} from 'ml-matrix';
+import { Matrix } from 'ml-matrix';
 import simpleClustering from 'ml-simple-clustering';
 
 export function signalsToSpinSystem(signals) {
