@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.4.1](https://www.github.com/cheminfo/nmr-processing/compare/v2.4.0...v2.4.1) (2021-08-11)
+
+
+### Bug Fixes
+
+* import gaussian2D instead of Gaussian2D ([17c6bc8](https://www.github.com/cheminfo/nmr-processing/commit/17c6bc818e6ca4579c6fccf6c8ee66b9df9263b3))
+
 ## [2.4.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.3.4...v2.4.0) (2021-08-11)
 
 
