@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.4.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.3.4...v2.4.0) (2021-08-11)
+
+
+### Features
+
+* update ml-peak-shape-generator to 2.0.1 ([340e27f](https://www.github.com/cheminfo/nmr-processing/commit/340e27f57e88022c0f3b11cdec9c36543e224981))
+* update spectrum-generator to 5.0.0 ([73df6d1](https://www.github.com/cheminfo/nmr-processing/commit/73df6d189a433ae37fbc5389c058acf9bb6a0d67))
+
+
+### Bug Fixes
+
+* use plural name for signals in zones, add peaks to each signal ([2a80102](https://www.github.com/cheminfo/nmr-processing/commit/2a801024dffc325503562bd01f0d5867b9774bf3))
+
 ### [2.3.4](https://www.github.com/cheminfo/nmr-processing/compare/v2.3.3...v2.3.4) (2021-08-03)
 
 
