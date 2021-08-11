@@ -1,5 +1,7 @@
 import LM from 'ml-levenberg-marquardt';
-import { Gaussian2D } from 'ml-peak-shape-generator';
+import { gaussian2D } from 'ml-peak-shape-generator';
+
+const { fct: gaussian2DFct } = gaussian2D;
 
 const direction8X = [-1, -1, -1, 0, 0, 1, 1, 1];
 const direction8Y = [-1, 0, 1, -1, 1, -1, 0, 1];
@@ -132,7 +134,7 @@ function paramGaussian2D(intervalX, intervalY, nCols) {
       for (let i = 0; i < nL; i++) {
         result +=
           p[i + 2 * nL] *
-          Gaussian2D.fct(
+          gaussian2DFct(
             (xIndex - p[i]) * intervalX,
             (yIndex - p[i + nL]) * intervalY,
             p[i + 3 * nL],
