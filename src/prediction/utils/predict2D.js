@@ -94,13 +94,17 @@ export async function predict2D(molecule, options = {}) {
         continue;
       }
 
+      let peak = { z: 1 };
       let signal = { x: {}, y: {} };
       for (let axis in fromToDiaID) {
         let diaID = fromToDiaID[axis].oclID;
+        peak[axis] = signalsByDiaID[axis][diaID].delta;
         signal[axis].delta = signalsByDiaID[axis][diaID].delta;
         signal[axis].diaIDs = [diaID];
         signal[axis].atoms = signalsByDiaID[axis][diaID].atomIDs;
       }
+
+      signal.peaks = [peak];
 
       group[key] = signal;
     }
@@ -150,11 +154,15 @@ function addSelftCorrelation(group, options) {
 
     let signal = { x: {}, y: {} };
 
+    let peak = { z: 1 };
     for (let axis of ['x', 'y']) {
+      peak[axis] = signalsByDiaID[axis][diaID].delta;
       signal[axis].delta = signalsByDiaID[axis][diaID].delta;
       signal[axis].diaIDs = [diaID];
       signal[axis].atoms = signalsByDiaID[axis][diaID].atomIDs;
     }
+
+    signal.peaks = [peak];
 
     group[`${atom.oclID}-${atom.oclID}`] = signal;
   }
@@ -186,16 +194,7 @@ function createZones(signals, options) {
     if (cluster.isLeaf) signal.push(signals[cluster.index]);
     for (const child of cluster.children) {
       for (const index of child.indices()) {
-        signal.push({
-          ...signals[index],
-          peaks: [
-            {
-              x: signals[index].x.delta,
-              y: signals[index].y.delta,
-              z: 1,
-            },
-          ],
-        });
+        signal.push(signals[index]);
       }
     }
 
