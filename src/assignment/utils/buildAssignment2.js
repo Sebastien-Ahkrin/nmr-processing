@@ -1,15 +1,12 @@
 import treeSet from 'ml-tree-set';
+import { getConnectivityMatrix } from 'openchemlib-utils';
 
-import {
-  getConnectivityMatrix,
-} from 'openchemlib-utils';
-
-import { exploreTreeRec } from './exploreTreeRec';
 
 import { predictCarbon } from '../../prediction/predictCarbon';
 import { predictProton } from '../../prediction/predictProton';
 
 import { createMapPossibleAssignment } from './createMapPossibleAssignment';
+import { exploreTreeRec } from './exploreTreeRec';
 
 const comparator = (a, b) => {
   return b.score - a.score;
@@ -19,10 +16,9 @@ const predictor = { H: predictProton, C: predictCarbon };
 
 export async function buildAssignment(props) {
   const {
-    molecule, 
+    molecule,
     restrictionByCS,
     timeout,
-    tolerance,
     minScore,
     unassigned,
     maxSolutions,
@@ -56,15 +52,17 @@ export async function buildAssignment(props) {
   const predictions = {};
   let predictionIndex = 0;
   let possibleAssignmentMap = {};
-  
+
+  // console.log('assignmentOrder', assignmentOrder)
   for (const atomTypesToPredict of assignmentOrder) {
     for (const atomType of atomTypesToPredict) {
       const options = predictionOptions[atomType];
       const { joinedSignals } = await predictor[atomType](molecule, options);
       if (!predictions[atomType]) predictions[atomType] = {};
       for (let prediction of joinedSignals) {
-        const diaID = prediction.diaID[0];
-        const index = prediction.assignment[0];
+        // console.log(prediction)
+        const diaID = prediction.diaIDs[0];
+        const index = prediction.atomIDs[0];
         const allHydrogens = getAllHydrogens[atomType](molecule, index);
         predictions[atomType][diaID] = {
           ...prediction,
@@ -82,7 +80,8 @@ export async function buildAssignment(props) {
       predictions,
       targets,
     });
-    console.log(possibleAssignmentMap)
+    console.log('posible assignment', possibleAssignmentMap);
+    console.log('prediction', predictions)
     const diaIDPeerPossibleAssignment = Object.keys(possibleAssignmentMap);
 
     for (; index < nSources; index++) {
@@ -114,3 +113,4 @@ export async function buildAssignment(props) {
 
   return store;
 }
+

@@ -1,5 +1,5 @@
-import getWorkFlow from '../getWorkFlow';
 import correlations from '../../data/correlations';
+import getWorkFlow from '../getWorkFlow';
 
 describe('getWorkflow', () => {
   it('simple test case', () => {

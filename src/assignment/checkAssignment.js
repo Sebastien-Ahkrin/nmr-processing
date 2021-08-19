@@ -9,7 +9,7 @@ const correlationData = arbutinData.correlations.values;
 const molecule = OCL.Molecule.fromMolfile(molfile);
 let result = await autoAssignment(molecule, {
   unassigned: 1,
-  justAssign: ['C'],
+  justAssign: [],
   correlations: correlationData,
   minScore: 0.1,
   restrictionByCS: {

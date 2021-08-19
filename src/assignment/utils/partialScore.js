@@ -1,4 +1,3 @@
-import { getIntegrationOfAttachedProton } from './getIntegrationOfAttachedProton';
 import groupTargetByIntegrationZone from './groupTargetByIntegrationZone';
 
 export function partialScore(partial, props) {
@@ -76,10 +75,11 @@ export function partialScore(partial, props) {
     chemicalShiftScore = 0;
     count = 0;
 
+    const getPredictionByDiaID = getPrediction.bind(predictions);
     partial.forEach((targetID, index) => {
       if (targetID && targetID !== '*') {
         count++;
-        let source = predictions[atomType][diaIDPeerPossibleAssignment[index]];
+        let source = getPredictionByDiaID(diaIDPeerPossibleAssignment[index]);
         let target = targets[atomType][targetID];
         let error = toleranceCS;
         if (source.error) {
@@ -110,7 +110,8 @@ export function partialScore(partial, props) {
   if (activeDomainOnTarget.length > 1) {
     let andConstrains = {};
     for (let i = 0; i < activeDomainOnPrediction.length; i++) {
-      let predictionI = predictions[atomType][diaIDPeerPossibleAssignment[i]];
+      console.log(diaIDPeerPossibleAssignment[i], i)
+      let predictionI = getPredictionByDiaID(diaIDPeerPossibleAssignment[i]);
       for (let j = i + 1; j < activeDomainOnPrediction.length; j++) {
         let predictionJ = predictions[atomType][diaIDPeerPossibleAssignment[j]];
         let pathLength = predictionI.pathLength[predictionJ.diaIDIndex];
@@ -166,4 +167,10 @@ function checkLinking(partialI, partialJ, correlations) {
     }
   }
   return false;
+}
+
+function getPrediction(predictions, diaID) {
+  for (const atomType in predictions) {
+    if (predictions[atomType][diaID]) return predictions[atomType][diaID];
+  }
 }

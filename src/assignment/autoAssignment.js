@@ -1,11 +1,8 @@
-import {
-  addDiastereotopicMissingChirality,
-} from 'openchemlib-utils';
+import { addDiastereotopicMissingChirality } from 'openchemlib-utils';
 
 import { buildAssignment } from './utils/buildAssignment2';
-import getWorkFlow from './utils/getWorkFlow';
 import { formatCorrelations } from './utils/formatCorrelations';
-
+import getWorkFlow from './utils/getWorkFlow';
 
 /**
  *
@@ -37,8 +34,6 @@ export async function autoAssignment(molecule, props = {}) {
   // molecule = molecule.getCompactCopy();
   molecule.addImplicitHydrogens();
   addDiastereotopicMissingChirality(molecule);
-
- 
 
   const { assignmentOrder } = getWorkFlow(correlations, justAssign);
 
