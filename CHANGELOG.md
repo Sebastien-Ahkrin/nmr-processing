@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.4.3...v2.5.0) (2021-08-24)
+
+
+### Features
+
+* add signals2DToZ function ([579fb50](https://www.github.com/cheminfo/nmr-processing/commit/579fb50f12952a0cacd407f820d05cab93a38f07))
+
 ### [2.4.3](https://www.github.com/cheminfo/nmr-processing/compare/v2.4.2...v2.4.3) (2021-08-12)
 
 
