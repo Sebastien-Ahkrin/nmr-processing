@@ -12,7 +12,7 @@ describe('partial score', () => {
     partial[0] = '6dVPFnCT';
     const result = partialScore(partial, {
       predictions,
-      atomType: 'C',
+      atomTypes: ['C'],
       targets,
       restrictionByCS: {
         tolerance: 0.5,
@@ -30,7 +30,7 @@ describe('partial score', () => {
     partial[0] = '6dVPFnCT';
     const result = partialScore(partial, {
       predictions,
-      atomType: 'C',
+      atomTypes: ['C'],
       targets,
       restrictionByCS: {
         tolerance: 1,
@@ -48,7 +48,7 @@ describe('partial score', () => {
     partial[0] = 'aFEmeB3j';
     const result = partialScore(partial, {
       predictions,
-      atomType: 'C',
+      atomTypes: ['C'],
       targets,
       restrictionByCS: {
         tolerance: 1,
@@ -66,7 +66,7 @@ describe('partial score', () => {
     partial[0] = 'aFEmeB3j';
     const result = partialScore(partial, {
       predictions,
-      atomType: 'C',
+      atomTypes: ['C'],
       targets,
       restrictionByCS: {
         tolerance: 1,
@@ -84,7 +84,7 @@ describe('partial score', () => {
     partial[1] = 'aFEmeB3j';
     const result = partialScore(partial, {
       predictions,
-      atomType: 'C',
+      atomTypes: ['C'],
       targets,
       restrictionByCS: {
         tolerance: 0.05,
@@ -102,7 +102,7 @@ describe('partial score', () => {
     partial[1] = 'rc5vsGS0';
     const result = partialScore(partial, {
       predictions,
-      atomType: 'C',
+      atomTypes: ['C'],
       targets,
       restrictionByCS: {
         tolerance: 1,
@@ -118,7 +118,7 @@ describe('partial score', () => {
      partial[1] = 'aFEmeB3j';
      const result2 = partialScore(partial, {
       predictions,
-      atomType: 'C',
+      atomTypes: ['C'],
       targets,
       restrictionByCS: {
         tolerance: 1,
@@ -135,7 +135,7 @@ describe('partial score', () => {
     partial[3] = 'rc5vsGS0';
     const result = partialScore(partial, {
       predictions,
-      atomType: 'C',
+      atomTypes: ['C'],
       targets,
       restrictionByCS: {
         tolerance: 1,

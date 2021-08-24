@@ -5,7 +5,7 @@ export function createMapPossibleAssignment(expandMap, props) {
 
   let errorAbs = Math.abs(toleranceCS);
   const atomTypes = Object.keys(predictions);
- 
+
   for (const atomType of atomTypes) {
     let predictionByAtomType = predictions[atomType];
     let targetByAtomType = targets[atomType];

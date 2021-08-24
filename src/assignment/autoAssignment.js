@@ -36,7 +36,7 @@ export async function autoAssignment(molecule, props = {}) {
   addDiastereotopicMissingChirality(molecule);
 
   const { assignmentOrder } = getWorkFlow(correlations, justAssign);
-
+  console.log('assig', assignmentOrder)
   const { targets, correlations: correlationsWithIndirectLinks } =
     formatCorrelations(correlations);
 

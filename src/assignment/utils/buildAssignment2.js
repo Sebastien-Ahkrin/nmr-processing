@@ -1,7 +1,6 @@
 import treeSet from 'ml-tree-set';
 import { getConnectivityMatrix } from 'openchemlib-utils';
 
-
 import { predictCarbon } from '../../prediction/predictCarbon';
 import { predictProton } from '../../prediction/predictProton';
 
@@ -46,9 +45,8 @@ export async function buildAssignment(props) {
     pathLength: true,
   });
 
-  let index = 0;
+  let atomTypes = [];
   let nSources = 0;
-  let partial = [];
   const predictions = {};
   let predictionIndex = 0;
   let possibleAssignmentMap = {};
@@ -56,6 +54,7 @@ export async function buildAssignment(props) {
   // console.log('assignmentOrder', assignmentOrder)
   for (const atomTypesToPredict of assignmentOrder) {
     for (const atomType of atomTypesToPredict) {
+      atomTypes.push(atomType);
       const options = predictionOptions[atomType];
       const { joinedSignals } = await predictor[atomType](molecule, options);
       if (!predictions[atomType]) predictions[atomType] = {};
@@ -81,32 +80,38 @@ export async function buildAssignment(props) {
       targets,
     });
     console.log('posible assignment', possibleAssignmentMap);
-    console.log('prediction', predictions)
+    // console.log('prediction', predictions);
     const diaIDPeerPossibleAssignment = Object.keys(possibleAssignmentMap);
 
-    for (; index < nSources; index++) {
-      partial[index] = null;
-    }
+    let sourceOfPartials = getSourceOfPartial(store, nSources);
 
-    exploreTreeRec(
-      {
-        nSources,
-        restrictionByCS,
-        timeout,
-        timeStart,
-        targets,
-        predictions,
-        correlations,
-        maxSolutions,
-        lowerBound,
-        unassigned,
-        possibleAssignmentMap,
-        diaIDPeerPossibleAssignment,
-      },
-      predictionIndex,
-      partial,
-      store,
-    );
+    store = {
+      solutions: new treeSet(comparator),
+      nSolutions: 0,
+    };
+
+    for (let partial of sourceOfPartials) {
+      exploreTreeRec(
+        {
+          atomTypes,
+          nSources,
+          restrictionByCS,
+          timeout,
+          timeStart,
+          targets,
+          predictions,
+          correlations,
+          maxSolutions,
+          lowerBound,
+          unassigned,
+          possibleAssignmentMap,
+          diaIDPeerPossibleAssignment,
+        },
+        predictionIndex,
+        partial,
+        store,
+      );
+    }
 
     predictionIndex = diaIDPeerPossibleAssignment.length;
   }
@@ -114,3 +119,27 @@ export async function buildAssignment(props) {
   return store;
 }
 
+function getSourceOfPartial(store, nSources) {
+  return store.nSolutions > 0
+    ? store.solutions.elements.map((e) => initializePartial(nSources, e.assignment))
+    : [initializePartial(nSources)];
+}
+
+function initializePartial(nSources, partial = []) {
+  for (let index = partial.length; index < nSources; index++) {
+    partial.push(null);
+  }
+  return partial;
+}
+
+// function mergeSolutions(solution, store, maxSolutions) {
+//   if (store.nSolutions >= maxSolutions) {
+//     if (solution.score > store.solutions.last().score) {
+//       store.solutions.pollLast();
+//       store.solutions.add(solution);
+//     }
+//   } else {
+//     store.solutions.add(solution);
+//     store.nSolutions++;
+//   }
+// }

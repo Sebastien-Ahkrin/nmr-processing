@@ -1,4 +1,8 @@
-function groupTargetByIntegrationZone(activeDomainOnTarget, targets) {
+function groupCarbonTargetByIntegrationZone(
+  activeDomainOnTarget,
+  targets,
+  correlations,
+) {
   let targetID = activeDomainOnTarget[0];
 
   let { H: attachments = [] } = targets[targetID].attachment;
@@ -11,7 +15,7 @@ function groupTargetByIntegrationZone(activeDomainOnTarget, targets) {
     let targetID = activeDomainOnTarget[i];
     let target = targets[targetID];
     let { H: attachments = [] } = target.attachment;
-    // const key = attachment.sort((a,b) => a - b).join('-') | 'quaternary';
+
     let alone = true;
     for (let group of targetByIntegral) {
       const pertain = attachments.some((attachment) =>
@@ -34,9 +38,12 @@ function groupTargetByIntegrationZone(activeDomainOnTarget, targets) {
     }
   }
   return targetByIntegral.map((t) => ({
+    atomType: 'C',
     targetIDs: t.targetIDs,
-    attachments: Array.from(t.attachments),
+    integration: Array.from(t.attachments).reduce((sum, index) => {
+      return correlations[index].integration + sum;
+    }, 0),
   }));
 }
 
-export default groupTargetByIntegrationZone;
+export default groupCarbonTargetByIntegrationZone;

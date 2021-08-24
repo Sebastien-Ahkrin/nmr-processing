@@ -1,4 +1,4 @@
-{
+const predictions = {
   "C": {
     "daD@@LdRTIT@E@@q@TGzP`NET": {
       "delta": 128.4,
@@ -68,3 +68,5 @@
     }
   }
 }
+
+export default predictions;

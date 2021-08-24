@@ -2,6 +2,7 @@ import { partialScore } from './partialScore';
 
 export function exploreTreeRec(props, predictionIndex, partial, store) {
   const {
+    atomTypes,
     nSources,
     restrictionByCS,
     timeout,
@@ -22,7 +23,6 @@ export function exploreTreeRec(props, predictionIndex, partial, store) {
     return store;
   }
   const diaID = diaIDPeerPossibleAssignment[predictionIndex];
-  const atomType = getAtomTypeFromPredictions(diaID, predictions);
   const possibleAssignments = possibleAssignmentMap[diaID];
 
   let targetIndex = 0;
@@ -32,12 +32,13 @@ export function exploreTreeRec(props, predictionIndex, partial, store) {
       diaIDPeerPossibleAssignment,
       unassigned,
       restrictionByCS,
-      atomType,
+      atomTypes,
       predictions,
       correlations,
       targets,
     });
-    // console.log(`score ${score} nSources ${nSources}, index ${predictionIndex}, targetIndex ${targetIndex++}, lower ${lowerBound}`);
+    // console.log(`partial ${partial}`)
+    // console.log(`atomTypes: ${atomTypes},score ${score} nSources ${nSources}, index ${predictionIndex}, targetIndex ${targetIndex++}, lower ${lowerBound}`);
     if (score > 0) {
       if (predictionIndex === nSources - 1 && score >= lowerBound) {
         store.nSolutions++;
@@ -47,7 +48,7 @@ export function exploreTreeRec(props, predictionIndex, partial, store) {
         };
 
         if (store.nSolutions >= maxSolutions) {
-          if (store.score > store.solutions.last().score) {
+          if (solution.score > store.solutions.last().score) {
             store.solutions.pollLast();
             store.solutions.add(solution);
           }
@@ -58,6 +59,7 @@ export function exploreTreeRec(props, predictionIndex, partial, store) {
       } else {
         exploreTreeRec(
           {
+            atomTypes,
             nSources,
             restrictionByCS,
             timeout,
@@ -80,11 +82,5 @@ export function exploreTreeRec(props, predictionIndex, partial, store) {
         partial[predictionIndex] = null;
       }
     }
-  }
-}
-
-function getAtomTypeFromPredictions(diaID, predictions) {
-  for (let atomType in predictions) {
-    if (predictions[atomType][diaID]) return atomType;
   }
 }

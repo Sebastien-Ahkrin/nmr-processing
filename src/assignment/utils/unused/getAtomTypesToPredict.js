@@ -13,7 +13,7 @@ function getAtomTypesToPredict(correlations, justAssign) {
   }
 
   const experimentTypes = extractExperimentType(correlations);
-  console.log(experimentTypes)
+
   const atomTypesToPredict = experimentTypes.includes('hsqc')
     ? ['C']
     : ['C', 'H'];

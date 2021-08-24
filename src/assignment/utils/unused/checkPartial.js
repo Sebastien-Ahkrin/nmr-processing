@@ -1,9 +1,9 @@
-import correlationData from '../data/ethyl-benzene.json';
-import predictions from '../data/ethylbenzenePredictions.json';
+import correlationData from '../../data/ethyl-benzene.json';
+import predictions from '../../data/ethylbenzenePredictions.json';
 
-import { createMapPossibleAssignment } from './createMapPossibleAssignment';
-import { formatCorrelations } from './formatCorrelations';
-import { partialScore } from './partialScore';
+import { createMapPossibleAssignment } from '../createMapPossibleAssignment';
+import { formatCorrelations } from '../formatCorrelations';
+import { partialScore } from '../partialScore';
 
 
 const { targets, correlations } = formatCorrelations(correlationData.correlations.values);

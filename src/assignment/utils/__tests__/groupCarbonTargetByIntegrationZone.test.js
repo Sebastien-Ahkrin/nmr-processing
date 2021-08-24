@@ -1,4 +1,4 @@
-import groupTargetByIntegrationZone from '../groupTargetByIntegrationZone';
+import groupCarbonTargetByIntegrationZone from '../groupCarbonTargetByIntegrationZone';
 
 const targets = {
   c5: {
@@ -29,7 +29,7 @@ const activeDomainOnTarget = Object.keys(targets);
 
 describe('group targets by integration', () => {
   it('simple test', () => {
-    const result = groupTargetByIntegrationZone(activeDomainOnTarget, targets);
+    const result = groupCarbonTargetByIntegrationZone(activeDomainOnTarget, targets);
     expect(result.map(e => e.targetIDs)).toStrictEqual([['c5'], ['c1', 'c2'], ['c3'], ['c4']]);
     expect(result.map(e => e.attachments)).toStrictEqual([[], [8,7], [2,3], []]);
   });

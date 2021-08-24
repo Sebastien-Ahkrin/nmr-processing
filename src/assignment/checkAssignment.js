@@ -9,7 +9,7 @@ const correlationData = arbutinData.correlations.values;
 const molecule = OCL.Molecule.fromMolfile(molfile);
 let result = await autoAssignment(molecule, {
   unassigned: 1,
-  justAssign: [],
+  justAssign: ['C'],
   correlations: correlationData,
   minScore: 0.1,
   restrictionByCS: {
@@ -17,6 +17,11 @@ let result = await autoAssignment(molecule, {
     useChemicalShiftScore: true,
     chemicalShiftRestriction: true,
   },
+  predictionOptions: {
+    C: {
+      webserviceURL: 'https://nmr-prediction.service.zakodium.com/v1/predict/carbon'
+    }
+  }
 });
-console.log('result', result.slice(0,2));
+console.log('result', result);
 })()
