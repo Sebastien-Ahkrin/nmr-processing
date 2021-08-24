@@ -1,51 +1,55 @@
 {
   "name": "nmr-processing",
-  "version": "2.5.0",
-  "description": "",
-  "main": "lib/index.js",
-  "module": "src/index.js",
+  "version": "2.4.3",
+  "description": "Pure functions allowing to process NMR spectra.",
+  "main": "./lib/index.js",
+  "module": "./lib-esm/index.js",
+  "types": "./lib/index.d.ts",
+  "keywords": [],
+  "author": "Luc Patiny",
+  "license": "MIT",
   "files": [
+    "src",
     "lib",
-    "src"
+    "lib-esm"
   ],
   "scripts": {
-    "build": "rollup -c && cheminfo-build --root NMRProcessing",
-    "eslint": "eslint src",
+    "build": "npm run tsc && cheminfo-build",
+    "check-types": "tsc --noEmit",
+    "clean": "rimraf lib lib-esm",
+    "eslint": "eslint src --cache",
     "eslint-fix": "npm run eslint -- --fix",
-    "prepublishOnly": "rollup -c",
+    "prepack": "npm run tsc",
     "prettier": "prettier --check src",
     "prettier-write": "prettier --write src",
-    "test": "npm run test-coverage && npm run eslint",
-    "test-coverage": "jest --coverage",
-    "test-only": "jest"
+    "test": "npm run test-coverage && npm run eslint && npm run prettier && npm run check-types",
+    "test-coverage": "npm run test-only -- --coverage",
+    "test-only": "jest",
+    "tsc": "npm run clean && npm run tsc-cjs && npm run tsc-esm",
+    "tsc-cjs": "tsc --project tsconfig.cjs.json",
+    "tsc-esm": "tsc --project tsconfig.esm.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cheminfo/nmr-processing.git"
   },
-  "keywords": [],
-  "author": "Luc Patiny",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cheminfo/nmr-processing/issues"
   },
   "homepage": "https://github.com/cheminfo/nmr-processing#readme",
   "jest": {
+    "preset": "ts-jest",
     "testEnvironment": "node"
   },
-  "prettier": {
-    "arrowParens": "always",
-    "semi": true,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "all"
-  },
   "devDependencies": {
+<<<<<<< HEAD
     "@babel/plugin-transform-modules-commonjs": "^7.15.0",
+=======
+>>>>>>> 5c536ed (feat: initial typescript migration)
     "@types/jest": "^27.0.1",
     "cheminfo-build": "^1.1.11",
     "eslint": "^7.32.0",
-    "eslint-config-cheminfo": "^5.2.4",
+    "eslint-config-cheminfo-typescript": "^8.0.9",
     "esm": "^3.2.25",
     "jest": "^27.0.6",
     "jest-matcher-deep-close-to": "^2.0.1",
@@ -54,7 +58,13 @@
     "nmr-xy-testdata": "^0.2.1",
     "openchemlib": "^7.4.2",
     "prettier": "^2.3.2",
+<<<<<<< HEAD
     "rollup": "^2.56.3"
+=======
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.3.5"
+>>>>>>> 5c536ed (feat: initial typescript migration)
   },
   "dependencies": {
     "assign-deep": "^1.0.1",
@@ -75,6 +85,7 @@
     "ml-simple-clustering": "^0.1.0",
     "ml-sparse-matrix": "^2.1.0",
     "ml-spectra-processing": "^6.8.0",
+    "ml-tree-set": "^0.1.1",
     "openchemlib-utils": "^1.5.0",
     "spectrum-generator": "^5.0.2"
   }

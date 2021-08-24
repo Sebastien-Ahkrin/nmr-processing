@@ -94,7 +94,7 @@ export async function predict2D(molecule, options = {}) {
         continue;
       }
 
-      let peak = { z: 1 };
+      let peak = { z: 100 };
       let signal = { x: {}, y: {} };
       for (let axis in fromToDiaID) {
         let diaID = fromToDiaID[axis].oclID;
