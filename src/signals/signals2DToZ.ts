@@ -1,5 +1,5 @@
 import { generateSpectrum2D } from 'spectrum-generator';
-import type { Peak2DSeries, XYNumber } from 'spectrum-generator';
+import type { XYNumber } from 'spectrum-generator';
 
 interface peak2D {
   x: number;
@@ -26,6 +26,13 @@ interface signals2DToZOptions {
   nbPoints?: number | XYNumber;
   width?: number | XYNumber;
 }
+
+export interface Peak2DSeries {
+  x: number[];
+  y: number[];
+  z: number[];
+}
+
 export function signals2DToZ(
   signals: signals2D[],
   options: signals2DToZOptions = {},
