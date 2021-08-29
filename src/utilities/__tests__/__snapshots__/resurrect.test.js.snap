@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resurrect J. Org. Chem. 1`] = `
+Array [
+  Object {
+    "from": 10.58,
+    "integration": 1,
+    "signals": Array [
+      Object {
+        "delta": 10.58,
+        "js": Array [],
+        "multiplicity": "b",
+      },
+    ],
+    "to": 10.58,
+  },
+  Object {
+    "from": 7.4,
+    "integration": 1,
+    "signals": Array [
+      Object {
+        "delta": 7.4,
+        "js": Array [
+          Object {
+            "coupling": 8,
+            "multiplicity": "d",
+          },
+        ],
+        "multiplicity": "d",
+      },
+    ],
+    "to": 7.4,
+  },
+  Object {
+    "from": 6.19,
+    "integration": 1,
+    "signals": Array [
+      Object {
+        "delta": 6.19,
+        "js": Array [
+          Object {
+            "coupling": 7.6,
+            "multiplicity": "d",
+          },
+        ],
+        "multiplicity": "d",
+      },
+    ],
+    "to": 6.19,
+  },
+  Object {
+    "from": 4.88,
+    "integration": 1,
+    "signals": Array [
+      Object {
+        "delta": 4.88,
+        "js": Array [],
+        "multiplicity": "s",
+      },
+    ],
+    "to": 4.88,
+  },
+  Object {
+    "from": 4.46,
+    "integration": 1,
+    "signals": Array [
+      Object {
+        "delta": 4.46,
+        "js": Array [],
+        "multiplicity": "m",
+      },
+    ],
+    "to": 4.46,
+  },
+  Object {
+    "from": 4.25,
+    "integration": 1,
+    "signals": Array [
+      Object {
+        "delta": 4.25,
+        "js": Array [],
+        "multiplicity": "m",
+      },
+    ],
+    "to": 4.25,
+  },
+  Object {
+    "from": 4.08,
+    "integration": 1,
+    "signals": Array [
+      Object {
+        "delta": 4.08,
+        "js": Array [],
+        "multiplicity": "m",
+      },
+    ],
+    "to": 4.08,
+  },
+  Object {
+    "from": 3.9,
+    "integration": 2,
+    "signals": Array [
+      Object {
+        "delta": 3.925,
+        "js": Array [],
+        "multiplicity": "m",
+      },
+    ],
+    "to": 3.95,
+  },
+  Object {
+    "from": 2.17,
+    "integration": 3,
+    "signals": Array [
+      Object {
+        "delta": 2.17,
+        "js": Array [],
+        "multiplicity": "s",
+      },
+    ],
+    "to": 2.17,
+  },
+  Object {
+    "from": 1.02,
+    "integration": 9,
+    "signals": Array [
+      Object {
+        "delta": 1.02,
+        "js": Array [],
+        "multiplicity": "s",
+      },
+    ],
+    "to": 1.02,
+  },
+  Object {
+    "from": 1.01,
+    "integration": 9,
+    "signals": Array [
+      Object {
+        "delta": 1.01,
+        "js": Array [],
+        "multiplicity": "s",
+      },
+    ],
+    "to": 1.01,
+  },
+  Object {
+    "from": 0.89,
+    "integration": 9,
+    "signals": Array [
+      Object {
+        "delta": 0.89,
+        "js": Array [],
+        "multiplicity": "s",
+      },
+    ],
+    "to": 0.89,
+  },
+  Object {
+    "from": 0.12,
+    "integration": 3,
+    "signals": Array [
+      Object {
+        "delta": 0.12,
+        "js": Array [],
+        "multiplicity": "s",
+      },
+    ],
+    "to": 0.12,
+  },
+  Object {
+    "from": 0.11,
+    "integration": 3,
+    "signals": Array [
+      Object {
+        "delta": 0.11,
+        "js": Array [],
+        "multiplicity": "s",
+      },
+    ],
+    "to": 0.11,
+  },
+]
+`;
