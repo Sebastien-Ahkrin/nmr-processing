@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.6.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.5.0...v2.6.0) (2021-08-29)
+
+
+### Features
+
+* starting resurrect code ([a6cba61](https://www.github.com/cheminfo/nmr-processing/commit/a6cba6116453c9a4956d0665c297d07f7c5f92a7))
+
+
+### Bug Fixes
+
+* add package description ([e0594ca](https://www.github.com/cheminfo/nmr-processing/commit/e0594ca589a331ebe3bf5efaad3cde2beca2c2d3))
+
 ## [2.5.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.4.3...v2.5.0) (2021-08-24)
 
 
