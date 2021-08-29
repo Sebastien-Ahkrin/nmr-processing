@@ -1,7 +1,7 @@
 {
   "name": "nmr-processing",
   "version": "2.5.0",
-  "description": "",
+  "description": "Various functions to process NMR spectra including prediction and peak picking",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
