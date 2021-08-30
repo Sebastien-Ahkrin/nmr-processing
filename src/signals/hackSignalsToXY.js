@@ -1,4 +1,4 @@
-import { signalsToXY } from './signals/signalsToXY';
+import { signalsToXY } from './signalsToXY';
 
 const patterns = ['s', 'd', 't', 'q', 'quint', 'h', 'sept', 'o', 'n'];
 
