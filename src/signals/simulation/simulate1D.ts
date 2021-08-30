@@ -5,7 +5,20 @@ import { SpectrumGenerator } from 'spectrum-generator';
 
 import getPauliMatrix from './getPauliMatrix';
 
+import type { Shape1DOption } from 'spectrum-generator';
+import type { AbstractMatrix } from 'ml-matrix';
+
 const smallValue = 1e-2;
+
+interface Simulate1DOptions {
+  lineWidth: number;
+    maxClusterSize: number;
+    frequency: number;
+    from: number;
+    to: number;
+    nbPoints: number;
+    shape: Shape1DOption
+}
 
 /**
  * This function simulates a one dimensional nmr spectrum. This function returns an array containing the relative intensities of the spectrum in the specified simulation window (from-to).
@@ -22,7 +35,15 @@ const smallValue = 1e-2;
  * @param {number} [options.nbPoints=16*1024] - Number of points of the output spectrum.
  * @return {object}
  */
-export default function simulate1D(spinSystem, options) {
+
+interface SpinSystem {
+  chemicalShifts: number[];
+  multiplicity: number[];
+  couplingConstants: AbstractMatrix;
+  connectivity: AbstractMatrix;
+  clusters: number[][];
+}
+export default function simulate1D(spinSystem: SpinSystem, options: Partial<Simulate1DOptions> = {}) {
   let {
     lineWidth = 1,
     maxClusterSize = 8,
@@ -82,7 +103,7 @@ export default function simulate1D(spinSystem, options) {
         }
       }
 
-      frequencies = Float64Array.from(frequencies).sort();
+      frequencies.sort((a, b) => a - b);
       sumI = frequencies.length;
       weight = 1;
 
@@ -141,7 +162,7 @@ export default function simulate1D(spinSystem, options) {
       });
 
       let rhoip2 = rhoip.clone();
-      assignmentMatrix.forEachNonZero((i, j, v) => {
+      assignmentMatrix.forEachNonZero((i: number, j: number, v: number) => {
         if (v < 0) {
           for (let k = 0; k < V.columns; k++) {
             let element = V.get(j, k);

@@ -4,6 +4,29 @@ import { signalsToSpinSystem } from './simulation/signalsToSpinSystem';
 import simulate1D from './simulation/simulate1D';
 import { splitSpinSystem } from './simulation/splitSpinSystem';
 
+import type { Shape1DOption } from 'spectrum-generator'
+
+interface Jcoupling {
+  coupling: number;
+  atomIDs: number[];
+}
+
+export interface Signals1D {
+  delta: number;
+  js: Jcoupling[];
+  atomIDs: number[];
+}
+
+export interface OptionsSignalsToXY {
+  frequency: number;
+  from: number;
+  to: number;
+  shape: Shape1DOption;
+  lineWidth: number;
+  nbPoints: number;
+  maxValue: number;
+  maxClusterSize: number;
+}
 /**
  * Generate a spectrum from an array of singals
  * @param {array} signals
@@ -20,7 +43,7 @@ import { splitSpinSystem } from './simulation/splitSpinSystem';
  * @param {number} [options.nbPoints=16*1024] - Number of points of the output spectrum.
  * @returns  {object} an object of the kind {x:[], y:[]}
  */
-export function signalsToXY(signals, options = {}) {
+export function signalsToXY(signals: Signals1D, options: Partial<OptionsSignalsToXY> = {}) {
   let {
     frequency = 400,
     shape = {
