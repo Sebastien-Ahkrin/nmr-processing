@@ -195,7 +195,7 @@ const createSignals2D = (peaks, options) => {
       let minMax1 = [Number.MAX_VALUE, 0];
       let minMax2 = [Number.MAX_VALUE, 0];
       let sumZ = 0;
-      // for (let jPeak = clusters[iCluster].length - 1; jPeak >= 0; jPeak--) {
+
       for (let jPeak = 0; jPeak < clusters[iCluster].length; jPeak++) {
         if (clusters[iCluster][jPeak] === 1) {
           peaks2D.push(peaks[jPeak]);

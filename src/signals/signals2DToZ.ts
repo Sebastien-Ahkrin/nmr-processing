@@ -39,14 +39,14 @@ export function signals2DToZ(
 ) {
   let { from = -1, to = 12, nbPoints = 512, width = 0.02 } = options;
 
-  const peaks = signals.reduce(
+  const peaks = signals.reduce<Peak2DSeries>(
     (acc, { x, y }) => {
       acc.x.push(x.delta);
       acc.y.push(y.delta);
       acc.z.push(100);
       return acc;
     },
-    { x: [], y: [], z: [] } as Peak2DSeries,
+    { x: [], y: [], z: [] },
   );
 
   width = ensureXYNumber(width);
