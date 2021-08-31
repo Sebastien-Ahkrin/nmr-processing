@@ -6,18 +6,18 @@ import { SpectrumGenerator } from 'spectrum-generator';
 import getPauliMatrix from './getPauliMatrix';
 
 import type { Shape1DOption } from 'spectrum-generator';
-import type { AbstractMatrix } from 'ml-matrix';
+import type { MatrixClassType } from 'ml-matrix';
 
 const smallValue = 1e-2;
 
 interface Simulate1DOptions {
   lineWidth: number;
-    maxClusterSize: number;
-    frequency: number;
-    from: number;
-    to: number;
-    nbPoints: number;
-    shape: Shape1DOption
+  maxClusterSize: number;
+  frequency: number;
+  from: number;
+  to: number;
+  nbPoints: number;
+  shape: Shape1DOption;
 }
 
 /**
@@ -39,11 +39,14 @@ interface Simulate1DOptions {
 interface SpinSystem {
   chemicalShifts: number[];
   multiplicity: number[];
-  couplingConstants: AbstractMatrix;
-  connectivity: AbstractMatrix;
+  couplingConstants: MatrixClassType;
+  connectivity: MatrixClassType;
   clusters: number[][];
 }
-export default function simulate1D(spinSystem: SpinSystem, options: Partial<Simulate1DOptions> = {}) {
+export default function simulate1D(
+  spinSystem: SpinSystem,
+  options: Partial<Simulate1DOptions> = {},
+) {
   let {
     lineWidth = 1,
     maxClusterSize = 8,
@@ -72,18 +75,16 @@ export default function simulate1D(spinSystem: SpinSystem, options: Partial<Simu
   }
 
   const multiplicity = spinSystem.multiplicity;
-  for (let h = 0; h < spinSystem.clusters.length; h++) {
-    const cluster = spinSystem.clusters[h];
+  for (const cluster of spinSystem.clusters) {
 
-    let clusterFake = new Array(cluster.length);
-    for (let i = 0; i < cluster.length; i++) {
-      clusterFake[i] = cluster[i] < 0 ? -cluster[i] - 1 : cluster[i];
-    }
+    let clusterFake = cluster.map((cluster) =>
+      cluster < 0 ? -cluster - 1 : cluster,
+    );
 
     let weight = 1;
     let sumI = 0;
-    let frequencies = [];
-    let intensities = [];
+    let frequencies = [] as number[];
+    let intensities = [] as number[];
     if (cluster.length > maxClusterSize) {
       // This is a single spin, but the cluster exceeds the maxClusterSize criteria
       // we use the simple multiplicity algorithm
@@ -176,7 +177,8 @@ export default function simulate1D(spinSystem: SpinSystem, options: Partial<Simu
       const tV = V.transpose();
 
       rhoip = tV.mmul(rhoip);
-      rhoip = new SparseMatrix(rhoip.to2DArray(), { threshold: smallValue });
+      // rhoip (rhoip as unknown) as SparseMatrix) = new SparseMatrix(rhoip.to2DArray(), { threshold: smallValue });
+      rhoip as SparseMatrix = new SparseMatrix(rhoip.to2DArray(), { threshold: smallValue });
       triuTimesAbs(rhoip, smallValue);
       rhoip2 = tV.mmul(rhoip2);
 
