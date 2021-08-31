@@ -177,17 +177,16 @@ export default function simulate1D(
       const tV = V.transpose();
 
       rhoip = tV.mmul(rhoip);
-      // rhoip (rhoip as unknown) as SparseMatrix) = new SparseMatrix(rhoip.to2DArray(), { threshold: smallValue });
-      rhoip as SparseMatrix = new SparseMatrix(rhoip.to2DArray(), { threshold: smallValue });
-      triuTimesAbs(rhoip, smallValue);
+      const sparseRhoip = new SparseMatrix(rhoip.to2DArray(), { threshold: smallValue });
+      triuTimesAbs(sparseRhoip, smallValue);
+      
       rhoip2 = tV.mmul(rhoip2);
-
-      rhoip2 = new SparseMatrix(rhoip2.to2DArray(), { threshold: smallValue });
-      rhoip2.forEachNonZero((i, j, v) => {
+      const sparseRhoip2 = new SparseMatrix(rhoip2.to2DArray(), { threshold: smallValue });
+      sparseRhoip2.forEachNonZero((i, j, v) => {
         return v;
       });
-      triuTimesAbs(rhoip2, smallValue);
-      rhoip2.forEachNonZero((i, j, v) => {
+      triuTimesAbs(sparseRhoip2, smallValue);
+      sparseRhoip2.forEachNonZero((i, j, v) => {
         let val = rhoip.get(i, j);
         val = Math.min(Math.abs(val), Math.abs(v));
         val *= val;
