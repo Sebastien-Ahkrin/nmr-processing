@@ -1,12 +1,11 @@
 import binarySearch from 'binary-search';
 import { Matrix, EVD } from 'ml-matrix';
+import type { Matrix as MatrixClassType } from 'ml-matrix';
 import { SparseMatrix } from 'ml-sparse-matrix';
 import { SpectrumGenerator } from 'spectrum-generator';
+import type { Shape1DOption } from 'spectrum-generator';
 
 import getPauliMatrix from './getPauliMatrix';
-
-import type { Shape1DOption } from 'spectrum-generator';
-import type { MatrixClassType } from 'ml-matrix';
 
 const smallValue = 1e-2;
 
@@ -76,7 +75,6 @@ export default function simulate1D(
 
   const multiplicity = spinSystem.multiplicity;
   for (const cluster of spinSystem.clusters) {
-
     let clusterFake = cluster.map((cluster) =>
       cluster < 0 ? -cluster - 1 : cluster,
     );
@@ -177,11 +175,15 @@ export default function simulate1D(
       const tV = V.transpose();
 
       rhoip = tV.mmul(rhoip);
-      const sparseRhoip = new SparseMatrix(rhoip.to2DArray(), { threshold: smallValue });
+      const sparseRhoip = new SparseMatrix(rhoip.to2DArray(), {
+        threshold: smallValue,
+      });
       triuTimesAbs(sparseRhoip, smallValue);
-      
+
       rhoip2 = tV.mmul(rhoip2);
-      const sparseRhoip2 = new SparseMatrix(rhoip2.to2DArray(), { threshold: smallValue });
+      const sparseRhoip2 = new SparseMatrix(rhoip2.to2DArray(), {
+        threshold: smallValue,
+      });
       sparseRhoip2.forEachNonZero((i, j, v) => {
         return v;
       });
@@ -233,10 +235,10 @@ export default function simulate1D(
       });
     }
   }
-  return spectrumGenerator.data;
+  return spectrumGenerator.getSpectrum();
 }
 
-function triuTimesAbs(A, val) {
+function triuTimesAbs(A: SparseMatrix, val: number) {
   A.forEachNonZero((i, j, v) => {
     if (i > j) return 0;
     if (Math.abs(v) <= val) return 0;
@@ -253,15 +255,15 @@ function triuTimesAbs(A, val) {
  * @return {object}
  */
 function getHamiltonian(
-  chemicalShifts,
-  couplingConstants,
-  multiplicity,
-  conMatrix,
-  cluster,
+  chemicalShifts: number[],
+  couplingConstants: MatrixClassType,
+  multiplicity: number[],
+  conMatrix: MatrixClassType,
+  cluster: number[],
 ) {
   let hamSize = 1;
-  for (let i = 0; i < cluster.length; i++) {
-    hamSize *= multiplicity[cluster[i]];
+  for (const element of cluster) {
+    hamSize *= multiplicity[element];
   }
 
   const clusterHam = new SparseMatrix(hamSize, hamSize);

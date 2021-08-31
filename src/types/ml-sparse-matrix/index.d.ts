@@ -8,6 +8,8 @@ declare module 'ml-sparse-matrix' {
     lowWaterMark: number;
   }
   class SparseMatrix {
+    public rows: number;
+    public columns: number;
     public constructor(rows: SparseMatrix);
 
     public constructor(
@@ -27,5 +29,6 @@ declare module 'ml-sparse-matrix' {
     public kroneckerProduct(other: SparseMatrix): SparseMatrix;
     public add(other: SparseMatrix): SparseMatrix;
     public mul(other: number): SparseMatrix;
+    public mmul(other: SparseMatrix)
   }
 }
