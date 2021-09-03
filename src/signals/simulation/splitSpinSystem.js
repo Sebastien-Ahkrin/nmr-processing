@@ -137,6 +137,7 @@ function mergeClusters(list, maxClusterSize) {
   }
   return list;
 }
+
 function getMembers(cluster, nSpins) {
   let members = new Int16Array(nSpins);
   for (let e of cluster) {

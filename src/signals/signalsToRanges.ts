@@ -1,8 +1,32 @@
-export function signalsToRanges(signals, options = {}) {
+import type { Signal1D } from '../types/signal1D';
+
+interface SignalsToRangesOptions {
+  tolerance?: number;
+  frequency?: number;
+}
+
+interface WrappedSignal {
+  from: number;
+  to: number;
+  original: Signal1D;
+}
+
+interface Range {
+  from: number;
+  to: number;
+  integration: number;
+  signals: Signal1D[];
+}
+
+export function signalsToRanges(
+  signals: Signal1D[],
+  options: SignalsToRangesOptions = {},
+): Range[] {
   const { tolerance = 0.05, frequency = 400 } = options;
   let wrapped = signals.map((signal) => ({
     original: signal,
-  }));
+  })) as WrappedSignal[];
+
   wrapped.forEach((signal) => {
     let halfWidth =
       (signal.original.js || []).reduce(
@@ -16,7 +40,7 @@ export function signalsToRanges(signals, options = {}) {
   });
   wrapped = wrapped.sort((signal1, signal2) => signal1.from - signal2.from);
   let ranges = [];
-  let range = {};
+  let range = {} as Range;
   for (let signal of wrapped) {
     if (range.from === undefined || signal.from > range.to) {
       range = {
