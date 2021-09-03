@@ -1,20 +1,10 @@
 import rescale from 'ml-array-rescale';
-import type { Shape1DOption } from 'spectrum-generator'
+import type { Shape1DOption } from 'spectrum-generator';
+import type { Signal1D } from '../types/signal1D';
 
 import { signalsToSpinSystem } from './simulation/signalsToSpinSystem';
 import simulate1D from './simulation/simulate1D';
 import { splitSpinSystem } from './simulation/splitSpinSystem';
-
-interface Jcoupling {
-  coupling: number;
-  atomIDs: number[];
-}
-
-export interface Signal1D {
-  delta: number;
-  js: Jcoupling[];
-  atomIDs: number[];
-}
 
 export interface OptionsSignalsToXY {
   frequency: number;
@@ -42,7 +32,10 @@ export interface OptionsSignalsToXY {
  * @param {number} [options.nbPoints=16*1024] - Number of points of the output spectrum.
  * @returns  {object} an object of the kind {x:[], y:[]}
  */
-export function signalsToXY(signals: Signal1D[], options: Partial<OptionsSignalsToXY> = {}) {
+export function signalsToXY(
+  signals: Signal1D[],
+  options: Partial<OptionsSignalsToXY> = {},
+) {
   let {
     frequency = 400,
     shape = {
