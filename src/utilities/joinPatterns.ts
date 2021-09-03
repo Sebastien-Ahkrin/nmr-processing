@@ -1,19 +1,19 @@
 import { couplingPatterns } from '../constants/couplingPatterns';
 import { couplingValues } from '../constants/couplingValues';
 
+type couplingPatternKeys = keyof typeof couplingValues;
+const getKeyValue = <T extends object, U extends keyof T>(obj: T, key: U) => obj[key];
+
 /**
  *
  * @param {array<string>} patterns
  * @returns
  */
-export function joinPatterns(patterns) {
+export function joinPatterns(patterns: couplingPatternKeys[]) {
   let sum = 0;
   for (let pattern of patterns) {
-    if (couplingValues[pattern] !== undefined) {
-      sum += couplingValues[pattern];
-    } else {
-      throw new Error(`Unknown multiplicity: ${pattern}`);
-    }
+    sum += getKeyValue(couplingValues, pattern);
   }
   return couplingPatterns[sum];
 }
+
