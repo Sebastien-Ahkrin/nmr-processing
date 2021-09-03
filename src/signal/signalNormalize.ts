@@ -1,19 +1,21 @@
+import type { Signal1D } from '../types/signal1D';
+
 /**
- * Ensure that assignment and diaIDs are arrays and coupling are sorted
+ * Ensure that atomIDs and diaIDs are arrays and coupling are sorted
  * @param {object} signal
  * @returns signal
  */
-export function signalNormalize(signal) {
-  signal = JSON.parse(JSON.stringify(signal));
+export function signalNormalize(signal: Signal1D) {
+  let newSignal = JSON.parse(JSON.stringify(signal));
 
   if (signal.atomIDs && !Array.isArray(signal.atomIDs)) {
-    signal.atomIDs = [signal.atomIDs];
+    newSignal.atomIDs = [signal.atomIDs];
   }
   if (signal.assignment && Array.isArray(signal.assignment)) {
-    signal.assignment = signal.assignment.join(' ');
+    newSignal.assignment = signal.assignment.join(' ');
   }
   if (signal.diaIDs && !Array.isArray(signal.diaIDs)) {
-    signal.diaIDs = [signal.diaIDs];
+    newSignal.diaIDs = [signal.diaIDs];
   }
   if (signal.js) {
     let couplings = signal.js;
