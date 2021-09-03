@@ -6,6 +6,7 @@ declare module 'ml-sparse-matrix' {
     distinct: number;
     freeEntries: number;
     lowWaterMark: number;
+    initialCapacity: number;
   }
   class SparseMatrix {
     public rows: number;
@@ -15,7 +16,7 @@ declare module 'ml-sparse-matrix' {
     public constructor(
       rows: number,
       columns: number,
-      options?: OptionsContructor,
+      options?: Partial<OptionsContructor>,
     );
 
     public constructor(rows: number[][], columns: Partial<OptionsContructor>);
@@ -29,6 +30,9 @@ declare module 'ml-sparse-matrix' {
     public kroneckerProduct(other: SparseMatrix): SparseMatrix;
     public add(other: SparseMatrix): SparseMatrix;
     public mul(other: number): SparseMatrix;
-    public mmul(other: SparseMatrix)
+    public mmul(other: SparseMatrix);
+    public get(rowIndex: number, columnIndex: number): number;
+    public set(rowIndex: number, columnIndex: number, value: number): this;
+    public clone(): SparseMatrix;
   }
 }

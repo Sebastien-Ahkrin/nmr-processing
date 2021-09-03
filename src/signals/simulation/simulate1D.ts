@@ -118,6 +118,7 @@ export default function simulate1D(
         clusterFake,
       );
       const hamSize = hamiltonian.rows;
+      // @ts-expect-error
       const evd = new EVD(hamiltonian);
       const V = evd.eigenvectorMatrix;
       const diagB = evd.realEigenvalues;

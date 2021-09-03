@@ -1,25 +1,34 @@
 import { Matrix } from 'ml-matrix';
 import simpleClustering from 'ml-simple-clustering';
 
-export function signalsToSpinSystem(signals) {
+import type { Signal1D } from '../signalsToXY';
+
+interface Ids {
+  [index: number]: number;
+}
+
+export function signalsToSpinSystem(signals: Signal1D[]) {
   const nSpins = signals.length;
   const chemicalShifts = new Array(nSpins);
   const multiplicity = new Array(nSpins);
   const couplingConstants = Matrix.zeros(nSpins, nSpins);
   //create a list of assignments
-  const ids = {};
+  const ids: Ids = {};
   for (let i = 0; i < nSpins; i++) {
     multiplicity[i] = 2;
     chemicalShifts[i] = signals[i].delta;
-    ids[signals[i].atomIDs] = i;
+    const index = signals[i].atomIDs[0];
+    ids[index] = i;
   }
   //create the coupling matrix
   for (let i = 0; i < nSpins; i++) {
     let { atomIDs: signalAssignment, js: jCoupling } = signals[i];
+    const fromIndex = signalAssignment[0];
     for (let k = 0; k < jCoupling.length; k++) {
       let { coupling, atomIDs } = jCoupling[k];
-      couplingConstants.set(ids[signalAssignment], ids[atomIDs], coupling);
-      couplingConstants.set(ids[atomIDs], ids[signalAssignment], coupling);
+      const toIndex = atomIDs[0];
+      couplingConstants.set(ids[fromIndex], ids[toIndex], coupling);
+      couplingConstants.set(ids[toIndex], ids[fromIndex], coupling);
     }
   }
 
