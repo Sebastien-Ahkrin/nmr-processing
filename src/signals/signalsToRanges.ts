@@ -1,5 +1,3 @@
-import type { Signal1D } from '../types/signal1D';
-
 interface SignalsToRangesOptions {
   tolerance?: number;
   frequency?: number;
@@ -9,6 +7,16 @@ interface WrappedSignal {
   from: number;
   to: number;
   original: Signal1D;
+}
+
+export interface Jcoupling {
+  coupling: number;
+}
+
+export interface Signal1D {
+  delta: number;
+  js?: Jcoupling[];
+  nbAtoms: number;
 }
 
 interface Range {
@@ -23,6 +31,7 @@ export function signalsToRanges(
   options: SignalsToRangesOptions = {},
 ): Range[] {
   const { tolerance = 0.05, frequency = 400 } = options;
+
   let wrapped = signals.map((signal) => ({
     original: signal,
   })) as WrappedSignal[];
@@ -39,6 +48,7 @@ export function signalsToRanges(
     signal.to = signal.original.delta + halfWidth;
   });
   wrapped = wrapped.sort((signal1, signal2) => signal1.from - signal2.from);
+
   let ranges = [];
   let range = {} as Range;
   for (let signal of wrapped) {

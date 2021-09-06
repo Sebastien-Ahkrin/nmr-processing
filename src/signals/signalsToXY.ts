@@ -1,6 +1,5 @@
 import rescale from 'ml-array-rescale';
 import type { Shape1DOption } from 'spectrum-generator';
-import type { Signal1D } from '../types/signal1D';
 
 import { signalsToSpinSystem } from './simulation/signalsToSpinSystem';
 import simulate1D from './simulation/simulate1D';
