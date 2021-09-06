@@ -1,4 +1,5 @@
 import { gsd, joinBroadPeaks, optimizePeaks } from 'ml-gsd';
+import type { ShapeKind, XYNumber } from 'ml-peak-shape-generator';
 import {
   xyExtract,
   xNoiseSanPlot,
@@ -26,8 +27,63 @@ import {
  * @param {Boolean} [options.optimize = true] - if it's true adjust an train of gaussian or lorentzian shapes to spectrum.
  * @return {Array}
  */
+interface XYNumberArray {
+  x: ArrayLike<number>;
+  y: ArrayLike<number>;
+}
 
-export function xyAutoPeaksPicking(data, options = {}) {
+// interface OptionsXYAutoPeaksPicking {
+//   from?: number;
+//   to?: number;
+//   noiseLevel?: number;
+//   thresholdFactor?: number;
+//   minMaxRatio?: number;
+//   broadRatio?: number;
+//   useSanPlot?: boolean;
+//   smoothY?: boolean;
+//   optimize?: boolean;
+//   factorWidth?: number;
+//   realTopDetection?: boolean;
+//   shape?: { kind: ShapeKind };
+//   optimization?: { kind: string };
+//   broadWidth?: number;
+//   lookNegative?: boolean;
+//   sgOptions?: { windowSize: number; polynomial: number };
+// }
+
+interface OptionsGetCutOff {
+  noiseLevel?: number;
+  useSanPlot: boolean;
+  thresholdFactor: number;
+}
+
+interface OptionsGetPeakList {
+  noiseLevel: number;
+  minMaxRatio: number;
+  broadRatio: number;
+  smoothY: boolean;
+  optimize: boolean;
+  factorWidth: number;
+  realTopDetection: boolean;
+  shape: { kind: ShapeKind };
+  optimization: { kind: string };
+  broadWidth: number;
+  sgOptions: { windowSize: number; polynomial: number };
+}
+
+interface OptionsXYAutoPeaksPicking extends Partial<OptionsGetPeakList> {
+  from?: number;
+  to?: number;
+  noiseLevel?: number;
+  thresholdFactor?: number;
+  lookNegative?: boolean;
+  useSanPlot?: boolean;
+}
+
+export function xyAutoPeaksPicking(
+  data: XYNumberArray,
+  options: OptionsXYAutoPeaksPicking = {},
+) {
   const {
     from,
     to,
@@ -77,7 +133,10 @@ export function xyAutoPeaksPicking(data, options = {}) {
   return peaks;
 }
 
-function getPeakList(data, options) {
+function getPeakList(
+  data: XYNumberArray,
+  options: OptionsGetPeakList,
+) {
   const {
     shape,
     broadWidth,
@@ -120,7 +179,10 @@ function getPeakList(data, options) {
   return peakList;
 }
 
-function getNegativePeaks(data, options) {
+function getNegativePeaks(
+  data: XYNumberArray,
+  options: OptionsGetPeakList,
+) {
   let { x, y } = data;
   let negativeDataY = new Float64Array(data.y.length);
   for (let i = 0; i < negativeDataY.length; i++) {
@@ -135,10 +197,10 @@ function getNegativePeaks(data, options) {
   return peakList;
 }
 
-function getCutOff(data, options = {}) {
+function getCutOff(data: ArrayLike<number>, options: OptionsGetCutOff) {
   const { noiseLevel, useSanPlot, thresholdFactor } = options;
 
-  const formatResult = (noiseLevel) =>
+  const formatResult = (noiseLevel: number) =>
     typeof noiseLevel === 'number'
       ? { positive: noiseLevel, negative: -noiseLevel }
       : noiseLevel;
