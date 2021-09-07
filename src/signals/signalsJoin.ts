@@ -3,7 +3,6 @@ import sum from 'ml-array-sum';
 
 import { signalJoinCouplings } from '../signal/signalJoinCouplings';
 import { signalNormalize } from '../signal/signalNormalize';
-
 import type { Signal1D } from '../types/signal1D';
 
 interface SignalsJoinOptions {

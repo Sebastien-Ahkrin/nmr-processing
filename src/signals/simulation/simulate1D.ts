@@ -42,6 +42,7 @@ interface SpinSystem {
   connectivity: MatrixClassType;
   clusters: number[][];
 }
+
 export default function simulate1D(
   spinSystem: SpinSystem,
   options: Partial<Simulate1DOptions> = {},
@@ -118,7 +119,6 @@ export default function simulate1D(
         clusterFake,
       );
       const hamSize = hamiltonian.rows;
-      // @ts-expect-error
       const evd = new EVD(hamiltonian);
       const V = evd.eigenvectorMatrix;
       const diagB = evd.realEigenvalues;
@@ -196,7 +196,7 @@ export default function simulate1D(
 
         sumI += val;
         let valFreq = diagB[i] - diagB[j];
-        let insertIn = binarySearch(frequencies, valFreq, (a, b) => a - b);
+        let insertIn = binarySearch(frequencies, valFreq, (a: number, b: number) => a - b);
         if (insertIn < 0) {
           frequencies.splice(-1 - insertIn, 0, valFreq);
           intensities.splice(-1 - insertIn, 0, val);
