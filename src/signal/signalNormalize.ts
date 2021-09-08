@@ -1,29 +1,21 @@
-import { Jcoupling } from '..';
+import type { Jcoupling } from '../types/jcoupling';
 import type { Signal1D } from '../types/signal1D';
-
-export interface Jcoupling {
-  coupling: number;
-  atomIDs?: number[];
-  assignment?: string | string[];
-  diaIDs: string[];
-  multiplicity: string;
-}
 
 /**
  * Ensure that atomIDs and diaIDs are arrays and coupling are sorted
  * @param {object} signal
  * @returns signal
  */
-export function signalNormalize(signal: Signal1D) {
+export function signalNormalize(signal: Partial<Signal1D>) {
   let newSignal = JSON.parse(JSON.stringify(signal));
 
-  if (signal.atomIDs && !Array.isArray(signal.atomIDs)) {
+  if (!signal.atomIDs) signal.atomIDs = [];
+  if (!Array.isArray(signal.atomIDs)) {
     newSignal.atomIDs = [signal.atomIDs];
   }
-  if (signal.assignment && Array.isArray(signal.assignment)) {
-    newSignal.assignment = signal.assignment.join(' ');
-  }
-  if (signal.diaIDs && !Array.isArray(signal.diaIDs)) {
+
+  if (!signal.diaIDs) signal.diaIDs = [];
+  if (!Array.isArray(signal.diaIDs)) {
     newSignal.diaIDs = [signal.diaIDs];
   }
 
@@ -34,11 +26,16 @@ export function signalNormalize(signal: Signal1D) {
     if (coupling.assignment && Array.isArray(coupling.assignment)) {
       coupling.assignment = coupling.assignment.join(' ');
     }
-    if (coupling.diaIDs && !Array.isArray(coupling.diaIDs)) {
+    if (coupling.diaIDs) coupling.diaIDs = [];
+    if (!Array.isArray(coupling.diaIDs)) {
       coupling.diaIDs = [coupling.diaIDs];
     }
   }
-  newSignal.js = newSignal.js.sort((a: Jcoupling, b: Jcoupling) => b.coupling - a.coupling);
+  newSignal.js = newSignal.js
+    .forEach((j: Jcoupling, i: number, js: Jcoupling[]) => {
+      if (j.distance === undefined) js[i].distance = -1;
+    })
+    .sort((a: Jcoupling, b: Jcoupling) => b.coupling - a.coupling);
 
-  return signal;
+  return newSignal as Signal1D;
 }

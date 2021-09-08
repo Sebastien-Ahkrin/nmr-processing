@@ -1,5 +1,6 @@
 import rescale from 'ml-array-rescale';
 import type { Shape1DOption } from 'spectrum-generator';
+import type { Signal1D } from '../types/signal1D';
 
 import { signalsToSpinSystem } from './simulation/signalsToSpinSystem';
 import simulate1D from './simulation/simulate1D';
@@ -14,18 +15,6 @@ export interface OptionsSignalsToXY {
   nbPoints?: number;
   maxValue?: number;
   maxClusterSize?: number;
-}
-
-export interface JcouplingFromPrediction {
-  coupling: number;
-  atomIDs: number[];
-  multiplicity: string;
-}
-
-export interface Signal1DFromPrediction {
-  delta: number;
-  js: JcouplingFromPrediction[];
-  atomIDs: number[];
 }
 
 /**
@@ -45,7 +34,7 @@ export interface Signal1DFromPrediction {
  * @returns  {object} an object of the kind {x:[], y:[]}
  */
 export function signalsToXY(
-  signals: Signal1DFromPrediction[],
+  signals: Signal1D[],
   options: OptionsSignalsToXY = {},
 ) {
   let {
