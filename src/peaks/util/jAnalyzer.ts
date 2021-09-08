@@ -6,7 +6,17 @@ const patterns = ['s', 'd', 't', 'q', 'quint', 'h', 'sept', 'o', 'n'];
 let symRatio = 1.5;
 let maxErrorIter1 = 2.5; // Hz
 let maxErrorIter2 = 1; // Hz
-let jAxisKeys = { jAxis: 'x', intensity: 'intensity' };
+
+interface JAxisKeys {
+  [key: string]: String;
+  jAxis: string;
+  intensity: string;
+}
+let jAxisKeys: JAxisKeys = { jAxis: 'x', intensity: 'intensity' };
+
+export interface OpitonsCompilePatter {
+  jAxisKey?: JAxisKeys;
+}
 
 export default {
   /**
@@ -15,8 +25,11 @@ export default {
    * @param {object} signal
    * @private
    */
-  compilePattern: function (signal, options = {}) {
+  compilePattern: function (signal: Signal, options: OpitonsCompilePatter = {}) {
     let { jAxisKey = jAxisKeys } = options;
+
+    signal = JSON.parse(JSON.stringify(signal));
+
     signal.multiplicity = 'm';
     // 1.1 symmetrize
     // It will add a set of peaks(signal.peaksComp) to the signal that will be used during

@@ -16,15 +16,15 @@ export interface OptionsSignalsToXY {
   maxClusterSize?: number;
 }
 
-export interface Jcoupling {
+export interface JcouplingFromPrediction {
   coupling: number;
   atomIDs: number[];
   multiplicity: string;
 }
 
-export interface Signal1D {
+export interface Signal1DFromPrediction {
   delta: number;
-  js: Jcoupling[];
+  js: JcouplingFromPrediction[];
   atomIDs: number[];
 }
 
@@ -45,7 +45,7 @@ export interface Signal1D {
  * @returns  {object} an object of the kind {x:[], y:[]}
  */
 export function signalsToXY(
-  signals: Signal1D[],
+  signals: Signal1DFromPrediction[],
   options: OptionsSignalsToXY = {},
 ) {
   let {

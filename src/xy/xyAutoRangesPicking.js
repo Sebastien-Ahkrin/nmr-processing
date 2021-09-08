@@ -3,6 +3,12 @@ import { peaksToRanges } from '../peaks/peaksToRanges';
 
 import { xyAutoPeaksPicking } from './xyAutoPeaksPicking';
 
+import type { OptionsXYAutoPeaksPicking } from './xyAutoPeaksPicking';
+
+interface OptionsXYAutoRangesPicking {
+  peakPicking?: OptionsXYAutoPeaksPicking;
+  
+}
 /**
  * Detect peaks, optimize parameters and compile multiplicity if required.
  * @param {DataXY}  data - Object of kind
@@ -35,6 +41,7 @@ import { xyAutoPeaksPicking } from './xyAutoPeaksPicking';
  * @param {string}  [options.impurities.error=0.025] - tolerance in ppm to assign a impurity.
  * @returns {array} - Array of ranges with {from, to, integration, signals: [{delta, j, multiplicity, peaks}]}
  */
+
 
 export function xyAutoRangesPicking(data, options = {}) {
   let peaks = xyAutoPeaksPicking(data, options.peakPicking);

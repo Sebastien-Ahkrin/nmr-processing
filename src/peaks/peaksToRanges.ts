@@ -1,9 +1,105 @@
 // import { Ranges } from 'spectra-data-ranges';
 import { xyIntegration } from 'ml-spectra-processing';
-
+import type { Peak, XYNumberArray } from '../xy/xyAutoPeaksPicking';
 import jAnalyzer from './util/jAnalyzer';
 import { joinRanges } from './util/joinRanges';
 
+
+export interface OptionsPeaksToRanges {
+  integrationSum?: number;
+  joinOverlapRanges?: boolean;
+  clean?: number;
+  compile?: boolean;
+  integralType?: string;
+  frequency?: number;
+  frequencyCluster?: number;
+  keepPeaks?: boolean;
+  nucleus?: string;
+}
+
+export interface OptionsDetectSignals {
+  integrationSum?: number;
+  integralType?: string;
+  frequencyCluster?: number;
+  frequency?: number;
+  nucleus?: string;
+}
+
+export interface Peak1D {
+  x: number;
+  intensity: number;
+  width: number;
+  mu?: number;
+}
+
+export interface IntergralData {
+  value: number;
+  from: number;
+  to: number;
+}
+
+export interface SignalsIntern {
+  delta1: number;
+  nbPeaks: number;
+  units: string;
+  startX: number;
+  stopX: number;
+  mask: boolean[];
+  mask2: boolean[];
+  maskPattern: boolean[];
+  nmrJs: Array<{ coupling: number; multiplicity: string }>;
+  multiplicity: string;
+  pattern: string;
+  observe: number;
+  nucleus: string;
+  kind: string;
+  integralData: IntergralData;
+  peaks: Peak1D[];
+}
+
+export interface Jcoupling1D {
+  coupling: number;
+  atomIDs?: number[];
+  multiplicity: string;
+}
+
+export interface Signal1D {
+  delta: number;
+  multiplicity: string;
+  js: Jcoupling1D[];
+  peaks: Peak1D[];
+}
+
+interface Range {
+
+}
+
+const assignSignal = (peak: Peak, frequency: number, nucleus: string) => {
+  return {
+    delta1: -10000,
+    nbPeaks: 1,
+    units: 'PPM',
+    kind: 'signal',
+    startX: peak.x - peak.width,
+    stopX: peak.x + peak.width,
+    multiplicity: '',
+    pattern: '',
+    observe: frequency,
+    nucleus,
+    integralData: {
+      from: peak.x - peak.width * 3,
+      to: peak.x + peak.width * 3,
+      value: 0,
+    },
+    peaks: [
+      {
+        x: peak.x,
+        intensity: peak.y,
+        width: peak.width,
+      },
+    ],
+  };
+};
 /**
  * This function clustering peaks and calculate the integration value for each range from the peak list returned from extractPeaks function.
  * @param {Object} data - spectra data
@@ -20,7 +116,16 @@ import { joinRanges } from './util/joinRanges';
  * @returns {Array}
  */
 
-export function peaksToRanges(data, peakList, options = {}) {
+export interface Signal1D {
+  delta: number;
+  js?: Partial<Jcoupling>[];
+  peaks: 
+}
+export function peaksToRanges(
+  data: XYNumberArray,
+  peakList: Peak[],
+  options: OptionsPeaksToRanges = {},
+) {
   let {
     integrationSum = 100,
     joinOverlapRanges = true,
@@ -167,7 +272,12 @@ export function peaksToRanges(data, peakList, options = {}) {
  * @return {array} nmr signals
  * @private
  */
-function detectSignals(data, peakList, options = {}) {
+
+function detectSignals(
+  data: XYNumberArray,
+  peakList: Peak[],
+  options: OptionsDetectSignals = {},
+): SignalsIntern[] {
   let {
     integrationSum = 100,
     integralType = 'sum',
@@ -176,57 +286,39 @@ function detectSignals(data, peakList, options = {}) {
     nucleus = '1H',
   } = options;
 
-  let signal1D, peaks;
+  let signal1D: SignalsIntern = assignSignal(peakList[0], frequency, nucleus);
+  let peaks;
   let signals = [];
-  let prevPeak = { x: 100000 };
+  let prevPeak = peakList[0];
   let spectrumIntegral = 0;
   frequencyCluster /= frequency;
-  for (let i = 0; i < peakList.length; i++) {
-    if (Math.abs(peakList[i].x - prevPeak.x) > frequencyCluster) {
-      signal1D = {
-        nbPeaks: 1,
-        units: 'PPM',
-        startX: peakList[i].x - peakList[i].width,
-        stopX: peakList[i].x + peakList[i].width,
-        multiplicity: '',
-        pattern: '',
-        observe: frequency,
-        nucleus,
-        integralData: {
-          from: peakList[i].x - peakList[i].width * 3,
-          to: peakList[i].x + peakList[i].width * 3,
-        },
-        peaks: [
-          {
-            x: peakList[i].x,
-            intensity: peakList[i].y,
-            width: peakList[i].width,
-          },
-        ],
-      };
-      if (peakList[i].kind) signal1D.kind = peakList[i].kind;
+  for (let i = 1; i < peakList.length; i++) {
+    const peak = peakList[i];
+    if (Math.abs(peak.x - prevPeak.x) > frequencyCluster) {
+      signal1D = assignSignal(peakList[i], frequency, nucleus);
+      if (peak.kind) signal1D.kind = peak.kind;
       signals.push(signal1D);
     } else {
-      let tmp = peakList[i].x + peakList[i].width;
+      let tmp = peak.x + peak.width;
       signal1D.stopX = Math.max(signal1D.stopX, tmp);
       signal1D.startX = Math.min(signal1D.startX, tmp);
       signal1D.nbPeaks++;
       signal1D.peaks.push({
-        x: peakList[i].x,
-        intensity: peakList[i].y,
-        width: peakList[i].width,
+        x: peak.x,
+        intensity: peak.y,
+        width: peak.width,
       });
       signal1D.integralData.from = Math.min(
         signal1D.integralData.from,
-        peakList[i].x - peakList[i].width * 3,
+        peak.x - peak.width * 3,
       );
       signal1D.integralData.to = Math.max(
         signal1D.integralData.to,
-        peakList[i].x + peakList[i].width * 3,
+        peak.x + peak.width * 3,
       );
-      if (peakList[i].kind) signal1D.kind = peakList[i].kind;
+      if (peak.kind) signal1D.kind = peak.kind;
     }
-    prevPeak = peakList[i];
+    prevPeak = peak;
   }
 
   for (let i = 0; i < signals.length; i++) {
@@ -270,6 +362,6 @@ function detectSignals(data, peakList, options = {}) {
  * @return {Number}
  * @private
  */
-function computeArea(peak) {
+function computeArea(peak: Peak1D) {
   return Math.abs(peak.intensity * peak.width * 1.57); // todo add an option with this value: 1.772453851
 }

@@ -27,9 +27,9 @@ import {
  * @param [options.optimize = true] - if it's true adjust an train of gaussian or lorentzian shapes to spectrum.
  * @return {Array}
  */
-interface XYNumberArray {
-  x: ArrayLike<number>;
-  y: ArrayLike<number>;
+export interface XYNumberArray {
+  x: Array<number> | Float64Array;
+  y: Array<number> | Float64Array;
 }
 
 interface OptionsGetCutOff {

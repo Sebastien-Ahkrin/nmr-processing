@@ -1,6 +1,7 @@
+import type { Signal1D } from '../types/signal1D';
+
 import { OptionsSignalsToXY, signalsToXY } from './signalsToXY';
 
-import type { Signal1D } from '../types/signal1D';
 
 const patterns = ['s', 'd', 't', 'q', 'quint', 'h', 'sept', 'o', 'n'];
 

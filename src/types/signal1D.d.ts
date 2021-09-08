@@ -1,8 +1,8 @@
 import type { Jcoupling } from './jcoupling';
 
-export interface Signal1D {
+interface Signal1D {
   delta: number;
-  js: Jcoupling[];
+  // js: Jcoupling[];
   atomIDs: number[];
   assignment?: string | string[];
   diaIDs?: string[];
