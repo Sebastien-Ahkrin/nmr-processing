@@ -7,17 +7,30 @@ const toCheck = ['solvent', 'h2o', 'tms'];
 type Solvent = keyof typeof impurities;
 
 export interface OptionsPeakFilterImpurities {
+  /**
+   * Solvent name.
+   */
   solvent?: Solvent | '(cd3)2so' | 'meod';
+  /**
+   * tolerance in ppm to assign a impurity.
+   * @default 0.025
+   */
   error?: number;
+  /**
+   * If it is true, it remove the peaks otherwise it assigns the kind of the signal with the name of the impurity
+   * @default false
+   */
   remove?: boolean;
+}
+
+interface OptionsCheckImpurity {
+  name: string;
+  error: number;
+  remove: boolean;
 }
 
 /**
  * Try to remove peaks of impurities.
- * @param peakList-A list of initial parameters to be optimized. e.g. coming from a peak picking [{x, y, width}].
- * @param [options={}]-options
- * @param [options.solvent='']-solvent name.
- * @param [options.error=0.025]-tolerance in ppm to assign a impurity.
  */
 
 export function peaksFilterImpurities(
@@ -40,12 +53,6 @@ export function peaksFilterImpurities(
     }
   }
   return peakList;
-}
-
-interface OptionsCheckImpurity {
-  name: string;
-  error: number;
-  remove: boolean;
 }
 
 function checkImpurity(
