@@ -1,19 +1,55 @@
 // import { Ranges } from 'spectra-data-ranges';
 import { xyIntegration } from 'ml-spectra-processing';
-import type { Peak, XYNumberArray } from '../xy/xyAutoPeaksPicking';
+import type { Peak } from '../xy/xyAutoPeaksPicking';
+import type { XYNumberArray } from '../types/XYNumberArray';
 import jAnalyzer from './util/jAnalyzer';
 import { joinRanges } from './util/joinRanges';
 
 
 export interface OptionsPeaksToRanges {
+  /**
+   * Number of hydrogens or some number to normalize the integration data. If it's zero return the absolute integration value
+   * @default 100
+   */
   integrationSum?: number;
+  /**
+   * if it is true, it will join any overlaped ranges.
+   * @default true
+   */
   joinOverlapRanges?: boolean;
+  /**
+   * If exits it remove all the signals with integration < clean value
+   * @default 0.4
+   */
   clean?: number;
+  /**
+   * If true, the Janalyzer function is run over signals to compile the patterns.
+   * @default true
+   */
   compile?: boolean;
+  /**
+   * option to chose between approx area with peaks or the sum of the points of given range ('sum', 'peaks')
+   * @default 'sum'
+   */
   integralType?: string;
+  /**
+   * Observed frequency
+   * @default 400
+   */
   frequency?: number;
+  /**
+   * distance limit to clustering peaks.
+   * @default 16
+   */
   frequencyCluster?: number;
+  /**
+   * If true, it will keep the peaks for each signal
+   */
   keepPeaks?: boolean;
+  /**
+   * Nucleus
+   * @default '1H'
+   */
   nucleus?: string;
 }
 
