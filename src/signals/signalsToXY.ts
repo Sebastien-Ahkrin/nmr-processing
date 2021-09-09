@@ -8,30 +8,44 @@ import { splitSpinSystem } from './simulation/splitSpinSystem';
 
 export interface OptionsSignalsToXY {
   frequency?: number;
+  /**
+   * The low limit of the ordinate variable.
+   * @default 0
+   */
   from?: number;
+  /**
+   * The upper limit of the ordinate variable.
+   * @default 10
+   */
   to?: number;
+  /**
+   * Shape options for ml-spectrum-generator
+   */
   shape?: Shape1DOption;
+  /**
+   * The linewidth of the output spectrum, expresed in Hz.
+   * @default 1
+   */
   lineWidth?: number;
+  /**
+   * Number of points of the output spectrum.
+   * @default 16*1024
+   */
   nbPoints?: number;
+  /**
+   * Default height of the simulated spectrum
+   * @default 1e8
+   */
   maxValue?: number;
+  /**
+   * Maximum number of atoms on each cluster that can be considered to be simulated together. It affects the the quality and speed of the simulation.
+   * @default 8
+   */
   maxClusterSize?: number;
 }
 
 /**
  * Generate a spectrum from an array of singals
- * @param {array} signals
- * @param {object} [options={}]
- * @param {number} [options.maxValue=1e8] Default height of the simulated spectrum
- * @param {number} [options.frequency=400] - The frequency in Mhz of the fake spectrometer that records the spectrum.
- * @param {number} [options.maxClusterSize=8] - Maximum number of atoms on each cluster that can be considered to be simulated together. It affects the the quality and speed of the simulation.
- * @param {number} [options.lineWidth=1] - The linewidth of the output spectrum, expresed in Hz.
- * @param {object} [options.shape={}]
- * @param {string} [options.shape.kind='gaussian'] - kind of shape to generate the spectrum.
- * @param {object} [options.shape.options={}] - spectrum and shape options. See spectrum-generator for more information about shape options.
- * @param {number} [options.from=0] - The low limit of the ordinate variable.
- * @param {number} [options.to=10] - The upper limit of the ordinate variable.
- * @param {number} [options.nbPoints=16*1024] - Number of points of the output spectrum.
- * @returns  {object} an object of the kind {x:[], y:[]}
  */
 export function signalsToXY(
   signals: Signal1D[],
