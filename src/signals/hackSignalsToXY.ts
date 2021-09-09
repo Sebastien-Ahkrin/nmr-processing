@@ -12,7 +12,7 @@ const patterns = ['s', 'd', 't', 'q', 'quint', 'h', 'sept', 'o', 'n'];
  * @returns
  */
 
-export function checkSignalsToXY(
+export function hackSignalsToXY(
   signals: Partial<Signal1D>[],
   options: OptionsSignalsToXY = {},
 ) {
