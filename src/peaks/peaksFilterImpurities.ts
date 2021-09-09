@@ -6,7 +6,7 @@ const toCheck = ['solvent', 'h2o', 'tms'];
 
 type Solvent = keyof typeof impurities;
 
-export interface OptionsPeakFilterImpurities {
+export interface OptionsPeaksFilterImpurities {
   /**
    * Solvent name.
    */
@@ -35,7 +35,7 @@ interface OptionsCheckImpurity {
 
 export function peaksFilterImpurities(
   peakList: Peak[],
-  options: OptionsPeakFilterImpurities = {},
+  options: OptionsPeaksFilterImpurities = {},
 ) {
   let { solvent, error = 0.025, remove = false } = options;
 

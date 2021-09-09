@@ -1,5 +1,6 @@
 import { gsd, joinBroadPeaks, optimizePeaks } from 'ml-gsd';
 import type { ShapeKind } from 'ml-peak-shape-generator';
+import type { XYNumberArray } from '../types/XYNumberArray';
 import {
   xyExtract,
   xNoiseSanPlot,
@@ -11,10 +12,6 @@ import {
  * through Global Spectral Deconvolution (GSD)
  * http://www.spectrosco-pyeurope.com/images/stories/ColumnPDFs/TD_23_1.pdf
  */
-export interface XYNumberArray {
-  x: Array<number> | Float64Array;
-  y: Array<number> | Float64Array;
-}
 
 interface OptionsGetCutOff {
   noiseLevel?: number;
