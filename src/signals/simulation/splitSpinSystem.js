@@ -1,5 +1,5 @@
 import { agnes } from 'ml-hclust';
-import Matrix from 'ml-matrix';
+import { Matrix } from 'ml-matrix';
 
 export function splitSpinSystem(spinSystem, options = {}) {
   let { chemicalShifts, couplingConstants, connectivity } = spinSystem;

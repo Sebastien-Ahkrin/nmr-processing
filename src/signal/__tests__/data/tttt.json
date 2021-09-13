@@ -1,30 +1,30 @@
 {
   "nbAtoms": 1,
   "delta": 3,
-  "assignment": [2],
-  "diaID": "C",
-  "j": [
+  "atomIDs": [2],
+  "diaIDs": "C",
+  "js": [
     {
       "coupling": 1,
       "multiplicity": "t",
-      "diaID": "A",
+      "diaIDs": "A",
       "assignment": "abc"
     },
     {
       "coupling": 2,
       "multiplicity": "t",
-      "diaID": "B",
+      "diaIDs": "B",
       "assignment": "def"
     },
     {
       "coupling": 8,
       "multiplicity": "t",
-      "diaID": "C"
+      "diaIDs": "C"
     },
     {
       "coupling": 9,
       "multiplicity": "t",
-      "diaID": "D"
+      "diaIDs": "D"
     }
   ]
 }

@@ -18,13 +18,13 @@ export function signalJoinCouplings(signal, options = {}) {
   const { tolerance = 0.05 } = options;
   signal = signalNormalize(signal);
 
-  if (!signal.j || signal.j.length < 2) return signal;
+  if (!signal.js || signal.js.length < 2) return signal;
 
   // we group the couplings that are less than the expected tolerance
-  let currentGroup = [signal.j[0]];
+  let currentGroup = [signal.js[0]];
   let groups = [currentGroup];
-  for (let i = 1; i < signal.j.length; i++) {
-    let currentJ = signal.j[i];
+  for (let i = 1; i < signal.js.length; i++) {
+    let currentJ = signal.js[i];
     if (
       currentGroup[currentGroup.length - 1].coupling - currentJ.coupling <
       tolerance
@@ -36,19 +36,24 @@ export function signalJoinCouplings(signal, options = {}) {
     }
   }
 
-  signal.j = [];
+  signal.js = [];
   for (let group of groups) {
     let coupling = sum(group.map((group) => group.coupling)) / group.length;
+    let atomIDs = distinctValues(
+      group
+        .filter((group) => group.atomIDs && group.atomIDs.length > 0)
+        .map((group) => group.atomIDs)
+        .flat(),
+    );
     let assignment = distinctValues(
       group
         .filter((group) => group.assignment && group.assignment.length > 0)
-        .map((group) => group.assignment)
-        .flat(),
-    );
-    let diaID = distinctValues(
+        .map((group) => group.assignment),
+    ).join(' ');
+    let diaIDs = distinctValues(
       group
-        .filter((group) => group.diaID && group.diaID.length > 0)
-        .map((group) => group.diaID)
+        .filter((group) => group.diaIDs && group.diaIDs.length > 0)
+        .map((group) => group.diaIDs)
         .flat(),
     );
     let distances = distinctValues(group.map((group) => group.distance));
@@ -58,10 +63,11 @@ export function signalJoinCouplings(signal, options = {}) {
       coupling,
       multiplicity,
     };
-    if (diaID.length > 0) newJ.diaID = diaID;
+    if (diaIDs.length > 0) newJ.diaIDs = diaIDs;
     if (distances.length === 1 && distances[0]) newJ.distance = distances[0];
     if (assignment.length > 0) newJ.assignment = assignment;
-    signal.j.push(newJ);
+    if (atomIDs.length > 0) newJ.atomIDs = atomIDs;
+    signal.js.push(newJ);
   }
 
   return signal;

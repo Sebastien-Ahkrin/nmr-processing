@@ -11,11 +11,11 @@ export function signalsJoin(signals, options = {}) {
   const { tolerance = 0.1 } = options;
   // diaIDs is mandatory everywhere
   for (let signal of signals) {
-    if (!signal.diaID || !signal.diaID.length === 1) return signals;
-    for (let coupling of signal.j) {
+    if (!signal.diaIDs || !signal.diaIDs.length === 1) return signals;
+    for (let coupling of signal.js) {
       if (
-        !coupling.diaID ||
-        !coupling.diaID.length === 1 ||
+        !coupling.diaIDs ||
+        !coupling.diaIDs.length === 1 ||
         coupling.multiplicity !== 'd'
       ) {
         return signals;
@@ -27,11 +27,11 @@ export function signalsJoin(signals, options = {}) {
   const groupedSignals = {};
   for (let signal of signals) {
     signal = signalNormalize(signal); // we have a copy
-    signal.j = signal.j.sort((a, b) =>
-      a.diaID + a.distance < b.diaID + b.distance ? 1 : -1,
+    signal.js = signal.js.sort((a, b) =>
+      a.diaIDs + a.distance < b.diaIDs + b.distance ? 1 : -1,
     );
-    let id = `${signal.diaID[0]} ${signal.j
-      .map((j) => `${j.diaID[0]} ${j.distance}`)
+    let id = `${signal.diaIDs[0]} ${signal.js
+      .map((j) => `${j.diaIDs[0]} ${j.distance}`)
       .sort()
       .join(' ')}`;
     if (!groupedSignals[id]) {
@@ -46,32 +46,41 @@ export function signalsJoin(signals, options = {}) {
     const group = groupedSignals[key];
 
     // joining couplings only if diaID and distance are equal
-    const j = [];
-    for (let i = 0; i < group[0].j.length; i++) {
-      j.push({
-        diaID: group[0].j[i].diaID,
-        distance: group[0].j[i].distance,
-        multiplicity: group[0].j[i].multiplicity,
-        coupling: mean(group.map((item) => item.j[i].coupling)),
+    const js = [];
+    for (let i = 0; i < group[0].js.length; i++) {
+      js.push({
+        diaIDs: group[0].js[i].diaIDs,
+        distance: group[0].js[i].distance,
+        multiplicity: group[0].js[i].multiplicity,
+        coupling: mean(group.map((item) => item.js[i].coupling)),
       });
     }
 
-    newSignals.push({
+    let signal = {
       nbAtoms: sum(group.map((item) => item.nbAtoms)),
       delta: mean(group.map((item) => item.delta)),
-      diaID: group[0].diaID,
-      assignment: group
-        .map((item) => item.assignment)
+      diaIDs: group[0].diaIDs,
+      atomIDs: group
+        .map((item) => item.atomIDs)
         .flat()
         .filter((item) => item),
-      j,
-    });
+      js,
+    };
+
+    const assignment = group
+      .map((item) => item.assignment)
+      .filter((item) => item)
+      .join(' ');
+
+    if (assignment.length > 0) signal.assignment = assignment;
+
+    newSignals.push(signal);
   }
   newSignals = newSignals
     .map((signal) => {
       signal = signalNormalize(signalJoinCouplings(signal, { tolerance }));
-      if (signal.j) {
-        signal.multiplicity = signal.j.reduce((multiplicity, jCoupling) => {
+      if (signal.js) {
+        signal.multiplicity = signal.js.reduce((multiplicity, jCoupling) => {
           return `${multiplicity}${jCoupling.multiplicity}`;
         }, '');
       }

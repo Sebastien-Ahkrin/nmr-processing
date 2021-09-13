@@ -12,7 +12,7 @@ expect.extend({ toBeDeepCloseTo, toMatchCloseTo });
 describe('signalJoinCouplings', () => {
   it('dddd to ddt', () => {
     const result = signalJoinCouplings(dddd);
-    expect(result.j).toStrictEqual([
+    expect(result.js).toStrictEqual([
       { coupling: 9, multiplicity: 'd' },
       { coupling: 8, multiplicity: 'd' },
       {
@@ -25,13 +25,13 @@ describe('signalJoinCouplings', () => {
   it('dddd to ddt with assignment', () => {
     const result = signalJoinCouplings(ddddAssignment);
     expect(result).toBeDeepCloseTo({
-      assignment: [8],
+      atomIDs: [8],
       nbAtoms: 1,
       delta: 7.26,
-      j: [
-        { coupling: 9, multiplicity: 'd', assignment: [13] },
-        { coupling: 8, multiplicity: 'd', assignment: [14] },
-        { coupling: 7.0005, multiplicity: 't', assignment: [9, 10] },
+      js: [
+        { coupling: 9, multiplicity: 'd', atomIDs: [13] },
+        { coupling: 8, multiplicity: 'd', atomIDs: [14] },
+        { coupling: 7.0005, multiplicity: 't', atomIDs: [9, 10] },
       ],
     });
   });
@@ -41,12 +41,12 @@ describe('signalJoinCouplings', () => {
     expect(result).toStrictEqual({
       nbAtoms: 1,
       delta: 3,
-      j: [
-        { coupling: 9, multiplicity: 'd', diaID: ['D'] },
+      js: [
+        { coupling: 9, multiplicity: 'd', diaIDs: ['D'] },
         {
           coupling: 2,
           multiplicity: 'q',
-          diaID: ['C', 'B', 'A'],
+          diaIDs: ['C', 'B', 'A'],
         },
       ],
     });
@@ -57,19 +57,19 @@ describe('signalJoinCouplings', () => {
     expect(result).toStrictEqual({
       nbAtoms: 1,
       delta: 3,
-      assignment: [2],
-      diaID: ['C'],
-      j: [
+      atomIDs: [2],
+      diaIDs: ['C'],
+      js: [
         {
           coupling: 8.5,
           multiplicity: 'quint',
-          diaID: ['D', 'C'],
+          diaIDs: ['D', 'C'],
         },
         {
           coupling: 1.5,
           multiplicity: 'quint',
-          diaID: ['B', 'A'],
-          assignment: ['def', 'abc'],
+          diaIDs: ['B', 'A'],
+          assignment: 'def abc',
         },
       ],
     });

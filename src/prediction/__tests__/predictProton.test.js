@@ -4,7 +4,7 @@ import { join } from 'path';
 import md5 from 'md5';
 import OCL from 'openchemlib/minimal';
 
-import { predictionProton } from '../predictionProton';
+import { predictProton } from '../predictProton';
 
 const molfile = `Benzene, ethyl-, ID: C100414
   NIST    16081116462D 1   1.00000     0.00000
@@ -45,49 +45,52 @@ const cache = (molfile, value) => {
   }
 };
 
-describe('predictionProton', () => {
+describe('predictProton', () => {
   it('1H chemical shift prediction', async function () {
     const molecule = OCL.Molecule.fromMolfile(molfile);
-    const prediction = await predictionProton(molecule, { cache });
+    const prediction = await predictProton(molecule, { cache });
     expect(Object.keys(prediction)).toStrictEqual([
       'molfile',
       'diaIDs',
+      'nucleus',
       'joinedSignals',
       'signals',
       'ranges',
+      'molecule',
     ]);
     let firstSignal = prediction.signals[0];
+
     expect(firstSignal).toStrictEqual({
-      assignment: [8],
-      diaID: ['did@`@f\\bbRaih@J@A~dHBIU@'],
+      atomIDs: [8],
+      diaIDs: ['did@`@f\\bbRaih@J@A~dHBIU@'],
       nbAtoms: 1,
       delta: 7.26,
-      j: [
+      js: [
         {
           coupling: 7.758,
-          assignment: [10],
-          diaID: ['did@`@fTfYUn`HH@GzP`HeT'],
+          atomIDs: [10],
+          diaIDs: ['did@`@fTfYUn`HH@GzP`HeT'],
           multiplicity: 'd',
           distance: 3,
         },
         {
           coupling: 7.718,
-          assignment: [9],
-          diaID: ['did@`@fTfUvf`@h@GzP`HeT'],
+          atomIDs: [9],
+          diaIDs: ['did@`@fTfUvf`@h@GzP`HeT'],
           multiplicity: 'd',
           distance: 3,
         },
         {
           coupling: 1.596,
-          assignment: [14],
-          diaID: ['did@`@f\\bbRaih@J@A~dHBIU@'],
+          atomIDs: [14],
+          diaIDs: ['did@`@f\\bbRaih@J@A~dHBIU@'],
           multiplicity: 'd',
           distance: 4,
         },
         {
           coupling: 0.507,
-          assignment: [13],
-          diaID: ['did@`@fTfYUn`HH@GzP`HeT'],
+          atomIDs: [13],
+          diaIDs: ['did@`@fTfYUn`HH@GzP`HeT'],
           multiplicity: 'd',
           distance: 5,
         },
@@ -98,21 +101,31 @@ describe('predictionProton', () => {
       nbAtoms: 3,
       delta: 0.992,
       multiplicity: 't',
-      diaID: ['did@`@fTeYWaj@@@GzP`HeT'],
-      assignment: [15, 16, 17],
-      j: [
+      diaIDs: ['did@`@fTeYWaj@@@GzP`HeT'],
+      atomIDs: [15, 16, 17],
+      js: [
         {
           coupling: 7.392,
           multiplicity: 't',
-          diaID: ['did@`@fTf[Waj@@bJ@_iB@bUP'],
+          diaIDs: ['did@`@fTf[Waj@@bJ@_iB@bUP'],
           distance: 3,
         },
       ],
     });
     expect(prediction.ranges).toHaveLength(3);
     let lastRange = prediction.ranges[2];
-    expect(lastRange.integral).toBe(5);
-    expect(lastRange.signal).toHaveLength(3);
-    expect(lastRange.signal[0].j).toHaveLength(4);
+    expect(lastRange.integration).toBe(5);
+    expect(lastRange.signals).toHaveLength(3);
+    expect(lastRange.signals[0].js).toHaveLength(4);
+  });
+  it('empty molecule', async () => {
+    const molecule = new OCL.Molecule(16, 16);
+    const result = await predictProton(molecule);
+    expect(result.diaIDs).toStrictEqual([]);
+    expect(result.joinedSignals).toStrictEqual([]);
+    expect(result.signals).toStrictEqual([]);
+    expect(result.ranges).toStrictEqual([]);
+    expect(result.molecule.getAllAtoms()).toBe(0);
+    expect(result.molecule.getAllBonds()).toBe(0);
   });
 });

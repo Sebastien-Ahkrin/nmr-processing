@@ -1,5 +1,167 @@
 # Changelog
 
+### [2.4.3](https://www.github.com/cheminfo/nmr-processing/compare/v2.4.2...v2.4.3) (2021-08-12)
+
+
+### Bug Fixes
+
+* update ml-peak-shape-generator, avoid import/named eslint error ([d2b9fa8](https://www.github.com/cheminfo/nmr-processing/commit/d2b9fa8eefc2461d3421ea4527c646bfc6889f25))
+
+### [2.4.2](https://www.github.com/cheminfo/nmr-processing/compare/v2.4.1...v2.4.2) (2021-08-11)
+
+
+### Bug Fixes
+
+* **prediction:** ensure add peaks in signals ([05f8765](https://www.github.com/cheminfo/nmr-processing/commit/05f876534f9d4252662f9c7b5bcf9faff08796db))
+
+### [2.4.1](https://www.github.com/cheminfo/nmr-processing/compare/v2.4.0...v2.4.1) (2021-08-11)
+
+
+### Bug Fixes
+
+* import gaussian2D instead of Gaussian2D ([17c6bc8](https://www.github.com/cheminfo/nmr-processing/commit/17c6bc818e6ca4579c6fccf6c8ee66b9df9263b3))
+
+## [2.4.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.3.4...v2.4.0) (2021-08-11)
+
+
+### Features
+
+* update ml-peak-shape-generator to 2.0.1 ([340e27f](https://www.github.com/cheminfo/nmr-processing/commit/340e27f57e88022c0f3b11cdec9c36543e224981))
+* update spectrum-generator to 5.0.0 ([73df6d1](https://www.github.com/cheminfo/nmr-processing/commit/73df6d189a433ae37fbc5389c058acf9bb6a0d67))
+
+
+### Bug Fixes
+
+* use plural name for signals in zones, add peaks to each signal ([2a80102](https://www.github.com/cheminfo/nmr-processing/commit/2a801024dffc325503562bd01f0d5867b9774bf3))
+
+### [2.3.4](https://www.github.com/cheminfo/nmr-processing/compare/v2.3.3...v2.3.4) (2021-08-03)
+
+
+### Bug Fixes
+
+* use singlet multiplicity to predictCarbon ([b2a45e3](https://www.github.com/cheminfo/nmr-processing/commit/b2a45e3c502e7f8d65173cd6a39f7394b1015fc3))
+
+### [2.3.3](https://www.github.com/cheminfo/nmr-processing/compare/v2.3.2...v2.3.3) (2021-08-03)
+
+
+### Bug Fixes
+
+* add nucleus property to predictProton result ([46e5939](https://www.github.com/cheminfo/nmr-processing/commit/46e5939711751b9d6a9244705deacd82001cbf55))
+
+### [2.3.2](https://www.github.com/cheminfo/nmr-processing/compare/v2.3.1...v2.3.2) (2021-08-03)
+
+
+### Bug Fixes
+
+* export nuclues in prediction ([e9f780b](https://www.github.com/cheminfo/nmr-processing/commit/e9f780b2ba9fc8c85ca8e73e346c6c539bf8534b))
+
+### [2.3.1](https://www.github.com/cheminfo/nmr-processing/compare/v2.3.0...v2.3.1) (2021-08-03)
+
+
+### Bug Fixes
+
+* predict2D - avoid not predicted nucleus e.g labiles ([5612173](https://www.github.com/cheminfo/nmr-processing/commit/56121732965b315eb98c0d24793aad5b19166d44))
+
+## [2.3.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.2.0...v2.3.0) (2021-08-03)
+
+
+### Features
+
+* export predictAll function ([d84c1ee](https://www.github.com/cheminfo/nmr-processing/commit/d84c1ee3ad223ded3e64767af15c13d0fff4df06))
+
+## [2.2.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.1.2...v2.2.0) (2021-08-02)
+
+
+### Features
+
+* add webserviceURL option ([de87821](https://www.github.com/cheminfo/nmr-processing/commit/de87821d0b1c661ce1689a787aa5d8ab6734d617))
+
+### [2.1.2](https://www.github.com/cheminfo/nmr-processing/compare/v2.1.1...v2.1.2) (2021-07-27)
+
+
+### Bug Fixes
+
+* **signalsToXY:** atomsIDs instead assignment ([47f2abd](https://www.github.com/cheminfo/nmr-processing/commit/47f2abdce42d29d519459e941cfe6a644335eabc))
+
+### [2.1.1](https://www.github.com/cheminfo/nmr-processing/compare/v2.1.0...v2.1.1) (2021-07-26)
+
+
+### Bug Fixes
+
+* plural name in joinRanges function ([2a33761](https://www.github.com/cheminfo/nmr-processing/commit/2a337617a81deb04f9af0a5ea6ae6de5497fa8e5))
+
+## [2.1.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.0.1...v2.1.0) (2021-07-26)
+
+
+### Features
+
+* refactor ([#74](https://www.github.com/cheminfo/nmr-processing/issues/74)) ([3e24240](https://www.github.com/cheminfo/nmr-processing/commit/3e24240448719742a9be0f8dc3583152b5acc31a))
+
+
+### Bug Fixes
+
+* deal correctly with empty molecules ([0ac2ec3](https://www.github.com/cheminfo/nmr-processing/commit/0ac2ec3b69fb3b432654551a68629e7bf1efffe9))
+* deal with empty molecules ([01b32f9](https://www.github.com/cheminfo/nmr-processing/commit/01b32f9ed40fa0a52644703b49ffbebc4f2e59a2))
+
+### [2.0.1](https://www.github.com/cheminfo/nmr-processing/compare/v2.0.0...v2.0.1) (2021-07-25)
+
+
+### Bug Fixes
+
+* spectrum generation parameter names ([f86175d](https://www.github.com/cheminfo/nmr-processing/commit/f86175deb66b439043622bc300e5263d0b8e63fc))
+
+## [2.0.0](https://www.github.com/cheminfo/nmr-processing/compare/v1.5.2...v2.0.0) (2021-07-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* use plural name diaIDs instead diaID
+* use plural names signals and js instead of signal and j in ranges
+* use integration instead of integral
+
+### Features
+
+* **prediction:** prediction 2D  ([#68](https://www.github.com/cheminfo/nmr-processing/issues/68)) ([fed091b](https://www.github.com/cheminfo/nmr-processing/commit/fed091b48e21cf29624d7322ddc952d590f16495))
+* predictor returns molecule ([9d7ba24](https://www.github.com/cheminfo/nmr-processing/commit/9d7ba24225aa0fb9a3c4d5fb25f55032c081bdb3))
+* use integration instead of integral ([80ccc25](https://www.github.com/cheminfo/nmr-processing/commit/80ccc25ec21fcb6df5130af40aaf03ce3ea73f17))
+* use plural name diaIDs instead diaID ([8cbcefc](https://www.github.com/cheminfo/nmr-processing/commit/8cbcefc3c3225039cf4f236e2ef908233ccc9ad6))
+* use plural names signals and js instead of signal and j in ranges ([2328a13](https://www.github.com/cheminfo/nmr-processing/commit/2328a13f4084b00927c19ff3ec012c692a00d22a))
+
+
+### Bug Fixes
+
+* database in json format ([9adb6bf](https://www.github.com/cheminfo/nmr-processing/commit/9adb6bfec39eb22b4f238e538cb972462204e2e0))
+
+### [1.5.2](https://www.github.com/cheminfo/nmr-processing/compare/v1.5.1...v1.5.2) (2021-07-22)
+
+
+### Bug Fixes
+
+* deal with new data path ([1b0c7b7](https://www.github.com/cheminfo/nmr-processing/commit/1b0c7b74c6ba48d60584074ea1f5465aca2e0846))
+
+### [1.5.1](https://www.github.com/cheminfo/nmr-processing/compare/v1.5.0...v1.5.1) (2021-07-16)
+
+
+### Bug Fixes
+
+* don't need openchemlib as dependency ([edecc62](https://www.github.com/cheminfo/nmr-processing/commit/edecc621b47b2c34982b807334429b4344d714b0))
+
+## [1.5.0](https://www.github.com/cheminfo/nmr-processing/compare/v1.4.0...v1.5.0) (2021-07-15)
+
+
+### Features
+
+* add ache in carbon prediction ([745ba46](https://www.github.com/cheminfo/nmr-processing/commit/745ba46943b3742a851b9381673ffff0c211bd37))
+* add local database prediction ([d77000f](https://www.github.com/cheminfo/nmr-processing/commit/d77000f20d0ccda56b4c804130609162a0cc3916))
+* add predictionCarbon ([#65](https://www.github.com/cheminfo/nmr-processing/issues/65)) ([e394f97](https://www.github.com/cheminfo/nmr-processing/commit/e394f97b3450000b5d5847580cd9d333972c42f5))
+* put carbon db in the cloud ([8e65ac4](https://www.github.com/cheminfo/nmr-processing/commit/8e65ac4db5d4ecd5cd0e9a5bb08a7a1f40e3c175))
+
+
+### Bug Fixes
+
+* add dist in .gitignore ([c67bc30](https://www.github.com/cheminfo/nmr-processing/commit/c67bc308bb39bc457087e35dbc95702bcef89b28))
+* predictCarbon ([2fb1045](https://www.github.com/cheminfo/nmr-processing/commit/2fb1045d3f15c504e53f5b8cad8009cf71eecb25))
+
 ## [1.4.0](https://www.github.com/cheminfo/nmr-processing/compare/v1.3.0...v1.4.0) (2021-05-18)
 
 

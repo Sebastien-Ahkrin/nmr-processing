@@ -8,22 +8,22 @@ describe('signalNormalize', () => {
     expect(result).toStrictEqual({
       nbAtoms: 1,
       delta: 3,
-      assignment: [2],
-      diaID: ['C'],
-      j: [
-        { coupling: 9, multiplicity: 't', diaID: ['D'] },
-        { coupling: 8, multiplicity: 't', diaID: ['C'] },
+      atomIDs: [2],
+      diaIDs: ['C'],
+      js: [
+        { coupling: 9, multiplicity: 't', diaIDs: ['D'] },
+        { coupling: 8, multiplicity: 't', diaIDs: ['C'] },
         {
           coupling: 2,
           multiplicity: 't',
-          diaID: ['B'],
-          assignment: ['def'],
+          diaIDs: ['B'],
+          assignment: 'def',
         },
         {
           coupling: 1,
           multiplicity: 't',
-          diaID: ['A'],
-          assignment: ['abc'],
+          diaIDs: ['A'],
+          assignment: 'abc',
         },
       ],
     });

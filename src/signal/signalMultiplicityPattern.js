@@ -4,7 +4,7 @@
  */
 
 export function signalMultiplicityPattern(signal) {
-  let js = signal.j;
+  let js = signal.js;
   let pattern = '';
   if (js && js.length > 0) {
     for (let coupling of js) {

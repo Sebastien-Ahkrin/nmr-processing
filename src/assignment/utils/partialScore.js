@@ -1,10 +1,10 @@
-import { getIntegrationOfAttachedProton } from './getIntegrationOfAttachedProton';
+import groupCarbonTargetByIntegrationZone from './groupCarbonTargetByIntegrationZone';
 
 export function partialScore(partial, props) {
   const {
-    predictionDiaIDs,
+    diaIDPeerPossibleAssignment,
     unassigned,
-    atomType,
+    atomTypes,
     restrictionByCS,
     predictions,
     targets,
@@ -16,30 +16,63 @@ export function partialScore(partial, props) {
   let partialInverse = {};
   let activeDomainOnPrediction = [];
   let countStars = 0;
-
   for (let i = 0; i < partial.length; i++) {
     const targetID = partial[i];
     if (targetID && targetID !== '*') {
       activeDomainOnPrediction.push(i);
       if (!partialInverse[targetID]) partialInverse[targetID] = [];
-      partialInverse[targetID].push(predictionDiaIDs[i]);
+      partialInverse[targetID].push(diaIDPeerPossibleAssignment[i]);
     }
     if (targetID === '*') countStars++;
   }
 
   if (countStars > unassigned) return 0;
 
-  let penaltyByStarts = countStars / partial.length;
-  for (let targetID in partialInverse) {
-    let targetToSource = partialInverse[targetID];
-    let total = targetToSource.reduce((sum, value) => {
-      return sum + predictions[atomType][value].allHydrogens;
-    }, 0);
+  const activeDomainOnTarget = Object.keys(partialInverse);
 
-    const target = targets[atomType][targetID];
-    const {
-      integration = getIntegrationOfAttachedProton(target, correlations),
-    } = target;
+  if (activeDomainOnTarget.length === 0) return 0;
+
+  const getPredictionByDiaID = getPrediction.bind({}, predictions);
+  // check the integration
+  const targetByIntegral = atomTypes.reduce((result, atomType) => {
+    if (atomType === 'C') {
+      result.push(
+        ...groupCarbonTargetByIntegrationZone(
+          activeDomainOnTarget,
+          targets[atomType],
+          correlations,
+        ),
+      );
+    } else {
+      for (let targetID of activeDomainOnTarget) {
+        if(!targets.H[targetID]) continue;
+        // console.log(`atomtype ${atomType}, targetID ${targetID}`, targets )
+        result.push({
+          atomType,
+          targetIDs: [targetID],
+          integration: targets.H[targetID].integration,
+        });
+      }
+    }
+    return result;
+  }, []);
+  console.log(targetByIntegral)
+  for (const group of targetByIntegral) {
+    const { integration } = group;
+
+    if (integration === undefined || isNaN(integration)) continue;
+
+    let total = 0;
+    // console.log(group);
+    for (let targetID of group.targetIDs) {
+      let targetToSource = partialInverse[targetID];
+      // console.log('targetTOSource', targetToSource);
+      for (const diaID of targetToSource) {
+        const { prediction, atomType } = getPredictionByDiaID(diaID);
+        if (atomType === group.atomType) total += prediction.allHydrogens;
+      }
+    }
+    // console.log(integration, total);
     if (total - integration >= 0.5) {
       return 0;
     }
@@ -51,11 +84,12 @@ export function partialScore(partial, props) {
   if (useChemicalShiftScore) {
     chemicalShiftScore = 0;
     count = 0;
-
     partial.forEach((targetID, index) => {
       if (targetID && targetID !== '*') {
         count++;
-        let source = predictions[atomType][predictionDiaIDs[index]];
+        let { atomType, prediction: source } = getPredictionByDiaID(
+          diaIDPeerPossibleAssignment[index],
+        );
         let target = targets[atomType][targetID];
         let error = toleranceCS;
         if (source.error) {
@@ -66,10 +100,11 @@ export function partialScore(partial, props) {
           chemicalShiftScore += 1;
         } else {
           let diff = Math.abs(source.delta - target.signal.delta);
-          if (diff < 0.03) {
+          if (diff < error) {
             //@TODO: check for a better discriminant
             chemicalShiftScore += 1;
           } else {
+            diff = Math.abs(diff - error);
             chemicalShiftScore += (-0.25 / error) * diff + 1;
           }
         }
@@ -81,27 +116,27 @@ export function partialScore(partial, props) {
   }
 
   let scoreOn2D = 0;
-  let activeDomainOnTarget = Object.keys(partialInverse);
   if (activeDomainOnTarget.length > 1) {
     let andConstrains = {};
     for (let i = 0; i < activeDomainOnPrediction.length; i++) {
-      let predictionI = predictions[atomType][predictionDiaIDs[i]];
+      let { prediction: predictionI } = getPredictionByDiaID(
+        diaIDPeerPossibleAssignment[i],
+      );
       for (let j = i + 1; j < activeDomainOnPrediction.length; j++) {
-        // console.log('j', predictionDiaIDs[j]);
-        // console.log(Object.keys(predictions[atomType]));
-        let predictionJ = predictions[atomType][predictionDiaIDs[j]];
+        let { prediction: predictionJ } = getPredictionByDiaID(
+          diaIDPeerPossibleAssignment[j],
+        );
         let pathLength = predictionI.pathLength[predictionJ.diaIDIndex];
         let isPossible = pathLength < 5;
 
         let partialI = partial[activeDomainOnPrediction[i]];
         let partialJ = partial[activeDomainOnPrediction[j]];
-        // console.log(partialI, partialJ);
         let keyOnTargerMap =
           partialI > partialJ
             ? `${partialJ} ${partialI}`
             : `${partialI} ${partialJ}`;
 
-        let areLinked = checkLinking(partialI, partialJ, targets[atomType]);
+        let areLinked = checkLinking(partialI, partialJ, atomTypes, targets);
 
         let partialScore2D = isPossible
           ? areLinked
@@ -126,7 +161,8 @@ export function partialScore(partial, props) {
       sumAnd /
       ((activeDomainOnTarget.length * (activeDomainOnTarget.length - 1)) / 2);
   }
-  // console.log(`CSScore ${chemicalShiftScore}, score2D ${scoreOn2D}`);
+  const penaltyByStarts = countStars / partial.length;
+  // console.log(`CSScore ${chemicalShiftScore}, score2D ${scoreOn2D}, penalty: ${penaltyByStarts}`);
   if (chemicalShiftScore === 0) return scoreOn2D - penaltyByStarts;
 
   if (scoreOn2D === 0) return chemicalShiftScore - penaltyByStarts;
@@ -134,12 +170,24 @@ export function partialScore(partial, props) {
   return (chemicalShiftScore + scoreOn2D) / 2 - penaltyByStarts;
 }
 
-function checkLinking(partialI, partialJ, correlations) {
-  let correlationI = correlations[partialI];
-  for (let key of ['link', 'indirectLinks']) {
-    for (const link of correlationI[key]) {
-      if (link.signal.id === partialJ) return true;
+function checkLinking(partialI, partialJ, atomTypes, correlations) {
+  if (partialI === partialJ) return true;
+  for (const atomType of atomTypes) {
+    let correlationI = correlations[atomType][partialI];
+    if (!correlationI) continue;
+    for (let key of ['link', 'indirectLinks']) {
+      for (const link of correlationI[key]) {
+        if (link.signal.id === partialJ) return true;
+      }
     }
   }
   return false;
+}
+
+function getPrediction(predictions, diaID) {
+  for (const atomType in predictions) {
+    if (predictions[atomType][diaID]) {
+      return { atomType, prediction: predictions[atomType][diaID] };
+    }
+  }
 }

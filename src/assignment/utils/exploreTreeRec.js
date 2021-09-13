@@ -2,70 +2,75 @@ import { partialScore } from './partialScore';
 
 export function exploreTreeRec(props, predictionIndex, partial, store) {
   const {
+    atomTypes,
     nSources,
-    errorCS,
+    restrictionByCS,
     timeout,
     timeStart,
+    maxSolutions,
     targets,
     predictions,
     correlations,
     lowerBound,
     unassigned,
     possibleAssignmentMap,
-    predictionDiaIDs,
+    diaIDPeerPossibleAssignment,
   } = props;
 
-  if (predictionIndex >= nSources) return store;
-
   const currentDate = new Date();
-  if (currentData.getTime() - timeStart > timeout) {
+  if (currentDate.getTime() - timeStart > timeout) {
     console.warn('timeout expired');
     return store;
   }
-
-  const diaID = predictionDiaIDs[predictionIndex];
+  const diaID = diaIDPeerPossibleAssignment[predictionIndex];
   const possibleAssignments = possibleAssignmentMap[diaID];
+
+  let targetIndex = 0;
   for (let targetID of possibleAssignments) {
     partial[predictionIndex] = targetID;
     const score = partialScore(partial, {
-      predictionDiaIDs,
+      diaIDPeerPossibleAssignment,
       unassigned,
-      errorCS,
-      atomType,
+      restrictionByCS,
+      atomTypes,
       predictions,
       correlations,
       targets,
     });
-
+    // console.log(`partial ${partial}`)
+    // console.log(`atomTypes: ${atomTypes},score ${score} nSources ${nSources}, index ${predictionIndex}, targetIndex ${targetIndex++}, lower ${lowerBound}`);
     if (score > 0) {
-      if (sourceAddress === nSources - 1 && score >= lowerBound) {
+      if (predictionIndex === nSources - 1 && score >= lowerBound) {
         store.nSolutions++;
         let solution = {
           assignment: JSON.parse(JSON.stringify(partial)),
           score: score,
         };
 
-        if (store.solutions.length >= this.maxSolutions) {
-          if (store.score > store.solutions.last().score) {
+        if (store.nSolutions >= maxSolutions) {
+          if (solution.score > store.solutions.last().score) {
             store.solutions.pollLast();
             store.solutions.add(solution);
           }
         } else {
           store.solutions.add(solution);
+          store.nSolutions++;
         }
       } else {
         exploreTreeRec(
           {
+            atomTypes,
             nSources,
-            errorCS,
+            restrictionByCS,
             timeout,
             timeStart,
             targets,
             predictions,
+            correlations,
             lowerBound,
             unassigned,
             possibleAssignmentMap,
-            predictionDiaIDs,
+            diaIDPeerPossibleAssignment,
           },
           predictionIndex + 1,
           JSON.parse(JSON.stringify(partial)),
@@ -74,7 +79,7 @@ export function exploreTreeRec(props, predictionIndex, partial, store) {
       }
     } else {
       if (targetID === '*') {
-        partial[sourceAddress] = null;
+        partial[predictionIndex] = null;
       }
     }
   }

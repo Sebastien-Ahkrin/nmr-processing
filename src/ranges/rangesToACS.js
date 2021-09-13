@@ -95,14 +95,14 @@ function pushDelta(range, acsRanges, options) {
   let parenthesis = [];
   let fromTo = [range.from, range.to];
 
-  if (Array.isArray(range.signal)) {
-    range.signal = range.signal.filter(
+  if (Array.isArray(range.signals)) {
+    range.signals = range.signals.filter(
       (signal) => !uselessKind(signal.kind, options.filter),
     );
   }
 
-  if (Array.isArray(range.signal) && range.signal.length > 0) {
-    let signals = range.signal;
+  if (Array.isArray(range.signals) && range.signals.length > 0) {
+    let signals = range.signals;
     if (signals.length > 1) {
       if (options.ascending === true) {
         signals.sort((a, b) => {
@@ -148,19 +148,20 @@ function pushDelta(range, acsRanges, options) {
 }
 
 function getIntegral(range, options) {
-  let integral = '';
+  let integration = '';
   if (range.pubIntegral) {
-    integral = range.pubIntegral;
-  } else if (range.integral) {
-    integral =
-      range.integral.toFixed(0) + options.nucleus[options.nucleus.length - 1];
+    integration = range.pubIntegral;
+  } else if (range.integration) {
+    integration =
+      range.integration.toFixed(0) +
+      options.nucleus[options.nucleus.length - 1];
   }
-  return integral;
+  return integration;
 }
 
 function pushIntegral(range, parenthesis, options) {
-  let integral = getIntegral(range, options);
-  if (integral.length > 0) parenthesis.push(integral);
+  let integration = getIntegral(range, options);
+  if (integration.length > 0) parenthesis.push(integration);
 }
 
 function pushMultiplicityFromSignal(signal, parenthesis) {
@@ -215,13 +216,13 @@ function formatAssignment(assignment) {
 }
 
 function pushCoupling(signal, parenthesis, options) {
-  if (Array.isArray(signal.j) && signal.j.length > 0) {
-    signal.j.sort(function (a, b) {
+  if (Array.isArray(signal.js) && signal.js.length > 0) {
+    signal.js.sort(function (a, b) {
       return b.coupling - a.coupling;
     });
 
     let values = [];
-    for (let j of signal.j) {
+    for (let j of signal.js) {
       if (j.coupling !== undefined) {
         values.push(j.coupling.toFixed(options.nbDecimalJ));
       }
@@ -233,9 +234,7 @@ function pushCoupling(signal, parenthesis, options) {
 }
 
 function pushAssignment(signal, parenthesis) {
-  if (signal.pubAssignment) {
-    parenthesis.push(formatAssignment(signal.pubAssignment));
-  } else if (signal.assignment) {
+  if (signal.assignment) {
     parenthesis.push(formatAssignment(signal.assignment));
   }
 }
