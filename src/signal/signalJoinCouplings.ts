@@ -3,18 +3,36 @@ import sum from 'ml-array-sum';
 import { joinPatterns } from '../utilities/joinPatterns';
 
 import type { MakeMandatory } from '../types/MakeMandatory';
+import { Signal1D } from '../types/signal1D';
+import { Jcoupling } from '../types/jcoupling';
+
+export interface SignalsJoinCouplingsOptions {
+  /**
+   * tolerance to merge the couplings
+   * @default 0.05
+   */
+  tolerance?: number;
+}
+
+type JcouplingFromPrediction = MakeMandatory<
+  Jcoupling,
+  'multiplicity' | 'diaID' | 'distance'
+>;
+type Signal1DWidthDiaID = MakeMandatory<Signal1D, 'diaID'>;
+type Signal1DWidthJsAndDiaID = Omit<Signal1DWidthDiaID, 'js'> & {
+  js: JcouplingFromPrediction[];
+};
 
 /**
  * Join couplings smaller than a define tolerance.
  * The resulting coupling should be an average of the existing one.
  * This function will also ensure that assignment and diaID are arrays.
  * If distance is specified and is not always the same this property will be removed.
- * @param {object} signal
- * @param {object} [options={}]
- * @param {number} [options.tolerance=0.05] tolerance to merge the couplings
- * @returns signal
  */
-export function signalJoinCouplings(signal, options = {}) {
+export function signalJoinCouplings(
+  signal: Signal1D[],
+  options: SignalsJoinCouplingsOptions = {},
+) {
   const { tolerance = 0.05 } = options;
 
   if (!signal.js || signal.js.length < 2) return signal;
@@ -49,10 +67,11 @@ export function signalJoinCouplings(signal, options = {}) {
         .filter((group) => group.assignment && group.assignment.length > 0)
         .map((group) => group.assignment),
     ).join(' ');
-    let diaIDs = distinctValues(
+    
+    let diaID = distinctValues(
       group
-        .filter((group) => group.diaIDs && group.diaIDs.length > 0)
-        .map((group) => group.diaIDs)
+        .filter((group) => group.diaID)
+        .map((group) => group.diaID)
         .flat(),
     );
     let distances = distinctValues(group.map((group) => group.distance));
@@ -62,7 +81,7 @@ export function signalJoinCouplings(signal, options = {}) {
       coupling,
       multiplicity,
     };
-    if (diaIDs.length > 0) newJ.diaIDs = diaIDs;
+    if (diaID.length > 0) newJ.diaID = diaID;
     if (distances.length === 1 && distances[0]) newJ.distance = distances[0];
     if (assignment.length > 0) newJ.assignment = assignment;
     if (atomIDs.length > 0) newJ.atomIDs = atomIDs;

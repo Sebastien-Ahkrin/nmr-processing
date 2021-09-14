@@ -9,6 +9,10 @@ import type { Signal1D } from '../types/signal1D';
 import type { MakeMandatory } from '../types/MakeMandatory';
 
 export interface SignalsJoinOptions {
+  /**
+   * tolerance
+   * @default 0.1
+   */
   tolerance?: number;
 }
 
