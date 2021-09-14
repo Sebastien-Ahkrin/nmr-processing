@@ -2,11 +2,9 @@ import mean from 'ml-array-mean';
 import sum from 'ml-array-sum';
 
 import { signalJoinCouplings } from '../signal/signalJoinCouplings';
-import { signalNormalize } from '../signal/signalNormalize';
-import { Jcoupling } from '../types/jcoupling';
-
-import type { Signal1D } from '../types/signal1D';
 import type { MakeMandatory } from '../types/MakeMandatory';
+import { Jcoupling } from '../types/jcoupling';
+import type { Signal1D } from '../types/signal1D';
 
 export interface SignalsJoinOptions {
   /**
@@ -16,25 +14,30 @@ export interface SignalsJoinOptions {
   tolerance?: number;
 }
 
-type JcouplingFromPrediction = MakeMandatory<Jcoupling, 'multiplicity' | 'diaID' | 'distance'>;
-type Signal1DWidthDiaID = MakeMandatory<Signal1D, 'diaID'>;
+type JcouplingFromPrediction = MakeMandatory<
+  Jcoupling,
+  'multiplicity' | 'diaIDs' | 'distance'
+>;
+type Signal1DWidthDiaID = MakeMandatory<Signal1D, 'diaIDs'>;
 type Signal1DWidthJsAndDiaID = Omit<Signal1DWidthDiaID, 'js'> & {
   js: JcouplingFromPrediction[];
 };
 
 const localeCompare = (a: string, b: string) => a.localeCompare(b);
-const localeCompareJcouplingKeys = (a: Jcoupling, b: Jcoupling) =>
-  localeCompare(`${a.diaID}${a.distance}`, `${b.diaID}${b.distance}`);
-
+const localeCompareJcouplingKeys = (a: JcouplingFromPrediction, b: JcouplingFromPrediction) => {
+  const aa = `${a.diaIDs}${a.distance}`;
+  const bb = `${b.diaIDs}${b.distance}`;
+  return localeCompare(aa, bb);
+}
 function checkForMandatory(
   signals: Signal1D[],
 ): asserts signals is Signal1DWidthJsAndDiaID[] {
   for (const signal of signals) {
     if (!signal.js) throw new Error('there is not js');
-    if (!signal.diaID) throw new Error('there is not diaID');
+    if (!signal.diaIDs) throw new Error('there is not diaIDs');
     for (const jcoupling of signal.js) {
-      if (!jcoupling.diaID) throw new Error('there is not diaID');
-      if (!jcoupling.distance) throw new Error('there is not diaID');
+      if (!jcoupling.diaIDs) throw new Error('there is not diaIDs');
+      if (!jcoupling.distance) throw new Error('there is not distance');
     }
   }
 }
@@ -50,12 +53,16 @@ export function signalsJoin(
 
   // we group them by diaIDs
 
-  const copySignals: Signal1DWidthJsAndDiaID[] = JSON.parse(JSON.stringify(signals));
+  const copySignals: Signal1DWidthJsAndDiaID[] = JSON.parse(
+    JSON.stringify(signals),
+  );
+
   const groupedSignals: { [index: string]: Signal1DWidthJsAndDiaID[] } = {};
+
   for (let signal of copySignals) {
     signal.js = signal.js.sort(localeCompareJcouplingKeys);
-    let id = `${signal.diaID} ${signal.js
-      .map((j: Jcoupling) => `${j.diaID} ${j.distance}`)
+    let id = `${signal.diaIDs} ${signal.js
+      .map((j: Jcoupling) => `${j.diaIDs} ${j.distance}`)
       .sort(localeCompare)
       .join(' ')}`;
     if (!groupedSignals[id]) {
@@ -72,7 +79,7 @@ export function signalsJoin(
     for (let i = 0; i < group[0].js.length; i++) {
       const coupling = group[0].js[i];
       js.push({
-        diaID: coupling.diaID,
+        diaIDs: coupling.diaIDs,
         distance: coupling.distance,
         multiplicity: coupling.multiplicity,
         coupling: mean(group.map((item) => item.js[i].coupling)),
@@ -82,7 +89,7 @@ export function signalsJoin(
     let signal: Signal1DWidthJsAndDiaID = {
       nbAtoms: sum(group.map((item) => item.nbAtoms || 0)),
       delta: mean(group.map((item) => item.delta)),
-      diaID: group[0].diaID,
+      diaIDs: group[0].diaIDs,
       atomIDs: group.map((item) => item.atomIDs || []).flat(),
       js,
     };

@@ -2,7 +2,7 @@ export interface Jcoupling {
   coupling: number;
   atomIDs?: number[];
   assignment?: string | string[];
-  diaIDs?: string;
+  diaIDs?: string[];
   multiplicity?: string;
   distance?: number;
 }

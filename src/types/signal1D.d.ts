@@ -6,6 +6,7 @@ interface Signal1D {
   atomIDs?: number[];
   assignment?: string;
   multiplicity?: string;
-  diaIDs?: string;
+  diaIDs?: string[];
   nbAtoms?: number;
+  integration?: number;
 }

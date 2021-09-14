@@ -1,6 +1,6 @@
 import { MakeMandatory } from '../types/MakeMandatory';
-import type { Signal1D } from '../types/signal1D';
 import type { Range } from '../types/range';
+import type { Signal1D } from '../types/signal1D';
 
 interface SignalsToRangesOptions {
   /**
@@ -59,7 +59,7 @@ export function signalsToRanges(
   let ranges = [];
   let range = {} as RangeFullfiled;
   for (let signal of wrapped) {
-    
+
     if (range.from === undefined || signal.from > range.to) {
       range = {
         from: signal.from,
