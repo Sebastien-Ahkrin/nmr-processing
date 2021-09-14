@@ -1,3 +1,4 @@
+
 export function getKernel(options = {}) {
   let { sigma = 1.4, xLength = 9, yLength = 9 } = options;
 

@@ -1,7 +1,15 @@
 import type { Signal1D } from '../types/signal1D';
 
 interface SignalsToRangesOptions {
+  /**
+   * minimal artificial width of a signal in ppm
+   * @default 0.05
+   */
   tolerance?: number;
+  /**
+   * Frequency in Hz of the spectrometer.
+   * @default 400
+   */
   frequency?: number;
 }
 
@@ -11,7 +19,7 @@ interface WrappedSignal {
   original: Signal1D;
 }
 
-interface Range {
+export interface Range {
   from: number;
   to: number;
   integration: number;

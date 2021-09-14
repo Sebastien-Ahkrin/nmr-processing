@@ -2,7 +2,7 @@ import sum from 'ml-array-sum';
 
 import { joinPatterns } from '../utilities/joinPatterns';
 
-import { signalNormalize } from './signalNormalize';
+import type { MakeMandatory } from '../types/MakeMandatory';
 
 /**
  * Join couplings smaller than a define tolerance.
@@ -16,7 +16,6 @@ import { signalNormalize } from './signalNormalize';
  */
 export function signalJoinCouplings(signal, options = {}) {
   const { tolerance = 0.05 } = options;
-  signal = signalNormalize(signal);
 
   if (!signal.js || signal.js.length < 2) return signal;
 
@@ -41,7 +40,7 @@ export function signalJoinCouplings(signal, options = {}) {
     let coupling = sum(group.map((group) => group.coupling)) / group.length;
     let atomIDs = distinctValues(
       group
-        .filter((group) => group.atomIDs && group.atomIDs.length > 0)
+        .filter((group) => group.atomIDs)
         .map((group) => group.atomIDs)
         .flat(),
     );

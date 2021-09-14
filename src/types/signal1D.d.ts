@@ -5,6 +5,7 @@ interface Signal1D {
   js?: Jcoupling[];
   atomIDs?: number[];
   assignment?: string;
-  diaIDs?: string[];
+  multiplicity?: string;
+  diaID?: string;
   nbAtoms?: number;
 }
