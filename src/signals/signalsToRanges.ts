@@ -1,4 +1,6 @@
+import { MakeMandatory } from '../types/MakeMandatory';
 import type { Signal1D } from '../types/signal1D';
+import type { Range } from '../types/range';
 
 interface SignalsToRangesOptions {
   /**
@@ -13,23 +15,27 @@ interface SignalsToRangesOptions {
   frequency?: number;
 }
 
+type Signals1DWithNbAtoms = MakeMandatory<Signal1D, 'nbAtoms'>;
+type RangeFullfiled = MakeMandatory<Range, 'integration' | 'signals'>;
+
 interface WrappedSignal {
   from: number;
   to: number;
-  original: Signal1D;
+  original: Signals1DWithNbAtoms;
 }
 
-export interface Range {
-  from: number;
-  to: number;
-  integration: number;
-  signals: Signal1D[];
+function checkNbAtoms(signals: Signal1D[]): asserts signals is Signals1DWithNbAtoms[] {
+  for (let signal of signals) {
+    if (!signal.nbAtoms) throw new Error('nbAtoms is mandatory');
+  }
 }
 
 export function signalsToRanges(
   signals: Signal1D[],
   options: SignalsToRangesOptions = {},
 ): Range[] {
+  checkNbAtoms(signals);
+
   const { tolerance = 0.05, frequency = 400 } = options;
 
   let wrapped = signals.map((signal) => ({
@@ -51,11 +57,9 @@ export function signalsToRanges(
   wrapped = wrapped.sort((signal1, signal2) => signal1.from - signal2.from);
 
   let ranges = [];
-  let range = {} as Range;
+  let range = {} as RangeFullfiled;
   for (let signal of wrapped) {
-    if (!signal.original.nbAtoms) {
-      throw new Error(`Property nbAtoms is mandatory`);
-    }
+    
     if (range.from === undefined || signal.from > range.to) {
       range = {
         from: signal.from,

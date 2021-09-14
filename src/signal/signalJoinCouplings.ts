@@ -1,10 +1,9 @@
 import sum from 'ml-array-sum';
 
-import { joinPatterns } from '../utilities/joinPatterns';
-
 import type { MakeMandatory } from '../types/MakeMandatory';
-import { Signal1D } from '../types/signal1D';
 import { Jcoupling } from '../types/jcoupling';
+import { Signal1D } from '../types/signal1D';
+import { joinPatterns } from '../utilities/joinPatterns';
 
 export interface SignalsJoinCouplingsOptions {
   /**
@@ -16,12 +15,23 @@ export interface SignalsJoinCouplingsOptions {
 
 type JcouplingFromPrediction = MakeMandatory<
   Jcoupling,
-  'multiplicity' | 'diaID' | 'distance'
+  'multiplicity' | 'diaIDs' | 'distance'
 >;
-type Signal1DWidthDiaID = MakeMandatory<Signal1D, 'diaID'>;
+type Signal1DWidthDiaID = MakeMandatory<Signal1D, 'diaIDs'>;
 type Signal1DWidthJsAndDiaID = Omit<Signal1DWidthDiaID, 'js'> & {
   js: JcouplingFromPrediction[];
 };
+
+function checkForMandatory(
+  signal: Signal1D,
+): asserts signal is Signal1DWidthJsAndDiaID {
+  if (!signal.js) throw new Error('there is not js');
+  if (!signal.diaIDs) throw new Error('there is not diaIDs');
+  for (const jcoupling of signal.js) {
+    if (!jcoupling.diaID) throw new Error('there is not diaID');
+    if (!jcoupling.distance) throw new Error('there is not diaID');
+  }
+}
 
 /**
  * Join couplings smaller than a define tolerance.
@@ -30,10 +40,12 @@ type Signal1DWidthJsAndDiaID = Omit<Signal1DWidthDiaID, 'js'> & {
  * If distance is specified and is not always the same this property will be removed.
  */
 export function signalJoinCouplings(
-  signal: Signal1D[],
+  signal: Signal1D,
   options: SignalsJoinCouplingsOptions = {},
 ) {
   const { tolerance = 0.05 } = options;
+
+  checkForMandatory(signal);
 
   if (!signal.js || signal.js.length < 2) return signal;
 
@@ -67,7 +79,7 @@ export function signalJoinCouplings(
         .filter((group) => group.assignment && group.assignment.length > 0)
         .map((group) => group.assignment),
     ).join(' ');
-    
+
     let diaID = distinctValues(
       group
         .filter((group) => group.diaID)
