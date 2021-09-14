@@ -1,11 +1,12 @@
 import { gsd, joinBroadPeaks, optimizePeaks } from 'ml-gsd';
 import type { ShapeKind } from 'ml-peak-shape-generator';
-import type { XYNumberArray } from '../types/XYNumberArray';
 import {
   xyExtract,
   xNoiseSanPlot,
   xAbsoluteMedian,
 } from 'ml-spectra-processing';
+
+import type { XYNumberArray } from '../types/XYNumberArray';
 /**
  * Implementation of the peak picking method described by Cobas in:
  * A new approach to improving automated analysis of proton NMR spectra
@@ -60,7 +61,7 @@ interface OptionsGetPeakList {
    */
   shape: { kind: ShapeKind };
   /**
-   * options for optimization step, kind represent the algorithm 
+   * options for optimization step, kind represent the algorithm
    * @default {kind:'lm'}
    */
   optimization: { kind: string };

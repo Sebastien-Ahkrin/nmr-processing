@@ -1,11 +1,10 @@
 import { peaksFilterImpurities } from '../peaks/peaksFilterImpurities';
+import type { OptionsPeaksFilterImpurities } from '../peaks/peaksFilterImpurities';
 import { OptionsPeaksToRanges, peaksToRanges } from '../peaks/peaksToRanges';
+import type { XYNumberArray } from '../types/XYNumberArray';
 
 import { xyAutoPeaksPicking } from './xyAutoPeaksPicking';
-
 import type { OptionsXYAutoPeaksPicking } from './xyAutoPeaksPicking';
-import type { OptionsPeaksFilterImpurities } from '../peaks/peaksFilterImpurities';
-import type { XYNumberArray } from '../types/XYNumberArray';
 
 interface OptionsXYAutoRangesPicking {
   peakPicking?: OptionsXYAutoPeaksPicking;
