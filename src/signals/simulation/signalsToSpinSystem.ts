@@ -1,7 +1,7 @@
 import { Matrix } from 'ml-matrix';
 import simpleClustering from 'ml-simple-clustering';
 
-import type { Signal1D } from '../signalsToXY';
+import type { Signal1D } from '../../types/signal1D';
 
 interface Ids {
   [index: number]: number;

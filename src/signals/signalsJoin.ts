@@ -2,11 +2,9 @@ import mean from 'ml-array-mean';
 import sum from 'ml-array-sum';
 
 import { signalJoinCouplings } from '../signal/signalJoinCouplings';
-import { signalNormalize } from '../signal/signalNormalize';
-import { Jcoupling } from '../types/jcoupling';
-
-import type { Signal1D } from '../types/signal1D';
 import type { MakeMandatory } from '../types/MakeMandatory';
+import { Jcoupling } from '../types/jcoupling';
+import type { Signal1D } from '../types/signal1D';
 
 export interface SignalsJoinOptions {
   /**
@@ -16,16 +14,21 @@ export interface SignalsJoinOptions {
   tolerance?: number;
 }
 
-type JcouplingFromPrediction = MakeMandatory<Jcoupling, 'multiplicity' | 'diaID' | 'distance'>;
+type JcouplingFromPrediction = MakeMandatory<
+  Jcoupling,
+  'multiplicity' | 'diaID' | 'distance'
+>;
 type Signal1DWidthDiaID = MakeMandatory<Signal1D, 'diaID'>;
 type Signal1DWidthJsAndDiaID = Omit<Signal1DWidthDiaID, 'js'> & {
   js: JcouplingFromPrediction[];
 };
 
 const localeCompare = (a: string, b: string) => a.localeCompare(b);
-const localeCompareJcouplingKeys = (a: Jcoupling, b: Jcoupling) =>
-  localeCompare(`${a.diaID}${a.distance}`, `${b.diaID}${b.distance}`);
-
+const localeCompareJcouplingKeys = (a: JcouplingFromPrediction, b: JcouplingFromPrediction) => {
+  const aa = `${a.diaID}${a.distance}`;
+  const bb = `${b.diaID}${b.distance}`;
+  return localeCompare(aa, bb);
+}
 function checkForMandatory(
   signals: Signal1D[],
 ): asserts signals is Signal1DWidthJsAndDiaID[] {
@@ -34,7 +37,7 @@ function checkForMandatory(
     if (!signal.diaID) throw new Error('there is not diaID');
     for (const jcoupling of signal.js) {
       if (!jcoupling.diaID) throw new Error('there is not diaID');
-      if (!jcoupling.distance) throw new Error('there is not diaID');
+      if (!jcoupling.distance) throw new Error('there is not distance');
     }
   }
 }
@@ -50,8 +53,12 @@ export function signalsJoin(
 
   // we group them by diaIDs
 
-  const copySignals: Signal1DWidthJsAndDiaID[] = JSON.parse(JSON.stringify(signals));
+  const copySignals: Signal1DWidthJsAndDiaID[] = JSON.parse(
+    JSON.stringify(signals),
+  );
+
   const groupedSignals: { [index: string]: Signal1DWidthJsAndDiaID[] } = {};
+
   for (let signal of copySignals) {
     signal.js = signal.js.sort(localeCompareJcouplingKeys);
     let id = `${signal.diaID} ${signal.js
@@ -99,7 +106,7 @@ export function signalsJoin(
 
   newSignals = newSignals
     .map((signal) => {
-      signal = signalJoinCouplings(signal, { tolerance });
+      signal = signalJoinCouplings(signal, { tolerance }) as Signal1DWidthJsAndDiaID;
       if (signal.js) {
         signal.multiplicity = signal.js.reduce((multiplicity, jCoupling) => {
           return `${multiplicity}${jCoupling.multiplicity}`;

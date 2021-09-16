@@ -1,4 +1,4 @@
-export const couplingValues = {
+export const couplingValues: {[key: string]: number} = {
   s: 0,
   d: 1,
   t: 2,

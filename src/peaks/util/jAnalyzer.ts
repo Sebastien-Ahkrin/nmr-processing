@@ -8,7 +8,7 @@ let maxErrorIter1 = 2.5; // Hz
 let maxErrorIter2 = 1; // Hz
 
 interface JAxisKeys {
-  [key: string]: String;
+  [key: string]: string;
   jAxis: string;
   intensity: string;
 }

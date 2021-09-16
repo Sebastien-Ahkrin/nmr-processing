@@ -1,5 +1,8 @@
 import rescale from 'ml-array-rescale';
 import type { Shape1DOption } from 'spectrum-generator';
+import { Jcoupling } from '../types/jcoupling';
+import { MakeMandatory } from '../types/MakeMandatory';
+
 import type { Signal1D } from '../types/signal1D';
 
 import { signalsToSpinSystem } from './simulation/signalsToSpinSystem';
@@ -44,6 +47,14 @@ export interface OptionsSignalsToXY {
   maxClusterSize?: number;
 }
 
+type JcouplingFromPrediction = MakeMandatory<
+  Jcoupling,
+  'multiplicity' | 'diaID' | 'distance'
+>;
+type Signal1DWidthDiaID = MakeMandatory<Signal1D, 'diaID'>;
+type Signal1DWidthJsAndDiaID = Omit<Signal1DWidthDiaID, 'js'> & {
+  js: JcouplingFromPrediction[];
+};
 /**
  * Generate a spectrum from an array of singals
  */

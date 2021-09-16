@@ -1,11 +1,9 @@
 import sum from 'ml-array-sum';
 
-import { joinPatterns } from '../utilities/joinPatterns';
-
 import type { MakeMandatory } from '../types/MakeMandatory';
-import { Signal1D } from '../types/signal1D';
 import { Jcoupling } from '../types/jcoupling';
-import { from } from 'form-data';
+import { Signal1D } from '../types/signal1D';
+import { joinPatterns } from '../utilities/joinPatterns';
 
 export interface SignalsJoinCouplingsOptions {
   /**

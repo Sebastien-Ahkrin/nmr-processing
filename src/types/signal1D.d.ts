@@ -8,4 +8,5 @@ interface Signal1D {
   multiplicity?: string;
   diaID?: string;
   nbAtoms?: number;
+  integration?: number;
 }
