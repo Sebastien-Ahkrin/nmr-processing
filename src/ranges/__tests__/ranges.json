@@ -6,7 +6,7 @@
     "signals": [
       {
         "nbAtoms": 0,
-        "diaID": [],
+        "diaID": "",
         "multiplicity": "dd",
         "kind": "solvent",
         "remark": "",
@@ -33,7 +33,7 @@
     "signals": [
       {
         "nbAtoms": 0,
-        "diaID": [],
+        "diaID": "",
         "multiplicity": "t",
         "kind": "",
         "remark": "",
@@ -54,7 +54,7 @@
     "signals": [
       {
         "nbAtoms": 0,
-        "diaID": [],
+        "diaID": "",
         "multiplicity": "d",
         "kind": "",
         "delta": 3.3541,
@@ -76,7 +76,7 @@
     "signals": [
       {
         "nbAtoms": 0,
-        "diaID": [],
+        "diaID": "",
         "multiplicity": "d",
         "kind": "",
         "remark": "",
@@ -90,7 +90,7 @@
       },
       {
         "nbAtoms": 0,
-        "diaID": [],
+        "diaID": "",
         "multiplicity": "t",
         "kind": "",
         "remark": "",
@@ -116,7 +116,7 @@
     "signals": [
       {
         "nbAtoms": 0,
-        "diaID": [],
+        "diaID": "",
         "multiplicity": "d",
         "kind": "",
         "remark": "",
@@ -138,7 +138,7 @@
     "signals": [
       {
         "nbAtoms": 0,
-        "diaID": [],
+        "diaID": "",
         "kind": "",
         "remark": "",
         "js": [
@@ -151,7 +151,7 @@
       },
       {
         "nbAtoms": 0,
-        "diaID": [],
+        "diaID": "",
         "kind": "",
         "remark": "",
         "js": [

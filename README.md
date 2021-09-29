@@ -5,21 +5,7 @@
 [![Test coverage][codecov-image]][codecov-url]
 [![npm download][download-image]][download-url]
 
-## Introduction
-
-The goal is to have [pure functions](https://medium.com/@jamesjefferyuk/javascript-what-are-pure-functions-4d4d5392d49c) allowing to process NMR spectra.
-
-All the functions use only native javascript object and will not use any classes.
-
-The functions are sorted by category on which they apply. Currently the categories are:
-
-- xy
-- peaks
-- ranges
-
-## Debug
-
-A viewer for xy data is available in `/web`
+.
 
 ## Installation
 
@@ -28,13 +14,11 @@ A viewer for xy data is available in `/web`
 ## Usage
 
 ```js
-import library from 'nmr-processing';
+import { myModule } from 'nmr-processing';
 
-const result = library(args);
+const result = myModule(args);
 // result is ...
 ```
-
-## [API Documentation](https://cheminfo.github.io/nmr-processing/)
 
 ## License
 

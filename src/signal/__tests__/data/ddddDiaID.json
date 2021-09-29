@@ -6,23 +6,23 @@
       "coupling": 1,
       "multiplicity": "d",
       "distance": 3,
-      "diaIDs": "A"
+      "diaIDs": ["A"]
     },
     {
       "coupling": 2,
       "multiplicity": "d",
       "distance": 3,
-      "diaIDs": "B"
+      "diaIDs": ["B"]
     },
     {
       "coupling": 3,
       "multiplicity": "d",
-      "diaIDs": "C"
+      "diaIDs": ["C"]
     },
     {
       "coupling": 9,
       "multiplicity": "d",
-      "diaIDs": "D"
+      "diaIDs": ["D"]
     }
   ]
 }

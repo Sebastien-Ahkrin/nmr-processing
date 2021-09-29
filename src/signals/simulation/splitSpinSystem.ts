@@ -1,0 +1,172 @@
+import { agnes } from 'ml-hclust';
+import type { Cluster } from 'ml-hclust';
+import { Matrix } from 'ml-matrix';
+
+import type { SpinSystem } from '../../types/spinSystem';
+
+export interface SplitSpinSystemOptions {
+  /**
+   * @default 400
+   */
+  frequency?: number;
+  /**
+   * @default 8
+   */
+  maxClusterSize?: number;
+}
+
+export function splitSpinSystem(
+  spinSystem: SpinSystem,
+  options: SplitSpinSystemOptions = {},
+) {
+  let { chemicalShifts, couplingConstants, connectivity } = spinSystem;
+  let { frequency = 400, maxClusterSize = 8 } = options;
+  let betas = calculateBetas(chemicalShifts, couplingConstants, frequency);
+  let initClusters = agnes(betas, { method: 'single', isDistanceMatrix: true });
+  let clusterList: Array<Int16Array> = [];
+  let nSpins = chemicalShifts.length;
+  splitCluster(initClusters, clusterList, {
+    maxClusterSize,
+    force: false,
+    nSpins,
+    connectivity,
+  });
+  let mergedClusters = mergeClusters(clusterList, maxClusterSize);
+  let nClusters = mergedClusters.length;
+  let clusters = new Array(nClusters);
+  for (let j = 0; j < nClusters; j++) {
+    clusters[j] = [];
+    for (let i = 0; i < nSpins; i++) {
+      let element = mergedClusters[j][i];
+      if (element === 0) continue;
+      clusters[j].push(element < 0 ? -(i + 1) : i);
+    }
+  }
+
+  return clusters;
+}
+
+interface SplitClusterOptions {
+  maxClusterSize: number;
+  force: boolean;
+  nSpins: number;
+  connectivity: Matrix;
+}
+
+function splitCluster(cluster: Cluster, clusterList: Array<Int16Array>, options: SplitClusterOptions) {
+  let { maxClusterSize, force, nSpins, connectivity } = options;
+  if (!force && cluster.size <= maxClusterSize) {
+    clusterList.push(getMembers(cluster.indices(), nSpins));
+  } else {
+    for (let child of cluster.children) {
+      if (child.size <= maxClusterSize) {
+        let members = getMembers(child.indices(), nSpins);
+        // Add the neighbors that shares at least 1 coupling with the given cluster
+        let count = 0;
+        for (let i = 0; i < nSpins; i++) {
+          if (members[i] === 1) {
+            for (let j = 0; j < nSpins; j++) {
+              if (connectivity.get(i, j) === 1 && members[j] === 0) {
+                members[j] = -1;
+                count++;
+              }
+            }
+            count++;
+          }
+        }
+        if (count <= maxClusterSize) {
+          clusterList.push(members);
+        } else {
+          if (child.index < 0) {
+            splitCluster(child, clusterList, {
+              maxClusterSize,
+              force: true,
+              nSpins,
+              connectivity,
+            });
+          } else {
+            // We have to threat this spin alone and use the resurrection algorithm instead of the simulation
+            members[child.index] = 2;
+            clusterList.push(members);
+          }
+        }
+      } else {
+        splitCluster(child, clusterList, {
+          maxClusterSize,
+          force: false,
+          nSpins,
+          connectivity,
+        });
+      }
+    }
+  }
+}
+
+function calculateBetas(chemicalShifts: number[], couplingConstants: Matrix, frequency: number) {
+  let nRows = couplingConstants.rows;
+  let nColumns = couplingConstants.columns;
+  let betas = Matrix.zeros(nRows, nRows);
+  // Before clustering, we must add hidden couplingConstants, we could use molecular information if available
+  for (let i = 0; i < nRows; i++) {
+    for (let j = i; j < nColumns; j++) {
+      let element = couplingConstants.get(i, j);
+      if (chemicalShifts[i] - chemicalShifts[j] !== 0) {
+        let value =
+          1 -
+          Math.abs(
+            element / ((chemicalShifts[i] - chemicalShifts[j]) * frequency),
+          );
+        betas.set(i, j, value);
+        betas.set(j, i, value);
+      } else if (!(i === j || element !== 0)) {
+        betas.set(i, j, 1);
+        betas.set(j, i, 1);
+      }
+    }
+  }
+  return betas.to2DArray();
+}
+
+function mergeClusters(list: Array<Int16Array>, maxClusterSize: number) {
+  for (let i = list.length - 1; i >= 0; i--) {
+    let clusterA = list[i];
+    let nElements = clusterA.length;
+    let index = 0;
+
+    // Is it a candidate to be merged?
+    while (index < nElements && clusterA[index++] !== -1);
+    if (index >= nElements) continue;
+
+    for (let j = list.length - 1; j >= i + 1; j--) {
+      let clusterB = list[j];
+      // Do they have common elements?
+      let count = 0;
+      let common = 0;
+      for (let index = 0; index < nElements; index++) {
+        if (clusterA[index] * clusterB[index] === -1) common++;
+        if (clusterA[index] !== 0 || clusterB[index] !== 0) count++;
+      }
+
+      if (common > 0 && count <= maxClusterSize) {
+        // Then we can merge those 2 clusters
+        for (let index = 0; index < nElements; index++) {
+          if (clusterB[index] === 1) {
+            clusterA[index] = 1;
+          } else if (clusterB[index] === -1 && clusterA[index] !== 1) {
+            clusterA[index] = -1;
+          }
+        }
+        list.splice(j, 1);
+      }
+    }
+  }
+  return list;
+}
+
+function getMembers(cluster: number[], nSpins: number) {
+  let members = new Int16Array(nSpins);
+  for (let e of cluster) {
+    members[e] = 1;
+  }
+  return members;
+}
