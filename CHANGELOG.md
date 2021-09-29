@@ -1,5 +1,13 @@
 # Changelog
 
+### [3.0.1](https://www.github.com/cheminfo/nmr-processing/compare/v3.0.0...v3.0.1) (2021-09-29)
+
+
+### Bug Fixes
+
+* update ml-gsd to 6.8.1 ([17da91d](https://www.github.com/cheminfo/nmr-processing/commit/17da91df53c68f333f0aaca18322e8e98f005520))
+* update ml-gsd to 6.82 ([901fe06](https://www.github.com/cheminfo/nmr-processing/commit/901fe066c2cb6ecf5c7a69673d9afcaa24f70e3c))
+
 ## [3.0.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.5.0...v3.0.0) (2021-09-29)
 
 
