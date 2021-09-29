@@ -98,7 +98,7 @@ describe('predict all nmr spectrum', () => {
       [2.653, 28.7],
       [0.992, 14.6],
     ]);
-  });
+  }, 30000);
 
   it('webservice', async () => {
     const result = await predictAll(molecule, {

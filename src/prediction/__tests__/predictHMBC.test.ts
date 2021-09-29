@@ -7,7 +7,6 @@ import carbonDB from './data/carbonDB-withoutStatistic.json';
 describe('prediction of 2D nmr spectrum', () => {
   const molecule = OCL.Molecule.fromSmiles('CCc1ccccc1');
   it('predict HBMC', async () => {
-    jest.setTimeout(30000);
     const result = await predictHMBC(molecule, {
       predictOptions: {
         C: {
@@ -44,5 +43,5 @@ describe('prediction of 2D nmr spectrum', () => {
     stringDeltas.sort((a: string, b: string) => a.localeCompare(b));
     deltas.sort((a: string, b: string) => a.localeCompare(b));
     expect(stringDeltas).toStrictEqual(deltas);
-  });
+  }, 30000);
 });

@@ -59,7 +59,6 @@ function checkRange(range: Range): asserts range is RangeWithSignals {
 }
 describe('predictProton', () => {
   it('1H chemical shift prediction', async () => {
-    jest.setTimeout(30000);
     const molecule = OCL.Molecule.fromMolfile(molfile);
     const prediction = await predictProton(molecule, { cache });
     expect(Object.keys(prediction)).toStrictEqual([
@@ -131,9 +130,8 @@ describe('predictProton', () => {
     expect(lastRange.integration).toBe(5);
     expect(lastRange.signals).toHaveLength(3);
     expect(lastRange.signals[0].js).toHaveLength(4);
-  });
+  }, 30000);
   it('empty molecule', async () => {
-    jest.setTimeout(30000);
     const molecule = new OCL.Molecule(16, 16);
     const result = await predictProton(molecule);
     expect(result.diaIDs).toStrictEqual([]);
@@ -142,5 +140,5 @@ describe('predictProton', () => {
     expect(result.ranges).toStrictEqual([]);
     expect(result.molecule.getAllAtoms()).toBe(0);
     expect(result.molecule.getAllBonds()).toBe(0);
-  });
+  }, 30000);
 });

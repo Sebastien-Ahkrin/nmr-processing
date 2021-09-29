@@ -5,7 +5,6 @@ import { predictCOSY } from '../predictCOSY';
 describe('prediction of 2D nmr spectrum', () => {
   const molecule = OCL.Molecule.fromSmiles('CCc1ccccc1');
   it('predict cosy', async () => {
-    jest.setTimeout(30000);
     const result = await predictCOSY(molecule);
     const signals = result.joinedSignals;
 
@@ -32,9 +31,8 @@ describe('prediction of 2D nmr spectrum', () => {
     deltas.sort((a: string, b: string) => a.localeCompare(b));
     expect(stringDeltas).toStrictEqual(deltas);
     expect(result.nucleus).toStrictEqual(['1H', '1H']);
-  });
+  }, 30000);
   it('predict cosy without diagonal', async () => {
-    jest.setTimeout(30000);
     const result = await predictCOSY(molecule, { includeDiagonal: false });
     const signals = result.joinedSignals;
     const expectedDeltas = [
@@ -54,5 +52,5 @@ describe('prediction of 2D nmr spectrum', () => {
     stringDeltas.sort((a: string, b: string) => a.localeCompare(b));
     deltas.sort((a: string, b: string) => a.localeCompare(b));
     expect(stringDeltas).toStrictEqual(deltas);
-  });
+  }, 30000);
 });
