@@ -1,5 +1,23 @@
 # Changelog
 
+## [3.0.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.5.0...v3.0.0) (2021-09-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* migration typescript and refactor  (#93)
+
+### Features
+
+* add typedoc.yml ([6f818df](https://www.github.com/cheminfo/nmr-processing/commit/6f818df15853220aa5739fbf7b9aba68b138b505))
+* migration typescript and refactor  ([#93](https://www.github.com/cheminfo/nmr-processing/issues/93)) ([49420aa](https://www.github.com/cheminfo/nmr-processing/commit/49420aa8956d2316ddc5220f573e72724778dc1f))
+* starting resurrect code ([a6cba61](https://www.github.com/cheminfo/nmr-processing/commit/a6cba6116453c9a4956d0665c297d07f7c5f92a7))
+
+
+### Bug Fixes
+
+* add package description ([e0594ca](https://www.github.com/cheminfo/nmr-processing/commit/e0594ca589a331ebe3bf5efaad3cde2beca2c2d3))
+
 ## [2.5.0](https://www.github.com/cheminfo/nmr-processing/compare/v2.4.3...v2.5.0) (2021-08-24)
 
 
