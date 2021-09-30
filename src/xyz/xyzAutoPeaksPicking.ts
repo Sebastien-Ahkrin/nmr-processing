@@ -105,7 +105,7 @@ export function xyzAutoPeaksPicking(
   } = options;
 
   if (
-    !Array.isArray(observedFrequencies) ||
+    !Array.isArray(observedFrequencies) &&
     !ArrayBuffer.isView(observedFrequencies)
   ) {
     throw new Error('observedFrequencies is mandatory');
