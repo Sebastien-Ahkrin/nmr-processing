@@ -8,19 +8,19 @@ const globalOptions = {
     nucleus: '1H',
     nbDecimalDelta: 2,
     nbDecimalJ: 1,
-    frequencyObserved: 400,
+    observedFrequency: 400,
   },
   c: {
     nucleus: '13C',
     nbDecimalDelta: 1,
     nbDecimalJ: 1,
-    frequencyObserved: 100,
+    observedFrequency: 100,
   },
   f: {
     nucleus: '19F',
     nbDecimalDelta: 2,
     nbDecimalJ: 1,
-    frequencyObserved: 400,
+    observedFrequency: 400,
   },
 };
 
@@ -39,7 +39,7 @@ export interface RangesToACSOptions {
   /**
    * default value depends of nucleus
    */
-   frequencyObserved?: number;
+  observedFrequency?: number;
   /**
    * @default true
    */
@@ -98,8 +98,8 @@ function spectroInformation(options: any) {
   if (options.solvent) {
     parenthesis.push(formatMF(options.solvent));
   }
-  if (options.frequencyObserved) {
-    parenthesis.push(`${(options.frequencyObserved * 1).toFixed(0)} MHz`);
+  if (options.observedFrequency) {
+    parenthesis.push(`${(options.observedFrequency * 1).toFixed(0)} MHz`);
   }
   if (parenthesis.length > 0) {
     strings += ` (${parenthesis.join(', ')}): δ `;
@@ -188,7 +188,10 @@ function pushIntegral(range: Range, parenthesis: string[], options: any) {
 function pushMultiplicityFromSignal(signal: Signal1D, parenthesis: string[]) {
   let multiplicity = signal.multiplicity;
   if (!multiplicity) {
-    let joinedCouplings = signalJoinCouplings(signal, { tolerance: 0.05, ignoreDiaIDs: true });
+    let joinedCouplings = signalJoinCouplings(signal, {
+      tolerance: 0.05,
+      ignoreDiaIDs: true,
+    });
     multiplicity = signalMultiplicityPattern(joinedCouplings);
   }
   if (multiplicity.length > 0) parenthesis.push(multiplicity);
@@ -229,7 +232,7 @@ function formatNucleus(nucleus: string) {
 }
 
 function appendSeparator(strings: string) {
-  if (strings.length > 0 && !(/ $/.exec(strings)) && !(/\($/.exec(strings))) {
+  if (strings.length > 0 && !/ $/.exec(strings) && !/\($/.exec(strings)) {
     strings += ', ';
   }
   return strings;
