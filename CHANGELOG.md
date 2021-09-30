@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.0.5](https://www.github.com/cheminfo/nmr-processing/compare/v3.0.4...v3.0.5) (2021-09-30)
+
+
+### Bug Fixes
+
+* fix checking point  for observedFrequencies ([54d94e2](https://www.github.com/cheminfo/nmr-processing/commit/54d94e2602c50a6b738766245d3ef0f078adac8c))
+
 ### [3.0.4](https://www.github.com/cheminfo/nmr-processing/compare/v3.0.3...v3.0.4) (2021-09-30)
 
 
