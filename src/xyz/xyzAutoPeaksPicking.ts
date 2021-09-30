@@ -83,7 +83,7 @@ export interface XYZAutoPeaksPickingOptions {
   /**
    * kernel options to calculate a laplacianOfGaussian kernel with a specify size.
    */
-  kernel: GetKernelOptions;
+  kernel?: GetKernelOptions;
 }
 
 export function xyzAutoPeaksPicking(
@@ -134,7 +134,7 @@ export function xyzAutoPeaksPicking(
     }
   }
 
-  let kernel = kernelOptions ? getKernel(kernelOptions) : smallFilter;
+  const kernel = kernelOptions ? getKernel(kernelOptions) : smallFilter;
 
   let convolutedSpectrum = convolutionByFFT
     ? convolution.fft(absoluteData, kernel, {
