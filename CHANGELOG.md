@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.0.3](https://www.github.com/cheminfo/nmr-processing/compare/v3.0.2...v3.0.3) (2021-09-30)
+
+
+### Bug Fixes
+
+* xyzAutoPeaksPicking kernel option is optional ([5eb9f53](https://www.github.com/cheminfo/nmr-processing/commit/5eb9f5303f1d3ae92bc18bbd2f9aacf837e70b9b))
+
 ### [3.0.2](https://www.github.com/cheminfo/nmr-processing/compare/v3.0.1...v3.0.2) (2021-09-30)
 
 
