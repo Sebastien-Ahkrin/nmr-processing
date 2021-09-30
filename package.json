@@ -1,6 +1,6 @@
 {
   "name": "nmr-processing",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Pure functions allowing to process NMR spectra.",
   "main": "./lib/index.js",
   "module": "./lib-esm/index.js",

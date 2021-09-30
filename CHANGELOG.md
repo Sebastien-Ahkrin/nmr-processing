@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.0.4](https://www.github.com/cheminfo/nmr-processing/compare/v3.0.3...v3.0.4) (2021-09-30)
+
+
+### Bug Fixes
+
+* rename observeFrequencies to observedFrequencies ([054aefe](https://www.github.com/cheminfo/nmr-processing/commit/054aefe2dc07237a4562a69a120ae88a1942a110))
+
 ### [3.0.3](https://www.github.com/cheminfo/nmr-processing/compare/v3.0.2...v3.0.3) (2021-09-30)
 
 
