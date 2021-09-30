@@ -79,3 +79,7 @@ lib
 lib-esm
 
 .DS_Store
+
+dist
+
+src/prediction/__tests__/cache

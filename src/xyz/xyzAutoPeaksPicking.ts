@@ -90,9 +90,6 @@ export function xyzAutoPeaksPicking(
   spectraData: Data2D,
   options: XYZAutoPeaksPickingOptions,
 ) {
-  if (!(options?.observeFrequencies || false))
-    {throw new Error('observeFrequencies is mandatory');}
-
   let {
     sizeToPad = 14,
     realTopDetection = true,
@@ -106,6 +103,13 @@ export function xyzAutoPeaksPicking(
     convolutionByFFT = true,
     kernel: kernelOptions,
   } = options;
+
+  if (
+    !Array.isArray(observeFrequencies) ||
+    !ArrayBuffer.isView(observeFrequencies)
+  ) {
+    throw new Error('observeFrequencies is mandatory');
+  }
 
   thresholdFactor = thresholdFactor === 0 ? 1 : Math.abs(thresholdFactor);
 
@@ -271,12 +275,12 @@ const createSignals2D = (peaks: MPFPeak[], options: CreateSignals2DOptions) => {
         x: {
           delta: 0,
           nucleus: nucleusX,
-          resolution: dx
+          resolution: dx,
         },
         y: {
           delta: 0,
           nucleus: nucleusY,
-          resolution: dy
+          resolution: dy,
         },
       };
       let peaks2D = [];
@@ -316,7 +320,7 @@ const createSignals2D = (peaks: MPFPeak[], options: CreateSignals2DOptions) => {
   return signals;
 };
 
-const padData = (spectraData: Data2D, options: { width: number}) => {
+const padData = (spectraData: Data2D, options: { width: number }) => {
   let { minX, maxX, minY, maxY } = spectraData;
 
   const width = options.width;
