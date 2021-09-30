@@ -1,5 +1,13 @@
 # Changelog
 
+### [3.0.2](https://www.github.com/cheminfo/nmr-processing/compare/v3.0.1...v3.0.2) (2021-09-30)
+
+
+### Bug Fixes
+
+* ensure compatibility with node 12 ([3bfcf7c](https://www.github.com/cheminfo/nmr-processing/commit/3bfcf7c426df570dafc3a597116ad2b200e586c5))
+* in ACS generation replace frequencyObserved by observedFrequency ([b1644c4](https://www.github.com/cheminfo/nmr-processing/commit/b1644c4f754dccebbef470fa0a683e74fd09e5cb))
+
 ### [3.0.1](https://www.github.com/cheminfo/nmr-processing/compare/v3.0.0...v3.0.1) (2021-09-29)
 
 
