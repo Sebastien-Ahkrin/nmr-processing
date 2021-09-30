@@ -54,7 +54,7 @@ export interface XYZAutoPeaksPickingOptions {
   /**
    * specify the frequency for each dimension.
    */
-  observeFrequencies: number[] | Float64Array;
+  observedFrequencies: number[] | Float64Array;
   /**
    * If it's true, it try to ajust the shift and add missing cross peaks, useful only for homonuclear data.
    * @default false
@@ -95,7 +95,7 @@ export function xyzAutoPeaksPicking(
     realTopDetection = true,
     thresholdFactor = 0.5,
     nucleus = ['1H', '1H'],
-    observeFrequencies,
+    observedFrequencies,
     enhanceSymmetry = false,
     clean = true,
     maxPercentCutOff = 0.03,
@@ -105,10 +105,10 @@ export function xyzAutoPeaksPicking(
   } = options;
 
   if (
-    !Array.isArray(observeFrequencies) ||
-    !ArrayBuffer.isView(observeFrequencies)
+    !Array.isArray(observedFrequencies) ||
+    !ArrayBuffer.isView(observedFrequencies)
   ) {
-    throw new Error('observeFrequencies is mandatory');
+    throw new Error('observedFrequencies is mandatory');
   }
 
   thresholdFactor = thresholdFactor === 0 ? 1 : Math.abs(thresholdFactor);
@@ -170,7 +170,7 @@ export function xyzAutoPeaksPicking(
     originalData,
     tolerances,
     nucleus,
-    observeFrequencies,
+    observedFrequencies,
     realTopDetection,
   });
 
@@ -192,7 +192,7 @@ export interface CreateSignals2DOptions {
   nRows: number;
   absoluteData: number[] | Float64Array;
   originalData: number[] | Float64Array;
-  observeFrequencies: number[] | Float64Array;
+  observedFrequencies: number[] | Float64Array;
   tolerances: number[];
   nucleus: string[];
   realTopDetection: boolean;
@@ -207,7 +207,7 @@ const createSignals2D = (peaks: MPFPeak[], options: CreateSignals2DOptions) => {
     nRows,
     absoluteData,
     originalData,
-    observeFrequencies,
+    observedFrequencies,
     tolerances,
     nucleus,
     realTopDetection,
@@ -219,7 +219,7 @@ const createSignals2D = (peaks: MPFPeak[], options: CreateSignals2DOptions) => {
 
   let [nucleusX, nucleusY] = nucleus;
   let [toleranceX, toleranceY] = tolerances;
-  let [observeFrequencyX, observeFrequencyY] = observeFrequencies;
+  let [observeFrequencyX, observeFrequencyY] = observedFrequencies;
 
   let dy = (maxY - minY) / (nRows - 1);
   let dx = (maxX - minX) / (nCols - 1);

@@ -7,7 +7,7 @@ import { MakeMandatory } from '../types/MakeMandatory';
 import type { Signal2D } from '../types/signal2D';
 
 interface CompilePatternOptions {
-  observeFrequencies?: number[] | Float64Array;
+  observedFrequencies?: number[] | Float64Array;
   tolerances?: number[] | Float64Array;
   nucleus?: string[];
   jAnalyzer?: { jAxisKey: JAxisKeys };
@@ -20,7 +20,7 @@ interface XYZJResAnalyzerOptions extends CompilePatternOptions {
 
 type CompilePatternOptionsMandatory = MakeMandatory<
   CompilePatternOptions,
-  'observeFrequencies' | 'tolerances' | 'nucleus' | 'jAnalyzer'
+  'observedFrequencies' | 'tolerances' | 'nucleus' | 'jAnalyzer'
 >;
 
 export function xyzJResAnalyzer(
@@ -32,13 +32,13 @@ export function xyzJResAnalyzer(
     referenceMaxShiftError = 0.08,
     tolerances = [10, 100],
     nucleus = ['1H', '1H'],
-    observeFrequencies = [400, 400],
+    observedFrequencies = [400, 400],
     jAnalyzer = {
       jAxisKey: { jAxis: 'y', intensity: 'z' },
     },
   } = options;
   let temporalSignals = compilePattern(signals, {
-    observeFrequencies,
+    observedFrequencies,
     tolerances,
     nucleus,
     jAnalyzer,
@@ -58,14 +58,14 @@ function compilePattern(
   options: CompilePatternOptionsMandatory,
 ) {
   let {
-    observeFrequencies,
+    observedFrequencies,
     tolerances,
     nucleus,
     jAnalyzer: jAnalyzerOptions,
   } = options;
 
   let signalOptions = {
-    observeFrequencies,
+    observedFrequencies,
     tolerances,
     nucleus,
     dx: signals[0].x.resolution,
@@ -80,7 +80,7 @@ function compilePattern(
     signal.multiplicity = '';
     signal.pattern = '';
     signal.delta1 = signal.shiftY;
-    signal.observe = observeFrequencies[1];
+    signal.observe = observedFrequencies[1];
     signal.integralData = {
       from: Number.MAX_SAFE_INTEGER,
       to: Number.MIN_SAFE_INTEGER,
@@ -142,13 +142,13 @@ type Signal2DHack = Omit<Signal2D, 'peaks'> & {
 };
 
 function createSignals2D(peaksInput: MPFPeak[], options: any) {
-  let { observeFrequencies, tolerances, nucleus, dx, dy } = options;
+  let { observedFrequencies, tolerances, nucleus, dx, dy } = options;
 
   const peaks: Peak2DHack[] = JSON.parse(JSON.stringify(peaksInput));
 
   let [nucleusX, nucleusY] = nucleus;
   let [toleranceX, toleranceY] = tolerances;
-  let [observeFrequencyX, observeFrequencyY] = observeFrequencies;
+  let [observeFrequencyX, observeFrequencyY] = observedFrequencies;
 
   // The connectivity matrix is an square and symmetric matrix, so we'll only store the upper diagonal in an
   // array like form
