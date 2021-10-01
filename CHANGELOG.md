@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.1.0](https://www.github.com/cheminfo/nmr-processing/compare/v3.0.5...v3.1.0) (2021-10-01)
+
+
+### Features
+
+* add rangesToXY function ([809162a](https://www.github.com/cheminfo/nmr-processing/commit/809162a2a52c82501caf4cc892cf998a9d83857a))
+
+
+### Bug Fixes
+
+* **rangesToXY:** normalize spectrum ([0aba0d8](https://www.github.com/cheminfo/nmr-processing/commit/0aba0d8891215811593a34cdedba91b135e29ec1))
+* return empty when there is not signals ([8dd6681](https://www.github.com/cheminfo/nmr-processing/commit/8dd66810fc5c2d3132bd957ebdc9f83812a8180b))
+
 ### [3.0.5](https://www.github.com/cheminfo/nmr-processing/compare/v3.0.4...v3.0.5) (2021-09-30)
 
 
