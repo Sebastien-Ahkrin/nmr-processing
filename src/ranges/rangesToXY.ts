@@ -1,3 +1,4 @@
+import { DataXY } from 'cheminfo-types';
 import { SpectrumGenerator } from 'spectrum-generator';
 
 import { hackSignalsToXY } from '../signals/hackSignalsToXY';
@@ -28,16 +29,7 @@ export function rangesToXY(ranges: Range[], options: any = {}) {
 
   const spectrum = hackSignalsToXY(signalsWithMultiplicity, options);
 
-  let partialIntegration = signalsWithMultiplicity.reduce((acc, signal) => {
-    const { integration = 1 } = signal;
-    return acc + integration;
-  }, 0);
-  const sum = (spectrum.y as number[]).reduce(
-    (acc: number, element: number) => acc + element,
-    0,
-  );
-  const norma = partialIntegration / sum;
-  (spectrum.y as number[]).forEach((e, i, arr) => (arr[i] *= norma));
+  normalizeSpectrum(spectrum, signalsWithMultiplicity);
 
   if (signals.length === signalsWithMultiplicity.length) return spectrum;
 
@@ -66,6 +58,9 @@ export function rangesToXY(ranges: Range[], options: any = {}) {
   }
 
   const tempSpectrum = spectrumGenerator.getSpectrum(true);
+
+  normalizeSpectrum(tempSpectrum, signalsWithMultiplet);
+
   spectrum.y.forEach((e, i, arr) => {
     arr[i] += tempSpectrum.y[i];
   });
@@ -101,4 +96,17 @@ function randomPeaks(delta: number, options: any = {}) {
   }
 
   return peaks;
+}
+
+function normalizeSpectrum(spectrum: DataXY, signals: Signal1D[]) {
+  let partialIntegration = signals.reduce((acc, signal) => {
+    const { integration = 1 } = signal;
+    return acc + integration;
+  }, 0);
+  const sum = (spectrum.y as number[]).reduce(
+    (acc: number, element: number) => acc + element,
+    0,
+  );
+  const norma = partialIntegration / sum;
+  (spectrum.y as number[]).forEach((e, i, arr) => (arr[i] *= norma));
 }
