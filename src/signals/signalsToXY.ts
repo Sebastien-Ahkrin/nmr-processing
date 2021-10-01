@@ -4,11 +4,11 @@ import type { Shape1DOption } from 'spectrum-generator';
 import { MakeMandatory } from '../types/MakeMandatory';
 import { Jcoupling } from '../types/jcoupling';
 import type { Signal1D } from '../types/signal1D';
+import { fromToArray } from '../utilities/fromToArray';
 
 import { signalsToSpinSystem } from './simulation/signalsToSpinSystem';
 import simulate1D from './simulation/simulate1D';
 import { splitSpinSystem } from './simulation/splitSpinSystem';
-import { fromToArray } from '../utilities/fromToArray';
 
 export interface OptionsSignalsToXY {
   frequency?: number;

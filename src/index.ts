@@ -18,6 +18,7 @@
  export * from './prediction/predictAll';
 
  export * from './ranges/rangesToACS';
+ export * from './ranges/rangesToXY';
 
  export * from './signals/signalsToRanges';
  export * from './signals/signalsToXY';
