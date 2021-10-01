@@ -8,6 +8,7 @@ import type { Signal1D } from '../types/signal1D';
 import { signalsToSpinSystem } from './simulation/signalsToSpinSystem';
 import simulate1D from './simulation/simulate1D';
 import { splitSpinSystem } from './simulation/splitSpinSystem';
+import { fromToArray } from '../utilities/fromToArray';
 
 export interface OptionsSignalsToXY {
   frequency?: number;
@@ -87,6 +88,13 @@ export function signalsToXY(
     maxValue = 1e8,
     maxClusterSize = 8,
   } = options;
+
+  if (signals.length === 0) {
+    return {
+      x: fromToArray(from, to, nbPoints),
+      y: Array.from(new Float64Array(nbPoints)),
+    };
+  }
 
   let spinSystem = signalsToSpinSystem(signals);
 
