@@ -19,7 +19,7 @@
     "build": "npm run tsc && cheminfo-build",
     "eslint": "eslint src --ext ts --cache",
     "eslint-fix": "npm run eslint -- --fix",
-    "prepublishOnly": "npm run tsc",
+    "prepack": "npm run tsc",
     "test": "npm run test-coverage && npm run eslint",
     "test-coverage": "npm run test-only -- --coverage",
     "test-only": "jest",
