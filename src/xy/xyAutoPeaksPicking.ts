@@ -1,3 +1,4 @@
+import { DataXY } from 'cheminfo-types';
 import { gsd, joinBroadPeaks, optimizePeaks } from 'ml-gsd';
 import {
   xyExtract,
@@ -6,7 +7,6 @@ import {
 } from 'ml-spectra-processing';
 
 import { GSDPeak } from '../types/GSDPeak';
-import type { XYNumberArray } from '../types/XYNumberArray';
 /**
  * Implementation of the peak picking method described by Cobas in:
  * A new approach to improving automated analysis of proton NMR spectra
@@ -103,7 +103,7 @@ export interface OptionsXYAutoPeaksPicking extends Partial<OptionsGetPeakList> {
 }
 
 export function xyAutoPeaksPicking(
-  data: XYNumberArray,
+  data: DataXY,
   options: OptionsXYAutoPeaksPicking = {},
 ): GSDPeak[] {
   const {
@@ -155,7 +155,7 @@ export function xyAutoPeaksPicking(
   return peaks;
 }
 
-function getPeakList(data: XYNumberArray, options: OptionsGetPeakList) {
+function getPeakList(data: DataXY, options: OptionsGetPeakList) {
   const {
     shape,
     broadWidth,
@@ -198,7 +198,7 @@ function getPeakList(data: XYNumberArray, options: OptionsGetPeakList) {
   return peakList;
 }
 
-function getNegativePeaks(data: XYNumberArray, options: OptionsGetPeakList) {
+function getNegativePeaks(data: DataXY, options: OptionsGetPeakList) {
   let { x, y } = data;
   let negativeDataY = new Float64Array(data.y.length);
   for (let i = 0; i < negativeDataY.length; i++) {
