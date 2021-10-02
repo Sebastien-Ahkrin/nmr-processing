@@ -23,13 +23,12 @@ describe('resurrect', () => {
     expect(ranges).toMatchSnapshot();
   });
 
-  it.skip('Tetrahedron', () => {
+  it('Tetrahedron', () => {
     const string = `
-	1H NMR (CDCl3, 400 MHz) d: 5.55 (d, J = 8.1 Hz, 1H, H-10 ), 4.72 (br s, 1H,  
-	.79 (m, 1H, H-50 ), 3.53 (m, 2H, H-30 , H-40 ), 3.42  
+	1H NMR (CDCl3, 400 MHz) d: 5.55 (d, J = 8.1 Hz, 1H, H-10 ), 4.72 (br s, 1H),
+	4.29 (m, 1H, H-50 ), 3.53 (m, 2H, H-30 , H-40 ), 3.42  
 	(m, 1H, H-20 ), 3.15 (dd, J = 6.0 Hz, J = 10.0 Hz, 1H, H-3), 3.00 (td, J = 11.0 Hz,  
-	J = 4.5 Hz, 1H, H-19), 1.69 (s, 1H, H-30), 0.98, 0.95, 0.94, 0.83, 0.75 (all s, 5  
-	3H, H-23, H-24, H-25, H-26, H-27)
+	J = 4.5 Hz, 1H, H-19), 1.69 (s, 1H, H-30)
 `;
     const ranges = resurrect(string).ranges;
     expect(ranges).toMatchSnapshot();

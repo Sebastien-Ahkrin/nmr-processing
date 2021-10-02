@@ -7,7 +7,6 @@ export interface DataResurrect {
   acsString: string;
   normalized: string;
   parts?: any;
-
 }
 
 export function resurrect(acsString: string) {
@@ -22,7 +21,6 @@ export function resurrect(acsString: string) {
       .replace(/\{/g, '(')
       .replace(/[\u2011\u2012\u2013\u2014\u2015\u2212]/g, '-'),
   };
-
   createParts(data);
   parseParts(data);
   return data;
@@ -119,12 +117,16 @@ function processExperiment(data: DataResurrect, part: any) {
   if (split.inside) {
     // some frequency and solvent ???
     const insideParts = split.inside.split(/[,]/);
-    const frequencyParts = insideParts.filter((part: any) => part.match(/[0-9]{2}/));
+    const frequencyParts = insideParts.filter((part: any) =>
+      part.match(/[0-9]{2}/),
+    );
     if (frequencyParts.length) {
-      const frequency = frequencyParts[0] .replace(/[^[0-9.]]/g, '');
+      const frequency = frequencyParts[0].replace(/[^[0-9.]]/g, '');
       if (frequency.length > 1) data.experiment.frequency = Number(frequency);
     }
-    const solventParts = insideParts.filter((part: any) => !part.match(/[0-9]{2}/));
+    const solventParts = insideParts.filter(
+      (part: any) => !part.match(/[0-9]{2}/),
+    );
     if (solventParts.length) {
       data.experiment.solvent = solventParts[0];
     }
@@ -132,6 +134,7 @@ function processExperiment(data: DataResurrect, part: any) {
 }
 
 function createParts(data: DataResurrect) {
+  console.log(data.normalized);
   const parts = data.normalized
     .split(/\)(?![^()]*\))/)
     .map((part) => part.replace(/^\s*(.*?)\s*$/, '$1'))
@@ -141,7 +144,7 @@ function createParts(data: DataResurrect) {
     .flat()
     .map((part) => part.replace(/^\s*(.*?)\s*$/, '$1'))
     .filter((part) => part);
-
+  console.log(parts);
   data.parts = parts;
 }
 
