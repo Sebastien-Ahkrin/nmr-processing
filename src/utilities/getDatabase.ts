@@ -7,6 +7,7 @@ import { resurrectRange } from './resurrectRange';
 interface DatabaseNMREntry {
   smiles: string;
   solvent: string;
+  nucleus: string;
   jcampURL: string;
   names: string[];
   meta: Record<string, string>;
@@ -32,6 +33,7 @@ export async function getDatabase(
     const result: DatabaseNMREntry = {
       smiles: '',
       solvent: '',
+      nucleus: '',
       jcampURL: '',
       names: [],
       meta: {},
@@ -44,6 +46,9 @@ export async function getDatabase(
           break;
         case 'solvent':
           result.solvent = line[i];
+          break;
+        case 'nucleus':
+          result.nucleus = line[i];
           break;
         case 'jcampURL':
           result.jcampURL = line[i];
