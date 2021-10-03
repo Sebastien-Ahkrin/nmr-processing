@@ -1,6 +1,6 @@
 import type { Molecule } from 'openchemlib';
 
-import type { Range } from "./range";
+import type { NMRRange } from "./NMRRange";
 import type { NMRSignal1D } from "./NMRSignal1D";
 
 export interface Prediction1D {
@@ -9,6 +9,6 @@ export interface Prediction1D {
   nucleus: string;
   joinedSignals: NMRSignal1D[];
   signals: NMRSignal1D[];
-  ranges: Range[];
+  ranges: NMRRange[];
   molecule: Molecule;
 }

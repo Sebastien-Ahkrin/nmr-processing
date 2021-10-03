@@ -3,7 +3,7 @@ import { xyIntegration } from 'ml-spectra-processing';
 
 import type { GSDPeak } from '../types/GSDPeak';
 import { MakeMandatory } from '../types/MakeMandatory';
-import type { Range } from '../types/range';
+import type { NMRRange } from '../types/NMRRange';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
 
 import jAnalyzer from './util/jAnalyzer';
@@ -117,7 +117,7 @@ export function peaksToRanges(
   data: DataXY,
   peakList: GSDPeak[],
   options: OptionsPeaksToRanges = {},
-): Range[] {
+): NMRRange[] {
   let {
     integrationSum = 100,
     joinOverlapRanges = true,
@@ -222,10 +222,10 @@ export function peaksToRanges(
     }
   }
 
-  let ranges: Range[] = [];
+  let ranges: NMRRange[] = [];
   for (let i = 0; i < signals.length; i++) {
     let signal = signals[i];
-    const range: Range = {
+    const range: NMRRange = {
       from: signal.integralData.from,
       to: signal.integralData.to,
       integration: signal.integralData.value,

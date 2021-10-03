@@ -1,20 +1,20 @@
-import { DataXY, DoubleArray } from 'cheminfo-types';
+import { DoubleArray } from 'cheminfo-types';
 import { SpectrumGenerator } from 'spectrum-generator';
 
 import { hackSignalsToXY } from '../signals/hackSignalsToXY';
 import { MakeMandatory } from '../types/MakeMandatory';
-import type { Range } from '../types/range';
+import type { NMRRange } from '../types/NMRRange';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
 import { fromToArray } from '../utilities/fromToArray';
 
-type rangeWithSignal = MakeMandatory<Range, 'signals'>;
+type rangeWithSignal = MakeMandatory<NMRRange, 'signals'>;
 
-function checkForSignals(ranges: Range[]): asserts ranges is rangeWithSignal[] {
+function checkForSignals(ranges: NMRRange[]): asserts ranges is rangeWithSignal[] {
   for (let range of ranges) {
     if (!range.signals) throw new Error('range has not signals');
   }
 }
-export function rangesToXY(ranges: Range[], options: any = {}) {
+export function rangesToXY(ranges: NMRRange[], options: any = {}) {
   checkForSignals(ranges);
   let {
     frequency = 400,

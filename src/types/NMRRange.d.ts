@@ -1,6 +1,6 @@
 import type { NMRSignal1D } from './NMRSignal1D';
 
-export interface Range {
+export interface NMRRange {
   from: number;
   to: number;
   diaIDs?: string[];

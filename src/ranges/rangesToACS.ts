@@ -1,6 +1,6 @@
 import { signalJoinCouplings } from '../signal/signalJoinCouplings';
 import { signalMultiplicityPattern } from '../signal/signalMultiplicityPattern';
-import type { Range } from '../types/range';
+import type { NMRRange } from '../types/NMRRange';
 import { NMRSignal1D } from '../types/NMRSignal1D';
 
 const globalOptions = {
@@ -50,7 +50,7 @@ export interface RangesToACSOptions {
   solvent?: string;
 }
 
-export function rangesToACS(ranges: Range[], options: RangesToACSOptions = {}) {
+export function rangesToACS(ranges: NMRRange[], options: RangesToACSOptions = {}) {
   if (!options.nucleus) options.nucleus = '1H';
   let nucleus = options.nucleus.toLowerCase().replace(/[0-9]/g, '');
   //@ts-expect-error
@@ -77,7 +77,7 @@ export function rangesToACS(ranges: Range[], options: RangesToACSOptions = {}) {
   return acsString;
 }
 
-function formatAcs(ranges: Range[], options: any) {
+function formatAcs(ranges: NMRRange[], options: any) {
   let acs = spectroInformation(options);
   if (acs.length === 0) acs = 'δ ';
   let acsRanges: string[] = [];
@@ -109,7 +109,7 @@ function spectroInformation(options: any) {
   return strings;
 }
 
-function pushDelta(range: Range, acsRanges: string[], options: any) {
+function pushDelta(range: NMRRange, acsRanges: string[], options: any) {
   let strings = '';
   let parenthesis: any = [];
   let fromTo = [range.from, range.to];
@@ -138,7 +138,7 @@ function pushDelta(range: Range, acsRanges: string[], options: any) {
           strings = appendSeparator(strings);
           strings += signal.delta.toFixed(options.nbDecimalDelta);
         }
-        const range: Range = {
+        const range: NMRRange = {
           from: Number.MIN_SAFE_INTEGER,
           to: Number.MAX_SAFE_INTEGER,
         };
@@ -171,7 +171,7 @@ function pushDelta(range: Range, acsRanges: string[], options: any) {
   acsRanges.push(strings);
 }
 
-function getIntegral(range: Range, options: any) {
+function getIntegral(range: NMRRange, options: any) {
   let integration = '';
   if (range.pubIntegral) {
     integration = String(range.pubIntegral);
@@ -183,7 +183,7 @@ function getIntegral(range: Range, options: any) {
   return integration;
 }
 
-function pushIntegral(range: Range, parenthesis: string[], options: any) {
+function pushIntegral(range: NMRRange, parenthesis: string[], options: any) {
   let integration = getIntegral(range, options);
   if (integration.length > 0) parenthesis.push(integration);
 }
@@ -201,7 +201,7 @@ function pushMultiplicityFromSignal(signal: NMRSignal1D, parenthesis: string[]) 
 }
 
 function switchFormat(
-  range: Range,
+  range: NMRRange,
   signal: NMRSignal1D,
   parenthesis: string[],
   options: any,
