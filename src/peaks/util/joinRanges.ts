@@ -1,6 +1,6 @@
-import type { Range } from '../../types/range';
+import type { NMRRange } from '../../types/NMRRange';
 
-export function joinRanges(ranges: Range[]) {
+export function joinRanges(ranges: NMRRange[]) {
   ranges.sort((a, b) => a.from - b.from);
   for (let i = 0; i < ranges.length - 1; i++) {
     if (ranges[i].to > ranges[i + 1].from) {

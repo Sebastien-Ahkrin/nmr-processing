@@ -1,7 +1,7 @@
 import { GSDPeak } from './GSDPeak';
 import type { Jcoupling } from './jcoupling';
 
-interface Signal1D {
+interface NMRSignal1D {
   delta: number;
   js?: Jcoupling[];
   atomIDs?: number[];

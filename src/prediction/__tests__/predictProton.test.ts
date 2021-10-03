@@ -6,8 +6,8 @@ import md5 from 'md5';
 import OCL from 'openchemlib/minimal';
 
 import { MakeMandatory } from '../../types/MakeMandatory';
-import type { Range } from '../../types/range';
-import { Signal1D } from '../../types/signal1D';
+import type { NMRRange } from '../../types/NMRRange';
+import { NMRSignal1D } from '../../types/NMRSignal1D';
 import { predictProton } from '../predictProton';
 
 const molfile = `Benzene, ethyl-, ID: C100414
@@ -49,9 +49,9 @@ const cache = (molfile: string, value: any) => {
   }
 };
 
-type Signal1DWithJs = MakeMandatory<Signal1D, 'js'>;
-type RangeWithSignals = Omit<Range, 'signals'> & { signals: Signal1DWithJs[] };
-function checkRange(range: Range): asserts range is RangeWithSignals {
+type Signal1DWithJs = MakeMandatory<NMRSignal1D, 'js'>;
+type RangeWithSignals = Omit<NMRRange, 'signals'> & { signals: Signal1DWithJs[] };
+function checkRange(range: NMRRange): asserts range is RangeWithSignals {
   if (!range.signals) throw new Error('There is not signals in range');
   for (const signal of range.signals) {
     if (!signal.js) throw new Error('There is not js in signal');

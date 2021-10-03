@@ -1,8 +1,8 @@
-import { Signal1D } from '../../../types/signal1D';
+import { NMRSignal1D } from '../../../types/NMRSignal1D';
 import { signalsToSpinSystem } from '../signalsToSpinSystem';
 import { splitSpinSystem } from '../splitSpinSystem';
 
-const butaneSignals: Signal1D[] = [
+const butaneSignals: NMRSignal1D[] = [
   {
     atomIDs: [4],
     nbAtoms: 1,
@@ -123,7 +123,7 @@ const butaneSignals: Signal1D[] = [
   },
 ];
 
-const propylCloride: Signal1D[] = [
+const propylCloride: NMRSignal1D[] = [
   {
     atomIDs: [4],
     nbAtoms: 1,

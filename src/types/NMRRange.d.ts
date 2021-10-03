@@ -1,11 +1,11 @@
-import type { Signal1D } from './signal1D';
+import type { NMRSignal1D } from './NMRSignal1D';
 
-export interface Range {
+export interface NMRRange {
   from: number;
   to: number;
   diaIDs?: string[];
   kind?: string;
   pubIntegral?: number;
   integration?: number;
-  signals?: Signal1D[];
+  signals?: NMRSignal1D[];
 }

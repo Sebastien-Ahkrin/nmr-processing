@@ -1,6 +1,6 @@
 import OCL from 'openchemlib/minimal';
 
-import type { Signal2D } from '../../types/signal2D';
+import type { NMRSignal2D } from '../../types/NMRSignal2D';
 import { predictAll } from '../predictAll';
 
 import carbonDB from './data/carbonDB-withoutStatistic.json';
@@ -65,14 +65,14 @@ describe('predict all nmr spectrum', () => {
       d.map((e) => e.toFixed(3)).join('-'),
     );
     const deltas = signals.map(
-      (signal: Signal2D) => `${signal.x.delta.toFixed(3)}-${signal.y.delta.toFixed(3)}`,
+      (signal: NMRSignal2D) => `${signal.x.delta.toFixed(3)}-${signal.y.delta.toFixed(3)}`,
     );
     stringDeltas.sort((a: string, b: string) => a.localeCompare(b));
     deltas.sort((a: string, b: string) => a.localeCompare(b));
     expect(stringDeltas).toStrictEqual(deltas);
 
     const cosySignals = result.cosy.joinedSignals;
-    const cosyDeltas = cosySignals.map((e: Signal2D) => [e.x.delta, e.y.delta]);
+    const cosyDeltas = cosySignals.map((e: NMRSignal2D) => [e.x.delta, e.y.delta]);
 
     expect(cosyDeltas).toStrictEqual([
       [7.26, 7.196],
@@ -89,7 +89,7 @@ describe('predict all nmr spectrum', () => {
     ]);
 
     const hsqcSignals = result.hsqc.joinedSignals;
-    const hsqcDeltas = hsqcSignals.map((e: Signal2D) => [e.x.delta, e.y.delta]);
+    const hsqcDeltas = hsqcSignals.map((e: NMRSignal2D) => [e.x.delta, e.y.delta]);
 
     expect(hsqcDeltas).toStrictEqual([
       [7.26, 128.4],
@@ -134,14 +134,14 @@ describe('predict all nmr spectrum', () => {
       d.map((e) => e.toFixed(3)).join('-'),
     );
     const deltas = signals.map(
-      (signal: Signal2D) => `${signal.x.delta.toFixed(3)}-${signal.y.delta.toFixed(3)}`,
+      (signal: NMRSignal2D) => `${signal.x.delta.toFixed(3)}-${signal.y.delta.toFixed(3)}`,
     );
     stringDeltas.sort((a: string, b: string) => a.localeCompare(b));
     deltas.sort((a: string, b: string) => a.localeCompare(b));
     expect(stringDeltas).toStrictEqual(deltas);
 
     const cosySignals = result.cosy.joinedSignals;
-    const cosyDeltas = cosySignals.map((e: Signal2D) => [e.x.delta, e.y.delta]);
+    const cosyDeltas = cosySignals.map((e: NMRSignal2D) => [e.x.delta, e.y.delta]);
 
     expect(cosyDeltas).toStrictEqual([
       [7.26, 7.196],
@@ -158,7 +158,7 @@ describe('predict all nmr spectrum', () => {
     ]);
 
     const hsqcSignals = result.hsqc.joinedSignals;
-    const hsqcDeltas = hsqcSignals.map((e: Signal2D) => [e.x.delta, e.y.delta]);
+    const hsqcDeltas = hsqcSignals.map((e: NMRSignal2D) => [e.x.delta, e.y.delta]);
 
     expect(hsqcDeltas).toStrictEqual([
       [7.26, 128.4],

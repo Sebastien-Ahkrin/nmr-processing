@@ -1,6 +1,6 @@
 import { fetch } from 'cross-fetch';
 
-import { Range } from '../types/range.d';
+import { NMRRange } from '../types/NMRRange.d';
 
 import { resurrectRange } from './resurrectRange';
 
@@ -11,7 +11,7 @@ interface DatabaseNMREntry {
   jcampURL: string;
   names: string[];
   meta: Record<string, string>;
-  ranges: Range[];
+  ranges: NMRRange[];
 }
 
 export async function getDatabase(

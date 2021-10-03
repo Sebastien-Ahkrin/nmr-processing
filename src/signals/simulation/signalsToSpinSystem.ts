@@ -2,8 +2,8 @@ import { Matrix } from 'ml-matrix';
 import simpleClustering from 'ml-simple-clustering';
 
 import { MakeMandatory } from '../../types/MakeMandatory';
+import type { NMRSignal1D } from '../../types/NMRSignal1D';
 import { Jcoupling } from '../../types/jcoupling';
-import type { Signal1D } from '../../types/signal1D';
 import type { SpinSystem } from '../../types/spinSystem';
 
 interface Ids {
@@ -12,7 +12,7 @@ interface Ids {
 
 type JcouplingFromPrediction = MakeMandatory<Jcoupling, 'atomIDs'>;
 type Signal1DWidthAtomIDs = MakeMandatory<
-  Signal1D,
+  NMRSignal1D,
   'atomIDs'
 >;
 type Signal1DFromPrediction = Omit<Signal1DWidthAtomIDs, 'js'> & {
@@ -20,7 +20,7 @@ type Signal1DFromPrediction = Omit<Signal1DWidthAtomIDs, 'js'> & {
 };
 
 function checkForMandatory(
-  signals: Signal1D[],
+  signals: NMRSignal1D[],
 ): asserts signals is Signal1DFromPrediction[] {
   for (const signal of signals) {
     if (!signal.js) throw new Error('there is not js');
@@ -31,7 +31,7 @@ function checkForMandatory(
   }
 }
 
-export function signalsToSpinSystem(signals: Signal1D[]): SpinSystem {
+export function signalsToSpinSystem(signals: NMRSignal1D[]): SpinSystem {
   checkForMandatory(signals);
   const nSpins = signals.length;
   const chemicalShifts: number[] = new Array(nSpins);

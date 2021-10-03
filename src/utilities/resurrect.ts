@@ -1,4 +1,4 @@
-import type { Range } from '../types/range';
+import type { NMRRange } from '../types/NMRRange';
 
 import { resurrectRange } from './resurrectRange';
 import { splitParenthesis } from './splitParenthesis';
@@ -9,7 +9,7 @@ export interface DataResurrect {
     frequency?: number;
     nucleus?: string;
   };
-  ranges: Range[];
+  ranges: NMRRange[];
   acsString: string;
   normalized: string;
   parts: string[];

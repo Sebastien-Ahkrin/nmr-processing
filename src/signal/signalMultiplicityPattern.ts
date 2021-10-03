@@ -1,10 +1,10 @@
-import type { Signal1D } from '../types/signal1D';
+import type { NMRSignal1D } from '../types/NMRSignal1D';
 /**
  * Return
  * @param {*} signal
  */
 
-export function signalMultiplicityPattern(signal: Signal1D) {
+export function signalMultiplicityPattern(signal: NMRSignal1D) {
   let js = signal.js;
   let pattern = '';
   if (js && js.length > 0) {

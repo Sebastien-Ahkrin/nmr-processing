@@ -12,9 +12,9 @@ import type {
 } from 'openchemlib-utils';
 
 import type { MakeMandatory } from '../../types/MakeMandatory';
+import type { NMRSignal1D } from '../../types/NMRSignal1D';
+import type { NMRSignal2D } from '../../types/NMRSignal2D';
 import type { Prediction1D } from '../../types/prediction1D';
-import type { Signal1D } from '../../types/signal1D';
-import type { Signal2D } from '../../types/signal2D';
 import type { PredictCarbon, PredictCarbonOptions } from '../predictCarbon';
 import type { PredictProton, PredictProtonOptions } from '../predictProton';
 
@@ -115,7 +115,7 @@ function checkFromTo(
 }
 
 interface Signal1DByDiaID {
-  [key: string]: { [key: string]: Signal1D };
+  [key: string]: { [key: string]: NMRSignal1D };
 }
 
 export async function predict2D(
@@ -193,7 +193,7 @@ export async function predict2D(
     }
   }
 
-  let group: { [key: string]: Signal2D } = {};
+  let group: { [key: string]: NMRSignal2D } = {};
   for (const diaID of diaIDswithAtomInfo) {
     const atom = diaID.atomInfo;
     if (atom.paths.length < 1) continue;
@@ -227,7 +227,7 @@ export async function predict2D(
 
       signal.peaks = [peak];
 
-      group[key] = signal as Signal2D;
+      group[key] = signal as NMRSignal2D;
     }
   }
 
@@ -248,7 +248,7 @@ export async function predict2D(
   };
 }
 
-function splitSignals(joinedSignals: Signal2D[]) {
+function splitSignals(joinedSignals: NMRSignal2D[]) {
   let signals = [];
   for (const signal of joinedSignals) {
     for (const xAtom of signal.x.atomIDs || []) {
@@ -268,7 +268,7 @@ interface AddSelftCorrelationOptions {
   signalsByDiaID: Signal1DByDiaID;
 }
 function addSelftCorrelation(
-  group: { [key: string]: Signal2D },
+  group: { [key: string]: NMRSignal2D },
   options: AddSelftCorrelationOptions,
 ) {
   const { paths = [], signalsByDiaID } = options;
@@ -291,7 +291,7 @@ function addSelftCorrelation(
 
     signal.peaks = [peak];
 
-    group[`${atom.oclID}-${atom.oclID}`] = signal as Signal2D;
+    group[`${atom.oclID}-${atom.oclID}`] = signal as NMRSignal2D;
   }
 }
 
@@ -300,7 +300,7 @@ interface CreateZonesOptions {
   from: string;
   to: string;
 }
-function createZones(signals: Signal2D[], options: CreateZonesOptions) {
+function createZones(signals: NMRSignal2D[], options: CreateZonesOptions) {
   const { joinDistance, from, to } = options;
   const deltas = new Matrix(signals.map((e) => [e.x.delta, e.y.delta]));
 
@@ -338,7 +338,7 @@ function createZones(signals: Signal2D[], options: CreateZonesOptions) {
   return zones;
 }
 
-function fromTo(signals: Signal2D[], options: CreateZonesOptions) {
+function fromTo(signals: NMRSignal2D[], options: CreateZonesOptions) {
   const { joinDistance, from, to } = options;
   let minX = Number.MAX_SAFE_INTEGER;
   let minY = Number.MAX_SAFE_INTEGER;
