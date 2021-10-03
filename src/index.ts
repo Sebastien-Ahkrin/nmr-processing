@@ -32,4 +32,6 @@ export * from './xy/xyAutoRangesPicking';
 export * from './xyz/xyzAutoPeaksPicking';
 export * from './xyz/xyzJResAnalyzer';
 
-export * from './utilities/getDatabase';
+export * from './databases/getDatabase';
+export * from './databases/carbonImpurities';
+export * from './databases/protonImpurities';
