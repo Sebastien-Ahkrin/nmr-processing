@@ -50,8 +50,13 @@ export interface PredictCarbonOptions {
 
 export type PredictCarbon = typeof predictCarbon;
 
-type Signal1DFromPrediction = MakeMandatory<NMRSignal1D, 'nbAtoms' | 'atomIDs' | 'diaIDs'>
-function checkFromPrediction(signal: NMRSignal1D): asserts signal is Signal1DFromPrediction {
+type Signal1DFromPrediction = MakeMandatory<
+  NMRSignal1D,
+  'nbAtoms' | 'atomIDs' | 'diaIDs'
+>;
+function checkFromPrediction(
+  signal: NMRSignal1D,
+): asserts signal is Signal1DFromPrediction {
   if (!signal.atomIDs) throw new Error('There is not atomIDs');
   if (!signal.diaIDs) throw new Error('There is not diaIDs');
   if (!signal.nbAtoms) throw new Error('There is not nbAtoms');
@@ -119,14 +124,14 @@ function formatSignals(predictions: Prediction[]) {
       nbAtoms,
       statistic,
       js: [],
-    }
+    };
     signals.push(signal as NMRSignal1D);
   }
   return signals;
 }
 
 function joinSignalByDiaID(signals: NMRSignal1D[]) {
-  let joinedSignals: {[key: string]: Signal1DFromPrediction} = {};
+  let joinedSignals: { [key: string]: Signal1DFromPrediction } = {};
   for (let signal of signals) {
     checkFromPrediction(signal);
     let diaID = signal.diaIDs[0];

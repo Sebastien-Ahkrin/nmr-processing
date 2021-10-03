@@ -67,7 +67,9 @@ export function signalsJoin(
     signal.js = signal.js.sort(localeCompareJcouplingKeys);
     const keyDiaIDs = signal.diaIDs.join(' ');
     let id = `${keyDiaIDs} ${signal.js
-      .map((j: JcouplingFromPrediction) => `${j.diaIDs.join(' ')} ${j.distance}`)
+      .map(
+        (j: JcouplingFromPrediction) => `${j.diaIDs.join(' ')} ${j.distance}`,
+      )
       .sort(localeCompare)
       .join(' ')}`;
     if (!groupedSignals[id]) {

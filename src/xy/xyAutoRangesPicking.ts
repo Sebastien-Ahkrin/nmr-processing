@@ -15,7 +15,10 @@ interface OptionsXYAutoRangesPicking {
 /**
  * Detect peaks, optimize parameters and compile multiplicity if required.
  */
-export function xyAutoRangesPicking(data: XYNumberArray, options: OptionsXYAutoRangesPicking = {}) {
+export function xyAutoRangesPicking(
+  data: XYNumberArray,
+  options: OptionsXYAutoRangesPicking = {},
+) {
   let peaks = xyAutoPeaksPicking(data, options.peakPicking);
   peaks = peaksFilterImpurities(peaks, options.impurities);
   return peaksToRanges(data, peaks, options.ranges);

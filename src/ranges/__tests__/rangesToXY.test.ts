@@ -67,6 +67,6 @@ describe('general test', () => {
     (m, 1H, H-20 ), 3.15 (dd, J = 6.0 Hz, J = 10.0 Hz, 1H, H-3), 3.00 (td, J = 11.0 Hz,  
     J = 4.5 Hz, 1H, H-19), 1.69 (s, 1H, H-30)`;
     const ranges = resurrect(acs);
-    expect(ranges).toHaveLength(7)
+    expect(ranges).toHaveLength(7);
   });
 });

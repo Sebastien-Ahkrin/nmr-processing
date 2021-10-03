@@ -11,10 +11,7 @@ interface Ids {
 }
 
 type JcouplingFromPrediction = MakeMandatory<Jcoupling, 'atomIDs'>;
-type Signal1DWidthAtomIDs = MakeMandatory<
-  NMRSignal1D,
-  'atomIDs'
->;
+type Signal1DWidthAtomIDs = MakeMandatory<NMRSignal1D, 'atomIDs'>;
 type Signal1DFromPrediction = Omit<Signal1DWidthAtomIDs, 'js'> & {
   js: JcouplingFromPrediction[];
 };

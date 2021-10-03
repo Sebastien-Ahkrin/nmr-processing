@@ -50,7 +50,9 @@ const cache = (molfile: string, value: any) => {
 };
 
 type Signal1DWithJs = MakeMandatory<NMRSignal1D, 'js'>;
-type RangeWithSignals = Omit<NMRRange, 'signals'> & { signals: Signal1DWithJs[] };
+type RangeWithSignals = Omit<NMRRange, 'signals'> & {
+  signals: Signal1DWithJs[];
+};
 function checkRange(range: NMRRange): asserts range is RangeWithSignals {
   if (!range.signals) throw new Error('There is not signals in range');
   for (const signal of range.signals) {

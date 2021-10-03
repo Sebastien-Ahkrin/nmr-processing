@@ -60,8 +60,9 @@ type SignalInternMandatory = MakeMandatory<
 function checkSignalForCompilePattern(
   signal: SignalIntern,
 ): asserts signal is SignalInternMandatory {
-  if (!signal.symRank)
-    {throw new Error('Internal error, symRank was not calculated');}
+  if (!signal.symRank) {
+    throw new Error('Internal error, symRank was not calculated');
+  }
   if (!signal.mask) throw new Error('Internal Error, mask was not added');
 }
 

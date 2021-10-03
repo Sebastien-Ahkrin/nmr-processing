@@ -50,7 +50,10 @@ export interface RangesToACSOptions {
   solvent?: string;
 }
 
-export function rangesToACS(ranges: NMRRange[], options: RangesToACSOptions = {}) {
+export function rangesToACS(
+  ranges: NMRRange[],
+  options: RangesToACSOptions = {},
+) {
   if (!options.nucleus) options.nucleus = '1H';
   let nucleus = options.nucleus.toLowerCase().replace(/[0-9]/g, '');
   //@ts-expect-error
@@ -188,7 +191,10 @@ function pushIntegral(range: NMRRange, parenthesis: string[], options: any) {
   if (integration.length > 0) parenthesis.push(integration);
 }
 
-function pushMultiplicityFromSignal(signal: NMRSignal1D, parenthesis: string[]) {
+function pushmultiplicityFromSignal(
+  signal: NMRSignal1D,
+  parenthesis: string[],
+) {
   let multiplicity = signal.multiplicity;
   if (!multiplicity) {
     let joinedCouplings = signalJoinCouplings(signal, {
@@ -212,7 +218,7 @@ function switchFormat(
         pushIntegral(range, parenthesis, options);
         break;
       case 'M':
-        pushMultiplicityFromSignal(signal, parenthesis);
+        pushmultiplicityFromSignal(signal, parenthesis);
         break;
       case 'A':
         pushAssignment(signal, parenthesis);
@@ -247,7 +253,11 @@ function formatAssignment(assignment: string) {
   return assignment;
 }
 
-function pushCoupling(signal: NMRSignal1D, parenthesis: string[], options: any) {
+function pushCoupling(
+  signal: NMRSignal1D,
+  parenthesis: string[],
+  options: any,
+) {
   if (Array.isArray(signal.js) && signal.js.length > 0) {
     signal.js.sort((a, b) => {
       return b.coupling - a.coupling;

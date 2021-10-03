@@ -18,5 +18,5 @@ interface NMRSignal1D {
     min: number;
     max: number;
     nb: number;
-  }
+  };
 }

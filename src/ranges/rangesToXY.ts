@@ -9,7 +9,9 @@ import { fromToArray } from '../utilities/fromToArray';
 
 type rangeWithSignal = MakeMandatory<NMRRange, 'signals'>;
 
-function checkForSignals(ranges: NMRRange[]): asserts ranges is rangeWithSignal[] {
+function checkForSignals(
+  ranges: NMRRange[],
+): asserts ranges is rangeWithSignal[] {
   for (let range of ranges) {
     if (!range.signals) throw new Error('range has not signals');
   }
@@ -53,8 +55,9 @@ export function rangesToXY(ranges: NMRRange[], options: any = {}) {
       normalizeSpectrum(signalSpectrum, [signal]);
       addSpectrum(rangeSpectrum, signalSpectrum);
     }
-    if (range.integration)
-      {normalizeSpectrum(rangeSpectrum, signals, { integration });}
+    if (range.integration) {
+      normalizeSpectrum(rangeSpectrum, signals, { integration });
+    }
     addSpectrum(spectrum, rangeSpectrum);
   }
 
@@ -64,7 +67,10 @@ export function rangesToXY(ranges: NMRRange[], options: any = {}) {
   };
 }
 
-function broadPeakOrMultipletSpectrum(signals: NMRSignal1D[], options: any = {}) {
+function broadPeakOrMultipletSpectrum(
+  signals: NMRSignal1D[],
+  options: any = {},
+) {
   const { lineWidth, frequency } = options;
   const spectrumGenerator = new SpectrumGenerator(options);
 

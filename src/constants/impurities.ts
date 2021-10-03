@@ -1,19 +1,19 @@
 export interface SolventImpurities {
-  [key: string]: Impurity
+  [key: string]: Impurity;
 }
 
 export interface Impurity {
-  [key: string]: ImpuritySignal[]
+  [key: string]: ImpuritySignal[];
 }
 
 export interface ImpuritySignal {
-  proton: string,
-  coupling: number,
-  multiplicity: string,
-  shift: number,
+  proton: string;
+  coupling: number;
+  multiplicity: string;
+  shift: number;
 }
 /* eslint-disable camelcase */
-export const impurities: SolventImpurities= {
+export const impurities: SolventImpurities = {
   cdcl3: {
     tms: [
       {

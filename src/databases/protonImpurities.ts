@@ -561,7 +561,6 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 0.85,
         to: 0.91,
-        multiplicity: 'm',
       },
       {
         signals: [
@@ -1760,7 +1759,6 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 0.84,
         to: 0.9,
-        multiplicity: 'm',
       },
       {
         signals: [
@@ -2959,7 +2957,6 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 0.84,
         to: 0.87,
-        multiplicity: 'm',
       },
       {
         signals: [
@@ -4170,7 +4167,6 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 0.89,
         to: 0.96,
-        multiplicity: 'm',
       },
       {
         signals: [
@@ -4748,7 +4744,6 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 6.96,
         to: 7.01,
-        multiplicity: 'm',
       },
       {
         signals: [
@@ -5364,7 +5359,6 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 0.9,
         to: 0.98,
-        multiplicity: 'm',
       },
       {
         signals: [
@@ -6563,7 +6557,6 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 0.86,
         to: 0.92,
-        multiplicity: 'm',
       },
       {
         signals: [
@@ -7153,13 +7146,11 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 7.01,
         to: 7.08,
-        multiplicity: 'm',
       },
       {
         signals: [],
         from: 7.1,
         to: 7.17,
-        multiplicity: 'm',
       },
     ],
     nucleus: '1H',
@@ -7204,25 +7195,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
     nucleus: '1H',
     solvent: 'C₆D₅Cl',
   },
-  {
-    names: ['water'],
-    ranges: [
-      {
-        signals: [
-          {
-            js: [],
-            delta: null,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
-        ],
-        from: null,
-        to: null,
-      },
-    ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
-  },
+
   {
     names: ['acetic acid'],
     ranges: [
@@ -8324,13 +8297,11 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 7.1,
         to: 7.2,
-        multiplicity: 'm',
       },
       {
         signals: [],
         from: 7.1,
         to: 7.2,
-        multiplicity: 'm',
       },
     ],
     nucleus: '1H',
@@ -8375,25 +8346,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
     nucleus: '1H',
     solvent: '(CD₃)₂CO',
   },
-  {
-    names: ['water'],
-    ranges: [
-      {
-        signals: [
-          {
-            js: [],
-            delta: null,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
-        ],
-        from: null,
-        to: null,
-      },
-    ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
-  },
+
   {
     names: ['acetic acid'],
     ranges: [
@@ -8935,7 +8888,6 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 0.82,
         to: 0.88,
-        multiplicity: 'm',
       },
       {
         signals: [
@@ -10717,13 +10669,11 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 7.1,
         to: 7.3,
-        multiplicity: 'm',
       },
       {
         signals: [],
         from: 7.1,
         to: 7.3,
-        multiplicity: 'm',
       },
     ],
     nucleus: '1H',
@@ -11316,7 +11266,6 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 0.88,
         to: 0.94,
-        multiplicity: 'm',
       },
       {
         signals: [
@@ -11883,13 +11832,11 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 7.1,
         to: 7.3,
-        multiplicity: 'm',
       },
       {
         signals: [],
         from: 7.1,
         to: 7.3,
-        multiplicity: 'm',
       },
     ],
     nucleus: '1H',
@@ -12470,7 +12417,6 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 0.86,
         to: 0.93,
-        multiplicity: 'm',
       },
       {
         signals: [
