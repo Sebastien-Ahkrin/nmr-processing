@@ -35,38 +35,49 @@ export function hackSignalsToXY(
   return signalsToXY(newSignals, options);
 }
 
-function checkCouplings(jCouplings: Jcoupling[], signals: Signal1D[], signalAssignment: number[]) {
+function checkCouplings(
+  jCouplings: Jcoupling[],
+  signals: Signal1D[],
+  signalAssignment: number[],
+) {
   let newSignalAssignment = signals.length - 1;
   let tempSignals: Signal1D[] = [];
-  const newCouplings = jCouplings.reduce<Jcoupling[]>((newCouplings, jCoupling) => {
-    const { atomIDs = [], multiplicity, coupling } = jCoupling;
-    if (atomIDs.length === 0) {
-      if (coupling && multiplicity) {
-        let tempCouplings: Jcoupling[] = [];
-        const nbLinks = couplingPatterns.indexOf(multiplicity);
-        for (let i = 0; i < nbLinks; i++) {
-          newSignalAssignment++;
-          tempCouplings.push({
-            coupling,
-            atomIDs: [newSignalAssignment],
-          });
-          tempSignals.push(
-            formatSignal(coupling, [newSignalAssignment], signalAssignment),
-          );
+  const newCouplings = jCouplings.reduce<Jcoupling[]>(
+    (newCouplings, jCoupling) => {
+      const { atomIDs = [], multiplicity, coupling } = jCoupling;
+      if (atomIDs.length === 0) {
+        if (coupling && multiplicity) {
+          let tempCouplings: Jcoupling[] = [];
+          const nbLinks = couplingPatterns.indexOf(multiplicity);
+          for (let i = 0; i < nbLinks; i++) {
+            newSignalAssignment++;
+            tempCouplings.push({
+              coupling,
+              atomIDs: [newSignalAssignment],
+            });
+            tempSignals.push(
+              formatSignal(coupling, [newSignalAssignment], signalAssignment),
+            );
+          }
+          newCouplings.push(...tempCouplings);
         }
-        newCouplings.push(...tempCouplings);
+      } else {
+        newCouplings.push(jCoupling);
       }
-    } else {
-      newCouplings.push(jCoupling);
-    }
-    return newCouplings;
-  }, []);
+      return newCouplings;
+    },
+    [],
+  );
   return { newCouplings, tempSignals };
 }
 
-function formatSignal(coupling: number, newSignalAssignment: number[], signalAssignment: number[]) {
+function formatSignal(
+  coupling: number,
+  newSignalAssignment: number[],
+  signalAssignment: number[],
+) {
   return {
-    delta: 1000,
+    delta: 100000,
     atomIDs: newSignalAssignment,
     js: [
       {
