@@ -1,5 +1,16 @@
 # Changelog
 
+### [3.1.1](https://www.github.com/cheminfo/nmr-processing/compare/v3.1.0...v3.1.1) (2021-10-03)
+
+
+### Bug Fixes
+
+* improve resurrectRange ([27da93d](https://www.github.com/cheminfo/nmr-processing/commit/27da93dc9b4026673fc3969ce730a91959580bdd))
+* refactor rangesToXY ([b04ab37](https://www.github.com/cheminfo/nmr-processing/commit/b04ab373c635811af6fca945fb9056be0aeac398))
+* remove -1000 ([1ca4b91](https://www.github.com/cheminfo/nmr-processing/commit/1ca4b91b0461b0cec616d57a0efff9e903906f20))
+* splitPatterns always returns an array ([1b4dbc9](https://www.github.com/cheminfo/nmr-processing/commit/1b4dbc9c8750937b10fae613c4e110b041daf11e))
+* splitPatterns returns empty array if empty string ([39ff986](https://www.github.com/cheminfo/nmr-processing/commit/39ff98651c3fbf9004a3c99b1c10139ce2873929))
+
 ## [3.1.0](https://www.github.com/cheminfo/nmr-processing/compare/v3.0.5...v3.1.0) (2021-10-01)
 
 
