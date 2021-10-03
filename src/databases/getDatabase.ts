@@ -44,10 +44,10 @@ export async function getDatabase(
           result.jcampURL = line[i];
           break;
         case 'name':
-          result.names.push(line[i]);
+          if (result.names) result.names.push(line[i]);
           break;
         case 'meta':
-          result.meta[parsed.labels[i]] = line[i];
+          if (result.meta) result.meta[parsed.labels[i]] = line[i];
           break;
         case 'signal': {
           const range = resurrectRange(line[i]);

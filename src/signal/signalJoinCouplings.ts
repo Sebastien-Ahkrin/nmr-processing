@@ -1,8 +1,8 @@
 import sum from 'ml-array-sum';
 
 import type { MakeMandatory } from '../types/MakeMandatory';
+import { NMRSignal1D } from '../types/NMRSignal1D';
 import { Jcoupling } from '../types/jcoupling';
-import { Signal1D } from '../types/signal1D';
 import { joinPatterns } from '../utilities/joinPatterns';
 
 export interface SignalJoinCouplingsOptions {
@@ -19,7 +19,7 @@ export interface SignalJoinCouplingsOptions {
 }
 
 type JcouplingWithDiaID = MakeMandatory<Jcoupling, 'diaIDs'>;
-type Signal1DWidthJs = MakeMandatory<Signal1D, 'js'>;
+type Signal1DWidthJs = MakeMandatory<NMRSignal1D, 'js'>;
 type Signal1DWidthJsAndDiaID = Omit<Signal1DWidthJs, 'js'> & {
   js: JcouplingWithDiaID[];
 };
@@ -49,7 +49,7 @@ const takeCareDiaIDs = (
  * If distance is specified and is not always the same this property will be removed.
  */
 export function signalJoinCouplings(
-  signal: Signal1D,
+  signal: NMRSignal1D,
   options: SignalJoinCouplingsOptions = {},
 ) {
   const { tolerance = 0.05, ignoreDiaIDs = false } = options;
@@ -144,7 +144,7 @@ function distinctValues(array: string[] | number[]) {
 }
 
 function checkJsAndDiaID(
-  signal: Signal1D,
+  signal: NMRSignal1D,
 ): asserts signal is Signal1DWidthJsAndDiaID {
   if (!signal.js) throw new Error('there is not js');
   for (const jcoupling of signal.js) {
@@ -152,6 +152,6 @@ function checkJsAndDiaID(
   }
 }
 
-function checkJs(signal: Signal1D): asserts signal is Signal1DWidthJs {
+function checkJs(signal: NMRSignal1D): asserts signal is Signal1DWidthJs {
   if (!signal.js) throw new Error('there is not js');
 }

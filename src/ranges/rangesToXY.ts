@@ -1,20 +1,20 @@
-import { DataXY, DoubleArray } from 'cheminfo-types';
+import { DoubleArray } from 'cheminfo-types';
 import { SpectrumGenerator } from 'spectrum-generator';
 
 import { hackSignalsToXY } from '../signals/hackSignalsToXY';
 import { MakeMandatory } from '../types/MakeMandatory';
-import type { Range } from '../types/range';
-import type { Signal1D } from '../types/signal1D';
+import type { NMRRange } from '../types/NMRRange';
+import type { NMRSignal1D } from '../types/NMRSignal1D';
 import { fromToArray } from '../utilities/fromToArray';
 
-type rangeWithSignal = MakeMandatory<Range, 'signals'>;
+type rangeWithSignal = MakeMandatory<NMRRange, 'signals'>;
 
-function checkForSignals(ranges: Range[]): asserts ranges is rangeWithSignal[] {
+function checkForSignals(ranges: NMRRange[]): asserts ranges is rangeWithSignal[] {
   for (let range of ranges) {
     if (!range.signals) throw new Error('range has not signals');
   }
 }
-export function rangesToXY(ranges: Range[], options: any = {}) {
+export function rangesToXY(ranges: NMRRange[], options: any = {}) {
   checkForSignals(ranges);
   let {
     frequency = 400,
@@ -22,7 +22,6 @@ export function rangesToXY(ranges: Range[], options: any = {}) {
     from = 0,
     to = 10,
     nbPoints = 16 * 1024,
-    nbPeaksMultiplet = 21,
     shape = { kind: 'gaussian' },
   } = options;
 
@@ -39,7 +38,6 @@ export function rangesToXY(ranges: Range[], options: any = {}) {
     shape,
     lineWidth,
     frequency,
-    nbPeaksMultiplet,
   };
 
   let spectrum: DoubleArray = new Float64Array(nbPoints);
@@ -47,7 +45,7 @@ export function rangesToXY(ranges: Range[], options: any = {}) {
     const { integration, signals } = range;
     let rangeSpectrum: DoubleArray = new Float64Array(nbPoints);
     for (const signal of signals) {
-      const { multiplicity, delta } = signal;
+      const { multiplicity } = signal;
       let signalSpectrum =
         multiplicity === 'm' || multiplicity === 'b' || multiplicity === 'br s'
           ? broadPeakOrMultipletSpectrum([signal], spectrumOptions).y
@@ -56,7 +54,7 @@ export function rangesToXY(ranges: Range[], options: any = {}) {
       addSpectrum(rangeSpectrum, signalSpectrum);
     }
     if (range.integration)
-      normalizeSpectrum(rangeSpectrum, signals, { integration });
+      {normalizeSpectrum(rangeSpectrum, signals, { integration });}
     addSpectrum(spectrum, rangeSpectrum);
   }
 
@@ -66,8 +64,8 @@ export function rangesToXY(ranges: Range[], options: any = {}) {
   };
 }
 
-function broadPeakOrMultipletSpectrum(signals: Signal1D[], options: any = {}) {
-  const { lineWidth, frequency, nbPeaksMultiplet } = options;
+function broadPeakOrMultipletSpectrum(signals: NMRSignal1D[], options: any = {}) {
+  const { lineWidth, frequency } = options;
   const spectrumGenerator = new SpectrumGenerator(options);
 
   const broadWidth = (lineWidth * 3) / frequency;
@@ -116,7 +114,7 @@ function peaksOfMultiplet(delta: number, options: any) {
 
 function normalizeSpectrum(
   spectrum: DoubleArray,
-  signals: Signal1D[],
+  signals: NMRSignal1D[],
   options: any = {},
 ) {
   const {

@@ -2,8 +2,8 @@ import rescale from 'ml-array-rescale';
 import type { Shape1DOption } from 'spectrum-generator';
 
 import { MakeMandatory } from '../types/MakeMandatory';
+import type { NMRSignal1D } from '../types/NMRSignal1D';
 import { Jcoupling } from '../types/jcoupling';
-import type { Signal1D } from '../types/signal1D';
 import { fromToArray } from '../utilities/fromToArray';
 
 import { signalsToSpinSystem } from './simulation/signalsToSpinSystem';
@@ -49,13 +49,13 @@ export interface OptionsSignalsToXY {
 }
 
 type JcouplingFromPrediction = MakeMandatory<Jcoupling, 'distance'>;
-type Signal1DWidthAtomsIDsAndDiaID = MakeMandatory<Signal1D, 'atomIDs'>;
+type Signal1DWidthAtomsIDsAndDiaID = MakeMandatory<NMRSignal1D, 'atomIDs'>;
 type Signal1DWidthJsAndDiaID = Omit<Signal1DWidthAtomsIDsAndDiaID, 'js'> & {
   js: JcouplingFromPrediction[];
 };
 
 function checkForMandatory(
-  signals: Signal1D[],
+  signals: NMRSignal1D[],
 ): asserts signals is Signal1DWidthJsAndDiaID[] {
   for (const signal of signals) {
     if (!signal.js) throw new Error('There is not js');
@@ -72,7 +72,7 @@ function checkForMandatory(
  * Generate a spectrum from an array of singals
  */
 export function signalsToXY(
-  signals: Signal1D[],
+  signals: NMRSignal1D[],
   options: OptionsSignalsToXY = {},
 ) {
   checkForMandatory(signals);

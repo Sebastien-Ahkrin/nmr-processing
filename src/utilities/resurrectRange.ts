@@ -1,5 +1,5 @@
-import { Range } from '../types/range';
-import { Signal1D } from '../types/signal1D';
+import { NMRRange } from '../types/NMRRange';
+import { NMRSignal1D } from '../types/NMRSignal1D';
 
 import { splitParenthesis } from './splitParenthesis';
 import { splitPatterns } from './splitPatterns';
@@ -19,8 +19,8 @@ export function resurrectRange(part: string) {
   const to = beforeParts.length > 1 ? beforeParts[1] : beforeParts[0];
 
   const insideParts = split.inside.split(/ *, */);
-  let signal: Signal1D = { delta: NaN, js: [] };
-  let range: Range = { from, to, signals: [signal] };
+  let signal: NMRSignal1D = { delta: NaN, js: [] };
+  let range: NMRRange = { from, to, signals: [signal] };
 
   const integrationParts = insideParts.filter((part: any) =>
     part.match(/^[0-9]+H$/),

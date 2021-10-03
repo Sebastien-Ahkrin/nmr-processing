@@ -1,6 +1,6 @@
 import { couplingPatterns } from '../constants/couplingPatterns';
+import type { NMRSignal1D } from '../types/NMRSignal1D';
 import { Jcoupling } from '../types/jcoupling';
-import type { Signal1D } from '../types/signal1D';
 
 import { OptionsSignalsToXY, signalsToXY } from './signalsToXY';
 
@@ -12,7 +12,7 @@ import { OptionsSignalsToXY, signalsToXY } from './signalsToXY';
  */
 
 export function hackSignalsToXY(
-  signals: Signal1D[],
+  signals: NMRSignal1D[],
   options: OptionsSignalsToXY = {},
 ) {
   let newSignals = signals.slice();
@@ -37,11 +37,11 @@ export function hackSignalsToXY(
 
 function checkCouplings(
   jCouplings: Jcoupling[],
-  signals: Signal1D[],
+  signals: NMRSignal1D[],
   signalAssignment: number[],
 ) {
   let newSignalAssignment = signals.length - 1;
-  let tempSignals: Signal1D[] = [];
+  let tempSignals: NMRSignal1D[] = [];
   const newCouplings = jCouplings.reduce<Jcoupling[]>(
     (newCouplings, jCoupling) => {
       const { atomIDs = [], multiplicity, coupling } = jCoupling;
@@ -59,10 +59,9 @@ function checkCouplings(
               formatSignal(coupling, [newSignalAssignment], signalAssignment),
             );
           }
-          newCouplings.push(...tempCouplings);
+        } else {
+          newCouplings.push(jCoupling);
         }
-      } else {
-        newCouplings.push(jCoupling);
       }
       return newCouplings;
     },

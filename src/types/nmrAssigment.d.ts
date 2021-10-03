@@ -1,7 +1,7 @@
 import { Molecule } from 'openchemlib';
 
-import { Zone } from './Zone';
-import type { Range } from './range';
+import type { NMRRange } from './NMRRange';
+import { NMRZone } from './NMRZone';
 
 export interface NMRAssignmentType {
   /**
@@ -12,11 +12,11 @@ export interface NMRAssignmentType {
    * Contains the ranges for each nucleus or kind of experiment e.g. { H: [], C: [], apt: [], dept135: []}
    * the ranges represented with atom label only contain the range from a single pulse experiment or equivalent.
    */
-  ranges: { [key: string]: Range[] };
+  ranges: { [key: string]: NMRRange[] };
   /**
    * Contains the zones for each kind of experiment e.g. { H: [], C: [], apt: [], dept135: []};
    */
-  zones: { [key: string]: Zone[] };
+  zones: { [key: string]: NMRZone[] };
   /**
    * Instance of Molecule
    */

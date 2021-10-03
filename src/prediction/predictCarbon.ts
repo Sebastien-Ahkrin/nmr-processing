@@ -3,9 +3,9 @@ import type { Molecule } from 'openchemlib';
 
 import { signalsToRanges } from '../signals/signalsToRanges';
 import { MakeMandatory } from '../types/MakeMandatory';
+import { NMRSignal1D } from '../types/NMRSignal1D';
 import type { DataBaseStructure } from '../types/dataStructure';
 import { Prediction1D } from '../types/prediction1D';
-import { Signal1D } from '../types/signal1D';
 
 import { fetchPrediction } from './utils/fetchPrediction';
 import { flatGroupedDiaIDs } from './utils/flatGroupedDiaIDs';
@@ -50,13 +50,8 @@ export interface PredictCarbonOptions {
 
 export type PredictCarbon = typeof predictCarbon;
 
-type Signal1DFromPrediction = MakeMandatory<
-  Signal1D,
-  'nbAtoms' | 'atomIDs' | 'diaIDs'
->;
-function checkFromPrediction(
-  signal: Signal1D,
-): asserts signal is Signal1DFromPrediction {
+type Signal1DFromPrediction = MakeMandatory<NMRSignal1D, 'nbAtoms' | 'atomIDs' | 'diaIDs'>
+function checkFromPrediction(signal: NMRSignal1D): asserts signal is Signal1DFromPrediction {
   if (!signal.atomIDs) throw new Error('There is not atomIDs');
   if (!signal.diaIDs) throw new Error('There is not diaIDs');
   if (!signal.nbAtoms) throw new Error('There is not nbAtoms');
@@ -124,14 +119,14 @@ function formatSignals(predictions: Prediction[]) {
       nbAtoms,
       statistic,
       js: [],
-    };
-    signals.push(signal as Signal1D);
+    }
+    signals.push(signal as NMRSignal1D);
   }
   return signals;
 }
 
-function joinSignalByDiaID(signals: Signal1D[]) {
-  let joinedSignals: { [key: string]: Signal1DFromPrediction } = {};
+function joinSignalByDiaID(signals: NMRSignal1D[]) {
+  let joinedSignals: {[key: string]: Signal1DFromPrediction} = {};
   for (let signal of signals) {
     checkFromPrediction(signal);
     let diaID = signal.diaIDs[0];

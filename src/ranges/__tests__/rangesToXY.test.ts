@@ -1,11 +1,6 @@
+import { resurrect } from '../..';
 import { xyAutoPeaksPicking } from '../../xy/xyAutoPeaksPicking';
 import { rangesToXY } from '../rangesToXY';
-
-import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
-import { resurrect } from '../..';
-
-import { writeFileSync } from 'fs';
-import { join } from 'path';
 
 describe('general test', () => {
   it('s, br s', () => {
@@ -72,8 +67,6 @@ describe('general test', () => {
     (m, 1H, H-20 ), 3.15 (dd, J = 6.0 Hz, J = 10.0 Hz, 1H, H-3), 3.00 (td, J = 11.0 Hz,  
     J = 4.5 Hz, 1H, H-19), 1.69 (s, 1H, H-30)`;
     const ranges = resurrect(acs);
-    console.log(JSON.stringify(ranges.ranges.map((e:any) => e.signals)));
-    const spectrum = rangesToXY(ranges.ranges);
-    
+    expect(ranges).toHaveLength(7)
   });
 });

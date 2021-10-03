@@ -1,6 +1,6 @@
 import { MakeMandatory } from '../types/MakeMandatory';
-import type { Range } from '../types/range';
-import type { Signal1D } from '../types/signal1D';
+import type { NMRRange } from '../types/NMRRange';
+import type { NMRSignal1D } from '../types/NMRSignal1D';
 
 interface SignalsToRangesOptions {
   /**
@@ -15,8 +15,8 @@ interface SignalsToRangesOptions {
   frequency?: number;
 }
 
-type Signals1DWithNbAtoms = MakeMandatory<Signal1D, 'nbAtoms'>;
-type RangeFullfiled = MakeMandatory<Range, 'integration' | 'signals'>;
+type Signals1DWithNbAtoms = MakeMandatory<NMRSignal1D, 'nbAtoms'>;
+type RangeFullfiled = MakeMandatory<NMRRange, 'integration' | 'signals'>;
 
 interface WrappedSignal {
   from: number;
@@ -24,16 +24,16 @@ interface WrappedSignal {
   original: Signals1DWithNbAtoms;
 }
 
-function checkNbAtoms(signals: Signal1D[]): asserts signals is Signals1DWithNbAtoms[] {
+function checkNbAtoms(signals: NMRSignal1D[]): asserts signals is Signals1DWithNbAtoms[] {
   for (let signal of signals) {
     if (!signal.nbAtoms) throw new Error('nbAtoms is mandatory');
   }
 }
 
 export function signalsToRanges(
-  signals: Signal1D[],
+  signals: NMRSignal1D[],
   options: SignalsToRangesOptions = {},
-): Range[] {
+): NMRRange[] {
   checkNbAtoms(signals);
 
   const { tolerance = 0.05, frequency = 400 } = options;

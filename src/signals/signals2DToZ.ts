@@ -1,7 +1,7 @@
 import { generateSpectrum2D } from 'spectrum-generator';
 import type { XYNumber } from 'spectrum-generator';
 
-import type { Signal2D } from '../types/signal2D';
+import type { NMRSignal2D } from '../types/NMRSignal2D';
 
 interface signals2DToZOptions {
   from?: number | XYNumber;
@@ -17,7 +17,7 @@ export interface Peak2DSeries {
 }
 
 export function signals2DToZ(
-  signals: Signal2D[],
+  signals: NMRSignal2D[],
   options: signals2DToZOptions = {},
 ) {
   let { from = -1, to = 12, nbPoints = 512, width = 0.02 } = options;
