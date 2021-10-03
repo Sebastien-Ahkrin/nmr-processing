@@ -1,6 +1,6 @@
 import { Molecule } from 'openchemlib';
 
-import { Zone } from './Zone';
+import { NMRZone } from './NMRZone';
 import type { Range } from './range';
 
 export interface NMRAssignmentType {
@@ -16,7 +16,7 @@ export interface NMRAssignmentType {
   /**
    * Contains the zones for each kind of experiment e.g. { H: [], C: [], apt: [], dept135: []};
    */
-  zones: { [key: string]: Zone[] };
+  zones: { [key: string]: NMRZone[] };
   /**
    * Instance of Molecule
    */
