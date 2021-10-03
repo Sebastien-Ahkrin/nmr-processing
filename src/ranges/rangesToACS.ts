@@ -138,7 +138,10 @@ function pushDelta(range: Range, acsRanges: string[], options: any) {
           strings = appendSeparator(strings);
           strings += signal.delta.toFixed(options.nbDecimalDelta);
         }
-        const range: Range = { from: -1000, to: 1000 };
+        const range: Range = {
+          from: Number.MIN_SAFE_INTEGER,
+          to: Number.MAX_SAFE_INTEGER,
+        };
         switchFormat(range, signal, parenthesis, options);
         if (parenthesis.length > 0) strings += ` (${parenthesis.join(', ')})`;
       }

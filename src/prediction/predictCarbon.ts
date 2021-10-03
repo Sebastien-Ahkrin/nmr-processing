@@ -12,8 +12,6 @@ import { flatGroupedDiaIDs } from './utils/flatGroupedDiaIDs';
 import { getFilteredIDiaIDs } from './utils/getFilteredIDiaIDs';
 import { Prediction, queryByHose } from './utils/queryByHOSE';
 
-
-
 const cache: { [key: string]: DataBaseStructure } = {};
 
 async function loadDB(
@@ -52,8 +50,13 @@ export interface PredictCarbonOptions {
 
 export type PredictCarbon = typeof predictCarbon;
 
-type Signal1DFromPrediction = MakeMandatory<Signal1D, 'nbAtoms' | 'atomIDs' | 'diaIDs'>
-function checkFromPrediction(signal: Signal1D): asserts signal is Signal1DFromPrediction {
+type Signal1DFromPrediction = MakeMandatory<
+  Signal1D,
+  'nbAtoms' | 'atomIDs' | 'diaIDs'
+>;
+function checkFromPrediction(
+  signal: Signal1D,
+): asserts signal is Signal1DFromPrediction {
   if (!signal.atomIDs) throw new Error('There is not atomIDs');
   if (!signal.diaIDs) throw new Error('There is not diaIDs');
   if (!signal.nbAtoms) throw new Error('There is not nbAtoms');
@@ -75,7 +78,7 @@ export async function predictCarbon(
 
   if (!database) database = await loadDB(url);
 
-  if(!database) {
+  if (!database) {
     throw new Error('There is not a database');
   }
 
@@ -114,26 +117,28 @@ function formatSignals(predictions: Prediction[]) {
   for (const prediction of predictions) {
     const { atomIDs, nbAtoms, delta, diaIDs, statistic } = prediction;
     const signal = {
-      delta: delta || -1000,
+      delta: delta || NaN,
       atomIDs,
       diaIDs: diaIDs,
       multiplicity: 's',
       nbAtoms,
       statistic,
       js: [],
-    }
+    };
     signals.push(signal as Signal1D);
   }
   return signals;
 }
 
 function joinSignalByDiaID(signals: Signal1D[]) {
-  let joinedSignals: {[key: string]: Signal1DFromPrediction} = {};
+  let joinedSignals: { [key: string]: Signal1DFromPrediction } = {};
   for (let signal of signals) {
     checkFromPrediction(signal);
     let diaID = signal.diaIDs[0];
     if (!joinedSignals[diaID]) {
-      joinedSignals[diaID] = JSON.parse(JSON.stringify(signal)) as Signal1DFromPrediction;
+      joinedSignals[diaID] = JSON.parse(
+        JSON.stringify(signal),
+      ) as Signal1DFromPrediction;
     } else {
       joinedSignals[diaID].nbAtoms += signal.nbAtoms;
       joinedSignals[diaID].atomIDs.push(...signal.atomIDs);

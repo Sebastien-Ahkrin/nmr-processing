@@ -7,9 +7,8 @@ import type { Range } from '../types/range';
 import type { Signal1D } from '../types/signal1D';
 
 import jAnalyzer from './util/jAnalyzer';
-import type { SignalIntern , Peak1DIntern } from './util/jAnalyzer';
+import type { SignalIntern, Peak1DIntern } from './util/jAnalyzer';
 import { joinRanges } from './util/joinRanges';
-
 
 export interface OptionsPeaksToRanges {
   /**
@@ -78,8 +77,9 @@ function checkSignalAfterCompilePattern(
   //   throw new Error('Internal error, symRank was not calculated');
   if (!signal.mask) throw new Error('Internal Error, mask was not added');
   if (!signal.mask2) throw new Error('Internal Error, mask2 was not added');
-  if (!signal.maskPattern)
-    {throw new Error('Internal Error, maskPattern was not added');}
+  if (!signal.maskPattern) {
+    throw new Error('Internal Error, maskPattern was not added');
+  }
 }
 
 const assignSignal = (
@@ -88,7 +88,7 @@ const assignSignal = (
   nucleus: string,
 ): SignalIntern => {
   return {
-    delta: -10000,
+    delta: NaN,
     nbPeaks: 1,
     kind: 'signal',
     startX: peak.x - peak.width,
@@ -289,7 +289,7 @@ function detectSignals(
   let signal1D: SignalIntern = assignSignal(peakList[0], frequency, nucleus);
   let peaks;
   let signals = [];
-  let prevPeak = { x: -10000 };
+  let prevPeak = { x: Number.MIN_SAFE_INTEGER };
   let spectrumIntegral = 0;
   frequencyCluster /= frequency;
   for (const peak of peakList) {
