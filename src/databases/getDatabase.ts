@@ -1,18 +1,8 @@
 import { fetch } from 'cross-fetch';
 
-import { Range } from '../types/range.d';
+import { resurrectRange } from '../utilities/resurrectRange';
 
-import { resurrectRange } from './resurrectRange';
-
-interface DatabaseNMREntry {
-  smiles: string;
-  solvent: string;
-  nucleus: string;
-  jcampURL: string;
-  names: string[];
-  meta: Record<string, string>;
-  ranges: Range[];
-}
+import { DatabaseNMREntry } from './DatabaseNMREntry';
 
 export async function getDatabase(
   url = 'https://docs.google.com/spreadsheets/d/1uwyq_L38PMRWCcT4If_EhPbHKyY3q_2tpjV8vr5_zh0/edit?usp=sharing',
