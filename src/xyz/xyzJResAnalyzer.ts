@@ -4,7 +4,7 @@ import type { JAxisKeys } from '../peaks/util/jAnalyzer';
 import jAnalyzer from '../peaks/util/jAnalyzer';
 import { MPFPeak } from '../types/MPFPeak';
 import { MakeMandatory } from '../types/MakeMandatory';
-import type { Signal2D } from '../types/signal2D';
+import type { NMRSignal2D } from '../types/NMRSignal2D';
 
 interface CompilePatternOptions {
   observedFrequencies?: number[] | Float64Array;
@@ -24,7 +24,7 @@ type CompilePatternOptionsMandatory = MakeMandatory<
 >;
 
 export function xyzJResAnalyzer(
-  signals: Signal2D[],
+  signals: NMRSignal2D[],
   options: XYZJResAnalyzerOptions = {},
 ) {
   let {
@@ -54,7 +54,7 @@ export function xyzJResAnalyzer(
 }
 
 function compilePattern(
-  signals: Signal2D[],
+  signals: NMRSignal2D[],
   options: CompilePatternOptionsMandatory,
 ) {
   let {
@@ -132,7 +132,7 @@ function compilePattern(
 interface Peak2DHack extends MPFPeak {
   width?: number;
 }
-type Signal2DHack = Omit<Signal2D, 'peaks'> & {
+type Signal2DHack = Omit<NMRSignal2D, 'peaks'> & {
   peaks: Peak2DHack[];
   integralData: { from: number; to: number };
   nbPeaks: number;

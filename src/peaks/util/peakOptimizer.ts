@@ -1,5 +1,5 @@
 import type { MPFPeak } from '../../types/MPFPeak';
-import type { Signal2D } from '../../types/signal2D';
+import type { NMRSignal2D } from '../../types/NMRSignal2D';
 
 let diagonalError = 0.05;
 let tolerance = 0.05;
@@ -21,7 +21,7 @@ export function clean(peaks: MPFPeak[], threshold: number) {
   return peaks;
 }
 
-export function enhanceSymmetry(signals: Signal2D[]) {
+export function enhanceSymmetry(signals: NMRSignal2D[]) {
   let properties = initializeProperties(signals);
   let output = signals.slice();
 
@@ -92,9 +92,9 @@ export function enhanceSymmetry(signals: Signal2D[]) {
 // }
 
 function completeMissingIfNeeded(
-  output: Signal2D[],
+  output: NMRSignal2D[],
   properties: number[][],
-  thisSignal: Signal2D,
+  thisSignal: NMRSignal2D,
   thisProp: number[],
 ) {
   // Check for symmetry
@@ -181,9 +181,9 @@ function completeMissingIfNeeded(
 
 // Check for any diagonal peak that match this cross peak
 function checkCrossPeaks(
-  output: Signal2D[],
+  output: NMRSignal2D[],
   properties: number[][],
-  signal: Signal2D,
+  signal: NMRSignal2D,
   updateProperties: boolean,
 ) {
   let hits = 0;
@@ -231,9 +231,9 @@ function checkCrossPeaks(
 }
 
 function exist(
-  output: Signal2D[],
+  output: NMRSignal2D[],
   properties: number[][],
-  signal: Signal2D,
+  signal: NMRSignal2D,
   type: number,
   symmetricSearch: boolean,
 ) {
@@ -267,7 +267,7 @@ function exist(
  * @return {*} A matrix containing the properties of each signal
  * @private
  */
-function initializeProperties(signals: Signal2D[]) {
+function initializeProperties(signals: NMRSignal2D[]) {
   let signalsProperties = new Array(signals.length);
   for (let i = signals.length - 1; i >= 0; i--) {
     signalsProperties[i] = [0, 0];
@@ -297,7 +297,7 @@ function initializeProperties(signals: Signal2D[]) {
  * @return {number}
  * @private
  */
-function distanceTo(a: Signal2D, b: Signal2D, toImage: boolean) {
+function distanceTo(a: NMRSignal2D, b: NMRSignal2D, toImage: boolean) {
   if (!toImage) {
     return Math.sqrt(
       Math.pow(a.x.delta - b.x.delta, 2) + Math.pow(a.y.delta - b.y.delta, 2),
@@ -309,9 +309,9 @@ function distanceTo(a: Signal2D, b: Signal2D, toImage: boolean) {
   }
 }
 
-// type Signal2DWithHighlight = MakeMandatory<Signal2D, '_highlight'>;
+// type Signal2DWithHighlight = MakeMandatory<NMRSignal2D, '_highlight'>;
 
-// function checkHighlight(signals2D: Signal2D[]): asserts signals2D is Signal2DwithHighlight[] {
+// function checkHighlight(signals2D: NMRSignal2D[]): asserts signals2D is Signal2DwithHighlight[] {
 //   for (let signal of signals2D) {
 //     if (!signal._highlight) throw new Error('there is not _hightlight property');
 //     if (!signal.nucleusX) throw new Error('there is not nucleusX property');
@@ -319,7 +319,7 @@ function distanceTo(a: Signal2D, b: Signal2D, toImage: boolean) {
 //   }
 // }
 
-// function alignSingleDimension(signals2D: Signal2D[], references) {
+// function alignSingleDimension(signals2D: NMRSignal2D[], references) {
 //   // For each 2D signal
 //   for (let i = 0; i < signals2D.length; i++) {
 //     let signal2D = signals2D[i];

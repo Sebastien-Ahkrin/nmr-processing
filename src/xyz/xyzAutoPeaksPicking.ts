@@ -8,7 +8,7 @@ import { getKernel } from '../peaks/util/getKernel';
 import type { GetKernelOptions } from '../peaks/util/getKernel';
 import * as PeakOptimizer from '../peaks/util/peakOptimizer';
 import { MPFPeak } from '../types/MPFPeak';
-import type { Signal2D } from '../types/signal2D';
+import type { NMRSignal2D } from '../types/NMRSignal2D';
 
 const smallFilter = [
   [0, 0, 1, 2, 2, 2, 1, 0, 0],
@@ -268,7 +268,7 @@ const createSignals2D = (peaks: MPFPeak[], options: CreateSignals2DOptions) => {
   }
   let clusters = simpleClustering(connectivity);
 
-  let signals: Signal2D[] = [];
+  let signals: NMRSignal2D[] = [];
   if (clusters) {
     for (const cluster of clusters) {
       let signal: any = {
@@ -314,7 +314,7 @@ const createSignals2D = (peaks: MPFPeak[], options: CreateSignals2DOptions) => {
       signal.x.delta /= sumZ;
       signal.y.delta /= sumZ;
       signal.peaks = peaks2D;
-      signals.push(signal as Signal2D);
+      signals.push(signal as NMRSignal2D);
     }
   }
   return signals;
