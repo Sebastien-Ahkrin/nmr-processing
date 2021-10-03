@@ -1,8 +1,14 @@
 import type { Range } from '../types/range';
+
 import { resurrectRange } from './resurrectRange';
+import { splitParenthesis } from './splitParenthesis';
 
 export interface DataResurrect {
-  experiment: any;
+  experiment: {
+    solvent?: string;
+    frequency?: number;
+    nucleus?: string;
+  };
   ranges: Range[];
   acsString: string;
   normalized: string;
@@ -37,24 +43,24 @@ function parseParts(data: DataResurrect) {
   }
 }
 
-function processExperiment(data: DataResurrect, part: any) {
+function processExperiment(data: DataResurrect, part: string) {
   const split = splitParenthesis(part);
   const before = split.before
     .replace(/[ -]*nmr[ -]*/i, '')
     .replace(/[ -]/g, '');
-  if (before.match(/^[0-9]+[A-Z][a-z]?$/)) {
+  if (/^[0-9]+[A-Z][a-z]?$/.exec(before)) {
     // 36Cl, 1H, 13C, ...
     data.experiment.nucleus = before;
   }
-  if (before.match(/^[A-Z][a-z]?[0-9]+$/)) {
+  if (/^[A-Z][a-z]?[0-9]+$/.exec(before)) {
     // Cl35, H1, C13, ...
     data.experiment.nucleus = before.replace(/^([A-Z][a-z]?)([0-9]+)$/, '$2$1');
   }
   if (split.inside) {
     // some frequency and solvent ???
     const insideParts = split.inside.split(/[,]/);
-    const frequencyParts = insideParts.filter((part: any) =>
-      part.match(/[0-9]{2}/),
+    const frequencyParts = insideParts.filter((part: string) =>
+      /[0-9]{2}/.exec(part),
     );
     if (frequencyParts.length) {
       const frequency = frequencyParts[0].replace(/[^[0-9.]]/g, '');

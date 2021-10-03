@@ -207,7 +207,7 @@ Array [
     "integration": 1,
     "signals": Array [
       Object {
-        "delta": -1000,
+        "delta": NaN,
         "js": Array [],
       },
     ],

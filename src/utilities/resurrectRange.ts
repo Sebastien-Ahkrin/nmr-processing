@@ -1,6 +1,7 @@
 import { Range } from '../types/range';
 import { Signal1D } from '../types/signal1D';
 
+import { splitParenthesis } from './splitParenthesis';
 import { splitPatterns } from './splitPatterns';
 
 export function resurrectRange(part: string) {
@@ -70,14 +71,4 @@ export function resurrectRange(part: string) {
     }
   }
   return range;
-}
-
-export function splitParenthesis(part: any) {
-  if (!part.includes('(')) return { before: part, inside: '', after: '' };
-  if (!part.includes(')')) {
-    throw new Error(`A part does not contain closing parenthesis: ${part}`);
-  }
-  return part.match(
-    / *(?<before>[^(]*?) *\( *(?<inside>.*?) *\) *(?<after>.*?) */,
-  ).groups;
 }
