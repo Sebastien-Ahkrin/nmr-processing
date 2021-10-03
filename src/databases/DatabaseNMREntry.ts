@@ -1,4 +1,4 @@
-import { Range } from '../types/range';
+import { NMRRange } from '../types/NMRRange.d';
 
 export interface DatabaseNMREntry {
   smiles?: string;
@@ -7,5 +7,5 @@ export interface DatabaseNMREntry {
   jcampURL?: string;
   names?: string[];
   meta?: Record<string, string>;
-  ranges: Range[];
+  ranges: NMRRange[];
 }
