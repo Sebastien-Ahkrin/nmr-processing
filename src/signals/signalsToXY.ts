@@ -2,8 +2,8 @@ import rescale from 'ml-array-rescale';
 import type { Shape1DOption } from 'spectrum-generator';
 
 import { MakeMandatory } from '../types/MakeMandatory';
-import { Jcoupling } from '../types/jcoupling';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
+import { Jcoupling } from '../types/jcoupling';
 import { fromToArray } from '../utilities/fromToArray';
 
 import { signalsToSpinSystem } from './simulation/signalsToSpinSystem';

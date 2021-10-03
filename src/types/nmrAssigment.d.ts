@@ -1,7 +1,7 @@
 import { Molecule } from 'openchemlib';
 
-import { NMRZone } from './NMRZone';
 import type { NMRRange } from './NMRRange';
+import { NMRZone } from './NMRZone';
 
 export interface NMRAssignmentType {
   /**

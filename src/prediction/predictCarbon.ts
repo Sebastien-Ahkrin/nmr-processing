@@ -3,9 +3,9 @@ import type { Molecule } from 'openchemlib';
 
 import { signalsToRanges } from '../signals/signalsToRanges';
 import { MakeMandatory } from '../types/MakeMandatory';
+import { NMRSignal1D } from '../types/NMRSignal1D';
 import type { DataBaseStructure } from '../types/dataStructure';
 import { Prediction1D } from '../types/prediction1D';
-import { NMRSignal1D } from '../types/NMRSignal1D';
 
 import { fetchPrediction } from './utils/fetchPrediction';
 import { flatGroupedDiaIDs } from './utils/flatGroupedDiaIDs';

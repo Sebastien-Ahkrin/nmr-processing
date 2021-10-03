@@ -2,8 +2,8 @@ import { Matrix } from 'ml-matrix';
 import simpleClustering from 'ml-simple-clustering';
 
 import { MakeMandatory } from '../../types/MakeMandatory';
-import { Jcoupling } from '../../types/jcoupling';
 import type { NMRSignal1D } from '../../types/NMRSignal1D';
+import { Jcoupling } from '../../types/jcoupling';
 import type { SpinSystem } from '../../types/spinSystem';
 
 interface Ids {

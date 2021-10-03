@@ -9,8 +9,8 @@ import {
 
 import { signalsJoin } from '../signals/signalsJoin';
 import { signalsToRanges } from '../signals/signalsToRanges';
-import type { Prediction1D } from '../types/prediction1D';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
+import type { Prediction1D } from '../types/prediction1D';
 
 /**
  * Makes a prediction using proton.

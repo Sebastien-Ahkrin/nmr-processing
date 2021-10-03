@@ -1,6 +1,6 @@
 import { couplingPatterns } from '../constants/couplingPatterns';
-import { Jcoupling } from '../types/jcoupling';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
+import { Jcoupling } from '../types/jcoupling';
 
 import { OptionsSignalsToXY, signalsToXY } from './signalsToXY';
 

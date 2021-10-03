@@ -1,8 +1,8 @@
 import sum from 'ml-array-sum';
 
 import type { MakeMandatory } from '../types/MakeMandatory';
-import { Jcoupling } from '../types/jcoupling';
 import { NMRSignal1D } from '../types/NMRSignal1D';
+import { Jcoupling } from '../types/jcoupling';
 import { joinPatterns } from '../utilities/joinPatterns';
 
 export interface SignalJoinCouplingsOptions {
