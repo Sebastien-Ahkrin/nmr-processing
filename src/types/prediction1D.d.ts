@@ -1,14 +1,14 @@
 import type { Molecule } from 'openchemlib';
 
 import type { Range } from "./range";
-import type { Signal1D } from "./signal1D";
+import type { NMRSignal1D } from "./NMRSignal1D";
 
 export interface Prediction1D {
   molfile: string;
   diaIDs: string[];
   nucleus: string;
-  joinedSignals: Signal1D[];
-  signals: Signal1D[];
+  joinedSignals: NMRSignal1D[];
+  signals: NMRSignal1D[];
   ranges: Range[];
   molecule: Molecule;
 }

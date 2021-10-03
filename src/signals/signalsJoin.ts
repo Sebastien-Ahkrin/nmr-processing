@@ -5,7 +5,7 @@ import { signalJoinCouplings } from '../signal/signalJoinCouplings';
 import type { SignalJoinCouplingsOptions } from '../signal/signalJoinCouplings';
 import type { MakeMandatory } from '../types/MakeMandatory';
 import type { Jcoupling } from '../types/jcoupling';
-import type { Signal1D } from '../types/signal1D';
+import type { NMRSignal1D } from '../types/NMRSignal1D';
 
 export interface SignalsJoinOptions {
   /**
@@ -19,7 +19,7 @@ type JcouplingFromPrediction = MakeMandatory<
   Jcoupling,
   'multiplicity' | 'diaIDs' | 'distance'
 >;
-type Signal1DWidthDiaID = MakeMandatory<Signal1D, 'diaIDs'>;
+type Signal1DWidthDiaID = MakeMandatory<NMRSignal1D, 'diaIDs'>;
 type Signal1DWidthJsAndDiaID = Omit<Signal1DWidthDiaID, 'js'> & {
   js: JcouplingFromPrediction[];
 };
@@ -34,7 +34,7 @@ const localeCompareJcouplingKeys = (
   return localeCompare(aa, bb);
 };
 function checkForMandatory(
-  signals: Signal1D[],
+  signals: NMRSignal1D[],
 ): asserts signals is Signal1DWidthJsAndDiaID[] {
   for (const signal of signals) {
     if (!signal.js) throw new Error('there is not js');
@@ -49,7 +49,7 @@ function checkForMandatory(
  * Join signals if all the same diaID
  */
 export function signalsJoin(
-  signals: Signal1D[],
+  signals: NMRSignal1D[],
   options: SignalsJoinOptions = {},
 ) {
   checkForMandatory(signals);

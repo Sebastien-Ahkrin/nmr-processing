@@ -1,7 +1,7 @@
 import { signalJoinCouplings } from '../signal/signalJoinCouplings';
 import { signalMultiplicityPattern } from '../signal/signalMultiplicityPattern';
 import type { Range } from '../types/range';
-import { Signal1D } from '../types/signal1D';
+import { NMRSignal1D } from '../types/NMRSignal1D';
 
 const globalOptions = {
   h: {
@@ -188,7 +188,7 @@ function pushIntegral(range: Range, parenthesis: string[], options: any) {
   if (integration.length > 0) parenthesis.push(integration);
 }
 
-function pushMultiplicityFromSignal(signal: Signal1D, parenthesis: string[]) {
+function pushMultiplicityFromSignal(signal: NMRSignal1D, parenthesis: string[]) {
   let multiplicity = signal.multiplicity;
   if (!multiplicity) {
     let joinedCouplings = signalJoinCouplings(signal, {
@@ -202,7 +202,7 @@ function pushMultiplicityFromSignal(signal: Signal1D, parenthesis: string[]) {
 
 function switchFormat(
   range: Range,
-  signal: Signal1D,
+  signal: NMRSignal1D,
   parenthesis: string[],
   options: any,
 ) {
@@ -247,7 +247,7 @@ function formatAssignment(assignment: string) {
   return assignment;
 }
 
-function pushCoupling(signal: Signal1D, parenthesis: string[], options: any) {
+function pushCoupling(signal: NMRSignal1D, parenthesis: string[], options: any) {
   if (Array.isArray(signal.js) && signal.js.length > 0) {
     signal.js.sort((a, b) => {
       return b.coupling - a.coupling;
@@ -265,7 +265,7 @@ function pushCoupling(signal: Signal1D, parenthesis: string[], options: any) {
   }
 }
 
-function pushAssignment(signal: Signal1D, parenthesis: string[]) {
+function pushAssignment(signal: NMRSignal1D, parenthesis: string[]) {
   if (signal.assignment) {
     parenthesis.push(formatAssignment(signal.assignment));
   }

@@ -4,7 +4,7 @@ import { SpectrumGenerator } from 'spectrum-generator';
 import { hackSignalsToXY } from '../signals/hackSignalsToXY';
 import { MakeMandatory } from '../types/MakeMandatory';
 import type { Range } from '../types/range';
-import type { Signal1D } from '../types/signal1D';
+import type { NMRSignal1D } from '../types/NMRSignal1D';
 import { fromToArray } from '../utilities/fromToArray';
 
 type rangeWithSignal = MakeMandatory<Range, 'signals'>;
@@ -66,7 +66,7 @@ export function rangesToXY(ranges: Range[], options: any = {}) {
   };
 }
 
-function broadPeakOrMultipletSpectrum(signals: Signal1D[], options: any = {}) {
+function broadPeakOrMultipletSpectrum(signals: NMRSignal1D[], options: any = {}) {
   const { lineWidth, frequency, nbPeaksMultiplet } = options;
   const spectrumGenerator = new SpectrumGenerator(options);
 
@@ -116,7 +116,7 @@ function peaksOfMultiplet(delta: number, options: any) {
 
 function normalizeSpectrum(
   spectrum: DoubleArray,
-  signals: Signal1D[],
+  signals: NMRSignal1D[],
   options: any = {},
 ) {
   const {

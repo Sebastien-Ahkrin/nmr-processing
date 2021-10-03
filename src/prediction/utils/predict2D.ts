@@ -13,7 +13,7 @@ import type {
 
 import type { MakeMandatory } from '../../types/MakeMandatory';
 import type { Prediction1D } from '../../types/prediction1D';
-import type { Signal1D } from '../../types/signal1D';
+import type { NMRSignal1D } from '../../types/NMRSignal1D';
 import type { Signal2D } from '../../types/signal2D';
 import type { PredictCarbon, PredictCarbonOptions } from '../predictCarbon';
 import type { PredictProton, PredictProtonOptions } from '../predictProton';
@@ -115,7 +115,7 @@ function checkFromTo(
 }
 
 interface Signal1DByDiaID {
-  [key: string]: { [key: string]: Signal1D };
+  [key: string]: { [key: string]: NMRSignal1D };
 }
 
 export async function predict2D(

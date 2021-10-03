@@ -4,7 +4,7 @@ import { xyIntegration } from 'ml-spectra-processing';
 import type { GSDPeak } from '../types/GSDPeak';
 import { MakeMandatory } from '../types/MakeMandatory';
 import type { Range } from '../types/range';
-import type { Signal1D } from '../types/signal1D';
+import type { NMRSignal1D } from '../types/NMRSignal1D';
 
 import jAnalyzer from './util/jAnalyzer';
 import type { SignalIntern, Peak1DIntern } from './util/jAnalyzer';
@@ -230,7 +230,7 @@ export function peaksToRanges(
       to: signal.integralData.to,
       integration: signal.integralData.value,
     };
-    const signalResult: Signal1D = {
+    const signalResult: NMRSignal1D = {
       delta: signal.delta,
       kind: signal.kind || 'signal',
       multiplicity: signal.multiplicity,

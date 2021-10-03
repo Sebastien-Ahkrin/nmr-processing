@@ -10,7 +10,7 @@ import {
 import { signalsJoin } from '../signals/signalsJoin';
 import { signalsToRanges } from '../signals/signalsToRanges';
 import type { Prediction1D } from '../types/prediction1D';
-import type { Signal1D } from '../types/signal1D';
+import type { NMRSignal1D } from '../types/NMRSignal1D';
 
 /**
  * Makes a prediction using proton.
@@ -75,7 +75,7 @@ function protonParser(
   result: string,
   molecule: Molecule,
   diaIDs: string[],
-): Signal1D[] {
+): NMRSignal1D[] {
   if (molecule.getAllAtoms() === 0) return [];
   if (result.includes('ERR')) {
     throw Error(`Spinus optimization: ${result}`);
@@ -87,7 +87,7 @@ function protonParser(
     let fields: string[] = line.split('\t');
     let couplings = fields.slice(4);
     let atom = Number(fields[0]) - 1;
-    let signal: Signal1D = {
+    let signal: NMRSignal1D = {
       atomIDs: [atom],
       diaIDs: [diaIDs[atom]],
       nbAtoms: 1,

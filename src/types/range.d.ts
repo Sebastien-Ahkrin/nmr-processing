@@ -1,4 +1,4 @@
-import type { Signal1D } from './signal1D';
+import type { NMRSignal1D } from './NMRSignal1D';
 
 export interface Range {
   from: number;
@@ -7,5 +7,5 @@ export interface Range {
   kind?: string;
   pubIntegral?: number;
   integration?: number;
-  signals?: Signal1D[];
+  signals?: NMRSignal1D[];
 }

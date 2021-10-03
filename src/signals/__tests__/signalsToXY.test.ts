@@ -1,7 +1,7 @@
-import { Signal1D } from '../../types/signal1D';
+import { NMRSignal1D } from '../../types/NMRSignal1D';
 import { signalsToXY } from '../signalsToXY';
 
-const signals: Signal1D[] = [
+const signals: NMRSignal1D[] = [
   {
     atomIDs: [8],
     nbAtoms: 1,
@@ -106,7 +106,7 @@ const signals: Signal1D[] = [
   },
 ];
 
-const signalsLarge: Signal1D[] = [];
+const signalsLarge: NMRSignal1D[] = [];
 for (let i = 0; i < 10; i++) {
   signalsLarge.push({
     atomIDs: [i],
