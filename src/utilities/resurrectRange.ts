@@ -4,7 +4,8 @@ import { NMRSignal1D } from '../types/NMRSignal1D';
 import { splitParenthesis } from './splitParenthesis';
 import { splitPatterns } from './splitPatterns';
 
-export function resurrectRange(part: string) {
+export function resurrectRange(part: string, options: any = {}) {
+  const { tolerance = 0.05, frequency = 400 } = options;
   const split = splitParenthesis(part);
   if (!split.before) return;
   // before parenthesis there should be only numbers but we will still split with space
@@ -70,5 +71,18 @@ export function resurrectRange(part: string) {
       });
     }
   }
+
+  if (range.from === range.to) {
+    let halfWidth =
+      (signal.js || []).reduce(
+        (total, j) => (total += j.coupling / frequency),
+        0,
+      ) /
+        2 +
+      tolerance;
+    range.from = signal.delta - halfWidth;
+    range.to = signal.delta + halfWidth;
+  }
+
   return range;
 }
