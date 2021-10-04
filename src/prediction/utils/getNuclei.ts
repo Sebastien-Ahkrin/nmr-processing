@@ -3,6 +3,6 @@ const nucleusMap: {[key: string]: string;} = {
   c: '13C',
 };
 
-export function getNucleus(input: {[key: string]: string}) {
+export function getNuclei(input: {[key: string]: string}) {
   return Object.values(input).map((e) => (nucleusMap[e.toLowerCase()]));
 }

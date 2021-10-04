@@ -18,7 +18,7 @@ import type { Prediction1D } from '../../types/prediction1D';
 import type { PredictCarbon, PredictCarbonOptions } from '../predictCarbon';
 import type { PredictProton, PredictProtonOptions } from '../predictProton';
 
-import { getNucleus } from './getNucleus';
+import { getNuclei } from './getNuclei';
 import { getPredictions } from './getPredictions';
 
 /**
@@ -240,7 +240,7 @@ export async function predict2D(
   return {
     molfile: molecule.toMolfile(),
     diaIDs: spectra.x.diaIDs,
-    nucleus: getNucleus({ from, to }),
+    nuclei: getNuclei({ from, to }),
     joinedSignals,
     signals: splitSignals(joinedSignals),
     zones,
