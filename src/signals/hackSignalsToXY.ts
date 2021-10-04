@@ -6,16 +6,14 @@ import { OptionsSignalsToXY, signalsToXY } from './signalsToXY';
 
 /**
  * Create the xy object from an array of 1D signals.
- * @param {Array<number>} signals Array of signals with assigned or unassigned couplings.
- * @param {*} options options for signalsToXY function.
- * @returns
+ * @param signals Array of signals with assigned or unassigned couplings.
  */
 
 export function hackSignalsToXY(
   signals: NMRSignal1D[],
   options: OptionsSignalsToXY = {},
 ) {
-  let newSignals = signals.slice();
+  let newSignals = JSON.parse(JSON.stringify(signals));
 
   signals.forEach((signal, s) => {
     const { js: jCouplings = [], atomIDs: signalAssignment = [s] } = signal;
