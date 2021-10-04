@@ -129,13 +129,15 @@ function normalizeSpectrum(
       return acc + integration;
     }, 0),
   } = options;
-
-  const sum = (spectrum as number[]).reduce(
+  const sum = (spectrum as Float64Array).reduce(
     (acc: number, element: number) => acc + element,
     0,
   );
 
   const norma = (integration / sum) * 1e6;
-
-  (spectrum as number[]).forEach((e, i, arr) => (arr[i] *= norma));
+  if (sum !== 0) {
+    for (let i = 0; i < spectrum.length; i++) {
+      spectrum[i] *= norma;
+    }
+  }
 }
