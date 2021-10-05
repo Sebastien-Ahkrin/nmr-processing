@@ -1,5 +1,14 @@
 # Changelog
 
+### [3.2.1](https://www.github.com/cheminfo/nmr-processing/compare/v3.2.0...v3.2.1) (2021-10-05)
+
+
+### Bug Fixes
+
+* check default values at interfaces close [#105](https://www.github.com/cheminfo/nmr-processing/issues/105) ([ba6c82c](https://www.github.com/cheminfo/nmr-processing/commit/ba6c82ce7cafdc851d1c61ecb98f26006f064e59))
+* rename nucleus to nuclei when it is array ([d815868](https://www.github.com/cheminfo/nmr-processing/commit/d8158687a94d8f62768830983384edfad93f6696))
+* **resurrect:** regular expression for frequency ([fad1ed3](https://www.github.com/cheminfo/nmr-processing/commit/fad1ed3965ffcd1796a4b3defdc54333a49097ee))
+
 ## [3.2.0](https://www.github.com/cheminfo/nmr-processing/compare/v3.1.0...v3.2.0) (2021-10-05)
 
 
