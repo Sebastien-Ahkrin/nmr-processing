@@ -1,6 +1,19 @@
 import { couplingValues } from '../constants/couplingValues';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
 
+export interface RangeFromSignalOptions {
+  /**
+   * nucleus
+   * @default '1h'
+   */
+  nucleus: string;
+  /**
+   * frequency observed
+   * @default 400
+   */
+  frequency: number;
+}
+
 export function rangeFromSignal(signal: NMRSignal1D, options: any = {}) {
   const { nucleus = '1h', frequency = 400 } = options;
   const { tolerance = getTolerance(nucleus) / frequency } = options;

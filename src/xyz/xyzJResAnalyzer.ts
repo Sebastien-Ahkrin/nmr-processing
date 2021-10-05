@@ -14,7 +14,15 @@ interface CompilePatternOptions {
 }
 
 interface XYZJResAnalyzerOptions extends CompilePatternOptions {
+  /**
+   * maximum difference in Hz to discard if the signal is symmetric.
+   * @default 0.08
+   */
   referenceMaxShiftError?: number;
+  /**
+   * reference value in Hz
+   * @default 0
+   */
   reference?: number;
 }
 

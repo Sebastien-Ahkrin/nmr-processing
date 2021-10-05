@@ -14,9 +14,6 @@ import type { Prediction1D } from '../types/prediction1D';
 
 /**
  * Makes a prediction using proton.
- * @param {Molecule} molecule - OCL Molecule instance.
- * @param {object} [options={}]
- * @param {function} [options.cache] A callback receiving a molfile and the result
  * @returns {Promise<object>} - object with molfile, diaIDs, signals, joined signals by diaIDs and ranges.
  */
 

@@ -4,9 +4,27 @@ import type { XYNumber } from 'spectrum-generator';
 import type { NMRSignal2D } from '../types/NMRSignal2D';
 
 interface signals2DToZOptions {
+  /**
+   * lower limit in the spectrum, if it is a number the value will be defined for both axes
+   * @default -1
+   */
   from?: number | XYNumber;
+  /**
+   * upper limit in the spectrum, if it is a number the value will be defined for both axes
+   * @default 12
+   */
   to?: number | XYNumber;
+  /**
+   * Number of points of each dimension of the spectrum,
+   * if it is a number the value will be defined for both axes
+   * @default 512
+   */
   nbPoints?: number | XYNumber;
+  /**
+   * full width at half maximum of signals for each dimension,
+   * if it is a number the value will be defined for both axes.
+   * @default 0.02
+   */
   width?: number | XYNumber;
 }
 

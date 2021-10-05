@@ -1,14 +1,48 @@
 import { DoubleArray } from 'cheminfo-types';
 import arraySequentialFill from 'ml-array-sequential-fill';
 import { SpectrumGenerator } from 'spectrum-generator';
+import type { Shape1DOption } from 'spectrum-generator';
 
 import { hackSignalsToXY } from '../signals/hackSignalsToXY';
 import type { MakeMandatory } from '../types/MakeMandatory';
 import type { NMRRange } from '../types/NMRRange';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
 
+
 type rangeWithSignal = MakeMandatory<NMRRange, 'signals'>;
 
+export interface RangeToXYOptions {
+  /**
+   * frequency observed
+   * @default 400
+   */
+  frequency: number;
+  /**
+   * line width to draw the signals
+   * @default 1
+   */
+  lineWidth: number;
+  /**
+   * lower limit in the spectrum.
+   * @default 0
+   */
+  from: number;
+  /**
+   * upper limit in the spectrum.
+   * @default 10
+   */
+  to: number;
+  /**
+   * number of points of the spectrum.
+   * @default 16384
+   */
+  nbPoints: number;
+  /**
+   * options of signals.
+   * @default { kind: 'gaussian' }
+   */
+  shape: Shape1DOption;
+}
 function checkForSignals(
   ranges: NMRRange[],
 ): asserts ranges is rangeWithSignal[] {

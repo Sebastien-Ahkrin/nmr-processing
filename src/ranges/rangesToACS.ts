@@ -25,19 +25,26 @@ const globalOptions = {
 };
 
 export interface RangesToACSOptions {
+  /**
+   * nucleus
+   * @default '1H'
+   */
   nucleus?: string;
   ascending?: boolean;
   format?: string;
   /**
    * default value depends of nucleus
+   * @default 1|2
    */
   nbDecimalDelta?: number;
   /**
-   * default value depends of nucleus
+   * Number of decimals to round the scalar coupling value
+   * @default 1
    */
   nbDecimalJ?: number;
   /**
    * default value depends of nucleus
+   * @default 400|100
    */
   observedFrequency?: number;
   /**
