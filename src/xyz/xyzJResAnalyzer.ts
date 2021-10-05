@@ -9,7 +9,7 @@ import type { NMRSignal2D } from '../types/NMRSignal2D';
 interface CompilePatternOptions {
   observedFrequencies?: number[] | Float64Array;
   tolerances?: number[] | Float64Array;
-  nuclei?: string[];
+  nucleus?: string[];
   jAnalyzer?: { jAxisKey: JAxisKeys };
 }
 
@@ -20,7 +20,7 @@ interface XYZJResAnalyzerOptions extends CompilePatternOptions {
 
 type CompilePatternOptionsMandatory = MakeMandatory<
   CompilePatternOptions,
-  'observedFrequencies' | 'tolerances' | 'nuclei' | 'jAnalyzer'
+  'observedFrequencies' | 'tolerances' | 'nucleus' | 'jAnalyzer'
 >;
 
 export function xyzJResAnalyzer(
@@ -31,7 +31,7 @@ export function xyzJResAnalyzer(
     reference = 0,
     referenceMaxShiftError = 0.08,
     tolerances = [10, 100],
-    nuclei = ['1H', '1H'],
+    nucleus = ['1H', '1H'],
     observedFrequencies = [400, 400],
     jAnalyzer = {
       jAxisKey: { jAxis: 'y', intensity: 'z' },
@@ -40,7 +40,7 @@ export function xyzJResAnalyzer(
   let temporalSignals = compilePattern(signals, {
     observedFrequencies,
     tolerances,
-    nuclei,
+    nucleus,
     jAnalyzer,
   });
   //check if the signal are symmetric around the reference
@@ -60,14 +60,14 @@ function compilePattern(
   let {
     observedFrequencies,
     tolerances,
-    nuclei,
+    nucleus,
     jAnalyzer: jAnalyzerOptions,
   } = options;
 
   let signalOptions = {
     observedFrequencies,
     tolerances,
-    nuclei,
+    nucleus,
     dx: signals[0].x.resolution,
     dy: signals[0].y.resolution,
   };
@@ -142,11 +142,11 @@ type Signal2DHack = Omit<NMRSignal2D, 'peaks'> & {
 };
 
 function createSignals2D(peaksInput: MPFPeak[], options: any) {
-  let { observedFrequencies, tolerances, nuclei, dx, dy } = options;
+  let { observedFrequencies, tolerances, nucleus, dx, dy } = options;
 
   const peaks: Peak2DHack[] = JSON.parse(JSON.stringify(peaksInput));
 
-  let [nucleusX, nucleusY] = nuclei;
+  let [nucleusX, nucleusY] = nucleus;
   let [toleranceX, toleranceY] = tolerances;
   let [observeFrequencyX, observeFrequencyY] = observedFrequencies;
 

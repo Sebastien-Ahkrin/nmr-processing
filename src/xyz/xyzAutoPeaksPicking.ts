@@ -47,10 +47,10 @@ export interface XYZAutoPeaksPickingOptions {
    */
   thresholdFactor?: number;
   /**
-   * specify the nuclei of each dimension
+   * specify the nucleus of each dimension
    * @default ['1H','1H']
    */
-  nuclei?: string[];
+  nucleus?: string[];
   /**
    * specify the frequency for each dimension.
    */
@@ -94,7 +94,7 @@ export function xyzAutoPeaksPicking(
     sizeToPad = 14,
     realTopDetection = true,
     thresholdFactor = 0.5,
-    nuclei = ['1H', '1H'],
+    nucleus = ['1H', '1H'],
     observedFrequencies,
     enhanceSymmetry = false,
     clean = true,
@@ -169,7 +169,7 @@ export function xyzAutoPeaksPicking(
     absoluteData,
     originalData,
     tolerances,
-    nuclei,
+    nucleus,
     observedFrequencies,
     realTopDetection,
   });
@@ -194,7 +194,7 @@ export interface CreateSignals2DOptions {
   originalData: number[] | Float64Array;
   observedFrequencies: number[] | Float64Array;
   tolerances: number[];
-  nuclei: string[];
+  nucleus: string[];
   realTopDetection: boolean;
   minY: number;
   maxY: number;
@@ -209,7 +209,7 @@ const createSignals2D = (peaks: MPFPeak[], options: CreateSignals2DOptions) => {
     originalData,
     observedFrequencies,
     tolerances,
-    nuclei,
+    nucleus,
     realTopDetection,
     minY,
     maxY,
@@ -217,7 +217,7 @@ const createSignals2D = (peaks: MPFPeak[], options: CreateSignals2DOptions) => {
     maxX,
   } = options;
 
-  let [nucleusX, nucleusY] = nuclei;
+  let [nucleusX, nucleusY] = nucleus;
   let [toleranceX, toleranceY] = tolerances;
   let [observeFrequencyX, observeFrequencyY] = observedFrequencies;
 

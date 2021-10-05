@@ -42,4 +42,4 @@ test('getDatabase', async () => {
       },
     ]
   `);
-}, 30000);
+});
