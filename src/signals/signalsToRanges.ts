@@ -1,6 +1,7 @@
 import { MakeMandatory } from '../types/MakeMandatory';
 import type { NMRRange } from '../types/NMRRange';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
+import { rangeFromSignal } from '../utilities/rangeFromSignal';
 
 interface SignalsToRangesOptions {
   /**
@@ -24,7 +25,9 @@ interface WrappedSignal {
   original: Signals1DWithNbAtoms;
 }
 
-function checkNbAtoms(signals: NMRSignal1D[]): asserts signals is Signals1DWithNbAtoms[] {
+function checkNbAtoms(
+  signals: NMRSignal1D[],
+): asserts signals is Signals1DWithNbAtoms[] {
   for (let signal of signals) {
     if (!signal.nbAtoms) throw new Error('nbAtoms is mandatory');
   }
@@ -43,15 +46,9 @@ export function signalsToRanges(
   })) as WrappedSignal[];
 
   wrapped.forEach((signal) => {
-    let halfWidth =
-      (signal.original.js || []).reduce(
-        (total, j) => (total += j.coupling / frequency),
-        0,
-      ) /
-        2 +
-      tolerance;
-    signal.from = signal.original.delta - halfWidth;
-    signal.to = signal.original.delta + halfWidth;
+    const fromTo = rangeFromSignal(signal.original, { frequency, tolerance });
+    signal.from = fromTo.from;
+    signal.to = fromTo.to;
   });
 
   wrapped = wrapped.sort((signal1, signal2) => signal1.from - signal2.from);
@@ -59,7 +56,6 @@ export function signalsToRanges(
   let ranges = [];
   let range = {} as RangeFullfiled;
   for (let signal of wrapped) {
-
     if (range.from === undefined || signal.from > range.to) {
       range = {
         from: signal.from,

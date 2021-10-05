@@ -3,15 +3,14 @@ import type { NMRSignal1D } from '../types/NMRSignal1D';
 
 export function rangeFromSignal(signal: NMRSignal1D, options: any = {}) {
   const { nucleus = '1h', frequency = 400 } = options;
-
+  const { tolerance = getTolerance(nucleus) / frequency } = options;
   let halfWidth =
-    ((signal.js || []).reduce((total, j) => {
+    (signal.js || []).reduce((total, j) => {
       const { coupling, multiplicity = 'd' } = j;
-      return total + couplingValues[multiplicity] * coupling;
+      return total + (couplingValues[multiplicity] * coupling) / frequency;
     }, 0) /
       2 +
-      getTolerance(nucleus)) /
-    frequency;
+    tolerance;
   return {
     from: signal.delta - halfWidth,
     to: signal.delta + halfWidth,
