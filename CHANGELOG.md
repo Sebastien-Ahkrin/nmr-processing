@@ -1,5 +1,28 @@
 # Changelog
 
+## [3.2.0](https://www.github.com/cheminfo/nmr-processing/compare/v3.1.0...v3.2.0) (2021-10-05)
+
+
+### Features
+
+* add carbonImpurities and protonImpurities ([e8abe81](https://www.github.com/cheminfo/nmr-processing/commit/e8abe81c1f4bdc575d8baf436f32229c1b359f4e))
+* add getDatabase ([d87c1c8](https://www.github.com/cheminfo/nmr-processing/commit/d87c1c8f3de824bdd417560d33ff49c6c190bb3f))
+* add nucleus in Database ([724071e](https://www.github.com/cheminfo/nmr-processing/commit/724071ec7a9ee1a24717b5031e9e3f110efdead6))
+
+
+### Bug Fixes
+
+* add options to resurrectRange ([291ce40](https://www.github.com/cheminfo/nmr-processing/commit/291ce401d825d96303cb2484a0219fd44e4323a5))
+* ensure clonnig of input in private function ([c93010d](https://www.github.com/cheminfo/nmr-processing/commit/c93010da785f52b6362d7345c634ccf73e320717))
+* eslint ([d6c70e4](https://www.github.com/cheminfo/nmr-processing/commit/d6c70e44772c712bf229e00b56af44c683608d70))
+* improve resurrectRange ([27da93d](https://www.github.com/cheminfo/nmr-processing/commit/27da93dc9b4026673fc3969ce730a91959580bdd))
+* **rangesToXY:** check if norma is not infinity ([aefa850](https://www.github.com/cheminfo/nmr-processing/commit/aefa8504d1b70942c9e948f307d73e711ec60e90))
+* refactor rangesToXY ([b04ab37](https://www.github.com/cheminfo/nmr-processing/commit/b04ab373c635811af6fca945fb9056be0aeac398))
+* remove -1000 ([1ca4b91](https://www.github.com/cheminfo/nmr-processing/commit/1ca4b91b0461b0cec616d57a0efff9e903906f20))
+* rename nucleus to nuclei when it is array ([e21eb37](https://www.github.com/cheminfo/nmr-processing/commit/e21eb37d8e40c6044ce08addc0e17b29e89c9209))
+* splitPatterns always returns an array ([1b4dbc9](https://www.github.com/cheminfo/nmr-processing/commit/1b4dbc9c8750937b10fae613c4e110b041daf11e))
+* splitPatterns returns empty array if empty string ([39ff986](https://www.github.com/cheminfo/nmr-processing/commit/39ff98651c3fbf9004a3c99b1c10139ce2873929))
+
 ## [3.1.0](https://www.github.com/cheminfo/nmr-processing/compare/v3.0.5...v3.1.0) (2021-10-01)
 
 
