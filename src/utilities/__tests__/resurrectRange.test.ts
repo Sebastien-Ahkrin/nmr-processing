@@ -5,7 +5,7 @@ describe('resurrectRange', () => {
     const range = resurrectRange('1 (t, 3H, J=7.0Hz)');
     expect(range).toMatchInlineSnapshot(`
       Object {
-        "from": 0.94125,
+        "from": 0.97875,
         "integration": 3,
         "signals": Array [
           Object {
@@ -19,7 +19,7 @@ describe('resurrectRange', () => {
             "multiplicity": "t",
           },
         ],
-        "to": 1.05875,
+        "to": 1.02125,
       }
     `);
   });
@@ -27,7 +27,7 @@ describe('resurrectRange', () => {
     const range = resurrectRange('1.5 (hept,  2H, J=7.0Hz)');
     expect(range).toMatchInlineSnapshot(`
       Object {
-        "from": 1.44125,
+        "from": 1.44375,
         "integration": 2,
         "signals": Array [
           Object {
@@ -41,7 +41,7 @@ describe('resurrectRange', () => {
             "multiplicity": "hept",
           },
         ],
-        "to": 1.55875,
+        "to": 1.55625,
       }
     `);
   });

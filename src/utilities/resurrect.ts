@@ -37,7 +37,8 @@ function parseParts(data: DataResurrect) {
     if (part.toLowerCase().includes('nmr')) {
       processExperiment(data, part);
     } else {
-      const range = resurrectRange(part);
+      const { frequency, nucleus } = data.experiment;
+      const range = resurrectRange(part, { frequency, nucleus });
       if (range) data.ranges.push(range);
     }
   }
@@ -63,7 +64,8 @@ function processExperiment(data: DataResurrect, part: string) {
       /[0-9]{2}/.exec(part),
     );
     if (frequencyParts.length) {
-      const frequency = frequencyParts[0].replace(/[^[0-9.]]/g, '');
+      const frequency = frequencyParts[0].replace(/[^0-9]/g, '');
+
       if (frequency.length > 1) data.experiment.frequency = Number(frequency);
     }
     const solventParts = insideParts.filter(

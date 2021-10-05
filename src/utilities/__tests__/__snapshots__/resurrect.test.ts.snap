@@ -3,7 +3,7 @@
 exports[`resurrect J. Org. Chem. 1`] = `
 Array [
   Object {
-    "from": 10.53,
+    "from": 10.57625,
     "integration": 1,
     "signals": Array [
       Object {
@@ -12,10 +12,10 @@ Array [
         "multiplicity": "b",
       },
     ],
-    "to": 10.63,
+    "to": 10.58375,
   },
   Object {
-    "from": 7.340000000000001,
+    "from": 7.38625,
     "integration": 1,
     "signals": Array [
       Object {
@@ -29,10 +29,10 @@ Array [
         "multiplicity": "d",
       },
     ],
-    "to": 7.46,
+    "to": 7.41375,
   },
   Object {
-    "from": 6.1305000000000005,
+    "from": 6.17675,
     "integration": 1,
     "signals": Array [
       Object {
@@ -46,10 +46,10 @@ Array [
         "multiplicity": "d",
       },
     ],
-    "to": 6.2495,
+    "to": 6.203250000000001,
   },
   Object {
-    "from": 4.83,
+    "from": 4.87625,
     "integration": 1,
     "signals": Array [
       Object {
@@ -58,10 +58,10 @@ Array [
         "multiplicity": "s",
       },
     ],
-    "to": 4.93,
+    "to": 4.88375,
   },
   Object {
-    "from": 4.41,
+    "from": 4.45625,
     "integration": 1,
     "signals": Array [
       Object {
@@ -70,10 +70,10 @@ Array [
         "multiplicity": "m",
       },
     ],
-    "to": 4.51,
+    "to": 4.46375,
   },
   Object {
-    "from": 4.2,
+    "from": 4.24625,
     "integration": 1,
     "signals": Array [
       Object {
@@ -82,10 +82,10 @@ Array [
         "multiplicity": "m",
       },
     ],
-    "to": 4.3,
+    "to": 4.25375,
   },
   Object {
-    "from": 4.03,
+    "from": 4.07625,
     "integration": 1,
     "signals": Array [
       Object {
@@ -94,7 +94,7 @@ Array [
         "multiplicity": "m",
       },
     ],
-    "to": 4.13,
+    "to": 4.08375,
   },
   Object {
     "from": 3.9,
@@ -109,7 +109,7 @@ Array [
     "to": 3.95,
   },
   Object {
-    "from": 2.12,
+    "from": 2.16625,
     "integration": 3,
     "signals": Array [
       Object {
@@ -118,10 +118,10 @@ Array [
         "multiplicity": "s",
       },
     ],
-    "to": 2.2199999999999998,
+    "to": 2.17375,
   },
   Object {
-    "from": 0.97,
+    "from": 1.01625,
     "integration": 9,
     "signals": Array [
       Object {
@@ -130,10 +130,10 @@ Array [
         "multiplicity": "s",
       },
     ],
-    "to": 1.07,
+    "to": 1.02375,
   },
   Object {
-    "from": 0.96,
+    "from": 1.00625,
     "integration": 9,
     "signals": Array [
       Object {
@@ -142,10 +142,10 @@ Array [
         "multiplicity": "s",
       },
     ],
-    "to": 1.06,
+    "to": 1.01375,
   },
   Object {
-    "from": 0.84,
+    "from": 0.88625,
     "integration": 9,
     "signals": Array [
       Object {
@@ -154,10 +154,10 @@ Array [
         "multiplicity": "s",
       },
     ],
-    "to": 0.9400000000000001,
+    "to": 0.89375,
   },
   Object {
-    "from": 0.06999999999999999,
+    "from": 0.11624999999999999,
     "integration": 3,
     "signals": Array [
       Object {
@@ -166,10 +166,10 @@ Array [
         "multiplicity": "s",
       },
     ],
-    "to": 0.16999999999999998,
+    "to": 0.12375,
   },
   Object {
-    "from": 0.06,
+    "from": 0.10625,
     "integration": 3,
     "signals": Array [
       Object {
@@ -178,7 +178,7 @@ Array [
         "multiplicity": "s",
       },
     ],
-    "to": 0.16,
+    "to": 0.11375,
   },
 ]
 `;
@@ -186,7 +186,7 @@ Array [
 exports[`resurrect Tetrahedron 1`] = `
 Array [
   Object {
-    "from": 5.489875,
+    "from": 5.536125,
     "integration": 1,
     "signals": Array [
       Object {
@@ -200,7 +200,7 @@ Array [
         "multiplicity": "d",
       },
     ],
-    "to": 5.610125,
+    "to": 5.5638749999999995,
   },
   Object {
     "from": NaN,
@@ -214,7 +214,7 @@ Array [
     "to": NaN,
   },
   Object {
-    "from": 4.24,
+    "from": 4.28625,
     "integration": 1,
     "signals": Array [
       Object {
@@ -223,10 +223,10 @@ Array [
         "multiplicity": "m",
       },
     ],
-    "to": 4.34,
+    "to": 4.29375,
   },
   Object {
-    "from": 3.48,
+    "from": 3.5262499999999997,
     "integration": 2,
     "signals": Array [
       Object {
@@ -235,10 +235,10 @@ Array [
         "multiplicity": "m",
       },
     ],
-    "to": 3.5799999999999996,
+    "to": 3.53375,
   },
   Object {
-    "from": 3.37,
+    "from": 3.41625,
     "integration": 1,
     "signals": Array [
       Object {
@@ -247,10 +247,10 @@ Array [
         "multiplicity": "m",
       },
     ],
-    "to": 3.4699999999999998,
+    "to": 3.42375,
   },
   Object {
-    "from": 3.08,
+    "from": 3.1262499999999998,
     "integration": 1,
     "signals": Array [
       Object {
@@ -268,10 +268,10 @@ Array [
         "multiplicity": "dd",
       },
     ],
-    "to": 3.2199999999999998,
+    "to": 3.17375,
   },
   Object {
-    "from": 2.930625,
+    "from": 2.963125,
     "integration": 1,
     "signals": Array [
       Object {
@@ -289,10 +289,10 @@ Array [
         "multiplicity": "td",
       },
     ],
-    "to": 3.069375,
+    "to": 3.036875,
   },
   Object {
-    "from": 1.64,
+    "from": 1.68625,
     "integration": 1,
     "signals": Array [
       Object {
@@ -301,7 +301,7 @@ Array [
         "multiplicity": "s",
       },
     ],
-    "to": 1.74,
+    "to": 1.6937499999999999,
   },
 ]
 `;

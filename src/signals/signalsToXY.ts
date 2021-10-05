@@ -1,10 +1,10 @@
 import rescale from 'ml-array-rescale';
+import arraySequentialFill from 'ml-array-sequential-fill';
 import type { Shape1DOption } from 'spectrum-generator';
 
 import { MakeMandatory } from '../types/MakeMandatory';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
 import { Jcoupling } from '../types/jcoupling';
-import { fromToArray } from '../utilities/fromToArray';
 
 import { signalsToSpinSystem } from './simulation/signalsToSpinSystem';
 import simulate1D from './simulation/simulate1D';
@@ -91,7 +91,7 @@ export function signalsToXY(
 
   if (signals.length === 0) {
     return {
-      x: fromToArray(from, to, nbPoints),
+      x: arraySequentialFill({ from, to, size: nbPoints }),
       y: Array.from(new Float64Array(nbPoints)),
     };
   }

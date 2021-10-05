@@ -7,7 +7,7 @@ test('getDatabase', async () => {
   expect(database[0].ranges).toMatchInlineSnapshot(`
     Array [
       Object {
-        "from": 1.1412499999999999,
+        "from": 1.17875,
         "integration": 6,
         "signals": Array [
           Object {
@@ -21,10 +21,10 @@ test('getDatabase', async () => {
             "multiplicity": "t",
           },
         ],
-        "to": 1.25875,
+        "to": 1.22125,
       },
       Object {
-        "from": 1.44125,
+        "from": 1.44375,
         "integration": 2,
         "signals": Array [
           Object {
@@ -38,7 +38,7 @@ test('getDatabase', async () => {
             "multiplicity": "hept",
           },
         ],
-        "to": 1.55875,
+        "to": 1.55625,
       },
     ]
   `);

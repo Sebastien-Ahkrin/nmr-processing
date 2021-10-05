@@ -1,11 +1,11 @@
 import { DoubleArray } from 'cheminfo-types';
+import arraySequentialFill from 'ml-array-sequential-fill';
 import { SpectrumGenerator } from 'spectrum-generator';
 
 import { hackSignalsToXY } from '../signals/hackSignalsToXY';
-import { MakeMandatory } from '../types/MakeMandatory';
+import type { MakeMandatory } from '../types/MakeMandatory';
 import type { NMRRange } from '../types/NMRRange';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
-import { fromToArray } from '../utilities/fromToArray';
 
 type rangeWithSignal = MakeMandatory<NMRRange, 'signals'>;
 
@@ -62,7 +62,7 @@ export function rangesToXY(ranges: NMRRange[], options: any = {}) {
   }
 
   return {
-    x: fromToArray(from, to, nbPoints),
+    x: arraySequentialFill({ from, to, size: nbPoints }),
     y: spectrum,
   };
 }
