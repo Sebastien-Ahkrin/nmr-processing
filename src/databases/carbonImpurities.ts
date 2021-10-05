@@ -1,4 +1,4 @@
-import { DatabaseNMREntry } from './DatabaseNMREntry';
+import type { DatabaseNMREntry } from './DatabaseNMREntry';
 
 export const carbonImpurities: DatabaseNMREntry[] = [
   {
