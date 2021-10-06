@@ -3,6 +3,7 @@ import { DatabaseNMREntry } from './DatabaseNMREntry';
 export const protonImpurities: DatabaseNMREntry[] = [
   {
     names: ['water'],
+    smiles: 'O',
     ranges: [
       {
         signals: [
@@ -22,6 +23,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetic acid'],
+    smiles: 'CC(=O)O',
     ranges: [
       {
         signals: [
@@ -41,6 +43,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetone'],
+    smiles: 'CC(=O)C',
     ranges: [
       {
         signals: [
@@ -60,6 +63,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetonitrile'],
+    smiles: 'CC#N',
     ranges: [
       {
         signals: [
@@ -79,6 +83,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['benzene'],
+    smiles: 'c1ccccc1',
     ranges: [
       {
         signals: [
@@ -98,6 +103,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tert -butyl alcohol'],
+    smiles: 'CC(C)(C)O',
     ranges: [
       {
         signals: [
@@ -129,6 +135,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['chloroform'],
+    smiles: '(Cl)C(Cl)Cl',
     ranges: [
       {
         signals: [
@@ -148,6 +155,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['18-crown-6'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -167,6 +175,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['cyclohexane'],
+    smiles: 'C1CCCCC1',
     ranges: [
       {
         signals: [
@@ -186,6 +195,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,2-dichloroethane'],
+    smiles: 'ClCCCl',
     ranges: [
       {
         signals: [
@@ -205,6 +215,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dichloromethane'],
+    smiles: 'ClCCl',
     ranges: [
       {
         signals: [
@@ -224,6 +235,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diethyl ether'],
+    smiles: 'CCOCC',
     ranges: [
       {
         signals: [
@@ -263,6 +275,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diglyme'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -304,6 +317,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dimethylformamide'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -347,6 +361,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,4-dioxane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -366,6 +381,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['DME'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -397,6 +413,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -416,6 +433,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -467,6 +485,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethyl acetate'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -518,6 +537,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene'],
+    smiles: 'C=C',
     ranges: [
       {
         signals: [
@@ -537,6 +557,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene glycol'],
+    smiles: 'OCCO',
     ranges: [
       {
         signals: [
@@ -556,11 +577,13 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['H greaseᶠ'],
+    smiles: '',
     ranges: [
       {
         signals: [],
         from: 0.85,
         to: 0.91,
+        multiplicity: 'm',
       },
       {
         signals: [
@@ -580,6 +603,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hexamethylbenzene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -599,6 +623,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-hexane'],
+    smiles: 'CCCCCC',
     ranges: [
       {
         signals: [
@@ -633,6 +658,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMDSO'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -652,6 +678,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMPA'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -675,6 +702,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hydrogen'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -694,6 +722,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['imidazole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -725,6 +754,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -744,6 +774,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -775,6 +806,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['nitromethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -794,6 +826,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-pentane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -828,6 +861,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -867,6 +901,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['2-propanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -906,6 +941,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propylene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -976,6 +1012,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyridine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1016,6 +1053,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyrrole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1055,7 +1093,8 @@ export const protonImpurities: DatabaseNMREntry[] = [
     solvent: 'THF-d₈',
   },
   {
-    names: ['pyrrolidineʰ'],
+    names: ['pyrrolidine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1085,6 +1124,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['silicone grease'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1104,6 +1144,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tetrahydrofuran'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1133,6 +1174,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['toluene'],
+    smiles: 'Cc1ccccc1',
     ranges: [
       {
         signals: [
@@ -1174,6 +1216,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['triethylamine'],
+    smiles: 'CCN(CC)CC',
     ranges: [
       {
         signals: [
@@ -1213,6 +1256,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['water'],
+    smiles: 'O',
     ranges: [
       {
         signals: [
@@ -1232,6 +1276,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetic acid'],
+    smiles: 'CC(=O)O',
     ranges: [
       {
         signals: [
@@ -1251,6 +1296,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetone'],
+    smiles: 'CC(=O)C',
     ranges: [
       {
         signals: [
@@ -1270,6 +1316,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetonitrile'],
+    smiles: 'CC#N',
     ranges: [
       {
         signals: [
@@ -1289,6 +1336,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['benzene'],
+    smiles: 'c1ccccc1',
     ranges: [
       {
         signals: [
@@ -1308,6 +1356,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tert -butyl alcohol'],
+    smiles: 'CC(C)(C)O',
     ranges: [
       {
         signals: [
@@ -1327,6 +1376,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['chloroform'],
+    smiles: '(Cl)C(Cl)Cl',
     ranges: [
       {
         signals: [
@@ -1346,6 +1396,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['18-crown-6'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1365,6 +1416,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['cyclohexane'],
+    smiles: 'C1CCCCC1',
     ranges: [
       {
         signals: [
@@ -1384,6 +1436,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,2-dichloroethane'],
+    smiles: 'ClCCCl',
     ranges: [
       {
         signals: [
@@ -1403,6 +1456,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dichloromethane'],
+    smiles: 'ClCCl',
     ranges: [
       {
         signals: [
@@ -1422,6 +1476,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diethyl ether'],
+    smiles: 'CCOCC',
     ranges: [
       {
         signals: [
@@ -1461,6 +1516,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diglyme'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1502,6 +1558,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dimethylformamide'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1545,6 +1602,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,4-dioxane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1564,6 +1622,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['DME'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1595,6 +1654,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1614,6 +1674,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1665,6 +1726,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethyl acetate'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1716,6 +1778,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene'],
+    smiles: 'C=C',
     ranges: [
       {
         signals: [
@@ -1735,6 +1798,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene glycol'],
+    smiles: 'OCCO',
     ranges: [
       {
         signals: [
@@ -1754,11 +1818,13 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['H greaseᶠ'],
+    smiles: '',
     ranges: [
       {
         signals: [],
         from: 0.84,
         to: 0.9,
+        multiplicity: 'm',
       },
       {
         signals: [
@@ -1778,6 +1844,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hexamethylbenzene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1797,6 +1864,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-hexane'],
+    smiles: 'CCCCCC',
     ranges: [
       {
         signals: [
@@ -1831,6 +1899,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMDSO'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1850,6 +1919,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMPA'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1873,6 +1943,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hydrogen'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1892,6 +1963,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['imidazole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1923,6 +1995,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1942,6 +2015,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1973,6 +2047,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['nitromethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -1992,6 +2067,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-pentane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2026,6 +2102,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2065,6 +2142,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['2-propanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2104,6 +2182,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propylene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2174,6 +2253,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyridine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2214,6 +2294,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyrrole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2253,7 +2334,8 @@ export const protonImpurities: DatabaseNMREntry[] = [
     solvent: 'CD₂Cl₂',
   },
   {
-    names: ['pyrrolidineʰ'],
+    names: ['pyrrolidine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2283,6 +2365,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['silicone grease'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2302,6 +2385,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tetrahydrofuran'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2331,6 +2415,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['toluene'],
+    smiles: 'Cc1ccccc1',
     ranges: [
       {
         signals: [
@@ -2372,6 +2457,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['triethylamine'],
+    smiles: 'CCN(CC)CC',
     ranges: [
       {
         signals: [
@@ -2411,6 +2497,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['water'],
+    smiles: 'O',
     ranges: [
       {
         signals: [
@@ -2430,6 +2517,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetic acid'],
+    smiles: 'CC(=O)O',
     ranges: [
       {
         signals: [
@@ -2449,6 +2537,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetone'],
+    smiles: 'CC(=O)C',
     ranges: [
       {
         signals: [
@@ -2468,6 +2557,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetonitrile'],
+    smiles: 'CC#N',
     ranges: [
       {
         signals: [
@@ -2487,6 +2577,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['benzene'],
+    smiles: 'c1ccccc1',
     ranges: [
       {
         signals: [
@@ -2506,6 +2597,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tert -butyl alcohol'],
+    smiles: 'CC(C)(C)O',
     ranges: [
       {
         signals: [
@@ -2525,6 +2617,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['chloroform'],
+    smiles: '(Cl)C(Cl)Cl',
     ranges: [
       {
         signals: [
@@ -2544,6 +2637,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['18-crown-6'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2563,6 +2657,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['cyclohexane'],
+    smiles: 'C1CCCCC1',
     ranges: [
       {
         signals: [
@@ -2582,6 +2677,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,2-dichloroethane'],
+    smiles: 'ClCCCl',
     ranges: [
       {
         signals: [
@@ -2601,6 +2697,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dichloromethane'],
+    smiles: 'ClCCl',
     ranges: [
       {
         signals: [
@@ -2620,6 +2717,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diethyl ether'],
+    smiles: 'CCOCC',
     ranges: [
       {
         signals: [
@@ -2659,6 +2757,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diglyme'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2700,6 +2799,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dimethylformamide'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2743,6 +2843,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,4-dioxane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2762,6 +2863,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['DME'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2793,6 +2895,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2812,6 +2915,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2863,6 +2967,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethyl acetate'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2914,6 +3019,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene'],
+    smiles: 'C=C',
     ranges: [
       {
         signals: [
@@ -2933,6 +3039,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene glycol'],
+    smiles: 'OCCO',
     ranges: [
       {
         signals: [
@@ -2952,11 +3059,13 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['H greaseᶠ'],
+    smiles: '',
     ranges: [
       {
         signals: [],
         from: 0.84,
         to: 0.87,
+        multiplicity: 'm',
       },
       {
         signals: [
@@ -2976,6 +3085,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hexamethylbenzene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -2995,6 +3105,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-hexane'],
+    smiles: 'CCCCCC',
     ranges: [
       {
         signals: [
@@ -3029,6 +3140,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMDSO'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3048,6 +3160,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMPA'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3071,6 +3184,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hydrogen'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3090,6 +3204,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['imidazole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3121,6 +3236,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3140,6 +3256,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3171,6 +3288,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['nitromethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3190,6 +3308,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-pentane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3224,6 +3343,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3263,6 +3383,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['2-propanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3302,6 +3423,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propylene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3372,6 +3494,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyridine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3412,6 +3535,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyrrole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3451,7 +3575,8 @@ export const protonImpurities: DatabaseNMREntry[] = [
     solvent: 'CDCl₃',
   },
   {
-    names: ['pyrrolidineʰ'],
+    names: ['pyrrolidine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3481,6 +3606,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['silicone grease'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3500,6 +3626,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tetrahydrofuran'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3529,6 +3656,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['toluene'],
+    smiles: 'Cc1ccccc1',
     ranges: [
       {
         signals: [
@@ -3570,6 +3698,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['triethylamine'],
+    smiles: 'CCN(CC)CC',
     ranges: [
       {
         signals: [
@@ -3609,6 +3738,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['water'],
+    smiles: 'O',
     ranges: [
       {
         signals: [
@@ -3628,6 +3758,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetic acid'],
+    smiles: 'CC(=O)O',
     ranges: [
       {
         signals: [
@@ -3647,6 +3778,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetone'],
+    smiles: 'CC(=O)C',
     ranges: [
       {
         signals: [
@@ -3666,6 +3798,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetonitrile'],
+    smiles: 'CC#N',
     ranges: [
       {
         signals: [
@@ -3685,6 +3818,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['benzene'],
+    smiles: 'c1ccccc1',
     ranges: [
       {
         signals: [
@@ -3704,6 +3838,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tert -butyl alcohol'],
+    smiles: 'CC(C)(C)O',
     ranges: [
       {
         signals: [
@@ -3735,6 +3870,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['chloroform'],
+    smiles: '(Cl)C(Cl)Cl',
     ranges: [
       {
         signals: [
@@ -3754,6 +3890,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['18-crown-6'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3773,6 +3910,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['cyclohexane'],
+    smiles: 'C1CCCCC1',
     ranges: [
       {
         signals: [
@@ -3792,6 +3930,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,2-dichloroethane'],
+    smiles: 'ClCCCl',
     ranges: [
       {
         signals: [
@@ -3811,6 +3950,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dichloromethane'],
+    smiles: 'ClCCl',
     ranges: [
       {
         signals: [
@@ -3830,6 +3970,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diethyl ether'],
+    smiles: 'CCOCC',
     ranges: [
       {
         signals: [
@@ -3869,6 +4010,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diglyme'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3910,6 +4052,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dimethylformamide'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3953,6 +4096,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,4-dioxane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -3972,6 +4116,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['DME'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4003,6 +4148,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4022,6 +4168,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4073,6 +4220,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethyl acetate'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4124,6 +4272,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene'],
+    smiles: 'C=C',
     ranges: [
       {
         signals: [
@@ -4143,6 +4292,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene glycol'],
+    smiles: 'OCCO',
     ranges: [
       {
         signals: [
@@ -4162,11 +4312,13 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['H greaseᶠ'],
+    smiles: '',
     ranges: [
       {
         signals: [],
         from: 0.89,
         to: 0.96,
+        multiplicity: 'm',
       },
       {
         signals: [
@@ -4186,6 +4338,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hexamethylbenzene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4205,6 +4358,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-hexane'],
+    smiles: 'CCCCCC',
     ranges: [
       {
         signals: [
@@ -4239,6 +4393,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMDSO'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4258,6 +4413,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMPA'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4281,6 +4437,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hydrogen'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4300,6 +4457,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['imidazole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4331,6 +4489,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4350,6 +4509,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4369,6 +4529,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['nitromethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4388,6 +4549,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-pentane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4422,6 +4584,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4461,6 +4624,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['2-propanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4500,6 +4664,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propylene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4570,6 +4735,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyridine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4610,6 +4776,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyrrole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4649,7 +4816,8 @@ export const protonImpurities: DatabaseNMREntry[] = [
     solvent: 'toluene-d₈',
   },
   {
-    names: ['pyrrolidineʰ'],
+    names: ['pyrrolidine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4679,6 +4847,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['silicone grease'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4698,6 +4867,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tetrahydrofuran'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4727,6 +4897,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['toluene'],
+    smiles: 'Cc1ccccc1',
     ranges: [
       {
         signals: [
@@ -4744,6 +4915,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 6.96,
         to: 7.01,
+        multiplicity: 'm',
       },
       {
         signals: [
@@ -4762,6 +4934,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['triethylamine'],
+    smiles: 'CCN(CC)CC',
     ranges: [
       {
         signals: [
@@ -4801,6 +4974,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['water'],
+    smiles: 'O',
     ranges: [
       {
         signals: [
@@ -4820,6 +4994,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetic acid'],
+    smiles: 'CC(=O)O',
     ranges: [
       {
         signals: [
@@ -4839,6 +5014,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetone'],
+    smiles: 'CC(=O)C',
     ranges: [
       {
         signals: [
@@ -4858,6 +5034,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetonitrile'],
+    smiles: 'CC#N',
     ranges: [
       {
         signals: [
@@ -4877,6 +5054,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['benzene'],
+    smiles: 'c1ccccc1',
     ranges: [
       {
         signals: [
@@ -4896,6 +5074,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tert -butyl alcohol'],
+    smiles: 'CC(C)(C)O',
     ranges: [
       {
         signals: [
@@ -4927,6 +5106,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['chloroform'],
+    smiles: '(Cl)C(Cl)Cl',
     ranges: [
       {
         signals: [
@@ -4946,6 +5126,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['18-crown-6'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -4965,6 +5146,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['cyclohexane'],
+    smiles: 'C1CCCCC1',
     ranges: [
       {
         signals: [
@@ -4984,6 +5166,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,2-dichloroethane'],
+    smiles: 'ClCCCl',
     ranges: [
       {
         signals: [
@@ -5003,6 +5186,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dichloromethane'],
+    smiles: 'ClCCl',
     ranges: [
       {
         signals: [
@@ -5022,6 +5206,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diethyl ether'],
+    smiles: 'CCOCC',
     ranges: [
       {
         signals: [
@@ -5061,6 +5246,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diglyme'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5102,6 +5288,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dimethylformamide'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5145,6 +5332,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,4-dioxane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5164,6 +5352,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['DME'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5195,6 +5384,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5214,6 +5404,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5265,6 +5456,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethyl acetate'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5316,6 +5508,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene'],
+    smiles: 'C=C',
     ranges: [
       {
         signals: [
@@ -5335,6 +5528,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene glycol'],
+    smiles: 'OCCO',
     ranges: [
       {
         signals: [
@@ -5354,11 +5548,13 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['H greaseᶠ'],
+    smiles: '',
     ranges: [
       {
         signals: [],
         from: 0.9,
         to: 0.98,
+        multiplicity: 'm',
       },
       {
         signals: [
@@ -5378,6 +5574,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hexamethylbenzene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5397,6 +5594,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-hexane'],
+    smiles: 'CCCCCC',
     ranges: [
       {
         signals: [
@@ -5431,6 +5629,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMDSO'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5450,6 +5649,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMPA'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5473,6 +5673,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hydrogen'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5492,6 +5693,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['imidazole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5523,6 +5725,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5542,6 +5745,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5561,6 +5765,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['nitromethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5580,6 +5785,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-pentane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5614,6 +5820,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5653,6 +5860,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['2-propanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5692,6 +5900,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propylene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5762,6 +5971,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyridine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5802,6 +6012,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyrrole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5841,7 +6052,8 @@ export const protonImpurities: DatabaseNMREntry[] = [
     solvent: 'C₆D₆',
   },
   {
-    names: ['pyrrolidineʰ'],
+    names: ['pyrrolidine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5871,6 +6083,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['silicone grease'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5890,6 +6103,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tetrahydrofuran'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -5919,6 +6133,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['toluene'],
+    smiles: 'Cc1ccccc1',
     ranges: [
       {
         signals: [
@@ -5960,6 +6175,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['triethylamine'],
+    smiles: 'CCN(CC)CC',
     ranges: [
       {
         signals: [
@@ -5999,6 +6215,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['water'],
+    smiles: 'O',
     ranges: [
       {
         signals: [
@@ -6018,6 +6235,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetic acid'],
+    smiles: 'CC(=O)O',
     ranges: [
       {
         signals: [
@@ -6037,6 +6255,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetone'],
+    smiles: 'CC(=O)C',
     ranges: [
       {
         signals: [
@@ -6056,6 +6275,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetonitrile'],
+    smiles: 'CC#N',
     ranges: [
       {
         signals: [
@@ -6075,6 +6295,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['benzene'],
+    smiles: 'c1ccccc1',
     ranges: [
       {
         signals: [
@@ -6094,6 +6315,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tert -butyl alcohol'],
+    smiles: 'CC(C)(C)O',
     ranges: [
       {
         signals: [
@@ -6125,6 +6347,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['chloroform'],
+    smiles: '(Cl)C(Cl)Cl',
     ranges: [
       {
         signals: [
@@ -6144,6 +6367,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['18-crown-6'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6163,6 +6387,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['cyclohexane'],
+    smiles: 'C1CCCCC1',
     ranges: [
       {
         signals: [
@@ -6182,6 +6407,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,2-dichloroethane'],
+    smiles: 'ClCCCl',
     ranges: [
       {
         signals: [
@@ -6201,6 +6427,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dichloromethane'],
+    smiles: 'ClCCl',
     ranges: [
       {
         signals: [
@@ -6220,6 +6447,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diethyl ether'],
+    smiles: 'CCOCC',
     ranges: [
       {
         signals: [
@@ -6259,6 +6487,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diglyme'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6300,6 +6529,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dimethylformamide'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6343,6 +6573,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,4-dioxane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6362,6 +6593,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['DME'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6393,6 +6625,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6412,6 +6645,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6463,6 +6697,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethyl acetate'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6514,6 +6749,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene'],
+    smiles: 'C=C',
     ranges: [
       {
         signals: [
@@ -6533,6 +6769,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene glycol'],
+    smiles: 'OCCO',
     ranges: [
       {
         signals: [
@@ -6552,11 +6789,13 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['H greaseᶠ'],
+    smiles: '',
     ranges: [
       {
         signals: [],
         from: 0.86,
         to: 0.92,
+        multiplicity: 'm',
       },
       {
         signals: [
@@ -6576,6 +6815,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hexamethylbenzene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6595,6 +6835,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-hexane'],
+    smiles: 'CCCCCC',
     ranges: [
       {
         signals: [
@@ -6629,6 +6870,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMDSO'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6648,6 +6890,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMPA'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6671,6 +6914,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hydrogen'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6690,6 +6934,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['imidazole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6721,6 +6966,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6740,6 +6986,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6771,6 +7018,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['nitromethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6790,6 +7038,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-pentane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6824,6 +7073,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6863,6 +7113,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['2-propanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6902,6 +7153,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propylene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -6972,6 +7224,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyridine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7012,6 +7265,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyrrole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7051,7 +7305,8 @@ export const protonImpurities: DatabaseNMREntry[] = [
     solvent: 'C₆D₅Cl',
   },
   {
-    names: ['pyrrolidineʰ'],
+    names: ['pyrrolidine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7081,6 +7336,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['silicone grease'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7100,6 +7356,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tetrahydrofuran'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7129,6 +7386,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['toluene'],
+    smiles: 'Cc1ccccc1',
     ranges: [
       {
         signals: [
@@ -7146,11 +7404,13 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 7.01,
         to: 7.08,
+        multiplicity: 'm',
       },
       {
         signals: [],
         from: 7.1,
         to: 7.17,
+        multiplicity: 'm',
       },
     ],
     nucleus: '1H',
@@ -7158,6 +7418,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['triethylamine'],
+    smiles: 'CCN(CC)CC',
     ranges: [
       {
         signals: [
@@ -7195,9 +7456,29 @@ export const protonImpurities: DatabaseNMREntry[] = [
     nucleus: '1H',
     solvent: 'C₆D₅Cl',
   },
-
+  {
+    names: ['water'],
+    smiles: 'O',
+    ranges: [
+      {
+        signals: [
+          {
+            js: [],
+            delta: null,
+            multiplicity: 's',
+            assignment: 'OH',
+          },
+        ],
+        from: null,
+        to: null,
+      },
+    ],
+    nucleus: '1H',
+    solvent: '(CD₃)₂CO',
+  },
   {
     names: ['acetic acid'],
+    smiles: 'CC(=O)O',
     ranges: [
       {
         signals: [
@@ -7217,6 +7498,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetone'],
+    smiles: 'CC(=O)C',
     ranges: [
       {
         signals: [
@@ -7236,6 +7518,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetonitrile'],
+    smiles: 'CC#N',
     ranges: [
       {
         signals: [
@@ -7255,6 +7538,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['benzene'],
+    smiles: 'c1ccccc1',
     ranges: [
       {
         signals: [
@@ -7274,6 +7558,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tert -butyl alcohol'],
+    smiles: 'CC(C)(C)O',
     ranges: [
       {
         signals: [
@@ -7293,6 +7578,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['chloroform'],
+    smiles: '(Cl)C(Cl)Cl',
     ranges: [
       {
         signals: [
@@ -7312,6 +7598,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['18-crown-6'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7331,6 +7618,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['cyclohexane'],
+    smiles: 'C1CCCCC1',
     ranges: [
       {
         signals: [
@@ -7350,6 +7638,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,2-dichloroethane'],
+    smiles: 'ClCCCl',
     ranges: [
       {
         signals: [
@@ -7369,6 +7658,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dichloromethane'],
+    smiles: 'ClCCl',
     ranges: [
       {
         signals: [
@@ -7388,6 +7678,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diethyl ether'],
+    smiles: 'CCOCC',
     ranges: [
       {
         signals: [
@@ -7427,6 +7718,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diglyme'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7468,6 +7760,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dimethylformamide'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7511,6 +7804,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,4-dioxane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7530,6 +7824,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['DME'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7561,6 +7856,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7580,6 +7876,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7631,6 +7928,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethyl acetate'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7682,6 +7980,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene'],
+    smiles: 'C=C',
     ranges: [
       {
         signals: [
@@ -7701,6 +8000,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene glycol'],
+    smiles: 'OCCO',
     ranges: [
       {
         signals: [
@@ -7720,6 +8020,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['H greaseᶠ'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7750,6 +8051,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hexamethylbenzene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7769,6 +8071,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-hexane'],
+    smiles: 'CCCCCC',
     ranges: [
       {
         signals: [
@@ -7803,6 +8106,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMDSO'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7822,6 +8126,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMPA'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7845,6 +8150,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hydrogen'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7864,6 +8170,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['imidazole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7895,6 +8202,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7914,6 +8222,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7945,6 +8254,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['nitromethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7964,6 +8274,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-pentane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -7998,6 +8309,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8037,6 +8349,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['2-propanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8076,6 +8389,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propylene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8146,6 +8460,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyridine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8186,6 +8501,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyrrole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8225,13 +8541,15 @@ export const protonImpurities: DatabaseNMREntry[] = [
     solvent: '(CD₃)₂CO',
   },
   {
-    names: ['pyrrolidineʰ'],
+    names: ['pyrrolidine'],
+    smiles: '',
     ranges: [],
     nucleus: '1H',
     solvent: '(CD₃)₂CO',
   },
   {
     names: ['silicone grease'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8251,6 +8569,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tetrahydrofuran'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8280,6 +8599,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['toluene'],
+    smiles: 'Cc1ccccc1',
     ranges: [
       {
         signals: [
@@ -8297,11 +8617,13 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 7.1,
         to: 7.2,
+        multiplicity: 'm',
       },
       {
         signals: [],
         from: 7.1,
         to: 7.2,
+        multiplicity: 'm',
       },
     ],
     nucleus: '1H',
@@ -8309,6 +8631,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['triethylamine'],
+    smiles: 'CCN(CC)CC',
     ranges: [
       {
         signals: [
@@ -8346,9 +8669,29 @@ export const protonImpurities: DatabaseNMREntry[] = [
     nucleus: '1H',
     solvent: '(CD₃)₂CO',
   },
-
+  {
+    names: ['water'],
+    smiles: 'O',
+    ranges: [
+      {
+        signals: [
+          {
+            js: [],
+            delta: null,
+            multiplicity: 's',
+            assignment: 'OH',
+          },
+        ],
+        from: null,
+        to: null,
+      },
+    ],
+    nucleus: '1H',
+    solvent: '(CD₃)₂SO',
+  },
   {
     names: ['acetic acid'],
+    smiles: 'CC(=O)O',
     ranges: [
       {
         signals: [
@@ -8368,6 +8711,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetone'],
+    smiles: 'CC(=O)C',
     ranges: [
       {
         signals: [
@@ -8387,6 +8731,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetonitrile'],
+    smiles: 'CC#N',
     ranges: [
       {
         signals: [
@@ -8406,6 +8751,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['benzene'],
+    smiles: 'c1ccccc1',
     ranges: [
       {
         signals: [
@@ -8425,6 +8771,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tert -butyl alcohol'],
+    smiles: 'CC(C)(C)O',
     ranges: [
       {
         signals: [
@@ -8456,6 +8803,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['chloroform'],
+    smiles: '(Cl)C(Cl)Cl',
     ranges: [
       {
         signals: [
@@ -8475,6 +8823,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['18-crown-6'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8494,6 +8843,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['cyclohexane'],
+    smiles: 'C1CCCCC1',
     ranges: [
       {
         signals: [
@@ -8513,6 +8863,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,2-dichloroethane'],
+    smiles: 'ClCCCl',
     ranges: [
       {
         signals: [
@@ -8532,6 +8883,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dichloromethane'],
+    smiles: 'ClCCl',
     ranges: [
       {
         signals: [
@@ -8551,6 +8903,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diethyl ether'],
+    smiles: 'CCOCC',
     ranges: [
       {
         signals: [
@@ -8590,6 +8943,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diglyme'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8631,6 +8985,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dimethylformamide'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8674,6 +9029,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,4-dioxane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8693,6 +9049,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['DME'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8724,6 +9081,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8743,6 +9101,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8794,6 +9153,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethyl acetate'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8845,6 +9205,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene'],
+    smiles: 'C=C',
     ranges: [
       {
         signals: [
@@ -8864,6 +9225,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene glycol'],
+    smiles: 'OCCO',
     ranges: [
       {
         signals: [
@@ -8883,11 +9245,13 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['H greaseᶠ'],
+    smiles: '',
     ranges: [
       {
         signals: [],
         from: 0.82,
         to: 0.88,
+        multiplicity: 'm',
       },
       {
         signals: [
@@ -8907,6 +9271,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hexamethylbenzene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8926,6 +9291,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-hexane'],
+    smiles: 'CCCCCC',
     ranges: [
       {
         signals: [
@@ -8960,6 +9326,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMDSO'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -8979,6 +9346,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMPA'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9002,6 +9370,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hydrogen'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9021,6 +9390,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['imidazole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9052,6 +9422,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9071,6 +9442,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9102,6 +9474,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['nitromethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9121,6 +9494,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-pentane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9155,6 +9529,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9194,6 +9569,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['2-propanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9233,6 +9609,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propylene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9303,6 +9680,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyridine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9343,6 +9721,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyrrole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9382,7 +9761,8 @@ export const protonImpurities: DatabaseNMREntry[] = [
     solvent: '(CD₃)₂SO',
   },
   {
-    names: ['pyrrolidineʰ'],
+    names: ['pyrrolidine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9412,6 +9792,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['silicone grease'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9431,6 +9812,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tetrahydrofuran'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9460,6 +9842,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['toluene'],
+    smiles: 'Cc1ccccc1',
     ranges: [
       {
         signals: [
@@ -9501,6 +9884,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['triethylamine'],
+    smiles: 'CCN(CC)CC',
     ranges: [
       {
         signals: [
@@ -9540,6 +9924,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['water'],
+    smiles: 'O',
     ranges: [
       {
         signals: [
@@ -9559,6 +9944,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetic acid'],
+    smiles: 'CC(=O)O',
     ranges: [
       {
         signals: [
@@ -9578,6 +9964,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetone'],
+    smiles: 'CC(=O)C',
     ranges: [
       {
         signals: [
@@ -9597,6 +9984,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetonitrile'],
+    smiles: 'CC#N',
     ranges: [
       {
         signals: [
@@ -9616,6 +10004,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['benzene'],
+    smiles: 'c1ccccc1',
     ranges: [
       {
         signals: [
@@ -9635,6 +10024,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tert -butyl alcohol'],
+    smiles: 'CC(C)(C)O',
     ranges: [
       {
         signals: [
@@ -9666,6 +10056,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['chloroform'],
+    smiles: '(Cl)C(Cl)Cl',
     ranges: [
       {
         signals: [
@@ -9685,6 +10076,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['18-crown-6'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9704,6 +10096,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['cyclohexane'],
+    smiles: 'C1CCCCC1',
     ranges: [
       {
         signals: [
@@ -9723,6 +10116,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,2-dichloroethane'],
+    smiles: 'ClCCCl',
     ranges: [
       {
         signals: [
@@ -9742,6 +10136,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dichloromethane'],
+    smiles: 'ClCCl',
     ranges: [
       {
         signals: [
@@ -9761,6 +10156,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diethyl ether'],
+    smiles: 'CCOCC',
     ranges: [
       {
         signals: [
@@ -9800,6 +10196,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diglyme'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9841,6 +10238,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dimethylformamide'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9884,6 +10282,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,4-dioxane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9903,6 +10302,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['DME'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9934,6 +10334,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -9953,6 +10354,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10004,6 +10406,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethyl acetate'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10055,6 +10458,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene'],
+    smiles: 'C=C',
     ranges: [
       {
         signals: [
@@ -10074,6 +10478,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene glycol'],
+    smiles: 'OCCO',
     ranges: [
       {
         signals: [
@@ -10093,12 +10498,14 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['H greaseᶠ'],
+    smiles: '',
     ranges: [],
     nucleus: '1H',
     solvent: 'CD₃CN',
   },
   {
     names: ['hexamethylbenzene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10118,6 +10525,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-hexane'],
+    smiles: 'CCCCCC',
     ranges: [
       {
         signals: [
@@ -10152,6 +10560,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMDSO'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10171,6 +10580,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMPA'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10194,6 +10604,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hydrogen'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10213,6 +10624,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['imidazole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10244,6 +10656,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10263,6 +10676,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10294,6 +10708,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['nitromethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10313,6 +10728,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-pentane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10347,6 +10763,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10386,6 +10803,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['2-propanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10425,6 +10843,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propylene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10495,6 +10914,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyridine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10535,6 +10955,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyrrole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10574,7 +10995,8 @@ export const protonImpurities: DatabaseNMREntry[] = [
     solvent: 'CD₃CN',
   },
   {
-    names: ['pyrrolidineʰ'],
+    names: ['pyrrolidine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10604,6 +11026,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['silicone grease'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10623,6 +11046,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tetrahydrofuran'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10652,6 +11076,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['toluene'],
+    smiles: 'Cc1ccccc1',
     ranges: [
       {
         signals: [
@@ -10669,11 +11094,13 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 7.1,
         to: 7.3,
+        multiplicity: 'm',
       },
       {
         signals: [],
         from: 7.1,
         to: 7.3,
+        multiplicity: 'm',
       },
     ],
     nucleus: '1H',
@@ -10681,6 +11108,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['triethylamine'],
+    smiles: 'CCN(CC)CC',
     ranges: [
       {
         signals: [
@@ -10720,6 +11148,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['water'],
+    smiles: 'O',
     ranges: [
       {
         signals: [
@@ -10739,6 +11168,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetic acid'],
+    smiles: 'CC(=O)O',
     ranges: [
       {
         signals: [
@@ -10758,6 +11188,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetone'],
+    smiles: 'CC(=O)C',
     ranges: [
       {
         signals: [
@@ -10777,6 +11208,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetonitrile'],
+    smiles: 'CC#N',
     ranges: [
       {
         signals: [
@@ -10796,6 +11228,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['benzene'],
+    smiles: 'c1ccccc1',
     ranges: [
       {
         signals: [
@@ -10815,6 +11248,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tert -butyl alcohol'],
+    smiles: 'CC(C)(C)O',
     ranges: [
       {
         signals: [
@@ -10846,6 +11280,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['chloroform'],
+    smiles: '(Cl)C(Cl)Cl',
     ranges: [
       {
         signals: [
@@ -10865,6 +11300,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['18-crown-6'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -10884,6 +11320,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['cyclohexane'],
+    smiles: 'C1CCCCC1',
     ranges: [
       {
         signals: [
@@ -10903,6 +11340,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,2-dichloroethane'],
+    smiles: 'ClCCCl',
     ranges: [
       {
         signals: [
@@ -10922,6 +11360,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dichloromethane'],
+    smiles: 'ClCCl',
     ranges: [
       {
         signals: [
@@ -10941,6 +11380,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diethyl ether'],
+    smiles: 'CCOCC',
     ranges: [
       {
         signals: [
@@ -10980,6 +11420,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diglyme'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11021,6 +11462,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dimethylformamide'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11064,6 +11506,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,4-dioxane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11083,6 +11526,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['DME'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11114,6 +11558,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11133,6 +11578,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11172,6 +11618,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethyl acetate'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11223,6 +11670,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene'],
+    smiles: 'C=C',
     ranges: [
       {
         signals: [
@@ -11242,6 +11690,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene glycol'],
+    smiles: 'OCCO',
     ranges: [
       {
         signals: [
@@ -11261,11 +11710,13 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['H greaseᶠ'],
+    smiles: '',
     ranges: [
       {
         signals: [],
         from: 0.88,
         to: 0.94,
+        multiplicity: 'm',
       },
       {
         signals: [
@@ -11285,6 +11736,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hexamethylbenzene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11304,6 +11756,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-hexane'],
+    smiles: 'CCCCCC',
     ranges: [
       {
         signals: [
@@ -11338,6 +11791,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMDSO'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11357,6 +11811,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMPA'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11380,6 +11835,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hydrogen'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11399,6 +11855,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['imidazole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11430,6 +11887,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11449,6 +11907,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11468,6 +11927,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['nitromethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11487,6 +11947,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-pentane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11521,6 +11982,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11560,6 +12022,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['2-propanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11599,6 +12062,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propylene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11669,6 +12133,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyridine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11709,6 +12174,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyrrole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11737,7 +12203,8 @@ export const protonImpurities: DatabaseNMREntry[] = [
     solvent: 'TFE-d₃',
   },
   {
-    names: ['pyrrolidineʰ'],
+    names: ['pyrrolidine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11767,6 +12234,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['silicone grease'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11786,6 +12254,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tetrahydrofuran'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -11815,6 +12284,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['toluene'],
+    smiles: 'Cc1ccccc1',
     ranges: [
       {
         signals: [
@@ -11832,11 +12302,13 @@ export const protonImpurities: DatabaseNMREntry[] = [
         signals: [],
         from: 7.1,
         to: 7.3,
+        multiplicity: 'm',
       },
       {
         signals: [],
         from: 7.1,
         to: 7.3,
+        multiplicity: 'm',
       },
     ],
     nucleus: '1H',
@@ -11844,6 +12316,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['triethylamine'],
+    smiles: 'CCN(CC)CC',
     ranges: [
       {
         signals: [
@@ -11883,6 +12356,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['water'],
+    smiles: 'O',
     ranges: [
       {
         signals: [
@@ -11902,6 +12376,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetic acid'],
+    smiles: 'CC(=O)O',
     ranges: [
       {
         signals: [
@@ -11921,6 +12396,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetone'],
+    smiles: 'CC(=O)C',
     ranges: [
       {
         signals: [
@@ -11940,6 +12416,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetonitrile'],
+    smiles: 'CC#N',
     ranges: [
       {
         signals: [
@@ -11959,6 +12436,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['benzene'],
+    smiles: 'c1ccccc1',
     ranges: [
       {
         signals: [
@@ -11978,6 +12456,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tert -butyl alcohol'],
+    smiles: 'CC(C)(C)O',
     ranges: [
       {
         signals: [
@@ -11997,6 +12476,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['chloroform'],
+    smiles: '(Cl)C(Cl)Cl',
     ranges: [
       {
         signals: [
@@ -12016,6 +12496,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['18-crown-6'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12035,6 +12516,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['cyclohexane'],
+    smiles: 'C1CCCCC1',
     ranges: [
       {
         signals: [
@@ -12054,6 +12536,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,2-dichloroethane'],
+    smiles: 'ClCCCl',
     ranges: [
       {
         signals: [
@@ -12073,6 +12556,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dichloromethane'],
+    smiles: 'ClCCl',
     ranges: [
       {
         signals: [
@@ -12092,6 +12576,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diethyl ether'],
+    smiles: 'CCOCC',
     ranges: [
       {
         signals: [
@@ -12131,6 +12616,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diglyme'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12172,6 +12658,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dimethylformamide'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12215,6 +12702,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,4-dioxane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12234,6 +12722,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['DME'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12265,6 +12754,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12284,6 +12774,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12323,6 +12814,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethyl acetate'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12374,6 +12866,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene'],
+    smiles: 'C=C',
     ranges: [
       {
         signals: [
@@ -12393,6 +12886,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene glycol'],
+    smiles: 'OCCO',
     ranges: [
       {
         signals: [
@@ -12412,11 +12906,13 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['H greaseᶠ'],
+    smiles: '',
     ranges: [
       {
         signals: [],
         from: 0.86,
         to: 0.93,
+        multiplicity: 'm',
       },
       {
         signals: [
@@ -12436,6 +12932,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hexamethylbenzene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12455,6 +12952,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-hexane'],
+    smiles: 'CCCCCC',
     ranges: [
       {
         signals: [
@@ -12489,6 +12987,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMDSO'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12508,6 +13007,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMPA'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12531,6 +13031,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hydrogen'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12550,6 +13051,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['imidazole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12581,6 +13083,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12600,6 +13103,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12619,6 +13123,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['nitromethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12638,6 +13143,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-pentane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12672,6 +13178,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12711,6 +13218,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['2-propanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12750,6 +13258,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propylene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12820,6 +13329,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyridine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12860,6 +13370,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyrrole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12888,7 +13399,8 @@ export const protonImpurities: DatabaseNMREntry[] = [
     solvent: 'CD₃OD',
   },
   {
-    names: ['pyrrolidineʰ'],
+    names: ['pyrrolidine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12918,6 +13430,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['silicone grease'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12937,6 +13450,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['tetrahydrofuran'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -12966,6 +13480,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['toluene'],
+    smiles: 'Cc1ccccc1',
     ranges: [
       {
         signals: [
@@ -13007,6 +13522,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['triethylamine'],
+    smiles: 'CCN(CC)CC',
     ranges: [
       {
         signals: [
@@ -13046,12 +13562,14 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['water'],
+    smiles: 'O',
     ranges: [],
     nucleus: '1H',
     solvent: 'D₂O',
   },
   {
     names: ['acetic acid'],
+    smiles: 'CC(=O)O',
     ranges: [
       {
         signals: [
@@ -13071,6 +13589,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetone'],
+    smiles: 'CC(=O)C',
     ranges: [
       {
         signals: [
@@ -13090,6 +13609,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['acetonitrile'],
+    smiles: 'CC#N',
     ranges: [
       {
         signals: [
@@ -13109,12 +13629,14 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['benzene'],
+    smiles: 'c1ccccc1',
     ranges: [],
     nucleus: '1H',
     solvent: 'D₂O',
   },
   {
     names: ['tert -butyl alcohol'],
+    smiles: 'CC(C)(C)O',
     ranges: [
       {
         signals: [
@@ -13134,12 +13656,14 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['chloroform'],
+    smiles: '(Cl)C(Cl)Cl',
     ranges: [],
     nucleus: '1H',
     solvent: 'D₂O',
   },
   {
     names: ['18-crown-6'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13159,24 +13683,28 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['cyclohexane'],
+    smiles: 'C1CCCCC1',
     ranges: [],
     nucleus: '1H',
     solvent: 'D₂O',
   },
   {
     names: ['1,2-dichloroethane'],
+    smiles: 'ClCCCl',
     ranges: [],
     nucleus: '1H',
     solvent: 'D₂O',
   },
   {
     names: ['dichloromethane'],
+    smiles: 'ClCCl',
     ranges: [],
     nucleus: '1H',
     solvent: 'D₂O',
   },
   {
     names: ['diethyl ether'],
+    smiles: 'CCOCC',
     ranges: [
       {
         signals: [
@@ -13216,6 +13744,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['diglyme'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13257,6 +13786,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['dimethylformamide'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13300,6 +13830,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['1,4-dioxane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13319,6 +13850,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['DME'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13350,6 +13882,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13369,6 +13902,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13408,6 +13942,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethyl acetate'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13459,6 +13994,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene'],
+    smiles: 'C=C',
     ranges: [
       {
         signals: [
@@ -13478,6 +14014,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['ethylene glycol'],
+    smiles: 'OCCO',
     ranges: [
       {
         signals: [
@@ -13497,24 +14034,28 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['H greaseᶠ'],
+    smiles: '',
     ranges: [],
     nucleus: '1H',
     solvent: 'D₂O',
   },
   {
     names: ['hexamethylbenzene'],
+    smiles: '',
     ranges: [],
     nucleus: '1H',
     solvent: 'D₂O',
   },
   {
     names: ['n-hexane'],
+    smiles: 'CCCCCC',
     ranges: [],
     nucleus: '1H',
     solvent: 'D₂O',
   },
   {
     names: ['HMDSO'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13534,6 +14075,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['HMPA'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13557,12 +14099,14 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['hydrogen'],
+    smiles: '',
     ranges: [],
     nucleus: '1H',
     solvent: 'D₂O',
   },
   {
     names: ['imidazole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13594,6 +14138,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13613,6 +14158,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['methanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13632,6 +14178,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['nitromethane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13651,12 +14198,14 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['n-pentane'],
+    smiles: '',
     ranges: [],
     nucleus: '1H',
     solvent: 'D₂O',
   },
   {
     names: ['propane'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13696,6 +14245,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['2-propanol'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13735,6 +14285,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['propylene'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13805,6 +14356,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyridine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13845,6 +14397,7 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['pyrrole'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13873,7 +14426,8 @@ export const protonImpurities: DatabaseNMREntry[] = [
     solvent: 'D₂O',
   },
   {
-    names: ['pyrrolidineʰ'],
+    names: ['pyrrolidine'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13903,12 +14457,14 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['silicone grease'],
+    smiles: '',
     ranges: [],
     nucleus: '1H',
     solvent: 'D₂O',
   },
   {
     names: ['tetrahydrofuran'],
+    smiles: '',
     ranges: [
       {
         signals: [
@@ -13938,12 +14494,14 @@ export const protonImpurities: DatabaseNMREntry[] = [
   },
   {
     names: ['toluene'],
+    smiles: 'Cc1ccccc1',
     ranges: [],
     nucleus: '1H',
     solvent: 'D₂O',
   },
   {
     names: ['triethylamine'],
+    smiles: 'CCN(CC)CC',
     ranges: [
       {
         signals: [

@@ -3,6 +3,7 @@
     "names": [
       "acetic acid"
     ],
+    "smiles": "CC(=O)O",
     "ranges": [
       {
         "signals": [
@@ -32,6 +33,7 @@
     "names": [
       "acetone"
     ],
+    "smiles": "CC(=O)C",
     "ranges": [
       {
         "signals": [
@@ -61,6 +63,7 @@
     "names": [
       "acetonitrile"
     ],
+    "smiles": "CC#N",
     "ranges": [
       {
         "signals": [
@@ -90,6 +93,7 @@
     "names": [
       "benzene"
     ],
+    "smiles": "c1ccccc1",
     "ranges": [
       {
         "signals": [
@@ -109,6 +113,7 @@
     "names": [
       "tert -butyl alcohol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -138,6 +143,7 @@
     "names": [
       "carbon dioxide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -157,6 +163,7 @@
     "names": [
       "carbon disulfide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -176,6 +183,7 @@
     "names": [
       "carbon tetrachloride"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -195,6 +203,7 @@
     "names": [
       "chloroform"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -214,6 +223,7 @@
     "names": [
       "18-crown-6"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -233,6 +243,7 @@
     "names": [
       "cyclohexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -252,6 +263,7 @@
     "names": [
       "1,2-dichloroethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -271,6 +283,7 @@
     "names": [
       "dichloromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -290,6 +303,7 @@
     "names": [
       "diethyl ether"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -319,6 +333,7 @@
     "names": [
       "diglyme"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -358,6 +373,7 @@
     "names": [
       "dimethylformamide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -397,6 +413,7 @@
     "names": [
       "1,4-dioxane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -416,6 +433,7 @@
     "names": [
       "DME"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -445,6 +463,7 @@
     "names": [
       "ethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -464,6 +483,7 @@
     "names": [
       "ethanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -493,6 +513,7 @@
     "names": [
       "ethyl acetate"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -542,6 +563,7 @@
     "names": [
       "ethylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -561,6 +583,7 @@
     "names": [
       "ethylene glycol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -580,6 +603,7 @@
     "names": [
       "H greaseᵇ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -599,6 +623,7 @@
     "names": [
       "hexamethylbenzene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -628,6 +653,7 @@
     "names": [
       "n-hexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -667,6 +693,7 @@
     "names": [
       "HMDSO"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -686,6 +713,7 @@
     "names": [
       "HMPAᶜ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -705,6 +733,7 @@
     "names": [
       "imidazole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -734,6 +763,7 @@
     "names": [
       "methane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -753,6 +783,7 @@
     "names": [
       "methanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -772,6 +803,7 @@
     "names": [
       "nitromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -791,6 +823,7 @@
     "names": [
       "n-pentane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -830,6 +863,7 @@
     "names": [
       "propane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -859,6 +893,7 @@
     "names": [
       "2-propanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -888,6 +923,7 @@
     "names": [
       "propylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -927,6 +963,7 @@
     "names": [
       "pyridine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -966,6 +1003,7 @@
     "names": [
       "pyrrole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -995,6 +1033,7 @@
     "names": [
       "pyrrolidineᵉ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1024,6 +1063,7 @@
     "names": [
       "silicone grease"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1043,6 +1083,7 @@
     "names": [
       "tetrahydrofuran"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1072,6 +1113,7 @@
     "names": [
       "toluene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1131,6 +1173,7 @@
     "names": [
       "triethylamine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1160,6 +1203,7 @@
     "names": [
       "acetic acid"
     ],
+    "smiles": "CC(=O)O",
     "ranges": [
       {
         "signals": [
@@ -1189,6 +1233,7 @@
     "names": [
       "acetone"
     ],
+    "smiles": "CC(=O)C",
     "ranges": [
       {
         "signals": [
@@ -1218,6 +1263,7 @@
     "names": [
       "acetonitrile"
     ],
+    "smiles": "CC#N",
     "ranges": [
       {
         "signals": [
@@ -1247,6 +1293,7 @@
     "names": [
       "benzene"
     ],
+    "smiles": "c1ccccc1",
     "ranges": [
       {
         "signals": [
@@ -1266,6 +1313,7 @@
     "names": [
       "tert -butyl alcohol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1295,6 +1343,7 @@
     "names": [
       "carbon dioxide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1314,6 +1363,7 @@
     "names": [
       "carbon disulfide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1333,6 +1383,7 @@
     "names": [
       "carbon tetrachloride"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1352,6 +1403,7 @@
     "names": [
       "chloroform"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1371,6 +1423,7 @@
     "names": [
       "18-crown-6"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1390,6 +1443,7 @@
     "names": [
       "cyclohexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1409,6 +1463,7 @@
     "names": [
       "1,2-dichloroethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1428,6 +1483,7 @@
     "names": [
       "dichloromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1447,6 +1503,7 @@
     "names": [
       "diethyl ether"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1476,6 +1533,7 @@
     "names": [
       "diglyme"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1515,6 +1573,7 @@
     "names": [
       "dimethylformamide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1554,6 +1613,7 @@
     "names": [
       "1,4-dioxane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1573,6 +1633,7 @@
     "names": [
       "DME"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1602,6 +1663,7 @@
     "names": [
       "ethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1621,6 +1683,7 @@
     "names": [
       "ethanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1650,6 +1713,7 @@
     "names": [
       "ethyl acetate"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1699,6 +1763,7 @@
     "names": [
       "ethylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1718,6 +1783,7 @@
     "names": [
       "ethylene glycol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1737,6 +1803,7 @@
     "names": [
       "H greaseᵇ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1756,6 +1823,7 @@
     "names": [
       "hexamethylbenzene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1785,6 +1853,7 @@
     "names": [
       "n-hexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1824,6 +1893,7 @@
     "names": [
       "HMDSO"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1843,6 +1913,7 @@
     "names": [
       "HMPAᶜ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1862,6 +1933,7 @@
     "names": [
       "imidazole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1891,6 +1963,7 @@
     "names": [
       "methane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1910,6 +1983,7 @@
     "names": [
       "methanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1929,6 +2003,7 @@
     "names": [
       "nitromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1948,6 +2023,7 @@
     "names": [
       "n-pentane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -1987,6 +2063,7 @@
     "names": [
       "propane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2016,6 +2093,7 @@
     "names": [
       "2-propanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2045,6 +2123,7 @@
     "names": [
       "propylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2084,6 +2163,7 @@
     "names": [
       "pyridine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2123,6 +2203,7 @@
     "names": [
       "pyrrole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2152,6 +2233,7 @@
     "names": [
       "pyrrolidineᵉ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2181,6 +2263,7 @@
     "names": [
       "silicone grease"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2200,6 +2283,7 @@
     "names": [
       "tetrahydrofuran"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2229,6 +2313,7 @@
     "names": [
       "toluene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2288,6 +2373,7 @@
     "names": [
       "triethylamine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2317,6 +2403,7 @@
     "names": [
       "acetic acid"
     ],
+    "smiles": "CC(=O)O",
     "ranges": [
       {
         "signals": [
@@ -2346,6 +2433,7 @@
     "names": [
       "acetone"
     ],
+    "smiles": "CC(=O)C",
     "ranges": [
       {
         "signals": [
@@ -2375,6 +2463,7 @@
     "names": [
       "acetonitrile"
     ],
+    "smiles": "CC#N",
     "ranges": [
       {
         "signals": [
@@ -2404,6 +2493,7 @@
     "names": [
       "benzene"
     ],
+    "smiles": "c1ccccc1",
     "ranges": [
       {
         "signals": [
@@ -2423,6 +2513,7 @@
     "names": [
       "tert -butyl alcohol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2452,6 +2543,7 @@
     "names": [
       "carbon dioxide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2471,6 +2563,7 @@
     "names": [
       "carbon disulfide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2490,6 +2583,7 @@
     "names": [
       "carbon tetrachloride"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2509,6 +2603,7 @@
     "names": [
       "chloroform"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2528,6 +2623,7 @@
     "names": [
       "18-crown-6"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2547,6 +2643,7 @@
     "names": [
       "cyclohexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2566,6 +2663,7 @@
     "names": [
       "1,2-dichloroethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2585,6 +2683,7 @@
     "names": [
       "dichloromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2604,6 +2703,7 @@
     "names": [
       "diethyl ether"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2633,6 +2733,7 @@
     "names": [
       "diglyme"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2672,6 +2773,7 @@
     "names": [
       "dimethylformamide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2711,6 +2813,7 @@
     "names": [
       "1,4-dioxane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2730,6 +2833,7 @@
     "names": [
       "DME"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2759,6 +2863,7 @@
     "names": [
       "ethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2778,6 +2883,7 @@
     "names": [
       "ethanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2807,6 +2913,7 @@
     "names": [
       "ethyl acetate"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2856,6 +2963,7 @@
     "names": [
       "ethylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2875,6 +2983,7 @@
     "names": [
       "ethylene glycol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2894,6 +3003,7 @@
     "names": [
       "H greaseᵇ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2913,6 +3023,7 @@
     "names": [
       "hexamethylbenzene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2942,6 +3053,7 @@
     "names": [
       "n-hexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -2981,6 +3093,7 @@
     "names": [
       "HMDSO"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3000,6 +3113,7 @@
     "names": [
       "HMPAᶜ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3019,6 +3133,7 @@
     "names": [
       "imidazole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3048,6 +3163,7 @@
     "names": [
       "methane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3067,6 +3183,7 @@
     "names": [
       "methanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3086,6 +3203,7 @@
     "names": [
       "nitromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3105,6 +3223,7 @@
     "names": [
       "n-pentane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3144,6 +3263,7 @@
     "names": [
       "propane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3173,6 +3293,7 @@
     "names": [
       "2-propanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3202,6 +3323,7 @@
     "names": [
       "propylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3241,6 +3363,7 @@
     "names": [
       "pyridine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3280,6 +3403,7 @@
     "names": [
       "pyrrole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3309,6 +3433,7 @@
     "names": [
       "pyrrolidineᵉ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3338,6 +3463,7 @@
     "names": [
       "silicone grease"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3357,6 +3483,7 @@
     "names": [
       "tetrahydrofuran"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3386,6 +3513,7 @@
     "names": [
       "toluene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3445,6 +3573,7 @@
     "names": [
       "triethylamine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3474,6 +3603,7 @@
     "names": [
       "acetic acid"
     ],
+    "smiles": "CC(=O)O",
     "ranges": [
       {
         "signals": [
@@ -3503,6 +3633,7 @@
     "names": [
       "acetone"
     ],
+    "smiles": "CC(=O)C",
     "ranges": [
       {
         "signals": [
@@ -3532,6 +3663,7 @@
     "names": [
       "acetonitrile"
     ],
+    "smiles": "CC#N",
     "ranges": [
       {
         "signals": [
@@ -3561,6 +3693,7 @@
     "names": [
       "benzene"
     ],
+    "smiles": "c1ccccc1",
     "ranges": [
       {
         "signals": [
@@ -3580,6 +3713,7 @@
     "names": [
       "tert -butyl alcohol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3609,6 +3743,7 @@
     "names": [
       "carbon dioxide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3628,6 +3763,7 @@
     "names": [
       "carbon disulfide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3647,6 +3783,7 @@
     "names": [
       "carbon tetrachloride"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3666,6 +3803,7 @@
     "names": [
       "chloroform"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3685,6 +3823,7 @@
     "names": [
       "18-crown-6"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3704,6 +3843,7 @@
     "names": [
       "cyclohexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3723,6 +3863,7 @@
     "names": [
       "1,2-dichloroethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3742,6 +3883,7 @@
     "names": [
       "dichloromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3761,6 +3903,7 @@
     "names": [
       "diethyl ether"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3790,6 +3933,7 @@
     "names": [
       "diglyme"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3829,6 +3973,7 @@
     "names": [
       "dimethylformamide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3868,6 +4013,7 @@
     "names": [
       "1,4-dioxane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3887,6 +4033,7 @@
     "names": [
       "DME"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3916,6 +4063,7 @@
     "names": [
       "ethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3935,6 +4083,7 @@
     "names": [
       "ethanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -3964,6 +4113,7 @@
     "names": [
       "ethyl acetate"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4013,6 +4163,7 @@
     "names": [
       "ethylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4032,6 +4183,7 @@
     "names": [
       "ethylene glycol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4051,6 +4203,7 @@
     "names": [
       "H greaseᵇ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4070,6 +4223,7 @@
     "names": [
       "hexamethylbenzene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4099,6 +4253,7 @@
     "names": [
       "n-hexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4138,6 +4293,7 @@
     "names": [
       "HMDSO"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4157,6 +4313,7 @@
     "names": [
       "HMPAᶜ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4176,6 +4333,7 @@
     "names": [
       "imidazole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4205,6 +4363,7 @@
     "names": [
       "methane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4224,6 +4383,7 @@
     "names": [
       "methanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4243,6 +4403,7 @@
     "names": [
       "nitromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4262,6 +4423,7 @@
     "names": [
       "n-pentane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4301,6 +4463,7 @@
     "names": [
       "propane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4330,6 +4493,7 @@
     "names": [
       "2-propanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4359,6 +4523,7 @@
     "names": [
       "propylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4398,6 +4563,7 @@
     "names": [
       "pyridine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4437,6 +4603,7 @@
     "names": [
       "pyrrole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4466,6 +4633,7 @@
     "names": [
       "pyrrolidineᵉ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4495,6 +4663,7 @@
     "names": [
       "silicone grease"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4514,6 +4683,7 @@
     "names": [
       "tetrahydrofuran"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4543,6 +4713,7 @@
     "names": [
       "toluene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4602,6 +4773,7 @@
     "names": [
       "triethylamine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4631,6 +4803,7 @@
     "names": [
       "acetic acid"
     ],
+    "smiles": "CC(=O)O",
     "ranges": [
       {
         "signals": [
@@ -4660,6 +4833,7 @@
     "names": [
       "acetone"
     ],
+    "smiles": "CC(=O)C",
     "ranges": [
       {
         "signals": [
@@ -4689,6 +4863,7 @@
     "names": [
       "acetonitrile"
     ],
+    "smiles": "CC#N",
     "ranges": [
       {
         "signals": [
@@ -4718,6 +4893,7 @@
     "names": [
       "benzene"
     ],
+    "smiles": "c1ccccc1",
     "ranges": [
       {
         "signals": [
@@ -4737,6 +4913,7 @@
     "names": [
       "tert -butyl alcohol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4766,6 +4943,7 @@
     "names": [
       "carbon dioxide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4785,6 +4963,7 @@
     "names": [
       "carbon disulfide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4804,6 +4983,7 @@
     "names": [
       "carbon tetrachloride"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4823,6 +5003,7 @@
     "names": [
       "chloroform"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4842,6 +5023,7 @@
     "names": [
       "18-crown-6"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4861,6 +5043,7 @@
     "names": [
       "cyclohexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4880,6 +5063,7 @@
     "names": [
       "1,2-dichloroethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4899,6 +5083,7 @@
     "names": [
       "dichloromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4918,6 +5103,7 @@
     "names": [
       "diethyl ether"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4947,6 +5133,7 @@
     "names": [
       "diglyme"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -4986,6 +5173,7 @@
     "names": [
       "dimethylformamide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5025,6 +5213,7 @@
     "names": [
       "1,4-dioxane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5044,6 +5233,7 @@
     "names": [
       "DME"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5073,6 +5263,7 @@
     "names": [
       "ethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5092,6 +5283,7 @@
     "names": [
       "ethanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5121,6 +5313,7 @@
     "names": [
       "ethyl acetate"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5170,6 +5363,7 @@
     "names": [
       "ethylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5189,6 +5383,7 @@
     "names": [
       "ethylene glycol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5208,6 +5403,7 @@
     "names": [
       "H greaseᵇ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5227,6 +5423,7 @@
     "names": [
       "hexamethylbenzene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5256,6 +5453,7 @@
     "names": [
       "n-hexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5295,6 +5493,7 @@
     "names": [
       "HMDSO"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5314,6 +5513,7 @@
     "names": [
       "HMPAᶜ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5333,6 +5533,7 @@
     "names": [
       "imidazole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5362,6 +5563,7 @@
     "names": [
       "methane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5381,6 +5583,7 @@
     "names": [
       "methanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5400,6 +5603,7 @@
     "names": [
       "nitromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5419,6 +5623,7 @@
     "names": [
       "n-pentane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5458,6 +5663,7 @@
     "names": [
       "propane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5487,6 +5693,7 @@
     "names": [
       "2-propanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5516,6 +5723,7 @@
     "names": [
       "propylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5555,6 +5763,7 @@
     "names": [
       "pyridine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5594,6 +5803,7 @@
     "names": [
       "pyrrole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5623,6 +5833,7 @@
     "names": [
       "pyrrolidineᵉ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5652,6 +5863,7 @@
     "names": [
       "silicone grease"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5671,6 +5883,7 @@
     "names": [
       "tetrahydrofuran"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5700,6 +5913,7 @@
     "names": [
       "toluene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5759,6 +5973,7 @@
     "names": [
       "triethylamine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5788,6 +6003,7 @@
     "names": [
       "acetic acid"
     ],
+    "smiles": "CC(=O)O",
     "ranges": [
       {
         "signals": [
@@ -5817,6 +6033,7 @@
     "names": [
       "acetone"
     ],
+    "smiles": "CC(=O)C",
     "ranges": [
       {
         "signals": [
@@ -5846,6 +6063,7 @@
     "names": [
       "acetonitrile"
     ],
+    "smiles": "CC#N",
     "ranges": [
       {
         "signals": [
@@ -5875,6 +6093,7 @@
     "names": [
       "benzene"
     ],
+    "smiles": "c1ccccc1",
     "ranges": [
       {
         "signals": [
@@ -5894,6 +6113,7 @@
     "names": [
       "tert -butyl alcohol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5923,6 +6143,7 @@
     "names": [
       "carbon dioxide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5942,6 +6163,7 @@
     "names": [
       "carbon disulfide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5961,6 +6183,7 @@
     "names": [
       "carbon tetrachloride"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5980,6 +6203,7 @@
     "names": [
       "chloroform"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -5999,6 +6223,7 @@
     "names": [
       "18-crown-6"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6018,6 +6243,7 @@
     "names": [
       "cyclohexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6037,6 +6263,7 @@
     "names": [
       "1,2-dichloroethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6056,6 +6283,7 @@
     "names": [
       "dichloromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6075,6 +6303,7 @@
     "names": [
       "diethyl ether"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6104,6 +6333,7 @@
     "names": [
       "diglyme"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6143,6 +6373,7 @@
     "names": [
       "dimethylformamide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6182,6 +6413,7 @@
     "names": [
       "1,4-dioxane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6201,6 +6433,7 @@
     "names": [
       "DME"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6230,6 +6463,7 @@
     "names": [
       "ethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6249,6 +6483,7 @@
     "names": [
       "ethanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6278,6 +6513,7 @@
     "names": [
       "ethyl acetate"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6327,6 +6563,7 @@
     "names": [
       "ethylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6346,6 +6583,7 @@
     "names": [
       "ethylene glycol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6365,6 +6603,7 @@
     "names": [
       "H greaseᵇ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6384,6 +6623,7 @@
     "names": [
       "hexamethylbenzene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6413,6 +6653,7 @@
     "names": [
       "n-hexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6452,6 +6693,7 @@
     "names": [
       "HMDSO"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6471,6 +6713,7 @@
     "names": [
       "HMPAᶜ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6490,6 +6733,7 @@
     "names": [
       "imidazole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6519,6 +6763,7 @@
     "names": [
       "methane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6538,6 +6783,7 @@
     "names": [
       "methanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6557,6 +6803,7 @@
     "names": [
       "nitromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6576,6 +6823,7 @@
     "names": [
       "n-pentane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6615,6 +6863,7 @@
     "names": [
       "propane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6644,6 +6893,7 @@
     "names": [
       "2-propanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6673,6 +6923,7 @@
     "names": [
       "propylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6712,6 +6963,7 @@
     "names": [
       "pyridine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6751,6 +7003,7 @@
     "names": [
       "pyrrole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6780,6 +7033,7 @@
     "names": [
       "pyrrolidineᵉ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6809,6 +7063,7 @@
     "names": [
       "silicone grease"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6828,6 +7083,7 @@
     "names": [
       "tetrahydrofuran"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6857,6 +7113,7 @@
     "names": [
       "toluene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6916,6 +7173,7 @@
     "names": [
       "triethylamine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -6945,6 +7203,7 @@
     "names": [
       "acetic acid"
     ],
+    "smiles": "CC(=O)O",
     "ranges": [
       {
         "signals": [
@@ -6974,6 +7233,7 @@
     "names": [
       "acetone"
     ],
+    "smiles": "CC(=O)C",
     "ranges": [
       {
         "signals": [
@@ -7003,6 +7263,7 @@
     "names": [
       "acetonitrile"
     ],
+    "smiles": "CC#N",
     "ranges": [
       {
         "signals": [
@@ -7032,6 +7293,7 @@
     "names": [
       "benzene"
     ],
+    "smiles": "c1ccccc1",
     "ranges": [
       {
         "signals": [
@@ -7051,6 +7313,7 @@
     "names": [
       "tert -butyl alcohol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7080,6 +7343,7 @@
     "names": [
       "carbon dioxide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7099,6 +7363,7 @@
     "names": [
       "carbon disulfide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7118,6 +7383,7 @@
     "names": [
       "carbon tetrachloride"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7137,6 +7403,7 @@
     "names": [
       "chloroform"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7156,6 +7423,7 @@
     "names": [
       "18-crown-6"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7175,6 +7443,7 @@
     "names": [
       "cyclohexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7194,6 +7463,7 @@
     "names": [
       "1,2-dichloroethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7213,6 +7483,7 @@
     "names": [
       "dichloromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7232,6 +7503,7 @@
     "names": [
       "diethyl ether"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7261,6 +7533,7 @@
     "names": [
       "diglyme"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7300,6 +7573,7 @@
     "names": [
       "dimethylformamide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7339,6 +7613,7 @@
     "names": [
       "1,4-dioxane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7358,6 +7633,7 @@
     "names": [
       "DME"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7387,6 +7663,7 @@
     "names": [
       "ethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7406,6 +7683,7 @@
     "names": [
       "ethanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7435,6 +7713,7 @@
     "names": [
       "ethyl acetate"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7484,6 +7763,7 @@
     "names": [
       "ethylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7503,6 +7783,7 @@
     "names": [
       "ethylene glycol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7522,6 +7803,7 @@
     "names": [
       "H greaseᵇ"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "(CD₃)₂CO"
@@ -7530,6 +7812,7 @@
     "names": [
       "hexamethylbenzene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7559,6 +7842,7 @@
     "names": [
       "n-hexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7598,6 +7882,7 @@
     "names": [
       "HMDSO"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7617,6 +7902,7 @@
     "names": [
       "HMPAᶜ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7636,6 +7922,7 @@
     "names": [
       "imidazole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7665,6 +7952,7 @@
     "names": [
       "methane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7684,6 +7972,7 @@
     "names": [
       "methanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7703,6 +7992,7 @@
     "names": [
       "nitromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7722,6 +8012,7 @@
     "names": [
       "n-pentane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7761,6 +8052,7 @@
     "names": [
       "propane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7790,6 +8082,7 @@
     "names": [
       "2-propanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7819,6 +8112,7 @@
     "names": [
       "propylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7858,6 +8152,7 @@
     "names": [
       "pyridine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7897,6 +8192,7 @@
     "names": [
       "pyrrole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7926,6 +8222,7 @@
     "names": [
       "pyrrolidineᵉ"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "(CD₃)₂CO"
@@ -7934,6 +8231,7 @@
     "names": [
       "silicone grease"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7953,6 +8251,7 @@
     "names": [
       "tetrahydrofuran"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -7982,6 +8281,7 @@
     "names": [
       "toluene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8041,6 +8341,7 @@
     "names": [
       "triethylamine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8070,6 +8371,7 @@
     "names": [
       "acetic acid"
     ],
+    "smiles": "CC(=O)O",
     "ranges": [
       {
         "signals": [
@@ -8099,6 +8401,7 @@
     "names": [
       "acetone"
     ],
+    "smiles": "CC(=O)C",
     "ranges": [
       {
         "signals": [
@@ -8128,6 +8431,7 @@
     "names": [
       "acetonitrile"
     ],
+    "smiles": "CC#N",
     "ranges": [
       {
         "signals": [
@@ -8157,6 +8461,7 @@
     "names": [
       "benzene"
     ],
+    "smiles": "c1ccccc1",
     "ranges": [
       {
         "signals": [
@@ -8176,6 +8481,7 @@
     "names": [
       "tert -butyl alcohol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8205,6 +8511,7 @@
     "names": [
       "carbon dioxide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8224,6 +8531,7 @@
     "names": [
       "carbon disulfide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8243,6 +8551,7 @@
     "names": [
       "carbon tetrachloride"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8262,6 +8571,7 @@
     "names": [
       "chloroform"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8281,6 +8591,7 @@
     "names": [
       "18-crown-6"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8300,6 +8611,7 @@
     "names": [
       "cyclohexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8319,6 +8631,7 @@
     "names": [
       "1,2-dichloroethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8338,6 +8651,7 @@
     "names": [
       "dichloromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8357,6 +8671,7 @@
     "names": [
       "diethyl ether"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8386,6 +8701,7 @@
     "names": [
       "diglyme"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8425,6 +8741,7 @@
     "names": [
       "dimethylformamide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8464,6 +8781,7 @@
     "names": [
       "1,4-dioxane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8483,6 +8801,7 @@
     "names": [
       "DME"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8512,6 +8831,7 @@
     "names": [
       "ethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8531,6 +8851,7 @@
     "names": [
       "ethanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8560,6 +8881,7 @@
     "names": [
       "ethyl acetate"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8609,6 +8931,7 @@
     "names": [
       "ethylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8628,6 +8951,7 @@
     "names": [
       "ethylene glycol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8647,6 +8971,7 @@
     "names": [
       "H greaseᵇ"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "(CD₃)₂SO"
@@ -8655,6 +8980,7 @@
     "names": [
       "hexamethylbenzene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8684,6 +9010,7 @@
     "names": [
       "n-hexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8723,6 +9050,7 @@
     "names": [
       "HMDSO"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8742,6 +9070,7 @@
     "names": [
       "HMPAᶜ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8761,6 +9090,7 @@
     "names": [
       "imidazole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8790,6 +9120,7 @@
     "names": [
       "methane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8809,6 +9140,7 @@
     "names": [
       "methanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8828,6 +9160,7 @@
     "names": [
       "nitromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8847,6 +9180,7 @@
     "names": [
       "n-pentane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8886,6 +9220,7 @@
     "names": [
       "propane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8915,6 +9250,7 @@
     "names": [
       "2-propanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8944,6 +9280,7 @@
     "names": [
       "propylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -8983,6 +9320,7 @@
     "names": [
       "pyridine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9022,6 +9360,7 @@
     "names": [
       "pyrrole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9051,6 +9390,7 @@
     "names": [
       "pyrrolidineᵉ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9080,6 +9420,7 @@
     "names": [
       "silicone grease"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "(CD₃)₂SO"
@@ -9088,6 +9429,7 @@
     "names": [
       "tetrahydrofuran"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9117,6 +9459,7 @@
     "names": [
       "toluene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9176,6 +9519,7 @@
     "names": [
       "triethylamine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9205,6 +9549,7 @@
     "names": [
       "acetic acid"
     ],
+    "smiles": "CC(=O)O",
     "ranges": [
       {
         "signals": [
@@ -9234,6 +9579,7 @@
     "names": [
       "acetone"
     ],
+    "smiles": "CC(=O)C",
     "ranges": [
       {
         "signals": [
@@ -9263,6 +9609,7 @@
     "names": [
       "acetonitrile"
     ],
+    "smiles": "CC#N",
     "ranges": [
       {
         "signals": [
@@ -9292,6 +9639,7 @@
     "names": [
       "benzene"
     ],
+    "smiles": "c1ccccc1",
     "ranges": [
       {
         "signals": [
@@ -9311,6 +9659,7 @@
     "names": [
       "tert -butyl alcohol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9340,6 +9689,7 @@
     "names": [
       "carbon dioxide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9359,6 +9709,7 @@
     "names": [
       "carbon disulfide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9378,6 +9729,7 @@
     "names": [
       "carbon tetrachloride"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9397,6 +9749,7 @@
     "names": [
       "chloroform"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9416,6 +9769,7 @@
     "names": [
       "18-crown-6"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9435,6 +9789,7 @@
     "names": [
       "cyclohexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9454,6 +9809,7 @@
     "names": [
       "1,2-dichloroethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9473,6 +9829,7 @@
     "names": [
       "dichloromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9492,6 +9849,7 @@
     "names": [
       "diethyl ether"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9521,6 +9879,7 @@
     "names": [
       "diglyme"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9560,6 +9919,7 @@
     "names": [
       "dimethylformamide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9599,6 +9959,7 @@
     "names": [
       "1,4-dioxane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9618,6 +9979,7 @@
     "names": [
       "DME"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9647,6 +10009,7 @@
     "names": [
       "ethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9666,6 +10029,7 @@
     "names": [
       "ethanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9695,6 +10059,7 @@
     "names": [
       "ethyl acetate"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9744,6 +10109,7 @@
     "names": [
       "ethylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9763,6 +10129,7 @@
     "names": [
       "ethylene glycol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9782,6 +10149,7 @@
     "names": [
       "H greaseᵇ"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "CD₃CN"
@@ -9790,6 +10158,7 @@
     "names": [
       "hexamethylbenzene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9819,6 +10188,7 @@
     "names": [
       "n-hexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9858,6 +10228,7 @@
     "names": [
       "HMDSO"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9877,6 +10248,7 @@
     "names": [
       "HMPAᶜ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9896,6 +10268,7 @@
     "names": [
       "imidazole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9925,6 +10298,7 @@
     "names": [
       "methane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9944,6 +10318,7 @@
     "names": [
       "methanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9963,6 +10338,7 @@
     "names": [
       "nitromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -9982,6 +10358,7 @@
     "names": [
       "n-pentane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10021,6 +10398,7 @@
     "names": [
       "propane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10050,6 +10428,7 @@
     "names": [
       "2-propanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10079,6 +10458,7 @@
     "names": [
       "propylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10118,6 +10498,7 @@
     "names": [
       "pyridine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10157,6 +10538,7 @@
     "names": [
       "pyrrole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10186,6 +10568,7 @@
     "names": [
       "pyrrolidineᵉ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10215,6 +10598,7 @@
     "names": [
       "silicone grease"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "CD₃CN"
@@ -10223,6 +10607,7 @@
     "names": [
       "tetrahydrofuran"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10252,6 +10637,7 @@
     "names": [
       "toluene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10311,6 +10697,7 @@
     "names": [
       "triethylamine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10340,6 +10727,7 @@
     "names": [
       "acetic acid"
     ],
+    "smiles": "CC(=O)O",
     "ranges": [
       {
         "signals": [
@@ -10369,6 +10757,7 @@
     "names": [
       "acetone"
     ],
+    "smiles": "CC(=O)C",
     "ranges": [
       {
         "signals": [
@@ -10398,6 +10787,7 @@
     "names": [
       "acetonitrile"
     ],
+    "smiles": "CC#N",
     "ranges": [
       {
         "signals": [
@@ -10427,6 +10817,7 @@
     "names": [
       "benzene"
     ],
+    "smiles": "c1ccccc1",
     "ranges": [
       {
         "signals": [
@@ -10446,6 +10837,7 @@
     "names": [
       "tert -butyl alcohol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10475,6 +10867,7 @@
     "names": [
       "carbon dioxide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10494,6 +10887,7 @@
     "names": [
       "carbon disulfide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10513,6 +10907,7 @@
     "names": [
       "carbon tetrachloride"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10532,6 +10927,7 @@
     "names": [
       "chloroform"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10551,6 +10947,7 @@
     "names": [
       "18-crown-6"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10570,6 +10967,7 @@
     "names": [
       "cyclohexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10589,6 +10987,7 @@
     "names": [
       "1,2-dichloroethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10608,6 +11007,7 @@
     "names": [
       "dichloromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10627,6 +11027,7 @@
     "names": [
       "diethyl ether"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10656,6 +11057,7 @@
     "names": [
       "diglyme"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10695,6 +11097,7 @@
     "names": [
       "dimethylformamide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10734,6 +11137,7 @@
     "names": [
       "1,4-dioxane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10753,6 +11157,7 @@
     "names": [
       "DME"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10782,6 +11187,7 @@
     "names": [
       "ethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10801,6 +11207,7 @@
     "names": [
       "ethanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10830,6 +11237,7 @@
     "names": [
       "ethyl acetate"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10879,6 +11287,7 @@
     "names": [
       "ethylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10898,6 +11307,7 @@
     "names": [
       "ethylene glycol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10917,6 +11327,7 @@
     "names": [
       "H greaseᵇ"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "TFE-d₃"
@@ -10925,6 +11336,7 @@
     "names": [
       "hexamethylbenzene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10954,6 +11366,7 @@
     "names": [
       "n-hexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -10993,6 +11406,7 @@
     "names": [
       "HMDSO"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11012,6 +11426,7 @@
     "names": [
       "HMPAᶜ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11031,6 +11446,7 @@
     "names": [
       "imidazole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11060,6 +11476,7 @@
     "names": [
       "methane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11079,6 +11496,7 @@
     "names": [
       "methanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11098,6 +11516,7 @@
     "names": [
       "nitromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11117,6 +11536,7 @@
     "names": [
       "n-pentane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11156,6 +11576,7 @@
     "names": [
       "propane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11185,6 +11606,7 @@
     "names": [
       "2-propanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11214,6 +11636,7 @@
     "names": [
       "propylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11253,6 +11676,7 @@
     "names": [
       "pyridine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11292,6 +11716,7 @@
     "names": [
       "pyrrole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11321,6 +11746,7 @@
     "names": [
       "pyrrolidineᵉ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11350,6 +11776,7 @@
     "names": [
       "silicone grease"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11369,6 +11796,7 @@
     "names": [
       "tetrahydrofuran"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11398,6 +11826,7 @@
     "names": [
       "toluene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11457,6 +11886,7 @@
     "names": [
       "triethylamine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11486,6 +11916,7 @@
     "names": [
       "acetic acid"
     ],
+    "smiles": "CC(=O)O",
     "ranges": [
       {
         "signals": [
@@ -11515,6 +11946,7 @@
     "names": [
       "acetone"
     ],
+    "smiles": "CC(=O)C",
     "ranges": [
       {
         "signals": [
@@ -11544,6 +11976,7 @@
     "names": [
       "acetonitrile"
     ],
+    "smiles": "CC#N",
     "ranges": [
       {
         "signals": [
@@ -11573,6 +12006,7 @@
     "names": [
       "benzene"
     ],
+    "smiles": "c1ccccc1",
     "ranges": [
       {
         "signals": [
@@ -11592,6 +12026,7 @@
     "names": [
       "tert -butyl alcohol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11621,6 +12056,7 @@
     "names": [
       "carbon dioxide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11640,6 +12076,7 @@
     "names": [
       "carbon disulfide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11659,6 +12096,7 @@
     "names": [
       "carbon tetrachloride"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11678,6 +12116,7 @@
     "names": [
       "chloroform"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11697,6 +12136,7 @@
     "names": [
       "18-crown-6"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11716,6 +12156,7 @@
     "names": [
       "cyclohexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11735,6 +12176,7 @@
     "names": [
       "1,2-dichloroethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11754,6 +12196,7 @@
     "names": [
       "dichloromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11773,6 +12216,7 @@
     "names": [
       "diethyl ether"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11802,6 +12246,7 @@
     "names": [
       "diglyme"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11841,6 +12286,7 @@
     "names": [
       "dimethylformamide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11880,6 +12326,7 @@
     "names": [
       "1,4-dioxane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11899,6 +12346,7 @@
     "names": [
       "DME"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11928,6 +12376,7 @@
     "names": [
       "ethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11947,6 +12396,7 @@
     "names": [
       "ethanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -11976,6 +12426,7 @@
     "names": [
       "ethyl acetate"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12025,6 +12476,7 @@
     "names": [
       "ethylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12044,6 +12496,7 @@
     "names": [
       "ethylene glycol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12063,6 +12516,7 @@
     "names": [
       "H greaseᵇ"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "CD₃OD"
@@ -12071,6 +12525,7 @@
     "names": [
       "hexamethylbenzene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12100,6 +12555,7 @@
     "names": [
       "n-hexane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12139,6 +12595,7 @@
     "names": [
       "HMDSO"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12158,6 +12615,7 @@
     "names": [
       "HMPAᶜ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12177,6 +12635,7 @@
     "names": [
       "imidazole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12206,6 +12665,7 @@
     "names": [
       "methane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12225,6 +12685,7 @@
     "names": [
       "methanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12244,6 +12705,7 @@
     "names": [
       "nitromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12263,6 +12725,7 @@
     "names": [
       "n-pentane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12302,6 +12765,7 @@
     "names": [
       "propane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12331,6 +12795,7 @@
     "names": [
       "2-propanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12360,6 +12825,7 @@
     "names": [
       "propylene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12399,6 +12865,7 @@
     "names": [
       "pyridine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12438,6 +12905,7 @@
     "names": [
       "pyrrole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12467,6 +12935,7 @@
     "names": [
       "pyrrolidineᵉ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12496,6 +12965,7 @@
     "names": [
       "silicone grease"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12515,6 +12985,7 @@
     "names": [
       "tetrahydrofuran"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12544,6 +13015,7 @@
     "names": [
       "toluene"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12603,6 +13075,7 @@
     "names": [
       "triethylamine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12632,6 +13105,7 @@
     "names": [
       "acetic acid"
     ],
+    "smiles": "CC(=O)O",
     "ranges": [
       {
         "signals": [
@@ -12661,6 +13135,7 @@
     "names": [
       "acetone"
     ],
+    "smiles": "CC(=O)C",
     "ranges": [
       {
         "signals": [
@@ -12690,6 +13165,7 @@
     "names": [
       "acetonitrile"
     ],
+    "smiles": "CC#N",
     "ranges": [
       {
         "signals": [
@@ -12719,6 +13195,7 @@
     "names": [
       "benzene"
     ],
+    "smiles": "c1ccccc1",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -12727,6 +13204,7 @@
     "names": [
       "tert -butyl alcohol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12756,6 +13234,7 @@
     "names": [
       "carbon dioxide"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -12764,6 +13243,7 @@
     "names": [
       "carbon disulfide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12783,6 +13263,7 @@
     "names": [
       "carbon tetrachloride"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12802,6 +13283,7 @@
     "names": [
       "chloroform"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -12810,6 +13292,7 @@
     "names": [
       "18-crown-6"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12829,6 +13312,7 @@
     "names": [
       "cyclohexane"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -12837,6 +13321,7 @@
     "names": [
       "1,2-dichloroethane"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -12845,6 +13330,7 @@
     "names": [
       "dichloromethane"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -12853,6 +13339,7 @@
     "names": [
       "diethyl ether"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12882,6 +13369,7 @@
     "names": [
       "diglyme"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12921,6 +13409,7 @@
     "names": [
       "dimethylformamide"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12960,6 +13449,7 @@
     "names": [
       "1,4-dioxane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -12979,6 +13469,7 @@
     "names": [
       "DME"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -13008,6 +13499,7 @@
     "names": [
       "ethane"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -13016,6 +13508,7 @@
     "names": [
       "ethanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -13045,6 +13538,7 @@
     "names": [
       "ethyl acetate"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -13094,6 +13588,7 @@
     "names": [
       "ethylene"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -13102,6 +13597,7 @@
     "names": [
       "ethylene glycol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -13121,6 +13617,7 @@
     "names": [
       "H greaseᵇ"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -13129,6 +13626,7 @@
     "names": [
       "hexamethylbenzene"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -13137,6 +13635,7 @@
     "names": [
       "n-hexane"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -13145,6 +13644,7 @@
     "names": [
       "HMDSO"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -13164,6 +13664,7 @@
     "names": [
       "HMPAᶜ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -13183,6 +13684,7 @@
     "names": [
       "imidazole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -13212,6 +13714,7 @@
     "names": [
       "methane"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -13220,6 +13723,7 @@
     "names": [
       "methanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -13239,6 +13743,7 @@
     "names": [
       "nitromethane"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -13258,6 +13763,7 @@
     "names": [
       "n-pentane"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -13266,6 +13772,7 @@
     "names": [
       "propane"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -13274,6 +13781,7 @@
     "names": [
       "2-propanol"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -13303,6 +13811,7 @@
     "names": [
       "propylene"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -13311,6 +13820,7 @@
     "names": [
       "pyridine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -13350,6 +13860,7 @@
     "names": [
       "pyrrole"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -13379,6 +13890,7 @@
     "names": [
       "pyrrolidineᵉ"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -13408,6 +13920,7 @@
     "names": [
       "silicone grease"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -13416,6 +13929,7 @@
     "names": [
       "tetrahydrofuran"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
@@ -13445,6 +13959,7 @@
     "names": [
       "toluene"
     ],
+    "smiles": "",
     "ranges": [],
     "nucleus": "13C",
     "solvent": "D₂O"
@@ -13453,6 +13968,7 @@
     "names": [
       "triethylamine"
     ],
+    "smiles": "",
     "ranges": [
       {
         "signals": [
