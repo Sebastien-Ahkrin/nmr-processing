@@ -30,6 +30,7 @@ test('index.test', () => {
           "to": 20.13,
         },
       ],
+      "smiles": "CC(=O)O",
       "solvent": "THF-d₈",
     }
   `);
