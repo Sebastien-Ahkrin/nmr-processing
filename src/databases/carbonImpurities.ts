@@ -12716,24 +12716,6 @@ export const carbonImpurities: DatabaseNMREntry[] = [
     solvent: 'D₂O',
   },
   {
-    names: ['methanol'],
-    smiles: '',
-    ranges: [
-      {
-        signals: [
-          {
-            delta: null,
-            assignment: 'CH₃',
-          },
-        ],
-        from: null,
-        to: null,
-      },
-    ],
-    nucleus: '13C',
-    solvent: 'D₂O',
-  },
-  {
     names: ['nitromethane'],
     smiles: '',
     ranges: [

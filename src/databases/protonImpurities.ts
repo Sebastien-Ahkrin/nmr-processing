@@ -1,4 +1,4 @@
-import { DatabaseNMREntry } from './DatabaseNMREntry';
+import type { DatabaseNMREntry } from './DatabaseNMREntry';
 
 export const protonImpurities: DatabaseNMREntry[] = [
   {
@@ -7457,26 +7457,6 @@ export const protonImpurities: DatabaseNMREntry[] = [
     solvent: 'C₆D₅Cl',
   },
   {
-    names: ['water'],
-    smiles: 'O',
-    ranges: [
-      {
-        signals: [
-          {
-            js: [],
-            delta: null,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
-        ],
-        from: null,
-        to: null,
-      },
-    ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
-  },
-  {
     names: ['acetic acid'],
     smiles: 'CC(=O)O',
     ranges: [
@@ -8668,26 +8648,6 @@ export const protonImpurities: DatabaseNMREntry[] = [
     ],
     nucleus: '1H',
     solvent: '(CD₃)₂CO',
-  },
-  {
-    names: ['water'],
-    smiles: 'O',
-    ranges: [
-      {
-        signals: [
-          {
-            js: [],
-            delta: null,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
-        ],
-        from: null,
-        to: null,
-      },
-    ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
   },
   {
     names: ['acetic acid'],
