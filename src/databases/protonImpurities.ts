@@ -2,14541 +2,16065 @@ import type { DatabaseNMREntry } from './DatabaseNMREntry';
 
 export const protonImpurities: DatabaseNMREntry[] = [
   {
-    names: ['water'],
-    smiles: 'O',
-    ranges: [
+    "names": [
+      "water"
+    ],
+    "smiles": "O",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.46,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 2.46,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 2.46,
-        to: 2.46,
-      },
+        "from": 2.46,
+        "to": 2.46
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['acetic acid'],
-    smiles: 'CC(=O)O',
-    ranges: [
+    "names": [
+      "acetic acid"
+    ],
+    "smiles": "CC(=O)O",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.89,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.89,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.89,
-        to: 1.89,
-      },
+        "from": 1.89,
+        "to": 1.89
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['acetone'],
-    smiles: 'CC(=O)C',
-    ranges: [
+    "names": [
+      "acetone"
+    ],
+    "smiles": "CC(=O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.05,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.05,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.05,
-        to: 2.05,
-      },
+        "from": 2.05,
+        "to": 2.05
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['acetonitrile'],
-    smiles: 'CC#N',
-    ranges: [
+    "names": [
+      "acetonitrile"
+    ],
+    "smiles": "CC#N",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.95,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.95,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.95,
-        to: 1.95,
-      },
+        "from": 1.95,
+        "to": 1.95
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['benzene'],
-    smiles: 'c1ccccc1',
-    ranges: [
+    "names": [
+      "benzene"
+    ],
+    "smiles": "c1ccccc1",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.31,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.31,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.31,
-        to: 7.31,
-      },
+        "from": 7.31,
+        "to": 7.31
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['tert -butyl alcohol'],
-    smiles: 'CC(C)(C)O',
-    ranges: [
+    "names": [
+      "tert -butyl alcohol"
+    ],
+    "smiles": "CC(C)(C)O",
+    "integration": 9,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.15,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.15,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.15,
-        to: 1.15,
+        "from": 1.15,
+        "to": 1.15
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.16,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 3.16,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 3.16,
-        to: 3.16,
-      },
+        "from": 3.16,
+        "to": 3.16
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['chloroform'],
-    smiles: 'ClC(Cl)Cl',
-    ranges: [
+    "names": [
+      "chloroform"
+    ],
+    "smiles": "ClC(Cl)Cl",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.89,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.89,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.89,
-        to: 7.89,
-      },
+        "from": 7.89,
+        "to": 7.89
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['18-crown-6'],
-    smiles: 'C1COCCOCCOCCOCCOCCO1',
-    ranges: [
+    "names": [
+      "18-crown-6"
+    ],
+    "smiles": "C1COCCOCCOCCOCCOCCO1",
+    "integration": 24,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.57,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.57,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.57,
-        to: 3.57,
-      },
+        "from": 3.57,
+        "to": 3.57
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['cyclohexane'],
-    smiles: 'C1CCCCC1',
-    ranges: [
+    "names": [
+      "cyclohexane"
+    ],
+    "smiles": "C1CCCCC1",
+    "integration": 12,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.44,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.44,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.44,
-        to: 1.44,
-      },
+        "from": 1.44,
+        "to": 1.44
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['1,2-dichloroethane'],
-    smiles: 'ClCCCl',
-    ranges: [
+    "names": [
+      "1,2-dichloroethane"
+    ],
+    "smiles": "ClCCCl",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.77,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.77,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.77,
-        to: 3.77,
-      },
+        "from": 3.77,
+        "to": 3.77
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['dichloromethane'],
-    smiles: 'ClCCl',
-    ranges: [
+    "names": [
+      "dichloromethane"
+    ],
+    "smiles": "ClCCl",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.51,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.51,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.51,
-        to: 5.51,
-      },
+        "from": 5.51,
+        "to": 5.51
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.12,
-            assignment: 'CH₃',
-          },
+            "delta": 1.12,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.12,
-        to: 1.12,
+        "from": 1.12,
+        "to": 1.12
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.38,
-            assignment: 'CH₂',
-          },
+            "delta": 3.38,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.38,
-        to: 3.38,
-      },
+        "from": 3.38,
+        "to": 3.38
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['diglyme'],
-    smiles: 'COCCOCCOC',
-    ranges: [
+    "names": [
+      "diglyme"
+    ],
+    "smiles": "COCCOCCOC",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.43,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.43,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.43,
-        to: 3.43,
+        "from": 3.43,
+        "to": 3.43
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.53,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.53,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.53,
-        to: 3.53,
+        "from": 3.53,
+        "to": 3.53
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.28,
-            multiplicity: 's',
-            assignment: 'OCH₃',
-          },
+            "js": [],
+            "delta": 3.28,
+            "multiplicity": "s",
+            "assignment": "OCH₃"
+          }
         ],
-        from: 3.28,
-        to: 3.28,
-      },
+        "from": 3.28,
+        "to": 3.28
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['dimethylformamide'],
-    smiles: 'C(=O)N(C)C',
-    ranges: [
+    "names": [
+      "dimethylformamide"
+    ],
+    "smiles": "C(=O)N(C)C",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.91,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.91,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.91,
-        to: 7.91,
+        "from": 7.91,
+        "to": 7.91
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.88,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.88,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.88,
-        to: 2.88,
+        "from": 2.88,
+        "to": 2.88
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.76,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.76,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.76,
-        to: 2.76,
-      },
+        "from": 2.76,
+        "to": 2.76
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['1,4-dioxane'],
-    smiles: 'C1COCCOC1',
-    ranges: [
+    "names": [
+      "1,4-dioxane"
+    ],
+    "smiles": "C1COCCOC1",
+    "integration": 8,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.56,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.56,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.56,
-        to: 3.56,
-      },
+        "from": 3.56,
+        "to": 3.56
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['DME', 'diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "DME",
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.28,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.28,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.28,
-        to: 3.28,
+        "from": 3.28,
+        "to": 3.28
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.43,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.43,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.43,
-        to: 3.43,
-      },
+        "from": 3.43,
+        "to": 3.43
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['ethane'],
-    smiles: 'CC',
-    ranges: [
+    "names": [
+      "ethane"
+    ],
+    "smiles": "CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.85,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.85,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.85,
-        to: 0.85,
-      },
+        "from": 0.85,
+        "to": 0.85
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['ethanol'],
-    smiles: 'CCO',
-    ranges: [
+    "names": [
+      "ethanol"
+    ],
+    "smiles": "CCO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.1,
-            assignment: 'CH₃',
-          },
+            "delta": 1.1,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.1,
-        to: 1.1,
+        "from": 1.1,
+        "to": 1.1
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.51,
-            assignment: 'CH₂',
-          },
+            "delta": 3.51,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.51,
-        to: 3.51,
+        "from": 3.51,
+        "to": 3.51
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.3,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 3.3,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 3.3,
-        to: 3.3,
-      },
+        "from": 3.3,
+        "to": 3.3
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['ethyl acetate'],
-    smiles: 'CC(=O)CC',
-    ranges: [
+    "names": [
+      "ethyl acetate"
+    ],
+    "smiles": "CC(=O)CC",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.94,
-            multiplicity: 's',
-            assignment: 'CH₃CO',
-          },
+            "js": [],
+            "delta": 1.94,
+            "multiplicity": "s",
+            "assignment": "CH₃CO"
+          }
         ],
-        from: 1.94,
-        to: 1.94,
+        "from": 1.94,
+        "to": 1.94
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 4.04,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 4.04,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 4.04,
-        to: 4.04,
+        "from": 4.04,
+        "to": 4.04
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.19,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 1.19,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 1.19,
-        to: 1.19,
-      },
+        "from": 1.19,
+        "to": 1.19
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['ethylene'],
-    smiles: 'C=C',
-    ranges: [
+    "names": [
+      "ethylene"
+    ],
+    "smiles": "C=C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.36,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.36,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.36,
-        to: 5.36,
-      },
+        "from": 5.36,
+        "to": 5.36
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['ethylene glycol'],
-    smiles: 'OCCO',
-    ranges: [
+    "names": [
+      "ethylene glycol"
+    ],
+    "smiles": "OCCO",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.48,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.48,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.48,
-        to: 3.48,
-      },
+        "from": 3.48,
+        "to": 3.48
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['H greaseᶠ'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "H greaseᶠ"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [],
-        from: 0.85,
-        to: 0.91,
-        multiplicity: 'm',
+        "signals": [],
+        "from": 0.85,
+        "to": 0.91,
+        "multiplicity": "m"
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.29,
-            multiplicity: 'br s',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.29,
+            "multiplicity": "br s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.29,
-        to: 1.29,
-      },
+        "from": 1.29,
+        "to": 1.29
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['hexamethylbenzene'],
-    smiles: 'CC1=C(C(=C(C(=C1C)C)C)C)C',
-    ranges: [
+    "names": [
+      "hexamethylbenzene"
+    ],
+    "smiles": "CC1=C(C(=C(C(=C1C)C)C)C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.18,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.18,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.18,
-        to: 2.18,
-      },
+        "from": 2.18,
+        "to": 2.18
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['n-hexane'],
-    smiles: 'CCCCCC',
-    ranges: [
+    "names": [
+      "n-hexane"
+    ],
+    "smiles": "CCCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.89,
-            assignment: 'CH₃',
-          },
+            "delta": 0.89,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.89,
-        to: 0.89,
+        "from": 0.89,
+        "to": 0.89
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.29,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.29,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.29,
-        to: 1.29,
-      },
+        "from": 1.29,
+        "to": 1.29
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['HMDSO'],
-    smiles: 'C[Si](C)(C)O[Si](C)(C)C',
-    ranges: [
+    "names": [
+      "HMDSO"
+    ],
+    "smiles": "C[Si](C)(C)O[Si](C)(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.07,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.07,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.07,
-        to: 0.07,
-      },
+        "from": 0.07,
+        "to": 0.07
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['HMPA'],
-    smiles: 'CN(C)P(=O)(N(C)C)N(C)C',
-    ranges: [
+    "names": [
+      "HMPA"
+    ],
+    "smiles": "CN(C)P(=O)(N(C)C)N(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 9.5,
-                multiplicity: 'd',
-              },
+                "coupling": 9.5,
+                "multiplicity": "d"
+              }
             ],
-            delta: 2.58,
-            assignment: 'CH₃',
-          },
+            "delta": 2.58,
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.58,
-        to: 2.58,
-      },
+        "from": 2.58,
+        "to": 2.58
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['hydrogen'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "hydrogen"
+    ],
+    "smiles": "",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.55,
-            multiplicity: 's',
-            assignment: 'H₂',
-          },
+            "js": [],
+            "delta": 4.55,
+            "multiplicity": "s",
+            "assignment": "H₂"
+          }
         ],
-        from: 4.55,
-        to: 4.55,
-      },
+        "from": 4.55,
+        "to": 4.55
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['imidazole'],
-    smiles: 'C1=CN=CN1',
-    ranges: [
+    "names": [
+      "imidazole"
+    ],
+    "smiles": "C1=CN=CN1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.48,
-            multiplicity: 's',
-            assignment: 'CH(2)',
-          },
+            "js": [],
+            "delta": 7.48,
+            "multiplicity": "s",
+            "assignment": "CH(2)"
+          }
         ],
-        from: 7.48,
-        to: 7.48,
+        "from": 7.48,
+        "to": 7.48
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.94,
-            multiplicity: 's',
-            assignment: 'CH(4,5)',
-          },
+            "js": [],
+            "delta": 6.94,
+            "multiplicity": "s",
+            "assignment": "CH(4,5)"
+          }
         ],
-        from: 6.94,
-        to: 6.94,
-      },
+        "from": 6.94,
+        "to": 6.94
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['methane'],
-    smiles: 'C',
-    ranges: [
+    "names": [
+      "methane"
+    ],
+    "smiles": "C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.19,
-            multiplicity: 's',
-            assignment: 'CH₄',
-          },
+            "js": [],
+            "delta": 0.19,
+            "multiplicity": "s",
+            "assignment": "CH₄"
+          }
         ],
-        from: 0.19,
-        to: 0.19,
-      },
+        "from": 0.19,
+        "to": 0.19
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['methanol'],
-    smiles: 'CO',
-    ranges: [
+    "names": [
+      "methanol"
+    ],
+    "smiles": "CO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.27,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.27,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.27,
-        to: 3.27,
+        "from": 3.27,
+        "to": 3.27
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.02,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 3.02,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 3.02,
-        to: 3.02,
-      },
+        "from": 3.02,
+        "to": 3.02
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['nitromethane'],
-    smiles: 'C[N+](=O)[O-]',
-    ranges: [
+    "names": [
+      "nitromethane"
+    ],
+    "smiles": "C[N+](=O)[O-]",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.31,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 4.31,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 4.31,
-        to: 4.31,
-      },
+        "from": 4.31,
+        "to": 4.31
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['n-pentane'],
-    smiles: 'CCCCC',
-    ranges: [
+    "names": [
+      "n-pentane"
+    ],
+    "smiles": "CCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.89,
-            assignment: 'CH₃',
-          },
+            "delta": 0.89,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.89,
-        to: 0.89,
+        "from": 0.89,
+        "to": 0.89
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.31,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.31,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.31,
-        to: 1.31,
-      },
+        "from": 1.31,
+        "to": 1.31
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['propane'],
-    smiles: 'CCC',
-    ranges: [
+    "names": [
+      "propane"
+    ],
+    "smiles": "CCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 't',
-              },
+                "coupling": 7.3,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.9,
-            assignment: 'CH₃',
-          },
+            "delta": 0.9,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.9,
-        to: 0.9,
+        "from": 0.9,
+        "to": 0.9
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 'sept',
-              },
+                "coupling": 7.3,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 1.33,
-            assignment: 'CH₂',
-          },
+            "delta": 1.33,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.33,
-        to: 1.33,
-      },
+        "from": 1.33,
+        "to": 1.33
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['2-propanol'],
-    smiles: 'CC(O)C',
-    ranges: [
+    "names": [
+      "2-propanol"
+    ],
+    "smiles": "CC(O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'd',
-              },
+                "coupling": 6,
+                "multiplicity": "d"
+              }
             ],
-            delta: 1.08,
-            assignment: 'CH₃',
-          },
+            "delta": 1.08,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.08,
-        to: 1.08,
+        "from": 1.08,
+        "to": 1.08
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'sept',
-              },
+                "coupling": 6,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 3.82,
-            assignment: 'CH',
-          },
+            "delta": 3.82,
+            "assignment": "CH"
+          }
         ],
-        from: 3.82,
-        to: 3.82,
-      },
+        "from": 3.82,
+        "to": 3.82
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['propylene'],
-    smiles: 'CC=C',
-    ranges: [
+    "names": [
+      "propylene"
+    ],
+    "smiles": "CC=C",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6.4,
-                multiplicity: 'd',
+                "coupling": 6.4,
+                "multiplicity": "d"
               },
               {
-                coupling: 1.5,
-                multiplicity: 't',
-              },
+                "coupling": 1.5,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.69,
-            assignment: 'CH₃',
-          },
+            "delta": 1.69,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.69,
-        to: 1.69,
+        "from": 1.69,
+        "to": 1.69
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 10,
-                multiplicity: 'd',
-              },
+                "coupling": 10,
+                "multiplicity": "d"
+              }
             ],
-            delta: 4.89,
-            assignment: 'CH₂(1)',
-          },
+            "delta": 4.89,
+            "assignment": "CH₂(1)"
+          }
         ],
-        from: 4.89,
-        to: 4.89,
+        "from": 4.89,
+        "to": 4.89
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 17,
-                multiplicity: 'd',
-              },
+                "coupling": 17,
+                "multiplicity": "d"
+              }
             ],
-            delta: 4.99,
-            assignment: 'CH₂(2)',
-          },
+            "delta": 4.99,
+            "assignment": "CH₂(2)"
+          }
         ],
-        from: 4.99,
-        to: 4.99,
+        "from": 4.99,
+        "to": 4.99
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.79,
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 5.79,
+            "assignment": "CH"
+          }
         ],
-        from: 5.79,
-        to: 5.79,
-      },
+        "from": 5.79,
+        "to": 5.79
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['pyridine'],
-    smiles: 'C1=CC=NC=C1',
-    ranges: [
+    "names": [
+      "pyridine"
+    ],
+    "smiles": "C1=CC=NC=C1",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.54,
-            assignment: 'CH(2,6)',
-          },
+            "js": [],
+            "delta": 8.54,
+            "assignment": "CH(2,6)"
+          }
         ],
-        from: 8.54,
-        to: 8.54,
+        "from": 8.54,
+        "to": 8.54
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.25,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 7.25,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 7.25,
-        to: 7.25,
+        "from": 7.25,
+        "to": 7.25
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.65,
-            assignment: 'CH(4)',
-          },
+            "js": [],
+            "delta": 7.65,
+            "assignment": "CH(4)"
+          }
         ],
-        from: 7.65,
-        to: 7.65,
-      },
+        "from": 7.65,
+        "to": 7.65
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['pyrrole'],
-    smiles: 'C1=CNC=C1',
-    ranges: [
+    "names": [
+      "pyrrole"
+    ],
+    "smiles": "C1=CNC=C1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 9.96,
-            assignment: 'NH',
-          },
+            "js": [],
+            "delta": 9.96,
+            "assignment": "NH"
+          }
         ],
-        from: 9.96,
-        to: 9.96,
+        "from": 9.96,
+        "to": 9.96
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.66,
-            assignment: 'CH(2,5)',
-          },
+            "js": [],
+            "delta": 6.66,
+            "assignment": "CH(2,5)"
+          }
         ],
-        from: 6.66,
-        to: 6.66,
+        "from": 6.66,
+        "to": 6.66
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.02,
-            assignment: 'CH(3,4)',
-          },
+            "js": [],
+            "delta": 6.02,
+            "assignment": "CH(3,4)"
+          }
         ],
-        from: 6.02,
-        to: 6.02,
-      },
+        "from": 6.02,
+        "to": 6.02
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['pyrrolidine'],
-    smiles: 'C1CCNC1',
-    ranges: [
+    "names": [
+      "pyrrolidine"
+    ],
+    "smiles": "C1CCNC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.75,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 2.75,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 2.75,
-        to: 2.75,
+        "from": 2.75,
+        "to": 2.75
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.59,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.59,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.59,
-        to: 1.59,
-      },
+        "from": 1.59,
+        "to": 1.59
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['silicone grease'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "silicone grease"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.11,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.11,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.11,
-        to: 0.11,
-      },
+        "from": 0.11,
+        "to": 0.11
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['tetrahydrofuran'],
-    smiles: 'C1COCC1',
-    ranges: [
+    "names": [
+      "tetrahydrofuran"
+    ],
+    "smiles": "C1COCC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.62,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 3.62,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 3.62,
-        to: 3.62,
+        "from": 3.62,
+        "to": 3.62
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.79,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.79,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.79,
-        to: 1.79,
-      },
+        "from": 1.79,
+        "to": 1.79
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['toluene'],
-    smiles: 'Cc1ccccc1',
-    ranges: [
+    "names": [
+      "toluene"
+    ],
+    "smiles": "Cc1ccccc1",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.31,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.31,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.31,
-        to: 2.31,
+        "from": 2.31,
+        "to": 2.31
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.1,
-            assignment: 'CH(2,4,6)',
-          },
+            "js": [],
+            "delta": 7.1,
+            "assignment": "CH(2,4,6)"
+          }
         ],
-        from: 7.1,
-        to: 7.1,
+        "from": 7.1,
+        "to": 7.1
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.19,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 7.19,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 7.19,
-        to: 7.19,
-      },
+        "from": 7.19,
+        "to": 7.19
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['triethylamine'],
-    smiles: 'CCN(CC)CC',
-    ranges: [
+    "names": [
+      "triethylamine"
+    ],
+    "smiles": "CCN(CC)CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.97,
-            assignment: 'CH₃',
-          },
+            "delta": 0.97,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.97,
-        to: 0.97,
+        "from": 0.97,
+        "to": 0.97
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 2.46,
-            assignment: 'CH₂',
-          },
+            "delta": 2.46,
+            "assignment": "CH₂"
+          }
         ],
-        from: 2.46,
-        to: 2.46,
-      },
+        "from": 2.46,
+        "to": 2.46
+      }
     ],
-    nucleus: '1H',
-    solvent: 'THF-d₈',
+    "nucleus": "1H",
+    "solvent": "THF-d₈"
   },
   {
-    names: ['water'],
-    smiles: 'O',
-    ranges: [
+    "names": [
+      "water"
+    ],
+    "smiles": "O",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.52,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 1.52,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 1.52,
-        to: 1.52,
-      },
+        "from": 1.52,
+        "to": 1.52
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['acetic acid'],
-    smiles: 'CC(=O)O',
-    ranges: [
+    "names": [
+      "acetic acid"
+    ],
+    "smiles": "CC(=O)O",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.06,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.06,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.06,
-        to: 2.06,
-      },
+        "from": 2.06,
+        "to": 2.06
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['acetone'],
-    smiles: 'CC(=O)C',
-    ranges: [
+    "names": [
+      "acetone"
+    ],
+    "smiles": "CC(=O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.12,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.12,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.12,
-        to: 2.12,
-      },
+        "from": 2.12,
+        "to": 2.12
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['acetonitrile'],
-    smiles: 'CC#N',
-    ranges: [
+    "names": [
+      "acetonitrile"
+    ],
+    "smiles": "CC#N",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.97,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.97,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.97,
-        to: 1.97,
-      },
+        "from": 1.97,
+        "to": 1.97
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['benzene'],
-    smiles: 'c1ccccc1',
-    ranges: [
+    "names": [
+      "benzene"
+    ],
+    "smiles": "c1ccccc1",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.35,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.35,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.35,
-        to: 7.35,
-      },
+        "from": 7.35,
+        "to": 7.35
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['tert -butyl alcohol'],
-    smiles: 'CC(C)(C)O',
-    ranges: [
+    "names": [
+      "tert -butyl alcohol"
+    ],
+    "smiles": "CC(C)(C)O",
+    "integration": 9,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.24,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.24,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.24,
-        to: 1.24,
-      },
+        "from": 1.24,
+        "to": 1.24
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['chloroform'],
-    smiles: 'ClC(Cl)Cl',
-    ranges: [
+    "names": [
+      "chloroform"
+    ],
+    "smiles": "ClC(Cl)Cl",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.32,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.32,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.32,
-        to: 7.32,
-      },
+        "from": 7.32,
+        "to": 7.32
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['18-crown-6'],
-    smiles: 'C1COCCOCCOCCOCCOCCO1',
-    ranges: [
+    "names": [
+      "18-crown-6"
+    ],
+    "smiles": "C1COCCOCCOCCOCCOCCO1",
+    "integration": 24,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.59,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.59,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.59,
-        to: 3.59,
-      },
+        "from": 3.59,
+        "to": 3.59
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['cyclohexane'],
-    smiles: 'C1CCCCC1',
-    ranges: [
+    "names": [
+      "cyclohexane"
+    ],
+    "smiles": "C1CCCCC1",
+    "integration": 12,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.44,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.44,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.44,
-        to: 1.44,
-      },
+        "from": 1.44,
+        "to": 1.44
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['1,2-dichloroethane'],
-    smiles: 'ClCCCl',
-    ranges: [
+    "names": [
+      "1,2-dichloroethane"
+    ],
+    "smiles": "ClCCCl",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.76,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.76,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.76,
-        to: 3.76,
-      },
+        "from": 3.76,
+        "to": 3.76
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['dichloromethane'],
-    smiles: 'ClCCl',
-    ranges: [
+    "names": [
+      "dichloromethane"
+    ],
+    "smiles": "ClCCl",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.33,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.33,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.33,
-        to: 5.33,
-      },
+        "from": 5.33,
+        "to": 5.33
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.15,
-            assignment: 'CH₃',
-          },
+            "delta": 1.15,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.15,
-        to: 1.15,
+        "from": 1.15,
+        "to": 1.15
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.43,
-            assignment: 'CH₂',
-          },
+            "delta": 3.43,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.43,
-        to: 3.43,
-      },
+        "from": 3.43,
+        "to": 3.43
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['diglyme'],
-    smiles: 'COCCOCCOC',
-    ranges: [
+    "names": [
+      "diglyme"
+    ],
+    "smiles": "COCCOCCOC",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.57,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.57,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.57,
-        to: 3.57,
+        "from": 3.57,
+        "to": 3.57
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.5,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.5,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.5,
-        to: 3.5,
+        "from": 3.5,
+        "to": 3.5
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.33,
-            multiplicity: 's',
-            assignment: 'OCH₃',
-          },
+            "js": [],
+            "delta": 3.33,
+            "multiplicity": "s",
+            "assignment": "OCH₃"
+          }
         ],
-        from: 3.33,
-        to: 3.33,
-      },
+        "from": 3.33,
+        "to": 3.33
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['dimethylformamide'],
-    smiles: 'C(=O)N(C)C',
-    ranges: [
+    "names": [
+      "dimethylformamide"
+    ],
+    "smiles": "C(=O)N(C)C",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.96,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.96,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.96,
-        to: 7.96,
+        "from": 7.96,
+        "to": 7.96
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.91,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.91,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.91,
-        to: 2.91,
+        "from": 2.91,
+        "to": 2.91
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.82,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.82,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.82,
-        to: 2.82,
-      },
+        "from": 2.82,
+        "to": 2.82
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['1,4-dioxane'],
-    smiles: 'C1COCCOC1',
-    ranges: [
+    "names": [
+      "1,4-dioxane"
+    ],
+    "smiles": "C1COCCOC1",
+    "integration": 8,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.65,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.65,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.65,
-        to: 3.65,
-      },
+        "from": 3.65,
+        "to": 3.65
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['DME', 'diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "DME",
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.34,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.34,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.34,
-        to: 3.34,
+        "from": 3.34,
+        "to": 3.34
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.49,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.49,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.49,
-        to: 3.49,
-      },
+        "from": 3.49,
+        "to": 3.49
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['ethane'],
-    smiles: 'CC',
-    ranges: [
+    "names": [
+      "ethane"
+    ],
+    "smiles": "CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.85,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.85,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.85,
-        to: 0.85,
-      },
+        "from": 0.85,
+        "to": 0.85
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['ethanol'],
-    smiles: 'CCO',
-    ranges: [
+    "names": [
+      "ethanol"
+    ],
+    "smiles": "CCO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.19,
-            assignment: 'CH₃',
-          },
+            "delta": 1.19,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.19,
-        to: 1.19,
+        "from": 1.19,
+        "to": 1.19
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.66,
-            assignment: 'CH₂',
-          },
+            "delta": 3.66,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.66,
-        to: 3.66,
+        "from": 3.66,
+        "to": 3.66
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.33,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 1.33,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 1.33,
-        to: 1.33,
-      },
+        "from": 1.33,
+        "to": 1.33
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['ethyl acetate'],
-    smiles: 'CC(=O)CC',
-    ranges: [
+    "names": [
+      "ethyl acetate"
+    ],
+    "smiles": "CC(=O)CC",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2,
-            multiplicity: 's',
-            assignment: 'CH₃CO',
-          },
+            "js": [],
+            "delta": 2,
+            "multiplicity": "s",
+            "assignment": "CH₃CO"
+          }
         ],
-        from: 2,
-        to: 2,
+        "from": 2,
+        "to": 2
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 4.08,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 4.08,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 4.08,
-        to: 4.08,
+        "from": 4.08,
+        "to": 4.08
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.23,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 1.23,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 1.23,
-        to: 1.23,
-      },
+        "from": 1.23,
+        "to": 1.23
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['ethylene'],
-    smiles: 'C=C',
-    ranges: [
+    "names": [
+      "ethylene"
+    ],
+    "smiles": "C=C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.4,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.4,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.4,
-        to: 5.4,
-      },
+        "from": 5.4,
+        "to": 5.4
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['ethylene glycol'],
-    smiles: 'OCCO',
-    ranges: [
+    "names": [
+      "ethylene glycol"
+    ],
+    "smiles": "OCCO",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.66,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.66,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.66,
-        to: 3.66,
-      },
+        "from": 3.66,
+        "to": 3.66
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['H greaseᶠ'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "H greaseᶠ"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [],
-        from: 0.84,
-        to: 0.9,
-        multiplicity: 'm',
+        "signals": [],
+        "from": 0.84,
+        "to": 0.9,
+        "multiplicity": "m"
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.27,
-            multiplicity: 'br s',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.27,
+            "multiplicity": "br s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.27,
-        to: 1.27,
-      },
+        "from": 1.27,
+        "to": 1.27
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['hexamethylbenzene'],
-    smiles: 'CC1=C(C(=C(C(=C1C)C)C)C)C',
-    ranges: [
+    "names": [
+      "hexamethylbenzene"
+    ],
+    "smiles": "CC1=C(C(=C(C(=C1C)C)C)C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.2,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.2,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.2,
-        to: 2.2,
-      },
+        "from": 2.2,
+        "to": 2.2
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['n-hexane'],
-    smiles: 'CCCCCC',
-    ranges: [
+    "names": [
+      "n-hexane"
+    ],
+    "smiles": "CCCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.89,
-            assignment: 'CH₃',
-          },
+            "delta": 0.89,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.89,
-        to: 0.89,
+        "from": 0.89,
+        "to": 0.89
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.27,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.27,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.27,
-        to: 1.27,
-      },
+        "from": 1.27,
+        "to": 1.27
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['HMDSO'],
-    smiles: 'C[Si](C)(C)O[Si](C)(C)C',
-    ranges: [
+    "names": [
+      "HMDSO"
+    ],
+    "smiles": "C[Si](C)(C)O[Si](C)(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.07,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.07,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.07,
-        to: 0.07,
-      },
+        "from": 0.07,
+        "to": 0.07
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['HMPA'],
-    smiles: 'CN(C)P(=O)(N(C)C)N(C)C',
-    ranges: [
+    "names": [
+      "HMPA"
+    ],
+    "smiles": "CN(C)P(=O)(N(C)C)N(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 9.5,
-                multiplicity: 'd',
-              },
+                "coupling": 9.5,
+                "multiplicity": "d"
+              }
             ],
-            delta: 2.6,
-            assignment: 'CH₃',
-          },
+            "delta": 2.6,
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.6,
-        to: 2.6,
-      },
+        "from": 2.6,
+        "to": 2.6
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['hydrogen'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "hydrogen"
+    ],
+    "smiles": "",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.59,
-            multiplicity: 's',
-            assignment: 'H₂',
-          },
+            "js": [],
+            "delta": 4.59,
+            "multiplicity": "s",
+            "assignment": "H₂"
+          }
         ],
-        from: 4.59,
-        to: 4.59,
-      },
+        "from": 4.59,
+        "to": 4.59
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['imidazole'],
-    smiles: 'C1=CN=CN1',
-    ranges: [
+    "names": [
+      "imidazole"
+    ],
+    "smiles": "C1=CN=CN1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.63,
-            multiplicity: 's',
-            assignment: 'CH(2)',
-          },
+            "js": [],
+            "delta": 7.63,
+            "multiplicity": "s",
+            "assignment": "CH(2)"
+          }
         ],
-        from: 7.63,
-        to: 7.63,
+        "from": 7.63,
+        "to": 7.63
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.07,
-            multiplicity: 's',
-            assignment: 'CH(4,5)',
-          },
+            "js": [],
+            "delta": 7.07,
+            "multiplicity": "s",
+            "assignment": "CH(4,5)"
+          }
         ],
-        from: 7.07,
-        to: 7.07,
-      },
+        "from": 7.07,
+        "to": 7.07
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['methane'],
-    smiles: 'C',
-    ranges: [
+    "names": [
+      "methane"
+    ],
+    "smiles": "C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.21,
-            multiplicity: 's',
-            assignment: 'CH₄',
-          },
+            "js": [],
+            "delta": 0.21,
+            "multiplicity": "s",
+            "assignment": "CH₄"
+          }
         ],
-        from: 0.21,
-        to: 0.21,
-      },
+        "from": 0.21,
+        "to": 0.21
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['methanol'],
-    smiles: 'CO',
-    ranges: [
+    "names": [
+      "methanol"
+    ],
+    "smiles": "CO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.42,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.42,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.42,
-        to: 3.42,
+        "from": 3.42,
+        "to": 3.42
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.09,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 1.09,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 1.09,
-        to: 1.09,
-      },
+        "from": 1.09,
+        "to": 1.09
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['nitromethane'],
-    smiles: 'C[N+](=O)[O-]',
-    ranges: [
+    "names": [
+      "nitromethane"
+    ],
+    "smiles": "C[N+](=O)[O-]",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.31,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 4.31,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 4.31,
-        to: 4.31,
-      },
+        "from": 4.31,
+        "to": 4.31
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['n-pentane'],
-    smiles: 'CCCCC',
-    ranges: [
+    "names": [
+      "n-pentane"
+    ],
+    "smiles": "CCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.89,
-            assignment: 'CH₃',
-          },
+            "delta": 0.89,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.89,
-        to: 0.89,
+        "from": 0.89,
+        "to": 0.89
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.3,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.3,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.3,
-        to: 1.3,
-      },
+        "from": 1.3,
+        "to": 1.3
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['propane'],
-    smiles: 'CCC',
-    ranges: [
+    "names": [
+      "propane"
+    ],
+    "smiles": "CCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 't',
-              },
+                "coupling": 7.3,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.9,
-            assignment: 'CH₃',
-          },
+            "delta": 0.9,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.9,
-        to: 0.9,
+        "from": 0.9,
+        "to": 0.9
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 'sept',
-              },
+                "coupling": 7.3,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 1.32,
-            assignment: 'CH₂',
-          },
+            "delta": 1.32,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.32,
-        to: 1.32,
-      },
+        "from": 1.32,
+        "to": 1.32
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['2-propanol'],
-    smiles: 'CC(O)C',
-    ranges: [
+    "names": [
+      "2-propanol"
+    ],
+    "smiles": "CC(O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'd',
-              },
+                "coupling": 6,
+                "multiplicity": "d"
+              }
             ],
-            delta: 1.17,
-            assignment: 'CH₃',
-          },
+            "delta": 1.17,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.17,
-        to: 1.17,
+        "from": 1.17,
+        "to": 1.17
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'sept',
-              },
+                "coupling": 6,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 3.97,
-            assignment: 'CH',
-          },
+            "delta": 3.97,
+            "assignment": "CH"
+          }
         ],
-        from: 3.97,
-        to: 3.97,
-      },
+        "from": 3.97,
+        "to": 3.97
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['propylene'],
-    smiles: 'CC=C',
-    ranges: [
+    "names": [
+      "propylene"
+    ],
+    "smiles": "CC=C",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6.4,
-                multiplicity: 'd',
+                "coupling": 6.4,
+                "multiplicity": "d"
               },
               {
-                coupling: 1.5,
-                multiplicity: 't',
-              },
+                "coupling": 1.5,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.71,
-            assignment: 'CH₃',
-          },
+            "delta": 1.71,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.71,
-        to: 1.71,
+        "from": 1.71,
+        "to": 1.71
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 10,
-                multiplicity: 'd',
-              },
+                "coupling": 10,
+                "multiplicity": "d"
+              }
             ],
-            delta: 4.93,
-            assignment: 'CH₂(1)',
-          },
+            "delta": 4.93,
+            "assignment": "CH₂(1)"
+          }
         ],
-        from: 4.93,
-        to: 4.93,
+        "from": 4.93,
+        "to": 4.93
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 17,
-                multiplicity: 'd',
-              },
+                "coupling": 17,
+                "multiplicity": "d"
+              }
             ],
-            delta: 5.03,
-            assignment: 'CH₂(2)',
-          },
+            "delta": 5.03,
+            "assignment": "CH₂(2)"
+          }
         ],
-        from: 5.03,
-        to: 5.03,
+        "from": 5.03,
+        "to": 5.03
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.84,
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 5.84,
+            "assignment": "CH"
+          }
         ],
-        from: 5.84,
-        to: 5.84,
-      },
+        "from": 5.84,
+        "to": 5.84
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['pyridine'],
-    smiles: 'C1=CC=NC=C1',
-    ranges: [
+    "names": [
+      "pyridine"
+    ],
+    "smiles": "C1=CC=NC=C1",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.59,
-            assignment: 'CH(2,6)',
-          },
+            "js": [],
+            "delta": 8.59,
+            "assignment": "CH(2,6)"
+          }
         ],
-        from: 8.59,
-        to: 8.59,
+        "from": 8.59,
+        "to": 8.59
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.28,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 7.28,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 7.28,
-        to: 7.28,
+        "from": 7.28,
+        "to": 7.28
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.68,
-            assignment: 'CH(4)',
-          },
+            "js": [],
+            "delta": 7.68,
+            "assignment": "CH(4)"
+          }
         ],
-        from: 7.68,
-        to: 7.68,
-      },
+        "from": 7.68,
+        "to": 7.68
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['pyrrole'],
-    smiles: 'C1=CNC=C1',
-    ranges: [
+    "names": [
+      "pyrrole"
+    ],
+    "smiles": "C1=CNC=C1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.69,
-            assignment: 'NH',
-          },
+            "js": [],
+            "delta": 8.69,
+            "assignment": "NH"
+          }
         ],
-        from: 8.69,
-        to: 8.69,
+        "from": 8.69,
+        "to": 8.69
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.79,
-            assignment: 'CH(2,5)',
-          },
+            "js": [],
+            "delta": 6.79,
+            "assignment": "CH(2,5)"
+          }
         ],
-        from: 6.79,
-        to: 6.79,
+        "from": 6.79,
+        "to": 6.79
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.19,
-            assignment: 'CH(3,4)',
-          },
+            "js": [],
+            "delta": 6.19,
+            "assignment": "CH(3,4)"
+          }
         ],
-        from: 6.19,
-        to: 6.19,
-      },
+        "from": 6.19,
+        "to": 6.19
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['pyrrolidine'],
-    smiles: 'C1CCNC1',
-    ranges: [
+    "names": [
+      "pyrrolidine"
+    ],
+    "smiles": "C1CCNC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.82,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 2.82,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 2.82,
-        to: 2.82,
+        "from": 2.82,
+        "to": 2.82
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.67,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.67,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.67,
-        to: 1.67,
-      },
+        "from": 1.67,
+        "to": 1.67
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['silicone grease'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "silicone grease"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.09,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.09,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.09,
-        to: 0.09,
-      },
+        "from": 0.09,
+        "to": 0.09
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['tetrahydrofuran'],
-    smiles: 'C1COCC1',
-    ranges: [
+    "names": [
+      "tetrahydrofuran"
+    ],
+    "smiles": "C1COCC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.69,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 3.69,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 3.69,
-        to: 3.69,
+        "from": 3.69,
+        "to": 3.69
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.82,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.82,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.82,
-        to: 1.82,
-      },
+        "from": 1.82,
+        "to": 1.82
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['toluene'],
-    smiles: 'Cc1ccccc1',
-    ranges: [
+    "names": [
+      "toluene"
+    ],
+    "smiles": "Cc1ccccc1",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.34,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.34,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.34,
-        to: 2.34,
+        "from": 2.34,
+        "to": 2.34
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.15,
-            assignment: 'CH(2,4,6)',
-          },
+            "js": [],
+            "delta": 7.15,
+            "assignment": "CH(2,4,6)"
+          }
         ],
-        from: 7.15,
-        to: 7.15,
+        "from": 7.15,
+        "to": 7.15
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.24,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 7.24,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 7.24,
-        to: 7.24,
-      },
+        "from": 7.24,
+        "to": 7.24
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['triethylamine'],
-    smiles: 'CCN(CC)CC',
-    ranges: [
+    "names": [
+      "triethylamine"
+    ],
+    "smiles": "CCN(CC)CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.99,
-            assignment: 'CH₃',
-          },
+            "delta": 0.99,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.99,
-        to: 0.99,
+        "from": 0.99,
+        "to": 0.99
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 2.48,
-            assignment: 'CH₂',
-          },
+            "delta": 2.48,
+            "assignment": "CH₂"
+          }
         ],
-        from: 2.48,
-        to: 2.48,
-      },
+        "from": 2.48,
+        "to": 2.48
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₂Cl₂',
+    "nucleus": "1H",
+    "solvent": "CD₂Cl₂"
   },
   {
-    names: ['water'],
-    smiles: 'O',
-    ranges: [
+    "names": [
+      "water"
+    ],
+    "smiles": "O",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.56,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 1.56,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 1.56,
-        to: 1.56,
-      },
+        "from": 1.56,
+        "to": 1.56
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['acetic acid'],
-    smiles: 'CC(=O)O',
-    ranges: [
+    "names": [
+      "acetic acid"
+    ],
+    "smiles": "CC(=O)O",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.1,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.1,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.1,
-        to: 2.1,
-      },
+        "from": 2.1,
+        "to": 2.1
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['acetone'],
-    smiles: 'CC(=O)C',
-    ranges: [
+    "names": [
+      "acetone"
+    ],
+    "smiles": "CC(=O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.17,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.17,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.17,
-        to: 2.17,
-      },
+        "from": 2.17,
+        "to": 2.17
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['acetonitrile'],
-    smiles: 'CC#N',
-    ranges: [
+    "names": [
+      "acetonitrile"
+    ],
+    "smiles": "CC#N",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.1,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.1,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.1,
-        to: 2.1,
-      },
+        "from": 2.1,
+        "to": 2.1
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['benzene'],
-    smiles: 'c1ccccc1',
-    ranges: [
+    "names": [
+      "benzene"
+    ],
+    "smiles": "c1ccccc1",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.36,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.36,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.36,
-        to: 7.36,
-      },
+        "from": 7.36,
+        "to": 7.36
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['tert -butyl alcohol'],
-    smiles: 'CC(C)(C)O',
-    ranges: [
+    "names": [
+      "tert -butyl alcohol"
+    ],
+    "smiles": "CC(C)(C)O",
+    "integration": 9,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.28,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.28,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.28,
-        to: 1.28,
-      },
+        "from": 1.28,
+        "to": 1.28
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['chloroform'],
-    smiles: 'ClC(Cl)Cl',
-    ranges: [
+    "names": [
+      "chloroform"
+    ],
+    "smiles": "ClC(Cl)Cl",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.26,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.26,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.26,
-        to: 7.26,
-      },
+        "from": 7.26,
+        "to": 7.26
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['18-crown-6'],
-    smiles: 'C1COCCOCCOCCOCCOCCO1',
-    ranges: [
+    "names": [
+      "18-crown-6"
+    ],
+    "smiles": "C1COCCOCCOCCOCCOCCO1",
+    "integration": 24,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.67,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.67,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.67,
-        to: 3.67,
-      },
+        "from": 3.67,
+        "to": 3.67
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['cyclohexane'],
-    smiles: 'C1CCCCC1',
-    ranges: [
+    "names": [
+      "cyclohexane"
+    ],
+    "smiles": "C1CCCCC1",
+    "integration": 12,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.43,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.43,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.43,
-        to: 1.43,
-      },
+        "from": 1.43,
+        "to": 1.43
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['1,2-dichloroethane'],
-    smiles: 'ClCCCl',
-    ranges: [
+    "names": [
+      "1,2-dichloroethane"
+    ],
+    "smiles": "ClCCCl",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.73,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.73,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.73,
-        to: 3.73,
-      },
+        "from": 3.73,
+        "to": 3.73
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['dichloromethane'],
-    smiles: 'ClCCl',
-    ranges: [
+    "names": [
+      "dichloromethane"
+    ],
+    "smiles": "ClCCl",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.3,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.3,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.3,
-        to: 5.3,
-      },
+        "from": 5.3,
+        "to": 5.3
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.21,
-            assignment: 'CH₃',
-          },
+            "delta": 1.21,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.21,
-        to: 1.21,
+        "from": 1.21,
+        "to": 1.21
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.48,
-            assignment: 'CH₂',
-          },
+            "delta": 3.48,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.48,
-        to: 3.48,
-      },
+        "from": 3.48,
+        "to": 3.48
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['diglyme'],
-    smiles: 'COCCOCCOC',
-    ranges: [
+    "names": [
+      "diglyme"
+    ],
+    "smiles": "COCCOCCOC",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.65,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.65,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.65,
-        to: 3.65,
+        "from": 3.65,
+        "to": 3.65
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.57,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.57,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.57,
-        to: 3.57,
+        "from": 3.57,
+        "to": 3.57
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.39,
-            multiplicity: 's',
-            assignment: 'OCH₃',
-          },
+            "js": [],
+            "delta": 3.39,
+            "multiplicity": "s",
+            "assignment": "OCH₃"
+          }
         ],
-        from: 3.39,
-        to: 3.39,
-      },
+        "from": 3.39,
+        "to": 3.39
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['dimethylformamide'],
-    smiles: 'C(=O)N(C)C',
-    ranges: [
+    "names": [
+      "dimethylformamide"
+    ],
+    "smiles": "C(=O)N(C)C",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.02,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 8.02,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 8.02,
-        to: 8.02,
+        "from": 8.02,
+        "to": 8.02
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.96,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.96,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.96,
-        to: 2.96,
+        "from": 2.96,
+        "to": 2.96
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.88,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.88,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.88,
-        to: 2.88,
-      },
+        "from": 2.88,
+        "to": 2.88
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['1,4-dioxane'],
-    smiles: 'C1COCCOC1',
-    ranges: [
+    "names": [
+      "1,4-dioxane"
+    ],
+    "smiles": "C1COCCOC1",
+    "integration": 8,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.71,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.71,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.71,
-        to: 3.71,
-      },
+        "from": 3.71,
+        "to": 3.71
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['DME', 'diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "DME",
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.4,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.4,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.4,
-        to: 3.4,
+        "from": 3.4,
+        "to": 3.4
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.55,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.55,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.55,
-        to: 3.55,
-      },
+        "from": 3.55,
+        "to": 3.55
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['ethane'],
-    smiles: 'CC',
-    ranges: [
+    "names": [
+      "ethane"
+    ],
+    "smiles": "CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.87,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.87,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.87,
-        to: 0.87,
-      },
+        "from": 0.87,
+        "to": 0.87
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['ethanol'],
-    smiles: 'CCO',
-    ranges: [
+    "names": [
+      "ethanol"
+    ],
+    "smiles": "CCO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.25,
-            assignment: 'CH₃',
-          },
+            "delta": 1.25,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.25,
-        to: 1.25,
+        "from": 1.25,
+        "to": 1.25
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.72,
-            assignment: 'CH₂',
-          },
+            "delta": 3.72,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.72,
-        to: 3.72,
+        "from": 3.72,
+        "to": 3.72
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.32,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 1.32,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 1.32,
-        to: 1.32,
-      },
+        "from": 1.32,
+        "to": 1.32
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['ethyl acetate'],
-    smiles: 'CC(=O)CC',
-    ranges: [
+    "names": [
+      "ethyl acetate"
+    ],
+    "smiles": "CC(=O)CC",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.05,
-            multiplicity: 's',
-            assignment: 'CH₃CO',
-          },
+            "js": [],
+            "delta": 2.05,
+            "multiplicity": "s",
+            "assignment": "CH₃CO"
+          }
         ],
-        from: 2.05,
-        to: 2.05,
+        "from": 2.05,
+        "to": 2.05
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 4.12,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 4.12,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 4.12,
-        to: 4.12,
+        "from": 4.12,
+        "to": 4.12
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.26,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 1.26,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 1.26,
-        to: 1.26,
-      },
+        "from": 1.26,
+        "to": 1.26
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['ethylene'],
-    smiles: 'C=C',
-    ranges: [
+    "names": [
+      "ethylene"
+    ],
+    "smiles": "C=C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.4,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.4,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.4,
-        to: 5.4,
-      },
+        "from": 5.4,
+        "to": 5.4
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['ethylene glycol'],
-    smiles: 'OCCO',
-    ranges: [
+    "names": [
+      "ethylene glycol"
+    ],
+    "smiles": "OCCO",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.76,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.76,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.76,
-        to: 3.76,
-      },
+        "from": 3.76,
+        "to": 3.76
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['H greaseᶠ'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "H greaseᶠ"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [],
-        from: 0.84,
-        to: 0.87,
-        multiplicity: 'm',
+        "signals": [],
+        "from": 0.84,
+        "to": 0.87,
+        "multiplicity": "m"
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.25,
-            multiplicity: 'br s',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.25,
+            "multiplicity": "br s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.25,
-        to: 1.25,
-      },
+        "from": 1.25,
+        "to": 1.25
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['hexamethylbenzene'],
-    smiles: 'CC1=C(C(=C(C(=C1C)C)C)C)C',
-    ranges: [
+    "names": [
+      "hexamethylbenzene"
+    ],
+    "smiles": "CC1=C(C(=C(C(=C1C)C)C)C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.24,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.24,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.24,
-        to: 2.24,
-      },
+        "from": 2.24,
+        "to": 2.24
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['n-hexane'],
-    smiles: 'CCCCCC',
-    ranges: [
+    "names": [
+      "n-hexane"
+    ],
+    "smiles": "CCCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.88,
-            assignment: 'CH₃',
-          },
+            "delta": 0.88,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.88,
-        to: 0.88,
+        "from": 0.88,
+        "to": 0.88
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.26,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.26,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.26,
-        to: 1.26,
-      },
+        "from": 1.26,
+        "to": 1.26
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['HMDSO'],
-    smiles: 'C[Si](C)(C)O[Si](C)(C)C',
-    ranges: [
+    "names": [
+      "HMDSO"
+    ],
+    "smiles": "C[Si](C)(C)O[Si](C)(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.07,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.07,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.07,
-        to: 0.07,
-      },
+        "from": 0.07,
+        "to": 0.07
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['HMPA'],
-    smiles: 'CN(C)P(=O)(N(C)C)N(C)C',
-    ranges: [
+    "names": [
+      "HMPA"
+    ],
+    "smiles": "CN(C)P(=O)(N(C)C)N(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 9.5,
-                multiplicity: 'd',
-              },
+                "coupling": 9.5,
+                "multiplicity": "d"
+              }
             ],
-            delta: 2.65,
-            assignment: 'CH₃',
-          },
+            "delta": 2.65,
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.65,
-        to: 2.65,
-      },
+        "from": 2.65,
+        "to": 2.65
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['hydrogen'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "hydrogen"
+    ],
+    "smiles": "",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.62,
-            multiplicity: 's',
-            assignment: 'H₂',
-          },
+            "js": [],
+            "delta": 4.62,
+            "multiplicity": "s",
+            "assignment": "H₂"
+          }
         ],
-        from: 4.62,
-        to: 4.62,
-      },
+        "from": 4.62,
+        "to": 4.62
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['imidazole'],
-    smiles: 'C1=CN=CN1',
-    ranges: [
+    "names": [
+      "imidazole"
+    ],
+    "smiles": "C1=CN=CN1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.67,
-            multiplicity: 's',
-            assignment: 'CH(2)',
-          },
+            "js": [],
+            "delta": 7.67,
+            "multiplicity": "s",
+            "assignment": "CH(2)"
+          }
         ],
-        from: 7.67,
-        to: 7.67,
+        "from": 7.67,
+        "to": 7.67
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.1,
-            multiplicity: 's',
-            assignment: 'CH(4,5)',
-          },
+            "js": [],
+            "delta": 7.1,
+            "multiplicity": "s",
+            "assignment": "CH(4,5)"
+          }
         ],
-        from: 7.1,
-        to: 7.1,
-      },
+        "from": 7.1,
+        "to": 7.1
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['methane'],
-    smiles: 'C',
-    ranges: [
+    "names": [
+      "methane"
+    ],
+    "smiles": "C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.22,
-            multiplicity: 's',
-            assignment: 'CH₄',
-          },
+            "js": [],
+            "delta": 0.22,
+            "multiplicity": "s",
+            "assignment": "CH₄"
+          }
         ],
-        from: 0.22,
-        to: 0.22,
-      },
+        "from": 0.22,
+        "to": 0.22
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['methanol'],
-    smiles: 'CO',
-    ranges: [
+    "names": [
+      "methanol"
+    ],
+    "smiles": "CO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.49,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.49,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.49,
-        to: 3.49,
+        "from": 3.49,
+        "to": 3.49
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.09,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 1.09,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 1.09,
-        to: 1.09,
-      },
+        "from": 1.09,
+        "to": 1.09
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['nitromethane'],
-    smiles: 'C[N+](=O)[O-]',
-    ranges: [
+    "names": [
+      "nitromethane"
+    ],
+    "smiles": "C[N+](=O)[O-]",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.33,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 4.33,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 4.33,
-        to: 4.33,
-      },
+        "from": 4.33,
+        "to": 4.33
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['n-pentane'],
-    smiles: 'CCCCC',
-    ranges: [
+    "names": [
+      "n-pentane"
+    ],
+    "smiles": "CCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.88,
-            assignment: 'CH₃',
-          },
+            "delta": 0.88,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.88,
-        to: 0.88,
+        "from": 0.88,
+        "to": 0.88
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.27,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.27,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.27,
-        to: 1.27,
-      },
+        "from": 1.27,
+        "to": 1.27
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['propane'],
-    smiles: 'CCC',
-    ranges: [
+    "names": [
+      "propane"
+    ],
+    "smiles": "CCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 't',
-              },
+                "coupling": 7.3,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.9,
-            assignment: 'CH₃',
-          },
+            "delta": 0.9,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.9,
-        to: 0.9,
+        "from": 0.9,
+        "to": 0.9
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 'sept',
-              },
+                "coupling": 7.3,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 1.32,
-            assignment: 'CH₂',
-          },
+            "delta": 1.32,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.32,
-        to: 1.32,
-      },
+        "from": 1.32,
+        "to": 1.32
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['2-propanol'],
-    smiles: 'CC(O)C',
-    ranges: [
+    "names": [
+      "2-propanol"
+    ],
+    "smiles": "CC(O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'd',
-              },
+                "coupling": 6,
+                "multiplicity": "d"
+              }
             ],
-            delta: 1.22,
-            assignment: 'CH₃',
-          },
+            "delta": 1.22,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.22,
-        to: 1.22,
+        "from": 1.22,
+        "to": 1.22
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'sept',
-              },
+                "coupling": 6,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 4.04,
-            assignment: 'CH',
-          },
+            "delta": 4.04,
+            "assignment": "CH"
+          }
         ],
-        from: 4.04,
-        to: 4.04,
-      },
+        "from": 4.04,
+        "to": 4.04
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['propylene'],
-    smiles: 'CC=C',
-    ranges: [
+    "names": [
+      "propylene"
+    ],
+    "smiles": "CC=C",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6.4,
-                multiplicity: 'd',
+                "coupling": 6.4,
+                "multiplicity": "d"
               },
               {
-                coupling: 1.5,
-                multiplicity: 't',
-              },
+                "coupling": 1.5,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.73,
-            assignment: 'CH₃',
-          },
+            "delta": 1.73,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.73,
-        to: 1.73,
+        "from": 1.73,
+        "to": 1.73
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 10,
-                multiplicity: 'd',
-              },
+                "coupling": 10,
+                "multiplicity": "d"
+              }
             ],
-            delta: 4.94,
-            assignment: 'CH₂(1)',
-          },
+            "delta": 4.94,
+            "assignment": "CH₂(1)"
+          }
         ],
-        from: 4.94,
-        to: 4.94,
+        "from": 4.94,
+        "to": 4.94
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 17,
-                multiplicity: 'd',
-              },
+                "coupling": 17,
+                "multiplicity": "d"
+              }
             ],
-            delta: 5.03,
-            assignment: 'CH₂(2)',
-          },
+            "delta": 5.03,
+            "assignment": "CH₂(2)"
+          }
         ],
-        from: 5.03,
-        to: 5.03,
+        "from": 5.03,
+        "to": 5.03
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.83,
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 5.83,
+            "assignment": "CH"
+          }
         ],
-        from: 5.83,
-        to: 5.83,
-      },
+        "from": 5.83,
+        "to": 5.83
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['pyridine'],
-    smiles: 'C1=CC=NC=C1',
-    ranges: [
+    "names": [
+      "pyridine"
+    ],
+    "smiles": "C1=CC=NC=C1",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.62,
-            assignment: 'CH(2,6)',
-          },
+            "js": [],
+            "delta": 8.62,
+            "assignment": "CH(2,6)"
+          }
         ],
-        from: 8.62,
-        to: 8.62,
+        "from": 8.62,
+        "to": 8.62
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.29,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 7.29,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 7.29,
-        to: 7.29,
+        "from": 7.29,
+        "to": 7.29
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.68,
-            assignment: 'CH(4)',
-          },
+            "js": [],
+            "delta": 7.68,
+            "assignment": "CH(4)"
+          }
         ],
-        from: 7.68,
-        to: 7.68,
-      },
+        "from": 7.68,
+        "to": 7.68
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['pyrrole'],
-    smiles: 'C1=CNC=C1',
-    ranges: [
+    "names": [
+      "pyrrole"
+    ],
+    "smiles": "C1=CNC=C1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.4,
-            assignment: 'NH',
-          },
+            "js": [],
+            "delta": 8.4,
+            "assignment": "NH"
+          }
         ],
-        from: 8.4,
-        to: 8.4,
+        "from": 8.4,
+        "to": 8.4
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.83,
-            assignment: 'CH(2,5)',
-          },
+            "js": [],
+            "delta": 6.83,
+            "assignment": "CH(2,5)"
+          }
         ],
-        from: 6.83,
-        to: 6.83,
+        "from": 6.83,
+        "to": 6.83
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.26,
-            assignment: 'CH(3,4)',
-          },
+            "js": [],
+            "delta": 6.26,
+            "assignment": "CH(3,4)"
+          }
         ],
-        from: 6.26,
-        to: 6.26,
-      },
+        "from": 6.26,
+        "to": 6.26
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['pyrrolidine'],
-    smiles: 'C1CCNC1',
-    ranges: [
+    "names": [
+      "pyrrolidine"
+    ],
+    "smiles": "C1CCNC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.87,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 2.87,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 2.87,
-        to: 2.87,
+        "from": 2.87,
+        "to": 2.87
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.68,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.68,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.68,
-        to: 1.68,
-      },
+        "from": 1.68,
+        "to": 1.68
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['silicone grease'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "silicone grease"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.07,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.07,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.07,
-        to: 0.07,
-      },
+        "from": 0.07,
+        "to": 0.07
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['tetrahydrofuran'],
-    smiles: 'C1COCC1',
-    ranges: [
+    "names": [
+      "tetrahydrofuran"
+    ],
+    "smiles": "C1COCC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.76,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 3.76,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 3.76,
-        to: 3.76,
+        "from": 3.76,
+        "to": 3.76
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.85,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.85,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.85,
-        to: 1.85,
-      },
+        "from": 1.85,
+        "to": 1.85
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['toluene'],
-    smiles: 'Cc1ccccc1',
-    ranges: [
+    "names": [
+      "toluene"
+    ],
+    "smiles": "Cc1ccccc1",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.36,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.36,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.36,
-        to: 2.36,
+        "from": 2.36,
+        "to": 2.36
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.17,
-            assignment: 'CH(2,4,6)',
-          },
+            "js": [],
+            "delta": 7.17,
+            "assignment": "CH(2,4,6)"
+          }
         ],
-        from: 7.17,
-        to: 7.17,
+        "from": 7.17,
+        "to": 7.17
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.25,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 7.25,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 7.25,
-        to: 7.25,
-      },
+        "from": 7.25,
+        "to": 7.25
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['triethylamine'],
-    smiles: 'CCN(CC)CC',
-    ranges: [
+    "names": [
+      "triethylamine"
+    ],
+    "smiles": "CCN(CC)CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.03,
-            assignment: 'CH₃',
-          },
+            "delta": 1.03,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.03,
-        to: 1.03,
+        "from": 1.03,
+        "to": 1.03
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 2.53,
-            assignment: 'CH₂',
-          },
+            "delta": 2.53,
+            "assignment": "CH₂"
+          }
         ],
-        from: 2.53,
-        to: 2.53,
-      },
+        "from": 2.53,
+        "to": 2.53
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CDCl₃',
+    "nucleus": "1H",
+    "solvent": "CDCl₃"
   },
   {
-    names: ['water'],
-    smiles: 'O',
-    ranges: [
+    "names": [
+      "water"
+    ],
+    "smiles": "O",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.43,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 0.43,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 0.43,
-        to: 0.43,
-      },
+        "from": 0.43,
+        "to": 0.43
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['acetic acid'],
-    smiles: 'CC(=O)O',
-    ranges: [
+    "names": [
+      "acetic acid"
+    ],
+    "smiles": "CC(=O)O",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.57,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.57,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.57,
-        to: 1.57,
-      },
+        "from": 1.57,
+        "to": 1.57
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['acetone'],
-    smiles: 'CC(=O)C',
-    ranges: [
+    "names": [
+      "acetone"
+    ],
+    "smiles": "CC(=O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.57,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.57,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.57,
-        to: 1.57,
-      },
+        "from": 1.57,
+        "to": 1.57
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['acetonitrile'],
-    smiles: 'CC#N',
-    ranges: [
+    "names": [
+      "acetonitrile"
+    ],
+    "smiles": "CC#N",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.69,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.69,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.69,
-        to: 0.69,
-      },
+        "from": 0.69,
+        "to": 0.69
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['benzene'],
-    smiles: 'c1ccccc1',
-    ranges: [
+    "names": [
+      "benzene"
+    ],
+    "smiles": "c1ccccc1",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.12,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.12,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.12,
-        to: 7.12,
-      },
+        "from": 7.12,
+        "to": 7.12
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['tert -butyl alcohol'],
-    smiles: 'CC(C)(C)O',
-    ranges: [
+    "names": [
+      "tert -butyl alcohol"
+    ],
+    "smiles": "CC(C)(C)O",
+    "integration": 9,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.03,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.03,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.03,
-        to: 1.03,
+        "from": 1.03,
+        "to": 1.03
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.58,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 0.58,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 0.58,
-        to: 0.58,
-      },
+        "from": 0.58,
+        "to": 0.58
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['chloroform'],
-    smiles: 'ClC(Cl)Cl',
-    ranges: [
+    "names": [
+      "chloroform"
+    ],
+    "smiles": "ClC(Cl)Cl",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.1,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 6.1,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 6.1,
-        to: 6.1,
-      },
+        "from": 6.1,
+        "to": 6.1
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['18-crown-6'],
-    smiles: 'C1COCCOCCOCCOCCOCCO1',
-    ranges: [
+    "names": [
+      "18-crown-6"
+    ],
+    "smiles": "C1COCCOCCOCCOCCOCCO1",
+    "integration": 24,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.36,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.36,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.36,
-        to: 3.36,
-      },
+        "from": 3.36,
+        "to": 3.36
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['cyclohexane'],
-    smiles: 'C1CCCCC1',
-    ranges: [
+    "names": [
+      "cyclohexane"
+    ],
+    "smiles": "C1CCCCC1",
+    "integration": 12,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.4,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.4,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.4,
-        to: 1.4,
-      },
+        "from": 1.4,
+        "to": 1.4
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['1,2-dichloroethane'],
-    smiles: 'ClCCCl',
-    ranges: [
+    "names": [
+      "1,2-dichloroethane"
+    ],
+    "smiles": "ClCCCl",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.91,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 2.91,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 2.91,
-        to: 2.91,
-      },
+        "from": 2.91,
+        "to": 2.91
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['dichloromethane'],
-    smiles: 'ClCCl',
-    ranges: [
+    "names": [
+      "dichloromethane"
+    ],
+    "smiles": "ClCCl",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.32,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 4.32,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 4.32,
-        to: 4.32,
-      },
+        "from": 4.32,
+        "to": 4.32
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.1,
-            assignment: 'CH₃',
-          },
+            "delta": 1.1,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.1,
-        to: 1.1,
+        "from": 1.1,
+        "to": 1.1
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.25,
-            assignment: 'CH₂',
-          },
+            "delta": 3.25,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.25,
-        to: 3.25,
-      },
+        "from": 3.25,
+        "to": 3.25
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['diglyme'],
-    smiles: 'COCCOCCOC',
-    ranges: [
+    "names": [
+      "diglyme"
+    ],
+    "smiles": "COCCOCCOC",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.43,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.43,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.43,
-        to: 3.43,
+        "from": 3.43,
+        "to": 3.43
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.31,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.31,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.31,
-        to: 3.31,
+        "from": 3.31,
+        "to": 3.31
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.12,
-            multiplicity: 's',
-            assignment: 'OCH₃',
-          },
+            "js": [],
+            "delta": 3.12,
+            "multiplicity": "s",
+            "assignment": "OCH₃"
+          }
         ],
-        from: 3.12,
-        to: 3.12,
-      },
+        "from": 3.12,
+        "to": 3.12
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['dimethylformamide'],
-    smiles: 'C(=O)N(C)C',
-    ranges: [
+    "names": [
+      "dimethylformamide"
+    ],
+    "smiles": "C(=O)N(C)C",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.57,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.57,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.57,
-        to: 7.57,
+        "from": 7.57,
+        "to": 7.57
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.37,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.37,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.37,
-        to: 2.37,
+        "from": 2.37,
+        "to": 2.37
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.96,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.96,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.96,
-        to: 1.96,
-      },
+        "from": 1.96,
+        "to": 1.96
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['1,4-dioxane'],
-    smiles: 'C1COCCOC1',
-    ranges: [
+    "names": [
+      "1,4-dioxane"
+    ],
+    "smiles": "C1COCCOC1",
+    "integration": 8,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.33,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.33,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.33,
-        to: 3.33,
-      },
+        "from": 3.33,
+        "to": 3.33
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['DME', 'diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "DME",
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.12,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.12,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.12,
-        to: 3.12,
+        "from": 3.12,
+        "to": 3.12
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.31,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.31,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.31,
-        to: 3.31,
-      },
+        "from": 3.31,
+        "to": 3.31
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['ethane'],
-    smiles: 'CC',
-    ranges: [
+    "names": [
+      "ethane"
+    ],
+    "smiles": "CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.81,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.81,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.81,
-        to: 0.81,
-      },
+        "from": 0.81,
+        "to": 0.81
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['ethanol'],
-    smiles: 'CCO',
-    ranges: [
+    "names": [
+      "ethanol"
+    ],
+    "smiles": "CCO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.97,
-            assignment: 'CH₃',
-          },
+            "delta": 0.97,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.97,
-        to: 0.97,
+        "from": 0.97,
+        "to": 0.97
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.36,
-            assignment: 'CH₂',
-          },
+            "delta": 3.36,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.36,
-        to: 3.36,
+        "from": 3.36,
+        "to": 3.36
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.83,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 0.83,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 0.83,
-        to: 0.83,
-      },
+        "from": 0.83,
+        "to": 0.83
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['ethyl acetate'],
-    smiles: 'CC(=O)CC',
-    ranges: [
+    "names": [
+      "ethyl acetate"
+    ],
+    "smiles": "CC(=O)CC",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.69,
-            multiplicity: 's',
-            assignment: 'CH₃CO',
-          },
+            "js": [],
+            "delta": 1.69,
+            "multiplicity": "s",
+            "assignment": "CH₃CO"
+          }
         ],
-        from: 1.69,
-        to: 1.69,
+        "from": 1.69,
+        "to": 1.69
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.87,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 3.87,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 3.87,
-        to: 3.87,
+        "from": 3.87,
+        "to": 3.87
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.94,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 0.94,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 0.94,
-        to: 0.94,
-      },
+        "from": 0.94,
+        "to": 0.94
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['ethylene'],
-    smiles: 'C=C',
-    ranges: [
+    "names": [
+      "ethylene"
+    ],
+    "smiles": "C=C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.25,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.25,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.25,
-        to: 5.25,
-      },
+        "from": 5.25,
+        "to": 5.25
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['ethylene glycol'],
-    smiles: 'OCCO',
-    ranges: [
+    "names": [
+      "ethylene glycol"
+    ],
+    "smiles": "OCCO",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.36,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.36,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.36,
-        to: 3.36,
-      },
+        "from": 3.36,
+        "to": 3.36
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['H greaseᶠ'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "H greaseᶠ"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [],
-        from: 0.89,
-        to: 0.96,
-        multiplicity: 'm',
+        "signals": [],
+        "from": 0.89,
+        "to": 0.96,
+        "multiplicity": "m"
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.33,
-            multiplicity: 'br s',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.33,
+            "multiplicity": "br s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.33,
-        to: 1.33,
-      },
+        "from": 1.33,
+        "to": 1.33
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['hexamethylbenzene'],
-    smiles: 'CC1=C(C(=C(C(=C1C)C)C)C)C',
-    ranges: [
+    "names": [
+      "hexamethylbenzene"
+    ],
+    "smiles": "CC1=C(C(=C(C(=C1C)C)C)C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.1,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.1,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.1,
-        to: 2.1,
-      },
+        "from": 2.1,
+        "to": 2.1
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['n-hexane'],
-    smiles: 'CCCCCC',
-    ranges: [
+    "names": [
+      "n-hexane"
+    ],
+    "smiles": "CCCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.88,
-            assignment: 'CH₃',
-          },
+            "delta": 0.88,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.88,
-        to: 0.88,
+        "from": 0.88,
+        "to": 0.88
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.22,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.22,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.22,
-        to: 1.22,
-      },
+        "from": 1.22,
+        "to": 1.22
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['HMDSO'],
-    smiles: 'C[Si](C)(C)O[Si](C)(C)C',
-    ranges: [
+    "names": [
+      "HMDSO"
+    ],
+    "smiles": "C[Si](C)(C)O[Si](C)(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.1,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.1,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.1,
-        to: 0.1,
-      },
+        "from": 0.1,
+        "to": 0.1
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['HMPA'],
-    smiles: 'CN(C)P(=O)(N(C)C)N(C)C',
-    ranges: [
+    "names": [
+      "HMPA"
+    ],
+    "smiles": "CN(C)P(=O)(N(C)C)N(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 9.5,
-                multiplicity: 'd',
-              },
+                "coupling": 9.5,
+                "multiplicity": "d"
+              }
             ],
-            delta: 2.42,
-            assignment: 'CH₃',
-          },
+            "delta": 2.42,
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.42,
-        to: 2.42,
-      },
+        "from": 2.42,
+        "to": 2.42
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['hydrogen'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "hydrogen"
+    ],
+    "smiles": "",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.5,
-            multiplicity: 's',
-            assignment: 'H₂',
-          },
+            "js": [],
+            "delta": 4.5,
+            "multiplicity": "s",
+            "assignment": "H₂"
+          }
         ],
-        from: 4.5,
-        to: 4.5,
-      },
+        "from": 4.5,
+        "to": 4.5
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['imidazole'],
-    smiles: 'C1=CN=CN1',
-    ranges: [
+    "names": [
+      "imidazole"
+    ],
+    "smiles": "C1=CN=CN1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.3,
-            multiplicity: 's',
-            assignment: 'CH(2)',
-          },
+            "js": [],
+            "delta": 7.3,
+            "multiplicity": "s",
+            "assignment": "CH(2)"
+          }
         ],
-        from: 7.3,
-        to: 7.3,
+        "from": 7.3,
+        "to": 7.3
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.86,
-            multiplicity: 's',
-            assignment: 'CH(4,5)',
-          },
+            "js": [],
+            "delta": 6.86,
+            "multiplicity": "s",
+            "assignment": "CH(4,5)"
+          }
         ],
-        from: 6.86,
-        to: 6.86,
-      },
+        "from": 6.86,
+        "to": 6.86
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['methane'],
-    smiles: 'C',
-    ranges: [
+    "names": [
+      "methane"
+    ],
+    "smiles": "C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.17,
-            multiplicity: 's',
-            assignment: 'CH₄',
-          },
+            "js": [],
+            "delta": 0.17,
+            "multiplicity": "s",
+            "assignment": "CH₄"
+          }
         ],
-        from: 0.17,
-        to: 0.17,
-      },
+        "from": 0.17,
+        "to": 0.17
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['methanol'],
-    smiles: 'CO',
-    ranges: [
+    "names": [
+      "methanol"
+    ],
+    "smiles": "CO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.03,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.03,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.03,
-        to: 3.03,
-      },
+        "from": 3.03,
+        "to": 3.03
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['nitromethane'],
-    smiles: 'C[N+](=O)[O-]',
-    ranges: [
+    "names": [
+      "nitromethane"
+    ],
+    "smiles": "C[N+](=O)[O-]",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.01,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.01,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.01,
-        to: 3.01,
-      },
+        "from": 3.01,
+        "to": 3.01
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['n-pentane'],
-    smiles: 'CCCCC',
-    ranges: [
+    "names": [
+      "n-pentane"
+    ],
+    "smiles": "CCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.87,
-            assignment: 'CH₃',
-          },
+            "delta": 0.87,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.87,
-        to: 0.87,
+        "from": 0.87,
+        "to": 0.87
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.25,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.25,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.25,
-        to: 1.25,
-      },
+        "from": 1.25,
+        "to": 1.25
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['propane'],
-    smiles: 'CCC',
-    ranges: [
+    "names": [
+      "propane"
+    ],
+    "smiles": "CCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 't',
-              },
+                "coupling": 7.3,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.89,
-            assignment: 'CH₃',
-          },
+            "delta": 0.89,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.89,
-        to: 0.89,
+        "from": 0.89,
+        "to": 0.89
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 'sept',
-              },
+                "coupling": 7.3,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 1.32,
-            assignment: 'CH₂',
-          },
+            "delta": 1.32,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.32,
-        to: 1.32,
-      },
+        "from": 1.32,
+        "to": 1.32
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['2-propanol'],
-    smiles: 'CC(O)C',
-    ranges: [
+    "names": [
+      "2-propanol"
+    ],
+    "smiles": "CC(O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'd',
-              },
+                "coupling": 6,
+                "multiplicity": "d"
+              }
             ],
-            delta: 0.95,
-            assignment: 'CH₃',
-          },
+            "delta": 0.95,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.95,
-        to: 0.95,
+        "from": 0.95,
+        "to": 0.95
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'sept',
-              },
+                "coupling": 6,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 3.65,
-            assignment: 'CH',
-          },
+            "delta": 3.65,
+            "assignment": "CH"
+          }
         ],
-        from: 3.65,
-        to: 3.65,
-      },
+        "from": 3.65,
+        "to": 3.65
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['propylene'],
-    smiles: 'CC=C',
-    ranges: [
+    "names": [
+      "propylene"
+    ],
+    "smiles": "CC=C",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6.4,
-                multiplicity: 'd',
+                "coupling": 6.4,
+                "multiplicity": "d"
               },
               {
-                coupling: 1.5,
-                multiplicity: 't',
-              },
+                "coupling": 1.5,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.55,
-            assignment: 'CH₃',
-          },
+            "delta": 1.55,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.55,
-        to: 1.55,
+        "from": 1.55,
+        "to": 1.55
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 10,
-                multiplicity: 'd',
-              },
+                "coupling": 10,
+                "multiplicity": "d"
+              }
             ],
-            delta: 4.92,
-            assignment: 'CH₂(1)',
-          },
+            "delta": 4.92,
+            "assignment": "CH₂(1)"
+          }
         ],
-        from: 4.92,
-        to: 4.92,
+        "from": 4.92,
+        "to": 4.92
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 17,
-                multiplicity: 'd',
-              },
+                "coupling": 17,
+                "multiplicity": "d"
+              }
             ],
-            delta: 4.98,
-            assignment: 'CH₂(2)',
-          },
+            "delta": 4.98,
+            "assignment": "CH₂(2)"
+          }
         ],
-        from: 4.98,
-        to: 4.98,
+        "from": 4.98,
+        "to": 4.98
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.7,
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 5.7,
+            "assignment": "CH"
+          }
         ],
-        from: 5.7,
-        to: 5.7,
-      },
+        "from": 5.7,
+        "to": 5.7
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['pyridine'],
-    smiles: 'C1=CC=NC=C1',
-    ranges: [
+    "names": [
+      "pyridine"
+    ],
+    "smiles": "C1=CC=NC=C1",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.47,
-            assignment: 'CH(2,6)',
-          },
+            "js": [],
+            "delta": 8.47,
+            "assignment": "CH(2,6)"
+          }
         ],
-        from: 8.47,
-        to: 8.47,
+        "from": 8.47,
+        "to": 8.47
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.67,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 6.67,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 6.67,
-        to: 6.67,
+        "from": 6.67,
+        "to": 6.67
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.99,
-            assignment: 'CH(4)',
-          },
+            "js": [],
+            "delta": 6.99,
+            "assignment": "CH(4)"
+          }
         ],
-        from: 6.99,
-        to: 6.99,
-      },
+        "from": 6.99,
+        "to": 6.99
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['pyrrole'],
-    smiles: 'C1=CNC=C1',
-    ranges: [
+    "names": [
+      "pyrrole"
+    ],
+    "smiles": "C1=CNC=C1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.71,
-            assignment: 'NH',
-          },
+            "js": [],
+            "delta": 7.71,
+            "assignment": "NH"
+          }
         ],
-        from: 7.71,
-        to: 7.71,
+        "from": 7.71,
+        "to": 7.71
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.43,
-            assignment: 'CH(2,5)',
-          },
+            "js": [],
+            "delta": 6.43,
+            "assignment": "CH(2,5)"
+          }
         ],
-        from: 6.43,
-        to: 6.43,
+        "from": 6.43,
+        "to": 6.43
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.27,
-            assignment: 'CH(3,4)',
-          },
+            "js": [],
+            "delta": 6.27,
+            "assignment": "CH(3,4)"
+          }
         ],
-        from: 6.27,
-        to: 6.27,
-      },
+        "from": 6.27,
+        "to": 6.27
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['pyrrolidine'],
-    smiles: 'C1CCNC1',
-    ranges: [
+    "names": [
+      "pyrrolidine"
+    ],
+    "smiles": "C1CCNC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.54,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 2.54,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 2.54,
-        to: 2.54,
+        "from": 2.54,
+        "to": 2.54
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.36,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.36,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.36,
-        to: 1.36,
-      },
+        "from": 1.36,
+        "to": 1.36
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['silicone grease'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "silicone grease"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.26,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.26,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.26,
-        to: 0.26,
-      },
+        "from": 0.26,
+        "to": 0.26
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['tetrahydrofuran'],
-    smiles: 'C1COCC1',
-    ranges: [
+    "names": [
+      "tetrahydrofuran"
+    ],
+    "smiles": "C1COCC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.54,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 3.54,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 3.54,
-        to: 3.54,
+        "from": 3.54,
+        "to": 3.54
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.43,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.43,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.43,
-        to: 1.43,
-      },
+        "from": 1.43,
+        "to": 1.43
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['toluene'],
-    smiles: 'Cc1ccccc1',
-    ranges: [
+    "names": [
+      "toluene"
+    ],
+    "smiles": "Cc1ccccc1",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.11,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.11,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.11,
-        to: 2.11,
+        "from": 2.11,
+        "to": 2.11
       },
       {
-        signals: [],
-        from: 6.96,
-        to: 7.01,
-        multiplicity: 'm',
+        "signals": [],
+        "from": 6.96,
+        "to": 7.01,
+        "multiplicity": "m"
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.09,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 7.09,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 7.09,
-        to: 7.09,
-      },
+        "from": 7.09,
+        "to": 7.09
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['triethylamine'],
-    smiles: 'CCN(CC)CC',
-    ranges: [
+    "names": [
+      "triethylamine"
+    ],
+    "smiles": "CCN(CC)CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.95,
-            assignment: 'CH₃',
-          },
+            "delta": 0.95,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.95,
-        to: 0.95,
+        "from": 0.95,
+        "to": 0.95
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 2.39,
-            assignment: 'CH₂',
-          },
+            "delta": 2.39,
+            "assignment": "CH₂"
+          }
         ],
-        from: 2.39,
-        to: 2.39,
-      },
+        "from": 2.39,
+        "to": 2.39
+      }
     ],
-    nucleus: '1H',
-    solvent: 'toluene-d₈',
+    "nucleus": "1H",
+    "solvent": "toluene-d₈"
   },
   {
-    names: ['water'],
-    smiles: 'O',
-    ranges: [
+    "names": [
+      "water"
+    ],
+    "smiles": "O",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.4,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 0.4,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 0.4,
-        to: 0.4,
-      },
+        "from": 0.4,
+        "to": 0.4
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['acetic acid'],
-    smiles: 'CC(=O)O',
-    ranges: [
+    "names": [
+      "acetic acid"
+    ],
+    "smiles": "CC(=O)O",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.52,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.52,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.52,
-        to: 1.52,
-      },
+        "from": 1.52,
+        "to": 1.52
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['acetone'],
-    smiles: 'CC(=O)C',
-    ranges: [
+    "names": [
+      "acetone"
+    ],
+    "smiles": "CC(=O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.55,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.55,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.55,
-        to: 1.55,
-      },
+        "from": 1.55,
+        "to": 1.55
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['acetonitrile'],
-    smiles: 'CC#N',
-    ranges: [
+    "names": [
+      "acetonitrile"
+    ],
+    "smiles": "CC#N",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.58,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.58,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.58,
-        to: 0.58,
-      },
+        "from": 0.58,
+        "to": 0.58
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['benzene'],
-    smiles: 'c1ccccc1',
-    ranges: [
+    "names": [
+      "benzene"
+    ],
+    "smiles": "c1ccccc1",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.15,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.15,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.15,
-        to: 7.15,
-      },
+        "from": 7.15,
+        "to": 7.15
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['tert -butyl alcohol'],
-    smiles: 'CC(C)(C)O',
-    ranges: [
+    "names": [
+      "tert -butyl alcohol"
+    ],
+    "smiles": "CC(C)(C)O",
+    "integration": 9,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.05,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.05,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.05,
-        to: 1.05,
+        "from": 1.05,
+        "to": 1.05
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.63,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 0.63,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 0.63,
-        to: 0.63,
-      },
+        "from": 0.63,
+        "to": 0.63
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['chloroform'],
-    smiles: 'ClC(Cl)Cl',
-    ranges: [
+    "names": [
+      "chloroform"
+    ],
+    "smiles": "ClC(Cl)Cl",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.15,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 6.15,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 6.15,
-        to: 6.15,
-      },
+        "from": 6.15,
+        "to": 6.15
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['18-crown-6'],
-    smiles: 'C1COCCOCCOCCOCCOCCO1',
-    ranges: [
+    "names": [
+      "18-crown-6"
+    ],
+    "smiles": "C1COCCOCCOCCOCCOCCO1",
+    "integration": 24,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.39,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.39,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.39,
-        to: 3.39,
-      },
+        "from": 3.39,
+        "to": 3.39
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['cyclohexane'],
-    smiles: 'C1CCCCC1',
-    ranges: [
+    "names": [
+      "cyclohexane"
+    ],
+    "smiles": "C1CCCCC1",
+    "integration": 12,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.4,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.4,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.4,
-        to: 1.4,
-      },
+        "from": 1.4,
+        "to": 1.4
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['1,2-dichloroethane'],
-    smiles: 'ClCCCl',
-    ranges: [
+    "names": [
+      "1,2-dichloroethane"
+    ],
+    "smiles": "ClCCCl",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.9,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 2.9,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 2.9,
-        to: 2.9,
-      },
+        "from": 2.9,
+        "to": 2.9
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['dichloromethane'],
-    smiles: 'ClCCl',
-    ranges: [
+    "names": [
+      "dichloromethane"
+    ],
+    "smiles": "ClCCl",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.27,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 4.27,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 4.27,
-        to: 4.27,
-      },
+        "from": 4.27,
+        "to": 4.27
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.11,
-            assignment: 'CH₃',
-          },
+            "delta": 1.11,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.11,
-        to: 1.11,
+        "from": 1.11,
+        "to": 1.11
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.26,
-            assignment: 'CH₂',
-          },
+            "delta": 3.26,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.26,
-        to: 3.26,
-      },
+        "from": 3.26,
+        "to": 3.26
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['diglyme'],
-    smiles: 'COCCOCCOC',
-    ranges: [
+    "names": [
+      "diglyme"
+    ],
+    "smiles": "COCCOCCOC",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.46,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.46,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.46,
-        to: 3.46,
+        "from": 3.46,
+        "to": 3.46
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.34,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.34,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.34,
-        to: 3.34,
+        "from": 3.34,
+        "to": 3.34
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.11,
-            multiplicity: 's',
-            assignment: 'OCH₃',
-          },
+            "js": [],
+            "delta": 3.11,
+            "multiplicity": "s",
+            "assignment": "OCH₃"
+          }
         ],
-        from: 3.11,
-        to: 3.11,
-      },
+        "from": 3.11,
+        "to": 3.11
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['dimethylformamide'],
-    smiles: 'C(=O)N(C)C',
-    ranges: [
+    "names": [
+      "dimethylformamide"
+    ],
+    "smiles": "C(=O)N(C)C",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.63,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.63,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.63,
-        to: 7.63,
+        "from": 7.63,
+        "to": 7.63
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.36,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.36,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.36,
-        to: 2.36,
+        "from": 2.36,
+        "to": 2.36
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.86,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.86,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.86,
-        to: 1.86,
-      },
+        "from": 1.86,
+        "to": 1.86
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['1,4-dioxane'],
-    smiles: 'C1COCCOC1',
-    ranges: [
+    "names": [
+      "1,4-dioxane"
+    ],
+    "smiles": "C1COCCOC1",
+    "integration": 8,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.35,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.35,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.35,
-        to: 3.35,
-      },
+        "from": 3.35,
+        "to": 3.35
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['DME', 'diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "DME",
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.12,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.12,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.12,
-        to: 3.12,
+        "from": 3.12,
+        "to": 3.12
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.33,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.33,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.33,
-        to: 3.33,
-      },
+        "from": 3.33,
+        "to": 3.33
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['ethane'],
-    smiles: 'CC',
-    ranges: [
+    "names": [
+      "ethane"
+    ],
+    "smiles": "CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.8,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.8,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.8,
-        to: 0.8,
-      },
+        "from": 0.8,
+        "to": 0.8
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['ethanol'],
-    smiles: 'CCO',
-    ranges: [
+    "names": [
+      "ethanol"
+    ],
+    "smiles": "CCO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.96,
-            assignment: 'CH₃',
-          },
+            "delta": 0.96,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.96,
-        to: 0.96,
+        "from": 0.96,
+        "to": 0.96
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.34,
-            assignment: 'CH₂',
-          },
+            "delta": 3.34,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.34,
-        to: 3.34,
+        "from": 3.34,
+        "to": 3.34
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.5,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 0.5,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 0.5,
-        to: 0.5,
-      },
+        "from": 0.5,
+        "to": 0.5
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['ethyl acetate'],
-    smiles: 'CC(=O)CC',
-    ranges: [
+    "names": [
+      "ethyl acetate"
+    ],
+    "smiles": "CC(=O)CC",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.65,
-            multiplicity: 's',
-            assignment: 'CH₃CO',
-          },
+            "js": [],
+            "delta": 1.65,
+            "multiplicity": "s",
+            "assignment": "CH₃CO"
+          }
         ],
-        from: 1.65,
-        to: 1.65,
+        "from": 1.65,
+        "to": 1.65
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.89,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 3.89,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 3.89,
-        to: 3.89,
+        "from": 3.89,
+        "to": 3.89
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.92,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 0.92,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 0.92,
-        to: 0.92,
-      },
+        "from": 0.92,
+        "to": 0.92
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['ethylene'],
-    smiles: 'C=C',
-    ranges: [
+    "names": [
+      "ethylene"
+    ],
+    "smiles": "C=C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.25,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.25,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.25,
-        to: 5.25,
-      },
+        "from": 5.25,
+        "to": 5.25
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['ethylene glycol'],
-    smiles: 'OCCO',
-    ranges: [
+    "names": [
+      "ethylene glycol"
+    ],
+    "smiles": "OCCO",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.41,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.41,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.41,
-        to: 3.41,
-      },
+        "from": 3.41,
+        "to": 3.41
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['H greaseᶠ'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "H greaseᶠ"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [],
-        from: 0.9,
-        to: 0.98,
-        multiplicity: 'm',
+        "signals": [],
+        "from": 0.9,
+        "to": 0.98,
+        "multiplicity": "m"
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.32,
-            multiplicity: 'br s',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.32,
+            "multiplicity": "br s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.32,
-        to: 1.32,
-      },
+        "from": 1.32,
+        "to": 1.32
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['hexamethylbenzene'],
-    smiles: 'CC1=C(C(=C(C(=C1C)C)C)C)C',
-    ranges: [
+    "names": [
+      "hexamethylbenzene"
+    ],
+    "smiles": "CC1=C(C(=C(C(=C1C)C)C)C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.13,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.13,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.13,
-        to: 2.13,
-      },
+        "from": 2.13,
+        "to": 2.13
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['n-hexane'],
-    smiles: 'CCCCCC',
-    ranges: [
+    "names": [
+      "n-hexane"
+    ],
+    "smiles": "CCCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.89,
-            assignment: 'CH₃',
-          },
+            "delta": 0.89,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.89,
-        to: 0.89,
+        "from": 0.89,
+        "to": 0.89
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.24,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.24,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.24,
-        to: 1.24,
-      },
+        "from": 1.24,
+        "to": 1.24
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['HMDSO'],
-    smiles: 'C[Si](C)(C)O[Si](C)(C)C',
-    ranges: [
+    "names": [
+      "HMDSO"
+    ],
+    "smiles": "C[Si](C)(C)O[Si](C)(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.12,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.12,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.12,
-        to: 0.12,
-      },
+        "from": 0.12,
+        "to": 0.12
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['HMPA'],
-    smiles: 'CN(C)P(=O)(N(C)C)N(C)C',
-    ranges: [
+    "names": [
+      "HMPA"
+    ],
+    "smiles": "CN(C)P(=O)(N(C)C)N(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 9.5,
-                multiplicity: 'd',
-              },
+                "coupling": 9.5,
+                "multiplicity": "d"
+              }
             ],
-            delta: 2.4,
-            assignment: 'CH₃',
-          },
+            "delta": 2.4,
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.4,
-        to: 2.4,
-      },
+        "from": 2.4,
+        "to": 2.4
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['hydrogen'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "hydrogen"
+    ],
+    "smiles": "",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.47,
-            multiplicity: 's',
-            assignment: 'H₂',
-          },
+            "js": [],
+            "delta": 4.47,
+            "multiplicity": "s",
+            "assignment": "H₂"
+          }
         ],
-        from: 4.47,
-        to: 4.47,
-      },
+        "from": 4.47,
+        "to": 4.47
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['imidazole'],
-    smiles: 'C1=CN=CN1',
-    ranges: [
+    "names": [
+      "imidazole"
+    ],
+    "smiles": "C1=CN=CN1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.33,
-            multiplicity: 's',
-            assignment: 'CH(2)',
-          },
+            "js": [],
+            "delta": 7.33,
+            "multiplicity": "s",
+            "assignment": "CH(2)"
+          }
         ],
-        from: 7.33,
-        to: 7.33,
+        "from": 7.33,
+        "to": 7.33
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.9,
-            multiplicity: 's',
-            assignment: 'CH(4,5)',
-          },
+            "js": [],
+            "delta": 6.9,
+            "multiplicity": "s",
+            "assignment": "CH(4,5)"
+          }
         ],
-        from: 6.9,
-        to: 6.9,
-      },
+        "from": 6.9,
+        "to": 6.9
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['methane'],
-    smiles: 'C',
-    ranges: [
+    "names": [
+      "methane"
+    ],
+    "smiles": "C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.16,
-            multiplicity: 's',
-            assignment: 'CH₄',
-          },
+            "js": [],
+            "delta": 0.16,
+            "multiplicity": "s",
+            "assignment": "CH₄"
+          }
         ],
-        from: 0.16,
-        to: 0.16,
-      },
+        "from": 0.16,
+        "to": 0.16
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['methanol'],
-    smiles: 'CO',
-    ranges: [
+    "names": [
+      "methanol"
+    ],
+    "smiles": "CO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.07,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.07,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.07,
-        to: 3.07,
-      },
+        "from": 3.07,
+        "to": 3.07
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['nitromethane'],
-    smiles: 'C[N+](=O)[O-]',
-    ranges: [
+    "names": [
+      "nitromethane"
+    ],
+    "smiles": "C[N+](=O)[O-]",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.94,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.94,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.94,
-        to: 2.94,
-      },
+        "from": 2.94,
+        "to": 2.94
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['n-pentane'],
-    smiles: 'CCCCC',
-    ranges: [
+    "names": [
+      "n-pentane"
+    ],
+    "smiles": "CCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.87,
-            assignment: 'CH₃',
-          },
+            "delta": 0.87,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.87,
-        to: 0.87,
+        "from": 0.87,
+        "to": 0.87
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.23,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.23,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.23,
-        to: 1.23,
-      },
+        "from": 1.23,
+        "to": 1.23
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['propane'],
-    smiles: 'CCC',
-    ranges: [
+    "names": [
+      "propane"
+    ],
+    "smiles": "CCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 't',
-              },
+                "coupling": 7.3,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.86,
-            assignment: 'CH₃',
-          },
+            "delta": 0.86,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.86,
-        to: 0.86,
+        "from": 0.86,
+        "to": 0.86
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 'sept',
-              },
+                "coupling": 7.3,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 1.26,
-            assignment: 'CH₂',
-          },
+            "delta": 1.26,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.26,
-        to: 1.26,
-      },
+        "from": 1.26,
+        "to": 1.26
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['2-propanol'],
-    smiles: 'CC(O)C',
-    ranges: [
+    "names": [
+      "2-propanol"
+    ],
+    "smiles": "CC(O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'd',
-              },
+                "coupling": 6,
+                "multiplicity": "d"
+              }
             ],
-            delta: 0.95,
-            assignment: 'CH₃',
-          },
+            "delta": 0.95,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.95,
-        to: 0.95,
+        "from": 0.95,
+        "to": 0.95
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'sept',
-              },
+                "coupling": 6,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 3.67,
-            assignment: 'CH',
-          },
+            "delta": 3.67,
+            "assignment": "CH"
+          }
         ],
-        from: 3.67,
-        to: 3.67,
-      },
+        "from": 3.67,
+        "to": 3.67
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['propylene'],
-    smiles: 'CC=C',
-    ranges: [
+    "names": [
+      "propylene"
+    ],
+    "smiles": "CC=C",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6.4,
-                multiplicity: 'd',
+                "coupling": 6.4,
+                "multiplicity": "d"
               },
               {
-                coupling: 1.5,
-                multiplicity: 't',
-              },
+                "coupling": 1.5,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.55,
-            assignment: 'CH₃',
-          },
+            "delta": 1.55,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.55,
-        to: 1.55,
+        "from": 1.55,
+        "to": 1.55
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 10,
-                multiplicity: 'd',
-              },
+                "coupling": 10,
+                "multiplicity": "d"
+              }
             ],
-            delta: 4.95,
-            assignment: 'CH₂(1)',
-          },
+            "delta": 4.95,
+            "assignment": "CH₂(1)"
+          }
         ],
-        from: 4.95,
-        to: 4.95,
+        "from": 4.95,
+        "to": 4.95
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 17,
-                multiplicity: 'd',
-              },
+                "coupling": 17,
+                "multiplicity": "d"
+              }
             ],
-            delta: 5.01,
-            assignment: 'CH₂(2)',
-          },
+            "delta": 5.01,
+            "assignment": "CH₂(2)"
+          }
         ],
-        from: 5.01,
-        to: 5.01,
+        "from": 5.01,
+        "to": 5.01
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.72,
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 5.72,
+            "assignment": "CH"
+          }
         ],
-        from: 5.72,
-        to: 5.72,
-      },
+        "from": 5.72,
+        "to": 5.72
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['pyridine'],
-    smiles: 'C1=CC=NC=C1',
-    ranges: [
+    "names": [
+      "pyridine"
+    ],
+    "smiles": "C1=CC=NC=C1",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.53,
-            assignment: 'CH(2,6)',
-          },
+            "js": [],
+            "delta": 8.53,
+            "assignment": "CH(2,6)"
+          }
         ],
-        from: 8.53,
-        to: 8.53,
+        "from": 8.53,
+        "to": 8.53
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.66,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 6.66,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 6.66,
-        to: 6.66,
+        "from": 6.66,
+        "to": 6.66
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.98,
-            assignment: 'CH(4)',
-          },
+            "js": [],
+            "delta": 6.98,
+            "assignment": "CH(4)"
+          }
         ],
-        from: 6.98,
-        to: 6.98,
-      },
+        "from": 6.98,
+        "to": 6.98
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['pyrrole'],
-    smiles: 'C1=CNC=C1',
-    ranges: [
+    "names": [
+      "pyrrole"
+    ],
+    "smiles": "C1=CNC=C1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.8,
-            assignment: 'NH',
-          },
+            "js": [],
+            "delta": 7.8,
+            "assignment": "NH"
+          }
         ],
-        from: 7.8,
-        to: 7.8,
+        "from": 7.8,
+        "to": 7.8
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.48,
-            assignment: 'CH(2,5)',
-          },
+            "js": [],
+            "delta": 6.48,
+            "assignment": "CH(2,5)"
+          }
         ],
-        from: 6.48,
-        to: 6.48,
+        "from": 6.48,
+        "to": 6.48
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.37,
-            assignment: 'CH(3,4)',
-          },
+            "js": [],
+            "delta": 6.37,
+            "assignment": "CH(3,4)"
+          }
         ],
-        from: 6.37,
-        to: 6.37,
-      },
+        "from": 6.37,
+        "to": 6.37
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['pyrrolidine'],
-    smiles: 'C1CCNC1',
-    ranges: [
+    "names": [
+      "pyrrolidine"
+    ],
+    "smiles": "C1CCNC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.54,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 2.54,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 2.54,
-        to: 2.54,
+        "from": 2.54,
+        "to": 2.54
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.33,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.33,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.33,
-        to: 1.33,
-      },
+        "from": 1.33,
+        "to": 1.33
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['silicone grease'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "silicone grease"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.29,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.29,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.29,
-        to: 0.29,
-      },
+        "from": 0.29,
+        "to": 0.29
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['tetrahydrofuran'],
-    smiles: 'C1COCC1',
-    ranges: [
+    "names": [
+      "tetrahydrofuran"
+    ],
+    "smiles": "C1COCC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.57,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 3.57,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 3.57,
-        to: 3.57,
+        "from": 3.57,
+        "to": 3.57
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.4,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.4,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.4,
-        to: 1.4,
-      },
+        "from": 1.4,
+        "to": 1.4
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['toluene'],
-    smiles: 'Cc1ccccc1',
-    ranges: [
+    "names": [
+      "toluene"
+    ],
+    "smiles": "Cc1ccccc1",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.11,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.11,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.11,
-        to: 2.11,
+        "from": 2.11,
+        "to": 2.11
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.02,
-            assignment: 'CH(2,4,6)',
-          },
+            "js": [],
+            "delta": 7.02,
+            "assignment": "CH(2,4,6)"
+          }
         ],
-        from: 7.02,
-        to: 7.02,
+        "from": 7.02,
+        "to": 7.02
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.13,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 7.13,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 7.13,
-        to: 7.13,
-      },
+        "from": 7.13,
+        "to": 7.13
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['triethylamine'],
-    smiles: 'CCN(CC)CC',
-    ranges: [
+    "names": [
+      "triethylamine"
+    ],
+    "smiles": "CCN(CC)CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.96,
-            assignment: 'CH₃',
-          },
+            "delta": 0.96,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.96,
-        to: 0.96,
+        "from": 0.96,
+        "to": 0.96
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 2.4,
-            assignment: 'CH₂',
-          },
+            "delta": 2.4,
+            "assignment": "CH₂"
+          }
         ],
-        from: 2.4,
-        to: 2.4,
-      },
+        "from": 2.4,
+        "to": 2.4
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₆',
+    "nucleus": "1H",
+    "solvent": "C₆D₆"
   },
   {
-    names: ['water'],
-    smiles: 'O',
-    ranges: [
+    "names": [
+      "water"
+    ],
+    "smiles": "O",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.03,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 1.03,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 1.03,
-        to: 1.03,
-      },
+        "from": 1.03,
+        "to": 1.03
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['acetic acid'],
-    smiles: 'CC(=O)O',
-    ranges: [
+    "names": [
+      "acetic acid"
+    ],
+    "smiles": "CC(=O)O",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.76,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.76,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.76,
-        to: 1.76,
-      },
+        "from": 1.76,
+        "to": 1.76
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['acetone'],
-    smiles: 'CC(=O)C',
-    ranges: [
+    "names": [
+      "acetone"
+    ],
+    "smiles": "CC(=O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.77,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.77,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.77,
-        to: 1.77,
-      },
+        "from": 1.77,
+        "to": 1.77
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['acetonitrile'],
-    smiles: 'CC#N',
-    ranges: [
+    "names": [
+      "acetonitrile"
+    ],
+    "smiles": "CC#N",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.21,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.21,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.21,
-        to: 1.21,
-      },
+        "from": 1.21,
+        "to": 1.21
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['benzene'],
-    smiles: 'c1ccccc1',
-    ranges: [
+    "names": [
+      "benzene"
+    ],
+    "smiles": "c1ccccc1",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.2,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.2,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.2,
-        to: 7.2,
-      },
+        "from": 7.2,
+        "to": 7.2
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['tert -butyl alcohol'],
-    smiles: 'CC(C)(C)O',
-    ranges: [
+    "names": [
+      "tert -butyl alcohol"
+    ],
+    "smiles": "CC(C)(C)O",
+    "integration": 9,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.12,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.12,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.12,
-        to: 1.12,
+        "from": 1.12,
+        "to": 1.12
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.3,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 1.3,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 1.3,
-        to: 1.3,
-      },
+        "from": 1.3,
+        "to": 1.3
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['chloroform'],
-    smiles: 'ClC(Cl)Cl',
-    ranges: [
+    "names": [
+      "chloroform"
+    ],
+    "smiles": "ClC(Cl)Cl",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.74,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 6.74,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 6.74,
-        to: 6.74,
-      },
+        "from": 6.74,
+        "to": 6.74
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['18-crown-6'],
-    smiles: 'C1COCCOCCOCCOCCOCCO1',
-    ranges: [
+    "names": [
+      "18-crown-6"
+    ],
+    "smiles": "C1COCCOCCOCCOCCOCCO1",
+    "integration": 24,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.41,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.41,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.41,
-        to: 3.41,
-      },
+        "from": 3.41,
+        "to": 3.41
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['cyclohexane'],
-    smiles: 'C1CCCCC1',
-    ranges: [
+    "names": [
+      "cyclohexane"
+    ],
+    "smiles": "C1CCCCC1",
+    "integration": 12,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.37,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.37,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.37,
-        to: 1.37,
-      },
+        "from": 1.37,
+        "to": 1.37
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['1,2-dichloroethane'],
-    smiles: 'ClCCCl',
-    ranges: [
+    "names": [
+      "1,2-dichloroethane"
+    ],
+    "smiles": "ClCCCl",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.26,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.26,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.26,
-        to: 3.26,
-      },
+        "from": 3.26,
+        "to": 3.26
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['dichloromethane'],
-    smiles: 'ClCCl',
-    ranges: [
+    "names": [
+      "dichloromethane"
+    ],
+    "smiles": "ClCCl",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.77,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 4.77,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 4.77,
-        to: 4.77,
-      },
+        "from": 4.77,
+        "to": 4.77
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.1,
-            assignment: 'CH₃',
-          },
+            "delta": 1.1,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.1,
-        to: 1.1,
+        "from": 1.1,
+        "to": 1.1
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.31,
-            assignment: 'CH₂',
-          },
+            "delta": 3.31,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.31,
-        to: 3.31,
-      },
+        "from": 3.31,
+        "to": 3.31
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['diglyme'],
-    smiles: 'COCCOCCOC',
-    ranges: [
+    "names": [
+      "diglyme"
+    ],
+    "smiles": "COCCOCCOC",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.49,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.49,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.49,
-        to: 3.49,
+        "from": 3.49,
+        "to": 3.49
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.37,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.37,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.37,
-        to: 3.37,
+        "from": 3.37,
+        "to": 3.37
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.16,
-            multiplicity: 's',
-            assignment: 'OCH₃',
-          },
+            "js": [],
+            "delta": 3.16,
+            "multiplicity": "s",
+            "assignment": "OCH₃"
+          }
         ],
-        from: 3.16,
-        to: 3.16,
-      },
+        "from": 3.16,
+        "to": 3.16
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['dimethylformamide'],
-    smiles: 'C(=O)N(C)C',
-    ranges: [
+    "names": [
+      "dimethylformamide"
+    ],
+    "smiles": "C(=O)N(C)C",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.73,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.73,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.73,
-        to: 7.73,
+        "from": 7.73,
+        "to": 7.73
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.51,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.51,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.51,
-        to: 2.51,
+        "from": 2.51,
+        "to": 2.51
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.3,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.3,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.3,
-        to: 2.3,
-      },
+        "from": 2.3,
+        "to": 2.3
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['1,4-dioxane'],
-    smiles: 'C1COCCOC1',
-    ranges: [
+    "names": [
+      "1,4-dioxane"
+    ],
+    "smiles": "C1COCCOC1",
+    "integration": 8,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.45,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.45,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.45,
-        to: 3.45,
-      },
+        "from": 3.45,
+        "to": 3.45
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['DME', 'diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "DME",
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.17,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.17,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.17,
-        to: 3.17,
+        "from": 3.17,
+        "to": 3.17
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.37,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.37,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.37,
-        to: 3.37,
-      },
+        "from": 3.37,
+        "to": 3.37
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['ethane'],
-    smiles: 'CC',
-    ranges: [
+    "names": [
+      "ethane"
+    ],
+    "smiles": "CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.79,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.79,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.79,
-        to: 0.79,
-      },
+        "from": 0.79,
+        "to": 0.79
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['ethanol'],
-    smiles: 'CCO',
-    ranges: [
+    "names": [
+      "ethanol"
+    ],
+    "smiles": "CCO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.06,
-            assignment: 'CH₃',
-          },
+            "delta": 1.06,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.06,
-        to: 1.06,
+        "from": 1.06,
+        "to": 1.06
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.51,
-            assignment: 'CH₂',
-          },
+            "delta": 3.51,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.51,
-        to: 3.51,
+        "from": 3.51,
+        "to": 3.51
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.39,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 1.39,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 1.39,
-        to: 1.39,
-      },
+        "from": 1.39,
+        "to": 1.39
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['ethyl acetate'],
-    smiles: 'CC(=O)CC',
-    ranges: [
+    "names": [
+      "ethyl acetate"
+    ],
+    "smiles": "CC(=O)CC",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.78,
-            multiplicity: 's',
-            assignment: 'CH₃CO',
-          },
+            "js": [],
+            "delta": 1.78,
+            "multiplicity": "s",
+            "assignment": "CH₃CO"
+          }
         ],
-        from: 1.78,
-        to: 1.78,
+        "from": 1.78,
+        "to": 1.78
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.96,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 3.96,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 3.96,
-        to: 3.96,
+        "from": 3.96,
+        "to": 3.96
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.04,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 1.04,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 1.04,
-        to: 1.04,
-      },
+        "from": 1.04,
+        "to": 1.04
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['ethylene'],
-    smiles: 'C=C',
-    ranges: [
+    "names": [
+      "ethylene"
+    ],
+    "smiles": "C=C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.29,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.29,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.29,
-        to: 5.29,
-      },
+        "from": 5.29,
+        "to": 5.29
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['ethylene glycol'],
-    smiles: 'OCCO',
-    ranges: [
+    "names": [
+      "ethylene glycol"
+    ],
+    "smiles": "OCCO",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.58,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.58,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.58,
-        to: 3.58,
-      },
+        "from": 3.58,
+        "to": 3.58
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['H greaseᶠ'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "H greaseᶠ"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [],
-        from: 0.86,
-        to: 0.92,
-        multiplicity: 'm',
+        "signals": [],
+        "from": 0.86,
+        "to": 0.92,
+        "multiplicity": "m"
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.3,
-            multiplicity: 'br s',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.3,
+            "multiplicity": "br s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.3,
-        to: 1.3,
-      },
+        "from": 1.3,
+        "to": 1.3
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['hexamethylbenzene'],
-    smiles: 'CC1=C(C(=C(C(=C1C)C)C)C)C',
-    ranges: [
+    "names": [
+      "hexamethylbenzene"
+    ],
+    "smiles": "CC1=C(C(=C(C(=C1C)C)C)C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.1,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.1,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.1,
-        to: 2.1,
-      },
+        "from": 2.1,
+        "to": 2.1
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['n-hexane'],
-    smiles: 'CCCCCC',
-    ranges: [
+    "names": [
+      "n-hexane"
+    ],
+    "smiles": "CCCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.85,
-            assignment: 'CH₃',
-          },
+            "delta": 0.85,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.85,
-        to: 0.85,
+        "from": 0.85,
+        "to": 0.85
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.19,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.19,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.19,
-        to: 1.19,
-      },
+        "from": 1.19,
+        "to": 1.19
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['HMDSO'],
-    smiles: 'C[Si](C)(C)O[Si](C)(C)C',
-    ranges: [
+    "names": [
+      "HMDSO"
+    ],
+    "smiles": "C[Si](C)(C)O[Si](C)(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.1,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.1,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.1,
-        to: 0.1,
-      },
+        "from": 0.1,
+        "to": 0.1
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['HMPA'],
-    smiles: 'CN(C)P(=O)(N(C)C)N(C)C',
-    ranges: [
+    "names": [
+      "HMPA"
+    ],
+    "smiles": "CN(C)P(=O)(N(C)C)N(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 9.5,
-                multiplicity: 'd',
-              },
+                "coupling": 9.5,
+                "multiplicity": "d"
+              }
             ],
-            delta: 2.47,
-            assignment: 'CH₃',
-          },
+            "delta": 2.47,
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.47,
-        to: 2.47,
-      },
+        "from": 2.47,
+        "to": 2.47
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['hydrogen'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "hydrogen"
+    ],
+    "smiles": "",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.49,
-            multiplicity: 's',
-            assignment: 'H₂',
-          },
+            "js": [],
+            "delta": 4.49,
+            "multiplicity": "s",
+            "assignment": "H₂"
+          }
         ],
-        from: 4.49,
-        to: 4.49,
-      },
+        "from": 4.49,
+        "to": 4.49
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['imidazole'],
-    smiles: 'C1=CN=CN1',
-    ranges: [
+    "names": [
+      "imidazole"
+    ],
+    "smiles": "C1=CN=CN1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.53,
-            multiplicity: 's',
-            assignment: 'CH(2)',
-          },
+            "js": [],
+            "delta": 7.53,
+            "multiplicity": "s",
+            "assignment": "CH(2)"
+          }
         ],
-        from: 7.53,
-        to: 7.53,
+        "from": 7.53,
+        "to": 7.53
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.01,
-            multiplicity: 's',
-            assignment: 'CH(4,5)',
-          },
+            "js": [],
+            "delta": 7.01,
+            "multiplicity": "s",
+            "assignment": "CH(4,5)"
+          }
         ],
-        from: 7.01,
-        to: 7.01,
-      },
+        "from": 7.01,
+        "to": 7.01
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['methane'],
-    smiles: 'C',
-    ranges: [
+    "names": [
+      "methane"
+    ],
+    "smiles": "C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.15,
-            multiplicity: 's',
-            assignment: 'CH₄',
-          },
+            "js": [],
+            "delta": 0.15,
+            "multiplicity": "s",
+            "assignment": "CH₄"
+          }
         ],
-        from: 0.15,
-        to: 0.15,
-      },
+        "from": 0.15,
+        "to": 0.15
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['methanol'],
-    smiles: 'CO',
-    ranges: [
+    "names": [
+      "methanol"
+    ],
+    "smiles": "CO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.25,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.25,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.25,
-        to: 3.25,
+        "from": 3.25,
+        "to": 3.25
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.3,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 1.3,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 1.3,
-        to: 1.3,
-      },
+        "from": 1.3,
+        "to": 1.3
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['nitromethane'],
-    smiles: 'C[N+](=O)[O-]',
-    ranges: [
+    "names": [
+      "nitromethane"
+    ],
+    "smiles": "C[N+](=O)[O-]",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.59,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.59,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.59,
-        to: 3.59,
-      },
+        "from": 3.59,
+        "to": 3.59
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['n-pentane'],
-    smiles: 'CCCCC',
-    ranges: [
+    "names": [
+      "n-pentane"
+    ],
+    "smiles": "CCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.84,
-            assignment: 'CH₃',
-          },
+            "delta": 0.84,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.84,
-        to: 0.84,
+        "from": 0.84,
+        "to": 0.84
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.23,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.23,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.23,
-        to: 1.23,
-      },
+        "from": 1.23,
+        "to": 1.23
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['propane'],
-    smiles: 'CCC',
-    ranges: [
+    "names": [
+      "propane"
+    ],
+    "smiles": "CCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 't',
-              },
+                "coupling": 7.3,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.84,
-            assignment: 'CH₃',
-          },
+            "delta": 0.84,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.84,
-        to: 0.84,
+        "from": 0.84,
+        "to": 0.84
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 'sept',
-              },
+                "coupling": 7.3,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 1.26,
-            assignment: 'CH₂',
-          },
+            "delta": 1.26,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.26,
-        to: 1.26,
-      },
+        "from": 1.26,
+        "to": 1.26
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['2-propanol'],
-    smiles: 'CC(O)C',
-    ranges: [
+    "names": [
+      "2-propanol"
+    ],
+    "smiles": "CC(O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'd',
-              },
+                "coupling": 6,
+                "multiplicity": "d"
+              }
             ],
-            delta: 1.04,
-            assignment: 'CH₃',
-          },
+            "delta": 1.04,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.04,
-        to: 1.04,
+        "from": 1.04,
+        "to": 1.04
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'sept',
-              },
+                "coupling": 6,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 3.82,
-            assignment: 'CH',
-          },
+            "delta": 3.82,
+            "assignment": "CH"
+          }
         ],
-        from: 3.82,
-        to: 3.82,
-      },
+        "from": 3.82,
+        "to": 3.82
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['propylene'],
-    smiles: 'CC=C',
-    ranges: [
+    "names": [
+      "propylene"
+    ],
+    "smiles": "CC=C",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6.4,
-                multiplicity: 'd',
+                "coupling": 6.4,
+                "multiplicity": "d"
               },
               {
-                coupling: 1.5,
-                multiplicity: 't',
-              },
+                "coupling": 1.5,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.58,
-            assignment: 'CH₃',
-          },
+            "delta": 1.58,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.58,
-        to: 1.58,
+        "from": 1.58,
+        "to": 1.58
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 10,
-                multiplicity: 'd',
-              },
+                "coupling": 10,
+                "multiplicity": "d"
+              }
             ],
-            delta: 4.91,
-            assignment: 'CH₂(1)',
-          },
+            "delta": 4.91,
+            "assignment": "CH₂(1)"
+          }
         ],
-        from: 4.91,
-        to: 4.91,
+        "from": 4.91,
+        "to": 4.91
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 17,
-                multiplicity: 'd',
-              },
+                "coupling": 17,
+                "multiplicity": "d"
+              }
             ],
-            delta: 4.98,
-            assignment: 'CH₂(2)',
-          },
+            "delta": 4.98,
+            "assignment": "CH₂(2)"
+          }
         ],
-        from: 4.98,
-        to: 4.98,
+        "from": 4.98,
+        "to": 4.98
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.72,
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 5.72,
+            "assignment": "CH"
+          }
         ],
-        from: 5.72,
-        to: 5.72,
-      },
+        "from": 5.72,
+        "to": 5.72
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['pyridine'],
-    smiles: 'C1=CC=NC=C1',
-    ranges: [
+    "names": [
+      "pyridine"
+    ],
+    "smiles": "C1=CC=NC=C1",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.51,
-            assignment: 'CH(2,6)',
-          },
+            "js": [],
+            "delta": 8.51,
+            "assignment": "CH(2,6)"
+          }
         ],
-        from: 8.51,
-        to: 8.51,
+        "from": 8.51,
+        "to": 8.51
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.9,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 6.9,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 6.9,
-        to: 6.9,
+        "from": 6.9,
+        "to": 6.9
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.25,
-            assignment: 'CH(4)',
-          },
+            "js": [],
+            "delta": 7.25,
+            "assignment": "CH(4)"
+          }
         ],
-        from: 7.25,
-        to: 7.25,
-      },
+        "from": 7.25,
+        "to": 7.25
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['pyrrole'],
-    smiles: 'C1=CNC=C1',
-    ranges: [
+    "names": [
+      "pyrrole"
+    ],
+    "smiles": "C1=CNC=C1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.61,
-            assignment: 'NH',
-          },
+            "js": [],
+            "delta": 8.61,
+            "assignment": "NH"
+          }
         ],
-        from: 8.61,
-        to: 8.61,
+        "from": 8.61,
+        "to": 8.61
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.62,
-            assignment: 'CH(2,5)',
-          },
+            "js": [],
+            "delta": 6.62,
+            "assignment": "CH(2,5)"
+          }
         ],
-        from: 6.62,
-        to: 6.62,
+        "from": 6.62,
+        "to": 6.62
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.27,
-            assignment: 'CH(3,4)',
-          },
+            "js": [],
+            "delta": 6.27,
+            "assignment": "CH(3,4)"
+          }
         ],
-        from: 6.27,
-        to: 6.27,
-      },
+        "from": 6.27,
+        "to": 6.27
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['pyrrolidine'],
-    smiles: 'C1CCNC1',
-    ranges: [
+    "names": [
+      "pyrrolidine"
+    ],
+    "smiles": "C1CCNC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.64,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 2.64,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 2.64,
-        to: 2.64,
+        "from": 2.64,
+        "to": 2.64
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.43,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.43,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.43,
-        to: 1.43,
-      },
+        "from": 1.43,
+        "to": 1.43
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['silicone grease'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "silicone grease"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.14,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.14,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.14,
-        to: 0.14,
-      },
+        "from": 0.14,
+        "to": 0.14
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['tetrahydrofuran'],
-    smiles: 'C1COCC1',
-    ranges: [
+    "names": [
+      "tetrahydrofuran"
+    ],
+    "smiles": "C1COCC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.59,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 3.59,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 3.59,
-        to: 3.59,
+        "from": 3.59,
+        "to": 3.59
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.55,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.55,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.55,
-        to: 1.55,
-      },
+        "from": 1.55,
+        "to": 1.55
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['toluene'],
-    smiles: 'Cc1ccccc1',
-    ranges: [
+    "names": [
+      "toluene"
+    ],
+    "smiles": "Cc1ccccc1",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.16,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.16,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.16,
-        to: 2.16,
+        "from": 2.16,
+        "to": 2.16
       },
       {
-        signals: [],
-        from: 7.01,
-        to: 7.08,
-        multiplicity: 'm',
+        "signals": [],
+        "from": 7.01,
+        "to": 7.08,
+        "multiplicity": "m"
       },
       {
-        signals: [],
-        from: 7.1,
-        to: 7.17,
-        multiplicity: 'm',
-      },
+        "signals": [],
+        "from": 7.1,
+        "to": 7.17,
+        "multiplicity": "m"
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['triethylamine'],
-    smiles: 'CCN(CC)CC',
-    ranges: [
+    "names": [
+      "triethylamine"
+    ],
+    "smiles": "CCN(CC)CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.93,
-            assignment: 'CH₃',
-          },
+            "delta": 0.93,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.93,
-        to: 0.93,
+        "from": 0.93,
+        "to": 0.93
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 2.39,
-            assignment: 'CH₂',
-          },
+            "delta": 2.39,
+            "assignment": "CH₂"
+          }
         ],
-        from: 2.39,
-        to: 2.39,
-      },
+        "from": 2.39,
+        "to": 2.39
+      }
     ],
-    nucleus: '1H',
-    solvent: 'C₆D₅Cl',
+    "nucleus": "1H",
+    "solvent": "C₆D₅Cl"
   },
   {
-    names: ['water'],
-    smiles: 'O',
-    ranges: [
+    "names": [
+      "water"
+    ],
+    "smiles": "O",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: null,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": null,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: null,
-        to: null,
-      },
+        "from": null,
+        "to": null
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['acetic acid'],
-    smiles: 'CC(=O)O',
-    ranges: [
+    "names": [
+      "acetic acid"
+    ],
+    "smiles": "CC(=O)O",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.96,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.96,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.96,
-        to: 1.96,
-      },
+        "from": 1.96,
+        "to": 1.96
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['acetone'],
-    smiles: 'CC(=O)C',
-    ranges: [
+    "names": [
+      "acetone"
+    ],
+    "smiles": "CC(=O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.09,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.09,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.09,
-        to: 2.09,
-      },
+        "from": 2.09,
+        "to": 2.09
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['acetonitrile'],
-    smiles: 'CC#N',
-    ranges: [
+    "names": [
+      "acetonitrile"
+    ],
+    "smiles": "CC#N",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.05,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.05,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.05,
-        to: 2.05,
-      },
+        "from": 2.05,
+        "to": 2.05
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['benzene'],
-    smiles: 'c1ccccc1',
-    ranges: [
+    "names": [
+      "benzene"
+    ],
+    "smiles": "c1ccccc1",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.36,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.36,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.36,
-        to: 7.36,
-      },
+        "from": 7.36,
+        "to": 7.36
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['tert -butyl alcohol'],
-    smiles: 'CC(C)(C)O',
-    ranges: [
+    "names": [
+      "tert -butyl alcohol"
+    ],
+    "smiles": "CC(C)(C)O",
+    "integration": 9,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.18,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.18,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.18,
-        to: 1.18,
-      },
+        "from": 1.18,
+        "to": 1.18
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['chloroform'],
-    smiles: 'ClC(Cl)Cl',
-    ranges: [
+    "names": [
+      "chloroform"
+    ],
+    "smiles": "ClC(Cl)Cl",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.02,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 8.02,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 8.02,
-        to: 8.02,
-      },
+        "from": 8.02,
+        "to": 8.02
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['18-crown-6'],
-    smiles: 'C1COCCOCCOCCOCCOCCO1',
-    ranges: [
+    "names": [
+      "18-crown-6"
+    ],
+    "smiles": "C1COCCOCCOCCOCCOCCO1",
+    "integration": 24,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.59,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.59,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.59,
-        to: 3.59,
-      },
+        "from": 3.59,
+        "to": 3.59
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['cyclohexane'],
-    smiles: 'C1CCCCC1',
-    ranges: [
+    "names": [
+      "cyclohexane"
+    ],
+    "smiles": "C1CCCCC1",
+    "integration": 12,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.43,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.43,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.43,
-        to: 1.43,
-      },
+        "from": 1.43,
+        "to": 1.43
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['1,2-dichloroethane'],
-    smiles: 'ClCCCl',
-    ranges: [
+    "names": [
+      "1,2-dichloroethane"
+    ],
+    "smiles": "ClCCCl",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.87,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.87,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.87,
-        to: 3.87,
-      },
+        "from": 3.87,
+        "to": 3.87
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['dichloromethane'],
-    smiles: 'ClCCl',
-    ranges: [
+    "names": [
+      "dichloromethane"
+    ],
+    "smiles": "ClCCl",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.63,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.63,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.63,
-        to: 5.63,
-      },
+        "from": 5.63,
+        "to": 5.63
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.11,
-            assignment: 'CH₃',
-          },
+            "delta": 1.11,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.11,
-        to: 1.11,
+        "from": 1.11,
+        "to": 1.11
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.41,
-            assignment: 'CH₂',
-          },
+            "delta": 3.41,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.41,
-        to: 3.41,
-      },
+        "from": 3.41,
+        "to": 3.41
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['diglyme'],
-    smiles: 'COCCOCCOC',
-    ranges: [
+    "names": [
+      "diglyme"
+    ],
+    "smiles": "COCCOCCOC",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.56,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.56,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.56,
-        to: 3.56,
+        "from": 3.56,
+        "to": 3.56
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.47,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.47,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.47,
-        to: 3.47,
+        "from": 3.47,
+        "to": 3.47
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.28,
-            multiplicity: 's',
-            assignment: 'OCH₃',
-          },
+            "js": [],
+            "delta": 3.28,
+            "multiplicity": "s",
+            "assignment": "OCH₃"
+          }
         ],
-        from: 3.28,
-        to: 3.28,
-      },
+        "from": 3.28,
+        "to": 3.28
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['dimethylformamide'],
-    smiles: 'C(=O)N(C)C',
-    ranges: [
+    "names": [
+      "dimethylformamide"
+    ],
+    "smiles": "C(=O)N(C)C",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.96,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.96,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.96,
-        to: 7.96,
+        "from": 7.96,
+        "to": 7.96
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.94,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.94,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.94,
-        to: 2.94,
+        "from": 2.94,
+        "to": 2.94
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.78,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.78,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.78,
-        to: 2.78,
-      },
+        "from": 2.78,
+        "to": 2.78
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['1,4-dioxane'],
-    smiles: 'C1COCCOC1',
-    ranges: [
+    "names": [
+      "1,4-dioxane"
+    ],
+    "smiles": "C1COCCOC1",
+    "integration": 8,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.59,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.59,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.59,
-        to: 3.59,
-      },
+        "from": 3.59,
+        "to": 3.59
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['DME', 'diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "DME",
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.28,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.28,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.28,
-        to: 3.28,
+        "from": 3.28,
+        "to": 3.28
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.46,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.46,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.46,
-        to: 3.46,
-      },
+        "from": 3.46,
+        "to": 3.46
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['ethane'],
-    smiles: 'CC',
-    ranges: [
+    "names": [
+      "ethane"
+    ],
+    "smiles": "CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.83,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.83,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.83,
-        to: 0.83,
-      },
+        "from": 0.83,
+        "to": 0.83
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['ethanol'],
-    smiles: 'CCO',
-    ranges: [
+    "names": [
+      "ethanol"
+    ],
+    "smiles": "CCO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.12,
-            assignment: 'CH₃',
-          },
+            "delta": 1.12,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.12,
-        to: 1.12,
+        "from": 1.12,
+        "to": 1.12
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.57,
-            assignment: 'CH₂',
-          },
+            "delta": 3.57,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.57,
-        to: 3.57,
+        "from": 3.57,
+        "to": 3.57
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.39,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 3.39,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 3.39,
-        to: 3.39,
-      },
+        "from": 3.39,
+        "to": 3.39
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['ethyl acetate'],
-    smiles: 'CC(=O)CC',
-    ranges: [
+    "names": [
+      "ethyl acetate"
+    ],
+    "smiles": "CC(=O)CC",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.97,
-            multiplicity: 's',
-            assignment: 'CH₃CO',
-          },
+            "js": [],
+            "delta": 1.97,
+            "multiplicity": "s",
+            "assignment": "CH₃CO"
+          }
         ],
-        from: 1.97,
-        to: 1.97,
+        "from": 1.97,
+        "to": 1.97
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 4.05,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 4.05,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 4.05,
-        to: 4.05,
+        "from": 4.05,
+        "to": 4.05
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.2,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 1.2,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 1.2,
-        to: 1.2,
-      },
+        "from": 1.2,
+        "to": 1.2
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['ethylene'],
-    smiles: 'C=C',
-    ranges: [
+    "names": [
+      "ethylene"
+    ],
+    "smiles": "C=C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.38,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.38,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.38,
-        to: 5.38,
-      },
+        "from": 5.38,
+        "to": 5.38
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['ethylene glycol'],
-    smiles: 'OCCO',
-    ranges: [
+    "names": [
+      "ethylene glycol"
+    ],
+    "smiles": "OCCO",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.28,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.28,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.28,
-        to: 3.28,
-      },
+        "from": 3.28,
+        "to": 3.28
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['H greaseᶠ'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "H greaseᶠ"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.9,
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.9,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.9,
-        to: 0.9,
+        "from": 0.9,
+        "to": 0.9
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.29,
-            multiplicity: 'br s',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.29,
+            "multiplicity": "br s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.29,
-        to: 1.29,
-      },
+        "from": 1.29,
+        "to": 1.29
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['hexamethylbenzene'],
-    smiles: 'CC1=C(C(=C(C(=C1C)C)C)C)C',
-    ranges: [
+    "names": [
+      "hexamethylbenzene"
+    ],
+    "smiles": "CC1=C(C(=C(C(=C1C)C)C)C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.17,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.17,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.17,
-        to: 2.17,
-      },
+        "from": 2.17,
+        "to": 2.17
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['n-hexane'],
-    smiles: 'CCCCCC',
-    ranges: [
+    "names": [
+      "n-hexane"
+    ],
+    "smiles": "CCCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.88,
-            assignment: 'CH₃',
-          },
+            "delta": 0.88,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.88,
-        to: 0.88,
+        "from": 0.88,
+        "to": 0.88
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.28,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.28,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.28,
-        to: 1.28,
-      },
+        "from": 1.28,
+        "to": 1.28
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['HMDSO'],
-    smiles: 'C[Si](C)(C)O[Si](C)(C)C',
-    ranges: [
+    "names": [
+      "HMDSO"
+    ],
+    "smiles": "C[Si](C)(C)O[Si](C)(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.07,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.07,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.07,
-        to: 0.07,
-      },
+        "from": 0.07,
+        "to": 0.07
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['HMPA'],
-    smiles: 'CN(C)P(=O)(N(C)C)N(C)C',
-    ranges: [
+    "names": [
+      "HMPA"
+    ],
+    "smiles": "CN(C)P(=O)(N(C)C)N(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 9.5,
-                multiplicity: 'd',
-              },
+                "coupling": 9.5,
+                "multiplicity": "d"
+              }
             ],
-            delta: 2.59,
-            assignment: 'CH₃',
-          },
+            "delta": 2.59,
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.59,
-        to: 2.59,
-      },
+        "from": 2.59,
+        "to": 2.59
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['hydrogen'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "hydrogen"
+    ],
+    "smiles": "",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.54,
-            multiplicity: 's',
-            assignment: 'H₂',
-          },
+            "js": [],
+            "delta": 4.54,
+            "multiplicity": "s",
+            "assignment": "H₂"
+          }
         ],
-        from: 4.54,
-        to: 4.54,
-      },
+        "from": 4.54,
+        "to": 4.54
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['imidazole'],
-    smiles: 'C1=CN=CN1',
-    ranges: [
+    "names": [
+      "imidazole"
+    ],
+    "smiles": "C1=CN=CN1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.62,
-            multiplicity: 's',
-            assignment: 'CH(2)',
-          },
+            "js": [],
+            "delta": 7.62,
+            "multiplicity": "s",
+            "assignment": "CH(2)"
+          }
         ],
-        from: 7.62,
-        to: 7.62,
+        "from": 7.62,
+        "to": 7.62
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.04,
-            multiplicity: 's',
-            assignment: 'CH(4,5)',
-          },
+            "js": [],
+            "delta": 7.04,
+            "multiplicity": "s",
+            "assignment": "CH(4,5)"
+          }
         ],
-        from: 7.04,
-        to: 7.04,
-      },
+        "from": 7.04,
+        "to": 7.04
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['methane'],
-    smiles: 'C',
-    ranges: [
+    "names": [
+      "methane"
+    ],
+    "smiles": "C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.17,
-            multiplicity: 's',
-            assignment: 'CH₄',
-          },
+            "js": [],
+            "delta": 0.17,
+            "multiplicity": "s",
+            "assignment": "CH₄"
+          }
         ],
-        from: 0.17,
-        to: 0.17,
-      },
+        "from": 0.17,
+        "to": 0.17
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['methanol'],
-    smiles: 'CO',
-    ranges: [
+    "names": [
+      "methanol"
+    ],
+    "smiles": "CO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.31,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.31,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.31,
-        to: 3.31,
+        "from": 3.31,
+        "to": 3.31
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.12,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 3.12,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 3.12,
-        to: 3.12,
-      },
+        "from": 3.12,
+        "to": 3.12
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['nitromethane'],
-    smiles: 'C[N+](=O)[O-]',
-    ranges: [
+    "names": [
+      "nitromethane"
+    ],
+    "smiles": "C[N+](=O)[O-]",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.43,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 4.43,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 4.43,
-        to: 4.43,
-      },
+        "from": 4.43,
+        "to": 4.43
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['n-pentane'],
-    smiles: 'CCCCC',
-    ranges: [
+    "names": [
+      "n-pentane"
+    ],
+    "smiles": "CCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.88,
-            assignment: 'CH₃',
-          },
+            "delta": 0.88,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.88,
-        to: 0.88,
+        "from": 0.88,
+        "to": 0.88
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.27,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.27,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.27,
-        to: 1.27,
-      },
+        "from": 1.27,
+        "to": 1.27
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['propane'],
-    smiles: 'CCC',
-    ranges: [
+    "names": [
+      "propane"
+    ],
+    "smiles": "CCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 't',
-              },
+                "coupling": 7.3,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.88,
-            assignment: 'CH₃',
-          },
+            "delta": 0.88,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.88,
-        to: 0.88,
+        "from": 0.88,
+        "to": 0.88
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 'sept',
-              },
+                "coupling": 7.3,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 1.31,
-            assignment: 'CH₂',
-          },
+            "delta": 1.31,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.31,
-        to: 1.31,
-      },
+        "from": 1.31,
+        "to": 1.31
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['2-propanol'],
-    smiles: 'CC(O)C',
-    ranges: [
+    "names": [
+      "2-propanol"
+    ],
+    "smiles": "CC(O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'd',
-              },
+                "coupling": 6,
+                "multiplicity": "d"
+              }
             ],
-            delta: 1.1,
-            assignment: 'CH₃',
-          },
+            "delta": 1.1,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.1,
-        to: 1.1,
+        "from": 1.1,
+        "to": 1.1
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'sept',
-              },
+                "coupling": 6,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 3.9,
-            assignment: 'CH',
-          },
+            "delta": 3.9,
+            "assignment": "CH"
+          }
         ],
-        from: 3.9,
-        to: 3.9,
-      },
+        "from": 3.9,
+        "to": 3.9
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['propylene'],
-    smiles: 'CC=C',
-    ranges: [
+    "names": [
+      "propylene"
+    ],
+    "smiles": "CC=C",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6.4,
-                multiplicity: 'd',
+                "coupling": 6.4,
+                "multiplicity": "d"
               },
               {
-                coupling: 1.5,
-                multiplicity: 't',
-              },
+                "coupling": 1.5,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.68,
-            assignment: 'CH₃',
-          },
+            "delta": 1.68,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.68,
-        to: 1.68,
+        "from": 1.68,
+        "to": 1.68
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 10,
-                multiplicity: 'd',
-              },
+                "coupling": 10,
+                "multiplicity": "d"
+              }
             ],
-            delta: 4.9,
-            assignment: 'CH₂(1)',
-          },
+            "delta": 4.9,
+            "assignment": "CH₂(1)"
+          }
         ],
-        from: 4.9,
-        to: 4.9,
+        "from": 4.9,
+        "to": 4.9
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 17,
-                multiplicity: 'd',
-              },
+                "coupling": 17,
+                "multiplicity": "d"
+              }
             ],
-            delta: 5,
-            assignment: 'CH₂(2)',
-          },
+            "delta": 5,
+            "assignment": "CH₂(2)"
+          }
         ],
-        from: 5,
-        to: 5,
+        "from": 5,
+        "to": 5
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.81,
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 5.81,
+            "assignment": "CH"
+          }
         ],
-        from: 5.81,
-        to: 5.81,
-      },
+        "from": 5.81,
+        "to": 5.81
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['pyridine'],
-    smiles: 'C1=CC=NC=C1',
-    ranges: [
+    "names": [
+      "pyridine"
+    ],
+    "smiles": "C1=CC=NC=C1",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.58,
-            assignment: 'CH(2,6)',
-          },
+            "js": [],
+            "delta": 8.58,
+            "assignment": "CH(2,6)"
+          }
         ],
-        from: 8.58,
-        to: 8.58,
+        "from": 8.58,
+        "to": 8.58
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.35,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 7.35,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 7.35,
-        to: 7.35,
+        "from": 7.35,
+        "to": 7.35
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.76,
-            assignment: 'CH(4)',
-          },
+            "js": [],
+            "delta": 7.76,
+            "assignment": "CH(4)"
+          }
         ],
-        from: 7.76,
-        to: 7.76,
-      },
+        "from": 7.76,
+        "to": 7.76
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['pyrrole'],
-    smiles: 'C1=CNC=C1',
-    ranges: [
+    "names": [
+      "pyrrole"
+    ],
+    "smiles": "C1=CNC=C1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 10.02,
-            assignment: 'NH',
-          },
+            "js": [],
+            "delta": 10.02,
+            "assignment": "NH"
+          }
         ],
-        from: 10.02,
-        to: 10.02,
+        "from": 10.02,
+        "to": 10.02
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.77,
-            assignment: 'CH(2,5)',
-          },
+            "js": [],
+            "delta": 6.77,
+            "assignment": "CH(2,5)"
+          }
         ],
-        from: 6.77,
-        to: 6.77,
+        "from": 6.77,
+        "to": 6.77
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.07,
-            assignment: 'CH(3,4)',
-          },
+            "js": [],
+            "delta": 6.07,
+            "assignment": "CH(3,4)"
+          }
         ],
-        from: 6.07,
-        to: 6.07,
-      },
+        "from": 6.07,
+        "to": 6.07
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['pyrrolidine'],
-    smiles: 'C1CCNC1',
-    ranges: [],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "names": [
+      "pyrrolidine"
+    ],
+    "smiles": "C1CCNC1",
+    "integration": 4,
+    "ranges": [],
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['silicone grease'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "silicone grease"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.13,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.13,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.13,
-        to: 0.13,
-      },
+        "from": 0.13,
+        "to": 0.13
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['tetrahydrofuran'],
-    smiles: 'C1COCC1',
-    ranges: [
+    "names": [
+      "tetrahydrofuran"
+    ],
+    "smiles": "C1COCC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.63,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 3.63,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 3.63,
-        to: 3.63,
+        "from": 3.63,
+        "to": 3.63
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.79,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.79,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.79,
-        to: 1.79,
-      },
+        "from": 1.79,
+        "to": 1.79
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['toluene'],
-    smiles: 'Cc1ccccc1',
-    ranges: [
+    "names": [
+      "toluene"
+    ],
+    "smiles": "Cc1ccccc1",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.32,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.32,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.32,
-        to: 2.32,
+        "from": 2.32,
+        "to": 2.32
       },
       {
-        signals: [],
-        from: 7.1,
-        to: 7.2,
-        multiplicity: 'm',
+        "signals": [],
+        "from": 7.1,
+        "to": 7.2,
+        "multiplicity": "m"
       },
       {
-        signals: [],
-        from: 7.1,
-        to: 7.2,
-        multiplicity: 'm',
-      },
+        "signals": [],
+        "from": 7.1,
+        "to": 7.2,
+        "multiplicity": "m"
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['triethylamine'],
-    smiles: 'CCN(CC)CC',
-    ranges: [
+    "names": [
+      "triethylamine"
+    ],
+    "smiles": "CCN(CC)CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.96,
-            assignment: 'CH₃',
-          },
+            "delta": 0.96,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.96,
-        to: 0.96,
+        "from": 0.96,
+        "to": 0.96
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 2.45,
-            assignment: 'CH₂',
-          },
+            "delta": 2.45,
+            "assignment": "CH₂"
+          }
         ],
-        from: 2.45,
-        to: 2.45,
-      },
+        "from": 2.45,
+        "to": 2.45
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂CO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂CO"
   },
   {
-    names: ['water'],
-    smiles: 'O',
-    ranges: [
+    "names": [
+      "water"
+    ],
+    "smiles": "O",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: null,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": null,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: null,
-        to: null,
-      },
+        "from": null,
+        "to": null
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['acetic acid'],
-    smiles: 'CC(=O)O',
-    ranges: [
+    "names": [
+      "acetic acid"
+    ],
+    "smiles": "CC(=O)O",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.91,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.91,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.91,
-        to: 1.91,
-      },
+        "from": 1.91,
+        "to": 1.91
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['acetone'],
-    smiles: 'CC(=O)C',
-    ranges: [
+    "names": [
+      "acetone"
+    ],
+    "smiles": "CC(=O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.09,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.09,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.09,
-        to: 2.09,
-      },
+        "from": 2.09,
+        "to": 2.09
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['acetonitrile'],
-    smiles: 'CC#N',
-    ranges: [
+    "names": [
+      "acetonitrile"
+    ],
+    "smiles": "CC#N",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.07,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.07,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.07,
-        to: 2.07,
-      },
+        "from": 2.07,
+        "to": 2.07
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['benzene'],
-    smiles: 'c1ccccc1',
-    ranges: [
+    "names": [
+      "benzene"
+    ],
+    "smiles": "c1ccccc1",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.37,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.37,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.37,
-        to: 7.37,
-      },
+        "from": 7.37,
+        "to": 7.37
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['tert -butyl alcohol'],
-    smiles: 'CC(C)(C)O',
-    ranges: [
+    "names": [
+      "tert -butyl alcohol"
+    ],
+    "smiles": "CC(C)(C)O",
+    "integration": 9,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.11,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.11,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.11,
-        to: 1.11,
+        "from": 1.11,
+        "to": 1.11
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.19,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 4.19,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 4.19,
-        to: 4.19,
-      },
+        "from": 4.19,
+        "to": 4.19
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['chloroform'],
-    smiles: 'ClC(Cl)Cl',
-    ranges: [
+    "names": [
+      "chloroform"
+    ],
+    "smiles": "ClC(Cl)Cl",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.32,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 8.32,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 8.32,
-        to: 8.32,
-      },
+        "from": 8.32,
+        "to": 8.32
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['18-crown-6'],
-    smiles: 'C1COCCOCCOCCOCCOCCO1',
-    ranges: [
+    "names": [
+      "18-crown-6"
+    ],
+    "smiles": "C1COCCOCCOCCOCCOCCO1",
+    "integration": 24,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.51,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.51,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.51,
-        to: 3.51,
-      },
+        "from": 3.51,
+        "to": 3.51
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['cyclohexane'],
-    smiles: 'C1CCCCC1',
-    ranges: [
+    "names": [
+      "cyclohexane"
+    ],
+    "smiles": "C1CCCCC1",
+    "integration": 12,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.4,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.4,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.4,
-        to: 1.4,
-      },
+        "from": 1.4,
+        "to": 1.4
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['1,2-dichloroethane'],
-    smiles: 'ClCCCl',
-    ranges: [
+    "names": [
+      "1,2-dichloroethane"
+    ],
+    "smiles": "ClCCCl",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.9,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.9,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.9,
-        to: 3.9,
-      },
+        "from": 3.9,
+        "to": 3.9
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['dichloromethane'],
-    smiles: 'ClCCl',
-    ranges: [
+    "names": [
+      "dichloromethane"
+    ],
+    "smiles": "ClCCl",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.76,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.76,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.76,
-        to: 5.76,
-      },
+        "from": 5.76,
+        "to": 5.76
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.09,
-            assignment: 'CH₃',
-          },
+            "delta": 1.09,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.09,
-        to: 1.09,
+        "from": 1.09,
+        "to": 1.09
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.38,
-            assignment: 'CH₂',
-          },
+            "delta": 3.38,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.38,
-        to: 3.38,
-      },
+        "from": 3.38,
+        "to": 3.38
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['diglyme'],
-    smiles: 'COCCOCCOC',
-    ranges: [
+    "names": [
+      "diglyme"
+    ],
+    "smiles": "COCCOCCOC",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.51,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.51,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.51,
-        to: 3.51,
+        "from": 3.51,
+        "to": 3.51
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.38,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.38,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.38,
-        to: 3.38,
+        "from": 3.38,
+        "to": 3.38
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.24,
-            multiplicity: 's',
-            assignment: 'OCH₃',
-          },
+            "js": [],
+            "delta": 3.24,
+            "multiplicity": "s",
+            "assignment": "OCH₃"
+          }
         ],
-        from: 3.24,
-        to: 3.24,
-      },
+        "from": 3.24,
+        "to": 3.24
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['dimethylformamide'],
-    smiles: 'C(=O)N(C)C',
-    ranges: [
+    "names": [
+      "dimethylformamide"
+    ],
+    "smiles": "C(=O)N(C)C",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.95,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.95,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.95,
-        to: 7.95,
+        "from": 7.95,
+        "to": 7.95
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.89,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.89,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.89,
-        to: 2.89,
+        "from": 2.89,
+        "to": 2.89
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.73,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.73,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.73,
-        to: 2.73,
-      },
+        "from": 2.73,
+        "to": 2.73
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['1,4-dioxane'],
-    smiles: 'C1COCCOC1',
-    ranges: [
+    "names": [
+      "1,4-dioxane"
+    ],
+    "smiles": "C1COCCOC1",
+    "integration": 8,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.57,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.57,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.57,
-        to: 3.57,
-      },
+        "from": 3.57,
+        "to": 3.57
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['DME', 'diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "DME",
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.24,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.24,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.24,
-        to: 3.24,
+        "from": 3.24,
+        "to": 3.24
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.43,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.43,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.43,
-        to: 3.43,
-      },
+        "from": 3.43,
+        "to": 3.43
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['ethane'],
-    smiles: 'CC',
-    ranges: [
+    "names": [
+      "ethane"
+    ],
+    "smiles": "CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.82,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.82,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.82,
-        to: 0.82,
-      },
+        "from": 0.82,
+        "to": 0.82
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['ethanol'],
-    smiles: 'CCO',
-    ranges: [
+    "names": [
+      "ethanol"
+    ],
+    "smiles": "CCO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.06,
-            assignment: 'CH₃',
-          },
+            "delta": 1.06,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.06,
-        to: 1.06,
+        "from": 1.06,
+        "to": 1.06
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.44,
-            assignment: 'CH₂',
-          },
+            "delta": 3.44,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.44,
-        to: 3.44,
+        "from": 3.44,
+        "to": 3.44
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.63,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 4.63,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 4.63,
-        to: 4.63,
-      },
+        "from": 4.63,
+        "to": 4.63
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['ethyl acetate'],
-    smiles: 'CC(=O)CC',
-    ranges: [
+    "names": [
+      "ethyl acetate"
+    ],
+    "smiles": "CC(=O)CC",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.99,
-            multiplicity: 's',
-            assignment: 'CH₃CO',
-          },
+            "js": [],
+            "delta": 1.99,
+            "multiplicity": "s",
+            "assignment": "CH₃CO"
+          }
         ],
-        from: 1.99,
-        to: 1.99,
+        "from": 1.99,
+        "to": 1.99
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 4.03,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 4.03,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 4.03,
-        to: 4.03,
+        "from": 4.03,
+        "to": 4.03
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.17,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 1.17,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 1.17,
-        to: 1.17,
-      },
+        "from": 1.17,
+        "to": 1.17
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['ethylene'],
-    smiles: 'C=C',
-    ranges: [
+    "names": [
+      "ethylene"
+    ],
+    "smiles": "C=C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.41,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.41,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.41,
-        to: 5.41,
-      },
+        "from": 5.41,
+        "to": 5.41
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['ethylene glycol'],
-    smiles: 'OCCO',
-    ranges: [
+    "names": [
+      "ethylene glycol"
+    ],
+    "smiles": "OCCO",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.34,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.34,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.34,
-        to: 3.34,
-      },
+        "from": 3.34,
+        "to": 3.34
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['H greaseᶠ'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "H greaseᶠ"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [],
-        from: 0.82,
-        to: 0.88,
-        multiplicity: 'm',
+        "signals": [],
+        "from": 0.82,
+        "to": 0.88,
+        "multiplicity": "m"
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.24,
-            multiplicity: 'br s',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.24,
+            "multiplicity": "br s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.24,
-        to: 1.24,
-      },
+        "from": 1.24,
+        "to": 1.24
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['hexamethylbenzene'],
-    smiles: 'CC1=C(C(=C(C(=C1C)C)C)C)C',
-    ranges: [
+    "names": [
+      "hexamethylbenzene"
+    ],
+    "smiles": "CC1=C(C(=C(C(=C1C)C)C)C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.14,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.14,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.14,
-        to: 2.14,
-      },
+        "from": 2.14,
+        "to": 2.14
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['n-hexane'],
-    smiles: 'CCCCCC',
-    ranges: [
+    "names": [
+      "n-hexane"
+    ],
+    "smiles": "CCCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.86,
-            assignment: 'CH₃',
-          },
+            "delta": 0.86,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.86,
-        to: 0.86,
+        "from": 0.86,
+        "to": 0.86
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.25,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.25,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.25,
-        to: 1.25,
-      },
+        "from": 1.25,
+        "to": 1.25
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['HMDSO'],
-    smiles: 'C[Si](C)(C)O[Si](C)(C)C',
-    ranges: [
+    "names": [
+      "HMDSO"
+    ],
+    "smiles": "C[Si](C)(C)O[Si](C)(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.06,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.06,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.06,
-        to: 0.06,
-      },
+        "from": 0.06,
+        "to": 0.06
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['HMPA'],
-    smiles: 'CN(C)P(=O)(N(C)C)N(C)C',
-    ranges: [
+    "names": [
+      "HMPA"
+    ],
+    "smiles": "CN(C)P(=O)(N(C)C)N(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 9.5,
-                multiplicity: 'd',
-              },
+                "coupling": 9.5,
+                "multiplicity": "d"
+              }
             ],
-            delta: 2.53,
-            assignment: 'CH₃',
-          },
+            "delta": 2.53,
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.53,
-        to: 2.53,
-      },
+        "from": 2.53,
+        "to": 2.53
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['hydrogen'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "hydrogen"
+    ],
+    "smiles": "",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.61,
-            multiplicity: 's',
-            assignment: 'H₂',
-          },
+            "js": [],
+            "delta": 4.61,
+            "multiplicity": "s",
+            "assignment": "H₂"
+          }
         ],
-        from: 4.61,
-        to: 4.61,
-      },
+        "from": 4.61,
+        "to": 4.61
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['imidazole'],
-    smiles: 'C1=CN=CN1',
-    ranges: [
+    "names": [
+      "imidazole"
+    ],
+    "smiles": "C1=CN=CN1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.63,
-            multiplicity: 's',
-            assignment: 'CH(2)',
-          },
+            "js": [],
+            "delta": 7.63,
+            "multiplicity": "s",
+            "assignment": "CH(2)"
+          }
         ],
-        from: 7.63,
-        to: 7.63,
+        "from": 7.63,
+        "to": 7.63
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.01,
-            multiplicity: 's',
-            assignment: 'CH(4,5)',
-          },
+            "js": [],
+            "delta": 7.01,
+            "multiplicity": "s",
+            "assignment": "CH(4,5)"
+          }
         ],
-        from: 7.01,
-        to: 7.01,
-      },
+        "from": 7.01,
+        "to": 7.01
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['methane'],
-    smiles: 'C',
-    ranges: [
+    "names": [
+      "methane"
+    ],
+    "smiles": "C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.2,
-            multiplicity: 's',
-            assignment: 'CH₄',
-          },
+            "js": [],
+            "delta": 0.2,
+            "multiplicity": "s",
+            "assignment": "CH₄"
+          }
         ],
-        from: 0.2,
-        to: 0.2,
-      },
+        "from": 0.2,
+        "to": 0.2
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['methanol'],
-    smiles: 'CO',
-    ranges: [
+    "names": [
+      "methanol"
+    ],
+    "smiles": "CO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.16,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.16,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.16,
-        to: 3.16,
+        "from": 3.16,
+        "to": 3.16
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.01,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 4.01,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 4.01,
-        to: 4.01,
-      },
+        "from": 4.01,
+        "to": 4.01
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['nitromethane'],
-    smiles: 'C[N+](=O)[O-]',
-    ranges: [
+    "names": [
+      "nitromethane"
+    ],
+    "smiles": "C[N+](=O)[O-]",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.42,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 4.42,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 4.42,
-        to: 4.42,
-      },
+        "from": 4.42,
+        "to": 4.42
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['n-pentane'],
-    smiles: 'CCCCC',
-    ranges: [
+    "names": [
+      "n-pentane"
+    ],
+    "smiles": "CCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.86,
-            assignment: 'CH₃',
-          },
+            "delta": 0.86,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.86,
-        to: 0.86,
+        "from": 0.86,
+        "to": 0.86
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.27,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.27,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.27,
-        to: 1.27,
-      },
+        "from": 1.27,
+        "to": 1.27
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['propane'],
-    smiles: 'CCC',
-    ranges: [
+    "names": [
+      "propane"
+    ],
+    "smiles": "CCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 't',
-              },
+                "coupling": 7.3,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.87,
-            assignment: 'CH₃',
-          },
+            "delta": 0.87,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.87,
-        to: 0.87,
+        "from": 0.87,
+        "to": 0.87
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 'sept',
-              },
+                "coupling": 7.3,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 1.29,
-            assignment: 'CH₂',
-          },
+            "delta": 1.29,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.29,
-        to: 1.29,
-      },
+        "from": 1.29,
+        "to": 1.29
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['2-propanol'],
-    smiles: 'CC(O)C',
-    ranges: [
+    "names": [
+      "2-propanol"
+    ],
+    "smiles": "CC(O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'd',
-              },
+                "coupling": 6,
+                "multiplicity": "d"
+              }
             ],
-            delta: 1.04,
-            assignment: 'CH₃',
-          },
+            "delta": 1.04,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.04,
-        to: 1.04,
+        "from": 1.04,
+        "to": 1.04
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'sept',
-              },
+                "coupling": 6,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 3.78,
-            assignment: 'CH',
-          },
+            "delta": 3.78,
+            "assignment": "CH"
+          }
         ],
-        from: 3.78,
-        to: 3.78,
-      },
+        "from": 3.78,
+        "to": 3.78
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['propylene'],
-    smiles: 'CC=C',
-    ranges: [
+    "names": [
+      "propylene"
+    ],
+    "smiles": "CC=C",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6.4,
-                multiplicity: 'd',
+                "coupling": 6.4,
+                "multiplicity": "d"
               },
               {
-                coupling: 1.5,
-                multiplicity: 't',
-              },
+                "coupling": 1.5,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.68,
-            assignment: 'CH₃',
-          },
+            "delta": 1.68,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.68,
-        to: 1.68,
+        "from": 1.68,
+        "to": 1.68
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 10,
-                multiplicity: 'd',
-              },
+                "coupling": 10,
+                "multiplicity": "d"
+              }
             ],
-            delta: 4.94,
-            assignment: 'CH₂(1)',
-          },
+            "delta": 4.94,
+            "assignment": "CH₂(1)"
+          }
         ],
-        from: 4.94,
-        to: 4.94,
+        "from": 4.94,
+        "to": 4.94
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 17,
-                multiplicity: 'd',
-              },
+                "coupling": 17,
+                "multiplicity": "d"
+              }
             ],
-            delta: 5.03,
-            assignment: 'CH₂(2)',
-          },
+            "delta": 5.03,
+            "assignment": "CH₂(2)"
+          }
         ],
-        from: 5.03,
-        to: 5.03,
+        "from": 5.03,
+        "to": 5.03
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.8,
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 5.8,
+            "assignment": "CH"
+          }
         ],
-        from: 5.8,
-        to: 5.8,
-      },
+        "from": 5.8,
+        "to": 5.8
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['pyridine'],
-    smiles: 'C1=CC=NC=C1',
-    ranges: [
+    "names": [
+      "pyridine"
+    ],
+    "smiles": "C1=CC=NC=C1",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.58,
-            assignment: 'CH(2,6)',
-          },
+            "js": [],
+            "delta": 8.58,
+            "assignment": "CH(2,6)"
+          }
         ],
-        from: 8.58,
-        to: 8.58,
+        "from": 8.58,
+        "to": 8.58
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.39,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 7.39,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 7.39,
-        to: 7.39,
+        "from": 7.39,
+        "to": 7.39
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.79,
-            assignment: 'CH(4)',
-          },
+            "js": [],
+            "delta": 7.79,
+            "assignment": "CH(4)"
+          }
         ],
-        from: 7.79,
-        to: 7.79,
-      },
+        "from": 7.79,
+        "to": 7.79
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['pyrrole'],
-    smiles: 'C1=CNC=C1',
-    ranges: [
+    "names": [
+      "pyrrole"
+    ],
+    "smiles": "C1=CNC=C1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 10.75,
-            assignment: 'NH',
-          },
+            "js": [],
+            "delta": 10.75,
+            "assignment": "NH"
+          }
         ],
-        from: 10.75,
-        to: 10.75,
+        "from": 10.75,
+        "to": 10.75
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.73,
-            assignment: 'CH(2,5)',
-          },
+            "js": [],
+            "delta": 6.73,
+            "assignment": "CH(2,5)"
+          }
         ],
-        from: 6.73,
-        to: 6.73,
+        "from": 6.73,
+        "to": 6.73
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.01,
-            assignment: 'CH(3,4)',
-          },
+            "js": [],
+            "delta": 6.01,
+            "assignment": "CH(3,4)"
+          }
         ],
-        from: 6.01,
-        to: 6.01,
-      },
+        "from": 6.01,
+        "to": 6.01
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['pyrrolidine'],
-    smiles: 'C1CCNC1',
-    ranges: [
+    "names": [
+      "pyrrolidine"
+    ],
+    "smiles": "C1CCNC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.67,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 2.67,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 2.67,
-        to: 2.67,
+        "from": 2.67,
+        "to": 2.67
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.55,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.55,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.55,
-        to: 1.55,
-      },
+        "from": 1.55,
+        "to": 1.55
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['silicone grease'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "silicone grease"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: -0.06,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": -0.06,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: -0.06,
-        to: -0.06,
-      },
+        "from": -0.06,
+        "to": -0.06
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['tetrahydrofuran'],
-    smiles: 'C1COCC1',
-    ranges: [
+    "names": [
+      "tetrahydrofuran"
+    ],
+    "smiles": "C1COCC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.6,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 3.6,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 3.6,
-        to: 3.6,
+        "from": 3.6,
+        "to": 3.6
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.76,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.76,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.76,
-        to: 1.76,
-      },
+        "from": 1.76,
+        "to": 1.76
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['toluene'],
-    smiles: 'Cc1ccccc1',
-    ranges: [
+    "names": [
+      "toluene"
+    ],
+    "smiles": "Cc1ccccc1",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.3,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.3,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.3,
-        to: 2.3,
+        "from": 2.3,
+        "to": 2.3
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.18,
-            assignment: 'CH(2,4,6)',
-          },
+            "js": [],
+            "delta": 7.18,
+            "assignment": "CH(2,4,6)"
+          }
         ],
-        from: 7.18,
-        to: 7.18,
+        "from": 7.18,
+        "to": 7.18
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.25,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 7.25,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 7.25,
-        to: 7.25,
-      },
+        "from": 7.25,
+        "to": 7.25
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['triethylamine'],
-    smiles: 'CCN(CC)CC',
-    ranges: [
+    "names": [
+      "triethylamine"
+    ],
+    "smiles": "CCN(CC)CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.93,
-            assignment: 'CH₃',
-          },
+            "delta": 0.93,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.93,
-        to: 0.93,
+        "from": 0.93,
+        "to": 0.93
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 2.43,
-            assignment: 'CH₂',
-          },
+            "delta": 2.43,
+            "assignment": "CH₂"
+          }
         ],
-        from: 2.43,
-        to: 2.43,
-      },
+        "from": 2.43,
+        "to": 2.43
+      }
     ],
-    nucleus: '1H',
-    solvent: '(CD₃)₂SO',
+    "nucleus": "1H",
+    "solvent": "(CD₃)₂SO"
   },
   {
-    names: ['water'],
-    smiles: 'O',
-    ranges: [
+    "names": [
+      "water"
+    ],
+    "smiles": "O",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.13,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 2.13,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 2.13,
-        to: 2.13,
-      },
+        "from": 2.13,
+        "to": 2.13
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['acetic acid'],
-    smiles: 'CC(=O)O',
-    ranges: [
+    "names": [
+      "acetic acid"
+    ],
+    "smiles": "CC(=O)O",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.96,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.96,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.96,
-        to: 1.96,
-      },
+        "from": 1.96,
+        "to": 1.96
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['acetone'],
-    smiles: 'CC(=O)C',
-    ranges: [
+    "names": [
+      "acetone"
+    ],
+    "smiles": "CC(=O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.08,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.08,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.08,
-        to: 2.08,
-      },
+        "from": 2.08,
+        "to": 2.08
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['acetonitrile'],
-    smiles: 'CC#N',
-    ranges: [
+    "names": [
+      "acetonitrile"
+    ],
+    "smiles": "CC#N",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.96,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.96,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.96,
-        to: 1.96,
-      },
+        "from": 1.96,
+        "to": 1.96
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['benzene'],
-    smiles: 'c1ccccc1',
-    ranges: [
+    "names": [
+      "benzene"
+    ],
+    "smiles": "c1ccccc1",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.37,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.37,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.37,
-        to: 7.37,
-      },
+        "from": 7.37,
+        "to": 7.37
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['tert -butyl alcohol'],
-    smiles: 'CC(C)(C)O',
-    ranges: [
+    "names": [
+      "tert -butyl alcohol"
+    ],
+    "smiles": "CC(C)(C)O",
+    "integration": 9,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.16,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.16,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.16,
-        to: 1.16,
+        "from": 1.16,
+        "to": 1.16
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.18,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 2.18,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 2.18,
-        to: 2.18,
-      },
+        "from": 2.18,
+        "to": 2.18
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['chloroform'],
-    smiles: 'ClC(Cl)Cl',
-    ranges: [
+    "names": [
+      "chloroform"
+    ],
+    "smiles": "ClC(Cl)Cl",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.58,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.58,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.58,
-        to: 7.58,
-      },
+        "from": 7.58,
+        "to": 7.58
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['18-crown-6'],
-    smiles: 'C1COCCOCCOCCOCCOCCO1',
-    ranges: [
+    "names": [
+      "18-crown-6"
+    ],
+    "smiles": "C1COCCOCCOCCOCCOCCO1",
+    "integration": 24,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.51,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.51,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.51,
-        to: 3.51,
-      },
+        "from": 3.51,
+        "to": 3.51
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['cyclohexane'],
-    smiles: 'C1CCCCC1',
-    ranges: [
+    "names": [
+      "cyclohexane"
+    ],
+    "smiles": "C1CCCCC1",
+    "integration": 12,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.44,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.44,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.44,
-        to: 1.44,
-      },
+        "from": 1.44,
+        "to": 1.44
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['1,2-dichloroethane'],
-    smiles: 'ClCCCl',
-    ranges: [
+    "names": [
+      "1,2-dichloroethane"
+    ],
+    "smiles": "ClCCCl",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.81,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.81,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.81,
-        to: 3.81,
-      },
+        "from": 3.81,
+        "to": 3.81
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['dichloromethane'],
-    smiles: 'ClCCl',
-    ranges: [
+    "names": [
+      "dichloromethane"
+    ],
+    "smiles": "ClCCl",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.44,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.44,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.44,
-        to: 5.44,
-      },
+        "from": 5.44,
+        "to": 5.44
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.12,
-            assignment: 'CH₃',
-          },
+            "delta": 1.12,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.12,
-        to: 1.12,
+        "from": 1.12,
+        "to": 1.12
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.42,
-            assignment: 'CH₂',
-          },
+            "delta": 3.42,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.42,
-        to: 3.42,
-      },
+        "from": 3.42,
+        "to": 3.42
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['diglyme'],
-    smiles: 'COCCOCCOC',
-    ranges: [
+    "names": [
+      "diglyme"
+    ],
+    "smiles": "COCCOCCOC",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.53,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.53,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.53,
-        to: 3.53,
+        "from": 3.53,
+        "to": 3.53
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.45,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.45,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.45,
-        to: 3.45,
+        "from": 3.45,
+        "to": 3.45
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.29,
-            multiplicity: 's',
-            assignment: 'OCH₃',
-          },
+            "js": [],
+            "delta": 3.29,
+            "multiplicity": "s",
+            "assignment": "OCH₃"
+          }
         ],
-        from: 3.29,
-        to: 3.29,
-      },
+        "from": 3.29,
+        "to": 3.29
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['dimethylformamide'],
-    smiles: 'C(=O)N(C)C',
-    ranges: [
+    "names": [
+      "dimethylformamide"
+    ],
+    "smiles": "C(=O)N(C)C",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.92,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.92,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.92,
-        to: 7.92,
+        "from": 7.92,
+        "to": 7.92
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.89,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.89,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.89,
-        to: 2.89,
+        "from": 2.89,
+        "to": 2.89
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.77,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.77,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.77,
-        to: 2.77,
-      },
+        "from": 2.77,
+        "to": 2.77
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['1,4-dioxane'],
-    smiles: 'C1COCCOC1',
-    ranges: [
+    "names": [
+      "1,4-dioxane"
+    ],
+    "smiles": "C1COCCOC1",
+    "integration": 8,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.6,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.6,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.6,
-        to: 3.6,
-      },
+        "from": 3.6,
+        "to": 3.6
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['DME', 'diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "DME",
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.28,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.28,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.28,
-        to: 3.28,
+        "from": 3.28,
+        "to": 3.28
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.45,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.45,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.45,
-        to: 3.45,
-      },
+        "from": 3.45,
+        "to": 3.45
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['ethane'],
-    smiles: 'CC',
-    ranges: [
+    "names": [
+      "ethane"
+    ],
+    "smiles": "CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.85,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.85,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.85,
-        to: 0.85,
-      },
+        "from": 0.85,
+        "to": 0.85
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['ethanol'],
-    smiles: 'CCO',
-    ranges: [
+    "names": [
+      "ethanol"
+    ],
+    "smiles": "CCO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.12,
-            assignment: 'CH₃',
-          },
+            "delta": 1.12,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.12,
-        to: 1.12,
+        "from": 1.12,
+        "to": 1.12
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.54,
-            assignment: 'CH₂',
-          },
+            "delta": 3.54,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.54,
-        to: 3.54,
+        "from": 3.54,
+        "to": 3.54
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.47,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 2.47,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 2.47,
-        to: 2.47,
-      },
+        "from": 2.47,
+        "to": 2.47
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['ethyl acetate'],
-    smiles: 'CC(=O)CC',
-    ranges: [
+    "names": [
+      "ethyl acetate"
+    ],
+    "smiles": "CC(=O)CC",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.97,
-            multiplicity: 's',
-            assignment: 'CH₃CO',
-          },
+            "js": [],
+            "delta": 1.97,
+            "multiplicity": "s",
+            "assignment": "CH₃CO"
+          }
         ],
-        from: 1.97,
-        to: 1.97,
+        "from": 1.97,
+        "to": 1.97
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 4.06,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 4.06,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 4.06,
-        to: 4.06,
+        "from": 4.06,
+        "to": 4.06
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.2,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 1.2,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 1.2,
-        to: 1.2,
-      },
+        "from": 1.2,
+        "to": 1.2
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['ethylene'],
-    smiles: 'C=C',
-    ranges: [
+    "names": [
+      "ethylene"
+    ],
+    "smiles": "C=C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.41,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.41,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.41,
-        to: 5.41,
-      },
+        "from": 5.41,
+        "to": 5.41
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['ethylene glycol'],
-    smiles: 'OCCO',
-    ranges: [
+    "names": [
+      "ethylene glycol"
+    ],
+    "smiles": "OCCO",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.51,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.51,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.51,
-        to: 3.51,
-      },
+        "from": 3.51,
+        "to": 3.51
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['H greaseᶠ'],
-    smiles: '',
-    ranges: [],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "names": [
+      "H greaseᶠ"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [],
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['hexamethylbenzene'],
-    smiles: 'CC1=C(C(=C(C(=C1C)C)C)C)C',
-    ranges: [
+    "names": [
+      "hexamethylbenzene"
+    ],
+    "smiles": "CC1=C(C(=C(C(=C1C)C)C)C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.19,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.19,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.19,
-        to: 2.19,
-      },
+        "from": 2.19,
+        "to": 2.19
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['n-hexane'],
-    smiles: 'CCCCCC',
-    ranges: [
+    "names": [
+      "n-hexane"
+    ],
+    "smiles": "CCCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.89,
-            assignment: 'CH₃',
-          },
+            "delta": 0.89,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.89,
-        to: 0.89,
+        "from": 0.89,
+        "to": 0.89
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.28,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.28,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.28,
-        to: 1.28,
-      },
+        "from": 1.28,
+        "to": 1.28
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['HMDSO'],
-    smiles: 'C[Si](C)(C)O[Si](C)(C)C',
-    ranges: [
+    "names": [
+      "HMDSO"
+    ],
+    "smiles": "C[Si](C)(C)O[Si](C)(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.07,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.07,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.07,
-        to: 0.07,
-      },
+        "from": 0.07,
+        "to": 0.07
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['HMPA'],
-    smiles: 'CN(C)P(=O)(N(C)C)N(C)C',
-    ranges: [
+    "names": [
+      "HMPA"
+    ],
+    "smiles": "CN(C)P(=O)(N(C)C)N(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 9.5,
-                multiplicity: 'd',
-              },
+                "coupling": 9.5,
+                "multiplicity": "d"
+              }
             ],
-            delta: 2.57,
-            assignment: 'CH₃',
-          },
+            "delta": 2.57,
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.57,
-        to: 2.57,
-      },
+        "from": 2.57,
+        "to": 2.57
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['hydrogen'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "hydrogen"
+    ],
+    "smiles": "",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.57,
-            multiplicity: 's',
-            assignment: 'H₂',
-          },
+            "js": [],
+            "delta": 4.57,
+            "multiplicity": "s",
+            "assignment": "H₂"
+          }
         ],
-        from: 4.57,
-        to: 4.57,
-      },
+        "from": 4.57,
+        "to": 4.57
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['imidazole'],
-    smiles: 'C1=CN=CN1',
-    ranges: [
+    "names": [
+      "imidazole"
+    ],
+    "smiles": "C1=CN=CN1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.57,
-            multiplicity: 's',
-            assignment: 'CH(2)',
-          },
+            "js": [],
+            "delta": 7.57,
+            "multiplicity": "s",
+            "assignment": "CH(2)"
+          }
         ],
-        from: 7.57,
-        to: 7.57,
+        "from": 7.57,
+        "to": 7.57
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.01,
-            multiplicity: 's',
-            assignment: 'CH(4,5)',
-          },
+            "js": [],
+            "delta": 7.01,
+            "multiplicity": "s",
+            "assignment": "CH(4,5)"
+          }
         ],
-        from: 7.01,
-        to: 7.01,
-      },
+        "from": 7.01,
+        "to": 7.01
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['methane'],
-    smiles: 'C',
-    ranges: [
+    "names": [
+      "methane"
+    ],
+    "smiles": "C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.2,
-            multiplicity: 's',
-            assignment: 'CH₄',
-          },
+            "js": [],
+            "delta": 0.2,
+            "multiplicity": "s",
+            "assignment": "CH₄"
+          }
         ],
-        from: 0.2,
-        to: 0.2,
-      },
+        "from": 0.2,
+        "to": 0.2
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['methanol'],
-    smiles: 'CO',
-    ranges: [
+    "names": [
+      "methanol"
+    ],
+    "smiles": "CO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.28,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.28,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.28,
-        to: 3.28,
+        "from": 3.28,
+        "to": 3.28
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.16,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 2.16,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 2.16,
-        to: 2.16,
-      },
+        "from": 2.16,
+        "to": 2.16
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['nitromethane'],
-    smiles: 'C[N+](=O)[O-]',
-    ranges: [
+    "names": [
+      "nitromethane"
+    ],
+    "smiles": "C[N+](=O)[O-]",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.31,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 4.31,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 4.31,
-        to: 4.31,
-      },
+        "from": 4.31,
+        "to": 4.31
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['n-pentane'],
-    smiles: 'CCCCC',
-    ranges: [
+    "names": [
+      "n-pentane"
+    ],
+    "smiles": "CCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.89,
-            assignment: 'CH₃',
-          },
+            "delta": 0.89,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.89,
-        to: 0.89,
+        "from": 0.89,
+        "to": 0.89
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.29,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.29,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.29,
-        to: 1.29,
-      },
+        "from": 1.29,
+        "to": 1.29
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['propane'],
-    smiles: 'CCC',
-    ranges: [
+    "names": [
+      "propane"
+    ],
+    "smiles": "CCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 't',
-              },
+                "coupling": 7.3,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.9,
-            assignment: 'CH₃',
-          },
+            "delta": 0.9,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.9,
-        to: 0.9,
+        "from": 0.9,
+        "to": 0.9
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 'sept',
-              },
+                "coupling": 7.3,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 1.33,
-            assignment: 'CH₂',
-          },
+            "delta": 1.33,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.33,
-        to: 1.33,
-      },
+        "from": 1.33,
+        "to": 1.33
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['2-propanol'],
-    smiles: 'CC(O)C',
-    ranges: [
+    "names": [
+      "2-propanol"
+    ],
+    "smiles": "CC(O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'd',
-              },
+                "coupling": 6,
+                "multiplicity": "d"
+              }
             ],
-            delta: 1.09,
-            assignment: 'CH₃',
-          },
+            "delta": 1.09,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.09,
-        to: 1.09,
+        "from": 1.09,
+        "to": 1.09
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'sept',
-              },
+                "coupling": 6,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 3.87,
-            assignment: 'CH',
-          },
+            "delta": 3.87,
+            "assignment": "CH"
+          }
         ],
-        from: 3.87,
-        to: 3.87,
-      },
+        "from": 3.87,
+        "to": 3.87
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['propylene'],
-    smiles: 'CC=C',
-    ranges: [
+    "names": [
+      "propylene"
+    ],
+    "smiles": "CC=C",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6.4,
-                multiplicity: 'd',
+                "coupling": 6.4,
+                "multiplicity": "d"
               },
               {
-                coupling: 1.5,
-                multiplicity: 't',
-              },
+                "coupling": 1.5,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.7,
-            assignment: 'CH₃',
-          },
+            "delta": 1.7,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.7,
-        to: 1.7,
+        "from": 1.7,
+        "to": 1.7
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 10,
-                multiplicity: 'd',
-              },
+                "coupling": 10,
+                "multiplicity": "d"
+              }
             ],
-            delta: 4.93,
-            assignment: 'CH₂(1)',
-          },
+            "delta": 4.93,
+            "assignment": "CH₂(1)"
+          }
         ],
-        from: 4.93,
-        to: 4.93,
+        "from": 4.93,
+        "to": 4.93
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 17,
-                multiplicity: 'd',
-              },
+                "coupling": 17,
+                "multiplicity": "d"
+              }
             ],
-            delta: 5.04,
-            assignment: 'CH₂(2)',
-          },
+            "delta": 5.04,
+            "assignment": "CH₂(2)"
+          }
         ],
-        from: 5.04,
-        to: 5.04,
+        "from": 5.04,
+        "to": 5.04
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.85,
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 5.85,
+            "assignment": "CH"
+          }
         ],
-        from: 5.85,
-        to: 5.85,
-      },
+        "from": 5.85,
+        "to": 5.85
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['pyridine'],
-    smiles: 'C1=CC=NC=C1',
-    ranges: [
+    "names": [
+      "pyridine"
+    ],
+    "smiles": "C1=CC=NC=C1",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.57,
-            assignment: 'CH(2,6)',
-          },
+            "js": [],
+            "delta": 8.57,
+            "assignment": "CH(2,6)"
+          }
         ],
-        from: 8.57,
-        to: 8.57,
+        "from": 8.57,
+        "to": 8.57
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.33,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 7.33,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 7.33,
-        to: 7.33,
+        "from": 7.33,
+        "to": 7.33
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.73,
-            assignment: 'CH(4)',
-          },
+            "js": [],
+            "delta": 7.73,
+            "assignment": "CH(4)"
+          }
         ],
-        from: 7.73,
-        to: 7.73,
-      },
+        "from": 7.73,
+        "to": 7.73
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['pyrrole'],
-    smiles: 'C1=CNC=C1',
-    ranges: [
+    "names": [
+      "pyrrole"
+    ],
+    "smiles": "C1=CNC=C1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 9.27,
-            assignment: 'NH',
-          },
+            "js": [],
+            "delta": 9.27,
+            "assignment": "NH"
+          }
         ],
-        from: 9.27,
-        to: 9.27,
+        "from": 9.27,
+        "to": 9.27
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.75,
-            assignment: 'CH(2,5)',
-          },
+            "js": [],
+            "delta": 6.75,
+            "assignment": "CH(2,5)"
+          }
         ],
-        from: 6.75,
-        to: 6.75,
+        "from": 6.75,
+        "to": 6.75
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.1,
-            assignment: 'CH(3,4)',
-          },
+            "js": [],
+            "delta": 6.1,
+            "assignment": "CH(3,4)"
+          }
         ],
-        from: 6.1,
-        to: 6.1,
-      },
+        "from": 6.1,
+        "to": 6.1
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['pyrrolidine'],
-    smiles: 'C1CCNC1',
-    ranges: [
+    "names": [
+      "pyrrolidine"
+    ],
+    "smiles": "C1CCNC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.75,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 2.75,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 2.75,
-        to: 2.75,
+        "from": 2.75,
+        "to": 2.75
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.61,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.61,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.61,
-        to: 1.61,
-      },
+        "from": 1.61,
+        "to": 1.61
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['silicone grease'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "silicone grease"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.08,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.08,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.08,
-        to: 0.08,
-      },
+        "from": 0.08,
+        "to": 0.08
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['tetrahydrofuran'],
-    smiles: 'C1COCC1',
-    ranges: [
+    "names": [
+      "tetrahydrofuran"
+    ],
+    "smiles": "C1COCC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.64,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 3.64,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 3.64,
-        to: 3.64,
+        "from": 3.64,
+        "to": 3.64
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.8,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.8,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.8,
-        to: 1.8,
-      },
+        "from": 1.8,
+        "to": 1.8
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['toluene'],
-    smiles: 'Cc1ccccc1',
-    ranges: [
+    "names": [
+      "toluene"
+    ],
+    "smiles": "Cc1ccccc1",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.33,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.33,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.33,
-        to: 2.33,
+        "from": 2.33,
+        "to": 2.33
       },
       {
-        signals: [],
-        from: 7.1,
-        to: 7.3,
-        multiplicity: 'm',
+        "signals": [],
+        "from": 7.1,
+        "to": 7.3,
+        "multiplicity": "m"
       },
       {
-        signals: [],
-        from: 7.1,
-        to: 7.3,
-        multiplicity: 'm',
-      },
+        "signals": [],
+        "from": 7.1,
+        "to": 7.3,
+        "multiplicity": "m"
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['triethylamine'],
-    smiles: 'CCN(CC)CC',
-    ranges: [
+    "names": [
+      "triethylamine"
+    ],
+    "smiles": "CCN(CC)CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.96,
-            assignment: 'CH₃',
-          },
+            "delta": 0.96,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.96,
-        to: 0.96,
+        "from": 0.96,
+        "to": 0.96
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 2.45,
-            assignment: 'CH₂',
-          },
+            "delta": 2.45,
+            "assignment": "CH₂"
+          }
         ],
-        from: 2.45,
-        to: 2.45,
-      },
+        "from": 2.45,
+        "to": 2.45
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃CN',
+    "nucleus": "1H",
+    "solvent": "CD₃CN"
   },
   {
-    names: ['water'],
-    smiles: 'O',
-    ranges: [
+    "names": [
+      "water"
+    ],
+    "smiles": "O",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.66,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 3.66,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 3.66,
-        to: 3.66,
-      },
+        "from": 3.66,
+        "to": 3.66
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['acetic acid'],
-    smiles: 'CC(=O)O',
-    ranges: [
+    "names": [
+      "acetic acid"
+    ],
+    "smiles": "CC(=O)O",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.06,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.06,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.06,
-        to: 2.06,
-      },
+        "from": 2.06,
+        "to": 2.06
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['acetone'],
-    smiles: 'CC(=O)C',
-    ranges: [
+    "names": [
+      "acetone"
+    ],
+    "smiles": "CC(=O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.19,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.19,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.19,
-        to: 2.19,
-      },
+        "from": 2.19,
+        "to": 2.19
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['acetonitrile'],
-    smiles: 'CC#N',
-    ranges: [
+    "names": [
+      "acetonitrile"
+    ],
+    "smiles": "CC#N",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.95,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.95,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.95,
-        to: 1.95,
-      },
+        "from": 1.95,
+        "to": 1.95
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['benzene'],
-    smiles: 'c1ccccc1',
-    ranges: [
+    "names": [
+      "benzene"
+    ],
+    "smiles": "c1ccccc1",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.36,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.36,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.36,
-        to: 7.36,
-      },
+        "from": 7.36,
+        "to": 7.36
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['tert -butyl alcohol'],
-    smiles: 'CC(C)(C)O',
-    ranges: [
+    "names": [
+      "tert -butyl alcohol"
+    ],
+    "smiles": "CC(C)(C)O",
+    "integration": 9,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.28,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.28,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.28,
-        to: 1.28,
+        "from": 1.28,
+        "to": 1.28
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.2,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 2.2,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 2.2,
-        to: 2.2,
-      },
+        "from": 2.2,
+        "to": 2.2
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['chloroform'],
-    smiles: 'ClC(Cl)Cl',
-    ranges: [
+    "names": [
+      "chloroform"
+    ],
+    "smiles": "ClC(Cl)Cl",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.33,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.33,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.33,
-        to: 7.33,
-      },
+        "from": 7.33,
+        "to": 7.33
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['18-crown-6'],
-    smiles: 'C1COCCOCCOCCOCCOCCO1',
-    ranges: [
+    "names": [
+      "18-crown-6"
+    ],
+    "smiles": "C1COCCOCCOCCOCCOCCO1",
+    "integration": 24,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.64,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.64,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.64,
-        to: 3.64,
-      },
+        "from": 3.64,
+        "to": 3.64
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['cyclohexane'],
-    smiles: 'C1CCCCC1',
-    ranges: [
+    "names": [
+      "cyclohexane"
+    ],
+    "smiles": "C1CCCCC1",
+    "integration": 12,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.47,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.47,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.47,
-        to: 1.47,
-      },
+        "from": 1.47,
+        "to": 1.47
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['1,2-dichloroethane'],
-    smiles: 'ClCCCl',
-    ranges: [
+    "names": [
+      "1,2-dichloroethane"
+    ],
+    "smiles": "ClCCCl",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.71,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.71,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.71,
-        to: 3.71,
-      },
+        "from": 3.71,
+        "to": 3.71
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['dichloromethane'],
-    smiles: 'ClCCl',
-    ranges: [
+    "names": [
+      "dichloromethane"
+    ],
+    "smiles": "ClCCl",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.24,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.24,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.24,
-        to: 5.24,
-      },
+        "from": 5.24,
+        "to": 5.24
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.2,
-            assignment: 'CH₃',
-          },
+            "delta": 1.2,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.2,
-        to: 1.2,
+        "from": 1.2,
+        "to": 1.2
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.58,
-            assignment: 'CH₂',
-          },
+            "delta": 3.58,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.58,
-        to: 3.58,
-      },
+        "from": 3.58,
+        "to": 3.58
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['diglyme'],
-    smiles: 'COCCOCCOC',
-    ranges: [
+    "names": [
+      "diglyme"
+    ],
+    "smiles": "COCCOCCOC",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.67,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.67,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.67,
-        to: 3.67,
+        "from": 3.67,
+        "to": 3.67
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.62,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.62,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.62,
-        to: 3.62,
+        "from": 3.62,
+        "to": 3.62
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.41,
-            multiplicity: 's',
-            assignment: 'OCH₃',
-          },
+            "js": [],
+            "delta": 3.41,
+            "multiplicity": "s",
+            "assignment": "OCH₃"
+          }
         ],
-        from: 3.41,
-        to: 3.41,
-      },
+        "from": 3.41,
+        "to": 3.41
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['dimethylformamide'],
-    smiles: 'C(=O)N(C)C',
-    ranges: [
+    "names": [
+      "dimethylformamide"
+    ],
+    "smiles": "C(=O)N(C)C",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.86,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.86,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.86,
-        to: 7.86,
+        "from": 7.86,
+        "to": 7.86
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.98,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.98,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.98,
-        to: 2.98,
+        "from": 2.98,
+        "to": 2.98
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.88,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.88,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.88,
-        to: 2.88,
-      },
+        "from": 2.88,
+        "to": 2.88
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['1,4-dioxane'],
-    smiles: 'C1COCCOC1',
-    ranges: [
+    "names": [
+      "1,4-dioxane"
+    ],
+    "smiles": "C1COCCOC1",
+    "integration": 8,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.76,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.76,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.76,
-        to: 3.76,
-      },
+        "from": 3.76,
+        "to": 3.76
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['DME', 'diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "DME",
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.4,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.4,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.4,
-        to: 3.4,
+        "from": 3.4,
+        "to": 3.4
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.61,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.61,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.61,
-        to: 3.61,
-      },
+        "from": 3.61,
+        "to": 3.61
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['ethane'],
-    smiles: 'CC',
-    ranges: [
+    "names": [
+      "ethane"
+    ],
+    "smiles": "CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.85,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.85,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.85,
-        to: 0.85,
-      },
+        "from": 0.85,
+        "to": 0.85
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['ethanol'],
-    smiles: 'CCO',
-    ranges: [
+    "names": [
+      "ethanol"
+    ],
+    "smiles": "CCO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.22,
-            assignment: 'CH₃',
-          },
+            "delta": 1.22,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.22,
-        to: 1.22,
+        "from": 1.22,
+        "to": 1.22
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.71,
-            assignment: 'CH₂',
-          },
+            "delta": 3.71,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.71,
-        to: 3.71,
-      },
+        "from": 3.71,
+        "to": 3.71
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['ethyl acetate'],
-    smiles: 'CC(=O)CC',
-    ranges: [
+    "names": [
+      "ethyl acetate"
+    ],
+    "smiles": "CC(=O)CC",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.03,
-            multiplicity: 's',
-            assignment: 'CH₃CO',
-          },
+            "js": [],
+            "delta": 2.03,
+            "multiplicity": "s",
+            "assignment": "CH₃CO"
+          }
         ],
-        from: 2.03,
-        to: 2.03,
+        "from": 2.03,
+        "to": 2.03
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 4.14,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 4.14,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 4.14,
-        to: 4.14,
+        "from": 4.14,
+        "to": 4.14
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.26,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 1.26,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 1.26,
-        to: 1.26,
-      },
+        "from": 1.26,
+        "to": 1.26
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['ethylene'],
-    smiles: 'C=C',
-    ranges: [
+    "names": [
+      "ethylene"
+    ],
+    "smiles": "C=C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.4,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.4,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.4,
-        to: 5.4,
-      },
+        "from": 5.4,
+        "to": 5.4
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['ethylene glycol'],
-    smiles: 'OCCO',
-    ranges: [
+    "names": [
+      "ethylene glycol"
+    ],
+    "smiles": "OCCO",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.72,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.72,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.72,
-        to: 3.72,
-      },
+        "from": 3.72,
+        "to": 3.72
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['H greaseᶠ'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "H greaseᶠ"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [],
-        from: 0.88,
-        to: 0.94,
-        multiplicity: 'm',
+        "signals": [],
+        "from": 0.88,
+        "to": 0.94,
+        "multiplicity": "m"
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.33,
-            multiplicity: 'br s',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.33,
+            "multiplicity": "br s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.33,
-        to: 1.33,
-      },
+        "from": 1.33,
+        "to": 1.33
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['hexamethylbenzene'],
-    smiles: 'CC1=C(C(=C(C(=C1C)C)C)C)C',
-    ranges: [
+    "names": [
+      "hexamethylbenzene"
+    ],
+    "smiles": "CC1=C(C(=C(C(=C1C)C)C)C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.24,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.24,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.24,
-        to: 2.24,
-      },
+        "from": 2.24,
+        "to": 2.24
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['n-hexane'],
-    smiles: 'CCCCCC',
-    ranges: [
+    "names": [
+      "n-hexane"
+    ],
+    "smiles": "CCCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.91,
-            assignment: 'CH₃',
-          },
+            "delta": 0.91,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.91,
-        to: 0.91,
+        "from": 0.91,
+        "to": 0.91
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.31,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.31,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.31,
-        to: 1.31,
-      },
+        "from": 1.31,
+        "to": 1.31
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['HMDSO'],
-    smiles: 'C[Si](C)(C)O[Si](C)(C)C',
-    ranges: [
+    "names": [
+      "HMDSO"
+    ],
+    "smiles": "C[Si](C)(C)O[Si](C)(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.08,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.08,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.08,
-        to: 0.08,
-      },
+        "from": 0.08,
+        "to": 0.08
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['HMPA'],
-    smiles: 'CN(C)P(=O)(N(C)C)N(C)C',
-    ranges: [
+    "names": [
+      "HMPA"
+    ],
+    "smiles": "CN(C)P(=O)(N(C)C)N(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 9.5,
-                multiplicity: 'd',
-              },
+                "coupling": 9.5,
+                "multiplicity": "d"
+              }
             ],
-            delta: 2.63,
-            assignment: 'CH₃',
-          },
+            "delta": 2.63,
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.63,
-        to: 2.63,
-      },
+        "from": 2.63,
+        "to": 2.63
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['hydrogen'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "hydrogen"
+    ],
+    "smiles": "",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.53,
-            multiplicity: 's',
-            assignment: 'H₂',
-          },
+            "js": [],
+            "delta": 4.53,
+            "multiplicity": "s",
+            "assignment": "H₂"
+          }
         ],
-        from: 4.53,
-        to: 4.53,
-      },
+        "from": 4.53,
+        "to": 4.53
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['imidazole'],
-    smiles: 'C1=CN=CN1',
-    ranges: [
+    "names": [
+      "imidazole"
+    ],
+    "smiles": "C1=CN=CN1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.61,
-            multiplicity: 's',
-            assignment: 'CH(2)',
-          },
+            "js": [],
+            "delta": 7.61,
+            "multiplicity": "s",
+            "assignment": "CH(2)"
+          }
         ],
-        from: 7.61,
-        to: 7.61,
+        "from": 7.61,
+        "to": 7.61
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.03,
-            multiplicity: 's',
-            assignment: 'CH(4,5)',
-          },
+            "js": [],
+            "delta": 7.03,
+            "multiplicity": "s",
+            "assignment": "CH(4,5)"
+          }
         ],
-        from: 7.03,
-        to: 7.03,
-      },
+        "from": 7.03,
+        "to": 7.03
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['methane'],
-    smiles: 'C',
-    ranges: [
+    "names": [
+      "methane"
+    ],
+    "smiles": "C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.18,
-            multiplicity: 's',
-            assignment: 'CH₄',
-          },
+            "js": [],
+            "delta": 0.18,
+            "multiplicity": "s",
+            "assignment": "CH₄"
+          }
         ],
-        from: 0.18,
-        to: 0.18,
-      },
+        "from": 0.18,
+        "to": 0.18
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['methanol'],
-    smiles: 'CO',
-    ranges: [
+    "names": [
+      "methanol"
+    ],
+    "smiles": "CO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.44,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.44,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.44,
-        to: 3.44,
-      },
+        "from": 3.44,
+        "to": 3.44
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['nitromethane'],
-    smiles: 'C[N+](=O)[O-]',
-    ranges: [
+    "names": [
+      "nitromethane"
+    ],
+    "smiles": "C[N+](=O)[O-]",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.28,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 4.28,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 4.28,
-        to: 4.28,
-      },
+        "from": 4.28,
+        "to": 4.28
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['n-pentane'],
-    smiles: 'CCCCC',
-    ranges: [
+    "names": [
+      "n-pentane"
+    ],
+    "smiles": "CCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.9,
-            assignment: 'CH₃',
-          },
+            "delta": 0.9,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.9,
-        to: 0.9,
+        "from": 0.9,
+        "to": 0.9
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.33,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.33,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.33,
-        to: 1.33,
-      },
+        "from": 1.33,
+        "to": 1.33
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['propane'],
-    smiles: 'CCC',
-    ranges: [
+    "names": [
+      "propane"
+    ],
+    "smiles": "CCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 't',
-              },
+                "coupling": 7.3,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.9,
-            assignment: 'CH₃',
-          },
+            "delta": 0.9,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.9,
-        to: 0.9,
+        "from": 0.9,
+        "to": 0.9
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 'sept',
-              },
+                "coupling": 7.3,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 1.33,
-            assignment: 'CH₂',
-          },
+            "delta": 1.33,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.33,
-        to: 1.33,
-      },
+        "from": 1.33,
+        "to": 1.33
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['2-propanol'],
-    smiles: 'CC(O)C',
-    ranges: [
+    "names": [
+      "2-propanol"
+    ],
+    "smiles": "CC(O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'd',
-              },
+                "coupling": 6,
+                "multiplicity": "d"
+              }
             ],
-            delta: 1.2,
-            assignment: 'CH₃',
-          },
+            "delta": 1.2,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.2,
-        to: 1.2,
+        "from": 1.2,
+        "to": 1.2
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'sept',
-              },
+                "coupling": 6,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 4.05,
-            assignment: 'CH',
-          },
+            "delta": 4.05,
+            "assignment": "CH"
+          }
         ],
-        from: 4.05,
-        to: 4.05,
-      },
+        "from": 4.05,
+        "to": 4.05
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['propylene'],
-    smiles: 'CC=C',
-    ranges: [
+    "names": [
+      "propylene"
+    ],
+    "smiles": "CC=C",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6.4,
-                multiplicity: 'd',
+                "coupling": 6.4,
+                "multiplicity": "d"
               },
               {
-                coupling: 1.5,
-                multiplicity: 't',
-              },
+                "coupling": 1.5,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.7,
-            assignment: 'CH₃',
-          },
+            "delta": 1.7,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.7,
-        to: 1.7,
+        "from": 1.7,
+        "to": 1.7
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 10,
-                multiplicity: 'd',
-              },
+                "coupling": 10,
+                "multiplicity": "d"
+              }
             ],
-            delta: 4.93,
-            assignment: 'CH₂(1)',
-          },
+            "delta": 4.93,
+            "assignment": "CH₂(1)"
+          }
         ],
-        from: 4.93,
-        to: 4.93,
+        "from": 4.93,
+        "to": 4.93
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 17,
-                multiplicity: 'd',
-              },
+                "coupling": 17,
+                "multiplicity": "d"
+              }
             ],
-            delta: 5.03,
-            assignment: 'CH₂(2)',
-          },
+            "delta": 5.03,
+            "assignment": "CH₂(2)"
+          }
         ],
-        from: 5.03,
-        to: 5.03,
+        "from": 5.03,
+        "to": 5.03
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.87,
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 5.87,
+            "assignment": "CH"
+          }
         ],
-        from: 5.87,
-        to: 5.87,
-      },
+        "from": 5.87,
+        "to": 5.87
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['pyridine'],
-    smiles: 'C1=CC=NC=C1',
-    ranges: [
+    "names": [
+      "pyridine"
+    ],
+    "smiles": "C1=CC=NC=C1",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.45,
-            assignment: 'CH(2,6)',
-          },
+            "js": [],
+            "delta": 8.45,
+            "assignment": "CH(2,6)"
+          }
         ],
-        from: 8.45,
-        to: 8.45,
+        "from": 8.45,
+        "to": 8.45
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.4,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 7.4,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 7.4,
-        to: 7.4,
+        "from": 7.4,
+        "to": 7.4
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.82,
-            assignment: 'CH(4)',
-          },
+            "js": [],
+            "delta": 7.82,
+            "assignment": "CH(4)"
+          }
         ],
-        from: 7.82,
-        to: 7.82,
-      },
+        "from": 7.82,
+        "to": 7.82
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['pyrrole'],
-    smiles: 'C1=CNC=C1',
-    ranges: [
+    "names": [
+      "pyrrole"
+    ],
+    "smiles": "C1=CNC=C1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.84,
-            assignment: 'CH(2,5)',
-          },
+            "js": [],
+            "delta": 6.84,
+            "assignment": "CH(2,5)"
+          }
         ],
-        from: 6.84,
-        to: 6.84,
+        "from": 6.84,
+        "to": 6.84
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.24,
-            assignment: 'CH(3,4)',
-          },
+            "js": [],
+            "delta": 6.24,
+            "assignment": "CH(3,4)"
+          }
         ],
-        from: 6.24,
-        to: 6.24,
-      },
+        "from": 6.24,
+        "to": 6.24
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['pyrrolidine'],
-    smiles: 'C1CCNC1',
-    ranges: [
+    "names": [
+      "pyrrolidine"
+    ],
+    "smiles": "C1CCNC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.11,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 3.11,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 3.11,
-        to: 3.11,
+        "from": 3.11,
+        "to": 3.11
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.93,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.93,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.93,
-        to: 1.93,
-      },
+        "from": 1.93,
+        "to": 1.93
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['silicone grease'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "silicone grease"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.16,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.16,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.16,
-        to: 0.16,
-      },
+        "from": 0.16,
+        "to": 0.16
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['tetrahydrofuran'],
-    smiles: 'C1COCC1',
-    ranges: [
+    "names": [
+      "tetrahydrofuran"
+    ],
+    "smiles": "C1COCC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.78,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 3.78,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 3.78,
-        to: 3.78,
+        "from": 3.78,
+        "to": 3.78
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.91,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.91,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.91,
-        to: 1.91,
-      },
+        "from": 1.91,
+        "to": 1.91
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['toluene'],
-    smiles: 'Cc1ccccc1',
-    ranges: [
+    "names": [
+      "toluene"
+    ],
+    "smiles": "Cc1ccccc1",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.33,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.33,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.33,
-        to: 2.33,
+        "from": 2.33,
+        "to": 2.33
       },
       {
-        signals: [],
-        from: 7.1,
-        to: 7.3,
-        multiplicity: 'm',
+        "signals": [],
+        "from": 7.1,
+        "to": 7.3,
+        "multiplicity": "m"
       },
       {
-        signals: [],
-        from: 7.1,
-        to: 7.3,
-        multiplicity: 'm',
-      },
+        "signals": [],
+        "from": 7.1,
+        "to": 7.3,
+        "multiplicity": "m"
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['triethylamine'],
-    smiles: 'CCN(CC)CC',
-    ranges: [
+    "names": [
+      "triethylamine"
+    ],
+    "smiles": "CCN(CC)CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.31,
-            assignment: 'CH₃',
-          },
+            "delta": 1.31,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.31,
-        to: 1.31,
+        "from": 1.31,
+        "to": 1.31
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.12,
-            assignment: 'CH₂',
-          },
+            "delta": 3.12,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.12,
-        to: 3.12,
-      },
+        "from": 3.12,
+        "to": 3.12
+      }
     ],
-    nucleus: '1H',
-    solvent: 'TFE-d₃',
+    "nucleus": "1H",
+    "solvent": "TFE-d₃"
   },
   {
-    names: ['water'],
-    smiles: 'O',
-    ranges: [
+    "names": [
+      "water"
+    ],
+    "smiles": "O",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.87,
-            multiplicity: 's',
-            assignment: 'OH',
-          },
+            "js": [],
+            "delta": 4.87,
+            "multiplicity": "s",
+            "assignment": "OH"
+          }
         ],
-        from: 4.87,
-        to: 4.87,
-      },
+        "from": 4.87,
+        "to": 4.87
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['acetic acid'],
-    smiles: 'CC(=O)O',
-    ranges: [
+    "names": [
+      "acetic acid"
+    ],
+    "smiles": "CC(=O)O",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.99,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.99,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.99,
-        to: 1.99,
-      },
+        "from": 1.99,
+        "to": 1.99
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['acetone'],
-    smiles: 'CC(=O)C',
-    ranges: [
+    "names": [
+      "acetone"
+    ],
+    "smiles": "CC(=O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.15,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.15,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.15,
-        to: 2.15,
-      },
+        "from": 2.15,
+        "to": 2.15
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['acetonitrile'],
-    smiles: 'CC#N',
-    ranges: [
+    "names": [
+      "acetonitrile"
+    ],
+    "smiles": "CC#N",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.03,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.03,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.03,
-        to: 2.03,
-      },
+        "from": 2.03,
+        "to": 2.03
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['benzene'],
-    smiles: 'c1ccccc1',
-    ranges: [
+    "names": [
+      "benzene"
+    ],
+    "smiles": "c1ccccc1",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.33,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.33,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.33,
-        to: 7.33,
-      },
+        "from": 7.33,
+        "to": 7.33
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['tert -butyl alcohol'],
-    smiles: 'CC(C)(C)O',
-    ranges: [
+    "names": [
+      "tert -butyl alcohol"
+    ],
+    "smiles": "CC(C)(C)O",
+    "integration": 9,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.4,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.4,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.4,
-        to: 1.4,
-      },
+        "from": 1.4,
+        "to": 1.4
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['chloroform'],
-    smiles: 'ClC(Cl)Cl',
-    ranges: [
+    "names": [
+      "chloroform"
+    ],
+    "smiles": "ClC(Cl)Cl",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.9,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.9,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.9,
-        to: 7.9,
-      },
+        "from": 7.9,
+        "to": 7.9
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['18-crown-6'],
-    smiles: 'C1COCCOCCOCCOCCOCCO1',
-    ranges: [
+    "names": [
+      "18-crown-6"
+    ],
+    "smiles": "C1COCCOCCOCCOCCOCCO1",
+    "integration": 24,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.64,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.64,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.64,
-        to: 3.64,
-      },
+        "from": 3.64,
+        "to": 3.64
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['cyclohexane'],
-    smiles: 'C1CCCCC1',
-    ranges: [
+    "names": [
+      "cyclohexane"
+    ],
+    "smiles": "C1CCCCC1",
+    "integration": 12,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.45,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.45,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.45,
-        to: 1.45,
-      },
+        "from": 1.45,
+        "to": 1.45
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['1,2-dichloroethane'],
-    smiles: 'ClCCCl',
-    ranges: [
+    "names": [
+      "1,2-dichloroethane"
+    ],
+    "smiles": "ClCCCl",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.78,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.78,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.78,
-        to: 3.78,
-      },
+        "from": 3.78,
+        "to": 3.78
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['dichloromethane'],
-    smiles: 'ClCCl',
-    ranges: [
+    "names": [
+      "dichloromethane"
+    ],
+    "smiles": "ClCCl",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.49,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.49,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.49,
-        to: 5.49,
-      },
+        "from": 5.49,
+        "to": 5.49
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.18,
-            assignment: 'CH₃',
-          },
+            "delta": 1.18,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.18,
-        to: 1.18,
+        "from": 1.18,
+        "to": 1.18
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.49,
-            assignment: 'CH₂',
-          },
+            "delta": 3.49,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.49,
-        to: 3.49,
-      },
+        "from": 3.49,
+        "to": 3.49
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['diglyme'],
-    smiles: 'COCCOCCOC',
-    ranges: [
+    "names": [
+      "diglyme"
+    ],
+    "smiles": "COCCOCCOC",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.61,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.61,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.61,
-        to: 3.61,
+        "from": 3.61,
+        "to": 3.61
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.58,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.58,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.58,
-        to: 3.58,
+        "from": 3.58,
+        "to": 3.58
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.35,
-            multiplicity: 's',
-            assignment: 'OCH₃',
-          },
+            "js": [],
+            "delta": 3.35,
+            "multiplicity": "s",
+            "assignment": "OCH₃"
+          }
         ],
-        from: 3.35,
-        to: 3.35,
-      },
+        "from": 3.35,
+        "to": 3.35
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['dimethylformamide'],
-    smiles: 'C(=O)N(C)C',
-    ranges: [
+    "names": [
+      "dimethylformamide"
+    ],
+    "smiles": "C(=O)N(C)C",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.97,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.97,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.97,
-        to: 7.97,
+        "from": 7.97,
+        "to": 7.97
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.99,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.99,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.99,
-        to: 2.99,
+        "from": 2.99,
+        "to": 2.99
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.86,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.86,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.86,
-        to: 2.86,
-      },
+        "from": 2.86,
+        "to": 2.86
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['1,4-dioxane'],
-    smiles: 'C1COCCOC1',
-    ranges: [
+    "names": [
+      "1,4-dioxane"
+    ],
+    "smiles": "C1COCCOC1",
+    "integration": 8,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.66,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.66,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.66,
-        to: 3.66,
-      },
+        "from": 3.66,
+        "to": 3.66
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['DME', 'diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "DME",
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.35,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.35,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.35,
-        to: 3.35,
+        "from": 3.35,
+        "to": 3.35
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.52,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.52,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.52,
-        to: 3.52,
-      },
+        "from": 3.52,
+        "to": 3.52
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['ethane'],
-    smiles: 'CC',
-    ranges: [
+    "names": [
+      "ethane"
+    ],
+    "smiles": "CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.85,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.85,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.85,
-        to: 0.85,
-      },
+        "from": 0.85,
+        "to": 0.85
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['ethanol'],
-    smiles: 'CCO',
-    ranges: [
+    "names": [
+      "ethanol"
+    ],
+    "smiles": "CCO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.19,
-            assignment: 'CH₃',
-          },
+            "delta": 1.19,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.19,
-        to: 1.19,
+        "from": 1.19,
+        "to": 1.19
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.6,
-            assignment: 'CH₂',
-          },
+            "delta": 3.6,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.6,
-        to: 3.6,
-      },
+        "from": 3.6,
+        "to": 3.6
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['ethyl acetate'],
-    smiles: 'CC(=O)CC',
-    ranges: [
+    "names": [
+      "ethyl acetate"
+    ],
+    "smiles": "CC(=O)CC",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.01,
-            multiplicity: 's',
-            assignment: 'CH₃CO',
-          },
+            "js": [],
+            "delta": 2.01,
+            "multiplicity": "s",
+            "assignment": "CH₃CO"
+          }
         ],
-        from: 2.01,
-        to: 2.01,
+        "from": 2.01,
+        "to": 2.01
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 4.09,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 4.09,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 4.09,
-        to: 4.09,
+        "from": 4.09,
+        "to": 4.09
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.24,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 1.24,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 1.24,
-        to: 1.24,
-      },
+        "from": 1.24,
+        "to": 1.24
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['ethylene'],
-    smiles: 'C=C',
-    ranges: [
+    "names": [
+      "ethylene"
+    ],
+    "smiles": "C=C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.39,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.39,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.39,
-        to: 5.39,
-      },
+        "from": 5.39,
+        "to": 5.39
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['ethylene glycol'],
-    smiles: 'OCCO',
-    ranges: [
+    "names": [
+      "ethylene glycol"
+    ],
+    "smiles": "OCCO",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.59,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.59,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.59,
-        to: 3.59,
-      },
+        "from": 3.59,
+        "to": 3.59
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['H greaseᶠ'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "H greaseᶠ"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [],
-        from: 0.86,
-        to: 0.93,
-        multiplicity: 'm',
+        "signals": [],
+        "from": 0.86,
+        "to": 0.93,
+        "multiplicity": "m"
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.29,
-            multiplicity: 'br s',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.29,
+            "multiplicity": "br s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.29,
-        to: 1.29,
-      },
+        "from": 1.29,
+        "to": 1.29
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['hexamethylbenzene'],
-    smiles: 'CC1=C(C(=C(C(=C1C)C)C)C)C',
-    ranges: [
+    "names": [
+      "hexamethylbenzene"
+    ],
+    "smiles": "CC1=C(C(=C(C(=C1C)C)C)C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.19,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.19,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.19,
-        to: 2.19,
-      },
+        "from": 2.19,
+        "to": 2.19
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['n-hexane'],
-    smiles: 'CCCCCC',
-    ranges: [
+    "names": [
+      "n-hexane"
+    ],
+    "smiles": "CCCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.9,
-            assignment: 'CH₃',
-          },
+            "delta": 0.9,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.9,
-        to: 0.9,
+        "from": 0.9,
+        "to": 0.9
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.29,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.29,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.29,
-        to: 1.29,
-      },
+        "from": 1.29,
+        "to": 1.29
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['HMDSO'],
-    smiles: 'C[Si](C)(C)O[Si](C)(C)C',
-    ranges: [
+    "names": [
+      "HMDSO"
+    ],
+    "smiles": "C[Si](C)(C)O[Si](C)(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.07,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.07,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.07,
-        to: 0.07,
-      },
+        "from": 0.07,
+        "to": 0.07
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['HMPA'],
-    smiles: 'CN(C)P(=O)(N(C)C)N(C)C',
-    ranges: [
+    "names": [
+      "HMPA"
+    ],
+    "smiles": "CN(C)P(=O)(N(C)C)N(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 9.5,
-                multiplicity: 'd',
-              },
+                "coupling": 9.5,
+                "multiplicity": "d"
+              }
             ],
-            delta: 2.64,
-            assignment: 'CH₃',
-          },
+            "delta": 2.64,
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.64,
-        to: 2.64,
-      },
+        "from": 2.64,
+        "to": 2.64
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['hydrogen'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "hydrogen"
+    ],
+    "smiles": "",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.56,
-            multiplicity: 's',
-            assignment: 'H₂',
-          },
+            "js": [],
+            "delta": 4.56,
+            "multiplicity": "s",
+            "assignment": "H₂"
+          }
         ],
-        from: 4.56,
-        to: 4.56,
-      },
+        "from": 4.56,
+        "to": 4.56
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['imidazole'],
-    smiles: 'C1=CN=CN1',
-    ranges: [
+    "names": [
+      "imidazole"
+    ],
+    "smiles": "C1=CN=CN1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.67,
-            multiplicity: 's',
-            assignment: 'CH(2)',
-          },
+            "js": [],
+            "delta": 7.67,
+            "multiplicity": "s",
+            "assignment": "CH(2)"
+          }
         ],
-        from: 7.67,
-        to: 7.67,
+        "from": 7.67,
+        "to": 7.67
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.05,
-            multiplicity: 's',
-            assignment: 'CH(4,5)',
-          },
+            "js": [],
+            "delta": 7.05,
+            "multiplicity": "s",
+            "assignment": "CH(4,5)"
+          }
         ],
-        from: 7.05,
-        to: 7.05,
-      },
+        "from": 7.05,
+        "to": 7.05
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['methane'],
-    smiles: 'C',
-    ranges: [
+    "names": [
+      "methane"
+    ],
+    "smiles": "C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.2,
-            multiplicity: 's',
-            assignment: 'CH₄',
-          },
+            "js": [],
+            "delta": 0.2,
+            "multiplicity": "s",
+            "assignment": "CH₄"
+          }
         ],
-        from: 0.2,
-        to: 0.2,
-      },
+        "from": 0.2,
+        "to": 0.2
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['methanol'],
-    smiles: 'CO',
-    ranges: [
+    "names": [
+      "methanol"
+    ],
+    "smiles": "CO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.34,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.34,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.34,
-        to: 3.34,
-      },
+        "from": 3.34,
+        "to": 3.34
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['nitromethane'],
-    smiles: 'C[N+](=O)[O-]',
-    ranges: [
+    "names": [
+      "nitromethane"
+    ],
+    "smiles": "C[N+](=O)[O-]",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.34,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 4.34,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 4.34,
-        to: 4.34,
-      },
+        "from": 4.34,
+        "to": 4.34
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['n-pentane'],
-    smiles: 'CCCCC',
-    ranges: [
+    "names": [
+      "n-pentane"
+    ],
+    "smiles": "CCCCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.9,
-            assignment: 'CH₃',
-          },
+            "delta": 0.9,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.9,
-        to: 0.9,
+        "from": 0.9,
+        "to": 0.9
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.29,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 1.29,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.29,
-        to: 1.29,
-      },
+        "from": 1.29,
+        "to": 1.29
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['propane'],
-    smiles: 'CCC',
-    ranges: [
+    "names": [
+      "propane"
+    ],
+    "smiles": "CCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 't',
-              },
+                "coupling": 7.3,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.91,
-            assignment: 'CH₃',
-          },
+            "delta": 0.91,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.91,
-        to: 0.91,
+        "from": 0.91,
+        "to": 0.91
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 'sept',
-              },
+                "coupling": 7.3,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 1.34,
-            assignment: 'CH₂',
-          },
+            "delta": 1.34,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.34,
-        to: 1.34,
-      },
+        "from": 1.34,
+        "to": 1.34
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['2-propanol'],
-    smiles: 'CC(O)C',
-    ranges: [
+    "names": [
+      "2-propanol"
+    ],
+    "smiles": "CC(O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'd',
-              },
+                "coupling": 6,
+                "multiplicity": "d"
+              }
             ],
-            delta: 1.5,
-            assignment: 'CH₃',
-          },
+            "delta": 1.5,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.5,
-        to: 1.5,
+        "from": 1.5,
+        "to": 1.5
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'sept',
-              },
+                "coupling": 6,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 3.92,
-            assignment: 'CH',
-          },
+            "delta": 3.92,
+            "assignment": "CH"
+          }
         ],
-        from: 3.92,
-        to: 3.92,
-      },
+        "from": 3.92,
+        "to": 3.92
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['propylene'],
-    smiles: 'CC=C',
-    ranges: [
+    "names": [
+      "propylene"
+    ],
+    "smiles": "CC=C",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6.4,
-                multiplicity: 'd',
+                "coupling": 6.4,
+                "multiplicity": "d"
               },
               {
-                coupling: 1.5,
-                multiplicity: 't',
-              },
+                "coupling": 1.5,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.7,
-            assignment: 'CH₃',
-          },
+            "delta": 1.7,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.7,
-        to: 1.7,
+        "from": 1.7,
+        "to": 1.7
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 10,
-                multiplicity: 'd',
-              },
+                "coupling": 10,
+                "multiplicity": "d"
+              }
             ],
-            delta: 4.91,
-            assignment: 'CH₂(1)',
-          },
+            "delta": 4.91,
+            "assignment": "CH₂(1)"
+          }
         ],
-        from: 4.91,
-        to: 4.91,
+        "from": 4.91,
+        "to": 4.91
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 17,
-                multiplicity: 'd',
-              },
+                "coupling": 17,
+                "multiplicity": "d"
+              }
             ],
-            delta: 5.01,
-            assignment: 'CH₂(2)',
-          },
+            "delta": 5.01,
+            "assignment": "CH₂(2)"
+          }
         ],
-        from: 5.01,
-        to: 5.01,
+        "from": 5.01,
+        "to": 5.01
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.82,
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 5.82,
+            "assignment": "CH"
+          }
         ],
-        from: 5.82,
-        to: 5.82,
-      },
+        "from": 5.82,
+        "to": 5.82
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['pyridine'],
-    smiles: 'C1=CC=NC=C1',
-    ranges: [
+    "names": [
+      "pyridine"
+    ],
+    "smiles": "C1=CC=NC=C1",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.53,
-            assignment: 'CH(2,6)',
-          },
+            "js": [],
+            "delta": 8.53,
+            "assignment": "CH(2,6)"
+          }
         ],
-        from: 8.53,
-        to: 8.53,
+        "from": 8.53,
+        "to": 8.53
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.44,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 7.44,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 7.44,
-        to: 7.44,
+        "from": 7.44,
+        "to": 7.44
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.85,
-            assignment: 'CH(4)',
-          },
+            "js": [],
+            "delta": 7.85,
+            "assignment": "CH(4)"
+          }
         ],
-        from: 7.85,
-        to: 7.85,
-      },
+        "from": 7.85,
+        "to": 7.85
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['pyrrole'],
-    smiles: 'C1=CNC=C1',
-    ranges: [
+    "names": [
+      "pyrrole"
+    ],
+    "smiles": "C1=CNC=C1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.72,
-            assignment: 'CH(2,5)',
-          },
+            "js": [],
+            "delta": 6.72,
+            "assignment": "CH(2,5)"
+          }
         ],
-        from: 6.72,
-        to: 6.72,
+        "from": 6.72,
+        "to": 6.72
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.08,
-            assignment: 'CH(3,4)',
-          },
+            "js": [],
+            "delta": 6.08,
+            "assignment": "CH(3,4)"
+          }
         ],
-        from: 6.08,
-        to: 6.08,
-      },
+        "from": 6.08,
+        "to": 6.08
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['pyrrolidine'],
-    smiles: 'C1CCNC1',
-    ranges: [
+    "names": [
+      "pyrrolidine"
+    ],
+    "smiles": "C1CCNC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.8,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 2.8,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 2.8,
-        to: 2.8,
+        "from": 2.8,
+        "to": 2.8
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.72,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.72,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.72,
-        to: 1.72,
-      },
+        "from": 1.72,
+        "to": 1.72
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['silicone grease'],
-    smiles: '',
-    ranges: [
+    "names": [
+      "silicone grease"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.1,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.1,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.1,
-        to: 0.1,
-      },
+        "from": 0.1,
+        "to": 0.1
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['tetrahydrofuran'],
-    smiles: 'C1COCC1',
-    ranges: [
+    "names": [
+      "tetrahydrofuran"
+    ],
+    "smiles": "C1COCC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.71,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 3.71,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 3.71,
-        to: 3.71,
+        "from": 3.71,
+        "to": 3.71
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.87,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.87,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.87,
-        to: 1.87,
-      },
+        "from": 1.87,
+        "to": 1.87
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['toluene'],
-    smiles: 'Cc1ccccc1',
-    ranges: [
+    "names": [
+      "toluene"
+    ],
+    "smiles": "Cc1ccccc1",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.32,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.32,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.32,
-        to: 2.32,
+        "from": 2.32,
+        "to": 2.32
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.16,
-            assignment: 'CH(2,4,6)',
-          },
+            "js": [],
+            "delta": 7.16,
+            "assignment": "CH(2,4,6)"
+          }
         ],
-        from: 7.16,
-        to: 7.16,
+        "from": 7.16,
+        "to": 7.16
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.16,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 7.16,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 7.16,
-        to: 7.16,
-      },
+        "from": 7.16,
+        "to": 7.16
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['triethylamine'],
-    smiles: 'CCN(CC)CC',
-    ranges: [
+    "names": [
+      "triethylamine"
+    ],
+    "smiles": "CCN(CC)CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.05,
-            assignment: 'CH₃',
-          },
+            "delta": 1.05,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.05,
-        to: 1.05,
+        "from": 1.05,
+        "to": 1.05
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 2.58,
-            assignment: 'CH₂',
-          },
+            "delta": 2.58,
+            "assignment": "CH₂"
+          }
         ],
-        from: 2.58,
-        to: 2.58,
-      },
+        "from": 2.58,
+        "to": 2.58
+      }
     ],
-    nucleus: '1H',
-    solvent: 'CD₃OD',
+    "nucleus": "1H",
+    "solvent": "CD₃OD"
   },
   {
-    names: ['water'],
-    smiles: 'O',
-    ranges: [],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "names": [
+      "water"
+    ],
+    "smiles": "O",
+    "integration": 2,
+    "ranges": [],
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['acetic acid'],
-    smiles: 'CC(=O)O',
-    ranges: [
+    "names": [
+      "acetic acid"
+    ],
+    "smiles": "CC(=O)O",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.08,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.08,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.08,
-        to: 2.08,
-      },
+        "from": 2.08,
+        "to": 2.08
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['acetone'],
-    smiles: 'CC(=O)C',
-    ranges: [
+    "names": [
+      "acetone"
+    ],
+    "smiles": "CC(=O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.22,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.22,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.22,
-        to: 2.22,
-      },
+        "from": 2.22,
+        "to": 2.22
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['acetonitrile'],
-    smiles: 'CC#N',
-    ranges: [
+    "names": [
+      "acetonitrile"
+    ],
+    "smiles": "CC#N",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.06,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.06,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.06,
-        to: 2.06,
-      },
+        "from": 2.06,
+        "to": 2.06
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['benzene'],
-    smiles: 'c1ccccc1',
-    ranges: [],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "names": [
+      "benzene"
+    ],
+    "smiles": "c1ccccc1",
+    "integration": 6,
+    "ranges": [],
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['tert -butyl alcohol'],
-    smiles: 'CC(C)(C)O',
-    ranges: [
+    "names": [
+      "tert -butyl alcohol"
+    ],
+    "smiles": "CC(C)(C)O",
+    "integration": 9,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.24,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 1.24,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.24,
-        to: 1.24,
-      },
+        "from": 1.24,
+        "to": 1.24
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['chloroform'],
-    smiles: 'ClC(Cl)Cl',
-    ranges: [],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "names": [
+      "chloroform"
+    ],
+    "smiles": "ClC(Cl)Cl",
+    "integration": 1,
+    "ranges": [],
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['18-crown-6'],
-    smiles: 'C1COCCOCCOCCOCCOCCO1',
-    ranges: [
+    "names": [
+      "18-crown-6"
+    ],
+    "smiles": "C1COCCOCCOCCOCCOCCO1",
+    "integration": 24,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.8,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.8,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.8,
-        to: 3.8,
-      },
+        "from": 3.8,
+        "to": 3.8
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['cyclohexane'],
-    smiles: 'C1CCCCC1',
-    ranges: [],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "names": [
+      "cyclohexane"
+    ],
+    "smiles": "C1CCCCC1",
+    "integration": 12,
+    "ranges": [],
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['1,2-dichloroethane'],
-    smiles: 'ClCCCl',
-    ranges: [],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "names": [
+      "1,2-dichloroethane"
+    ],
+    "smiles": "ClCCCl",
+    "integration": 4,
+    "ranges": [],
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['dichloromethane'],
-    smiles: 'ClCCl',
-    ranges: [],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "names": [
+      "dichloromethane"
+    ],
+    "smiles": "ClCCl",
+    "integration": 2,
+    "ranges": [],
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.17,
-            assignment: 'CH₃',
-          },
+            "delta": 1.17,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.17,
-        to: 1.17,
+        "from": 1.17,
+        "to": 1.17
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.56,
-            assignment: 'CH₂',
-          },
+            "delta": 3.56,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.56,
-        to: 3.56,
-      },
+        "from": 3.56,
+        "to": 3.56
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['diglyme'],
-    smiles: 'COCCOCCOC',
-    ranges: [
+    "names": [
+      "diglyme"
+    ],
+    "smiles": "COCCOCCOC",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.67,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.67,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.67,
-        to: 3.67,
+        "from": 3.67,
+        "to": 3.67
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.61,
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.61,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.61,
-        to: 3.61,
+        "from": 3.61,
+        "to": 3.61
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.37,
-            multiplicity: 's',
-            assignment: 'OCH₃',
-          },
+            "js": [],
+            "delta": 3.37,
+            "multiplicity": "s",
+            "assignment": "OCH₃"
+          }
         ],
-        from: 3.37,
-        to: 3.37,
-      },
+        "from": 3.37,
+        "to": 3.37
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['dimethylformamide'],
-    smiles: 'C(=O)N(C)C',
-    ranges: [
+    "names": [
+      "dimethylformamide"
+    ],
+    "smiles": "C(=O)N(C)C",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.92,
-            multiplicity: 's',
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 7.92,
+            "multiplicity": "s",
+            "assignment": "CH"
+          }
         ],
-        from: 7.92,
-        to: 7.92,
+        "from": 7.92,
+        "to": 7.92
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.01,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.01,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.01,
-        to: 3.01,
+        "from": 3.01,
+        "to": 3.01
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.85,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 2.85,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.85,
-        to: 2.85,
-      },
+        "from": 2.85,
+        "to": 2.85
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['1,4-dioxane'],
-    smiles: 'C1COCCOC1',
-    ranges: [
+    "names": [
+      "1,4-dioxane"
+    ],
+    "smiles": "C1COCCOC1",
+    "integration": 8,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.75,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.75,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.75,
-        to: 3.75,
-      },
+        "from": 3.75,
+        "to": 3.75
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['DME', 'diethyl ether'],
-    smiles: 'CCOCC',
-    ranges: [
+    "names": [
+      "DME",
+      "diethyl ether"
+    ],
+    "smiles": "CCOCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.37,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.37,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.37,
-        to: 3.37,
+        "from": 3.37,
+        "to": 3.37
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.6,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.6,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.6,
-        to: 3.6,
-      },
+        "from": 3.6,
+        "to": 3.6
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['ethane'],
-    smiles: 'CC',
-    ranges: [
+    "names": [
+      "ethane"
+    ],
+    "smiles": "CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.82,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.82,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.82,
-        to: 0.82,
-      },
+        "from": 0.82,
+        "to": 0.82
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['ethanol'],
-    smiles: 'CCO',
-    ranges: [
+    "names": [
+      "ethanol"
+    ],
+    "smiles": "CCO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.17,
-            assignment: 'CH₃',
-          },
+            "delta": 1.17,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.17,
-        to: 1.17,
+        "from": 1.17,
+        "to": 1.17
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 3.65,
-            assignment: 'CH₂',
-          },
+            "delta": 3.65,
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.65,
-        to: 3.65,
-      },
+        "from": 3.65,
+        "to": 3.65
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['ethyl acetate'],
-    smiles: 'CC(=O)CC',
-    ranges: [
+    "names": [
+      "ethyl acetate"
+    ],
+    "smiles": "CC(=O)CC",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 2.07,
-            multiplicity: 's',
-            assignment: 'CH₃CO',
-          },
+            "js": [],
+            "delta": 2.07,
+            "multiplicity": "s",
+            "assignment": "CH₃CO"
+          }
         ],
-        from: 2.07,
-        to: 2.07,
+        "from": 2.07,
+        "to": 2.07
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 4.14,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 4.14,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 4.14,
-        to: 4.14,
+        "from": 4.14,
+        "to": 4.14
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.24,
-            assignment: 'CH₂CH₃',
-          },
+            "delta": 1.24,
+            "assignment": "CH₂CH₃"
+          }
         ],
-        from: 1.24,
-        to: 1.24,
-      },
+        "from": 1.24,
+        "to": 1.24
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['ethylene'],
-    smiles: 'C=C',
-    ranges: [
+    "names": [
+      "ethylene"
+    ],
+    "smiles": "C=C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.44,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 5.44,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 5.44,
-        to: 5.44,
-      },
+        "from": 5.44,
+        "to": 5.44
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['ethylene glycol'],
-    smiles: 'OCCO',
-    ranges: [
+    "names": [
+      "ethylene glycol"
+    ],
+    "smiles": "OCCO",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.65,
-            multiplicity: 's',
-            assignment: 'CH₂',
-          },
+            "js": [],
+            "delta": 3.65,
+            "multiplicity": "s",
+            "assignment": "CH₂"
+          }
         ],
-        from: 3.65,
-        to: 3.65,
-      },
+        "from": 3.65,
+        "to": 3.65
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['H greaseᶠ'],
-    smiles: '',
-    ranges: [],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "names": [
+      "H greaseᶠ"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [],
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['hexamethylbenzene'],
-    smiles: 'CC1=C(C(=C(C(=C1C)C)C)C)C',
-    ranges: [],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "names": [
+      "hexamethylbenzene"
+    ],
+    "smiles": "CC1=C(C(=C(C(=C1C)C)C)C)C",
+    "integration": 18,
+    "ranges": [],
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['n-hexane'],
-    smiles: 'CCCCCC',
-    ranges: [],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "names": [
+      "n-hexane"
+    ],
+    "smiles": "CCCCCC",
+    "integration": 6,
+    "ranges": [],
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['HMDSO'],
-    smiles: 'C[Si](C)(C)O[Si](C)(C)C',
-    ranges: [
+    "names": [
+      "HMDSO"
+    ],
+    "smiles": "C[Si](C)(C)O[Si](C)(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.28,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 0.28,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.28,
-        to: 0.28,
-      },
+        "from": 0.28,
+        "to": 0.28
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['HMPA'],
-    smiles: 'CN(C)P(=O)(N(C)C)N(C)C',
-    ranges: [
+    "names": [
+      "HMPA"
+    ],
+    "smiles": "CN(C)P(=O)(N(C)C)N(C)C",
+    "integration": 18,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 9.5,
-                multiplicity: 'd',
-              },
+                "coupling": 9.5,
+                "multiplicity": "d"
+              }
             ],
-            delta: 2.61,
-            assignment: 'CH₃',
-          },
+            "delta": 2.61,
+            "assignment": "CH₃"
+          }
         ],
-        from: 2.61,
-        to: 2.61,
-      },
+        "from": 2.61,
+        "to": 2.61
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['hydrogen'],
-    smiles: '',
-    ranges: [],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "names": [
+      "hydrogen"
+    ],
+    "smiles": "",
+    "integration": 2,
+    "ranges": [],
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['imidazole'],
-    smiles: 'C1=CN=CN1',
-    ranges: [
+    "names": [
+      "imidazole"
+    ],
+    "smiles": "C1=CN=CN1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.78,
-            multiplicity: 's',
-            assignment: 'CH(2)',
-          },
+            "js": [],
+            "delta": 7.78,
+            "multiplicity": "s",
+            "assignment": "CH(2)"
+          }
         ],
-        from: 7.78,
-        to: 7.78,
+        "from": 7.78,
+        "to": 7.78
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.14,
-            multiplicity: 's',
-            assignment: 'CH(4,5)',
-          },
+            "js": [],
+            "delta": 7.14,
+            "multiplicity": "s",
+            "assignment": "CH(4,5)"
+          }
         ],
-        from: 7.14,
-        to: 7.14,
-      },
+        "from": 7.14,
+        "to": 7.14
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['methane'],
-    smiles: 'C',
-    ranges: [
+    "names": [
+      "methane"
+    ],
+    "smiles": "C",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 0.18,
-            multiplicity: 's',
-            assignment: 'CH₄',
-          },
+            "js": [],
+            "delta": 0.18,
+            "multiplicity": "s",
+            "assignment": "CH₄"
+          }
         ],
-        from: 0.18,
-        to: 0.18,
-      },
+        "from": 0.18,
+        "to": 0.18
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['methanol'],
-    smiles: 'CO',
-    ranges: [
+    "names": [
+      "methanol"
+    ],
+    "smiles": "CO",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.34,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 3.34,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 3.34,
-        to: 3.34,
-      },
+        "from": 3.34,
+        "to": 3.34
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['nitromethane'],
-    smiles: 'C[N+](=O)[O-]',
-    ranges: [
+    "names": [
+      "nitromethane"
+    ],
+    "smiles": "C[N+](=O)[O-]",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 4.4,
-            multiplicity: 's',
-            assignment: 'CH₃',
-          },
+            "js": [],
+            "delta": 4.4,
+            "multiplicity": "s",
+            "assignment": "CH₃"
+          }
         ],
-        from: 4.4,
-        to: 4.4,
-      },
+        "from": 4.4,
+        "to": 4.4
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['n-pentane'],
-    smiles: 'CCCCC',
-    ranges: [],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "names": [
+      "n-pentane"
+    ],
+    "smiles": "CCCCC",
+    "integration": 6,
+    "ranges": [],
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['propane'],
-    smiles: 'CCC',
-    ranges: [
+    "names": [
+      "propane"
+    ],
+    "smiles": "CCC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 't',
-              },
+                "coupling": 7.3,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.88,
-            assignment: 'CH₃',
-          },
+            "delta": 0.88,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.88,
-        to: 0.88,
+        "from": 0.88,
+        "to": 0.88
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7.3,
-                multiplicity: 'sept',
-              },
+                "coupling": 7.3,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 1.3,
-            assignment: 'CH₂',
-          },
+            "delta": 1.3,
+            "assignment": "CH₂"
+          }
         ],
-        from: 1.3,
-        to: 1.3,
-      },
+        "from": 1.3,
+        "to": 1.3
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['2-propanol'],
-    smiles: 'CC(O)C',
-    ranges: [
+    "names": [
+      "2-propanol"
+    ],
+    "smiles": "CC(O)C",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'd',
-              },
+                "coupling": 6,
+                "multiplicity": "d"
+              }
             ],
-            delta: 1.17,
-            assignment: 'CH₃',
-          },
+            "delta": 1.17,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.17,
-        to: 1.17,
+        "from": 1.17,
+        "to": 1.17
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6,
-                multiplicity: 'sept',
-              },
+                "coupling": 6,
+                "multiplicity": "sept"
+              }
             ],
-            delta: 4.02,
-            assignment: 'CH',
-          },
+            "delta": 4.02,
+            "assignment": "CH"
+          }
         ],
-        from: 4.02,
-        to: 4.02,
-      },
+        "from": 4.02,
+        "to": 4.02
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['propylene'],
-    smiles: 'CC=C',
-    ranges: [
+    "names": [
+      "propylene"
+    ],
+    "smiles": "CC=C",
+    "integration": 3,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 6.4,
-                multiplicity: 'd',
+                "coupling": 6.4,
+                "multiplicity": "d"
               },
               {
-                coupling: 1.5,
-                multiplicity: 't',
-              },
+                "coupling": 1.5,
+                "multiplicity": "t"
+              }
             ],
-            delta: 1.7,
-            assignment: 'CH₃',
-          },
+            "delta": 1.7,
+            "assignment": "CH₃"
+          }
         ],
-        from: 1.7,
-        to: 1.7,
+        "from": 1.7,
+        "to": 1.7
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 10,
-                multiplicity: 'd',
-              },
+                "coupling": 10,
+                "multiplicity": "d"
+              }
             ],
-            delta: 4.95,
-            assignment: 'CH₂(1)',
-          },
+            "delta": 4.95,
+            "assignment": "CH₂(1)"
+          }
         ],
-        from: 4.95,
-        to: 4.95,
+        "from": 4.95,
+        "to": 4.95
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 17,
-                multiplicity: 'd',
-              },
+                "coupling": 17,
+                "multiplicity": "d"
+              }
             ],
-            delta: 5.06,
-            assignment: 'CH₂(2)',
-          },
+            "delta": 5.06,
+            "assignment": "CH₂(2)"
+          }
         ],
-        from: 5.06,
-        to: 5.06,
+        "from": 5.06,
+        "to": 5.06
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 5.9,
-            assignment: 'CH',
-          },
+            "js": [],
+            "delta": 5.9,
+            "assignment": "CH"
+          }
         ],
-        from: 5.9,
-        to: 5.9,
-      },
+        "from": 5.9,
+        "to": 5.9
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['pyridine'],
-    smiles: 'C1=CC=NC=C1',
-    ranges: [
+    "names": [
+      "pyridine"
+    ],
+    "smiles": "C1=CC=NC=C1",
+    "integration": 2,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 8.52,
-            assignment: 'CH(2,6)',
-          },
+            "js": [],
+            "delta": 8.52,
+            "assignment": "CH(2,6)"
+          }
         ],
-        from: 8.52,
-        to: 8.52,
+        "from": 8.52,
+        "to": 8.52
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.45,
-            assignment: 'CH(3,5)',
-          },
+            "js": [],
+            "delta": 7.45,
+            "assignment": "CH(3,5)"
+          }
         ],
-        from: 7.45,
-        to: 7.45,
+        "from": 7.45,
+        "to": 7.45
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 7.87,
-            assignment: 'CH(4)',
-          },
+            "js": [],
+            "delta": 7.87,
+            "assignment": "CH(4)"
+          }
         ],
-        from: 7.87,
-        to: 7.87,
-      },
+        "from": 7.87,
+        "to": 7.87
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['pyrrole'],
-    smiles: 'C1=CNC=C1',
-    ranges: [
+    "names": [
+      "pyrrole"
+    ],
+    "smiles": "C1=CNC=C1",
+    "integration": 1,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.93,
-            assignment: 'CH(2,5)',
-          },
+            "js": [],
+            "delta": 6.93,
+            "assignment": "CH(2,5)"
+          }
         ],
-        from: 6.93,
-        to: 6.93,
+        "from": 6.93,
+        "to": 6.93
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 6.26,
-            assignment: 'CH(3,4)',
-          },
+            "js": [],
+            "delta": 6.26,
+            "assignment": "CH(3,4)"
+          }
         ],
-        from: 6.26,
-        to: 6.26,
-      },
+        "from": 6.26,
+        "to": 6.26
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['pyrrolidine'],
-    smiles: 'C1CCNC1',
-    ranges: [
+    "names": [
+      "pyrrolidine"
+    ],
+    "smiles": "C1CCNC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.07,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 3.07,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 3.07,
-        to: 3.07,
+        "from": 3.07,
+        "to": 3.07
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.87,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.87,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.87,
-        to: 1.87,
-      },
+        "from": 1.87,
+        "to": 1.87
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['silicone grease'],
-    smiles: '',
-    ranges: [],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "names": [
+      "silicone grease"
+    ],
+    "smiles": "",
+    "integration": 6,
+    "ranges": [],
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['tetrahydrofuran'],
-    smiles: 'C1COCC1',
-    ranges: [
+    "names": [
+      "tetrahydrofuran"
+    ],
+    "smiles": "C1COCC1",
+    "integration": 4,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 3.74,
-            assignment: 'CH₂(2,5)',
-          },
+            "js": [],
+            "delta": 3.74,
+            "assignment": "CH₂(2,5)"
+          }
         ],
-        from: 3.74,
-        to: 3.74,
+        "from": 3.74,
+        "to": 3.74
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [],
-            delta: 1.88,
-            assignment: 'CH₂(3,4)',
-          },
+            "js": [],
+            "delta": 1.88,
+            "assignment": "CH₂(3,4)"
+          }
         ],
-        from: 1.88,
-        to: 1.88,
-      },
+        "from": 1.88,
+        "to": 1.88
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['toluene'],
-    smiles: 'Cc1ccccc1',
-    ranges: [],
-    nucleus: '1H',
-    solvent: 'D₂O',
+    "names": [
+      "toluene"
+    ],
+    "smiles": "Cc1ccccc1",
+    "integration": 3,
+    "ranges": [],
+    "nucleus": "1H",
+    "solvent": "D₂O"
   },
   {
-    names: ['triethylamine'],
-    smiles: 'CCN(CC)CC',
-    ranges: [
+    "names": [
+      "triethylamine"
+    ],
+    "smiles": "CCN(CC)CC",
+    "integration": 6,
+    "ranges": [
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 't',
-              },
+                "coupling": 7,
+                "multiplicity": "t"
+              }
             ],
-            delta: 0.99,
-            assignment: 'CH₃',
-          },
+            "delta": 0.99,
+            "assignment": "CH₃"
+          }
         ],
-        from: 0.99,
-        to: 0.99,
+        "from": 0.99,
+        "to": 0.99
       },
       {
-        signals: [
+        "signals": [
           {
-            js: [
+            "js": [
               {
-                coupling: 7,
-                multiplicity: 'q',
-              },
+                "coupling": 7,
+                "multiplicity": "q"
+              }
             ],
-            delta: 2.57,
-            assignment: 'CH₂',
-          },
+            "delta": 2.57,
+            "assignment": "CH₂"
+          }
         ],
-        from: 2.57,
-        to: 2.57,
-      },
+        "from": 2.57,
+        "to": 2.57
+      }
     ],
-    nucleus: '1H',
-    solvent: 'D₂O',
-  },
-];
+    "nucleus": "1H",
+    "solvent": "D₂O"
+  }
+]

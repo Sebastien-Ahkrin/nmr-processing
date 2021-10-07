@@ -32,14 +32,16 @@ function convert(text, nucleus) {
   const results = [];
   let result;
 
-  for (let i = nucleus === '1H' ? 4 : 3; i < header.length; i++) {
+  for (let i = nucleus === '1H' ? 5 : 3; i < header.length; i++) {
     for (let line of data) {
       const name = line[0];
       const smiles = line[1];
+      const integration = Number(line[3]);
       if (name) {
         result = {
           names: name.split(/, /),
           smiles,
+          integration,
           ranges: [],
           nucleus,
           solvent: header[i],
@@ -49,7 +51,7 @@ function convert(text, nucleus) {
       if (!line[i]) continue;
 
       result.ranges.push(
-        getRange(line[i], line[2], nucleus === '1H' ? line[3] : ''),
+        getRange(line[i], line[2], nucleus === '1H' ? line[4] : ''),
       );
     }
   }
