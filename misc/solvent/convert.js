@@ -8,15 +8,15 @@ const text13c = readFileSync(join(__dirname, './13c.tsv'), 'utf8');
 
 const results1h = convert(text1h, '1H');
 writeFileSync(
-  join(__dirname, '1h.json'),
-  JSON.stringify(results1h, undefined, 2),
+  join(__dirname, '../../src/databases/protonImpurities.ts'),
+  getHeader('proton') + JSON.stringify(results1h, undefined, 2),
   'utf8',
 );
 
 const results13c = convert(text13c, '13C');
 writeFileSync(
-  join(__dirname, '13c.json'),
-  JSON.stringify(results13c, undefined, 2),
+  join(__dirname, '../../src/databases/carbonImpurities.ts'),
+  getHeader('carbon') + JSON.stringify(results13c, undefined, 2),
   'utf8',
 );
 
@@ -38,7 +38,7 @@ function convert(text, nucleus) {
       const smiles = line[1];
       if (name) {
         result = {
-          names: [name],
+          names: name.split(/, /),
           smiles,
           ranges: [],
           nucleus,
@@ -116,4 +116,10 @@ function splitPatterns(multiplet) {
   );
   if (result) return result.map((entry) => entry.trim());
   return [multiplet];
+}
+
+function getHeader(label) {
+  return `import type { DatabaseNMREntry } from './DatabaseNMREntry';
+
+export const ${label}Impurities: DatabaseNMREntry[] = `;
 }
