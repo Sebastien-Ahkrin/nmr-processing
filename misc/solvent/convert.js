@@ -3,6 +3,8 @@
 const { readFileSync, writeFileSync } = require('fs');
 const { join } = require('path');
 
+const { rangeFromSignal } = require('../../lib/');
+
 const text1h = readFileSync(join(__dirname, './1h.tsv'), 'utf8');
 const text13c = readFileSync(join(__dirname, './13c.tsv'), 'utf8');
 
@@ -36,12 +38,10 @@ function convert(text, nucleus) {
     for (let line of data) {
       const name = line[0];
       const smiles = line[1];
-      const integration = Number(line[3]);
       if (name) {
         result = {
           names: name.split(/, /),
           smiles,
-          integration,
           ranges: [],
           nucleus,
           solvent: header[i],
@@ -51,15 +51,21 @@ function convert(text, nucleus) {
       if (!line[i]) continue;
 
       result.ranges.push(
-        getRange(line[i], line[2], nucleus === '1H' ? line[4] : ''),
+        getRange(
+          line[i],
+          line[2],
+          nucleus === '1H' ? line[4] : '',
+          nucleus === '1H' && Number(line[3]),
+        ),
       );
     }
   }
   return results;
 }
 
-function getRange(delta, assignment, mult) {
+function getRange(delta, assignment, mult, integration) {
   const range = { signals: [] };
+  if (integration) range.integration = integration;
   if (delta.match(/\d-\d/)) {
     const [from, to] = delta.split(/(?<=\d)-(?=[\d-])/);
     range.from = Number(from);
@@ -72,17 +78,19 @@ function getRange(delta, assignment, mult) {
     const multParts = mult.split(/, ?/);
     const multiplicity = splitPatterns(multParts[0]);
 
+    let signal;
+
     if (mult === '') {
-      range.signals.push({
+      signal = {
         delta: Number(delta),
         assignment,
-      });
+      };
     } else if (mult === 'm' || mult === 'br t') {
-      range.signals.push({
+      signal = {
         js,
         delta: Number(delta),
         assignment,
-      });
+      };
     } else if (multiplicity.length > 1 || multiplicity[0] !== 's') {
       if (multiplicity.length === multParts.length - 1) {
         for (let i = 0; i < multiplicity.length; i++) {
@@ -94,19 +102,23 @@ function getRange(delta, assignment, mult) {
       } else {
         console.log('ERROR', mult);
       }
-      range.signals.push({
+      signal = {
         js,
         delta: Number(delta),
         assignment,
-      });
+      };
     } else {
-      range.signals.push({
+      signal = {
         js,
         delta: Number(delta),
         multiplicity: multParts[0],
         assignment,
-      });
+      };
     }
+    const fromTo = rangeFromSignal(signal);
+    range.from = fromTo.from;
+    range.to = fromTo.to;
+    range.signals.push(signal);
   }
 
   return range;

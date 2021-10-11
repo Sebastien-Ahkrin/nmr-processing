@@ -25,6 +25,7 @@ export * from './signals/signalsToXY';
 export * from './signals/signals2DToZ';
 
 export * from './utilities/resurrect';
+export * from './utilities/rangeFromSignal';
 
 export * from './xy/xyAutoPeaksPicking';
 export * from './xy/xyAutoRangesPicking';
