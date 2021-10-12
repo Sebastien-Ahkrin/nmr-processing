@@ -1,5 +1,26 @@
 # Changelog
 
+## [3.3.0](https://www.github.com/cheminfo/nmr-processing/compare/v3.2.0...v3.3.0) (2021-10-12)
+
+
+### Features
+
+* add integration in impurities ([26d97ea](https://www.github.com/cheminfo/nmr-processing/commit/26d97ea839505b53ed138631c6f4c567703c4263))
+* add smiles in solvent impurities ([e2c3d6f](https://www.github.com/cheminfo/nmr-processing/commit/e2c3d6f9a44a901445e81e2f74361f2b8264070f))
+* add some smiles in database ([bff15d7](https://www.github.com/cheminfo/nmr-processing/commit/bff15d7a4ff2b68b4138bb85c23d00aa79d6ad95))
+* update n adapt to new version of ml-gsd ([#108](https://www.github.com/cheminfo/nmr-processing/issues/108)) ([d008691](https://www.github.com/cheminfo/nmr-processing/commit/d008691cf3d9c9e2dd908d7bb5639ee4dc41a2e3))
+
+
+### Bug Fixes
+
+* add multiplicity in range ([1d4eaf5](https://www.github.com/cheminfo/nmr-processing/commit/1d4eaf56f9ae039dc9ee48b1a2ee1d54259e4ead))
+* check default values at interfaces close [#105](https://www.github.com/cheminfo/nmr-processing/issues/105) ([ba6c82c](https://www.github.com/cheminfo/nmr-processing/commit/ba6c82ce7cafdc851d1c61ecb98f26006f064e59))
+* correct integration and range in impurities ([96c687c](https://www.github.com/cheminfo/nmr-processing/commit/96c687cdf025423ef6a233082b1521de6d4e9072))
+* remove useless ranges ([2b6119d](https://www.github.com/cheminfo/nmr-processing/commit/2b6119d47d6d05943266db5c871c5b7f3e45742f))
+* rename nucleus to nuclei when it is array ([d815868](https://www.github.com/cheminfo/nmr-processing/commit/d8158687a94d8f62768830983384edfad93f6696))
+* **resurrect:** regular expression for frequency ([fad1ed3](https://www.github.com/cheminfo/nmr-processing/commit/fad1ed3965ffcd1796a4b3defdc54333a49097ee))
+* wrong info for water in impurities ([290eb9e](https://www.github.com/cheminfo/nmr-processing/commit/290eb9ef297e972bf103209ee05380bef797cbb7))
+
 ## [3.2.0](https://www.github.com/cheminfo/nmr-processing/compare/v3.1.0...v3.2.0) (2021-10-05)
 
 
