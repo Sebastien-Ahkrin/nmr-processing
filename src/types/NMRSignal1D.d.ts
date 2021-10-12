@@ -1,5 +1,5 @@
-import { GSDPeak } from './GSDPeak';
 import type { Jcoupling } from './jcoupling';
+import { GSDPeak } from './ml-gsd/index.d';
 
 interface NMRSignal1D {
   delta: number;

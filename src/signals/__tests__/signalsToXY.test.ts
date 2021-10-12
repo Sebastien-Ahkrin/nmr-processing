@@ -128,7 +128,7 @@ describe('spectrum from prediction', () => {
     });
     expect(spectrum.x).toHaveLength(16 * 1024);
     expect(spectrum.x[0]).toStrictEqual(-1);
-    expect(spectrum.x[spectrum.x.length - 1]).toStrictEqual(11);
+    expect(spectrum.x[spectrum.x.length - 1]).toBe(11);
     expect(Math.max(...spectrum.y)).toBeCloseTo(1e8);
   });
 

@@ -1,8 +1,9 @@
 import type { DataXY } from 'cheminfo-types';
+import type { GSDPeak } from 'ml-gsd';
 import { xyIntegration } from 'ml-spectra-processing';
 
-import type { GSDPeak } from '../types/GSDPeak';
 import { MakeMandatory } from '../types/MakeMandatory';
+import { NMRPeak1D } from '../types/NMRPeak1D';
 import type { NMRRange } from '../types/NMRRange';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
 
@@ -83,7 +84,7 @@ function checkSignalAfterCompilePattern(
 }
 
 const assignSignal = (
-  peak: GSDPeak,
+  peak: NMRPeak1D,
   frequency: number,
   nucleus: string,
 ): SignalIntern => {
@@ -91,20 +92,22 @@ const assignSignal = (
     delta: NaN,
     nbPeaks: 1,
     kind: 'signal',
-    startX: peak.x - peak.width,
-    stopX: peak.x + peak.width,
+    startX: peak.x - peak.shape.width,
+    stopX: peak.x + peak.shape.width,
     observe: frequency,
     nucleus,
     integralData: {
-      from: peak.x - peak.width * 3,
-      to: peak.x + peak.width * 3,
+      from: peak.x - peak.shape.width * 3,
+      to: peak.x + peak.shape.width * 3,
       value: 0,
     },
     peaks: [
       {
         x: peak.x,
         intensity: peak.y,
-        width: peak.width,
+        shape: {
+          width: peak.shape.width,
+        },
       },
     ],
   };
@@ -115,7 +118,7 @@ const assignSignal = (
 
 export function peaksToRanges(
   data: DataXY,
-  peakList: GSDPeak[],
+  peakList: NMRPeak1D[],
   options: OptionsPeaksToRanges = {},
 ): NMRRange[] {
   let {
@@ -172,7 +175,13 @@ export function peaksToRanges(
           sum += computeArea(signal.peaks[j]);
           if (signal.maskPattern[j] === false) {
             let peakR = signal.peaks.splice(j, 1)[0];
-            peaksO.push({ x: peakR.x, y: peakR.intensity, width: peakR.width });
+            peaksO.push({
+              x: peakR.x,
+              y: peakR.intensity,
+              shape: {
+                width: peakR.shape.width,
+              },
+            });
             signal.mask.splice(j, 1);
             signal.mask2.splice(j, 1);
             signal.maskPattern.splice(j, 1);
@@ -275,7 +284,7 @@ export function peaksToRanges(
 
 function detectSignals(
   data: DataXY,
-  peakList: GSDPeak[],
+  peakList: NMRPeak1D[],
   options: OptionsDetectSignals = {},
 ): SignalIntern[] {
   let {
@@ -298,22 +307,24 @@ function detectSignals(
       if (peak.kind) signal1D.kind = peak.kind;
       signals.push(signal1D);
     } else {
-      let tmp = peak.x + peak.width;
+      let tmp = peak.x + peak.shape.width;
       signal1D.stopX = Math.max(signal1D.stopX, tmp);
       signal1D.startX = Math.min(signal1D.startX, tmp);
       signal1D.nbPeaks++;
       signal1D.peaks.push({
         x: peak.x,
         intensity: peak.y,
-        width: peak.width,
+        shape: {
+          width: peak.shape.width,
+        },
       });
       signal1D.integralData.from = Math.min(
         signal1D.integralData.from,
-        peak.x - peak.width * 3,
+        peak.x - peak.shape.width * 3,
       );
       signal1D.integralData.to = Math.max(
         signal1D.integralData.to,
-        peak.x + peak.width * 3,
+        peak.x + peak.shape.width * 3,
       );
       if (peak.kind) signal1D.kind = peak.kind;
     }
@@ -361,5 +372,5 @@ function detectSignals(
  * @private
  */
 function computeArea(peak: Peak1DIntern) {
-  return Math.abs(peak.intensity * peak.width * 1.57); // todo add an option with this value: 1.772453851
+  return Math.abs(peak.intensity * peak.shape.width * 1.57); // todo add an option with this value: 1.772453851
 }

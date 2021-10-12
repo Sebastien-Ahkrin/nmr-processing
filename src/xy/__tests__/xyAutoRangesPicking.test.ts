@@ -11,8 +11,8 @@ describe('xyAutoRangesPicking', () => {
     expect(ranges).toHaveLength(2);
     expect(ranges[1]).toMatchCloseTo(
       {
-        from: 1.96744,
-        to: 2.03298,
+        from: 1.96628,
+        to: 2.03413,
         integration: 40,
         signals: [
           {
@@ -22,12 +22,12 @@ describe('xyAutoRangesPicking', () => {
           },
         ],
       },
-      3,
+      2,
     );
     expect(ranges[0]).toMatchCloseTo(
       {
-        from: 0.97588,
-        to: 1.02378,
+        from: 0.97473,
+        to: 1.02492,
         integration: 60,
         signals: [
           {
@@ -37,7 +37,7 @@ describe('xyAutoRangesPicking', () => {
           },
         ],
       },
-      3,
+      2,
     );
   });
 });

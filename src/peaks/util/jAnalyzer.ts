@@ -1,5 +1,5 @@
-import type { GSDPeak } from '../../types/GSDPeak';
 import { MakeMandatory } from '../../types/MakeMandatory';
+import { NMRPeak1D } from '../../types/NMRPeak1D';
 
 /*
  * This library implements the J analyser described by Cobas et al in the paper:
@@ -29,7 +29,7 @@ interface IntergralData {
   to: number;
 }
 
-export type Peak1DIntern = Omit<GSDPeak, 'y'> & { intensity: number };
+export type Peak1DIntern = Omit<NMRPeak1D, 'y'> & { intensity: number };
 
 export interface SignalIntern {
   delta: number;
@@ -219,12 +219,13 @@ function updateSignal(signal: SignalInternMandatory, Jc: number[]) {
   // Update the limits of the signal
   let peaks = signal.peaksComp; // Always in Hz
   let nbPeaks = peaks.length;
-  signal.startX = peaks[0].x / signal.observe - peaks[0].width;
+  signal.startX = peaks[0].x / signal.observe - peaks[0].shape.width;
   signal.stopX =
-    peaks[nbPeaks - 1].x / signal.observe + peaks[nbPeaks - 1].width;
-  signal.integralData.from = peaks[0].x / signal.observe - peaks[0].width * 3;
+    peaks[nbPeaks - 1].x / signal.observe + peaks[nbPeaks - 1].shape.width;
+  signal.integralData.from =
+    peaks[0].x / signal.observe - peaks[0].shape.width * 3;
   signal.integralData.to =
-    peaks[nbPeaks - 1].x / signal.observe + peaks[nbPeaks - 1].width * 3;
+    peaks[nbPeaks - 1].x / signal.observe + peaks[nbPeaks - 1].shape.width * 3;
   // Compile the pattern and format the constant couplings
   signal.maskPattern = signal.mask2;
   signal.multiplicity = abstractPattern(signal, Jc);
@@ -465,7 +466,9 @@ function symmetrize(
     peaks[i] = {
       x: peak[jAxis] * newSignal.observe,
       intensity: peak[intensity],
-      width: peak.width,
+      shape: {
+        width: peak.shape.width,
+      },
     };
   }
   // Join the peaks that are closer than 0.25 Hz
@@ -477,7 +480,7 @@ function symmetrize(
       peaks[i].intensity = peaks[i].intensity + peaks[i + 1].intensity;
       peaks[i].x /= peaks[i].intensity;
       peaks[i].intensity /= 2;
-      peaks[i].width += peaks[i + 1].width;
+      peaks[i].shape.width += peaks[i + 1].shape.width;
       peaks.splice(i + 1, 1);
     }
   }
@@ -524,9 +527,12 @@ function symmetrize(
 
         if (Math.abs(diffL - diffR) < maxError) {
           avg = Math.min(peaks[left].intensity, peaks[right].intensity);
-          avgWidth = Math.min(peaks[left].width, peaks[right].width);
+          avgWidth = Math.min(
+            peaks[left].shape.width,
+            peaks[right].shape.width,
+          );
           peaks[left].intensity = peaks[right].intensity = avg;
-          peaks[left].width = peaks[right].width = avgWidth;
+          peaks[left].shape.width = peaks[right].shape.width = avgWidth;
           middle = [
             middle[0] + (peaks[right].x + peaks[left].x) / 2,
             middle[1] + 1,
@@ -706,5 +712,5 @@ function chemicalShift(peaks: Peak1DIntern[], mask: boolean[] = []) {
  * @private
  */
 function getArea(peak: Peak1DIntern) {
-  return Math.abs(peak.intensity * peak.width * 1.57); // 1.772453851);
+  return Math.abs(peak.intensity * peak.shape.width * 1.57); // 1.772453851);
 }

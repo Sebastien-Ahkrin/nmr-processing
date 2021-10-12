@@ -1,6 +1,6 @@
 import { impurities } from '../constants/impurities';
 import type { ImpuritySignal } from '../constants/impurities';
-import { GSDPeak } from '../types/GSDPeak';
+import type { NMRPeak1D } from '../types/NMRPeak1D';
 
 const toCheck = ['solvent', 'h2o', 'tms'];
 
@@ -34,7 +34,7 @@ interface OptionsCheckImpurity {
  */
 
 export function peaksFilterImpurities(
-  peakList: GSDPeak[],
+  peakList: NMRPeak1D[],
   options: OptionsPeaksFilterImpurities = {},
 ) {
   let { solvent, error = 0.025, remove = false } = options;
@@ -56,7 +56,7 @@ export function peaksFilterImpurities(
 }
 
 function checkImpurity(
-  peakList: GSDPeak[],
+  peakList: NMRPeak1D[],
   impurity: ImpuritySignal[],
   options: OptionsCheckImpurity,
 ) {
@@ -66,7 +66,7 @@ function checkImpurity(
   while (i--) {
     j = peakList.length;
     while (j--) {
-      tolerance = error + peakList[j].width;
+      tolerance = error + peakList[j].shape.width;
       difference = Math.abs(impurity[i].shift - peakList[j].x);
       if (difference < tolerance) {
         // && (impurity[i].multiplicity === '' || (impurity[i].multiplicity.indexOf(peakList[j].multiplicity)) { // some impurities has multiplicities like 'bs' but at presents it is unsupported

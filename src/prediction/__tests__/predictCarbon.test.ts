@@ -25,7 +25,7 @@ describe('carbon prediction', () => {
     });
     expect(prediction.joinedSignals).toHaveLength(6);
     expect(prediction.signals).toHaveLength(8);
-    expect(!prediction.joinedSignals[0].statistic).toStrictEqual(false);
+    expect(!prediction.joinedSignals[0].statistic).toBe(false);
   }, 30000);
   it('empty molecule', async () => {
     const molecule = new OCL.Molecule(16, 16);

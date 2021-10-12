@@ -6,7 +6,7 @@ import {
   xAbsoluteMedian,
 } from 'ml-spectra-processing';
 
-import { GSDPeak } from '../types/GSDPeak';
+import type { NMRPeak1D } from '../types/NMRPeak1D';
 /**
  * Implementation of the peak picking method described by Cobas in:
  * A new approach to improving automated analysis of proton NMR spectra
@@ -105,7 +105,7 @@ export interface OptionsXYAutoPeaksPicking extends Partial<OptionsGetPeakList> {
 export function xyAutoPeaksPicking(
   data: DataXY,
   options: OptionsXYAutoPeaksPicking = {},
-): GSDPeak[] {
+): NMRPeak1D[] {
   const {
     from,
     to,
@@ -151,7 +151,6 @@ export function xyAutoPeaksPicking(
     getPeakOptions.noiseLevel = cutOff.negative;
     peaks.push(...getNegativePeaks(data, getPeakOptions));
   }
-
   return peaks;
 }
 
@@ -171,6 +170,7 @@ function getPeakList(data: DataXY, options: OptionsGetPeakList) {
   } = options;
 
   let peakList = gsd(data, {
+    shape,
     sgOptions,
     minMaxRatio,
     broadRatio,

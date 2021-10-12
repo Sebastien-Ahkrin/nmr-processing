@@ -1,4 +1,5 @@
 import { toBeDeepCloseTo, toMatchCloseTo } from 'jest-matcher-deep-close-to';
+import { getShape1D } from 'ml-peak-shape-generator';
 import noisyBigPeakSmallPeak from 'nmr-xy-testdata/data/noisy/noisyBigPeakSmallPeak.json';
 import tripletQuadruplet from 'nmr-xy-testdata/data/pure/d1-2_j7.json';
 
@@ -11,10 +12,15 @@ describe('xyAutoPeaksPicking', () => {
     let options = {};
 
     let peaks = xyAutoPeaksPicking(tripletQuadruplet, options);
+
+    const widthToFWHM = getShape1D('gaussian').widthToFWHM;
     expect(peaks).toHaveLength(7);
     expect(peaks[1].x).toBeDeepCloseTo(0.999831, 3);
-    expect(peaks[1].y / 100).toBeDeepCloseTo(14846602893.64, 1);
-    expect(peaks[1].width).toBeDeepCloseTo(0.0021514892578125, 3);
+    expect(peaks[1].y / 100).toBeDeepCloseTo(14846602893.68, 1);
+    expect(peaks[1].shape.width).toBeDeepCloseTo(
+      widthToFWHM(0.0021514892578125),
+      3,
+    );
   });
   it('mixed spectrum with small and big peaks', () => {
     let options = {
@@ -34,17 +40,24 @@ describe('xyAutoPeaksPicking', () => {
     };
 
     let peaks = xyAutoPeaksPicking(noisyBigPeakSmallPeak, options);
+    const widthToFWHM = getShape1D('lorentzian').widthToFWHM;
 
-    const expectedResult: {[key: string]: number}[] = [
-      { x: 2, y: 6.2683, width: 0.4 },
-      { x: 8, y: 316.503, width: 0.4 },
+    const expectedResult: { [key: string]: any }[] = [
+      { x: 2, y: 6.2683, shape: { width: widthToFWHM(0.4) } },
+      { x: 8, y: 316.503, shape: { width: widthToFWHM(0.4) } },
     ];
 
     expectedResult.forEach((expected, i) => {
       let peak = peaks[i];
       for (let key in expected) {
         //@ts-expect-error
-        expect(peak[key]).toBeCloseTo(expected[key], 2);
+        if (typeof peak[key] === 'object') {
+          //@ts-expect-error
+          expect(peak[key]).toMatchCloseTo(expected[key], 2);
+        } else {
+          //@ts-expect-error
+          expect(peak[key]).toBeCloseTo(expected[key], 2);
+        }
       }
     });
   });
@@ -60,7 +73,7 @@ describe('xyAutoPeaksPicking', () => {
     let peaks = xyAutoPeaksPicking(tripletQuadruplet, options);
     expect(peaks).toHaveLength(7);
     expect(peaks[1].x).toBeDeepCloseTo(0.999831, 3);
-    expect(peaks[1].y / 100).toBeDeepCloseTo(-14846602893.64, 1);
-    expect(peaks[1].width).toBeDeepCloseTo(0.0021514892578125, 3);
+    expect(peaks[1].y / 100).toBeDeepCloseTo(-14846602893.68, 1);
+    expect(peaks[1].shape.width).toBeDeepCloseTo(0.0021514892578125, 3);
   });
 });
