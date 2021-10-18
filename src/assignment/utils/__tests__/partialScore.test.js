@@ -18,7 +18,7 @@ describe('partial score', () => {
         tolerance: 0.5,
         useChemicalShiftScore: true,
       },
-      unassigned: 0,
+      nbAllowedUnAssigned: 0,
       diaIDPeerPossibleAssignment,
       correlations
     });
@@ -36,7 +36,7 @@ describe('partial score', () => {
         tolerance: 1,
         useChemicalShiftScore: false,
       },
-      unassigned: 0,
+      nbAllowedUnAssigned: 0,
       diaIDPeerPossibleAssignment,
       correlations,
     });
@@ -54,7 +54,7 @@ describe('partial score', () => {
         tolerance: 1,
         useChemicalShiftScore: true,
       },
-      unassigned: 0,
+      nbAllowedUnAssigned: 0,
       diaIDPeerPossibleAssignment,
       correlations,
     });
@@ -72,7 +72,7 @@ describe('partial score', () => {
         tolerance: 1,
         useChemicalShiftScore: false,
       },
-      unassigned: 0,
+      nbAllowedUnAssigned: 0,
       diaIDPeerPossibleAssignment,
       correlations,
     });
@@ -90,7 +90,7 @@ describe('partial score', () => {
         tolerance: 0.05,
         useChemicalShiftScore: true,
       },
-      unassigned: 0,
+      nbAllowedUnAssigned: 0,
       diaIDPeerPossibleAssignment,
       correlations,
     });
@@ -108,7 +108,7 @@ describe('partial score', () => {
         tolerance: 1,
         useChemicalShiftScore: true,
       },
-      unassigned: 0,
+      nbAllowedUnAssigned: 0,
       diaIDPeerPossibleAssignment,
       correlations,
     });
@@ -124,7 +124,7 @@ describe('partial score', () => {
         tolerance: 1,
         useChemicalShiftScore: true,
       },
-      unassigned: 0,
+      nbAllowedUnAssigned: 0,
       diaIDPeerPossibleAssignment,
       correlations,
     });
@@ -141,7 +141,7 @@ describe('partial score', () => {
         tolerance: 1,
         useChemicalShiftScore: true,
       },
-      unassigned: 0,
+      nbAllowedUnAssigned: 0,
       diaIDPeerPossibleAssignment,
       correlations,
     });

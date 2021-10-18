@@ -12,7 +12,7 @@ export function buildAssignment(props) {
     timeout,
     minScore,
     nSources,
-    unassigned,
+    nbAllowedUnAssigned,
     predictions,
     maxSolutions,
     correlations,
@@ -23,7 +23,7 @@ export function buildAssignment(props) {
 
   let date = new Date();
   let timeStart = date.getTime();
-  let lowerBound = minScore;
+  let lowerBoundScore = minScore;
   let scores = new Float64Array(nSources);
   let partial = new Array(nSources);
 
@@ -46,8 +46,8 @@ export function buildAssignment(props) {
     predictions,
     correlations,
     maxSolutions,
-    lowerBound,
-    unassigned,
+    lowerBoundScore,
+    nbAllowedUnAssigned,
     possibleAssignmentMap,
     diaIDPeerPossibleAssignment,
   }, 0, partial, store);

@@ -27,7 +27,7 @@ const result = partialScore(partial, {
     tolerance: 1,
     useChemicalShiftScore: true,
   },
-  unassigned: 1,
+  nbAllowedUnAssigned: 1,
   diaIDPeerPossibleAssignment,
   correlations,
 });

@@ -11,8 +11,8 @@ export function exploreTreeRec(props, predictionIndex, partial, store) {
     targets,
     predictions,
     correlations,
-    lowerBound,
-    unassigned,
+    lowerBoundScore,
+    nbAllowedUnAssigned,
     possibleAssignmentMap,
     diaIDPeerPossibleAssignment,
   } = props;
@@ -25,22 +25,21 @@ export function exploreTreeRec(props, predictionIndex, partial, store) {
   const diaID = diaIDPeerPossibleAssignment[predictionIndex];
   const possibleAssignments = possibleAssignmentMap[diaID];
 
-  let targetIndex = 0;
   for (let targetID of possibleAssignments) {
     partial[predictionIndex] = targetID;
-    const score = partialScore(partial, {
+    let score = partialScore(partial, {
       diaIDPeerPossibleAssignment,
-      unassigned,
+      nbAllowedUnAssigned,
       restrictionByCS,
       atomTypes,
       predictions,
       correlations,
       targets,
     });
-    // console.log(`partial ${partial}`)
-    // console.log(`atomTypes: ${atomTypes},score ${score} nSources ${nSources}, index ${predictionIndex}, targetIndex ${targetIndex++}, lower ${lowerBound}`);
+
     if (score > 0) {
-      if (predictionIndex === nSources - 1 && score >= lowerBound) {
+      if (predictionIndex === nSources - 1 && score >= lowerBoundScore) {
+        score /= doubleAssignmentPenalty(partial, predictions);
         store.nSolutions++;
         let solution = {
           assignment: JSON.parse(JSON.stringify(partial)),
@@ -67,8 +66,8 @@ export function exploreTreeRec(props, predictionIndex, partial, store) {
             targets,
             predictions,
             correlations,
-            lowerBound,
-            unassigned,
+            lowerBoundScore,
+            nbAllowedUnAssigned,
             possibleAssignmentMap,
             diaIDPeerPossibleAssignment,
           },
@@ -83,4 +82,16 @@ export function exploreTreeRec(props, predictionIndex, partial, store) {
       }
     }
   }
+}
+
+function doubleAssignmentPenalty(partial, predictions) {
+  let firstIndex = 0;
+  let nbDoubleAssignment = 0;
+  for (const atomType in predictions) {
+    const nbSources = Object.keys(predictions[atomType]).length;
+    let assignments = new Set(partial.slice(firstIndex, nbSources));
+    nbDoubleAssignment += nbSources - assignments.size;
+    firstIndex += nbSources;
+  }
+  return nbDoubleAssignment > 0 ? 2 * nbDoubleAssignment : 1;
 }

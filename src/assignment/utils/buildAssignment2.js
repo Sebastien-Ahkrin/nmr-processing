@@ -19,7 +19,7 @@ export async function buildAssignment(props) {
     restrictionByCS,
     timeout,
     minScore,
-    unassigned,
+    nbAllowedUnAssigned,
     maxSolutions,
     correlations,
     assignmentOrder,
@@ -29,7 +29,7 @@ export async function buildAssignment(props) {
 
   let date = new Date();
   let timeStart = date.getTime();
-  let lowerBound = minScore;
+  let lowerBoundScore = minScore;
 
   const getAllHydrogens = {
     C: (m, i) => m.getAllHydrogens(i),
@@ -79,8 +79,7 @@ export async function buildAssignment(props) {
       predictions,
       targets,
     });
-    console.log('posible assignment', possibleAssignmentMap);
-    // console.log('prediction', predictions);
+
     const diaIDPeerPossibleAssignment = Object.keys(possibleAssignmentMap);
 
     let sourceOfPartials = getSourceOfPartial(store, nSources);
@@ -90,7 +89,10 @@ export async function buildAssignment(props) {
       nSolutions: 0,
     };
 
+    let first = true;
     for (let partial of sourceOfPartials) {
+      if (!first) continue;
+      first = false;
       exploreTreeRec(
         {
           atomTypes,
@@ -102,8 +104,8 @@ export async function buildAssignment(props) {
           predictions,
           correlations,
           maxSolutions,
-          lowerBound,
-          unassigned,
+          lowerBoundScore,
+          nbAllowedUnAssigned,
           possibleAssignmentMap,
           diaIDPeerPossibleAssignment,
         },
@@ -112,7 +114,6 @@ export async function buildAssignment(props) {
         store,
       );
     }
-
     predictionIndex = diaIDPeerPossibleAssignment.length;
   }
 
@@ -121,7 +122,9 @@ export async function buildAssignment(props) {
 
 function getSourceOfPartial(store, nSources) {
   return store.nSolutions > 0
-    ? store.solutions.elements.map((e) => initializePartial(nSources, e.assignment))
+    ? store.solutions.elements.map((e) =>
+        initializePartial(nSources, e.assignment),
+      )
     : [initializePartial(nSources)];
 }
 

@@ -3,7 +3,7 @@ import groupCarbonTargetByIntegrationZone from './groupCarbonTargetByIntegration
 export function partialScore(partial, props) {
   const {
     diaIDPeerPossibleAssignment,
-    unassigned,
+    nbAllowedUnAssigned,
     atomTypes,
     restrictionByCS,
     predictions,
@@ -26,7 +26,7 @@ export function partialScore(partial, props) {
     if (targetID === '*') countStars++;
   }
 
-  if (countStars > unassigned) return 0;
+  if (countStars > nbAllowedUnAssigned) return 0;
 
   const activeDomainOnTarget = Object.keys(partialInverse);
 
@@ -34,9 +34,10 @@ export function partialScore(partial, props) {
 
   const getPredictionByDiaID = getPrediction.bind({}, predictions);
   // check the integration
-  const targetByIntegral = atomTypes.reduce((result, atomType) => {
+  const targetByIntegral = [];
+  for (const atomType of atomTypes) {
     if (atomType === 'C') {
-      result.push(
+      targetByIntegral.push(
         ...groupCarbonTargetByIntegrationZone(
           activeDomainOnTarget,
           targets[atomType],
@@ -45,34 +46,29 @@ export function partialScore(partial, props) {
       );
     } else {
       for (let targetID of activeDomainOnTarget) {
-        if(!targets.H[targetID]) continue;
-        // console.log(`atomtype ${atomType}, targetID ${targetID}`, targets )
-        result.push({
+        if (!targets.H[targetID]) continue;
+        targetByIntegral.push({
           atomType,
           targetIDs: [targetID],
           integration: targets.H[targetID].integration,
         });
       }
     }
-    return result;
-  }, []);
-  console.log(targetByIntegral)
+  }
+
   for (const group of targetByIntegral) {
     const { integration } = group;
 
     if (integration === undefined || isNaN(integration)) continue;
 
     let total = 0;
-    // console.log(group);
     for (let targetID of group.targetIDs) {
       let targetToSource = partialInverse[targetID];
-      // console.log('targetTOSource', targetToSource);
       for (const diaID of targetToSource) {
         const { prediction, atomType } = getPredictionByDiaID(diaID);
         if (atomType === group.atomType) total += prediction.allHydrogens;
       }
     }
-    // console.log(integration, total);
     if (total - integration >= 0.5) {
       return 0;
     }
@@ -162,11 +158,9 @@ export function partialScore(partial, props) {
       ((activeDomainOnTarget.length * (activeDomainOnTarget.length - 1)) / 2);
   }
   const penaltyByStarts = countStars / partial.length;
-  // console.log(`CSScore ${chemicalShiftScore}, score2D ${scoreOn2D}, penalty: ${penaltyByStarts}`);
   if (chemicalShiftScore === 0) return scoreOn2D - penaltyByStarts;
 
   if (scoreOn2D === 0) return chemicalShiftScore - penaltyByStarts;
-
   return (chemicalShiftScore + scoreOn2D) / 2 - penaltyByStarts;
 }
 

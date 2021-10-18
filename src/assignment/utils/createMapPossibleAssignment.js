@@ -38,7 +38,6 @@ export function createMapPossibleAssignment(expandMap, props) {
               !chemicalShiftRestriction ||
               typeof prediction.delta === 'undefined'
             ) {
-              // console.log('pasa aqui');
               // Chemical shift is not a restriction
               expandMap[predictionID].push(targetID);
             } else {

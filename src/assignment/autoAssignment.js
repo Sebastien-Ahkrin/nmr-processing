@@ -17,7 +17,7 @@ export async function autoAssignment(molecule, props = {}) {
     justAssign,
     minScore = 1,
     maxSolutions = 10,
-    unassigned = 0,
+    nbAllowedUnAssigned = 0,
     timeout = 6000,
     predictionOptions = {},
   } = props;
@@ -29,16 +29,25 @@ export async function autoAssignment(molecule, props = {}) {
   } = restrictionByCS;
 
   if (!molecule) throw new Error('It is needed a molecule to assign');
-  if (!correlations) throw new Error('It is needed a target signals to assign');
+  if (!correlations) throw new Error('It is needed the target signals to assign');
 
   // molecule = molecule.getCompactCopy();
   molecule.addImplicitHydrogens();
   addDiastereotopicMissingChirality(molecule);
 
   const { assignmentOrder } = getWorkFlow(correlations, justAssign);
-  console.log('assig', assignmentOrder)
   const { targets, correlations: correlationsWithIndirectLinks } =
     formatCorrelations(correlations);
+
+    /**
+     * diaIDPeerPossibleAssignment,
+    nbAllowedUnAssigned,
+    atomTypes,
+    restrictionByCS,
+    predictions,
+    targets,
+    correlations,
+     */
 
   const solutions = await buildAssignment({
     restrictionByCS: {
@@ -51,7 +60,7 @@ export async function autoAssignment(molecule, props = {}) {
     maxSolutions,
     molecule,
     assignmentOrder,
-    unassigned,
+    nbAllowedUnAssigned,
     correlations: correlationsWithIndirectLinks,
     targets,
     predictionOptions,

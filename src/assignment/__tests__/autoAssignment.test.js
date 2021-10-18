@@ -9,7 +9,7 @@ describe('automatic assignment', () => {
   const molecule = OCL.Molecule.fromMolfile(molfile);
   it('simple assignment', async () => {
     let result = await autoAssignment(molecule, {
-      unassigned: 0,
+      nbAllowedUnAssigned: 0,
       justAssign: ['H'],
       correlations: correlationData,
       minScore: 0.1,
@@ -41,10 +41,10 @@ describe('automatic assignment', () => {
         score: 0.9166666666666667,
       },
     ]);
-  });
+  }, 50000);
   it('simple assignment carbon', async () => {
     let result = await autoAssignment(molecule, {
-      unassigned: 1,
+      nbAllowedUnAssigned: 1,
       justAssign: ['C'],
       correlations: correlationData,
       minScore: 0.1,
@@ -78,5 +78,5 @@ describe('automatic assignment', () => {
         score: 0.4014945600794756,
       },
     ]);
-  });
+  }, 50000);
 });
