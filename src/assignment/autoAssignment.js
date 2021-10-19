@@ -1,6 +1,6 @@
 import { addDiastereotopicMissingChirality } from 'openchemlib-utils';
 
-import { buildAssignment } from './utils/buildAssignment2';
+import { buildAssignment } from './utils/buildAssignment';
 import { formatCorrelations } from './utils/formatCorrelations';
 import getWorkFlow from './utils/getWorkFlow';
 
@@ -29,26 +29,16 @@ export async function autoAssignment(molecule, props = {}) {
   } = restrictionByCS;
 
   if (!molecule) throw new Error('It is needed a molecule to assign');
-  if (!correlations) throw new Error('It is needed the target signals to assign');
+  if (!correlations) {
+    throw new Error('It is needed the target signals to assign');
+  }
 
-  // molecule = molecule.getCompactCopy();
   molecule.addImplicitHydrogens();
   addDiastereotopicMissingChirality(molecule);
 
   const { assignmentOrder } = getWorkFlow(correlations, justAssign);
   const { targets, correlations: correlationsWithIndirectLinks } =
     formatCorrelations(correlations);
-
-    /**
-     * diaIDPeerPossibleAssignment,
-    nbAllowedUnAssigned,
-    atomTypes,
-    restrictionByCS,
-    predictions,
-    targets,
-    correlations,
-     */
-
   const solutions = await buildAssignment({
     restrictionByCS: {
       tolerance,
