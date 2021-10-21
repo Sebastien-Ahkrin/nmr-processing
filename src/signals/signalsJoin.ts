@@ -95,7 +95,7 @@ export function signalsJoin(
       nbAtoms: sum(group.map((item) => item.nbAtoms || 0)),
       delta: mean(group.map((item) => item.delta)),
       diaIDs: group[0].diaIDs,
-      atomIDs: group.map((item) => item.atomIDs || []).flat(),
+      atoms: group.map((item) => item.atoms || []).flat(),
       js,
     };
 

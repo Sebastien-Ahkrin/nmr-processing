@@ -1,10 +1,11 @@
-import type { Jcoupling } from './jcoupling';
-import { GSDPeak } from './ml-gsd/index.d';
+import type { GSDPeak } from 'ml-gsd';
 
-interface NMRSignal1D {
+import type { Jcoupling } from './jcoupling';
+
+export interface NMRSignal1D {
   delta: number;
   js?: Jcoupling[];
-  atomIDs?: number[];
+  atoms?: number[];
   assignment?: string;
   kind?: string;
   multiplicity?: string;

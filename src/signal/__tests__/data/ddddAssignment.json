@@ -1,11 +1,11 @@
 {
-  "atomIDs": [8],
+  "atoms": [8],
   "nbAtoms": 1,
   "delta": 7.26,
   "js": [
-    { "coupling": 7, "atomIDs": [10], "multiplicity": "d" },
-    { "coupling": 7.001, "atomIDs": [9], "multiplicity": "d" },
-    { "coupling": 8, "atomIDs": [14], "multiplicity": "d" },
-    { "coupling": 9, "atomIDs": [13], "multiplicity": "d" }
+    { "coupling": 7, "atoms": [10], "multiplicity": "d" },
+    { "coupling": 7.001, "atoms": [9], "multiplicity": "d" },
+    { "coupling": 8, "atoms": [14], "multiplicity": "d" },
+    { "coupling": 9, "atoms": [13], "multiplicity": "d" }
   ]
 }

@@ -1,10 +1,10 @@
 import rescale from 'ml-array-rescale';
 import arraySequentialFill from 'ml-array-sequential-fill';
-import type { Shape1DOption } from 'spectrum-generator';
+import type { Shape1DOptions } from 'spectrum-generator';
 
-import { MakeMandatory } from '../types/MakeMandatory';
+import type { MakeMandatory } from '../types/MakeMandatory';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
-import { Jcoupling } from '../types/jcoupling';
+import type { Jcoupling } from '../types/jcoupling';
 
 import { signalsToSpinSystem } from './simulation/signalsToSpinSystem';
 import simulate1D from './simulation/simulate1D';
@@ -25,7 +25,7 @@ export interface OptionsSignalsToXY {
   /**
    * Shape options for ml-spectrum-generator
    */
-  shape?: Shape1DOption;
+  shape?: Shape1DOptions;
   /**
    * The linewidth of the output spectrum, expresed in Hz.
    * @default 1
@@ -49,7 +49,7 @@ export interface OptionsSignalsToXY {
 }
 
 type JcouplingFromPrediction = MakeMandatory<Jcoupling, 'distance'>;
-type Signal1DWidthAtomsIDsAndDiaID = MakeMandatory<NMRSignal1D, 'atomIDs'>;
+type Signal1DWidthAtomsIDsAndDiaID = MakeMandatory<NMRSignal1D, 'atoms'>;
 type Signal1DWidthJsAndDiaID = Omit<Signal1DWidthAtomsIDsAndDiaID, 'js'> & {
   js: JcouplingFromPrediction[];
 };
@@ -60,10 +60,10 @@ function checkForMandatory(
   for (const signal of signals) {
     if (!signal.js) throw new Error('There is not js');
     // if (!signal.diaID) throw new Error('There is not diaID');
-    if (!signal.atomIDs) throw new Error('There is not atomIDs');
+    if (!signal.atoms) throw new Error('There is not atoms');
     for (const j of signal.js) {
       // if (!j.diaID) throw new Error('There is not diaID');
-      if (!j.atomIDs) throw new Error('There is not atomIDs');
+      if (!j.atoms) throw new Error('There is not atoms');
     }
   }
 }

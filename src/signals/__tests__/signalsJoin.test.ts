@@ -13,7 +13,7 @@ test('signalsJoin', () => {
       delta: 3.25,
       diaIDs: ['D'],
       multiplicity: 'dd',
-      atomIDs: [],
+      atoms: [],
       assignment: 'a b',
       js: [
         { diaIDs: ['A'], distance: 3, multiplicity: 'd', coupling: 3 },
@@ -25,7 +25,7 @@ test('signalsJoin', () => {
       delta: 3.5,
       diaIDs: ['X'],
       multiplicity: 't',
-      atomIDs: [],
+      atoms: [],
       js: [
         {
           multiplicity: 't',

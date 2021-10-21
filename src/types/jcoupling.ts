@@ -1,6 +1,6 @@
 export interface Jcoupling {
   coupling: number;
-  atomIDs?: number[];
+  atoms?: number[];
   assignment?: string | string[];
   diaIDs?: string[];
   multiplicity?: string;

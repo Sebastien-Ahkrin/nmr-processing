@@ -7,7 +7,7 @@ import { determineRealTop } from '../peaks/util/determineRealTop';
 import { getKernel } from '../peaks/util/getKernel';
 import type { GetKernelOptions } from '../peaks/util/getKernel';
 import * as PeakOptimizer from '../peaks/util/peakOptimizer';
-import { MPFPeak } from '../types/MPFPeak';
+import type { MPFPeak } from '../types/MPFPeak';
 import type { NMRSignal2D } from '../types/NMRSignal2D';
 
 const smallFilter = [

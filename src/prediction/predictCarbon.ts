@@ -2,10 +2,10 @@ import fetch from 'cross-fetch';
 import type { Molecule } from 'openchemlib';
 
 import { signalsToRanges } from '../signals/signalsToRanges';
-import { MakeMandatory } from '../types/MakeMandatory';
-import { NMRSignal1D } from '../types/NMRSignal1D';
+import type { MakeMandatory } from '../types/MakeMandatory';
+import type { NMRSignal1D } from '../types/NMRSignal1D';
 import type { DataBaseStructure } from '../types/dataStructure';
-import { Prediction1D } from '../types/prediction1D';
+import type { Prediction1D } from '../types/prediction1D';
 
 import { fetchPrediction } from './utils/fetchPrediction';
 import { flatGroupedDiaIDs } from './utils/flatGroupedDiaIDs';
@@ -52,12 +52,12 @@ export type PredictCarbon = typeof predictCarbon;
 
 type Signal1DFromPrediction = MakeMandatory<
   NMRSignal1D,
-  'nbAtoms' | 'atomIDs' | 'diaIDs'
+  'nbAtoms' | 'atoms' | 'diaIDs'
 >;
 function checkFromPrediction(
   signal: NMRSignal1D,
 ): asserts signal is Signal1DFromPrediction {
-  if (!signal.atomIDs) throw new Error('There is not atomIDs');
+  if (!signal.atoms) throw new Error('There is not atoms');
   if (!signal.diaIDs) throw new Error('There is not diaIDs');
   if (!signal.nbAtoms) throw new Error('There is not nbAtoms');
 }
@@ -115,10 +115,10 @@ export async function predictCarbon(
 function formatSignals(predictions: Prediction[]) {
   let signals = [];
   for (const prediction of predictions) {
-    const { atomIDs, nbAtoms, delta, diaIDs, statistic } = prediction;
+    const { atoms, nbAtoms, delta, diaIDs, statistic } = prediction;
     const signal = {
       delta: delta || NaN,
-      atomIDs,
+      atoms,
       diaIDs: diaIDs,
       multiplicity: 's',
       nbAtoms,
@@ -141,7 +141,7 @@ function joinSignalByDiaID(signals: NMRSignal1D[]) {
       ) as Signal1DFromPrediction;
     } else {
       joinedSignals[diaID].nbAtoms += signal.nbAtoms;
-      joinedSignals[diaID].atomIDs.push(...signal.atomIDs);
+      joinedSignals[diaID].atoms.push(...signal.atoms);
     }
   }
   return Object.values(joinedSignals);

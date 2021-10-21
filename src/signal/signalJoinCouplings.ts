@@ -1,8 +1,8 @@
 import sum from 'ml-array-sum';
 
 import type { MakeMandatory } from '../types/MakeMandatory';
-import { NMRSignal1D } from '../types/NMRSignal1D';
-import { Jcoupling } from '../types/jcoupling';
+import type { NMRSignal1D } from '../types/NMRSignal1D';
+import type { Jcoupling } from '../types/jcoupling';
 import { joinPatterns } from '../utilities/joinPatterns';
 
 export interface SignalJoinCouplingsOptions {
@@ -89,10 +89,10 @@ function groupJCouplings(
   signal.js = [];
   for (let group of groups) {
     let coupling = sum(group.map((group) => group.coupling)) / group.length;
-    let atomIDs = distinctValues(
+    let atoms = distinctValues(
       group
-        .filter((group) => group.atomIDs)
-        .map((group) => group.atomIDs)
+        .filter((group) => group.atoms)
+        .map((group) => group.atoms)
         .flat() as number[],
     ) as number[];
 
@@ -128,7 +128,7 @@ function groupJCouplings(
     if (diaIDs.length === 1) newJ.diaIDs = diaIDs;
     if (distances.length === 1 && distances[0]) newJ.distance = distances[0];
     if (assignment.length > 0) newJ.assignment = assignment;
-    if (atomIDs.length > 0) newJ.atomIDs = atomIDs;
+    if (atoms.length > 0) newJ.atoms = atoms;
     signal.js.push(newJ);
   }
   return signal;

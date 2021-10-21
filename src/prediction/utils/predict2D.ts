@@ -110,8 +110,9 @@ type PredictHMBCOptionsWithFromTo = MakeMandatory<
 function checkFromTo(
   options: Predict2DOptions,
 ): asserts options is PredictHMBCOptionsWithFromTo {
-  if (!options.from || !options.to)
-    {throw new Error('options from and to are mandatory');}
+  if (!options.from || !options.to) {
+    throw new Error('options from and to are mandatory');
+  }
 }
 
 interface Signal1DByDiaID {
@@ -174,8 +175,9 @@ export async function predict2D(
           predictions,
         );
 
-  if (!xPrediction || !yPrediction)
-    {throw new Error('predictions are not availaible');}
+  if (!xPrediction || !yPrediction) {
+    throw new Error('predictions are not availaible');
+  }
 
   const spectra: { [key: string]: Prediction1D } = {
     x: xPrediction,
@@ -222,7 +224,7 @@ export async function predict2D(
         peak[axis] = signalsByDiaID[axis][diaID].delta;
         signal[axis].delta = signalsByDiaID[axis][diaID].delta;
         signal[axis].diaIDs = [diaID];
-        signal[axis].atoms = signalsByDiaID[axis][diaID].atomIDs;
+        signal[axis].atoms = signalsByDiaID[axis][diaID].atoms;
       }
 
       signal.peaks = [peak];
@@ -251,11 +253,11 @@ export async function predict2D(
 function splitSignals(joinedSignals: NMRSignal2D[]) {
   let signals = [];
   for (const signal of joinedSignals) {
-    for (const xAtom of signal.x.atomIDs || []) {
-      for (const yAtom of signal.y.atomIDs || []) {
+    for (const xAtom of signal.x.atoms || []) {
+      for (const yAtom of signal.y.atoms || []) {
         let newSignal = JSON.parse(JSON.stringify(signal));
-        newSignal.x.atomIDs = [xAtom];
-        newSignal.y.atomIDs = [yAtom];
+        newSignal.x.atoms = [xAtom];
+        newSignal.y.atoms = [yAtom];
         signals.push(newSignal);
       }
     }
@@ -286,7 +288,7 @@ function addSelftCorrelation(
       peak[axis] = signalsByDiaID[axis][diaID].delta;
       signal[axis].delta = signalsByDiaID[axis][diaID].delta;
       signal[axis].diaIDs = [diaID];
-      signal[axis].atoms = signalsByDiaID[axis][diaID].atomIDs;
+      signal[axis].atoms = signalsByDiaID[axis][diaID].atoms;
     }
 
     signal.peaks = [peak];

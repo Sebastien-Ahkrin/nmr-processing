@@ -85,7 +85,7 @@ function protonParser(
     let couplings = fields.slice(4);
     let atom = Number(fields[0]) - 1;
     let signal: NMRSignal1D = {
-      atomIDs: [atom],
+      atoms: [atom],
       diaIDs: [diaIDs[atom]],
       nbAtoms: 1,
       delta: Number(fields[2]),
@@ -99,7 +99,7 @@ function protonParser(
       let linked = Number(couplings[i]) - 1;
       signal.js.push({
         coupling: Number(couplings[i + 2]),
-        atomIDs: [linked],
+        atoms: [linked],
         diaIDs: [diaIDs[linked]],
         multiplicity: 'd',
         distance: distanceMatrix[atom][linked],

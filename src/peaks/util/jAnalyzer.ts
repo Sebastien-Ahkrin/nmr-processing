@@ -1,5 +1,5 @@
-import { MakeMandatory } from '../../types/MakeMandatory';
-import { NMRPeak1D } from '../../types/NMRPeak1D';
+import type { MakeMandatory } from '../../types/MakeMandatory';
+import type { NMRPeak1D } from '../../types/NMRPeak1D';
 
 /*
  * This library implements the J analyser described by Cobas et al in the paper:

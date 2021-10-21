@@ -2,8 +2,8 @@ import type { DataXY } from 'cheminfo-types';
 import type { GSDPeak } from 'ml-gsd';
 import { xyIntegration } from 'ml-spectra-processing';
 
-import { MakeMandatory } from '../types/MakeMandatory';
-import { NMRPeak1D } from '../types/NMRPeak1D';
+import type { MakeMandatory } from '../types/MakeMandatory';
+import type { NMRPeak1D } from '../types/NMRPeak1D';
 import type { NMRRange } from '../types/NMRRange';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
 

@@ -5,9 +5,9 @@ import { join } from 'path';
 import md5 from 'md5';
 import OCL from 'openchemlib/minimal';
 
-import { MakeMandatory } from '../../types/MakeMandatory';
+import type { MakeMandatory } from '../../types/MakeMandatory';
 import type { NMRRange } from '../../types/NMRRange';
-import { NMRSignal1D } from '../../types/NMRSignal1D';
+import type { NMRSignal1D } from '../../types/NMRSignal1D';
 import { predictProton } from '../predictProton';
 
 const molfile = `Benzene, ethyl-, ID: C100414
@@ -75,35 +75,35 @@ describe('predictProton', () => {
     let firstSignal = prediction.signals[0];
 
     expect(firstSignal).toStrictEqual({
-      atomIDs: [8],
+      atoms: [8],
       diaIDs: ['did@`@f\\bbRaih@J@A~dHBIU@'],
       nbAtoms: 1,
       delta: 7.26,
       js: [
         {
           coupling: 7.758,
-          atomIDs: [10],
+          atoms: [10],
           diaIDs: ['did@`@fTfYUn`HH@GzP`HeT'],
           multiplicity: 'd',
           distance: 3,
         },
         {
           coupling: 7.718,
-          atomIDs: [9],
+          atoms: [9],
           diaIDs: ['did@`@fTfUvf`@h@GzP`HeT'],
           multiplicity: 'd',
           distance: 3,
         },
         {
           coupling: 1.596,
-          atomIDs: [14],
+          atoms: [14],
           diaIDs: ['did@`@f\\bbRaih@J@A~dHBIU@'],
           multiplicity: 'd',
           distance: 4,
         },
         {
           coupling: 0.507,
-          atomIDs: [13],
+          atoms: [13],
           diaIDs: ['did@`@fTfYUn`HH@GzP`HeT'],
           multiplicity: 'd',
           distance: 5,
@@ -116,7 +116,7 @@ describe('predictProton', () => {
       delta: 0.992,
       multiplicity: 't',
       diaIDs: ['did@`@fTeYWaj@@@GzP`HeT'],
-      atomIDs: [15, 16, 17],
+      atoms: [15, 16, 17],
       js: [
         {
           coupling: 7.392,

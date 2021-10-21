@@ -1,4 +1,4 @@
-import { MakeMandatory } from '../types/MakeMandatory';
+import type { MakeMandatory } from '../types/MakeMandatory';
 import type { NMRRange } from '../types/NMRRange';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
 import { rangeFromSignal } from '../utilities/rangeFromSignal';

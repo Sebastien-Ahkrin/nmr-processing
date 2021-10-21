@@ -1,6 +1,6 @@
 import { couplingPatterns } from '../constants/couplingPatterns';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
-import { Jcoupling } from '../types/jcoupling';
+import type { Jcoupling } from '../types/jcoupling';
 
 import { OptionsSignalsToXY, signalsToXY } from './signalsToXY';
 
@@ -16,7 +16,7 @@ export function hackSignalsToXY(
   let newSignals = JSON.parse(JSON.stringify(signals));
 
   signals.forEach((signal, s) => {
-    const { js: jCouplings = [], atomIDs: signalAssignment = [s] } = signal;
+    const { js: jCouplings = [], atoms: signalAssignment = [s] } = signal;
 
     let { newCouplings, tempSignals } = checkCouplings(
       jCouplings,
@@ -27,7 +27,7 @@ export function hackSignalsToXY(
     if (tempSignals.length > 0) newSignals.push(...tempSignals);
 
     newSignals[s].js = newCouplings;
-    newSignals[s].atomIDs = signalAssignment;
+    newSignals[s].atoms = signalAssignment;
   });
 
   return signalsToXY(newSignals, options);
@@ -42,8 +42,8 @@ function checkCouplings(
   let tempSignals: NMRSignal1D[] = [];
   const newCouplings = jCouplings.reduce<Jcoupling[]>(
     (newCouplings, jCoupling) => {
-      const { atomIDs = [], multiplicity, coupling } = jCoupling;
-      if (atomIDs.length === 0) {
+      const { atoms = [], multiplicity, coupling } = jCoupling;
+      if (atoms.length === 0) {
         if (coupling && multiplicity) {
           let tempCouplings: Jcoupling[] = [];
           const nbLinks = couplingPatterns.indexOf(multiplicity);
@@ -51,7 +51,7 @@ function checkCouplings(
             newSignalAssignment++;
             tempCouplings.push({
               coupling,
-              atomIDs: [newSignalAssignment],
+              atoms: [newSignalAssignment],
             });
             tempSignals.push(
               formatSignal(coupling, [newSignalAssignment], signalAssignment),
@@ -75,11 +75,11 @@ function formatSignal(
 ) {
   return {
     delta: 100000,
-    atomIDs: newSignalAssignment,
+    atoms: newSignalAssignment,
     js: [
       {
         coupling,
-        atomIDs: signalAssignment,
+        atoms: signalAssignment,
       },
     ],
   };

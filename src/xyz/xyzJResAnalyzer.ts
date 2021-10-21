@@ -2,8 +2,8 @@ import simpleClustering from 'ml-simple-clustering';
 
 import type { JAxisKeys } from '../peaks/util/jAnalyzer';
 import jAnalyzer from '../peaks/util/jAnalyzer';
-import { MPFPeak } from '../types/MPFPeak';
-import { MakeMandatory } from '../types/MakeMandatory';
+import type { MPFPeak } from '../types/MPFPeak';
+import type { MakeMandatory } from '../types/MakeMandatory';
 import type { NMRSignal2D } from '../types/NMRSignal2D';
 
 interface CompilePatternOptions {

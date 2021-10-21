@@ -5,7 +5,7 @@ import type { GroupedDiaIDsWithHose } from './getFilteredIDiaIDs';
 export interface Prediction {
   diaIDs: string[];
   delta: number | null;
-  atomIDs: number[];
+  atoms: number[];
   nbAtoms: number;
   level: number | null;
   statistic?: {
@@ -38,7 +38,7 @@ export function queryByHose(
       let atom = {
         diaIDs: [element.oclID],
         delta: res ? res[0]: null,
-        atomIDs: [atomNumber],
+        atoms: [atomNumber],
         nbAtoms: 1,
         level: level,
         statistic:

@@ -51,7 +51,6 @@ export function signals2DToZ(
   );
 
   width = ensureXYNumber(width);
-
   return generateSpectrum2D(peaks, {
     generator: {
       from: ensureXYNumber(from),

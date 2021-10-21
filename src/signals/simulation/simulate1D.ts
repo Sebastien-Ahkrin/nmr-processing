@@ -3,9 +3,9 @@ import { Matrix, EVD } from 'ml-matrix';
 import type { Matrix as MatrixClassType } from 'ml-matrix';
 import { SparseMatrix } from 'ml-sparse-matrix';
 import { SpectrumGenerator } from 'spectrum-generator';
-import type { Shape1DOption } from 'spectrum-generator';
+import type { Shape1DOptions } from 'spectrum-generator';
 
-import { SpinSystem } from '../../types/spinSystem';
+import type { SpinSystem } from '../../types/spinSystem';
 
 import getPauliMatrix from './getPauliMatrix';
 
@@ -46,7 +46,7 @@ interface Simulate1DOptions {
    * Shape options
    * @default {kind:'gaussian'}
    */
-  shape?: Shape1DOption;
+  shape?: Shape1DOptions;
 }
 
 /**

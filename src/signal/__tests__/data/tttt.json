@@ -1,7 +1,7 @@
 {
   "nbAtoms": 1,
   "delta": 3,
-  "atomIDs": [2],
+  "atoms": [2],
   "diaIDs": ["C"],
   "js": [
     {

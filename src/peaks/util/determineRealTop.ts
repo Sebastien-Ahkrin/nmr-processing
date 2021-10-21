@@ -1,7 +1,7 @@
 import LM from 'ml-levenberg-marquardt';
 import { gaussian2D } from 'ml-peak-shape-generator';
 
-import { MPFPeak } from '../../types/MPFPeak';
+import type { MPFPeak } from '../../types/MPFPeak';
 
 const { fct: gaussian2DFct } = gaussian2D;
 

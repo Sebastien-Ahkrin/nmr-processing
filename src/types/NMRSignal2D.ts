@@ -4,7 +4,7 @@ export interface Signal2DAxisData {
   nucleus?: string;
   delta: number;
   resolution?: number;
-  atomIDs?: number[];
+  atoms?: number[];
   diaIDs?: string[];
   fromTo?: {
     from: number;

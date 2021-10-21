@@ -1,4 +1,4 @@
-import { NMRSignal2D } from "./NMRSignal2D";
+import type { NMRSignal2D } from "./NMRSignal2D";
 
 interface fromTo { from: number, to: number }
 
