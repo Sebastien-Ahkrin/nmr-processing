@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.3.1](https://www.github.com/cheminfo/nmr-processing/compare/v3.3.0...v3.3.1) (2021-10-21)
+
+
+### Bug Fixes
+
+* rename atomIDs to atoms ([#109](https://www.github.com/cheminfo/nmr-processing/issues/109)) ([fad2415](https://www.github.com/cheminfo/nmr-processing/commit/fad241592d564471048f21731dded47ad4609371))
+
 ## [3.3.0](https://www.github.com/cheminfo/nmr-processing/compare/v3.2.0...v3.3.0) (2021-10-12)
 
 
