@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.3.2](https://www.github.com/cheminfo/nmr-processing/compare/v3.3.1...v3.3.2) (2021-10-22)
+
+
+### Bug Fixes
+
+* add kind at NMRSignal2D interface ([c050336](https://www.github.com/cheminfo/nmr-processing/commit/c050336982c5073bdad5f2448bf5396d663ed1bd))
+
 ### [3.3.1](https://www.github.com/cheminfo/nmr-processing/compare/v3.3.0...v3.3.1) (2021-10-21)
 
 
