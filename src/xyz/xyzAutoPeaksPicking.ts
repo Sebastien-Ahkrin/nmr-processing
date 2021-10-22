@@ -1,3 +1,4 @@
+import { writeFileSync } from 'fs';
 import { Matrix } from 'ml-matrix';
 import * as convolution from 'ml-matrix-convolution';
 import * as matrixPeakFinders from 'ml-matrix-peaks-finder';
@@ -92,7 +93,7 @@ export function xyzAutoPeaksPicking(
 ) {
   let {
     sizeToPad = 14,
-    realTopDetection = true,
+    realTopDetection = false,
     thresholdFactor = 0.5,
     nuclei = ['1H', '1H'],
     observedFrequencies,
@@ -135,7 +136,7 @@ export function xyzAutoPeaksPicking(
   }
 
   const kernel = kernelOptions ? getKernel(kernelOptions) : smallFilter;
-
+  console.log('smallkernel.json', JSON.stringify(kernel))
   let convolutedSpectrum = convolutionByFFT
     ? convolution.fft(absoluteData, kernel, {
         rows: nbSubSpectra,
@@ -146,6 +147,17 @@ export function xyzAutoPeaksPicking(
         cols: nbPoints,
       });
 
+  const splitAbs = (absoluteData: any, nbPoints: any) => {
+    let matrix = [];
+    let copy = Array.from(absoluteData);
+    console.log(copy.length);
+    for (; copy.length > 0;) {
+      matrix.push(copy.splice(0, nbPoints));
+    }
+    return matrix;
+  }
+  writeFileSync('absolute.json', JSON.stringify(splitAbs(absoluteData, nbPoints)))
+  writeFileSync('convoluted.json', JSON.stringify(splitAbs(convolutedSpectrum, nbPoints)))
   let peaksMC1 = matrixPeakFinders.findPeaks2DRegion(absoluteData, {
     originalData,
     filteredData: convolutedSpectrum,
@@ -153,8 +165,8 @@ export function xyzAutoPeaksPicking(
     cols: nbPoints,
     nStdDev: thresholdFactor,
   });
-
-  if (clean) {
+  console.log('peaks', peaksMC1)
+  if (clean && false) {
     // Remove peaks with less than x% of the intensity of the highest peak
     peaksMC1 = PeakOptimizer.clean(peaksMC1, maxPercentCutOff);
   }

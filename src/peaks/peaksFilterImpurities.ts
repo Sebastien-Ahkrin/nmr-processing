@@ -17,7 +17,7 @@ export interface OptionsPeaksFilterImpurities {
    */
   error?: number;
   /**
-   * If it is true, it remove the peaks otherwise it assigns the kind of the signal with the name of the impurity
+   * If it is true, it remove the peaks, otherwise it assigns the kind of the signal with the name of the impurity
    * @default false
    */
   remove?: boolean;
