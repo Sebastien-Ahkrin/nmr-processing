@@ -18,6 +18,7 @@ export function formatCorrelations(correlations) {
   //formatting correlation by atomType
   const targets = {};
   for (const correlation of correlations) {
+    if (correlation.pseudo) continue;
     const { signal, atomType } = correlation;
     if (!targets[atomType]) targets[atomType] = {};
     targets[atomType][signal.id] = correlation;

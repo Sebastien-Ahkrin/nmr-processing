@@ -4,7 +4,7 @@ function groupCarbonTargetByIntegrationZone(
   correlations,
 ) {
   let targetID = activeDomainOnTarget[0];
-
+  console.log(targetID)
   let { H: attachments = [] } = targets[targetID].attachment;
 
   let targetByIntegral = [

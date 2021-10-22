@@ -35,8 +35,10 @@ export function partialScore(partial, props) {
   const getPredictionByDiaID = getPrediction.bind({}, predictions);
   // check the integration
   const targetByIntegral = [];
+  console.log(atomTypes)
   for (const atomType of atomTypes) {
     if (atomType === 'C') {
+      console.log(partial)
       targetByIntegral.push(
         ...groupCarbonTargetByIntegrationZone(
           activeDomainOnTarget,
