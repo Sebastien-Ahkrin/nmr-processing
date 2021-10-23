@@ -59,7 +59,7 @@ export async function buildAssignment(props) {
       const { joinedSignals } = await predictor[atomType](molecule, options);
       if (!predictions[atomType]) predictions[atomType] = {};
       for (let prediction of joinedSignals) {
-        // console.log(prediction)
+        // @TODO: REFACTOR it could be missed if the CS is not a requirement
         const diaID = prediction.diaIDs[0];
         const index = prediction.atomIDs[0];
         const allHydrogens = getAllHydrogens[atomType](molecule, index);
@@ -82,7 +82,7 @@ export async function buildAssignment(props) {
 
     const diaIDPeerPossibleAssignment = Object.keys(possibleAssignmentMap);
 
-    let sourceOfPartials = getSourceOfPartial(store, nSources);
+    let sourceOfPartials = getSourceOfPartial(store, nSources, predictionIndex);
 
     store = {
       solutions: new treeSet(comparator),
@@ -120,29 +120,22 @@ export async function buildAssignment(props) {
   return store;
 }
 
-function getSourceOfPartial(store, nSources) {
+function getSourceOfPartial(store, nSources, index) {
   return store.nSolutions > 0
     ? store.solutions.elements.map((e) =>
-        initializePartial(nSources, e.assignment),
+        initializePartial(nSources, index, e.assignment),
       )
-    : [initializePartial(nSources)];
+    : [
+        initializePartial(
+          nSources,
+          initializePartial(index, [], '*'),
+        ),
+      ];
 }
 
-function initializePartial(nSources, partial = []) {
-  for (let index = partial.length; index < nSources; index++) {
-    partial.push(null);
+function initializePartial(nSources, partial = [], value = null) {
+  for (let i = partial.length; i < nSources; i++) {
+    partial.push(value);
   }
   return partial;
 }
-
-// function mergeSolutions(solution, store, maxSolutions) {
-//   if (store.nSolutions >= maxSolutions) {
-//     if (solution.score > store.solutions.last().score) {
-//       store.solutions.pollLast();
-//       store.solutions.add(solution);
-//     }
-//   } else {
-//     store.solutions.add(solution);
-//     store.nSolutions++;
-//   }
-// }

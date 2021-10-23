@@ -10,10 +10,10 @@ export function createMapPossibleAssignment(expandMap, props) {
     let predictionByAtomType = predictions[atomType];
     let targetByAtomType = targets[atomType];
 
-    for (const predictionID in predictionByAtomType) {
-      let prediction = predictionByAtomType[predictionID];
+    for (const diaID in predictionByAtomType) {
+      let prediction = predictionByAtomType[diaID];
       prediction.error = Math.abs(prediction.error);
-      expandMap[predictionID] = [];
+      expandMap[diaID] = [];
 
       if (targetByAtomType) {
         for (const targetID in targetByAtomType) {
@@ -37,26 +37,26 @@ export function createMapPossibleAssignment(expandMap, props) {
               typeof prediction.delta === 'undefined'
             ) {
               // Chemical shift is not a restriction
-              expandMap[predictionID].push(targetID);
+              expandMap[diaID].push(targetID);
             } else {
               let error = errorAbs;
               if (prediction.error) {
                 error = Math.max(error, prediction.error);
               }
               // console.log(
-              //   `error ${error}, errorAbs ${target.signal.delta} predict delta ${prediction.delta} targetID ${targetID} predID ${predictionID}`,
+              //   `error ${error}, errorAbs ${target.signal.delta} predict delta ${prediction.delta} targetID ${targetID} predID ${diaID}`,
               // );
               let distAfterLimit = Math.abs(
                 prediction.delta - target.signal.delta - errorAbs,
               );
               if (distAfterLimit < 4 * errorAbs) {
-                expandMap[predictionID].push(targetID);
+                expandMap[diaID].push(targetID);
               }
             }
           }
         }
       }
-      expandMap[predictionID].push('*');
+      expandMap[diaID].push('*');
     }
   }
   return expandMap;

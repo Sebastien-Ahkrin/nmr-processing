@@ -12,7 +12,8 @@ export function partialScore(partial, props) {
   } = props;
 
   const { tolerance: toleranceCS, useChemicalShiftScore } = restrictionByCS;
-
+  console.log(atomTypes);
+  console.log(partial);
   let partialInverse = {};
   let activeDomainOnPrediction = [];
   let countStars = 0;
@@ -35,10 +36,9 @@ export function partialScore(partial, props) {
   const getPredictionByDiaID = getPrediction.bind({}, predictions);
   // check the integration
   const targetByIntegral = [];
-  console.log(atomTypes)
   for (const atomType of atomTypes) {
     if (atomType === 'C') {
-      console.log(partial)
+      console.log(activeDomainOnTarget);
       targetByIntegral.push(
         ...groupCarbonTargetByIntegrationZone(
           activeDomainOnTarget,
@@ -57,7 +57,6 @@ export function partialScore(partial, props) {
       }
     }
   }
-
   for (const group of targetByIntegral) {
     const { integration } = group;
 
@@ -159,6 +158,7 @@ export function partialScore(partial, props) {
       sumAnd /
       ((activeDomainOnTarget.length * (activeDomainOnTarget.length - 1)) / 2);
   }
+  console.log(chemicalShiftScore, scoreOn2D);
   const penaltyByStarts = countStars / partial.length;
   if (chemicalShiftScore === 0) return scoreOn2D - penaltyByStarts;
 
