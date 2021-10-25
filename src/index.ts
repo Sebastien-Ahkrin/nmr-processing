@@ -36,3 +36,16 @@ export * from './xyz/xyzJResAnalyzer';
 export * from './databases/getDatabase';
 export * from './databases/carbonImpurities';
 export * from './databases/protonImpurities';
+
+export type { NMRSignal1D } from './types/NMRSignal1D';
+export type { NMRSignal2D } from './types/NMRSignal2D';
+export type { NMRRange } from './types/NMRRange';
+export type { NMRZone } from './types/NMRZone';
+export type { XYNumberArray } from './types/XYNumberArray';
+export type { NMRPeak1D } from './types/NMRPeak1D';
+export type { Prediction1D } from './types/prediction1D';
+export type { Jcoupling } from './types/jcoupling';
+export type {
+  DataBaseLevelStructure,
+  DataBaseStructure,
+} from './types/dataStructure';
