@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.3.3](https://www.github.com/cheminfo/nmr-processing/compare/v3.3.2...v3.3.3) (2021-10-25)
+
+
+### Bug Fixes
+
+* export types ([9fea894](https://www.github.com/cheminfo/nmr-processing/commit/9fea894028e864e021bfa20b9a48be1e30aff8c2))
+
 ### [3.3.2](https://www.github.com/cheminfo/nmr-processing/compare/v3.3.1...v3.3.2) (2021-10-22)
 
 
