@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.3.4](https://www.github.com/cheminfo/nmr-processing/compare/v3.3.3...v3.3.4) (2021-10-26)
+
+
+### Bug Fixes
+
+* use NMRPeak1D type ([b6d1b4d](https://www.github.com/cheminfo/nmr-processing/commit/b6d1b4d94f85f349bb88e14a419e77911d2621d1))
+
 ### [3.3.3](https://www.github.com/cheminfo/nmr-processing/compare/v3.3.2...v3.3.3) (2021-10-25)
 
 
