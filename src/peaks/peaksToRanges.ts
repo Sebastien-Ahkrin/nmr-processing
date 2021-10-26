@@ -1,5 +1,4 @@
 import type { DataXY } from 'cheminfo-types';
-import type { GSDPeak } from 'ml-gsd';
 import { xyIntegration } from 'ml-spectra-processing';
 
 import type { MakeMandatory } from '../types/MakeMandatory';
@@ -251,7 +250,7 @@ export function peaksToRanges(
           ...peak,
         };
         delete newResult.intensity;
-        return newResult as GSDPeak;
+        return newResult as NMRPeak1D;
       });
     }
     if (signal.nmrJs) {

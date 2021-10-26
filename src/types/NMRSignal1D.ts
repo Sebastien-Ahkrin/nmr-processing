@@ -1,5 +1,4 @@
-import type { GSDPeak } from 'ml-gsd';
-
+import type { NMRPeak1D } from './NMRPeak1D';
 import type { Jcoupling } from './jcoupling';
 
 export interface NMRSignal1D {
@@ -12,7 +11,7 @@ export interface NMRSignal1D {
   diaIDs?: string[];
   nbAtoms?: number;
   integration?: number;
-  peaks?: GSDPeak[];
+  peaks?: NMRPeak1D[];
   statistic?: {
     mean: number;
     sd: number;
