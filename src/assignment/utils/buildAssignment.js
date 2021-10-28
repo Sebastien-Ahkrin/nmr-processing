@@ -45,10 +45,8 @@ export async function buildAssignment(props) {
     pathLength: true,
   });
 
-  let atomTypes = [];
-  let nSourcesByAtomtype = {};
+  let infoByAtomType = {};
   const predictions = {};
-  let predictionIndex = 0;
   let possibleAssignmentMap = {};
 
   // console.log('assignmentOrder', assignmentOrder)
@@ -70,7 +68,10 @@ export async function buildAssignment(props) {
           pathLength: pathLengthMatrix[index],
         };
       }
-      nSourcesByAtomtype[atomType] = joinedSignals.length;
+      infoByAtomType[atomType] = {
+        nSources: joinedSignals.length,
+        currentIndex: 0,
+      };
     }
 
     createMapPossibleAssignment(possibleAssignmentMap, {
@@ -84,21 +85,21 @@ export async function buildAssignment(props) {
       diaIDPeerPossibleAssignment[atomType] = Object.keys(possibleAssignmentMap[atomType]);
     }
 
-    let sourceOfPartials = getSourceOfPartials(store, nSourcesByAtomtype, atomTypesToPredict);
+    let sourceOfPartials = getSourceOfPartials(store, infoByAtomType, atomTypesToPredict);
 
     store = {
       solutions: new treeSet(comparator),
       nSolutions: 0,
     };
-
+    console.log('source', sourceOfPartials)
     let first = true;
     for (let partial of sourceOfPartials) {
-      if (!first) continue;
-      first = false;
+      // if (!first) continue;
+      // first = false;
       exploreTreeRec(
         {
-          atomTypesToPredict,
-          nSourcesByAtomtype,
+          first,
+          currentAtomTypes: atomTypesToPredict,
           restrictionByCS,
           timeout,
           timeStart,
@@ -111,32 +112,31 @@ export async function buildAssignment(props) {
           possibleAssignmentMap,
           diaIDPeerPossibleAssignment,
         },
-        predictionIndex,
+        infoByAtomType,
         partial,
         store,
       );
     }
-    predictionIndex = diaIDPeerPossibleAssignment.length;
   }
 
   return store;
 }
 
-function getSourceOfPartials(store, nSourcesByAtomtype, currentAtoms) {
+function getSourceOfPartials(store, infoByAtomType, currentAtoms) {
   return store.nSolutions > 0 ? store.solutions.elements.map((e) => {
     let currentAssignment = e.assignment;
     for (const atom of currentAtoms) {
-      currentAssignment[atom] = fillPartial(nSourcesByAtomtype[atom]);
+      currentAssignment[atom] = fillPartial(infoByAtomType[atom].nSources);
     }
     return currentAssignment;
-  }) : initializePartials(nSourcesByAtomtype, currentAtoms);
+  }) : initializePartials(infoByAtomType, currentAtoms);
 }
 
-function initializePartials(nSourcesByAtomtype, currentAtoms) {
+function initializePartials(infoByAtomType, currentAtoms) {
   const partial = {};
-  for (const atom in nSourcesByAtomtype) {
+  for (const atom in infoByAtomType) {
     const value = currentAtoms.includes(atom) ? null : '*';
-    partial[atom] = fillPartial(nSourcesByAtomtype[atom], value);
+    partial[atom] = fillPartial(infoByAtomType[atom].nSources, value);
   }
   return [partial]
 }

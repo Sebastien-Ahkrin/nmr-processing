@@ -4,7 +4,6 @@ export function partialScore(partial, props) {
   const {
     diaIDPeerPossibleAssignment,
     nbAllowedUnAssigned,
-    atomTypes,
     restrictionByCS,
     predictions,
     targets,
@@ -12,43 +11,60 @@ export function partialScore(partial, props) {
   } = props;
 
   const { tolerance: toleranceCS, useChemicalShiftScore } = restrictionByCS;
-  console.log(atomTypes);
-  console.log(partial);
-  let partialInverse = {};
-  let activeDomainOnPrediction = [];
   let countStars = 0;
-  for (let i = 0; i < partial.length; i++) {
-    const targetID = partial[i];
-    if (targetID && targetID !== '*') {
-      activeDomainOnPrediction.push(i);
-      if (!partialInverse[targetID]) partialInverse[targetID] = [];
-      partialInverse[targetID].push(diaIDPeerPossibleAssignment[i]);
+  let totalPartial = 0;
+  let partialInverse = {};
+  let activeDomainOnPrediction = {};
+  for (const atomType in partial) {
+    const currentPartialInverse = {};
+    partialInverse[atomType] = currentPartialInverse;
+    activeDomainOnPrediction[atomType] = [];
+    totalPartial += partial[atomType].length;
+    for (let i = 0; i < partial[atomType].length; i++) {
+      const targetID = partial[atomType][i];
+      if (targetID && targetID !== '*') {
+        activeDomainOnPrediction[atomType].push(i);
+        if (!currentPartialInverse[targetID]) {
+          currentPartialInverse[targetID] = [];
+        }
+        currentPartialInverse[targetID].push(
+          diaIDPeerPossibleAssignment[atomType][i],
+        );
+      }
+      if (targetID === '*') countStars++;
     }
-    if (targetID === '*') countStars++;
   }
-
   if (countStars > nbAllowedUnAssigned) return 0;
 
-  const activeDomainOnTarget = Object.keys(partialInverse);
+  const activeDomainOnTarget = {};
+  for (const atomType in partialInverse) {
+    activeDomainOnTarget[atomType] = Object.keys(partialInverse[atomType]);
+  }
 
-  if (activeDomainOnTarget.length === 0) return 0;
+  const valuesActiveDomainOnTarget = Object.values(activeDomainOnTarget);
+  if (
+    valuesActiveDomainOnTarget.reduce(
+      (sum, e) => (e.length === 0 ? sum + 1 : sum),
+      0,
+    ) === valuesActiveDomainOnTarget.length
+  ) {
+    return 0;
+  }
 
   const getPredictionByDiaID = getPrediction.bind({}, predictions);
   // check the integration
   const targetByIntegral = [];
-  for (const atomType of atomTypes) {
-    if (atomType === 'C') {
-      console.log(activeDomainOnTarget);
+  for (const atomType in partial) {
+    if (atomType === 'C' && activeDomainOnTarget[atomType].length > 0) {
       targetByIntegral.push(
         ...groupCarbonTargetByIntegrationZone(
-          activeDomainOnTarget,
+          activeDomainOnTarget[atomType],
           targets[atomType],
           correlations,
         ),
       );
     } else {
-      for (let targetID of activeDomainOnTarget) {
-        if (!targets.H[targetID]) continue;
+      for (let targetID of activeDomainOnTarget[atomType]) {
         targetByIntegral.push({
           atomType,
           targetIDs: [targetID],
@@ -58,16 +74,17 @@ export function partialScore(partial, props) {
     }
   }
   for (const group of targetByIntegral) {
-    const { integration } = group;
+    const { integration, atomType } = group;
 
     if (integration === undefined || isNaN(integration)) continue;
 
     let total = 0;
     for (let targetID of group.targetIDs) {
-      let targetToSource = partialInverse[targetID];
+      let targetToSource = partialInverse[atomType][targetID];
       for (const diaID of targetToSource) {
-        const { prediction, atomType } = getPredictionByDiaID(diaID);
-        if (atomType === group.atomType) total += prediction.allHydrogens;
+        const { prediction, atomType: atomOfPrediction } =
+          getPredictionByDiaID(diaID);
+        if (atomType === atomOfPrediction) total += prediction.allHydrogens;
       }
     }
     if (total - integration >= 0.5) {
@@ -81,59 +98,85 @@ export function partialScore(partial, props) {
   if (useChemicalShiftScore) {
     chemicalShiftScore = 0;
     count = 0;
-    partial.forEach((targetID, index) => {
-      if (targetID && targetID !== '*') {
-        count++;
-        let { atomType, prediction: source } = getPredictionByDiaID(
-          diaIDPeerPossibleAssignment[index],
-        );
-        let target = targets[atomType][targetID];
-        let error = toleranceCS;
-        if (source.error) {
-          error = Math.max(source.error, toleranceCS);
-        }
-        if (typeof source.delta === 'undefined') {
-          // Chemical shift is not a restriction
-          chemicalShiftScore += 1;
-        } else {
-          let diff = Math.abs(source.delta - target.signal.delta);
-          if (diff < error) {
-            //@TODO: check for a better discriminant
+    for (const atomType in partial) {
+      const partialPeerAtomType = partial[atomType];
+      for (let index = 0; index < partialPeerAtomType.length; index++) {
+        const targetID = partialPeerAtomType[index];
+        if (targetID && targetID !== '*') {
+          count++;
+          let diaID = diaIDPeerPossibleAssignment[atomType][index];
+          let source = predictions[atomType][diaID];
+          let target = targets[atomType][targetID];
+          let error = toleranceCS;
+          if (source.error) {
+            error = Math.max(source.error, toleranceCS);
+          }
+          if (typeof source.delta === 'undefined') {
+            // Chemical shift is not a restriction
             chemicalShiftScore += 1;
           } else {
-            diff = Math.abs(diff - error);
-            chemicalShiftScore += (-0.25 / error) * diff + 1;
+            let diff = Math.abs(source.delta - target.signal.delta);
+            if (diff < error) {
+              //@TODO: check for a better discriminant
+              chemicalShiftScore += 1;
+            } else {
+              diff = Math.abs(diff - error);
+              chemicalShiftScore += (-0.25 / error) * diff + 1;
+            }
           }
         }
       }
-    });
+    }
     if (count > 0) {
       chemicalShiftScore /= count;
     }
   }
 
   let scoreOn2D = 0;
-  if (activeDomainOnTarget.length > 1) {
+  // console.log(activeDomainOnTarget, howManyActived(activeDomainOnTarget));
+  if (howManyActived(activeDomainOnTarget) > 1) {
     let andConstrains = {};
-    for (let i = 0; i < activeDomainOnPrediction.length; i++) {
-      let { prediction: predictionI } = getPredictionByDiaID(
-        diaIDPeerPossibleAssignment[i],
+    let activeDomain = [];
+    // console.log(activeDomainOnPrediction);
+    for (const atomType in activeDomainOnPrediction) {
+      activeDomain = activeDomain.concat(
+        activeDomainOnPrediction[atomType].map((e) => ({ index: e, atomType })),
       );
-      for (let j = i + 1; j < activeDomainOnPrediction.length; j++) {
-        let { prediction: predictionJ } = getPredictionByDiaID(
-          diaIDPeerPossibleAssignment[j],
-        );
+    }
+    // console.log('activeDomain', activeDomain);
+    for (let i = 0; i < activeDomain.length; i++) {
+      const { atomType: atomTypeI, index: indexI } = activeDomain[i];
+      const predictionI =
+        predictions[atomTypeI][diaIDPeerPossibleAssignment[atomTypeI][indexI]];
+      for (let j = i + 1; j < activeDomain.length; j++) {
+        const { atomType: atomTypeJ, index: indexJ } = activeDomain[j];
+        const predictionJ =
+          predictions[atomTypeJ][
+            diaIDPeerPossibleAssignment[atomTypeJ][indexJ]
+          ];
         let pathLength = predictionI.pathLength[predictionJ.diaIDIndex];
         let isPossible = pathLength < 5;
 
-        let partialI = partial[activeDomainOnPrediction[i]];
-        let partialJ = partial[activeDomainOnPrediction[j]];
+        let partialI = partial[atomTypeI][indexI];
+        let partialJ = partial[atomTypeJ][indexJ];
         let keyOnTargerMap =
           partialI > partialJ
             ? `${partialJ} ${partialI}`
             : `${partialI} ${partialJ}`;
 
-        let areLinked = checkLinking(partialI, partialJ, atomTypes, targets);
+        let areLinked = checkLinking(
+          {
+            from: {
+              targetID: partialI,
+              atomType: atomTypeI,
+            },
+            to: {
+              targetID: partialJ,
+              atomType: atomTypeJ,
+            },
+          },
+          targets,
+        );
 
         let partialScore2D = isPossible
           ? areLinked
@@ -155,26 +198,23 @@ export function partialScore(partial, props) {
     }
 
     scoreOn2D =
-      sumAnd /
-      ((activeDomainOnTarget.length * (activeDomainOnTarget.length - 1)) / 2);
+      sumAnd / ((activeDomain.length * (activeDomain.length - 1)) / 2);
   }
-  console.log(chemicalShiftScore, scoreOn2D);
-  const penaltyByStarts = countStars / partial.length;
+  // console.log('CH', chemicalShiftScore, scoreOn2D);
+  const penaltyByStarts = countStars / totalPartial;
   if (chemicalShiftScore === 0) return scoreOn2D - penaltyByStarts;
 
   if (scoreOn2D === 0) return chemicalShiftScore - penaltyByStarts;
   return (chemicalShiftScore + scoreOn2D) / 2 - penaltyByStarts;
 }
 
-function checkLinking(partialI, partialJ, atomTypes, correlations) {
-  if (partialI === partialJ) return true;
-  for (const atomType of atomTypes) {
-    let correlationI = correlations[atomType][partialI];
-    if (!correlationI) continue;
-    for (let key of ['link', 'indirectLinks']) {
-      for (const link of correlationI[key]) {
-        if (link.signal.id === partialJ) return true;
-      }
+function checkLinking(partials, correlations) {
+  const { from, to } = partials;
+  if (from.targetID === to.targetID) return true;
+  let correlationI = correlations[from.atomType][from.targetID];
+  for (let key of ['link', 'indirectLinks']) {
+    for (const link of correlationI[key]) {
+      if (link.signal.id === to.targetID) return true;
     }
   }
   return false;
@@ -186,4 +226,12 @@ function getPrediction(predictions, diaID) {
       return { atomType, prediction: predictions[atomType][diaID] };
     }
   }
+}
+
+function howManyActived(actived) {
+  let sum = 0;
+  for (const atom in actived) {
+    sum += actived[atom].length;
+  }
+  return sum;
 }
