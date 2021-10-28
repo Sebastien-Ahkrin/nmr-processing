@@ -1,7 +1,7 @@
 import OCL from 'openchemlib';
 
 import { autoAssignment } from '../autoAssignment';
-import ethylbenzeneData from '../data/ethyl-benzene.json';
+import ethylbenzeneData from './data/ethyl-benzene.json';
 
 describe('automatic assignment', () => {
   const molfile = String(ethylbenzeneData.molecules[0].molfile);
