@@ -1,14 +1,35 @@
-export function createMapPossibleAssignments(props) {
+import { MakeMandatory } from '../../types/MakeMandatory';
+import type { RestrictionByCS, Targets } from '../get1HAssignments';
+
+import type { Predictions1Hassignments } from './buildAssignments';
+
+type RestrictionByCSMandatory = MakeMandatory<
+  RestrictionByCS,
+  'chemicalShiftRestriction' | 'tolerance' | 'useChemicalShiftScore'
+>;
+
+interface CreateMapPossibleAssignments {
+  predictions: Predictions1Hassignments;
+  restrictionByCS: RestrictionByCSMandatory;
+  targets: Targets;
+}
+
+export interface PossibleAssignmentMap {
+  [key: string]: string[];
+}
+export function createMapPossibleAssignments(
+  props: CreateMapPossibleAssignments,
+) {
   const { restrictionByCS, predictions, targets } = props;
 
   const { tolerance: toleranceCS, chemicalShiftRestriction } = restrictionByCS;
 
   let errorAbs = Math.abs(toleranceCS);
 
-  const expandMap = {};
+  const expandMap: PossibleAssignmentMap = {};
   for (const diaID in predictions) {
     let prediction = predictions[diaID];
-    prediction.error = Math.abs(prediction.error);
+    if (prediction.error) prediction.error = Math.abs(prediction.error);
     expandMap[diaID] = [];
 
     if (targets) {
@@ -31,9 +52,12 @@ export function createMapPossibleAssignments(props) {
             if (prediction.error) {
               error = Math.max(error, prediction.error);
             }
-            let distAfterLimit = Math.abs(
-              prediction.delta - target.signal[0].delta - errorAbs,
-            );
+            const delta =
+              target.signals && target.signals.length > 0
+                ? target.signals[0].delta
+                : (target.to + target.from) / 2;
+
+            let distAfterLimit = Math.abs(prediction.delta - delta - errorAbs);
             if (distAfterLimit < 4 * errorAbs) {
               expandMap[diaID].push(targetID);
             }

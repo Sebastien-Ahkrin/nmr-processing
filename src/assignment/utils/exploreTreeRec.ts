@@ -1,6 +1,31 @@
+import type { RestrictionByCS, Targets } from '../get1HAssignments';
+
+import type {
+  Store1HAssignments,
+  Predictions1Hassignments,
+} from './buildAssignments';
+import type { PossibleAssignmentMap } from './createMapPossibleAssignments';
 import { partialScore } from './partialScore';
 
-export function exploreTreeRec(props, currentIndex, partial, store) {
+export interface ExploreTreeRecProps {
+  nSources: number;
+  restrictionByCS: RestrictionByCS;
+  timeout: number;
+  timeStart: number;
+  maxSolutions: number;
+  targets: Targets;
+  predictions: Predictions1Hassignments;
+  lowerBoundScore: number;
+  nbAllowedUnAssigned: number;
+  possibleAssignmentMap: PossibleAssignmentMap;
+  diaIDPeerPossibleAssignment: string[];
+}
+export function exploreTreeRec(
+  props: ExploreTreeRecProps,
+  currentIndex: number,
+  partial: Array<string | null>,
+  store: Store1HAssignments,
+) {
   const {
     nSources,
     restrictionByCS,
@@ -14,6 +39,7 @@ export function exploreTreeRec(props, currentIndex, partial, store) {
     possibleAssignmentMap,
     diaIDPeerPossibleAssignment,
   } = props;
+
   const currentDate = new Date();
   if (currentDate.getTime() - timeStart > timeout) {
     new Error('timeout expired');
@@ -31,25 +57,24 @@ export function exploreTreeRec(props, currentIndex, partial, store) {
       predictions,
       targets,
     });
-    console.log(score, partial, currentIndex, nSources)
+
     if (score === 0) {
       if (targetID === '*') {
         partial[currentIndex] = null;
       }
       continue;
     }
-    
+
     if (currentIndex === nSources - 1 && score >= lowerBoundScore) {
-      console.log('pasa')
       addSolution(store, { predictions, partial, score, maxSolutions });
     } else if (currentIndex < nSources - 1) {
-      console.log('pasa aqui')
       exploreTreeRec(
         {
           nSources,
           restrictionByCS,
           timeout,
           timeStart,
+          maxSolutions,
           targets,
           predictions,
           lowerBoundScore,
@@ -65,11 +90,23 @@ export function exploreTreeRec(props, currentIndex, partial, store) {
   }
 }
 
-function addSolution(store, props) {
+export interface SolutionAssignment {
+  assignment: string[];
+  score: number;
+}
+
+interface AddSolutionProps {
+  score: number;
+  maxSolutions: number;
+  partial: Array<string | null>;
+  predictions: Predictions1Hassignments;
+}
+
+function addSolution(store: Store1HAssignments, props: AddSolutionProps) {
   let { score, maxSolutions, partial, predictions } = props;
   score /= doubleAssignmentPenalty(partial, predictions);
   store.nSolutions++;
-  let solution = {
+  let solution: SolutionAssignment = {
     assignment: JSON.parse(JSON.stringify(partial)),
     score: score,
   };
@@ -85,7 +122,10 @@ function addSolution(store, props) {
   }
 }
 
-function doubleAssignmentPenalty(partial, predictions) {
+function doubleAssignmentPenalty(
+  partial: Array<string | null>,
+  predictions: Predictions1Hassignments,
+) {
   const nbSources = Object.keys(predictions).length;
   let assignments = new Set(partial);
   let nbDoubleAssignment = nbSources - assignments.size;

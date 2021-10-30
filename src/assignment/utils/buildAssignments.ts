@@ -1,13 +1,41 @@
 import treeSet from 'ml-tree-set';
 
+import { RestrictionByCS, Targets, NMRSignal1DWithAtomsAndDiaIDs } from '../get1HAssignments';
+
 import { createMapPossibleAssignments } from './createMapPossibleAssignments';
 import { exploreTreeRec } from './exploreTreeRec';
+import type { SolutionAssignment } from './exploreTreeRec';
 
-const comparator = (a, b) => {
+const comparator = (a: SolutionAssignment, b: SolutionAssignment) => {
   return b.score - a.score;
 };
 
-export async function buildAssignments(props) {
+export interface BuildAssignmentsProps {
+  restrictionByCS: RestrictionByCS;
+  timeout: number;
+  minScore: number;
+  nbAllowedUnAssigned: number;
+  maxSolutions: number;
+  targets: Targets;
+  joinedSignals: NMRSignal1DWithAtomsAndDiaIDs[];
+}
+
+export interface Signals1HAssignment extends NMRSignal1DWithAtomsAndDiaIDs {
+  diaIDIndex: number;
+  allHydrogens: number;
+  error?: number;
+}
+
+export interface Predictions1Hassignments {
+  [key: string]: Signals1HAssignment;
+}
+
+export interface Store1HAssignments {
+  solutions: treeSet;
+  nSolutions: number;
+}
+
+export async function buildAssignments(props: BuildAssignmentsProps) {
   const {
     restrictionByCS,
     timeout,
@@ -21,17 +49,17 @@ export async function buildAssignments(props) {
   let date = new Date();
   let timeStart = date.getTime();
 
-  let store = {
+  let store: Store1HAssignments = {
     solutions: new treeSet(comparator),
     nSolutions: 0,
   };
 
   let nSources = joinedSignals.length;
-  const predictions = {};
+  const predictions: Predictions1Hassignments = {};
 
   for (let prediction of joinedSignals) {
     const diaID = prediction.diaIDs[0];
-    const index = prediction.atomIDs[0];
+    const index = prediction.atoms[0];
     predictions[diaID] = {
       ...prediction,
       diaIDIndex: index,
@@ -91,7 +119,7 @@ export async function buildAssignments(props) {
   return assignments;
 }
 
-function fillPartial(nSources, value = null) {
+function fillPartial(nSources: number, value = null) {
   const partial = new Array(nSources);
   for (let i = 0; i < nSources; i++) {
     partial[i] = value;

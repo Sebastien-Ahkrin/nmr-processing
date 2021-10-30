@@ -1,4 +1,20 @@
-export function partialScore(partial, props) {
+import { RestrictionByCS, Targets } from '../get1HAssignments';
+
+import { Predictions1Hassignments } from './buildAssignments';
+
+interface Props {
+  restrictionByCS: RestrictionByCS;
+  /**
+   * number of allowed unassignment signals
+   * @default 0
+   */
+  nbAllowedUnAssigned: number;
+  diaIDPeerPossibleAssignment: string[];
+  predictions: Predictions1Hassignments;
+  targets: Targets;
+}
+
+export function partialScore(partial: Array<string | null>, props: Props) {
   const {
     diaIDPeerPossibleAssignment,
     nbAllowedUnAssigned,
@@ -10,8 +26,10 @@ export function partialScore(partial, props) {
   const { tolerance: toleranceCS, useChemicalShiftScore } = restrictionByCS;
   let countStars = 0;
   let totalPartial = 0;
-  let partialInverse = {};
-  let activeDomainOnPrediction = [];
+  let partialInverse: {
+    [key: string]: string[];
+  } = {};
+  let activeDomainOnPrediction: number[] = [];
   totalPartial += partial.length;
   for (let i = 0; i < partial.length; i++) {
     const targetID = partial[i];
@@ -67,7 +85,11 @@ export function partialScore(partial, props) {
           // Chemical shift is not a restriction
           chemicalShiftScore += 1;
         } else {
-          let diff = Math.abs(source.delta - target.signal[0].delta);
+          const delta =
+            target.signals && target.signals.length > 0
+              ? target.signals[0].delta
+              : (target.to + target.from) / 2;
+          let diff = Math.abs(source.delta - delta);
           if (diff < error) {
             //@TODO: check for a better discriminant
             chemicalShiftScore += 1;
