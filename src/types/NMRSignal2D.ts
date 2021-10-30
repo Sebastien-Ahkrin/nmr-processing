@@ -14,6 +14,7 @@ export interface Signal2DAxisData {
 export interface NMRSignal2D {
   x: Signal2DAxisData;
   y: Signal2DAxisData;
+  id?: string;
   peaks?: MPFPeak[];
   kind?: string;
   _highlight?: (number | string)[];

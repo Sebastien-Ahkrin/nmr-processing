@@ -3,6 +3,7 @@ import type { NMRSignal1D } from './NMRSignal1D';
 export interface NMRRange {
   from: number;
   to: number;
+  id?: string;
   diaIDs?: string[];
   kind?: string;
   pubIntegral?: number;
