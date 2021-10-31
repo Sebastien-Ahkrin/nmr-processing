@@ -3,6 +3,7 @@ import type { Jcoupling } from './jcoupling';
 
 export interface NMRSignal1D {
   delta: number;
+  id?: string;
   js?: Jcoupling[];
   atoms?: number[];
   assignment?: string;
