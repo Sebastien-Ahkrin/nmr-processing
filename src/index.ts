@@ -17,6 +17,8 @@ export * from './prediction/predictHSQC';
 export * from './prediction/predictHMBC';
 export * from './prediction/predictAll';
 
+export * from './assignment/get1HAssignments';
+
 export * from './ranges/rangesToACS';
 export * from './ranges/rangesToXY';
 
