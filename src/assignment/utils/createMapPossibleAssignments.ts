@@ -1,7 +1,7 @@
 import { MakeMandatory } from '../../types/MakeMandatory';
-import type { RestrictionByCS, Targets } from '../get1HAssignments';
+import type { Targets } from '../get1HAssignments';
 
-import type { Predictions1Hassignments } from './buildAssignments';
+import type { RestrictionByCS, Predictions1Dassignments } from './buildAssignments';
 
 type RestrictionByCSMandatory = MakeMandatory<
   RestrictionByCS,
@@ -9,9 +9,10 @@ type RestrictionByCSMandatory = MakeMandatory<
 >;
 
 interface CreateMapPossibleAssignments {
-  predictions: Predictions1Hassignments;
+  predictions: Predictions1Dassignments;
   restrictionByCS: RestrictionByCSMandatory;
   targets: Targets;
+  useIntegrationRestriction: boolean;
 }
 
 export interface PossibleAssignmentMap {
@@ -20,12 +21,13 @@ export interface PossibleAssignmentMap {
 export function createMapPossibleAssignments(
   props: CreateMapPossibleAssignments,
 ) {
-  const { restrictionByCS, predictions, targets } = props;
+  const { restrictionByCS, predictions, targets, useIntegrationRestriction } =
+    props;
 
   const { tolerance: toleranceCS, chemicalShiftRestriction } = restrictionByCS;
 
   let errorAbs = Math.abs(toleranceCS);
-
+  console.log('use INT', useIntegrationRestriction)
   const expandMap: PossibleAssignmentMap = {};
   for (const diaID in predictions) {
     let prediction = predictions[diaID];
@@ -38,8 +40,12 @@ export function createMapPossibleAssignments(
         const { nbAtoms } = prediction;
         const { integration } = target;
 
-        const couldBeAssigned =
-          integration > 0 ? nbAtoms - integration < 1 : true;
+        const couldBeAssigned = useIntegrationRestriction
+          ? integration > 0
+            ? nbAtoms - integration < 1
+            : true
+          : true;
+
         if (couldBeAssigned) {
           if (
             !chemicalShiftRestriction ||

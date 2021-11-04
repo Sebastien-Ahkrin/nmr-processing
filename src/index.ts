@@ -1,9 +1,3 @@
-/**
- * @typedef {Object} DataXY
- * @property {Array<Number>} x Array of x values
- * @property {Array<Number>} y Array of y values
- */
-
 export * from './constants/gyromagneticRatio';
 export * from './constants/impurities';
 export * from './constants/couplingPatterns';
@@ -18,6 +12,7 @@ export * from './prediction/predictHMBC';
 export * from './prediction/predictAll';
 
 export * from './assignment/get1HAssignments';
+export * from './assignment/get13CAssignments';
 
 export * from './ranges/rangesToACS';
 export * from './ranges/rangesToXY';

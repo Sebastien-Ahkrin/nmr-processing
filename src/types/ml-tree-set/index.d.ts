@@ -1,7 +1,7 @@
 declare module 'ml-tree-set' {
   type Comparator = (a: Elements, b: Elements) => number;
   type Elements = any;
-  export default class treeSet {
+  export default class TreeSet {
     public length: number;
     public elements: Array<Elements>;
 

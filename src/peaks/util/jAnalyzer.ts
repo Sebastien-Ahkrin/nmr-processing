@@ -106,7 +106,7 @@ export default {
       signal.asymmetric = false;
       let P1, n2, maxFlagged;
       let k = 1;
-      let Jc = [];
+      let jCouplings = [];
 
       // Loop over the possible number of coupling contributing to the multiplet
       for (let n = 0; n < 9; n++) {
@@ -144,17 +144,17 @@ export default {
             }
           }
 
-          Jc = []; // The array to store the detected j-coupling
+          jCouplings = []; // The array to store the detected j-coupling
           // 2.2 Set j = 1; J1 = P2 - P1. Flag components 1 and 2 as accounted for.
           let j = 1;
-          Jc.push(peaks[1].x - peaks[0].x);
+          jCouplings.push(peaks[1].x - peaks[0].x);
           P1 = peaks[0].x;
           numbering[0].splice(0, 1); // Flagged
           numbering[1].splice(0, 1); // Flagged
           k = 1;
           let nFlagged = 2;
           maxFlagged = Math.pow(2, n) - 1;
-          while (Jc.length < n && nFlagged < maxFlagged && k < peaks.length) {
+          while (jCouplings.length < n && nFlagged < maxFlagged && k < peaks.length) {
             counter += 1;
             // 4.1. Increment j. Set k to the number of the first unflagged component.
             j++;
@@ -163,7 +163,7 @@ export default {
             }
             if (k < peaks.length) {
               // 4.2 Jj = Pk - P1.
-              Jc.push(peaks[k].x - peaks[0].x);
+              jCouplings.push(peaks[k].x - peaks[0].x);
               // Flag component k and, for each sum of the...
               numbering[k].splice(0, 1); // Flageed
               nFlagged++;
@@ -171,7 +171,7 @@ export default {
               for (let u = 2; u <= j; u++) {
                 let jSum = 0;
                 for (let i = 0; i < u; i++) {
-                  jSum += Jc[i];
+                  jSum += jCouplings[i];
                 }
                 for (let i = 1; i < numbering.length; i++) {
                   // Maybe 0.25 Hz is too much?
@@ -185,7 +185,7 @@ export default {
             }
           }
           // Calculate the ideal patter by using the extracted j-couplings
-          let pattern = idealPattern(Jc);
+          let pattern = idealPattern(jCouplings);
           // Compare the ideal pattern with the proposed intensities.
           // All the intensities have to match to accept the multiplet
           validPattern = true;
@@ -197,7 +197,7 @@ export default {
         }
         // If we found a valid pattern we should inform about the pattern.
         if (validPattern) {
-          updateSignal(signal, Jc);
+          updateSignal(signal, jCouplings);
         }
       }
     }
@@ -213,9 +213,9 @@ export default {
  * @private
  * update the signal
  * @param {*} signal
- * @param {*} Jc
+ * @param {*} jCouplings
  */
-function updateSignal(signal: SignalInternMandatory, Jc: number[]) {
+function updateSignal(signal: SignalInternMandatory, jCouplings: number[]) {
   // Update the limits of the signal
   let peaks = signal.peaksComp; // Always in Hz
   let nbPeaks = peaks.length;
@@ -228,43 +228,43 @@ function updateSignal(signal: SignalInternMandatory, Jc: number[]) {
     peaks[nbPeaks - 1].x / signal.observe + peaks[nbPeaks - 1].shape.width * 3;
   // Compile the pattern and format the constant couplings
   signal.maskPattern = signal.mask2;
-  signal.multiplicity = abstractPattern(signal, Jc);
+  signal.multiplicity = abstractPattern(signal, jCouplings);
   signal.pattern = signal.multiplicity; // Our library depends on this parameter, but it is old
 }
 
 /**
  * Returns the multiplet in the compact format
  * @param {object} signal
- * @param {object} Jc
+ * @param {object} jCouplings
  * @return {String}
  * @private
  */
-function abstractPattern(signal: SignalInternMandatory, Jc: number[]) {
+function abstractPattern(signal: SignalInternMandatory, jCouplings: number[]) {
   let tol = 0.05;
   let pattern = '';
   let cont = 1;
   let newNmrJs = [];
 
-  if (Jc && Jc.length > 0) {
-    Jc.sort((a, b) => {
+  if (jCouplings && jCouplings.length > 0) {
+    jCouplings.sort((a, b) => {
       return b - a;
     });
 
-    for (let i = 0; i < Jc.length - 1; i++) {
-      if (Math.abs(Jc[i] - Jc[i + 1]) < tol) {
+    for (let i = 0; i < jCouplings.length - 1; i++) {
+      if (Math.abs(jCouplings[i] - jCouplings[i + 1]) < tol) {
         cont++;
       } else {
         newNmrJs.push({
-          coupling: Math.abs(Jc[i]),
+          coupling: Math.abs(jCouplings[i]),
           multiplicity: patterns[cont],
         });
         pattern += patterns[cont];
         cont = 1;
       }
     }
-    let index = Jc.length - 1;
+    let index = jCouplings.length - 1;
     newNmrJs.push({
-      coupling: Math.abs(Jc[index]),
+      coupling: Math.abs(jCouplings[index]),
       multiplicity: patterns[cont],
     });
     pattern += patterns[cont];
@@ -281,15 +281,15 @@ function abstractPattern(signal: SignalInternMandatory, Jc: number[]) {
 /**
  * This function creates an ideal pattern from the given J-couplings
  * @private
- * @param {Array} Jc
+ * @param {Array} jCouplings
  * @return {*[]}
  * @private
  */
-function idealPattern(Jc: number[]) {
-  let hsum = Math.pow(2, Jc.length);
+function idealPattern(jCouplings: number[]) {
+  let hsum = Math.pow(2, jCouplings.length);
   let pattern = [{ x: 0, intensity: hsum }];
   // To split the initial height
-  for (const jc of Jc) {
+  for (const jc of jCouplings) {
     for (let j = pattern.length - 1; j >= 0; j--) {
       pattern.push({
         x: pattern[j].x + jc / 2,

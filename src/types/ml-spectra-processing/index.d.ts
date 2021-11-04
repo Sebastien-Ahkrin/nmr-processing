@@ -9,7 +9,7 @@ declare module 'ml-spectra-processing' {
     options?: { zones: { from: number; to: number }[] },
   ): XYNumberArray;
 
-  interface xNoiseSanPlotOptions {
+  interface XNoiseSanPlotOptions {
     mask?: boolean[];
     cutOff?: number;
     logBaseY?: number;
@@ -20,7 +20,7 @@ declare module 'ml-spectra-processing' {
     fixOffset?: boolean;
   }
 
-  interface xNoiseSanPlotResult {
+  interface XNoiseSanPlotResult {
     positive: number;
     negative: number;
     snr: number;
@@ -31,21 +31,21 @@ declare module 'ml-spectra-processing' {
   }
   function xNoiseSanPlot(
     data: number[] | Float64Array,
-    options?: xNoiseSanPlotOptions,
-  ): xNoiseSanPlotResult;
+    options?: XNoiseSanPlotOptions,
+  ): XNoiseSanPlotResult;
 
   function xAbsoluteMedian(data: number[] | Float64Array): number;
 
-  interface xGetFromToIndexOptions {
+  interface XGetFromToIndexOptions {
     fromIndex?: number;
     toIndex?: number;
     from?: number;
     to?: number;
   }
 
-  interface xyIntegrationOptions extends xGetFromToIndexOptions {}
+  interface XYIntegrationOptions extends XGetFromToIndexOptions {}
 
-  function xyIntegration(data: XYNumberArray, options?: xyIntegrationOptions): number;
+  function xyIntegration(data: XYNumberArray, options?: XYIntegrationOptions): number;
 
-  function xGetFromToIndex(x: number[] | Float64Array, options?: xGetFromToIndexOptions): number;
+  function xGetFromToIndex(x: number[] | Float64Array, options?: XGetFromToIndexOptions): number;
 }

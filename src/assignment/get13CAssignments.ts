@@ -1,21 +1,16 @@
 import { Molecule } from 'openchemlib';
 import { addDiastereotopicMissingChirality } from 'openchemlib-utils';
 
-import { NMRRange } from '..';
+import { NMRRange, NMRRangeWithIntegration } from '..';
 import {
-  predictProton,
-  PredictProtonOptions,
-} from '../prediction/predictProton';
-import { MakeMandatory } from '../types/MakeMandatory';
+  predictCarbon,
+  PredictCarbonOptions,
+} from '../prediction/predictCarbon';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
 
-import { buildAssignments, RestrictionByCS } from './utils/buildAssignments';
+import type { NMRSignal1DWithAtomsAndDiaIDs, Targets } from './get1HAssignments';
+import { RestrictionByCS, buildAssignments } from './utils/buildAssignments';
 import generateID from './utils/generateID';
-
-export type NMRSignal1DWithAtomsAndDiaIDs = MakeMandatory<
-  NMRSignal1D,
-  'atoms' | 'diaIDs' | 'nbAtoms'
->;
 
 function checkAtomsAndDiaIDs(
   signals: NMRSignal1D[],
@@ -27,19 +22,14 @@ function checkAtomsAndDiaIDs(
   }
 }
 
-export type NMRRangeWithIntegration = MakeMandatory<NMRRange, 'integration'>;
-
-function checkForIntegration(
-  ranges: NMRRange[],
-): asserts ranges is NMRRangeWithIntegration[] {
+function checkIntegration(ranges: NMRRange[]) {
   for (let range of ranges) {
-    if (range.integration === undefined) {
-      throw new Error('ranges has not integration property');
-    }
+    if (range.integration === undefined) range.integration = 0;
   }
+  return ranges as NMRRangeWithIntegration[];
 }
 
-export interface Get1HAssignmentsOptions {
+export interface Get13CAssignmentsOptions {
   restrictionByCS?: Partial<RestrictionByCS>;
   /**
    * min score to accept an assignment
@@ -64,20 +54,16 @@ export interface Get1HAssignmentsOptions {
   /**
    * prediction options
    */
-  predictionOptions?: PredictProtonOptions;
+  predictionOptions?: PredictCarbonOptions;
 }
 
-export interface Targets {
-  [key: string]: NMRRangeWithIntegration;
-}
-
-export async function get1HAssignments(
+export async function get13CAssignments(
   ranges: NMRRange[],
   molecule: Molecule,
-  options: Get1HAssignmentsOptions = {},
+  options: Get13CAssignmentsOptions = {},
 ) {
   let {
-    restrictionByCS,
+    restrictionByCS = {},
     minScore = 1,
     maxSolutions = 10,
     nbAllowedUnAssigned = 0,
@@ -89,16 +75,14 @@ export async function get1HAssignments(
     throw new Error('It is needed a OCL molecule instance to assign');
   }
 
-  molecule.addImplicitHydrogens();
   addDiastereotopicMissingChirality(molecule);
+  const { joinedSignals } = await predictCarbon(molecule, predictionOptions);
 
-  const { joinedSignals } = await predictProton(molecule, predictionOptions);
-
-  checkForIntegration(ranges);
   checkAtomsAndDiaIDs(joinedSignals);
+  const copyRanges = checkIntegration(ranges);
 
   const targets: Targets = {};
-  for (const range of ranges) {
+  for (const range of copyRanges) {
     const { id = generateID() } = range;
     targets[id] = JSON.parse(JSON.stringify(range));
   }
@@ -111,6 +95,6 @@ export async function get1HAssignments(
     maxSolutions,
     targets,
     joinedSignals,
-    useIntegrationRestriction: true,
+    useIntegrationRestriction: false,
   });
 }

@@ -1,8 +1,9 @@
-import type { RestrictionByCS, Targets } from '../get1HAssignments';
+import type { Targets } from '../get1HAssignments';
 
 import type {
-  Store1HAssignments,
-  Predictions1Hassignments,
+  RestrictionByCS,
+  StoreAssignments1D,
+  Predictions1Dassignments,
 } from './buildAssignments';
 import type { PossibleAssignmentMap } from './createMapPossibleAssignments';
 import { partialScore } from './partialScore';
@@ -14,7 +15,8 @@ export interface ExploreTreeRecProps {
   timeStart: number;
   maxSolutions: number;
   targets: Targets;
-  predictions: Predictions1Hassignments;
+  useIntegrationRestriction: boolean;
+  predictions: Predictions1Dassignments;
   lowerBoundScore: number;
   nbAllowedUnAssigned: number;
   possibleAssignmentMap: PossibleAssignmentMap;
@@ -24,7 +26,7 @@ export function exploreTreeRec(
   props: ExploreTreeRecProps,
   currentIndex: number,
   partial: Array<string | null>,
-  store: Store1HAssignments,
+  store: StoreAssignments1D,
 ) {
   const {
     nSources,
@@ -37,6 +39,7 @@ export function exploreTreeRec(
     lowerBoundScore,
     nbAllowedUnAssigned,
     possibleAssignmentMap,
+    useIntegrationRestriction,
     diaIDPeerPossibleAssignment,
   } = props;
 
@@ -51,6 +54,7 @@ export function exploreTreeRec(
   for (let targetID of possibleAssignments) {
     partial[currentIndex] = targetID;
     let score = partialScore(partial, {
+      useIntegrationRestriction,
       diaIDPeerPossibleAssignment,
       nbAllowedUnAssigned,
       restrictionByCS,
@@ -80,6 +84,7 @@ export function exploreTreeRec(
           lowerBoundScore,
           nbAllowedUnAssigned,
           possibleAssignmentMap,
+          useIntegrationRestriction,
           diaIDPeerPossibleAssignment,
         },
         currentIndex + 1,
@@ -99,10 +104,10 @@ interface AddSolutionProps {
   score: number;
   maxSolutions: number;
   partial: Array<string | null>;
-  predictions: Predictions1Hassignments;
+  predictions: Predictions1Dassignments;
 }
 
-function addSolution(store: Store1HAssignments, props: AddSolutionProps) {
+function addSolution(store: StoreAssignments1D, props: AddSolutionProps) {
   let { score, maxSolutions, partial, predictions } = props;
   score /= doubleAssignmentPenalty(partial, predictions);
   store.nSolutions++;
@@ -124,7 +129,7 @@ function addSolution(store: Store1HAssignments, props: AddSolutionProps) {
 
 function doubleAssignmentPenalty(
   partial: Array<string | null>,
-  predictions: Predictions1Hassignments,
+  predictions: Predictions1Dassignments,
 ) {
   const nbSources = Object.keys(predictions).length;
   let assignments = new Set(partial);

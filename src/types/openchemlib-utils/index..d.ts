@@ -110,7 +110,7 @@ declare module 'openchemlib-utils' {
 
   function getHoseCodesForPath(molecule: Molecule, from: string, to: string, maxLength: number): HoseCodesForPath;
 
-  export interface getConnectivityMatrixOptions {
+  export interface GetConnectivityMatrixOptions {
     /**
      * get the path length between atoms
      * @default false
@@ -142,7 +142,7 @@ declare module 'openchemlib-utils' {
      */
     stda?: boolean | number;
   }
-  function getConnectivityMatrix(molecule: Molecule, options?: getConnectivityMatrixOptions): number[][] | Float64Array[];
+  function getConnectivityMatrix(molecule: Molecule, options?: GetConnectivityMatrixOptions): number[][] | Float64Array[];
 
   function getDiastereotopicAtomIDs(molecule: Molecule): string[];
 }

@@ -17,5 +17,6 @@ export interface NMRSignal2D {
   id?: string;
   peaks?: MPFPeak[];
   kind?: string;
+  //eslint-disable-next-line
   _highlight?: (number | string)[];
 }

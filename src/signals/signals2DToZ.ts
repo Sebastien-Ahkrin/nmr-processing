@@ -3,7 +3,7 @@ import type { XYNumber } from 'spectrum-generator';
 
 import type { NMRSignal2D } from '../types/NMRSignal2D';
 
-interface signals2DToZOptions {
+interface Signals2DToZOptions {
   /**
    * lower limit in the spectrum, if it is a number the value will be defined for both axes
    * @default -1
@@ -36,7 +36,7 @@ export interface Peak2DSeries {
 
 export function signals2DToZ(
   signals: NMRSignal2D[],
-  options: signals2DToZOptions = {},
+  options: Signals2DToZOptions = {},
 ) {
   let { from = -1, to = 12, nbPoints = 512, width = 0.02 } = options;
 

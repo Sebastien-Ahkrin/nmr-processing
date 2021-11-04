@@ -1,36 +1,43 @@
-import { RestrictionByCS, Targets } from '../get1HAssignments';
+import { Targets } from '../get1HAssignments';
 
-import { Predictions1Hassignments } from './buildAssignments';
+import type {
+  Predictions1Dassignments,
+  RestrictionByCS,
+} from './buildAssignments';
 
-interface Props {
+interface PartialScoreOptions {
   restrictionByCS: RestrictionByCS;
   /**
    * number of allowed unassignment signals
    * @default 0
    */
+  useIntegrationRestriction: boolean;
   nbAllowedUnAssigned: number;
   diaIDPeerPossibleAssignment: string[];
-  predictions: Predictions1Hassignments;
+  predictions: Predictions1Dassignments;
   targets: Targets;
 }
 
-export function partialScore(partial: Array<string | null>, props: Props) {
+export function partialScore(
+  partial: Array<string | null>,
+  options: PartialScoreOptions,
+) {
   const {
+    useIntegrationRestriction,
     diaIDPeerPossibleAssignment,
     nbAllowedUnAssigned,
     restrictionByCS,
     predictions,
     targets,
-  } = props;
-
-  const { tolerance: toleranceCS, useChemicalShiftScore } = restrictionByCS;
+  } = options;
+  const { useChemicalShiftScore } = restrictionByCS;
   let countStars = 0;
-  let totalPartial = 0;
+  let totalPartial = partial.length;
   let partialInverse: {
     [key: string]: string[];
   } = {};
   let activeDomainOnPrediction: number[] = [];
-  totalPartial += partial.length;
+
   for (let i = 0; i < partial.length; i++) {
     const targetID = partial[i];
     if (targetID && targetID !== '*') {
@@ -50,62 +57,72 @@ export function partialScore(partial: Array<string | null>, props: Props) {
     return 0;
   }
 
-  for (let targetID of activeDomainOnTarget) {
-    let targetToSource = partialInverse[targetID];
-    let total = 0;
-    for (const diaID of targetToSource) {
-      const prediction = predictions[diaID];
-      total += prediction.allHydrogens;
-    }
+  if (useIntegrationRestriction) {
+    for (let targetID of activeDomainOnTarget) {
+      let targetToSource = partialInverse[targetID];
+      let total = 0;
+      for (const diaID of targetToSource) {
+        const prediction = predictions[diaID];
+        total += prediction.allHydrogens;
+      }
 
-    const { integration } = targets[targetID];
-    if (total - integration >= 0.5) {
-      return 0;
+      const { integration } = targets[targetID];
+      if (total - integration >= 0.5) {
+        return 0;
+      }
     }
   }
 
   //chemical shift score
-  let count = 1;
-  let chemicalShiftScore = 1;
-  if (useChemicalShiftScore) {
-    chemicalShiftScore = 0;
-    count = 0;
-    for (let index = 0; index < partial.length; index++) {
-      const targetID = partial[index];
-      if (targetID && targetID !== '*') {
-        count++;
-        let diaID = diaIDPeerPossibleAssignment[index];
-        let source = predictions[diaID];
-        let target = targets[targetID];
-        let error = toleranceCS;
-        if (source.error) {
-          error = Math.max(source.error, toleranceCS);
-        }
-        if (typeof source.delta === 'undefined') {
-          // Chemical shift is not a restriction
-          chemicalShiftScore += 1;
-        } else {
-          const delta =
-            target.signals && target.signals.length > 0
-              ? target.signals[0].delta
-              : (target.to + target.from) / 2;
-          let diff = Math.abs(source.delta - delta);
-          if (diff < error) {
-            //@TODO: check for a better discriminant
-            chemicalShiftScore += 1;
-          } else {
-            diff = Math.abs(diff - error);
-            chemicalShiftScore += (-0.25 / error) * diff + 1;
-          }
-        }
-      }
-    }
-    if (count > 0) {
-      chemicalShiftScore /= count;
-    }
-  }
-  // console.log('CH', chemicalShiftScore, scoreOn2D);
+  let chemicalShiftScore = useChemicalShiftScore
+    ? chemicalShiftScoring(partial, options)
+    : 1;
+
   const penaltyByStarts = countStars / totalPartial;
 
   return chemicalShiftScore - penaltyByStarts;
+}
+
+function chemicalShiftScoring(
+  partial: Array<string | null>,
+  options: PartialScoreOptions,
+) {
+  const { tolerance } = options.restrictionByCS;
+  const { diaIDPeerPossibleAssignment, predictions, targets } = options;
+
+  let chemicalShiftScore = 0;
+  let count = 0;
+  for (let index = 0; index < partial.length; index++) {
+    const targetID = partial[index];
+    if (targetID && targetID !== '*') {
+      count++;
+      let diaID = diaIDPeerPossibleAssignment[index];
+      let source = predictions[diaID];
+      let target = targets[targetID];
+      let error = tolerance;
+      if (source.error) {
+        error = Math.max(source.error, tolerance);
+      }
+      if (typeof source.delta === 'undefined') {
+        // Chemical shift is not a restriction
+        chemicalShiftScore += 1;
+      } else {
+        const delta =
+          target.signals && target.signals.length > 0
+            ? target.signals[0].delta
+            : (target.to + target.from) / 2;
+        let diff = Math.abs(source.delta - delta);
+        if (diff < error) {
+          chemicalShiftScore += 1;
+        } else {
+          diff = Math.abs(diff - error);
+          chemicalShiftScore += (-0.25 / error) * diff + 1;
+        }
+      }
+    }
+  }
+  if (count > 0) {
+    chemicalShiftScore /= count;
+  }
+  return chemicalShiftScore;
 }

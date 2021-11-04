@@ -1,6 +1,9 @@
 import treeSet from 'ml-tree-set';
 
-import { RestrictionByCS, Targets, NMRSignal1DWithAtomsAndDiaIDs } from '../get1HAssignments';
+import {
+  Targets,
+  NMRSignal1DWithAtomsAndDiaIDs,
+} from '../get1HAssignments';
 
 import { createMapPossibleAssignments } from './createMapPossibleAssignments';
 import { exploreTreeRec } from './exploreTreeRec';
@@ -10,34 +13,42 @@ const comparator = (a: SolutionAssignment, b: SolutionAssignment) => {
   return b.score - a.score;
 };
 
+export interface RestrictionByCS {
+  chemicalShiftRestriction: boolean;
+  tolerance: number;
+  useChemicalShiftScore: boolean;
+}
+
 export interface BuildAssignmentsProps {
-  restrictionByCS: RestrictionByCS;
+  restrictionByCS?: Partial<RestrictionByCS>;
   timeout: number;
   minScore: number;
+  useIntegrationRestriction: boolean;
   nbAllowedUnAssigned: number;
   maxSolutions: number;
   targets: Targets;
   joinedSignals: NMRSignal1DWithAtomsAndDiaIDs[];
 }
 
-export interface Signals1HAssignment extends NMRSignal1DWithAtomsAndDiaIDs {
+export interface Signals1DAssignment extends NMRSignal1DWithAtomsAndDiaIDs {
   diaIDIndex: number;
   allHydrogens: number;
   error?: number;
 }
 
-export interface Predictions1Hassignments {
-  [key: string]: Signals1HAssignment;
+export interface Predictions1Dassignments {
+  [key: string]: Signals1DAssignment;
 }
 
-export interface Store1HAssignments {
+export interface StoreAssignments1D {
   solutions: treeSet;
   nSolutions: number;
 }
 
 export async function buildAssignments(props: BuildAssignmentsProps) {
   const {
-    restrictionByCS,
+    restrictionByCS = {},
+    useIntegrationRestriction,
     timeout,
     minScore,
     nbAllowedUnAssigned,
@@ -46,16 +57,22 @@ export async function buildAssignments(props: BuildAssignmentsProps) {
     joinedSignals,
   } = props;
 
+  const {
+    tolerance = 1,
+    useChemicalShiftScore = false,
+    chemicalShiftRestriction = true,
+  } = restrictionByCS;
+
   let date = new Date();
   let timeStart = date.getTime();
 
-  let store: Store1HAssignments = {
+  let store: StoreAssignments1D = {
     solutions: new treeSet(comparator),
     nSolutions: 0,
   };
 
   let nSources = joinedSignals.length;
-  const predictions: Predictions1Hassignments = {};
+  const predictions: Predictions1Dassignments = {};
 
   for (let prediction of joinedSignals) {
     const diaID = prediction.diaIDs[0];
@@ -68,11 +85,16 @@ export async function buildAssignments(props: BuildAssignmentsProps) {
   }
 
   const possibleAssignmentMap = createMapPossibleAssignments({
-    restrictionByCS,
+    restrictionByCS: {
+      tolerance,
+      useChemicalShiftScore,
+      chemicalShiftRestriction,
+    },
+    useIntegrationRestriction,
     predictions,
     targets,
   });
-
+  console.log('possibles', possibleAssignmentMap)
   const diaIDPeerPossibleAssignment = Object.keys(possibleAssignmentMap);
 
   let partial = fillPartial(nSources);
@@ -85,7 +107,11 @@ export async function buildAssignments(props: BuildAssignmentsProps) {
   exploreTreeRec(
     {
       nSources,
-      restrictionByCS,
+      restrictionByCS: {
+        tolerance,
+        useChemicalShiftScore,
+        chemicalShiftRestriction,
+      },
       timeout,
       timeStart,
       targets,
@@ -95,6 +121,7 @@ export async function buildAssignments(props: BuildAssignmentsProps) {
       nbAllowedUnAssigned,
       possibleAssignmentMap,
       diaIDPeerPossibleAssignment,
+      useIntegrationRestriction,
     },
     0,
     partial,

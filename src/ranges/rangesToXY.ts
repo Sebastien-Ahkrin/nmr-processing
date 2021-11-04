@@ -9,7 +9,7 @@ import type { NMRRange } from '../types/NMRRange';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
 
 
-type rangeWithSignal = MakeMandatory<NMRRange, 'signals'>;
+type RangeWithSignal = MakeMandatory<NMRRange, 'signals'>;
 
 export interface RangeToXYOptions {
   /**
@@ -45,7 +45,7 @@ export interface RangeToXYOptions {
 }
 function checkForSignals(
   ranges: NMRRange[],
-): asserts ranges is rangeWithSignal[] {
+): asserts ranges is RangeWithSignal[] {
   for (let range of ranges) {
     if (!range.signals) throw new Error('range has not signals');
   }
