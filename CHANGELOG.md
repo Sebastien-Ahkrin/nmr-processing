@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.4.0](https://www.github.com/cheminfo/nmr-processing/compare/v3.3.4...v3.4.0) (2021-11-04)
+
+
+### Features
+
+* add get13CAssignments function ([#116](https://www.github.com/cheminfo/nmr-processing/issues/116)) ([73f9df6](https://www.github.com/cheminfo/nmr-processing/commit/73f9df6c1d88599828409f8194fb58c1323e0ae9))
+* automatic assignment for proton ([#114](https://www.github.com/cheminfo/nmr-processing/issues/114)) ([f50932e](https://www.github.com/cheminfo/nmr-processing/commit/f50932e78f93db5a4c8dd0c798240a4b18df153a))
+
+
+### Bug Fixes
+
+* export get1HAssignment ([7753e7f](https://www.github.com/cheminfo/nmr-processing/commit/7753e7fbb1e3927b1d32746ab0f4f3b380d98dca))
+
 ### [3.3.4](https://www.github.com/cheminfo/nmr-processing/compare/v3.3.3...v3.3.4) (2021-10-26)
 
 
