@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.4.1](https://www.github.com/cheminfo/nmr-processing/compare/v3.4.0...v3.4.1) (2021-11-06)
+
+
+### Bug Fixes
+
+* **rangesToXY:** draw massive ranges ([#117](https://www.github.com/cheminfo/nmr-processing/issues/117)) ([a80025a](https://www.github.com/cheminfo/nmr-processing/commit/a80025a5b5805625f036b478ed9d24f269cfa2b7))
+
 ## [3.4.0](https://www.github.com/cheminfo/nmr-processing/compare/v3.3.4...v3.4.0) (2021-11-04)
 
 
