@@ -8,7 +8,6 @@ import type { MakeMandatory } from '../types/MakeMandatory';
 import type { NMRRange } from '../types/NMRRange';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
 
-
 type RangeWithSignal = MakeMandatory<NMRRange, 'signals'>;
 
 export interface RangeToXYOptions {
@@ -78,7 +77,15 @@ export function rangesToXY(ranges: NMRRange[], options: any = {}) {
 
   let spectrum: DoubleArray = new Float64Array(nbPoints);
   for (const range of ranges) {
-    const { integration, signals } = range;
+    const { integration, signals = [] } = range;
+    const { multiplicity: rangeMulplicity = '' } = range;
+    if (rangeMulplicity === 'm' && signals.length < 1) {
+      const { from, to } = range;
+      signals.push({
+        delta: (from + to) / 2,
+        multiplicity: 'm',
+      });
+    }
     let rangeSpectrum: DoubleArray = new Float64Array(nbPoints);
     for (const signal of signals) {
       const { multiplicity } = signal;
@@ -168,8 +175,8 @@ function normalizeSpectrum(
     0,
   );
 
-  const norma = (integration / sum) * 1e6;
   if (sum !== 0) {
+    const norma = (integration / sum) * 1e6;
     for (let i = 0; i < spectrum.length; i++) {
       spectrum[i] *= norma;
     }

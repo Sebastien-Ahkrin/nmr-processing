@@ -94,7 +94,7 @@ export async function buildAssignments(props: BuildAssignmentsProps) {
     predictions,
     targets,
   });
-  console.log('possibles', possibleAssignmentMap)
+
   const diaIDPeerPossibleAssignment = Object.keys(possibleAssignmentMap);
 
   let partial = fillPartial(nSources);

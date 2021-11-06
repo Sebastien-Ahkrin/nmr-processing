@@ -27,7 +27,6 @@ export function createMapPossibleAssignments(
   const { tolerance: toleranceCS, chemicalShiftRestriction } = restrictionByCS;
 
   let errorAbs = Math.abs(toleranceCS);
-  console.log('use INT', useIntegrationRestriction)
   const expandMap: PossibleAssignmentMap = {};
   for (const diaID in predictions) {
     let prediction = predictions[diaID];
