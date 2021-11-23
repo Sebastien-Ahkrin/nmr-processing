@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://www.github.com/cheminfo/nmr-processing/compare/v3.4.1...v4.0.0) (2021-11-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* change shape1D n NMRPeak1D structure (#119)
+
+### Features
+
+* change shape1D n NMRPeak1D structure ([#119](https://www.github.com/cheminfo/nmr-processing/issues/119)) ([0255510](https://www.github.com/cheminfo/nmr-processing/commit/02555100407fe2ff80a4c41fff1ddd66d97fbaef))
+
 ### [3.4.1](https://www.github.com/cheminfo/nmr-processing/compare/v3.4.0...v3.4.1) (2021-11-06)
 
 
