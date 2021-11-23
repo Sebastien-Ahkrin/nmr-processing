@@ -1,7 +1,7 @@
 import { DoubleArray } from 'cheminfo-types';
 import arraySequentialFill from 'ml-array-sequential-fill';
+import type { Shape1D } from 'ml-peak-shape-generator';
 import { SpectrumGenerator } from 'spectrum-generator';
-import type { Shape1DOptions } from 'spectrum-generator';
 
 import { hackSignalsToXY } from '../signals/hackSignalsToXY';
 import type { MakeMandatory } from '../types/MakeMandatory';
@@ -40,7 +40,7 @@ export interface RangeToXYOptions {
    * options of signals.
    * @default { kind: 'gaussian' }
    */
-  shape: Shape1DOptions;
+  shape: Shape1D;
 }
 function checkForSignals(
   ranges: NMRRange[],

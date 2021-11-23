@@ -1,9 +1,10 @@
 import binarySearch from 'binary-search';
+import { DataXY } from 'cheminfo-types';
 import { Matrix, EVD } from 'ml-matrix';
 import type { Matrix as MatrixClassType } from 'ml-matrix';
+import type { Shape1D } from 'ml-peak-shape-generator';
 import { SparseMatrix } from 'ml-sparse-matrix';
 import { SpectrumGenerator } from 'spectrum-generator';
-import type { Shape1DOptions } from 'spectrum-generator';
 
 import type { SpinSystem } from '../../types/spinSystem';
 
@@ -46,7 +47,7 @@ interface Simulate1DOptions {
    * Shape options
    * @default {kind:'gaussian'}
    */
-  shape?: Shape1DOptions;
+  shape?: Shape1D;
 }
 
 /**
@@ -59,7 +60,7 @@ export default function simulate1D(
    */
   spinSystem: SpinSystem,
   options: Simulate1DOptions = {},
-) {
+): DataXY {
   let {
     lineWidth = 1,
     maxClusterSize = 8,

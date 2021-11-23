@@ -66,7 +66,7 @@ function checkImpurity(
   while (i--) {
     j = peakList.length;
     while (j--) {
-      tolerance = error + peakList[j].shape.width;
+      tolerance = error + peakList[j].width;
       difference = Math.abs(impurity[i].shift - peakList[j].x);
       if (difference < tolerance) {
         // && (impurity[i].multiplicity === '' || (impurity[i].multiplicity.indexOf(peakList[j].multiplicity)) { // some impurities has multiplicities like 'bs' but at presents it is unsupported

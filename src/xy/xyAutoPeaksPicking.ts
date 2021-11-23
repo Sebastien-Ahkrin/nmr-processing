@@ -1,12 +1,17 @@
 import { DataXY } from 'cheminfo-types';
 import { gsd, joinBroadPeaks, optimizePeaks } from 'ml-gsd';
+import type {
+  Peak1D,
+  IGSDOptions,
+  IOptimizePeaksOptions,
+  IJoinBroadPeaksOptions,
+} from 'ml-gsd';
 import {
   xyExtract,
   xNoiseSanPlot,
   xAbsoluteMedian,
 } from 'ml-spectra-processing';
 
-import type { NMRPeak1D } from '../types/NMRPeak1D';
 /**
  * Implementation of the peak picking method described by Cobas in:
  * A new approach to improving automated analysis of proton NMR spectra
@@ -20,63 +25,19 @@ interface OptionsGetCutOff {
   thresholdFactor: number;
 }
 
-interface OptionsGetPeakList {
-  /**
-   * Noise threshold in spectrum y units. Default is three/thresholdFactor times the absolute median of data.y.
-   * @default `median(data.y) * (options.thresholdFactor || 3)`
-   */
-  noiseLevel?: number;
-  /**
-   * Threshold to determine if a given peak should be considered as a noise, bases on its relative height compared to the highest peak.
-   * @default 0.01
-   */
-  minMaxRatio: number;
-  /**
-   * If broadRatio is higher than 0, then all the peaks which second derivative smaller than broadRatio * maxAbsSecondDerivative will be marked with the soft mask equal to true.
-   * @default 0.00025
-   */
-  broadRatio: number;
-  /**
-   * Select the peak intensities from a smoothed version of the independent variables.
-   * @default true
-   */
-  smoothY: boolean;
+export interface IGetPeakListOptions
+  extends IGSDOptions,
+    IOptimizePeaksOptions,
+    IJoinBroadPeaksOptions {
   /**
    * If it is true, the peaks parameters will be optimized.
    * @default false
    */
   optimize: boolean;
-  /**
-   * factor to determine the width at the moment to group the peaks in signals in 'GSD.optimizePeaks' function.
-   * @default 4
-   */
-  factorWidth: number;
-  /**
-   * if it is true, it optimizes the x and intensity by extrapolation.
-   */
-  realTopDetection: boolean;
-  /**
-   * options to shape used to adapt the FWHM
-   * @default {kind:'gaussian'}
-   */
-  shape: { kind: string };
-  /**
-   * options for optimization step, kind represent the algorithm
-   * @default {kind:'lm'}
-   */
-  optimization: { kind: string };
-  /**
-   * Threshold to determine if some peak is candidate to clustering into range.
-   * @default 0.25
-   */
-  broadWidth: number;
-  /**
-   * Options for savitz Golay
-   */
-  sgOptions: { windowSize: number; polynomial: number };
 }
 
-export interface OptionsXYAutoPeaksPicking extends Partial<OptionsGetPeakList> {
+export interface OptionsXYAutoPeaksPicking
+  extends Partial<IGetPeakListOptions> {
   /**
    * Low limit value in the x axis to extract a sub set of points from the input data.
    */
@@ -105,7 +66,7 @@ export interface OptionsXYAutoPeaksPicking extends Partial<OptionsGetPeakList> {
 export function xyAutoPeaksPicking(
   data: DataXY,
   options: OptionsXYAutoPeaksPicking = {},
-): NMRPeak1D[] {
+): Peak1D[] {
   const {
     from,
     to,
@@ -131,7 +92,7 @@ export function xyAutoPeaksPicking(
 
   const cutOff = getCutOff(data.y, { noiseLevel, useSanPlot, thresholdFactor });
 
-  let getPeakOptions = {
+  let getPeakOptions: IGetPeakListOptions = {
     shape,
     broadWidth,
     optimize,
@@ -154,7 +115,7 @@ export function xyAutoPeaksPicking(
   return peaks;
 }
 
-function getPeakList(data: DataXY, options: OptionsGetPeakList) {
+function getPeakList(data: DataXY, options: IGetPeakListOptions) {
   const {
     shape,
     broadWidth,
@@ -173,15 +134,15 @@ function getPeakList(data: DataXY, options: OptionsGetPeakList) {
     shape,
     sgOptions,
     minMaxRatio,
-    broadRatio,
     noiseLevel,
     smoothY,
     realTopDetection,
   });
 
   if (broadWidth) {
-    peakList = joinBroadPeaks(peakList, {
-      width: broadWidth,
+    peakList = joinBroadPeaks(data, peakList, {
+      broadRatio,
+      broadWidth,
       shape,
       optimization,
     });
@@ -198,7 +159,7 @@ function getPeakList(data: DataXY, options: OptionsGetPeakList) {
   return peakList;
 }
 
-function getNegativePeaks(data: DataXY, options: OptionsGetPeakList) {
+function getNegativePeaks(data: DataXY, options: IGetPeakListOptions) {
   let { x, y } = data;
   let negativeDataY = new Float64Array(data.y.length);
   for (let i = 0; i < negativeDataY.length; i++) {

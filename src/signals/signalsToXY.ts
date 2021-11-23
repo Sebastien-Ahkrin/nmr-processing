@@ -1,6 +1,6 @@
 import rescale from 'ml-array-rescale';
 import arraySequentialFill from 'ml-array-sequential-fill';
-import type { Shape1DOptions } from 'spectrum-generator';
+import type { Shape1D } from 'ml-peak-shape-generator';
 
 import type { MakeMandatory } from '../types/MakeMandatory';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
@@ -25,7 +25,7 @@ export interface OptionsSignalsToXY {
   /**
    * Shape options for ml-spectrum-generator
    */
-  shape?: Shape1DOptions;
+  shape?: Shape1D;
   /**
    * The linewidth of the output spectrum, expresed in Hz.
    * @default 1

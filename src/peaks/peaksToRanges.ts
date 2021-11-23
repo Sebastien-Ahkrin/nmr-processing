@@ -91,22 +91,20 @@ const assignSignal = (
     delta: NaN,
     nbPeaks: 1,
     kind: 'signal',
-    startX: peak.x - peak.shape.width,
-    stopX: peak.x + peak.shape.width,
+    startX: peak.x - peak.width,
+    stopX: peak.x + peak.width,
     observe: frequency,
     nucleus,
     integralData: {
-      from: peak.x - peak.shape.width * 3,
-      to: peak.x + peak.shape.width * 3,
+      from: peak.x - peak.width * 3,
+      to: peak.x + peak.width * 3,
       value: 0,
     },
     peaks: [
       {
         x: peak.x,
         intensity: peak.y,
-        shape: {
-          width: peak.shape.width,
-        },
+        width: peak.width,
       },
     ],
   };
@@ -177,9 +175,7 @@ export function peaksToRanges(
             peaksO.push({
               x: peakR.x,
               y: peakR.intensity,
-              shape: {
-                width: peakR.shape.width,
-              },
+              width: peakR.width,
             });
             signal.mask.splice(j, 1);
             signal.mask2.splice(j, 1);
@@ -306,24 +302,22 @@ function detectSignals(
       if (peak.kind) signal1D.kind = peak.kind;
       signals.push(signal1D);
     } else {
-      let tmp = peak.x + peak.shape.width;
+      let tmp = peak.x + peak.width;
       signal1D.stopX = Math.max(signal1D.stopX, tmp);
       signal1D.startX = Math.min(signal1D.startX, tmp);
       signal1D.nbPeaks++;
       signal1D.peaks.push({
         x: peak.x,
         intensity: peak.y,
-        shape: {
-          width: peak.shape.width,
-        },
+        width: peak.width,
       });
       signal1D.integralData.from = Math.min(
         signal1D.integralData.from,
-        peak.x - peak.shape.width * 3,
+        peak.x - peak.width * 3,
       );
       signal1D.integralData.to = Math.max(
         signal1D.integralData.to,
-        peak.x + peak.shape.width * 3,
+        peak.x + peak.width * 3,
       );
       if (peak.kind) signal1D.kind = peak.kind;
     }
@@ -371,5 +365,5 @@ function detectSignals(
  * @private
  */
 function computeArea(peak: Peak1DIntern) {
-  return Math.abs(peak.intensity * peak.shape.width * 1.57); // todo add an option with this value: 1.772453851
+  return Math.abs(peak.intensity * peak.width * 1.57); // todo add an option with this value: 1.772453851
 }
