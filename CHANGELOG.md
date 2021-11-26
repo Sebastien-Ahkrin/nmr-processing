@@ -1,5 +1,16 @@
 # Changelog
 
+## [5.0.0](https://www.github.com/cheminfo/nmr-processing/compare/v4.0.0...v5.0.0) (2021-11-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* xyzAutoPeaksPicking change structure NMRSignal2D
+
+### Features
+
+* xyzAutoPeaksPicking change structure NMRSignal2D ([bc5192f](https://www.github.com/cheminfo/nmr-processing/commit/bc5192f1155743c225b92353c2750519a8eaf1ab))
+
 ## [4.0.0](https://www.github.com/cheminfo/nmr-processing/compare/v3.4.1...v4.0.0) (2021-11-23)
 
 
