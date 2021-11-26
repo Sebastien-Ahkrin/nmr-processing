@@ -6,10 +6,8 @@ export interface Signal2DAxisData {
   resolution?: number;
   atoms?: number[];
   diaIDs?: string[];
-  fromTo?: {
-    from: number;
-    to: number
-  };
+  from: number;
+  to: number;
 }
 export interface NMRSignal2D {
   x: Signal2DAxisData;

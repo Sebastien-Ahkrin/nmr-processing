@@ -309,8 +309,10 @@ const createSignals2D = (peaks: MPFPeak[], options: CreateSignals2DOptions) => {
         }
       }
 
-      signal.x.fromTo = { from: minMax1[0], to: minMax1[1] };
-      signal.y.fromTo = { from: minMax2[0], to: minMax2[1] };
+      signal.x.from = minMax1[0];
+      signal.y.from = minMax2[0];
+      signal.x.to = minMax1[1];
+      signal.y.to = minMax2[1];
       signal.x.delta /= sumZ;
       signal.y.delta /= sumZ;
       signal.peaks = peaks2D;
