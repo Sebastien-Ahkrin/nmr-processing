@@ -8,7 +8,10 @@ import {
 } from '../prediction/predictCarbon';
 import type { NMRSignal1D } from '../types/NMRSignal1D';
 
-import type { NMRSignal1DWithAtomsAndDiaIDs, Targets } from './get1HAssignments';
+import type {
+  NMRSignal1DWithAtomsAndDiaIDs,
+  Targets,
+} from './get1HAssignments';
 import { RestrictionByCS, buildAssignments } from './utils/buildAssignments';
 import generateID from './utils/generateID';
 

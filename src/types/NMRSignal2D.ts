@@ -1,4 +1,4 @@
-import type { MPFPeak } from './MPFPeak';
+import type { Peak2D } from 'ml-matrix-peaks-finder';
 
 export interface Signal2DAxisData {
   nucleus?: string;
@@ -13,8 +13,8 @@ export interface NMRSignal2D {
   x: Signal2DAxisData;
   y: Signal2DAxisData;
   id?: string;
-  peaks?: MPFPeak[];
+  peaks?: Peak2D[];
   kind?: string;
-  //eslint-disable-next-line
+
   _highlight?: (number | string)[];
 }

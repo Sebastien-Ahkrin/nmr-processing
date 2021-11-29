@@ -10,7 +10,6 @@ import { predictProton, PredictProtonOptions } from './predictProton';
 import { getPredictions } from './utils/getPredictions';
 import type { Predictor } from './utils/predict2D';
 
-
 export interface PredictAllOptions {
   /**
    * nucleus label to use in the X axis
@@ -93,13 +92,14 @@ export async function predictAll(
     predictions,
   );
 
-  if (!xPrediction || !yPrediction)
-    {throw new Error('predictions are not availaible');}
+  if (!xPrediction || !yPrediction) {
+    throw new Error('predictions are not availaible');
+  }
 
   predictions = {
     H: xPrediction,
-    C: yPrediction
-  }
+    C: yPrediction,
+  };
 
   const { molfile, diaIDs } = xPrediction;
 

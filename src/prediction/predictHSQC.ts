@@ -49,7 +49,10 @@ export interface PredictHSQCOptions {
  * @returns {Promise<object>} - object with molfile, diaIDs, 2D signals joined signals and zones.
  */
 
-export async function predictHSQC(molecule: Molecule, options: PredictHSQCOptions = {}) {
+export async function predictHSQC(
+  molecule: Molecule,
+  options: PredictHSQCOptions = {},
+) {
   let {
     minLength = 1,
     maxLength = 1,

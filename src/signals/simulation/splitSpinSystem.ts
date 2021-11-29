@@ -53,7 +53,11 @@ interface SplitClusterOptions {
   connectivity: Matrix;
 }
 
-function splitCluster(cluster: Cluster, clusterList: Array<Int16Array>, options: SplitClusterOptions) {
+function splitCluster(
+  cluster: Cluster,
+  clusterList: Array<Int16Array>,
+  options: SplitClusterOptions,
+) {
   let { maxClusterSize, force, nSpins, connectivity } = options;
   if (!force && cluster.size <= maxClusterSize) {
     clusterList.push(getMembers(cluster.indices(), nSpins));
@@ -102,7 +106,11 @@ function splitCluster(cluster: Cluster, clusterList: Array<Int16Array>, options:
   }
 }
 
-function calculateBetas(chemicalShifts: number[], couplingConstants: Matrix, frequency: number) {
+function calculateBetas(
+  chemicalShifts: number[],
+  couplingConstants: Matrix,
+  frequency: number,
+) {
   let nRows = couplingConstants.rows;
   let nColumns = couplingConstants.columns;
   let betas = Matrix.zeros(nRows, nRows);

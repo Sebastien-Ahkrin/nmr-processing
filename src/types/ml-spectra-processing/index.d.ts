@@ -45,7 +45,13 @@ declare module 'ml-spectra-processing' {
 
   interface XYIntegrationOptions extends XGetFromToIndexOptions {}
 
-  function xyIntegration(data: XYNumberArray, options?: XYIntegrationOptions): number;
+  function xyIntegration(
+    data: XYNumberArray,
+    options?: XYIntegrationOptions,
+  ): number;
 
-  function xGetFromToIndex(x: number[] | Float64Array, options?: XGetFromToIndexOptions): number;
+  function xGetFromToIndex(
+    x: number[] | Float64Array,
+    options?: XGetFromToIndexOptions,
+  ): number;
 }

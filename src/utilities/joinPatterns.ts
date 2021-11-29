@@ -1,7 +1,6 @@
 import { couplingPatterns } from '../constants/couplingPatterns';
 import { couplingValues } from '../constants/couplingValues';
 
-
 export function joinPatterns(patterns: string[]) {
   const sum = patterns.reduce((sum, pattern) => {
     if (isNaN(couplingValues[pattern])) {

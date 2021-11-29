@@ -1,6 +1,6 @@
-import type { Molecule } from "openchemlib";
+import type { Molecule } from 'openchemlib';
 
-import type { Prediction1D } from "../../types/prediction1D";
+import type { Prediction1D } from '../../types/prediction1D';
 
 import type { Predictions, PredictOptions, Predictors } from './predict2D';
 

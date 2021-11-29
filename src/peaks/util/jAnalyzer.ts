@@ -154,7 +154,11 @@ export default {
           k = 1;
           let nFlagged = 2;
           maxFlagged = Math.pow(2, n) - 1;
-          while (jCouplings.length < n && nFlagged < maxFlagged && k < peaks.length) {
+          while (
+            jCouplings.length < n &&
+            nFlagged < maxFlagged &&
+            k < peaks.length
+          ) {
             counter += 1;
             // 4.1. Increment j. Set k to the number of the first unflagged component.
             j++;
@@ -222,8 +226,7 @@ function updateSignal(signal: SignalInternMandatory, jCouplings: number[]) {
   signal.startX = peaks[0].x / signal.observe - peaks[0].width;
   signal.stopX =
     peaks[nbPeaks - 1].x / signal.observe + peaks[nbPeaks - 1].width;
-  signal.integralData.from =
-    peaks[0].x / signal.observe - peaks[0].width * 3;
+  signal.integralData.from = peaks[0].x / signal.observe - peaks[0].width * 3;
   signal.integralData.to =
     peaks[nbPeaks - 1].x / signal.observe + peaks[nbPeaks - 1].width * 3;
   // Compile the pattern and format the constant couplings
@@ -525,10 +528,7 @@ function symmetrize(
 
         if (Math.abs(diffL - diffR) < maxError) {
           avg = Math.min(peaks[left].intensity, peaks[right].intensity);
-          avgWidth = Math.min(
-            peaks[left].width,
-            peaks[right].width,
-          );
+          avgWidth = Math.min(peaks[left].width, peaks[right].width);
           peaks[left].intensity = peaks[right].intensity = avg;
           peaks[left].width = peaks[right].width = avgWidth;
           middle = [

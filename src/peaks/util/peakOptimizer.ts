@@ -1,10 +1,11 @@
-import type { MPFPeak } from '../../types/MPFPeak';
+import type { Peak2D } from 'ml-matrix-peaks-finder';
+
 import type { NMRSignal2D } from '../../types/NMRSignal2D';
 
 let diagonalError = 0.05;
 let tolerance = 0.05;
 
-export function clean(peaks: MPFPeak[], threshold: number) {
+export function clean(peaks: Peak2D[], threshold: number) {
   let max = Number.NEGATIVE_INFINITY;
   // double min = Double.MAX_VALUE;
   for (let i = peaks.length - 1; i >= 0; i--) {
@@ -151,7 +152,7 @@ function completeMissingIfNeeded(
       },
       peaks: [{ x: thisSignal.x.delta, y: thisSignal.x.delta, z: 1 }],
     };
-    newSignal.peaks = [{ x: thisSignal.x.delta, y: thisSignal.x.delta, z: 1 }]
+    newSignal.peaks = [{ x: thisSignal.x.delta, y: thisSignal.x.delta, z: 1 }];
     output.push(newSignal);
     tmpProp = [0, thisProp[1]];
     properties.push(tmpProp);

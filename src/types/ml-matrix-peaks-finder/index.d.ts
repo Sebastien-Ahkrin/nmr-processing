@@ -8,7 +8,7 @@ declare module 'ml-matrix-peaks-finder' {
     cols: number;
     labelling?: 'drain' | 'floodfill';
   }
-  interface MPFPeak {
+  interface Peak2D {
     x: number;
     y: number;
     z: number;
@@ -20,5 +20,5 @@ declare module 'ml-matrix-peaks-finder' {
   function findPeaks2DRegion(
     absoluteData: number[] | Float64Array,
     options?: FindPeaks2DRegionOptions,
-  ): MPFPeak[];
+  ): Peak2D[];
 }

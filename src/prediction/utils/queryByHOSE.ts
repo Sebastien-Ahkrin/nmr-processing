@@ -37,7 +37,7 @@ export function queryByHose(
     for (const atomNumber of element.atoms) {
       let atom = {
         diaIDs: [element.oclID],
-        delta: res ? res[0]: null,
+        delta: res ? res[0] : null,
         atoms: [atomNumber],
         nbAtoms: 1,
         level: level,
