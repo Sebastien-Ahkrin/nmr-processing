@@ -1,5 +1,13 @@
 # Changelog
 
+### [5.0.1](https://www.github.com/cheminfo/nmr-processing/compare/v5.0.0...v5.0.1) (2021-11-30)
+
+
+### Bug Fixes
+
+* update dependencies n fix eslint ([dc9e8d4](https://www.github.com/cheminfo/nmr-processing/commit/dc9e8d405153932142ae5a339000cec2d6637c5e))
+* update workflow actions ([0f71100](https://www.github.com/cheminfo/nmr-processing/commit/0f711008f5010d5a3940e7054d75bc38f6bae8b7))
+
 ## [5.0.0](https://www.github.com/cheminfo/nmr-processing/compare/v4.0.0...v5.0.0) (2021-11-26)
 
 
