@@ -4,5 +4,5 @@ export interface Jcoupling {
   assignment?: string | string[];
   diaIDs?: string[];
   multiplicity?: string;
-  distance?: number;
+  pathLength?: number;
 }
