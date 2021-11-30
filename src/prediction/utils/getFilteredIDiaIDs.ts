@@ -24,8 +24,7 @@ export function getFilteredIDiaIDs(
 
   const molfile = molecule.toMolfile();
 
-  let groupedDiaIDs =
-    getGroupedDiastereotopicAtomIDs(molecule);
+  let groupedDiaIDs = getGroupedDiastereotopicAtomIDs(molecule);
 
   let carbonDiaIDs = groupedDiaIDs
     .filter((e) => e.atomLabel === 'C')

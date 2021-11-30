@@ -1,8 +1,8 @@
+import type { Peak2D } from 'ml-matrix-peaks-finder';
 import simpleClustering from 'ml-simple-clustering';
 
 import type { JAxisKeys } from '../peaks/util/jAnalyzer';
 import jAnalyzer from '../peaks/util/jAnalyzer';
-import type { MPFPeak } from '../types/MPFPeak';
 import type { MakeMandatory } from '../types/MakeMandatory';
 import type { NMRSignal2D } from '../types/NMRSignal2D';
 
@@ -96,7 +96,7 @@ function compilePattern(
     for (const peak of peaks) {
       if (!peak.width) peak.width = 0.02;
     }
-    peaks.sort((a: MPFPeak, b: MPFPeak) => a.y - b.y);
+    peaks.sort((a: Peak2D, b: Peak2D) => a.y - b.y);
   }
 
   for (let i = 0; i < signals.length; i++) {
@@ -137,7 +137,7 @@ function compilePattern(
   return signals;
 }
 
-interface Peak2DHack extends MPFPeak {
+interface Peak2DHack extends Peak2D {
   width?: number;
 }
 type Signal2DHack = Omit<NMRSignal2D, 'peaks'> & {
@@ -149,7 +149,7 @@ type Signal2DHack = Omit<NMRSignal2D, 'peaks'> & {
   observe: number;
 };
 
-function createSignals2D(peaksInput: MPFPeak[], options: any) {
+function createSignals2D(peaksInput: Peak2D[], options: any) {
   let { observedFrequencies, tolerances, nuclei, dx, dy } = options;
 
   const peaks: Peak2DHack[] = JSON.parse(JSON.stringify(peaksInput));

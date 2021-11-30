@@ -1,13 +1,13 @@
 import { Matrix } from 'ml-matrix';
 import * as convolution from 'ml-matrix-convolution';
 import * as matrixPeakFinders from 'ml-matrix-peaks-finder';
+import type { Peak2D } from 'ml-matrix-peaks-finder';
 import simpleClustering from 'ml-simple-clustering';
 
 import { determineRealTop } from '../peaks/util/determineRealTop';
 import { getKernel } from '../peaks/util/getKernel';
 import type { GetKernelOptions } from '../peaks/util/getKernel';
 import * as PeakOptimizer from '../peaks/util/peakOptimizer';
-import type { MPFPeak } from '../types/MPFPeak';
 import type { NMRSignal2D } from '../types/NMRSignal2D';
 
 const smallFilter = [
@@ -201,7 +201,7 @@ export interface CreateSignals2DOptions {
   minX: number;
   maxX: number;
 }
-const createSignals2D = (peaks: MPFPeak[], options: CreateSignals2DOptions) => {
+const createSignals2D = (peaks: Peak2D[], options: CreateSignals2DOptions) => {
   let {
     nCols,
     nRows,

@@ -31,5 +31,5 @@ describe('get1HAssignments', () => {
       },
     });
     expect(assignments).toHaveLength(5);
-  })
+  });
 });

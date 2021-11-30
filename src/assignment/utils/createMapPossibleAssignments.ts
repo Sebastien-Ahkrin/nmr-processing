@@ -1,7 +1,10 @@
 import { MakeMandatory } from '../../types/MakeMandatory';
 import type { Targets } from '../get1HAssignments';
 
-import type { RestrictionByCS, Predictions1Dassignments } from './buildAssignments';
+import type {
+  RestrictionByCS,
+  Predictions1Dassignments,
+} from './buildAssignments';
 
 type RestrictionByCSMandatory = MakeMandatory<
   RestrictionByCS,

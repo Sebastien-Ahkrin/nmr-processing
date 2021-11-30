@@ -1,9 +1,6 @@
 import treeSet from 'ml-tree-set';
 
-import {
-  Targets,
-  NMRSignal1DWithAtomsAndDiaIDs,
-} from '../get1HAssignments';
+import { Targets, NMRSignal1DWithAtomsAndDiaIDs } from '../get1HAssignments';
 
 import { createMapPossibleAssignments } from './createMapPossibleAssignments';
 import { exploreTreeRec } from './exploreTreeRec';

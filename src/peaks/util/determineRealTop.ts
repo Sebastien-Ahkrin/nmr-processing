@@ -1,7 +1,6 @@
 import LM from 'ml-levenberg-marquardt';
+import type { Peak2D } from 'ml-matrix-peaks-finder';
 import { Gaussian2D } from 'ml-peak-shape-generator';
-
-import type { MPFPeak } from '../../types/MPFPeak';
 
 const direction8X = [-1, -1, -1, 0, 0, 1, 1, 1];
 const direction8Y = [-1, 0, 1, -1, 1, -1, 0, 1];
@@ -10,7 +9,7 @@ const direction16Y = [-2, -1, 0, 1, 2, -2, 2, -2, 2, -2, 2, -2, -1, 0, 1, 2];
 
 type Data = number[] | Float64Array;
 
-export function determineRealTop(peaks: MPFPeak[], options: any) {
+export function determineRealTop(peaks: Peak2D[], options: any) {
   let { nCols, absoluteData, originalData, minX, maxX, minY, maxY } = options;
   for (let i = 0; i < peaks.length; i++) {
     let xIndex = Math.round(peaks[i].x);
@@ -148,7 +147,7 @@ function paramGaussian2D(intervalX: number, intervalY: number, nCols: number) {
       let xIndex = t % nCols;
       let yIndex = (t - xIndex) / nCols;
       for (let i = 0; i < nL; i++) {
-        gaussian2D.fwhm = {x: p[i + 3 * nL], y: p[i + 4 * nL]};
+        gaussian2D.fwhm = { x: p[i + 3 * nL], y: p[i + 4 * nL] };
         result +=
           p[i + 2 * nL] *
           gaussian2D.fct(

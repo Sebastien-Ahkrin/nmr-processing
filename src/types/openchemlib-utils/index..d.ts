@@ -48,7 +48,10 @@ declare module 'openchemlib-utils' {
   export interface PathInfo extends AtomInfo {
     paths: HoseCodesForPath[];
   }
-  function getPathsInfo(molecule: Molecule, options?: GetPathsInfoOptions): PathInfo[];
+  function getPathsInfo(
+    molecule: Molecule,
+    options?: GetPathsInfoOptions,
+  ): PathInfo[];
 
   export interface AtomInfo {
     oclID: string;
@@ -102,20 +105,25 @@ declare module 'openchemlib-utils' {
   export interface HoseCodesForPath {
     atoms: number[];
     from: number;
-    to: number,
-    torsion?: number,
+    to: number;
+    torsion?: number;
     hoses: Hoses;
     length: number;
   }
 
-  function getHoseCodesForPath(molecule: Molecule, from: string, to: string, maxLength: number): HoseCodesForPath;
+  function getHoseCodesForPath(
+    molecule: Molecule,
+    from: string,
+    to: string,
+    maxLength: number,
+  ): HoseCodesForPath;
 
   export interface GetConnectivityMatrixOptions {
     /**
      * get the path length between atoms
      * @default false
      */
-    pathLength?: boolean
+    pathLength?: boolean;
     /**
      * set the nominal mass of the atoms on diagonal
      * @default false
@@ -142,7 +150,10 @@ declare module 'openchemlib-utils' {
      */
     stda?: boolean | number;
   }
-  function getConnectivityMatrix(molecule: Molecule, options?: GetConnectivityMatrixOptions): number[][] | Float64Array[];
+  function getConnectivityMatrix(
+    molecule: Molecule,
+    options?: GetConnectivityMatrixOptions,
+  ): number[][] | Float64Array[];
 
   function getDiastereotopicAtomIDs(molecule: Molecule): string[];
 }
