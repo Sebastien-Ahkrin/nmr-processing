@@ -2,9 +2,9 @@ import { DataXY } from 'cheminfo-types';
 import { gsd, joinBroadPeaks, optimizePeaks } from 'ml-gsd';
 import type {
   Peak1D,
-  IGSDOptions,
-  IOptimizePeaksOptions,
-  IJoinBroadPeaksOptions,
+  GSDOptions,
+  OptimizePeaksOptions,
+  JoinBroadPeaksOptions,
 } from 'ml-gsd';
 import {
   xyExtract,
@@ -26,9 +26,9 @@ interface OptionsGetCutOff {
 }
 
 export interface IGetPeakListOptions
-  extends IGSDOptions,
-    IOptimizePeaksOptions,
-    IJoinBroadPeaksOptions {
+  extends GSDOptions,
+    OptimizePeaksOptions,
+    JoinBroadPeaksOptions {
   /**
    * If it is true, the peaks parameters will be optimized.
    * @default false

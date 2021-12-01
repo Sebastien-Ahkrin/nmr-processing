@@ -4,6 +4,7 @@ import * as matrixPeakFinders from 'ml-matrix-peaks-finder';
 import type { Peak2D } from 'ml-matrix-peaks-finder';
 import simpleClustering from 'ml-simple-clustering';
 
+import { NMRZone } from '..';
 import { determineRealTop } from '../peaks/util/determineRealTop';
 import { getKernel } from '../peaks/util/getKernel';
 import type { GetKernelOptions } from '../peaks/util/getKernel';
@@ -86,7 +87,7 @@ export interface XYZAutoPeaksPickingOptions {
   kernel?: GetKernelOptions;
 }
 
-export function xyzAutoPeaksPicking(
+export function xyzAutoZonesPicking(
   spectraData: Data2D,
   options: XYZAutoPeaksPickingOptions,
 ) {
@@ -178,7 +179,41 @@ export function xyzAutoPeaksPicking(
     signals = PeakOptimizer.enhanceSymmetry(signals);
   }
 
-  return signals;
+  return formatZones(signals);
+}
+
+function formatZones(signals: NMRSignal2D[]) {
+  let zones: NMRZone[] = [];
+  for (const signal of signals) {
+    let minMax1 = [Number.MAX_VALUE, 0];
+    let minMax2 = [Number.MAX_VALUE, 0];
+    for (const peak of signal.peaks || []) {
+      if (peak.minX < minMax1[0]) {
+        minMax1[0] = peak.minX;
+      }
+      if (peak.maxX > minMax1[1]) {
+        minMax1[1] = peak.maxX;
+      }
+      if (peak.minY < minMax2[0]) {
+        minMax2[0] = peak.minY;
+      }
+      if (peak.maxY > minMax2[1]) {
+        minMax2[1] = peak.maxY;
+      }
+    }
+    zones.push({
+      x: {
+        from: minMax1[0],
+        to: minMax1[1],
+      },
+      y: {
+        from: minMax2[0],
+        to: minMax2[1],
+      },
+      signals: [signal],
+    });
+  }
+  return zones;
 }
 
 /**
@@ -246,9 +281,6 @@ const createSignals2D = (peaks: Peak2D[], options: CreateSignals2DOptions) => {
     peaks[i].maxY = minY + dy * peaks[i].maxY;
 
     // Still having problems to correctly detect peaks on those areas. So I'm removing everything there.
-    if (peaks[i].y < -1 || peaks[i].y >= 210) {
-      peaks.splice(i, 1);
-    }
   }
   // The connectivity matrix is an square and symmetric matrix, so we'll only store the upper diagonal in an
   // array like form
@@ -283,9 +315,7 @@ const createSignals2D = (peaks: Peak2D[], options: CreateSignals2DOptions) => {
           resolution: dy,
         },
       };
-      let peaks2D = [];
-      let minMax1 = [Number.MAX_VALUE, 0];
-      let minMax2 = [Number.MAX_VALUE, 0];
+      let peaks2D: Peak2D[] = [];
       let sumZ = 0;
 
       for (let jPeak = 0; jPeak < cluster.length; jPeak++) {
@@ -294,25 +324,9 @@ const createSignals2D = (peaks: Peak2D[], options: CreateSignals2DOptions) => {
           signal.x.delta += peaks[jPeak].x * peaks[jPeak].z;
           signal.y.delta += peaks[jPeak].y * peaks[jPeak].z;
           sumZ += peaks[jPeak].z;
-          if (peaks[jPeak].minX < minMax1[0]) {
-            minMax1[0] = peaks[jPeak].minX;
-          }
-          if (peaks[jPeak].maxX > minMax1[1]) {
-            minMax1[1] = peaks[jPeak].maxX;
-          }
-          if (peaks[jPeak].minY < minMax2[0]) {
-            minMax2[0] = peaks[jPeak].minY;
-          }
-          if (peaks[jPeak].maxY > minMax2[1]) {
-            minMax2[1] = peaks[jPeak].maxY;
-          }
         }
       }
 
-      signal.x.from = minMax1[0];
-      signal.y.from = minMax2[0];
-      signal.x.to = minMax1[1];
-      signal.y.to = minMax2[1];
       signal.x.delta /= sumZ;
       signal.y.delta /= sumZ;
       signal.peaks = peaks2D;

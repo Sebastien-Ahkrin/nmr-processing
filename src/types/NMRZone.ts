@@ -1,13 +1,10 @@
-import type { NMRSignal2D } from './NMRSignal2D';
+import type { FromTo } from 'cheminfo-types';
 
-interface FromTo {
-  from: number;
-  to: number;
-}
+import type { NMRSignal2D } from './NMRSignal2D';
 
 export interface NMRZone {
   x: FromTo;
   y: FromTo;
   id?: string;
-  signals: NMRSignal2D;
+  signals: NMRSignal2D[];
 }

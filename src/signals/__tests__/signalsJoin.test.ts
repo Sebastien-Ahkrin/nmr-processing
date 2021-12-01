@@ -16,8 +16,8 @@ test('signalsJoin', () => {
       atoms: [],
       assignment: 'a b',
       js: [
-        { diaIDs: ['A'], distance: 3, multiplicity: 'd', coupling: 3 },
-        { diaIDs: ['B'], distance: 3, multiplicity: 'd', coupling: 2 },
+        { diaIDs: ['A'], pathLength: 3, multiplicity: 'd', coupling: 3 },
+        { diaIDs: ['B'], pathLength: 3, multiplicity: 'd', coupling: 2 },
       ],
     },
     {
@@ -29,7 +29,7 @@ test('signalsJoin', () => {
       js: [
         {
           multiplicity: 't',
-          distance: 3,
+          pathLength: 3,
           coupling: 1.0005,
         },
       ],

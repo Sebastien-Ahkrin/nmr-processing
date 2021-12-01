@@ -46,7 +46,7 @@ const takeCareDiaIDs = (
 /**
  * Join couplings smaller than a define tolerance.
  * The resulting coupling should be an average of the existing one.
- * If distance is specified and is not always the same this property will be removed.
+ * If pathLength is specified and is not always the same this property will be removed.
  */
 export function signalJoinCouplings(
   signal: NMRSignal1D,
@@ -111,7 +111,7 @@ function groupJCouplings(
     ) as string[];
 
     let distances = distinctValues(
-      group.map((group) => group.distance) as number[],
+      group.map((group) => group.pathLength) as number[],
     ) as number[];
 
     let multiplicity = joinPatterns(
@@ -126,7 +126,7 @@ function groupJCouplings(
     };
 
     if (diaIDs.length === 1) newJ.diaIDs = diaIDs;
-    if (distances.length === 1 && distances[0]) newJ.distance = distances[0];
+    if (distances.length === 1 && distances[0]) newJ.pathLength = distances[0];
     if (assignment.length > 0) newJ.assignment = assignment;
     if (atoms.length > 0) newJ.atoms = atoms;
     signal.js.push(newJ);

@@ -17,7 +17,7 @@ export interface SignalsJoinOptions {
 
 type JcouplingFromPrediction = MakeMandatory<
   Jcoupling,
-  'multiplicity' | 'diaIDs' | 'distance'
+  'multiplicity' | 'diaIDs' | 'pathLength'
 >;
 type Signal1DWidthDiaID = MakeMandatory<NMRSignal1D, 'diaIDs'>;
 type Signal1DWidthJsAndDiaID = Omit<Signal1DWidthDiaID, 'js'> & {
@@ -29,8 +29,8 @@ const localeCompareJcouplingKeys = (
   a: JcouplingFromPrediction,
   b: JcouplingFromPrediction,
 ) => {
-  const aa = `${a.diaIDs.join(' ')}${a.distance}`;
-  const bb = `${b.diaIDs.join(' ')}${b.distance}`;
+  const aa = `${a.diaIDs.join(' ')}${a.pathLength}`;
+  const bb = `${b.diaIDs.join(' ')}${b.pathLength}`;
   return localeCompare(aa, bb);
 };
 function checkForMandatory(
@@ -41,7 +41,7 @@ function checkForMandatory(
     if (!signal.diaIDs) throw new Error('there is not diaIDs');
     for (const jcoupling of signal.js) {
       if (!jcoupling.diaIDs) throw new Error('there is not diaIDs');
-      if (!jcoupling.distance) throw new Error('there is not distance');
+      if (!jcoupling.pathLength) throw new Error('there is not pathLength');
     }
   }
 }
@@ -68,7 +68,7 @@ export function signalsJoin(
     const keyDiaIDs = signal.diaIDs.join(' ');
     let id = `${keyDiaIDs} ${signal.js
       .map(
-        (j: JcouplingFromPrediction) => `${j.diaIDs.join(' ')} ${j.distance}`,
+        (j: JcouplingFromPrediction) => `${j.diaIDs.join(' ')} ${j.pathLength}`,
       )
       .sort(localeCompare)
       .join(' ')}`;
@@ -80,13 +80,13 @@ export function signalsJoin(
   // for each group we need to combine assignments and average couplings
   let newSignals: Signal1DWidthJsAndDiaID[] = [];
   Object.values(groupedSignals).forEach((group) => {
-    // joining couplings only if diaID and distance are equal
+    // joining couplings only if diaID and pathLength are equal
     let js: JcouplingFromPrediction[] = [];
     for (let i = 0; i < group[0].js.length; i++) {
       const coupling = group[0].js[i];
       js.push({
         diaIDs: coupling.diaIDs,
-        distance: coupling.distance,
+        pathLength: coupling.pathLength,
         multiplicity: coupling.multiplicity,
         coupling: mean(group.map((item) => item.js[i].coupling)),
       });

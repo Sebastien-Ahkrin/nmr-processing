@@ -8,13 +8,13 @@
       {
         "coupling": 5,
         "multiplicity": "d",
-        "distance": 3,
+        "pathLength": 3,
         "diaIDs": ["A"]
       },
       {
         "coupling": 3,
         "multiplicity": "d",
-        "distance": 3,
+        "pathLength": 3,
         "diaIDs": ["B"]
       }
     ]
@@ -28,13 +28,13 @@
       {
         "coupling": 1,
         "multiplicity": "d",
-        "distance": 3,
+        "pathLength": 3,
         "diaIDs": ["A"]
       },
       {
         "coupling": 1,
         "multiplicity": "d",
-        "distance": 3,
+        "pathLength": 3,
         "diaIDs": ["B"]
       }
     ]
@@ -47,13 +47,13 @@
       {
         "coupling": 1,
         "multiplicity": "d",
-        "distance": 3,
+        "pathLength": 3,
         "diaIDs": ["C"]
       },
       {
         "coupling": 1.001,
         "multiplicity": "d",
-        "distance": 3,
+        "pathLength": 3,
         "diaIDs": ["B"]
       }
     ]

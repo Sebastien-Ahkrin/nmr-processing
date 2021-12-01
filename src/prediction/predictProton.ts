@@ -102,7 +102,7 @@ function protonParser(
         atoms: [linked],
         diaIDs: [diaIDs[linked]],
         multiplicity: 'd',
-        distance: distanceMatrix[atom][linked],
+        pathLength: distanceMatrix[atom][linked],
       });
       signal.js.sort((a, b) => b.coupling - a.coupling);
     }

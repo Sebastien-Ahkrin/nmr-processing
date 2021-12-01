@@ -48,7 +48,7 @@ export interface OptionsSignalsToXY {
   maxClusterSize?: number;
 }
 
-type JcouplingFromPrediction = MakeMandatory<Jcoupling, 'distance'>;
+type JcouplingFromPrediction = MakeMandatory<Jcoupling, 'pathLength'>;
 type Signal1DWidthAtomsIDsAndDiaID = MakeMandatory<NMRSignal1D, 'atoms'>;
 type Signal1DWidthJsAndDiaID = Omit<Signal1DWidthAtomsIDsAndDiaID, 'js'> & {
   js: JcouplingFromPrediction[];

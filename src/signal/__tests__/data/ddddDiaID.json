@@ -5,13 +5,13 @@
     {
       "coupling": 1,
       "multiplicity": "d",
-      "distance": 3,
+      "pathLength": 3,
       "diaIDs": ["A"]
     },
     {
       "coupling": 2,
       "multiplicity": "d",
-      "distance": 3,
+      "pathLength": 3,
       "diaIDs": ["B"]
     },
     {

@@ -27,7 +27,7 @@ export * from './utilities/rangeFromSignal';
 export * from './xy/xyAutoPeaksPicking';
 export * from './xy/xyAutoRangesPicking';
 
-export * from './xyz/xyzAutoPeaksPicking';
+export * from './xyz/xyzAutoZonesPicking';
 export * from './xyz/xyzJResAnalyzer';
 
 export * from './databases/getDatabase';
