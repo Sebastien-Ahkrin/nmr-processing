@@ -1,11 +1,11 @@
 import correlationData from '../data/correlations';
+import { getTargetsAndCorrelations } from '../getTargetsAndCorrelations';
 import { getIntegrationOfAttachedProton } from '../getIntegrationOfAttachedProton';
-import { formatCorrelations } from '../formatCorrelations';
 
 describe('getIntegrationOfAttachedProton', () => {
-  const { targets, correlations } = formatCorrelations(correlationData);
+  const { targets, correlations } = getTargetsAndCorrelations(correlationData);
   it('simple test', () => {
-    const carbonTarget = Object.values(targets['C']);
+    const carbonTarget = Object.values(targets.C);
     const expectedResult = [0,0,2];
     for (let i = 0; i < carbonTarget.length; i++) {
       const target = carbonTarget[i];

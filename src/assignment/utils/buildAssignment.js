@@ -1,5 +1,8 @@
+import { writeFileSync } from 'fs';
+
 import treeSet from 'ml-tree-set';
 import { getConnectivityMatrix } from 'openchemlib-utils';
+
 
 import { predictCarbon } from '../../prediction/predictCarbon';
 import { predictProton } from '../../prediction/predictProton';
@@ -24,6 +27,7 @@ export async function buildAssignment(props) {
     correlations,
     assignmentOrder,
     predictionOptions,
+    predictions: inputPrediction = {},
     targets,
   } = props;
 
@@ -53,7 +57,11 @@ export async function buildAssignment(props) {
   for (const atomTypesToPredict of assignmentOrder) {
     for (const atomType of atomTypesToPredict) {
       const options = predictionOptions[atomType];
-      const { joinedSignals } = await predictor[atomType](molecule, options);
+      console.log('prediction exist', !!inputPrediction[atomType])
+      let { joinedSignals } = inputPrediction[atomType]
+        ? { joinedSignals: inputPrediction[atomType] }
+        : await predictor[atomType](molecule, options);
+
       if (!predictions[atomType]) predictions[atomType] = {};
       for (let prediction of joinedSignals) {
         // @TODO: REFACTOR it could be missed if the CS is not a requirement
@@ -73,25 +81,31 @@ export async function buildAssignment(props) {
         currentIndex: 0,
       };
     }
-
+    console.log('predictions', predictions);
     createMapPossibleAssignment(possibleAssignmentMap, {
       restrictionByCS,
       predictions,
       targets,
     });
-
+    console.log('assign map', possibleAssignmentMap);
     const diaIDPeerPossibleAssignment = {};
     for (const atomType in possibleAssignmentMap) {
-      diaIDPeerPossibleAssignment[atomType] = Object.keys(possibleAssignmentMap[atomType]);
+      diaIDPeerPossibleAssignment[atomType] = Object.keys(
+        possibleAssignmentMap[atomType],
+      );
     }
 
-    let sourceOfPartials = getSourceOfPartials(store, infoByAtomType, atomTypesToPredict);
+    let sourceOfPartials = getSourceOfPartials(
+      store,
+      infoByAtomType,
+      atomTypesToPredict,
+    );
 
     store = {
       solutions: new treeSet(comparator),
       nSolutions: 0,
     };
-    console.log('source', sourceOfPartials)
+    console.log('source', sourceOfPartials);
     let first = true;
     for (let partial of sourceOfPartials) {
       // if (!first) continue;
@@ -123,13 +137,15 @@ export async function buildAssignment(props) {
 }
 
 function getSourceOfPartials(store, infoByAtomType, currentAtoms) {
-  return store.nSolutions > 0 ? store.solutions.elements.map((e) => {
-    let currentAssignment = e.assignment;
-    for (const atom of currentAtoms) {
-      currentAssignment[atom] = fillPartial(infoByAtomType[atom].nSources);
-    }
-    return currentAssignment;
-  }) : initializePartials(infoByAtomType, currentAtoms);
+  return store.nSolutions > 0
+    ? store.solutions.elements.map((e) => {
+        let currentAssignment = e.assignment;
+        for (const atom of currentAtoms) {
+          currentAssignment[atom] = fillPartial(infoByAtomType[atom].nSources);
+        }
+        return currentAssignment;
+      })
+    : initializePartials(infoByAtomType, currentAtoms);
 }
 
 function initializePartials(infoByAtomType, currentAtoms) {
@@ -138,7 +154,7 @@ function initializePartials(infoByAtomType, currentAtoms) {
     const value = currentAtoms.includes(atom) ? null : '*';
     partial[atom] = fillPartial(infoByAtomType[atom].nSources, value);
   }
-  return [partial]
+  return [partial];
 }
 
 function fillPartial(nSources, value = null) {

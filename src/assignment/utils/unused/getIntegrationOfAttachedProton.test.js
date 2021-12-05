@@ -1,9 +1,9 @@
 import correlationData from '../../data/correlations';
-import { formatCorrelations } from '../formatCorrelations';
+import { getTargetsAndCorrelations } from '../getTargetsAndCorrelations';
 import { getIntegrationOfAttachedProton } from '../getIntegrationOfAttachedProton';
 
 describe('getIntegrationOfAttachedProton', () => {
-  const { targets, correlations } = formatCorrelations(correlationData);
+  const { targets, correlations } = getTargetsAndCorrelations(correlationData);
   it('simple test', () => {
     const carbonTarget = Object.values(targets.C);
     const expectedResult = [0,0,2];

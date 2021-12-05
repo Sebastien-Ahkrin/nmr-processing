@@ -1,7 +1,7 @@
 import { addDiastereotopicMissingChirality } from 'openchemlib-utils';
 
 import { buildAssignment } from './utils/buildAssignment';
-import { formatCorrelations } from './utils/formatCorrelations';
+import { getTargetsAndCorrelations } from './utils/getTargetsAndCorrelations';
 import getWorkFlow from './utils/getWorkFlow';
 
 /**
@@ -10,7 +10,19 @@ import getWorkFlow from './utils/getWorkFlow';
  * if it is equal to zero the chemical shift is not a restriction, and positive to restrict the assignment by chemical shift too.
  */
 
-export async function autoAssignment(molecule, props = {}) {
+export async function autoAssignment(input, options = {}) {
+  let {
+    restrictionByCS = {},
+    justAssign,
+    minScore = 1,
+    maxSolutions = 10,
+    nbAllowedUnAssigned = 0,
+    timeout = 6000,
+    predictionOptions = {},
+    predictions = {},
+  } = options;
+}
+export async function autoAssignmentOld(molecule, props = {}) {
   let {
     correlations,
     restrictionByCS = {},
@@ -20,6 +32,7 @@ export async function autoAssignment(molecule, props = {}) {
     nbAllowedUnAssigned = 0,
     timeout = 6000,
     predictionOptions = {},
+    predictions = {},
   } = props;
 
   const {
@@ -36,9 +49,11 @@ export async function autoAssignment(molecule, props = {}) {
   molecule.addImplicitHydrogens();
   addDiastereotopicMissingChirality(molecule);
 
-  const { assignmentOrder } = getWorkFlow(correlations, justAssign);
   const { targets, correlations: correlationsWithIndirectLinks } =
-    formatCorrelations(correlations);
+    getTargetsAndCorrelations(correlations);
+
+  const { assignmentOrder } = getWorkFlow(correlations, justAssign);
+  
   const solutions = await buildAssignment({
     restrictionByCS: {
       tolerance,
@@ -54,6 +69,7 @@ export async function autoAssignment(molecule, props = {}) {
     correlations: correlationsWithIndirectLinks,
     targets,
     predictionOptions,
+    predictions,
   });
   return solutions.solutions.elements;
 }

@@ -1,12 +1,11 @@
 import correlationData from '../../data/ethyl-benzene.json';
 import predictions from '../../data/ethylbenzenePredictions.json';
-
 import { createMapPossibleAssignment } from '../createMapPossibleAssignment';
-import { formatCorrelations } from '../formatCorrelations';
+import { getTargetsAndCorrelations } from '../getTargetsAndCorrelations';
 import { partialScore } from '../partialScore';
 
 
-const { targets, correlations } = formatCorrelations(correlationData.correlations.values);
+const { targets, correlations } = getTargetsAndCorrelations(correlationData.correlations.values);
 let possibleAssignmentMap = createMapPossibleAssignment({
     restrictionByCS: {
       tolerance: 1,

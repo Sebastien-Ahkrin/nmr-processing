@@ -39,9 +39,9 @@ function groupCarbonTargetByIntegrationZone(
   return targetByIntegral.map((t) => ({
     atomType: 'C',
     targetIDs: t.targetIDs,
-    integration: Array.from(t.attachments).reduce((sum, index) => {
+    integration: correlations ? Array.from(t.attachments).reduce((sum, index) => {
       return correlations[index].integration + sum;
-    }, 0),
+    }, 0) : null,
   }));
 }
 

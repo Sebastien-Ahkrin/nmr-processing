@@ -38,7 +38,7 @@ export function exploreTreeRec(props, currentIndex, partial, store) {
       }
       continue;
     }
-    
+
     if (currentIndex === nSources - 1 && score >= lowerBoundScore) {
       console.log('pasa')
       addSolution(store, { predictions, partial, score, maxSolutions });

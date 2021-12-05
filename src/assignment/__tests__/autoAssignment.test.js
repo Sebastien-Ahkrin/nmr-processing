@@ -1,24 +1,54 @@
 import OCL from 'openchemlib';
 
+import {writeFileSync} from 'fs';
+
 import { autoAssignment } from '../autoAssignment';
+
 import ethylbenzeneData from './data/ethyl-benzene.json';
+import ethylbenzeneCarbonPrediction from './data/ethylbenzenePrediction_C.json';
+import ethylbenzeneProtonPrediction from './data/ethylbenzenePrediction_H.json';
 
 describe('automatic assignment', () => {
   const molfile = String(ethylbenzeneData.molecules[0].molfile);
   const correlationData = ethylbenzeneData.correlations.values;
   const molecule = OCL.Molecule.fromMolfile(molfile);
-  it('simple assignment', async () => {
+  it.only('simple assignment', async () => {
     let result = await autoAssignment(molecule, {
-      nbAllowedUnAssigned: 0,
-      justAssign: ['H'],
+      nbAllowedUnAssigned: 1,
       correlations: correlationData,
-      minScore: 0.1,
+      minScore: 0.01,
+      maxSolutions: 4,
+      predictions: {
+        C: ethylbenzeneCarbonPrediction,
+        H: ethylbenzeneProtonPrediction,
+      },
       restrictionByCS: {
         tolerance: 1,
         useChemicalShiftScore: true,
         chemicalShiftRestriction: true,
       },
     });
+    console.log(result)
+    writeFileSync('result.json', JSON.stringify(result))
+    expect(true).toBe(true);
+  });
+  it('simple assignment', async () => {
+    let result = await autoAssignment(molecule, {
+      nbAllowedUnAssigned: 1,
+      justAssign: ['H'],
+      correlations: correlationData,
+      minScore: 0.01,
+      predictions: {
+        C: ethylbenzeneCarbonPrediction,
+        H: ethylbenzeneProtonPrediction,
+      },
+      restrictionByCS: {
+        tolerance: 1,
+        useChemicalShiftScore: true,
+        chemicalShiftRestriction: true,
+      },
+    });
+    expect(true).toBe(true);
     expect(result).toStrictEqual([
       {
         assignment: [
@@ -48,6 +78,10 @@ describe('automatic assignment', () => {
       justAssign: ['C'],
       correlations: correlationData,
       minScore: 0.1,
+      predictions: {
+        C: ethylbenzeneCarbonPrediction,
+        H: ethylbenzeneProtonPrediction,
+      },
       restrictionByCS: {
         tolerance: 1,
         useChemicalShiftScore: true,

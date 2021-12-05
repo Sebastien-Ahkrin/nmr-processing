@@ -1,10 +1,10 @@
 import correlationData from '../data/correlations';
 import predictions from '../data/predictions';
-import { formatCorrelations } from '../formatCorrelations';
+import { getTargetsAndCorrelations } from '../getTargetsAndCorrelations';
 import { partialScore } from '../partialScore';
 
 describe('partial score', () => {
-  const { targets, correlations } = formatCorrelations(correlationData);
+  const { targets, correlations } = getTargetsAndCorrelations(correlationData);
   const diaIDPeerPossibleAssignment = {
     C: ['carbon1', 'carbon2', 'carbon3', 'carbon4'],
   };

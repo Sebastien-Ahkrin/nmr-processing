@@ -1,4 +1,4 @@
-import correlations from '../../data/correlations';
+import correlations from '../data/correlations';
 import getWorkFlow from '../getWorkFlow';
 
 describe('getWorkflow', () => {

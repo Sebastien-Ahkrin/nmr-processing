@@ -1,7 +1,7 @@
 import OCL from 'openchemlib';
 
-import { autoAssignment } from './autoAssignment';
 import arbutinData from './__tests__/data/ethyl-benzene.json';
+import { autoAssignment } from './autoAssignment';
 
 (async () => {
 const molfile = String(arbutinData.molecules[0].molfile);

@@ -1,9 +1,9 @@
+import { createMapPossibleAssignment } from '../createMapPossibleAssignment';
 import correlationData from '../data/correlations';
 import predictions from '../data/predictions';
-import { createMapPossibleAssignment } from '../createMapPossibleAssignment';
-import { formatCorrelations } from '../formatCorrelations';
+import { getTargetsAndCorrelations } from '../getTargetsAndCorrelations';
 
-const { targets } = formatCorrelations(correlationData);
+const { targets } = getTargetsAndCorrelations(correlationData);
 
 describe('AutoAssignment - createMapPossibleAssignment', () => {
   it('create map', () => {
