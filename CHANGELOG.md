@@ -1,5 +1,24 @@
 # Changelog
 
+## [6.0.0](https://www.github.com/cheminfo/nmr-processing/compare/v5.0.0...v6.0.0) (2021-12-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* rename Jcoupling.distance to Jcoupling.pathLength
+
+### Features
+
+* remove from/to from Signals2D and add j in NMRSignal2D ([14c8150](https://www.github.com/cheminfo/nmr-processing/commit/14c8150a7853c6f038fc588311bb31b993f5e306))
+* rename Jcoupling.distance to Jcoupling.pathLength ([6630677](https://www.github.com/cheminfo/nmr-processing/commit/6630677e04d874d089e380a0b1d4c08c53f3c687))
+
+
+### Bug Fixes
+
+* adaptation rename distance to pathLength in jCoupling interface ([78b1af9](https://www.github.com/cheminfo/nmr-processing/commit/78b1af9295cc2a020f3f579513cea44021130471))
+* update dependencies n fix eslint ([dc9e8d4](https://www.github.com/cheminfo/nmr-processing/commit/dc9e8d405153932142ae5a339000cec2d6637c5e))
+* update workflow actions ([0f71100](https://www.github.com/cheminfo/nmr-processing/commit/0f711008f5010d5a3940e7054d75bc38f6bae8b7))
+
 ## [5.0.0](https://www.github.com/cheminfo/nmr-processing/compare/v4.0.0...v5.0.0) (2021-11-26)
 
 
