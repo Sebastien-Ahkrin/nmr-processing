@@ -1,27 +1,20 @@
-import OCL from 'openchemlib';
+import arbutinData from './__tests__/data/ethylbenzeneNewCosy.json';
 
-import arbutinData from './__tests__/data/ethyl-benzene.json';
-import { autoAssignment } from './autoAssignment';
-
-(async () => {
-const molfile = String(arbutinData.molecules[0].molfile);
-const correlationData = arbutinData.correlations.values;
-const molecule = OCL.Molecule.fromMolfile(molfile);
-let result = await autoAssignment(molecule, {
-  nbAllowedUnAssigned: 1,
-  justAssign: ['C', 'H'],
-  correlations: correlationData,
-  minScore: 0.1,
-  restrictionByCS: {
-    tolerance: 1,
-    useChemicalShiftScore: true,
-    chemicalShiftRestriction: true,
-  },
-  predictionOptions: {
-    C: {
-      webserviceURL: 'https://nmr-prediction.service.zakodium.com/v1/predict/carbon'
-    }
+const signalID = arbutinData.spectra.reduce((acc, spectrum) => {
+  if (spectrum.ranges) {
+    spectrum.ranges.values.forEach((range) => {
+      range.signals.forEach((signal) => {
+        acc.push({ delta: signal.delta, id: signal.id });
+      })
+    })
+  } else if (spectrum.zones) {
+    spectrum.zones.values.forEach((zone) => {
+      zone.signals.forEach((signal) => {
+        acc.push({delta: [signal.x.delta, signal.y.delta], id: signal.id});
+      })
+    })
   }
-});
-console.log('result', result[0].assignment);
-})()
+  return acc;
+}, []);
+
+console.log(signalID)

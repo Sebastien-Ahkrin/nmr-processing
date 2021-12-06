@@ -10,7 +10,7 @@ import getWorkFlow from './utils/getWorkFlow';
  * if it is equal to zero the chemical shift is not a restriction, and positive to restrict the assignment by chemical shift too.
  */
 
-export async function autoAssignment(input, options = {}) {
+export async function autoAssignmentNew(input, options = {}) {
   let {
     restrictionByCS = {},
     justAssign,
@@ -22,7 +22,7 @@ export async function autoAssignment(input, options = {}) {
     predictions = {},
   } = options;
 }
-export async function autoAssignmentOld(molecule, props = {}) {
+export async function autoAssignment(molecule, props = {}) {
   let {
     correlations,
     restrictionByCS = {},

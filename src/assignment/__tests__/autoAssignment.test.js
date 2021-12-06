@@ -4,7 +4,7 @@ import {writeFileSync} from 'fs';
 
 import { autoAssignment } from '../autoAssignment';
 
-import ethylbenzeneData from './data/ethyl-benzene.json';
+import ethylbenzeneData from './data/ethylbenzeneNewCosy.json';
 import ethylbenzeneCarbonPrediction from './data/ethylbenzenePrediction_C.json';
 import ethylbenzeneProtonPrediction from './data/ethylbenzenePrediction_H.json';
 
@@ -13,6 +13,7 @@ describe('automatic assignment', () => {
   const correlationData = ethylbenzeneData.correlations.values;
   const molecule = OCL.Molecule.fromMolfile(molfile);
   it.only('simple assignment', async () => {
+    console.log(correlationData)
     let result = await autoAssignment(molecule, {
       nbAllowedUnAssigned: 1,
       correlations: correlationData,
@@ -29,7 +30,7 @@ describe('automatic assignment', () => {
       },
     });
     console.log(result)
-    writeFileSync('result.json', JSON.stringify(result))
+    // writeFileSync('result.json', JSON.stringify(result))
     expect(true).toBe(true);
   });
   it('simple assignment', async () => {
