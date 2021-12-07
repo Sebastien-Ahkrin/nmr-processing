@@ -2,7 +2,7 @@ import { agnes } from 'ml-hclust';
 import type { Cluster } from 'ml-hclust';
 import { Matrix } from 'ml-matrix';
 
-import type { SpinSystem } from '../../types/spinSystem';
+import type { SpinSystem } from '../spinSystem';
 
 export interface SplitSpinSystemOptions {
   /**

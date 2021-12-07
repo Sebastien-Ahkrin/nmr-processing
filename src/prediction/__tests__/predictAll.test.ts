@@ -1,6 +1,6 @@
 import OCL from 'openchemlib/minimal';
 
-import type { NMRSignal2D } from '../../types/NMRSignal2D';
+import type { NMRSignal2D } from '../../xyz/NMRSignal2D';
 import { predictAll } from '../predictAll';
 
 import carbonDB from './data/carbonDB-withoutStatistic.json';

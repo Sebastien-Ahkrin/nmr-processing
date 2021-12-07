@@ -1,7 +1,8 @@
-import type { MakeMandatory } from '../types/MakeMandatory';
-import type { NMRRange } from '../types/NMRRange';
-import type { NMRSignal1D } from '../types/NMRSignal1D';
+import type { MakeMandatory } from '../utilities/MakeMandatory';
 import { rangeFromSignal } from '../utilities/rangeFromSignal';
+import type { NMRRange } from '../xy/NMRRange';
+
+import type { NMRSignal1D } from './NMRSignal1D';
 
 interface SignalsToRangesOptions {
   /**

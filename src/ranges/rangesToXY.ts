@@ -3,10 +3,10 @@ import arraySequentialFill from 'ml-array-sequential-fill';
 import type { Shape1D } from 'ml-peak-shape-generator';
 import { SpectrumGenerator } from 'spectrum-generator';
 
+import type { NMRSignal1D } from '../signals/NMRSignal1D';
 import { hackSignalsToXY } from '../signals/hackSignalsToXY';
-import type { MakeMandatory } from '../types/MakeMandatory';
-import type { NMRRange } from '../types/NMRRange';
-import type { NMRSignal1D } from '../types/NMRSignal1D';
+import type { MakeMandatory } from '../utilities/MakeMandatory';
+import type { NMRRange } from '../xy/NMRRange';
 
 type RangeWithSignal = MakeMandatory<NMRRange, 'signals'>;
 

@@ -1,6 +1,6 @@
 import type { Peak2D } from 'ml-matrix-peaks-finder';
 
-import type { NMRSignal2D } from '../../types/NMRSignal2D';
+import type { NMRSignal2D } from '../../xyz/NMRSignal2D';
 
 let diagonalError = 0.05;
 let tolerance = 0.05;

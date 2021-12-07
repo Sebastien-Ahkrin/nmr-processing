@@ -1,7 +1,7 @@
 import { generateSpectrum2D } from 'spectrum-generator';
 import type { XYNumber } from 'spectrum-generator';
 
-import type { NMRSignal2D } from '../types/NMRSignal2D';
+import type { NMRSignal2D } from '../xyz/NMRSignal2D';
 
 interface Signals2DToZOptions {
   /**

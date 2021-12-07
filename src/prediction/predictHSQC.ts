@@ -1,9 +1,9 @@
 import { Molecule } from 'openchemlib';
 
-import type { Prediction1D } from '../types/prediction1D';
 
 import { predictCarbon, PredictCarbonOptions } from './predictCarbon';
 import { predictProton, PredictProtonOptions } from './predictProton';
+import type { Prediction1D } from './prediction1D';
 import { predict2D, Predictor } from './utils/predict2D';
 
 export interface PredictHSQCOptions {

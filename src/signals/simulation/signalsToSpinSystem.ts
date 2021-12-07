@@ -1,10 +1,10 @@
 import { Matrix } from 'ml-matrix';
 import simpleClustering from 'ml-simple-clustering';
 
-import type { MakeMandatory } from '../../types/MakeMandatory';
-import type { NMRSignal1D } from '../../types/NMRSignal1D';
-import type { Jcoupling } from '../../types/jcoupling';
-import type { SpinSystem } from '../../types/spinSystem';
+import type { MakeMandatory } from '../../utilities/MakeMandatory';
+import type { NMRSignal1D } from '../NMRSignal1D';
+import type { Jcoupling } from '../jcoupling';
+import type { SpinSystem } from '../spinSystem';
 
 interface Ids {
   [index: number]: number;

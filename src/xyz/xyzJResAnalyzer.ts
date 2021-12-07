@@ -3,8 +3,9 @@ import simpleClustering from 'ml-simple-clustering';
 
 import type { JAxisKeys } from '../peaks/util/jAnalyzer';
 import jAnalyzer from '../peaks/util/jAnalyzer';
-import type { MakeMandatory } from '../types/MakeMandatory';
-import type { NMRSignal2D } from '../types/NMRSignal2D';
+import type { MakeMandatory } from '../utilities/MakeMandatory';
+
+import type { NMRSignal2D } from './NMRSignal2D';
 
 interface CompilePatternOptions {
   observedFrequencies?: number[] | Float64Array;

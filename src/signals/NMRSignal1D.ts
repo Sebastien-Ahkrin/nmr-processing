@@ -1,4 +1,5 @@
-import type { NMRPeak1D } from './NMRPeak1D';
+import type { NMRPeak1D } from '../peaks/NMRPeak1D';
+
 import type { Jcoupling } from './jcoupling';
 
 export interface NMRSignal1D {

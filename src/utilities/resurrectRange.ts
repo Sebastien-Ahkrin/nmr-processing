@@ -1,5 +1,5 @@
-import type { NMRRange } from '../types/NMRRange';
-import type { NMRSignal1D } from '../types/NMRSignal1D';
+import type { NMRSignal1D } from '../signals/NMRSignal1D';
+import type { NMRRange } from '../xy/NMRRange';
 
 import { rangeFromSignal } from './rangeFromSignal';
 import { splitParenthesis } from './splitParenthesis';

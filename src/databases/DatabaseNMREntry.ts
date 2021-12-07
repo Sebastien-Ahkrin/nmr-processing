@@ -1,4 +1,4 @@
-import { NMRRange } from '../types/NMRRange';
+import { NMRRange } from '../xy/NMRRange';
 
 export interface DatabaseNMREntry {
   smiles?: string;

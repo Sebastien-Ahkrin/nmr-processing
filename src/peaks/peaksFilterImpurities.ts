@@ -1,6 +1,7 @@
 import { impurities } from '../constants/impurities';
 import type { ImpuritySignal } from '../constants/impurities';
-import type { NMRPeak1D } from '../types/NMRPeak1D';
+
+import type { NMRPeak1D } from './NMRPeak1D';
 
 const toCheck = ['solvent', 'h2o', 'tms'];
 

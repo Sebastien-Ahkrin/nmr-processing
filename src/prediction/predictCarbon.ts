@@ -1,12 +1,12 @@
 import fetch from 'cross-fetch';
 import type { Molecule } from 'openchemlib';
 
+import type { NMRSignal1D } from '../signals/NMRSignal1D';
 import { signalsToRanges } from '../signals/signalsToRanges';
-import type { MakeMandatory } from '../types/MakeMandatory';
-import type { NMRSignal1D } from '../types/NMRSignal1D';
-import type { DataBaseStructure } from '../types/dataStructure';
-import type { Prediction1D } from '../types/prediction1D';
+import type { MakeMandatory } from '../utilities/MakeMandatory';
 
+import type { DataBaseStructure } from './dataStructure';
+import type { Prediction1D } from './prediction1D';
 import { fetchPrediction } from './utils/fetchPrediction';
 import { flatGroupedDiaIDs } from './utils/flatGroupedDiaIDs';
 import { getFilteredIDiaIDs } from './utils/getFilteredIDiaIDs';

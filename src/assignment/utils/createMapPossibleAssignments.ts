@@ -1,4 +1,4 @@
-import { MakeMandatory } from '../../types/MakeMandatory';
+import { MakeMandatory } from '../../utilities/MakeMandatory';
 import type { Targets } from '../get1HAssignments';
 
 import type {

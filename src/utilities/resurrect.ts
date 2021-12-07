@@ -1,4 +1,4 @@
-import type { NMRRange } from '../types/NMRRange';
+import type { NMRRange } from '../xy/NMRRange';
 
 import { resurrectRange } from './resurrectRange';
 import { splitParenthesis } from './splitParenthesis';

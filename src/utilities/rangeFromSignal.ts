@@ -1,5 +1,5 @@
 import { couplingValues } from '../constants/couplingValues';
-import type { NMRSignal1D } from '../types/NMRSignal1D';
+import type { NMRSignal1D } from '../signals/NMRSignal1D';
 
 export interface RangeFromSignalOptions {
   /**

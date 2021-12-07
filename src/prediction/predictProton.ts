@@ -7,10 +7,11 @@ import {
   getDiastereotopicAtomIDs,
 } from 'openchemlib-utils';
 
+import type { NMRSignal1D } from '../signals/NMRSignal1D';
 import { signalsJoin } from '../signals/signalsJoin';
 import { signalsToRanges } from '../signals/signalsToRanges';
-import type { NMRSignal1D } from '../types/NMRSignal1D';
-import type { Prediction1D } from '../types/prediction1D';
+
+import type { Prediction1D } from './prediction1D';
 
 /**
  * Makes a prediction using proton.

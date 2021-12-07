@@ -17,6 +17,4 @@ export interface NMRSignal2D {
   id?: string;
   peaks?: Peak2D[];
   kind?: string;
-
-  _highlight?: (number | string)[];
 }

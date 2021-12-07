@@ -1,4 +1,4 @@
-import type { DataBaseStructure } from '../../types/dataStructure';
+import type { DataBaseStructure } from '../dataStructure';
 
 import type { GroupedDiaIDsWithHose } from './getFilteredIDiaIDs';
 

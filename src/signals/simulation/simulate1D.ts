@@ -6,7 +6,7 @@ import type { Shape1D } from 'ml-peak-shape-generator';
 import { SparseMatrix } from 'ml-sparse-matrix';
 import { SpectrumGenerator } from 'spectrum-generator';
 
-import type { SpinSystem } from '../../types/spinSystem';
+import type { SpinSystem } from '../spinSystem';
 
 import getPauliMatrix from './getPauliMatrix';
 

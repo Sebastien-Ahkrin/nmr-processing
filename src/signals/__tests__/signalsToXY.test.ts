@@ -1,4 +1,4 @@
-import type { NMRSignal1D } from '../../types/NMRSignal1D';
+import type { NMRSignal1D } from '../NMRSignal1D';
 import { signalsToXY } from '../signalsToXY';
 
 const signals: NMRSignal1D[] = [

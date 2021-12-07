@@ -1,7 +1,7 @@
 import { signalJoinCouplings } from '../signal/signalJoinCouplings';
 import { signalMultiplicityPattern } from '../signal/signalMultiplicityPattern';
-import type { NMRRange } from '../types/NMRRange';
-import type { NMRSignal1D } from '../types/NMRSignal1D';
+import type { NMRSignal1D } from '../signals/NMRSignal1D';
+import type { NMRRange } from '../xy/NMRRange';
 
 const globalOptions = {
   h: {

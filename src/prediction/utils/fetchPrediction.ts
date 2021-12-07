@@ -1,7 +1,7 @@
 import { fetch } from 'cross-fetch';
 import { Molecule } from 'openchemlib';
 
-import type { Prediction1D } from '../../types/prediction1D';
+import type { Prediction1D } from '../prediction1D';
 
 interface FetchPredictionOptions {
   webserviceURL: string;

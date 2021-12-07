@@ -9,7 +9,8 @@ import { determineRealTop } from '../peaks/util/determineRealTop';
 import { getKernel } from '../peaks/util/getKernel';
 import type { GetKernelOptions } from '../peaks/util/getKernel';
 import * as PeakOptimizer from '../peaks/util/peakOptimizer';
-import type { NMRSignal2D } from '../types/NMRSignal2D';
+
+import type { NMRSignal2D } from './NMRSignal2D';
 
 const smallFilter = [
   [0, 0, 1, 2, 2, 2, 1, 0, 0],
@@ -31,7 +32,7 @@ export interface Data2D {
   maxY: number;
 }
 
-export interface XYZAutoPeaksPickingOptions {
+export interface XYZAutoZonesPickingOptions {
   /**
    * max number of points in any dimension to pad the input data, this is needed to avoid lost peaks when the input matrix is too small.
    * @default 14
@@ -89,7 +90,7 @@ export interface XYZAutoPeaksPickingOptions {
 
 export function xyzAutoZonesPicking(
   spectraData: Data2D,
-  options: XYZAutoPeaksPickingOptions,
+  options: XYZAutoZonesPickingOptions,
 ) {
   let {
     sizeToPad = 14,

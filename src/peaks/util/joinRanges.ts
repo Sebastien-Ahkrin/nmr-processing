@@ -1,4 +1,4 @@
-import type { NMRRange } from '../../types/NMRRange';
+import type { NMRRange } from '../../xy/NMRRange';
 
 export function joinRanges(ranges: NMRRange[]) {
   ranges.sort((a, b) => a.from - b.from);

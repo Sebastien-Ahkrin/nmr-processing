@@ -1,11 +1,11 @@
 import type { DataXY } from 'cheminfo-types';
 import { xyIntegration } from 'ml-spectra-processing';
 
-import type { MakeMandatory } from '../types/MakeMandatory';
-import type { NMRPeak1D } from '../types/NMRPeak1D';
-import type { NMRRange } from '../types/NMRRange';
-import type { NMRSignal1D } from '../types/NMRSignal1D';
+import type { NMRSignal1D } from '../signals/NMRSignal1D';
+import type { MakeMandatory } from '../utilities/MakeMandatory';
+import type { NMRRange } from '../xy/NMRRange';
 
+import type { NMRPeak1D } from './NMRPeak1D';
 import jAnalyzer from './util/jAnalyzer';
 import type { SignalIntern, Peak1DIntern } from './util/jAnalyzer';
 import { joinRanges } from './util/joinRanges';

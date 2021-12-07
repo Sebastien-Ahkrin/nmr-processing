@@ -6,7 +6,7 @@ import {
   predictCarbon,
   PredictCarbonOptions,
 } from '../prediction/predictCarbon';
-import type { NMRSignal1D } from '../types/NMRSignal1D';
+import type { NMRSignal1D } from '../signals/NMRSignal1D';
 
 import type {
   NMRSignal1DWithAtomsAndDiaIDs,

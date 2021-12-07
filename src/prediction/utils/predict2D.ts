@@ -11,12 +11,12 @@ import type {
   PathInfo,
 } from 'openchemlib-utils';
 
-import type { MakeMandatory } from '../../types/MakeMandatory';
-import type { NMRSignal1D } from '../../types/NMRSignal1D';
-import type { NMRSignal2D } from '../../types/NMRSignal2D';
-import type { Prediction1D } from '../../types/prediction1D';
+import type { NMRSignal1D } from '../../signals/NMRSignal1D';
+import type { MakeMandatory } from '../../utilities/MakeMandatory';
+import type { NMRSignal2D } from '../../xyz/NMRSignal2D';
 import type { PredictCarbon, PredictCarbonOptions } from '../predictCarbon';
 import type { PredictProton, PredictProtonOptions } from '../predictProton';
+import type { Prediction1D } from '../prediction1D';
 
 import { getNuclei } from './getNuclei';
 import { getPredictions } from './getPredictions';

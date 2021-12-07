@@ -1,4 +1,4 @@
-import type { NMRSignal1D } from './NMRSignal1D';
+import type { NMRSignal1D } from '../signals/NMRSignal1D';
 
 export interface NMRRange {
   from: number;

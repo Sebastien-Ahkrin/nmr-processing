@@ -1,7 +1,7 @@
 import type { Molecule } from 'openchemlib';
 
-import type { NMRRange } from './NMRRange';
-import type { NMRSignal1D } from './NMRSignal1D';
+import type { NMRSignal1D } from '../signals/NMRSignal1D';
+import type { NMRRange } from '../xy/NMRRange';
 
 export interface Prediction1D {
   molfile: string;

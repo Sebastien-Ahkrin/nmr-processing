@@ -1,12 +1,12 @@
 import type { Molecule } from 'openchemlib';
 
-import type { Prediction1D } from '../types/prediction1D';
 
 import { predictCOSY } from './predictCOSY';
 import { predictCarbon, PredictCarbonOptions } from './predictCarbon';
 import { predictHMBC } from './predictHMBC';
 import { predictHSQC } from './predictHSQC';
 import { predictProton, PredictProtonOptions } from './predictProton';
+import type { Prediction1D } from './prediction1D';
 import { getPredictions } from './utils/getPredictions';
 import type { Predictor } from './utils/predict2D';
 

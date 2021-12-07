@@ -6,8 +6,8 @@ import {
   predictProton,
   PredictProtonOptions,
 } from '../prediction/predictProton';
-import { MakeMandatory } from '../types/MakeMandatory';
-import type { NMRSignal1D } from '../types/NMRSignal1D';
+import type { NMRSignal1D } from '../signals/NMRSignal1D';
+import { MakeMandatory } from '../utilities/MakeMandatory';
 
 import { buildAssignments, RestrictionByCS } from './utils/buildAssignments';
 import generateID from './utils/generateID';

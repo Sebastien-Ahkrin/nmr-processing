@@ -5,9 +5,9 @@ import { join } from 'path';
 import md5 from 'md5';
 import OCL from 'openchemlib/minimal';
 
-import type { MakeMandatory } from '../../types/MakeMandatory';
-import type { NMRRange } from '../../types/NMRRange';
-import type { NMRSignal1D } from '../../types/NMRSignal1D';
+import type { NMRSignal1D } from '../../signals/NMRSignal1D';
+import type { MakeMandatory } from '../../utilities/MakeMandatory';
+import type { NMRRange } from '../../xy/NMRRange';
 import { predictProton } from '../predictProton';
 
 const molfile = `Benzene, ethyl-, ID: C100414
