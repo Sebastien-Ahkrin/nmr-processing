@@ -1,6 +1,5 @@
 import { Molecule } from 'openchemlib';
 
-
 import { predictCarbon, PredictCarbonOptions } from './predictCarbon';
 import { predictProton, PredictProtonOptions } from './predictProton';
 import type { Prediction1D } from './prediction1D';

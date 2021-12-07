@@ -1,6 +1,5 @@
 import type { Molecule } from 'openchemlib';
 
-
 import { predictCOSY } from './predictCOSY';
 import { predictCarbon, PredictCarbonOptions } from './predictCarbon';
 import { predictHMBC } from './predictHMBC';
