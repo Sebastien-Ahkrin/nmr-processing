@@ -88,6 +88,7 @@
     "ml-spectra-processing": "^8.0.3",
     "ml-tree-set": "^0.1.1",
     "openchemlib-utils": "^1.8.0",
+    "nmr-correlation": "^2.2.0",
     "spectrum-generator": "^6.0.2"
   }
 }
