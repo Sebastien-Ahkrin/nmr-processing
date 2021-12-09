@@ -10,6 +10,7 @@ import { NMRZone } from '../xyz/NMRZone';
 import type { RestrictionByCS } from './utils/buildAssignments';
 import { addIDs } from './utils/getAssignment/addIDs';
 import { getTargetsAndCorrelations } from './utils/getAssignment/getTargetsAndCorrelations';
+import getWorkFlow from './utils/getAssignment/getWorkFlow';
 
 export interface SpectraData1D {
   ranges: NMRRange[];
@@ -119,8 +120,8 @@ export async function getAssignment(
   );
 
   console.log(targets)
+  const { assignmentOrder } = getWorkFlow(correlations, justAssign);
   return null;
-  // const { assignmentOrder } = getWorkFlow(correlations, justAssign);
 
   // const solutions = await buildAssignment({
   //   restrictionByCS: {
