@@ -10,7 +10,7 @@ export function getIntegrationOfAttachedProtons(
   let integration = 0;
   for (const match of attachment) {
     const correlation = correlations[match];
-    integration += Number(correlation.integration);
+    integration += Number(correlation.link[0].signal.integration);
   }
   return integration;
 }

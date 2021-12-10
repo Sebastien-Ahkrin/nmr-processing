@@ -1,79 +1,87 @@
-import { MakeMandatory } from '../../utilities/MakeMandatory';
-import type { Targets } from '../get1HAssignments';
+import { Predictions } from "../../../prediction/utils/predict2D";
+import { RestrictionByCS } from "../buildAssignments";
+import { PossibleAssignmentMap } from "../createMapPossibleAssignments";
 
-import type {
-  RestrictionByCS,
-  Predictions1Dassignments,
-} from './buildAssignments';
+import { TargetsByAtomType } from "./getTargetsAndCorrelations";
 
-type RestrictionByCSMandatory = MakeMandatory<
-  RestrictionByCS,
-  'chemicalShiftRestriction' | 'tolerance' | 'useChemicalShiftScore'
->;
-
-interface CreateMapPossibleAssignments {
-  predictions: Predictions1Dassignments;
-  restrictionByCS: RestrictionByCSMandatory;
-  targets: Targets;
-  useIntegrationRestriction: boolean;
-}
-
-export interface PossibleAssignmentMap {
+export interface PossibleAssignments {
   [key: string]: string[];
 }
-export function createMapPossibleAssignments(
-  props: CreateMapPossibleAssignments,
+export interface MapPossibleAssignments {
+  [key: string]: PossibleAssignmentMap
+}
+
+export interface CreateMapPossibleAssignmentOptions {
+  restrictionByCS: RestrictionByCS;
+  predictions: {
+    H?: Predictions;
+    C?: Predictions;
+  };
+  targets: TargetsByAtomType;
+}
+export function createMapPossibleAssignment(
+  expandMap: MapPossibleAssignments,
+  props: CreateMapPossibleAssignmentOptions,
 ) {
-  const { restrictionByCS, predictions, targets, useIntegrationRestriction } =
-    props;
+  const { restrictionByCS, predictions, targets } = props;
 
   const { tolerance: toleranceCS, chemicalShiftRestriction } = restrictionByCS;
 
   let errorAbs = Math.abs(toleranceCS);
-  const expandMap: PossibleAssignmentMap = {};
-  for (const diaID in predictions) {
-    let prediction = predictions[diaID];
-    if (prediction.error) prediction.error = Math.abs(prediction.error);
-    expandMap[diaID] = [];
+  const atomTypes = Object.keys(predictions) as Array<'H' | 'C'>;
 
-    if (targets) {
-      for (const targetID in targets) {
-        let target = targets[targetID];
-        const { nbAtoms } = prediction;
-        const { integration } = target;
+  for (const atomType of atomTypes) {
+    let predictionByAtomType = predictions[atomType];
+    let targetByAtomType = targets[atomType];
+    if (!expandMap[atomType]) expandMap[atomType] = {};
+    for (const diaID in predictionByAtomType) {
+      let prediction = predictionByAtomType[diaID];
+      prediction.error = Math.abs(prediction.error);
+      expandMap[atomType][diaID] = [];
 
-        const couldBeAssigned = useIntegrationRestriction
-          ? integration > 0
-            ? nbAtoms - integration < 1
-            : true
-          : true;
+      if (targetByAtomType) {
+        for (const targetID in targetByAtomType) {
+          let target = targetByAtomType[targetID];
+          const { nbAtoms, protonsCount: protonsCountFromPrediction } =
+            prediction;
+          const { integration, protonsCount } = target;
 
-        if (couldBeAssigned) {
-          if (
-            !chemicalShiftRestriction ||
-            typeof prediction.delta === 'undefined'
-          ) {
-            // Chemical shift is not a restriction
-            expandMap[diaID].push(targetID);
-          } else {
-            let error = errorAbs;
-            if (prediction.error) {
-              error = Math.max(error, prediction.error);
-            }
-            const delta =
-              target.signals && target.signals.length > 0
-                ? target.signals[0].delta
-                : (target.to + target.from) / 2;
+          const couldBeAssigned =
+            integration > 0 && atomType === 'H'
+              ? nbAtoms - integration < 1
+              : protonsCount.length > 0
+              ? protonsCount.some(
+                  (count) => protonsCountFromPrediction === count,
+                )
+              : true;
 
-            let distAfterLimit = Math.abs(prediction.delta - delta - errorAbs);
-            if (distAfterLimit < 4 * errorAbs) {
-              expandMap[diaID].push(targetID);
+          if (couldBeAssigned) {
+            if (
+              !chemicalShiftRestriction ||
+              typeof prediction.delta === 'undefined'
+            ) {
+              // Chemical shift is not a restriction
+              expandMap[atomType][diaID].push(targetID);
+            } else {
+              let error = errorAbs;
+              if (prediction.error) {
+                error = Math.max(error, prediction.error);
+              }
+              // console.log(
+              //   `error ${error}, errorAbs ${target.signal.delta} predict delta ${prediction.delta} targetID ${targetID} predID ${diaID}`,
+              // );
+              let distAfterLimit = Math.abs(
+                prediction.delta - target.signal.delta - errorAbs,
+              );
+              if (distAfterLimit < 4 * errorAbs) {
+                expandMap[atomType][diaID].push(targetID);
+              }
             }
           }
         }
       }
+      expandMap[atomType][diaID].push('*');
     }
-    expandMap[diaID].push('*');
   }
   return expandMap;
 }

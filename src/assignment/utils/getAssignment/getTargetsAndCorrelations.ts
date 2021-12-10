@@ -3,20 +3,22 @@ import { buildCorrelationData, Types } from 'nmr-correlation';
 import { SpectraDataWithIds } from './addIDs';
 import { getIntegrationOfAttachedProtons } from './getIntegrationOfAttachedProtons';
 
+
 type Correlation = Types.Correlation;
+export interface CorrelationWithIntegration extends Correlation {
+  integration: number;
+}
 export interface Targets {
-  [key: string]: Correlation;
+  [key: string]: CorrelationWithIntegration;
 }
 export interface TargetsByAtomType {
   H: Targets;
   C: Targets;
 }
-
 export interface TargetsAndCorrelations {
   targets: TargetsByAtomType;
-  correlations: Correlation[];
+  correlations: CorrelationWithIntegration[];
 }
-
 export function getTargetsAndCorrelations(
   spectra: SpectraDataWithIds[],
   options: any,
@@ -44,7 +46,10 @@ export function getTargetsAndCorrelations(
     const { id, atomType } = correlation;
     if (!targets[atomType]) targets[atomType] = {};
     targets[atomType][id] = correlation;
-    if (targets[atomType][id].integration === undefined) {
+    if (atomType === 'H') {
+      targets[atomType][id].integration =
+        correlation.link[0].signal.integration;
+    } else {
       targets[atomType][id].integration = getIntegrationOfAttachedProtons(
         correlation,
         correlations,

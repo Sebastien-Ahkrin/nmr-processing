@@ -37,7 +37,7 @@ export interface Predictions1Dassignments {
   [key: string]: Signals1DAssignment;
 }
 
-export interface StoreAssignments1D {
+export interface StoreAssignments {
   solutions: treeSet;
   nSolutions: number;
 }
@@ -63,7 +63,7 @@ export async function buildAssignments(props: BuildAssignmentsProps) {
   let date = new Date();
   let timeStart = date.getTime();
 
-  let store: StoreAssignments1D = {
+  let store: StoreAssignments = {
     solutions: new treeSet(comparator),
     nSolutions: 0,
   };

@@ -94,8 +94,6 @@ export interface PredictOptions {
 
 export interface Predictions {
   [key: string]: Prediction1D | undefined;
-  H?: Prediction1D;
-  C?: Prediction1D;
 }
 
 type GroupDiastereotopicAtomIDsWithAtomInfo = GroupDiastereotopicAtomIDs & {

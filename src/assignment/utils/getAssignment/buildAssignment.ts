@@ -2,19 +2,20 @@ import treeSet from 'ml-tree-set';
 import { Types } from 'nmr-correlation';
 import { Molecule } from 'openchemlib';
 import { getConnectivityMatrix } from 'openchemlib-utils';
+
 import {
   NMRSignal1D,
   PredictCarbonOptions,
   Prediction1D,
   PredictProtonOptions,
 } from '../../..';
-
 import { predictCarbon } from '../../prediction/predictCarbon';
 import { predictProton } from '../../prediction/predictProton';
-import { RestrictionByCS } from '../buildAssignments';
+import { RestrictionByCS, StoreAssignments } from '../buildAssignments';
 
 import { createMapPossibleAssignment } from './createMapPossibleAssignment';
-import { exploreTreeRec } from './exploreTreeRec';
+import { MapPossibleAssignments } from './createMapPossibleAssignments';
+import { exploreTree } from './exploreTree';
 import { TargetsByAtomType } from './getTargetsAndCorrelations';
 
 const comparator = (a, b) => {
@@ -22,6 +23,16 @@ const comparator = (a, b) => {
 };
 
 const predictor = { H: predictProton, C: predictCarbon };
+
+export type AtomTypes = 'H' | 'C';
+export type CurrentAtoms = Array<AtomTypes>;
+export interface Partial {
+  [key: string]: Array<string | null>;
+}
+
+export interface DiaIDPeerPossibleAssignment {
+  [key: string]: string[];
+}
 
 export interface BuildAssignmentInput {
   molecule: Molecule;
@@ -31,7 +42,7 @@ export interface BuildAssignmentInput {
   nbAllowedUnAssigned: number;
   maxSolutions: number;
   correlations: Types.Values;
-  assignmentOrder: Array<Array<'H' | 'C'>>;
+  assignmentOrder: Array<Array<AtomTypes>>;
   predictions: {
     H?: Prediction1D;
     C?: Prediction1D;
@@ -50,8 +61,16 @@ export interface Prediction extends NMRSignal1D {
   pathLength: number[];
 }
 
-interface Predictions {
+export interface Predictions {
   [key: string]: Prediction;
+}
+
+export interface PredictionsByAtomType {
+  [key: string]: Predictions;
+};
+
+export interface InfoByAtomType {
+  [key: string]: { nSources: number; currentIndex: number };
 }
 
 export async function buildAssignment(props: BuildAssignmentInput) {
@@ -78,7 +97,7 @@ export async function buildAssignment(props: BuildAssignmentInput) {
     H: () => 1,
   };
 
-  let store = {
+  let store: StoreAssignments = {
     solutions: new treeSet(comparator),
     nSolutions: 0,
   };
@@ -87,11 +106,9 @@ export async function buildAssignment(props: BuildAssignmentInput) {
     pathLength: true,
   });
 
-  let infoByAtomType: {
-    [key: string]: { nSources: number; currentIndex: number };
-  } = {};
-  const predictions: { [key: string]: Predictions } = {};
-  let possibleAssignmentMap = {};
+  let infoByAtomType: InfoByAtomType = {};
+  const predictions: PredictionsByAtomType = {};
+  let possibleAssignmentMap: MapPossibleAssignments = {};
 
   // console.log('assignmentOrder', assignmentOrder)
   for (const atomTypesToPredict of assignmentOrder) {
@@ -126,8 +143,8 @@ export async function buildAssignment(props: BuildAssignmentInput) {
       predictions,
       targets,
     });
-    console.log('assign map', possibleAssignmentMap);
-    const diaIDPeerPossibleAssignment: { [key: string]: string[] } = {};
+
+    const diaIDPeerPossibleAssignment: DiaIDPeerPossibleAssignment = {};
     for (const atomType in possibleAssignmentMap) {
       diaIDPeerPossibleAssignment[atomType] = Object.keys(
         possibleAssignmentMap[atomType],
@@ -144,12 +161,12 @@ export async function buildAssignment(props: BuildAssignmentInput) {
       solutions: new treeSet(comparator),
       nSolutions: 0,
     };
-    console.log('source', sourceOfPartials);
+
     let first = true;
     for (let partial of sourceOfPartials) {
       // if (!first) continue;
       // first = false;
-      exploreTreeRec(
+      exploreTree(
         {
           first,
           currentAtomTypes: atomTypesToPredict,
@@ -175,7 +192,11 @@ export async function buildAssignment(props: BuildAssignmentInput) {
   return store;
 }
 
-function getSourceOfPartials(store, infoByAtomType, currentAtoms) {
+function getSourceOfPartials(
+  store: StoreAssignments,
+  infoByAtomType: InfoByAtomType,
+  currentAtoms: CurrentAtoms,
+) {
   return store.nSolutions > 0
     ? store.solutions.elements.map((e) => {
         let currentAssignment = e.assignment;
@@ -187,9 +208,13 @@ function getSourceOfPartials(store, infoByAtomType, currentAtoms) {
     : initializePartials(infoByAtomType, currentAtoms);
 }
 
-function initializePartials(infoByAtomType, currentAtoms) {
-  const partial = {};
-  for (const atom in infoByAtomType) {
+function initializePartials(
+  infoByAtomType: InfoByAtomType,
+  currentAtoms: CurrentAtoms,
+) {
+  const partial: Partial = {};
+  const atomsType = Object.keys(infoByAtomType) as CurrentAtoms;
+  for (const atom of atomsType) {
     const value = currentAtoms.includes(atom) ? null : '*';
     partial[atom] = fillPartial(infoByAtomType[atom].nSources, value);
   }
