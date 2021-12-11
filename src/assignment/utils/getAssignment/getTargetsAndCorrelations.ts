@@ -7,6 +7,7 @@ import { getIntegrationOfAttachedProtons } from './getIntegrationOfAttachedProto
 type Correlation = Types.Correlation;
 export interface CorrelationWithIntegration extends Correlation {
   integration: number;
+  indirectLinks: Types.Link;
 }
 export interface Targets {
   [key: string]: CorrelationWithIntegration;
@@ -43,14 +44,15 @@ export function getTargetsAndCorrelations(
   let targets: any = {};
   for (const correlation of correlations) {
     if (correlation.pseudo) continue;
-    const { id, atomType } = correlation;
+    const { link, atomType } = correlation;
+    const targetID = link.signal.id;
     if (!targets[atomType]) targets[atomType] = {};
-    targets[atomType][id] = correlation;
+    targets[atomType][targetID] = correlation;
     if (atomType === 'H') {
-      targets[atomType][id].integration =
+      targets[atomType][targetID].integration =
         correlation.link[0].signal.integration;
     } else {
-      targets[atomType][id].integration = getIntegrationOfAttachedProtons(
+      targets[atomType][targetID].integration = getIntegrationOfAttachedProtons(
         correlation,
         correlations,
       );

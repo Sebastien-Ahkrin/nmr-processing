@@ -1,16 +1,16 @@
-import { getCorrelationDelta, Types } from 'nmr-correlation';
+import { getCorrelationDelta } from 'nmr-correlation';
 
 import { RestrictionByCS } from '../buildAssignments';
 
 import { AtomTypes, Partial, PredictionsByAtomType } from './buildAssignment';
-import { TargetsByAtomType } from './getTargetsAndCorrelations';
+import { CorrelationWithIntegration, TargetsByAtomType } from './getTargetsAndCorrelations';
 import groupCarbonTargetByIntegrationZone from './groupCarbonTargetByIntegrationZone';
 
 export interface PartialScoreOptions {
   diaIDPeerPossibleAssignment: { [key: string]: string[] };
   restrictionByCS: RestrictionByCS;
   nbAllowedUnAssigned: number;
-  correlations: Types.Values;
+  correlations: CorrelationWithIntegration[];
   predictions: PredictionsByAtomType;
   targets: TargetsByAtomType;
 }
@@ -172,10 +172,12 @@ export function partialScore(partial: Partial, props: PartialScoreOptions) {
   let scoreOn2D = 0;
   // console.log(activeDomainOnTarget, howManyActived(activeDomainOnTarget));
   if (howManyActived(activeDomainOnTarget) > 1) {
-    let andConstrains = {};
-    let activeDomain = [];
+    let andConstrains: {[key: string]: number} = {};
+    let activeDomain: Array<{ index: number; atomType: AtomTypes }> = [];
     // console.log(activeDomainOnPrediction);
-    for (const atomType in activeDomainOnPrediction) {
+    for (const atomType of Object.keys(
+      activeDomainOnPrediction,
+    ) as AtomTypes[]) {
       activeDomain = activeDomain.concat(
         activeDomainOnPrediction[atomType].map((e) => ({ index: e, atomType })),
       );
@@ -196,6 +198,9 @@ export function partialScore(partial: Partial, props: PartialScoreOptions) {
 
         let partialI = partial[atomTypeI][indexI];
         let partialJ = partial[atomTypeJ][indexJ];
+
+        if (!partialI || !partialJ) continue;
+
         let keyOnTargerMap =
           partialI > partialJ
             ? `${partialJ} ${partialI}`
@@ -245,7 +250,17 @@ export function partialScore(partial: Partial, props: PartialScoreOptions) {
   return (chemicalShiftScore + scoreOn2D) / 2 - penaltyByStarts;
 }
 
-function checkLinking(partials, correlations) {
+interface CheckLinkingFromTo {
+  from: {
+    targetID: string,
+    atomType: AtomTypes,
+  },
+  to: {
+    targetID: string,
+    atomType: AtomTypes,
+  },
+}
+function checkLinking(partials: CheckLinkingFromTo, correlations: TargetsByAtomType) {
   const { from, to } = partials;
   if (from.targetID === to.targetID) return true;
   let correlationI = correlations[from.atomType][from.targetID];
