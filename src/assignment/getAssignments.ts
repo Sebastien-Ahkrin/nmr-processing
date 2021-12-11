@@ -97,7 +97,7 @@ export async function getAssignments(
     timeout = 6000,
     predictionOptions = {},
     predictions = {},
-    correlation: correlationOptions,
+    correlation: correlationOptions = {},
   } = options;
 
   const {

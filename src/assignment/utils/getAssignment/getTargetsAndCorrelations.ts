@@ -30,7 +30,7 @@ export function getTargetsAndCorrelations(
   //add indirect links, if a carbon C1 is attached to a proton H1 that correlating
   //with carbon C2, so the carbon C1 and C2 are also correlating
 
-  const correlations = buildCorrelationData(spectra, options);
+  const { values: correlations } = buildCorrelationData(spectra, options);
 
   for (const correlation of correlations) {
     const { H: attachmentH = [] } = correlation.attachment;
