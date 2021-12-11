@@ -4,10 +4,10 @@ import { RestrictionByCS, StoreAssignments } from '../buildAssignments';
 
 import {
   DiaIDPeerPossibleAssignment,
-  Predictions,
   InfoByAtomType,
   Partial,
   CurrentAtoms,
+  PredictionsByAtomType,
 } from './buildAssignment';
 import { MapPossibleAssignments } from './createMapPossibleAssignments';
 import { TargetsByAtomType } from './getTargetsAndCorrelations';
@@ -20,7 +20,7 @@ export interface ExploreTreeRecOptions {
   timeStart: number;
   maxSolutions: number;
   targets: TargetsByAtomType;
-  predictions: Predictions;
+  predictions: PredictionsByAtomType;
   correlations: Types.Values;
   lowerBoundScore: number;
   nbAllowedUnAssigned: number;
@@ -166,7 +166,7 @@ function isLastOne(currentAtomTypes: CurrentAtoms, infoByAtomTypes: InfoByAtomTy
   return lastOne;
 }
 
-function doubleAssignmentPenalty(partial: Partial, predictions: Predictions) {
+function doubleAssignmentPenalty(partial: Partial, predictions: PredictionsByAtomType) {
   let nbDoubleAssignment = 0;
   for (const atomType in predictions) {
     const nbSources = Object.keys(predictions[atomType]).length;

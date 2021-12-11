@@ -9,6 +9,7 @@ import {
   Prediction1D,
   PredictProtonOptions,
 } from '../../..';
+import { MakeMandatory } from '../../../utilities/MakeMandatory';
 import { predictCarbon } from '../../prediction/predictCarbon';
 import { predictProton } from '../../prediction/predictProton';
 import { RestrictionByCS, StoreAssignments } from '../buildAssignments';
@@ -54,11 +55,12 @@ export interface BuildAssignmentInput {
   targets: TargetsByAtomType;
 }
 
-export interface Prediction extends NMRSignal1D {
+export interface Prediction extends MakeMandatory<NMRSignal1D, 'nbAtoms'> {
   diaIDIndex: number;
   allHydrogens: number;
   protonsCount: number;
   pathLength: number[];
+  error?: number;
 }
 
 export interface Predictions {

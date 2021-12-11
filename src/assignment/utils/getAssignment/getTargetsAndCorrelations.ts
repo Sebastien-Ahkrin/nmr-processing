@@ -7,7 +7,7 @@ import { getIntegrationOfAttachedProtons } from './getIntegrationOfAttachedProto
 type Correlation = Types.Correlation;
 export interface CorrelationWithIntegration extends Correlation {
   integration: number;
-  indirectLinks: Types.Link;
+  indirectLinks: Array<Types.Link>;
 }
 export interface Targets {
   [key: string]: CorrelationWithIntegration;

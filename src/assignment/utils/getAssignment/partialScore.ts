@@ -264,8 +264,9 @@ function checkLinking(partials: CheckLinkingFromTo, correlations: TargetsByAtomT
   const { from, to } = partials;
   if (from.targetID === to.targetID) return true;
   let correlationI = correlations[from.atomType][from.targetID];
-  for (let key of ['link', 'indirectLinks']) {
-    for (const link of correlationI[key]) {
+  const { link, indirectLinks } = correlationI;
+  for (let links of [link, indirectLinks]) {
+    for (const link of links) {
       if (link.signal.id === to.targetID) return true;
     }
   }

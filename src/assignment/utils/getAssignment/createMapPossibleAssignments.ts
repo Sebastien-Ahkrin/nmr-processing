@@ -1,7 +1,7 @@
-import { Predictions } from "../../../prediction/utils/predict2D";
 import { RestrictionByCS } from "../buildAssignments";
 import { PossibleAssignmentMap } from "../createMapPossibleAssignments";
 
+import { Predictions } from "./buildAssignment";
 import { TargetsByAtomType } from "./getTargetsAndCorrelations";
 
 export interface PossibleAssignments {
@@ -63,15 +63,15 @@ export function createMapPossibleAssignment(
               // Chemical shift is not a restriction
               expandMap[atomType][diaID].push(targetID);
             } else {
-              let error = errorAbs;
-              if (prediction.error) {
-                error = Math.max(error, prediction.error);
-              }
+              // let error = errorAbs;
+              // if (prediction.error) {
+              //   error = Math.max(error, prediction.error);
+              // }
               // console.log(
               //   `error ${error}, errorAbs ${target.signal.delta} predict delta ${prediction.delta} targetID ${targetID} predID ${diaID}`,
               // );
               let distAfterLimit = Math.abs(
-                prediction.delta - target.signal.delta - errorAbs,
+                prediction.delta - target.link[0].signal.delta - errorAbs,
               );
               if (distAfterLimit < 4 * errorAbs) {
                 expandMap[atomType][diaID].push(targetID);
