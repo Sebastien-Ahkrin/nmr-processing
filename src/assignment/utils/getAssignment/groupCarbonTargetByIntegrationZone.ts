@@ -12,7 +12,7 @@ function groupCarbonTargetByIntegrationZone(
   let { H: attachments = [] } = targets[targetID].attachment;
 
   let targetByIntegral = [
-    { targetIDs: [targetID], attachments: new Set(attachments) },
+    { targetIDs: [targetID], attachments: new Set<number>(attachments) },
   ];
 
   for (let i = 1; i < activeDomainOnTarget.length; i++) {
@@ -37,7 +37,7 @@ function groupCarbonTargetByIntegrationZone(
     if (alone) {
       targetByIntegral.push({
         targetIDs: [targetID],
-        attachments: new Set(attachments),
+        attachments: new Set<number>(attachments),
       });
     }
   }
@@ -48,7 +48,7 @@ function groupCarbonTargetByIntegrationZone(
       ? Array.from(t.attachments).reduce((sum, index) => {
           return correlations[index].integration + sum;
         }, 0)
-      : null,
+      : 0,
   }));
 }
 

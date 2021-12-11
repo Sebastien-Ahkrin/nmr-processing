@@ -2,7 +2,7 @@ import { getCorrelationDelta } from 'nmr-correlation';
 
 import { RestrictionByCS } from '../buildAssignments';
 
-import { AtomTypes, Partial, PredictionsByAtomType } from './buildAssignment';
+import { AtomTypes, Partial, PredictionsByAtomType } from './buildAssignments';
 import { CorrelationWithIntegration, TargetsByAtomType } from './getTargetsAndCorrelations';
 import groupCarbonTargetByIntegrationZone from './groupCarbonTargetByIntegrationZone';
 

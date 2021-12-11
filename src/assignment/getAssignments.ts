@@ -1,14 +1,15 @@
 import { Molecule } from 'openchemlib';
 import { addDiastereotopicMissingChirality } from 'openchemlib-utils';
 
-import { Prediction1D } from '..';
+import { NMRSignal1D } from '..';
 import type { PredictCarbonOptions } from '../prediction/predictCarbon';
 import type { PredictProtonOptions } from '../prediction/predictProton';
 import { NMRRange } from '../xy/NMRRange';
 import { NMRZone } from '../xyz/NMRZone';
 
-import type { RestrictionByCS } from './utils/buildAssignments';
+import { RestrictionByCS } from './utils/buildAssignments';
 import { addIDs } from './utils/getAssignment/addIDs';
+import { AtomTypes, buildAssignments } from './utils/getAssignment/buildAssignments';
 import { getTargetsAndCorrelations } from './utils/getAssignment/getTargetsAndCorrelations';
 import getWorkFlow from './utils/getAssignment/getWorkFlow';
 
@@ -28,7 +29,7 @@ export interface GetAutoAssignmentInput {
   /**
    * It has the number of each atoms in the chemical structure. e.g. { C: 6, H: 6 }
    */
-  atoms: { [key: string]: number };
+  atoms?: { [key: string]: number };
 
   spectra: SpectraData[];
   /**
@@ -38,7 +39,7 @@ export interface GetAutoAssignmentInput {
 }
 
 export interface GetAssignmentsOptions {
-  justAssign?: Array<'H' | 'C'>;
+  justAssign?: Array<AtomTypes[]>;
 
   restrictionByCS?: Partial<RestrictionByCS>;
   /**
@@ -65,8 +66,8 @@ export interface GetAssignmentsOptions {
    * predictions
    */
   predictions?: {
-    H?: Prediction1D;
-    C?: Prediction1D;
+    H?: NMRSignal1D[];
+    C?: NMRSignal1D[];
   };
   /**
    * prediction options
@@ -83,7 +84,7 @@ export interface GetAssignmentsOptions {
   };
 }
 
-export async function getAssignment(
+export async function getAssignments(
   input: GetAutoAssignmentInput,
   options: GetAssignmentsOptions = {},
 ) {
@@ -119,26 +120,24 @@ export async function getAssignment(
     correlationOptions,
   );
 
-  console.log(targets)
   const { assignmentOrder } = getWorkFlow(correlations, justAssign);
-  return null;
 
-  // const solutions = await buildAssignment({
-  //   restrictionByCS: {
-  //     tolerance,
-  //     useChemicalShiftScore,
-  //     chemicalShiftRestriction,
-  //   },
-  //   timeout,
-  //   minScore,
-  //   maxSolutions,
-  //   molecule,
-  //   assignmentOrder,
-  //   nbAllowedUnAssigned,
-  //   correlations,
-  //   targets,
-  //   predictionOptions,
-  //   predictions,
-  // });
-  // return solutions.solutions.elements;
+  const solutions = await buildAssignments({
+    restrictionByCS: {
+      tolerance,
+      useChemicalShiftScore,
+      chemicalShiftRestriction,
+    },
+    molecule,
+    timeout,
+    minScore,
+    maxSolutions,
+    assignmentOrder,
+    nbAllowedUnAssigned,
+    correlations,
+    targets,
+    predictionOptions,
+    predictions,
+  });
+  return solutions.solutions.elements;
 }

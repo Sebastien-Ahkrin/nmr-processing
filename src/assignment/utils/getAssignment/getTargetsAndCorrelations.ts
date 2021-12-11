@@ -1,11 +1,14 @@
-import { buildCorrelationData, Types } from 'nmr-correlation';
+import { buildCorrelationData } from 'nmr-correlation';
+import type { Types } from 'nmr-correlation';
 
 import { SpectraDataWithIds } from './addIDs';
 import { getIntegrationOfAttachedProtons } from './getIntegrationOfAttachedProtons';
 
-
-type Correlation = Types.Correlation;
-export interface CorrelationWithIntegration extends Correlation {
+export interface CorrelationWithIntegration
+  extends Pick<
+    Types.Correlation,
+    'link' | 'atomType' | 'label' | 'attachment' | 'protonsCount'
+  > {
   integration: number;
   indirectLinks: Array<Types.Link>;
 }

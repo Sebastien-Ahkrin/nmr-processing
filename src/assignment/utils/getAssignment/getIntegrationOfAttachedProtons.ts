@@ -1,9 +1,9 @@
 import { Types } from 'nmr-correlation';
 
-import type { Targets } from './getTargetsAndCorrelations';
+import type { CorrelationWithIntegration } from './getTargetsAndCorrelations';
 
 export function getIntegrationOfAttachedProtons(
-  target: Targets,
+  target: CorrelationWithIntegration,
   correlations: Types.Values,
 ) {
   const { H: attachment = [] } = target.attachment;

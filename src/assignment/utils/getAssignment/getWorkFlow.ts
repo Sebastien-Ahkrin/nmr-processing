@@ -1,4 +1,6 @@
 import { Types } from 'nmr-correlation';
+
+import { AtomTypes } from './buildAssignments';
 /**
  * if hsqc is present in experimentTypes we can just predict 13C
  * spectrum and try to assign the carbons first.
@@ -6,26 +8,25 @@ import { Types } from 'nmr-correlation';
  * @param {*} justAssign
  */
 
-function getWorkFlow(correlations: Types.Values, justAssign: string[] = []) {
-  if (!Array.isArray(justAssign)) justAssign = [justAssign];
-
+function getWorkFlow(
+  correlations: Types.Values,
+  justAssign: Array<AtomTypes[]> = [],
+) {
   const experimentTypes = extractExperimentType(correlations);
 
   const { hasHSQC, types } = experimentTypes;
-  const assignmentOrder: Array<string[]> = [];
+  const assignmentOrder: Array<AtomTypes[]> = [];
 
-  if (justAssign.some((e) => e === 'H' || e === 'C')) {
-    assignmentOrder.push(
-      justAssign.filter((type) => type === 'H' || type === 'C'),
-    );
+  if (justAssign.length > 0) {
+    return { assignmentOrder: justAssign, experimentTypes };
+  }
+
+  if (hasHSQC) {
+    assignmentOrder.push(['C'], ['H']);
   } else {
-    if (hasHSQC) {
-      assignmentOrder.push(['C'], ['H']);
-    } else {
-      assignmentOrder.push(
-        types.filter((type) => type === 'H' || type === 'C'),
-      );
-    }
+    assignmentOrder.push(
+      types.filter((type) => type === 'H' || type === 'C') as AtomTypes[],
+    );
   }
 
   return { assignmentOrder, experimentTypes };

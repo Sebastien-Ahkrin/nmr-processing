@@ -1,7 +1,7 @@
 import { RestrictionByCS } from "../buildAssignments";
 import { PossibleAssignmentMap } from "../createMapPossibleAssignments";
 
-import { Predictions } from "./buildAssignment";
+import { PredictionsByAtomType } from "./buildAssignments";
 import { TargetsByAtomType } from "./getTargetsAndCorrelations";
 
 export interface PossibleAssignments {
@@ -13,10 +13,7 @@ export interface MapPossibleAssignments {
 
 export interface CreateMapPossibleAssignmentOptions {
   restrictionByCS: RestrictionByCS;
-  predictions: {
-    H?: Predictions;
-    C?: Predictions;
-  };
+  predictions: PredictionsByAtomType;
   targets: TargetsByAtomType;
 }
 export function createMapPossibleAssignment(
@@ -36,7 +33,6 @@ export function createMapPossibleAssignment(
     if (!expandMap[atomType]) expandMap[atomType] = {};
     for (const diaID in predictionByAtomType) {
       let prediction = predictionByAtomType[diaID];
-      prediction.error = Math.abs(prediction.error);
       expandMap[atomType][diaID] = [];
 
       if (targetByAtomType) {
@@ -51,7 +47,7 @@ export function createMapPossibleAssignment(
               ? nbAtoms - integration < 1
               : protonsCount.length > 0
               ? protonsCount.some(
-                  (count) => protonsCountFromPrediction === count,
+                  (count: number) => protonsCountFromPrediction === count,
                 )
               : true;
 
@@ -63,13 +59,6 @@ export function createMapPossibleAssignment(
               // Chemical shift is not a restriction
               expandMap[atomType][diaID].push(targetID);
             } else {
-              // let error = errorAbs;
-              // if (prediction.error) {
-              //   error = Math.max(error, prediction.error);
-              // }
-              // console.log(
-              //   `error ${error}, errorAbs ${target.signal.delta} predict delta ${prediction.delta} targetID ${targetID} predID ${diaID}`,
-              // );
               let distAfterLimit = Math.abs(
                 prediction.delta - target.link[0].signal.delta - errorAbs,
               );

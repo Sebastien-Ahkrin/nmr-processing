@@ -2,7 +2,7 @@ import type { Targets } from '../get1HAssignments';
 
 import type {
   RestrictionByCS,
-  StoreAssignments1D,
+  StoreAssignments,
   Predictions1Dassignments,
 } from './buildAssignments';
 import type { PossibleAssignmentMap } from './createMapPossibleAssignments';
@@ -26,7 +26,7 @@ export function exploreTreeRec(
   props: ExploreTreeRecProps,
   currentIndex: number,
   partial: Array<string | null>,
-  store: StoreAssignments1D,
+  store: StoreAssignments,
 ) {
   const {
     nSources,
@@ -107,7 +107,7 @@ interface AddSolutionProps {
   predictions: Predictions1Dassignments;
 }
 
-function addSolution(store: StoreAssignments1D, props: AddSolutionProps) {
+function addSolution(store: StoreAssignments, props: AddSolutionProps) {
   let { score, maxSolutions, partial, predictions } = props;
   score /= doubleAssignmentPenalty(partial, predictions);
   store.nSolutions++;

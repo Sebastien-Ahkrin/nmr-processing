@@ -1,5 +1,3 @@
-import { Types } from 'nmr-correlation';
-
 import { RestrictionByCS, StoreAssignments } from '../buildAssignments';
 
 import {
@@ -8,9 +6,12 @@ import {
   Partial,
   CurrentAtoms,
   PredictionsByAtomType,
-} from './buildAssignment';
+} from './buildAssignments';
 import { MapPossibleAssignments } from './createMapPossibleAssignments';
-import { TargetsByAtomType } from './getTargetsAndCorrelations';
+import {
+  CorrelationWithIntegration,
+  TargetsByAtomType,
+} from './getTargetsAndCorrelations';
 import { partialScore } from './partialScore';
 
 export interface ExploreTreeRecOptions {
@@ -21,17 +22,18 @@ export interface ExploreTreeRecOptions {
   maxSolutions: number;
   targets: TargetsByAtomType;
   predictions: PredictionsByAtomType;
-  correlations: Types.Values;
+  correlations: CorrelationWithIntegration[];
   lowerBoundScore: number;
   nbAllowedUnAssigned: number;
   possibleAssignmentMap: MapPossibleAssignments;
   diaIDPeerPossibleAssignment: DiaIDPeerPossibleAssignment;
 }
 
-interface AddSolutionOptions extends Pick<
-  ExploreTreeRecOptions,
-  'maxSolutions' | 'predictions'
-> { partial: Partial; score: number }
+interface AddSolutionOptions
+  extends Pick<ExploreTreeRecOptions, 'maxSolutions' | 'predictions'> {
+  partial: Partial;
+  score: number;
+}
 
 export function exploreTree(
   props: ExploreTreeRecOptions,
@@ -137,11 +139,16 @@ export function exploreTree(
   }
 }
 
+export interface AssignmentSolution {
+  assignment: string[];
+  score: number;
+}
+
 function addSolution(store: StoreAssignments, props: AddSolutionOptions) {
   let { score, maxSolutions, partial, predictions } = props;
   score /= doubleAssignmentPenalty(partial, predictions);
   store.nSolutions++;
-  let solution = {
+  let solution: AssignmentSolution = {
     assignment: JSON.parse(JSON.stringify(partial)),
     score: score,
   };
@@ -157,7 +164,10 @@ function addSolution(store: StoreAssignments, props: AddSolutionOptions) {
   }
 }
 
-function isLastOne(currentAtomTypes: CurrentAtoms, infoByAtomTypes: InfoByAtomType) {
+function isLastOne(
+  currentAtomTypes: CurrentAtoms,
+  infoByAtomTypes: InfoByAtomType,
+) {
   let lastOne = true;
   for (const atomType of currentAtomTypes) {
     const { currentIndex, nSources } = infoByAtomTypes[atomType];
@@ -166,7 +176,10 @@ function isLastOne(currentAtomTypes: CurrentAtoms, infoByAtomTypes: InfoByAtomTy
   return lastOne;
 }
 
-function doubleAssignmentPenalty(partial: Partial, predictions: PredictionsByAtomType) {
+function doubleAssignmentPenalty(
+  partial: Partial,
+  predictions: PredictionsByAtomType,
+) {
   let nbDoubleAssignment = 0;
   for (const atomType in predictions) {
     const nbSources = Object.keys(predictions[atomType]).length;
