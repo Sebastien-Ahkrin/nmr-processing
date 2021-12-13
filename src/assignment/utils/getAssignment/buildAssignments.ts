@@ -169,6 +169,8 @@ export async function buildAssignments(props: BuildAssignmentInput) {
       targets,
     });
 
+    console.log('possibles', possibleAssignmentMap)
+
     const diaIDPeerPossibleAssignment: DiaIDPeerPossibleAssignment = {};
     for (const atomType in possibleAssignmentMap) {
       diaIDPeerPossibleAssignment[atomType] = Object.keys(
@@ -211,7 +213,7 @@ export async function buildAssignments(props: BuildAssignmentInput) {
       );
     }
   }
-
+  console.log('store', store)
   return store;
 }
 

@@ -41,7 +41,7 @@ export function createMapPossibleAssignment(
           const { nbAtoms, protonsCount: protonsCountFromPrediction } =
             prediction;
           const { integration, protonsCount } = target;
-
+          // console.log('integration', integration)
           const couldBeAssigned =
             integration > 0 && atomType === 'H'
               ? nbAtoms - integration < 1

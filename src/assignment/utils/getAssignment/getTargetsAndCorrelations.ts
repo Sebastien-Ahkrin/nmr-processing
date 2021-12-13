@@ -1,7 +1,7 @@
 import { buildCorrelationData } from 'nmr-correlation';
 import type { Types } from 'nmr-correlation';
 
-import { SpectraDataWithIds } from './addIDs';
+import { SpectraDataWithIds } from './formatData';
 import { getIntegrationOfAttachedProtons } from './getIntegrationOfAttachedProtons';
 
 export interface CorrelationWithIntegration
@@ -31,7 +31,7 @@ export function getTargetsAndCorrelations(
   //with carbon C2, so the carbon C1 and C2 are also correlating
 
   const { values: correlations } = buildCorrelationData(spectra, options);
-
+  console.log('correlations', correlations);
   for (const correlation of correlations) {
     const { H: attachmentH = [] } = correlation.attachment;
     let indirectLinks: { [key: string]: any } = {};
@@ -61,6 +61,7 @@ export function getTargetsAndCorrelations(
       );
     }
   }
+  console.log('target inside', targets, correlations)
   return {
     targets,
     correlations,

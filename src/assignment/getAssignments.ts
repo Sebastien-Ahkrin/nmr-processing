@@ -8,8 +8,8 @@ import { NMRRange } from '../xy/NMRRange';
 import { NMRZone } from '../xyz/NMRZone';
 
 import { RestrictionByCS } from './utils/buildAssignments';
-import { addIDs } from './utils/getAssignment/addIDs';
 import { AtomTypes, buildAssignments } from './utils/getAssignment/buildAssignments';
+import { formatData } from './utils/getAssignment/formatData';
 import { getTargetsAndCorrelations } from './utils/getAssignment/getTargetsAndCorrelations';
 import getWorkFlow from './utils/getAssignment/getWorkFlow';
 
@@ -113,7 +113,7 @@ export async function getAssignments(
   molecule.addImplicitHydrogens();
   addDiastereotopicMissingChirality(molecule);
 
-  const spectra = addIDs(input.spectra);
+  const spectra = formatData(input.spectra);
 
   const { targets, correlations } = getTargetsAndCorrelations(
     spectra,
