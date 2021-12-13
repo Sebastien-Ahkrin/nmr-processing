@@ -7,7 +7,7 @@ import {
   CurrentAtoms,
   PredictionsByAtomType,
 } from './buildAssignments';
-import { MapPossibleAssignments } from './createMapPossibleAssignments';
+import { MapPossibleAssignments } from './createMapPossibleAssignment';
 import {
   CorrelationWithIntegration,
   TargetsByAtomType,

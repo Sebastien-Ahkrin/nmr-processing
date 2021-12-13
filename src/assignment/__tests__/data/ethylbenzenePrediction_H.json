@@ -3,7 +3,7 @@
     "nbAtoms": 3,
     "delta": 0.992,
     "diaIDs": ["did@`@fTeYWaj@@@GzP`HeT"],
-    "atomIDs": [15, 16, 17],
+    "atoms": [15, 16, 17],
     "js": [
       {
         "coupling": 7.392,
@@ -18,7 +18,7 @@
     "nbAtoms": 2,
     "delta": 2.653,
     "diaIDs": ["did@`@fTf[Waj@@bJ@_iB@bUP"],
-    "atomIDs": [13, 14],
+    "atoms": [13, 14],
     "js": [
       {
         "coupling": 7.392,
@@ -33,7 +33,7 @@
     "nbAtoms": 2,
     "delta": 7.162,
     "diaIDs": ["did@`@fTfYUn`HH@GzP`HeT"],
-    "atomIDs": [11, 12],
+    "atoms": [11, 12],
     "js": [
       {
         "coupling": 7.758,
@@ -66,7 +66,7 @@
     "nbAtoms": 1,
     "delta": 7.196,
     "diaIDs": ["did@`@fTfUvf`@h@GzP`HeT"],
-    "atomIDs": [9],
+    "atoms": [9],
     "js": [
       {
         "coupling": 7.718,
@@ -87,7 +87,7 @@
     "nbAtoms": 2,
     "delta": 7.26,
     "diaIDs": ["did@`@f\\bbRaih@J@A~dHBIU@"],
-    "atomIDs": [8, 10],
+    "atoms": [8, 10],
     "js": [
       {
         "coupling": 7.7379999999999995,

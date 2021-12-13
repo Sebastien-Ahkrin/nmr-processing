@@ -12,7 +12,7 @@ const comparator = (a: SolutionAssignment, b: SolutionAssignment) => {
 
 export interface RestrictionByCS {
   chemicalShiftRestriction: boolean;
-  tolerance: number;
+  tolerance: { [key: string]: number };
   useChemicalShiftScore: boolean;
 }
 

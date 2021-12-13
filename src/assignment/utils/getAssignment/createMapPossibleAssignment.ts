@@ -1,16 +1,16 @@
-import { RestrictionByCS } from "../buildAssignments";
-import { PossibleAssignmentMap } from "../createMapPossibleAssignments";
+import { getCorrelationDelta } from 'nmr-correlation';
+import { RestrictionByCS } from '../buildAssignments';
+import { PossibleAssignmentMap } from '../createMapPossibleAssignments';
 
-import { PredictionsByAtomType } from "./buildAssignments";
-import { TargetsByAtomType } from "./getTargetsAndCorrelations";
+import { AtomTypes, PredictionsByAtomType } from './buildAssignments';
+import { TargetsByAtomType } from './getTargetsAndCorrelations';
 
 export interface PossibleAssignments {
   [key: string]: string[];
 }
 export interface MapPossibleAssignments {
-  [key: string]: PossibleAssignmentMap
+  [key: string]: PossibleAssignmentMap;
 }
-
 export interface CreateMapPossibleAssignmentOptions {
   restrictionByCS: RestrictionByCS;
   predictions: PredictionsByAtomType;
@@ -24,10 +24,10 @@ export function createMapPossibleAssignment(
 
   const { tolerance: toleranceCS, chemicalShiftRestriction } = restrictionByCS;
 
-  let errorAbs = Math.abs(toleranceCS);
-  const atomTypes = Object.keys(predictions) as Array<'H' | 'C'>;
+  const atomTypes = Object.keys(predictions) as AtomTypes[];
 
   for (const atomType of atomTypes) {
+    let errorAbs = toleranceCS[atomType];
     let predictionByAtomType = predictions[atomType];
     let targetByAtomType = targets[atomType];
     if (!expandMap[atomType]) expandMap[atomType] = {};
@@ -41,16 +41,16 @@ export function createMapPossibleAssignment(
           const { nbAtoms, protonsCount: protonsCountFromPrediction } =
             prediction;
           const { integration, protonsCount } = target;
-          // console.log('integration', integration)
-          const couldBeAssigned =
-            integration > 0 && atomType === 'H'
-              ? nbAtoms - integration < 1
-              : protonsCount.length > 0
-              ? protonsCount.some(
-                  (count: number) => protonsCountFromPrediction === count,
-                )
-              : true;
 
+          const couldBeAssigned = !integration
+            ? true
+            : atomType === 'H'
+            ? nbAtoms - integration < 1
+            : protonsCount.length > 0
+            ? protonsCount.some(
+                (count: number) => protonsCountFromPrediction === count,
+              )
+            : true;
           if (couldBeAssigned) {
             if (
               !chemicalShiftRestriction ||
@@ -59,9 +59,12 @@ export function createMapPossibleAssignment(
               // Chemical shift is not a restriction
               expandMap[atomType][diaID].push(targetID);
             } else {
+              let targetDelta = getCorrelationDelta(target);
+              if (targetDelta === undefined) throw new Error(`Correlation has not delta`);
               let distAfterLimit = Math.abs(
-                prediction.delta - target.link[0].signal.delta - errorAbs,
+                prediction.delta - targetDelta - errorAbs,
               );
+              console.log(`diaID: ${diaID} predDelta: ${prediction.delta} diff ${distAfterLimit}, ${String(distAfterLimit < 4 * errorAbs)} `)
               if (distAfterLimit < 4 * errorAbs) {
                 expandMap[atomType][diaID].push(targetID);
               }

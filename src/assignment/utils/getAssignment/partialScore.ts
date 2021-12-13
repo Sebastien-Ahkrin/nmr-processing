@@ -138,7 +138,7 @@ export function partialScore(partial: Partial, props: PartialScoreOptions) {
           let diaID = diaIDPeerPossibleAssignment[atomType][index];
           let source = predictions[atomType][diaID];
           let target = targetsPeerAtomType[targetID];
-          let error = toleranceCS;
+          let error = toleranceCS[atomType];
           // if (source.error) {
           //   error = Math.max(source.error, toleranceCS);
           // }

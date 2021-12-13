@@ -33,7 +33,7 @@ export function formatData(input: SpectraData[] = []): SpectraDataWithIds[] {
     const { info } = spectraData;
     if (isSpectraData1D(spectraData)) {
       let data = addIDs(spectraData.ranges) as NMRRangeWithIds[];
-      for (const element of spectraData.ranges) {
+      for (const element of data) {
         const { integration } = element;
         for (let signal of element.signals || []) {
           if (!signal.integration) signal.integration = integration;

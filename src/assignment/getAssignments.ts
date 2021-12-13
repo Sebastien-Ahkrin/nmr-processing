@@ -101,7 +101,7 @@ export async function getAssignments(
   } = options;
 
   const {
-    tolerance = 1,
+    tolerance = { H: 0.2, C: 2 },
     useChemicalShiftScore = false,
     chemicalShiftRestriction = true,
   } = restrictionByCS;

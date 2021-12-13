@@ -16,7 +16,7 @@ import { RestrictionByCS, StoreAssignments } from '../buildAssignments';
 import {
   createMapPossibleAssignment,
   MapPossibleAssignments,
-} from './createMapPossibleAssignments';
+} from './createMapPossibleAssignment';
 import { AssignmentSolution, exploreTree } from './exploreTree';
 import { TargetsByAtomType } from './getTargetsAndCorrelations';
 
@@ -70,6 +70,7 @@ function checkNMRSignal1D(
     'atoms',
   ];
   for (const signal of signals) {
+    console.log('signal', signal)
     for (let key of keys) {
       if (!signal[key]) throw new Error(`property ${key} does not exist`);
     }
@@ -95,6 +96,11 @@ export interface InfoByAtomType {
   [key: string]: { nSources: number; currentIndex: number };
 }
 
+export const getAllHydrogens = {
+  C: (m: Molecule, i: number) => m.getAllHydrogens(i),
+  H: () => 1,
+};
+
 export async function buildAssignments(props: BuildAssignmentInput) {
   const {
     molecule,
@@ -113,11 +119,6 @@ export async function buildAssignments(props: BuildAssignmentInput) {
   let date = new Date();
   let timeStart = date.getTime();
   let lowerBoundScore = minScore;
-
-  const getAllHydrogens = {
-    C: (m: Molecule, i: number) => m.getAllHydrogens(i),
-    H: () => 1,
-  };
 
   let store: StoreAssignments = {
     solutions: new treeSet(comparator),
