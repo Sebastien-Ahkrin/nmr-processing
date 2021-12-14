@@ -51,20 +51,20 @@
   "devDependencies": {
     "@types/jest": "^27.0.3",
     "cheminfo-build": "^1.1.11",
-    "cheminfo-types": "^0.8.0",
-    "eslint": "^8.3.0",
+    "cheminfo-types": "^0.9.1",
+    "eslint": "^8.4.1",
     "eslint-config-cheminfo-typescript": "^10.2.4",
     "esm": "^3.2.25",
-    "jest": "^27.4.2",
+    "jest": "^27.4.5",
     "jest-matcher-deep-close-to": "^3.0.2",
     "md5": "^2.3.0",
     "ml-array-median": "^1.1.5",
     "nmr-xy-testdata": "^0.2.1",
     "openchemlib": "^7.4.3",
-    "prettier": "^2.5.0",
+    "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
-    "ts-jest": "^27.0.7",
-    "typescript": "^4.5.2"
+    "ts-jest": "^27.1.1",
+    "typescript": "^4.5.4"
   },
   "dependencies": {
     "assign-deep": "^1.0.1",
@@ -87,7 +87,7 @@
     "ml-sparse-matrix": "^2.1.0",
     "ml-spectra-processing": "^6.8.0",
     "ml-tree-set": "^0.1.1",
-    "openchemlib-utils": "^1.6.0",
+    "openchemlib-utils": "^1.7.0",
     "spectrum-generator": "^6.0.2"
   }
 }
