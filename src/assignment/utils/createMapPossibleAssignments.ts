@@ -2,12 +2,12 @@ import { MakeMandatory } from '../../utilities/MakeMandatory';
 import type { Targets } from '../get1HAssignments';
 
 import type {
-  RestrictionByCS,
+  RestrictionByCS1D,
   Predictions1Dassignments,
 } from './buildAssignments';
 
 type RestrictionByCSMandatory = MakeMandatory<
-  RestrictionByCS,
+  RestrictionByCS1D,
   'chemicalShiftRestriction' | 'tolerance' | 'useChemicalShiftScore'
 >;
 

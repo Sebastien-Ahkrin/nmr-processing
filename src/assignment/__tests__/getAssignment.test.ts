@@ -16,19 +16,19 @@ describe('automatic assignment', () => {
       {
         nbAllowedUnAssigned: 1,
         minScore: 0.01,
-        maxSolutions: 4,
+        maxSolutions: 2,
         predictions: {
           C: ethylbenzeneCarbonPrediction,
           H: ethylbenzeneProtonPrediction,
         },
         restrictionByCS: {
-          tolerance: 1,
+          tolerance: { H: 0.2, C: 1 },
           useChemicalShiftScore: true,
           chemicalShiftRestriction: true,
         },
       },
     );
-    console.log(result);
+    console.log(result)
     // writeFileSync('result.json', JSON.stringify(result))
     expect(true).toBe(true);
   });

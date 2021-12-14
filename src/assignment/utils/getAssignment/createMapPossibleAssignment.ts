@@ -1,8 +1,12 @@
 import { getCorrelationDelta } from 'nmr-correlation';
-import { RestrictionByCS } from '../buildAssignments';
+
 import { PossibleAssignmentMap } from '../createMapPossibleAssignments';
 
-import { AtomTypes, PredictionsByAtomType } from './buildAssignments';
+import {
+  AtomTypes,
+  PredictionsByAtomType,
+  RestrictionByCS,
+} from './buildAssignments';
 import { TargetsByAtomType } from './getTargetsAndCorrelations';
 
 export interface PossibleAssignments {
@@ -60,11 +64,12 @@ export function createMapPossibleAssignment(
               expandMap[atomType][diaID].push(targetID);
             } else {
               let targetDelta = getCorrelationDelta(target);
-              if (targetDelta === undefined) throw new Error(`Correlation has not delta`);
+              if (targetDelta === undefined)
+                throw new Error(`Correlation has not delta`);
               let distAfterLimit = Math.abs(
                 prediction.delta - targetDelta - errorAbs,
               );
-              console.log(`diaID: ${diaID} predDelta: ${prediction.delta} diff ${distAfterLimit}, ${String(distAfterLimit < 4 * errorAbs)} `)
+
               if (distAfterLimit < 4 * errorAbs) {
                 expandMap[atomType][diaID].push(targetID);
               }

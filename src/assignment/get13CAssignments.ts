@@ -12,7 +12,7 @@ import type {
   NMRSignal1DWithAtomsAndDiaIDs,
   Targets,
 } from './get1HAssignments';
-import { RestrictionByCS, buildAssignments } from './utils/buildAssignments';
+import { RestrictionByCS1D, buildAssignments } from './utils/buildAssignments';
 import generateID from './utils/generateID';
 
 function checkAtomsAndDiaIDs(
@@ -33,7 +33,7 @@ function checkIntegration(ranges: NMRRange[]) {
 }
 
 export interface Get13CAssignmentsOptions {
-  restrictionByCS?: Partial<RestrictionByCS>;
+  restrictionByCS?: Partial<RestrictionByCS1D>;
   /**
    * min score to accept an assignment
    * @default 1

@@ -11,14 +11,17 @@ import {
 import { predictCarbon } from '../../../prediction/predictCarbon';
 import { predictProton } from '../../../prediction/predictProton';
 import { MakeMandatory } from '../../../utilities/MakeMandatory';
-import { RestrictionByCS, StoreAssignments } from '../buildAssignments';
+import { SpectraData } from '../../getAssignments';
+import { StoreAssignments } from '../buildAssignments';
 
+import { SpectraDataWithIds } from './checkIDs';
 import {
   createMapPossibleAssignment,
   MapPossibleAssignments,
 } from './createMapPossibleAssignment';
 import { AssignmentSolution, exploreTree } from './exploreTree';
 import { TargetsByAtomType } from './getTargetsAndCorrelations';
+import { isSpectraData1D } from './isSpectraData1D';
 
 const comparator = (a: AssignmentSolution, b: AssignmentSolution) => {
   return b.score - a.score;
@@ -36,7 +39,14 @@ export interface DiaIDPeerPossibleAssignment {
   [key: string]: string[];
 }
 
+export interface RestrictionByCS {
+  chemicalShiftRestriction: boolean;
+  tolerance: {[key: string]: number};
+  useChemicalShiftScore: boolean;
+}
+
 export interface BuildAssignmentInput {
+  spectra: SpectraDataWithIds[];
   molecule: Molecule;
   restrictionByCS: RestrictionByCS;
   timeout: number;
@@ -70,7 +80,6 @@ function checkNMRSignal1D(
     'atoms',
   ];
   for (const signal of signals) {
-    console.log('signal', signal)
     for (let key of keys) {
       if (!signal[key]) throw new Error(`property ${key} does not exist`);
     }
@@ -103,6 +112,7 @@ export const getAllHydrogens = {
 
 export async function buildAssignments(props: BuildAssignmentInput) {
   const {
+    spectra,
     molecule,
     restrictionByCS,
     timeout,
@@ -132,8 +142,7 @@ export async function buildAssignments(props: BuildAssignmentInput) {
   let infoByAtomType: InfoByAtomType = {};
   const predictions: PredictionsByAtomType = {};
   let possibleAssignmentMap: MapPossibleAssignments = {};
-
-  // console.log('assignmentOrder', assignmentOrder)
+  let diaIDPeerPossibleAssignment: DiaIDPeerPossibleAssignment = {};
   for (const atomTypesToPredict of assignmentOrder) {
     for (const atomType of atomTypesToPredict) {
       const options = predictionOptions[atomType];
@@ -170,9 +179,7 @@ export async function buildAssignments(props: BuildAssignmentInput) {
       targets,
     });
 
-    console.log('possibles', possibleAssignmentMap)
-
-    const diaIDPeerPossibleAssignment: DiaIDPeerPossibleAssignment = {};
+    diaIDPeerPossibleAssignment = {};
     for (const atomType in possibleAssignmentMap) {
       diaIDPeerPossibleAssignment[atomType] = Object.keys(
         possibleAssignmentMap[atomType],
@@ -191,8 +198,6 @@ export async function buildAssignments(props: BuildAssignmentInput) {
     };
 
     for (let partial of sourceOfPartials) {
-      // if (!first) continue;
-      // first = false;
       exploreTree(
         {
           currentAtomTypes: atomTypesToPredict,
@@ -214,8 +219,98 @@ export async function buildAssignments(props: BuildAssignmentInput) {
       );
     }
   }
-  console.log('store', store)
-  return store;
+
+  return annotateSpectraData({
+    store,
+    spectra,
+    diaIDPeerPossibleAssignment,
+    targets,
+  });
+}
+
+interface AnnotateSpectraDataInput {
+  store: StoreAssignments;
+  spectra: SpectraDataWithIds[];
+  targets: TargetsByAtomType;
+  diaIDPeerPossibleAssignment: DiaIDPeerPossibleAssignment;
+}
+
+function annotateSpectraData(input: AnnotateSpectraDataInput) {
+  const { store, spectra, diaIDPeerPossibleAssignment, targets } = input;
+  const { solutions } = store;
+
+  // create a map of signal.id
+  const mapSignalId: any = {};
+  const atomTypes = Object.keys(targets) as AtomTypes[];
+  for (const atomType of atomTypes) {
+    const targetByAtomType = targets[atomType];
+    for (const targetId in targetByAtomType) {
+      let target = targetByAtomType[targetId];
+      for (const link of target.link) {
+        const signalId = link.signal.id;
+        if (mapSignalId[signalId]) continue;
+        mapSignalId[link.signal.id] = searchIndices(signalId, spectra);
+      }
+    }
+  }
+  const result = [];
+  for (let solution of solutions.elements) {
+    const spectraResult = JSON.parse(
+      JSON.stringify(spectra),
+    ) as SpectraDataWithIds[];
+    const { assignment, score } = solution;
+    const atomTypes = Object.keys(assignment) as AtomTypes[]
+    for (const atomType of atomTypes) {
+      const targetByAtomType = targets[atomType];
+      const assignmentPeerAtomType = assignment[atomType];
+      for (let index = 0; index < assignmentPeerAtomType.length; index++) {
+        const targetID = assignmentPeerAtomType[index];
+        const target = targetByAtomType[targetID];
+        const diaId = diaIDPeerPossibleAssignment[atomType][index];
+        for (let link of target.link) {
+          const signalID = link.signal.id;
+          if (!signalID || signalID === '*') continue;
+          const { spectrumIndex, elementIndex, signalIndex } =
+            mapSignalId[signalID];
+
+          const spectrum = spectraResult[spectrumIndex];
+          if (isSpectraData1D(spectrum)) {
+            let { ranges } = spectrum;
+            let range = ranges[elementIndex];
+            let signal = range.signals[signalIndex];
+            if (!signal.diaIDs) signal.diaIDs = [];
+            signal.diaIDs.push(diaId);
+          } else {
+            const axis = link.axis as 'x' | 'y';
+            const signal = spectrum.zones[signalIndex].signals[signalIndex];
+            if (!signal[axis].diaIDs) signal[axis].diaIDs = [];
+            signal[axis].diaIDs?.push(diaId);
+          }
+        }
+      }
+    }
+    result.push({
+      score,
+      assignment: spectraResult,
+    });
+  }
+  return result;
+}
+
+function searchIndices(signalId: string, spectra: SpectraData[]) {
+  for (let spectrumIndex = 0; spectrumIndex < spectra.length; spectrumIndex) {
+    const spectrum = spectra[spectrumIndex];
+    const data = isSpectraData1D(spectrum) ? spectrum.ranges : spectrum.zones;
+    for (let elementIndex = 0; elementIndex < data.length; elementIndex++) {
+      const signals = data[elementIndex].signals || [];
+      for (let signalIndex = 0; signalIndex < signals.length; signalIndex++) {
+        if (signalId === signals[signalIndex].id) {
+          return { spectrumIndex, signalIndex, elementIndex };
+        }
+      }
+    }
+  }
+  throw new Error(`There is not a signal with ${signalId} ID`);
 }
 
 function getSourceOfPartials(

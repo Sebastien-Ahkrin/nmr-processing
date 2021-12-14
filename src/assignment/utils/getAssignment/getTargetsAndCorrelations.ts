@@ -1,10 +1,9 @@
 import { buildCorrelationData } from 'nmr-correlation';
 import type { Types } from 'nmr-correlation';
 
-import { SpectraDataWithIds } from './formatData';
+import { SpectraDataWithIds } from './checkIDs';
+import { formatData } from './formatData';
 import { getIntegrationOfAttachedProtons } from './getIntegrationOfAttachedProtons';
-
-import { writeFileSync } from 'fs';
 
 export interface CorrelationWithIntegration
   extends Pick<
@@ -25,6 +24,7 @@ export interface TargetsAndCorrelations {
   targets: TargetsByAtomType;
   correlations: CorrelationWithIntegration[];
 }
+
 export function getTargetsAndCorrelations(
   spectra: SpectraDataWithIds[],
   options: any = {},
@@ -32,32 +32,32 @@ export function getTargetsAndCorrelations(
   //add indirect links, if a carbon C1 is attached to a proton H1 that correlating
   //with carbon C2, so the carbon C1 and C2 are also correlating
 
-  const { values: correlations } = buildCorrelationData(spectra, { tolerance: { C: 0.25, H: 0.05}});
+  const spectraData = formatData(spectra);
+  const { values: correlations } = buildCorrelationData(spectraData, {
+    tolerance: { C: 0.25, H: 0.05 },
+  });
 
-  for (const correlation of correlations) {
-    const { H: attachmentH = [] } = correlation.attachment;
-    let indirectLinks: { [key: string]: any } = {};
-    for (let match of attachmentH) {
-      const links = correlations[match].link;
-      for (let link of links) {
-        indirectLinks[link.signal.id] = link;
-      }
-    }
-    correlation.indirectLinks = [];
-  }
-  // writeFileSync('correlation.json', JSON.stringify(correlations));
-  //formatting correlation by atomType
+  // for (const correlation of correlations) {
+  //   const { H: attachmentH = [] } = correlation.attachment;
+  //   let indirectLinks: { [key: string]: any } = {};
+  //   for (let match of attachmentH) {
+  //     const links = correlations[match].link;
+  //     for (let link of links) {
+  //       indirectLinks[link.signal.id] = link;
+  //     }
+  //   }
+  //   correlation.indirectLinks = [];
+  // }
+  //formatting correlations by atomType
   let targets: any = {};
   for (const correlation of correlations) {
     if (correlation.pseudo) continue;
-    const { link, atomType } = correlation;
-    const targetID = link[0].signal.id;
+    const { id: targetID, atomType } = correlation;
     if (!targets[atomType]) targets[atomType] = {};
     targets[atomType][targetID] = correlation;
     if (atomType === 'H') {
       targets[atomType][targetID].integration =
         correlation.link[0].signal.integration;
-      console.log(`integration ${atomType}, ${targetID}`, targets[atomType][targetID].integration)
     } else {
       targets[atomType][targetID].integration = getIntegrationOfAttachedProtons(
         correlation,

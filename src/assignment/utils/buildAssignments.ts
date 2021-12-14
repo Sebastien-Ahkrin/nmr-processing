@@ -10,14 +10,14 @@ const comparator = (a: SolutionAssignment, b: SolutionAssignment) => {
   return b.score - a.score;
 };
 
-export interface RestrictionByCS {
+export interface RestrictionByCS1D {
   chemicalShiftRestriction: boolean;
-  tolerance: { [key: string]: number };
+  tolerance: number;
   useChemicalShiftScore: boolean;
 }
 
 export interface BuildAssignmentsProps {
-  restrictionByCS?: Partial<RestrictionByCS>;
+  restrictionByCS?: Partial<RestrictionByCS1D>;
   timeout: number;
   minScore: number;
   useIntegrationRestriction: boolean;

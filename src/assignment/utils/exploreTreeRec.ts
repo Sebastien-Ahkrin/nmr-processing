@@ -1,7 +1,7 @@
 import type { Targets } from '../get1HAssignments';
 
 import type {
-  RestrictionByCS,
+  RestrictionByCS1D,
   StoreAssignments,
   Predictions1Dassignments,
 } from './buildAssignments';
@@ -10,7 +10,7 @@ import { partialScore } from './partialScore';
 
 export interface ExploreTreeRecProps {
   nSources: number;
-  restrictionByCS: RestrictionByCS;
+  restrictionByCS: RestrictionByCS1D;
   timeout: number;
   timeStart: number;
   maxSolutions: number;

@@ -1,6 +1,7 @@
-import { RestrictionByCS, StoreAssignments } from '../buildAssignments';
+import { StoreAssignments } from '../buildAssignments';
 
 import {
+  RestrictionByCS,
   DiaIDPeerPossibleAssignment,
   InfoByAtomType,
   Partial,
@@ -69,7 +70,6 @@ export function exploreTree(
       currentIndex === nSources - 1 &&
       partial[atomType][currentIndex] !== null
     ) {
-      // console.log('atomType', atomType, partial)
       continue;
     }
 
@@ -87,29 +87,18 @@ export function exploreTree(
         correlations,
         targets,
       });
-      // if (currentIndex > 4) {
-      //   console.log('score', score, partial);
-      // }
-      // console.log(partial)
+
       if (score === 0) {
         if (targetID === '*') {
-          // console.log('atom', atomType, currentIndex)
           partial[atomType][currentIndex] = null;
-          // console.log(partial)
         }
         continue;
       }
-      // if (infoByAtomTypes.H.currentIndex === 4) {
-      //   console.log(partial, infoByAtomTypes, possibleAssignments, currentIndex, atomType, currentAtomTypes);
-      // }
+
       if (
         isLastOne(currentAtomTypes, infoByAtomTypes) &&
         score >= lowerBoundScore
       ) {
-        // if (first) {
-        //   first = false;
-        //   console.log(partial, infoByAtomTypes, possibleAssignments, currentIndex, atomType, currentAtomTypes);
-        // }
         addSolution(store, { predictions, partial, score, maxSolutions });
       } else if (currentIndex < nSources - 1) {
         // console.log('continue', currentIndex, nSources, infoByAtomTypes[atomType].currentIndex , currentDate.getTime())
@@ -154,6 +143,7 @@ function addSolution(store: StoreAssignments, props: AddSolutionOptions) {
   };
 
   if (store.nSolutions >= maxSolutions) {
+    console.log(store.solutions.elements)
     if (solution.score > store.solutions.last().score) {
       store.solutions.pollLast();
       store.solutions.add(solution);

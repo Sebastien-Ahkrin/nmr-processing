@@ -7,9 +7,8 @@ import type { PredictProtonOptions } from '../prediction/predictProton';
 import { NMRRange } from '../xy/NMRRange';
 import { NMRZone } from '../xyz/NMRZone';
 
-import { RestrictionByCS } from './utils/buildAssignments';
-import { AtomTypes, buildAssignments } from './utils/getAssignment/buildAssignments';
-import { formatData } from './utils/getAssignment/formatData';
+import { AtomTypes, buildAssignments, RestrictionByCS } from './utils/getAssignment/buildAssignments';
+import { checkIDs } from './utils/getAssignment/checkIDs';
 import { getTargetsAndCorrelations } from './utils/getAssignment/getTargetsAndCorrelations';
 import getWorkFlow from './utils/getAssignment/getWorkFlow';
 
@@ -101,7 +100,7 @@ export async function getAssignments(
   } = options;
 
   const {
-    tolerance = { H: 0.2, C: 2 },
+    tolerance = { H: 0.2, C: 1 },
     useChemicalShiftScore = false,
     chemicalShiftRestriction = true,
   } = restrictionByCS;
@@ -113,7 +112,7 @@ export async function getAssignments(
   molecule.addImplicitHydrogens();
   addDiastereotopicMissingChirality(molecule);
 
-  const spectra = formatData(input.spectra);
+  const spectra = checkIDs(input.spectra);
 
   const { targets, correlations } = getTargetsAndCorrelations(
     spectra,
@@ -128,6 +127,7 @@ export async function getAssignments(
       useChemicalShiftScore,
       chemicalShiftRestriction,
     },
+    spectra,
     molecule,
     timeout,
     minScore,
@@ -139,5 +139,6 @@ export async function getAssignments(
     predictionOptions,
     predictions,
   });
-  return solutions.solutions.elements;
+
+  return solutions;
 }

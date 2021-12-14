@@ -3,7 +3,7 @@ declare module 'ml-tree-set' {
   type Elements = any;
   export default class TreeSet {
     public length: number;
-    public elements: Array<Elements>;
+    public elements: Array<w>;
 
     public constructor(comparator: Comparator);
 

@@ -9,7 +9,7 @@ import {
 import type { NMRSignal1D } from '../signals/NMRSignal1D';
 import { MakeMandatory } from '../utilities/MakeMandatory';
 
-import { buildAssignments, RestrictionByCS } from './utils/buildAssignments';
+import { buildAssignments, RestrictionByCS1D } from './utils/buildAssignments';
 import generateID from './utils/generateID';
 
 export type NMRSignal1DWithAtomsAndDiaIDs = MakeMandatory<
@@ -40,7 +40,7 @@ function checkForIntegration(
 }
 
 export interface Get1HAssignmentsOptions {
-  restrictionByCS?: Partial<RestrictionByCS>;
+  restrictionByCS?: Partial<RestrictionByCS1D>;
   /**
    * min score to accept an assignment
    * @default 1

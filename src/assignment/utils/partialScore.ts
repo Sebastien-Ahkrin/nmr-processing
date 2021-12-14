@@ -2,11 +2,11 @@ import { Targets } from '../get1HAssignments';
 
 import type {
   Predictions1Dassignments,
-  RestrictionByCS,
+  RestrictionByCS1D,
 } from './buildAssignments';
 
 interface PartialScoreOptions {
-  restrictionByCS: RestrictionByCS;
+  restrictionByCS: RestrictionByCS1D;
   /**
    * number of allowed unassignment signals
    * @default 0

@@ -1,9 +1,10 @@
 import { getCorrelationDelta } from 'nmr-correlation';
 
-import { RestrictionByCS } from '../buildAssignments';
-
-import { AtomTypes, Partial, PredictionsByAtomType } from './buildAssignments';
-import { CorrelationWithIntegration, TargetsByAtomType } from './getTargetsAndCorrelations';
+import { AtomTypes, Partial, PredictionsByAtomType, RestrictionByCS } from './buildAssignments';
+import {
+  CorrelationWithIntegration,
+  TargetsByAtomType,
+} from './getTargetsAndCorrelations';
 import groupCarbonTargetByIntegrationZone from './groupCarbonTargetByIntegrationZone';
 
 export interface PartialScoreOptions {
@@ -172,9 +173,9 @@ export function partialScore(partial: Partial, props: PartialScoreOptions) {
   let scoreOn2D = 0;
   // console.log(activeDomainOnTarget, howManyActived(activeDomainOnTarget));
   if (howManyActived(activeDomainOnTarget) > 1) {
-    let andConstrains: {[key: string]: number} = {};
+    let andConstrains: { [key: string]: number } = {};
     let activeDomain: Array<{ index: number; atomType: AtomTypes }> = [];
-    // console.log(activeDomainOnPrediction);
+
     for (const atomType of Object.keys(
       activeDomainOnPrediction,
     ) as AtomTypes[]) {
@@ -201,7 +202,7 @@ export function partialScore(partial: Partial, props: PartialScoreOptions) {
 
         if (!partialI || !partialJ) continue;
 
-        let keyOnTargerMap =
+        let keyOnTargertMap =
           partialI > partialJ
             ? `${partialJ} ${partialI}`
             : `${partialI} ${partialJ}`;
@@ -228,8 +229,8 @@ export function partialScore(partial: Partial, props: PartialScoreOptions) {
           ? 1
           : 0;
 
-        andConstrains[keyOnTargerMap] = andConstrains[keyOnTargerMap]
-          ? Math.max(andConstrains[keyOnTargerMap], partialScore2D)
+        andConstrains[keyOnTargertMap] = andConstrains[keyOnTargertMap]
+          ? Math.max(andConstrains[keyOnTargertMap], partialScore2D)
           : partialScore2D;
       }
     }
@@ -252,23 +253,24 @@ export function partialScore(partial: Partial, props: PartialScoreOptions) {
 
 interface CheckLinkingFromTo {
   from: {
-    targetID: string,
-    atomType: AtomTypes,
-  },
+    targetID: string;
+    atomType: AtomTypes;
+  };
   to: {
-    targetID: string,
-    atomType: AtomTypes,
-  },
+    targetID: string;
+    atomType: AtomTypes;
+  };
 }
-function checkLinking(partials: CheckLinkingFromTo, correlations: TargetsByAtomType) {
+function checkLinking(
+  partials: CheckLinkingFromTo,
+  correlations: TargetsByAtomType,
+) {
   const { from, to } = partials;
   if (from.targetID === to.targetID) return true;
   let correlationI = correlations[from.atomType][from.targetID];
-  const { link, indirectLinks } = correlationI;
-  for (let links of [link, indirectLinks]) {
-    for (const link of links) {
-      if (link.signal.id === to.targetID) return true;
-    }
+  let correlationJ = correlations[to.atomType][to.targetID];
+  for (const link of correlationI.link) {
+    if (link.signal.id === correlationJ.link[0].signal.id) return true;
   }
   return false;
 }

@@ -1,21 +1,21 @@
 import { createMapPossibleAssignment } from '../createMapPossibleAssignment';
 import ethylbenzeneData from '../../../__tests__/data/ethylbenzeneData.json';
 import ethylbenzeneCarbonPrediction from '../../../__tests__/data/ethylbenzenePrediction_C.json';
-import ethylbenzeneProtonPrediction from '../../../__tests__/data/ethylbenzenePrediction_H.json';
-import { getTargetsAndCorrelations } from '../getTargetsAndCorrelations';
-import { formatData } from '../formatData';
-import { SpectraData } from '../../../getAssignments';
 import { Molecule } from 'openchemlib';
 import { getConnectivityMatrix } from 'openchemlib-utils';
+
+import ethylbenzeneProtonPrediction from '../../../__tests__/data/ethylbenzenePrediction_H.json';
 import {
   AtomTypes,
   getAllHydrogens,
   PredictionsByAtomType,
 } from '../buildAssignments';
+import { SpectraDataWithIds } from '../checkIDs';
+import { getTargetsAndCorrelations } from '../getTargetsAndCorrelations';
 
 const molecule = Molecule.fromMolfile(ethylbenzeneData.molfile);
-const formattedData = formatData(ethylbenzeneData.spectra as SpectraData[]);
-const { targets } = getTargetsAndCorrelations(formattedData);
+const spectraData = ethylbenzeneData.spectra as SpectraDataWithIds[]
+const { targets } = getTargetsAndCorrelations(spectraData);
 
 const pathLengthMatrix = getConnectivityMatrix(molecule, {
   pathLength: true,
