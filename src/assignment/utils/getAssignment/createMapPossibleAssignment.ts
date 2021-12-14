@@ -65,7 +65,7 @@ export function createMapPossibleAssignment(
             } else {
               let targetDelta = getCorrelationDelta(target);
               if (targetDelta === undefined)
-                throw new Error(`Correlation has not delta`);
+                {throw new Error(`Correlation has not delta`);}
               let distAfterLimit = Math.abs(
                 prediction.delta - targetDelta - errorAbs,
               );

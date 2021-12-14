@@ -1,9 +1,8 @@
-import { createMapPossibleAssignment } from '../createMapPossibleAssignment';
-import ethylbenzeneData from '../../../__tests__/data/ethylbenzeneData.json';
-import ethylbenzeneCarbonPrediction from '../../../__tests__/data/ethylbenzenePrediction_C.json';
 import { Molecule } from 'openchemlib';
 import { getConnectivityMatrix } from 'openchemlib-utils';
 
+import ethylbenzeneData from '../../../__tests__/data/ethylbenzeneData.json';
+import ethylbenzeneCarbonPrediction from '../../../__tests__/data/ethylbenzenePrediction_C.json';
 import ethylbenzeneProtonPrediction from '../../../__tests__/data/ethylbenzenePrediction_H.json';
 import {
   AtomTypes,
@@ -11,6 +10,7 @@ import {
   PredictionsByAtomType,
 } from '../buildAssignments';
 import { SpectraDataWithIds } from '../checkIDs';
+import { createMapPossibleAssignment } from '../createMapPossibleAssignment';
 import { getTargetsAndCorrelations } from '../getTargetsAndCorrelations';
 
 const molecule = Molecule.fromMolfile(ethylbenzeneData.molfile);
