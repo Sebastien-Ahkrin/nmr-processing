@@ -1,5 +1,13 @@
 # Changelog
 
+### [6.0.1](https://www.github.com/cheminfo/nmr-processing/compare/v6.0.0...v6.0.1) (2021-12-14)
+
+
+### Bug Fixes
+
+* remove types folder  ([#129](https://www.github.com/cheminfo/nmr-processing/issues/129)) close [#128](https://www.github.com/cheminfo/nmr-processing/issues/128) close [#127](https://www.github.com/cheminfo/nmr-processing/issues/127) ([19b80be](https://www.github.com/cheminfo/nmr-processing/commit/19b80bea315953348ef03e9219b0d96f20ba224a))
+* update dependencies ([e994cca](https://www.github.com/cheminfo/nmr-processing/commit/e994cca910d8d9e3abaaf496a011645242ec1bbb))
+
 ## [6.0.0](https://www.github.com/cheminfo/nmr-processing/compare/v5.0.0...v6.0.0) (2021-12-01)
 
 
