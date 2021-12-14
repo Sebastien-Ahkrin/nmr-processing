@@ -85,9 +85,9 @@
     "ml-peak-shape-generator": "^4.0.1",
     "ml-simple-clustering": "^0.1.0",
     "ml-sparse-matrix": "^2.1.0",
-    "ml-spectra-processing": "^6.8.0",
+    "ml-spectra-processing": "^7.0.0",
     "ml-tree-set": "^0.1.1",
-    "openchemlib-utils": "^1.7.0",
+    "openchemlib-utils": "^1.8.0",
     "spectrum-generator": "^6.0.2"
   }
 }
