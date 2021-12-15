@@ -1,5 +1,12 @@
 # Changelog
 
+### [6.0.2](https://www.github.com/cheminfo/nmr-processing/compare/v6.0.1...v6.0.2) (2021-12-15)
+
+
+### Bug Fixes
+
+* remove circular dependency of ml-gsd ([d1cdec1](https://www.github.com/cheminfo/nmr-processing/commit/d1cdec1106d914d43baa6aff0e9fd1ef74d71fc6))
+
 ### [6.0.1](https://www.github.com/cheminfo/nmr-processing/compare/v6.0.0...v6.0.1) (2021-12-14)
 
 
