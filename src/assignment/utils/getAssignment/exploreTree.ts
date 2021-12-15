@@ -136,14 +136,12 @@ export interface AssignmentSolution {
 function addSolution(store: StoreAssignments, props: AddSolutionOptions) {
   let { score, maxSolutions, partial, predictions } = props;
   score /= doubleAssignmentPenalty(partial, predictions);
-  store.nSolutions++;
   let solution: AssignmentSolution = {
     assignment: JSON.parse(JSON.stringify(partial)),
     score: score,
   };
 
   if (store.nSolutions >= maxSolutions) {
-    console.log(store.solutions.elements)
     if (solution.score > store.solutions.last().score) {
       store.solutions.pollLast();
       store.solutions.add(solution);
