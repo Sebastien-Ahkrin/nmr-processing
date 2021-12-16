@@ -25,7 +25,7 @@ interface OptionsGetCutOff {
   thresholdFactor: number;
 }
 
-export interface IGetPeakListOptions
+export interface GetPeakListOptions
   extends GSDOptions,
     OptimizePeaksOptions,
     JoinBroadPeaksOptions {
@@ -37,7 +37,7 @@ export interface IGetPeakListOptions
 }
 
 export interface OptionsXYAutoPeaksPicking
-  extends Partial<IGetPeakListOptions> {
+  extends Partial<GetPeakListOptions> {
   /**
    * Low limit value in the x axis to extract a sub set of points from the input data.
    */
@@ -92,7 +92,7 @@ export function xyAutoPeaksPicking(
 
   const cutOff = getCutOff(data.y, { noiseLevel, useSanPlot, thresholdFactor });
 
-  let getPeakOptions: IGetPeakListOptions = {
+  let getPeakOptions: GetPeakListOptions = {
     shape,
     broadWidth,
     optimize,
@@ -115,7 +115,7 @@ export function xyAutoPeaksPicking(
   return peaks;
 }
 
-function getPeakList(data: DataXY, options: IGetPeakListOptions) {
+function getPeakList(data: DataXY, options: GetPeakListOptions) {
   const {
     shape,
     broadWidth,
@@ -159,7 +159,7 @@ function getPeakList(data: DataXY, options: IGetPeakListOptions) {
   return peakList;
 }
 
-function getNegativePeaks(data: DataXY, options: IGetPeakListOptions) {
+function getNegativePeaks(data: DataXY, options: GetPeakListOptions) {
   let { x, y } = data;
   let negativeDataY = new Float64Array(data.y.length);
   for (let i = 0; i < negativeDataY.length; i++) {
