@@ -41,7 +41,7 @@ export interface DiaIDPeerPossibleAssignment {
 
 export interface RestrictionByCS {
   chemicalShiftRestriction: boolean;
-  tolerance: {[key: string]: number};
+  tolerance: { [key: string]: number };
   useChemicalShiftScore: boolean;
 }
 
@@ -155,7 +155,6 @@ export async function buildAssignments(props: BuildAssignmentInput) {
 
       if (!predictions[atomType]) predictions[atomType] = {};
       for (let prediction of joinedSignals) {
-        // @TODO: REFACTOR it could be missed if the CS is not a requirement
         const diaID = prediction.diaIDs[0];
         const index = prediction.atoms[0];
         const allHydrogens = getAllHydrogens[atomType](molecule, index);
@@ -238,8 +237,6 @@ interface AnnotateSpectraDataInput {
 function annotateSpectraData(input: AnnotateSpectraDataInput) {
   const { store, spectra, diaIDPeerPossibleAssignment, targets } = input;
   const { solutions } = store;
-
-  // create a map of signal.id
   const mapSignalId: any = {};
   const atomTypes = Object.keys(targets) as AtomTypes[];
   for (const atomType of atomTypes) {
@@ -253,26 +250,26 @@ function annotateSpectraData(input: AnnotateSpectraDataInput) {
       }
     }
   }
+
   const result = [];
   for (let solution of solutions.elements) {
     const spectraResult = JSON.parse(
       JSON.stringify(spectra),
     ) as SpectraDataWithIds[];
     const { assignment, score } = solution;
-    const atomTypes = Object.keys(assignment) as AtomTypes[]
+    const atomTypes = Object.keys(assignment) as AtomTypes[];
     for (const atomType of atomTypes) {
       const targetByAtomType = targets[atomType];
       const assignmentPeerAtomType = assignment[atomType];
       for (let index = 0; index < assignmentPeerAtomType.length; index++) {
         const targetID = assignmentPeerAtomType[index];
+        if (targetID === '*') continue;
         const target = targetByAtomType[targetID];
         const diaId = diaIDPeerPossibleAssignment[atomType][index];
         for (let link of target.link) {
           const signalID = link.signal.id;
-          if (!signalID || signalID === '*') continue;
           const { spectrumIndex, elementIndex, signalIndex } =
             mapSignalId[signalID];
-
           const spectrum = spectraResult[spectrumIndex];
           if (isSpectraData1D(spectrum)) {
             let { ranges } = spectrum;
@@ -282,7 +279,7 @@ function annotateSpectraData(input: AnnotateSpectraDataInput) {
             signal.diaIDs.push(diaId);
           } else {
             const axis = link.axis as 'x' | 'y';
-            const signal = spectrum.zones[signalIndex].signals[signalIndex];
+            const signal = spectrum.zones[elementIndex].signals[signalIndex];
             if (!signal[axis].diaIDs) signal[axis].diaIDs = [];
             signal[axis].diaIDs?.push(diaId);
           }
@@ -298,7 +295,7 @@ function annotateSpectraData(input: AnnotateSpectraDataInput) {
 }
 
 function searchIndices(signalId: string, spectra: SpectraData[]) {
-  for (let spectrumIndex = 0; spectrumIndex < spectra.length; spectrumIndex) {
+  for (let spectrumIndex = 0; spectrumIndex < spectra.length; spectrumIndex++) {
     const spectrum = spectra[spectrumIndex];
     const data = isSpectraData1D(spectrum) ? spectrum.ranges : spectrum.zones;
     for (let elementIndex = 0; elementIndex < data.length; elementIndex++) {
