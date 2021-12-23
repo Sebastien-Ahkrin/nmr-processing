@@ -11,7 +11,6 @@ import {
 import { predictCarbon } from '../../../prediction/predictCarbon';
 import { predictProton } from '../../../prediction/predictProton';
 import { MakeMandatory } from '../../../utilities/MakeMandatory';
-import { SpectraData } from '../../getAssignments';
 import { StoreAssignments } from '../buildAssignments';
 
 import { SpectraDataWithIds } from './checkIDs';
@@ -22,6 +21,7 @@ import {
 import { AssignmentSolution, exploreTree } from './exploreTree';
 import { TargetsByAtomType } from './getTargetsAndCorrelations';
 import { isSpectraData1D } from './isSpectraData1D';
+import { searchIndices } from './searchIndices';
 
 const comparator = (a: AssignmentSolution, b: AssignmentSolution) => {
   return b.score - a.score;
@@ -292,22 +292,6 @@ function annotateSpectraData(input: AnnotateSpectraDataInput) {
     });
   }
   return result;
-}
-
-function searchIndices(signalId: string, spectra: SpectraData[]) {
-  for (let spectrumIndex = 0; spectrumIndex < spectra.length; spectrumIndex++) {
-    const spectrum = spectra[spectrumIndex];
-    const data = isSpectraData1D(spectrum) ? spectrum.ranges : spectrum.zones;
-    for (let elementIndex = 0; elementIndex < data.length; elementIndex++) {
-      const signals = data[elementIndex].signals || [];
-      for (let signalIndex = 0; signalIndex < signals.length; signalIndex++) {
-        if (signalId === signals[signalIndex].id) {
-          return { spectrumIndex, signalIndex, elementIndex };
-        }
-      }
-    }
-  }
-  throw new Error(`There is not a signal with ${signalId} ID`);
 }
 
 function getSourceOfPartials(

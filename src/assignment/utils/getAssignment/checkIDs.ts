@@ -9,14 +9,17 @@ import generateID from '../generateID';
 
 import { isSpectraData1D } from './isSpectraData1D';
 
+export type NMRSignal1DWithId = MakeMandatory<NMRSignal1D, 'id'>;
+export type NMRSignal2DWithId = MakeMandatory<NMRSignal2D, 'id'>;
+
 export interface NMRZoneWithIds extends Omit<NMRZone, 'signals' | 'id'> {
   id: string;
-  signals: Array<MakeMandatory<NMRSignal2D, 'id'>>;
+  signals: Array<NMRSignal2DWithId>;
 }
 
 export interface NMRRangeWithIds extends Omit<NMRRange, 'id' | 'signals'> {
   id: string;
-  signals: Array<MakeMandatory<NMRSignal1D, 'id'>>;
+  signals: Array<NMRSignal1DWithId>;
 }
 
 export interface SpectraData1DWithIds extends Omit<SpectraData1D, 'ranges'> {
