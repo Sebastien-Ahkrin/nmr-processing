@@ -15,11 +15,13 @@ function getWorkFlow(
   const experimentTypes = extractExperimentType(correlations);
 
   const { hasHSQC, types } = experimentTypes;
-  const assignmentOrder: Array<AtomTypes[]> = [];
+  
 
   if (justAssign.length > 0) {
     return { assignmentOrder: justAssign, experimentTypes };
   }
+
+  const assignmentOrder: Array<AtomTypes[]> = [];
 
   if (hasHSQC) {
     assignmentOrder.push(['C'], ['H']);

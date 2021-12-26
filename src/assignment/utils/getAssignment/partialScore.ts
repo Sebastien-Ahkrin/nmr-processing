@@ -1,6 +1,11 @@
 import { getCorrelationDelta } from 'nmr-correlation';
 
-import { AtomTypes, Partial, PredictionsByAtomType, RestrictionByCS } from './buildAssignments';
+import {
+  AtomTypes,
+  Partial,
+  PredictionsByAtomType,
+  RestrictionByCS,
+} from './buildAssignments';
 import {
   CorrelationWithIntegration,
   TargetsByAtomType,
@@ -261,6 +266,7 @@ interface CheckLinkingFromTo {
     atomType: AtomTypes;
   };
 }
+
 function checkLinking(
   partials: CheckLinkingFromTo,
   correlations: TargetsByAtomType,
@@ -269,8 +275,10 @@ function checkLinking(
   if (from.targetID === to.targetID) return true;
   let correlationI = correlations[from.atomType][from.targetID];
   let correlationJ = correlations[to.atomType][to.targetID];
-  for (const link of correlationI.link) {
-    if (link.signal.id === correlationJ.link[0].signal.id) return true;
+  for (const linkJ of correlationJ.link) {
+    for (const link of correlationI.link) {
+      if (link.signal.id === linkJ.signal.id) return true;
+    }
   }
   return false;
 }

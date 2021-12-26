@@ -57,7 +57,6 @@ describe('AutoAssignment - createMapPossibleAssignment', () => {
         targets,
       },
     );
-    console.log('result', result)
     // expect(result.C.carbon1).toStrictEqual(['6dVPFnCT', '*']);
     // expect(result.C.carbon2).toStrictEqual(['aFEmeB3j', '*']);
     // expect(result.C.carbon3).toStrictEqual(['rc5vsGS0', '*']);

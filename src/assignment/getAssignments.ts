@@ -12,12 +12,16 @@ import { checkIDs } from './utils/getAssignment/checkIDs';
 import { getTargetsAndCorrelations } from './utils/getAssignment/getTargetsAndCorrelations';
 import getWorkFlow from './utils/getAssignment/getWorkFlow';
 
+import { writeFileSync } from 'fs';
+
 export interface SpectraData1D {
+  id?: string;
   ranges: NMRRange[];
   info: any;
 }
 
 export interface SpectraData2D {
+  id?: string;
   zones: NMRZone[];
   info: any;
 }
@@ -118,7 +122,7 @@ export async function getAssignments(
     spectra,
     correlationOptions,
   );
-
+    writeFileSync('targets.json', JSON.stringify(targets));
   const { assignmentOrder } = getWorkFlow(correlations, justAssign);
 
   const solutions = await buildAssignments({

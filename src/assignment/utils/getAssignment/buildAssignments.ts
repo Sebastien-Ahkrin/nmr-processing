@@ -218,7 +218,7 @@ export async function buildAssignments(props: BuildAssignmentInput) {
       );
     }
   }
-
+  console.log('store', store.solutions.elements.map(e => e.assignment));
   return annotateSpectraData({
     store,
     spectra,
@@ -258,19 +258,24 @@ function annotateSpectraData(input: AnnotateSpectraDataInput) {
     ) as SpectraDataWithIds[];
     const { assignment, score } = solution;
     const atomTypes = Object.keys(assignment) as AtomTypes[];
+      console.log(`\n`)
     for (const atomType of atomTypes) {
       const targetByAtomType = targets[atomType];
       const assignmentPeerAtomType = assignment[atomType];
+      console.log(`${atomType}`, assignmentPeerAtomType)
       for (let index = 0; index < assignmentPeerAtomType.length; index++) {
         const targetID = assignmentPeerAtomType[index];
-        if (targetID === '*') continue;
+
+        if (targetID === '*' || !targetID) continue;
+
         const target = targetByAtomType[targetID];
         const diaId = diaIDPeerPossibleAssignment[atomType][index];
+
         for (let link of target.link) {
-          const signalID = link.signal.id;
           const { spectrumIndex, elementIndex, signalIndex } =
-            mapSignalId[signalID];
+            mapSignalId[link.signal.id];
           const spectrum = spectraResult[spectrumIndex];
+
           if (isSpectraData1D(spectrum)) {
             let { ranges } = spectrum;
             let range = ranges[elementIndex];

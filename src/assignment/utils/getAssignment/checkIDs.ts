@@ -35,7 +35,7 @@ export function checkIDs(input: SpectraData[] = []): SpectraDataWithIds[] {
   let inputClone = JSON.parse(JSON.stringify(input)) as SpectraData[];
   let spectra: SpectraDataWithIds[] = [];
   for (const spectraData of inputClone) {
-    const { info } = spectraData;
+    const { info, id } = spectraData;
     if (isSpectraData1D(spectraData)) {
       let data = addIDs(spectraData.ranges) as NMRRangeWithIds[];
       for (const element of data) {
@@ -44,10 +44,10 @@ export function checkIDs(input: SpectraData[] = []): SpectraDataWithIds[] {
           if (!signal.integration) signal.integration = integration;
         }
       }
-      spectra.push({ info, ranges: data });
+      spectra.push({ id, info, ranges: data });
     } else {
       let data = addIDs(spectraData.zones) as NMRZoneWithIds[];
-      spectra.push({ info, zones: data });
+      spectra.push({ id, info, zones: data });
     }
   }
   return spectra;

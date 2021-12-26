@@ -32,9 +32,11 @@ export function getTargetsAndCorrelations(
   //add indirect links, if a carbon C1 is attached to a proton H1 that correlating
   //with carbon C2, so the carbon C1 and C2 are also correlating
 
+  const { tolerance = { C: 0.25, H: 0.05 } } = options;
+
   const spectraData = formatData(spectra);
   const { values: correlations } = buildCorrelationData(spectraData, {
-    tolerance: { C: 0.25, H: 0.05 },
+    tolerance,
   });
 
   // for (const correlation of correlations) {
