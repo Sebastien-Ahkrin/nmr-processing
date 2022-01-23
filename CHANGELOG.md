@@ -1,5 +1,13 @@
 # Changelog
 
+### [6.0.3](https://www.github.com/cheminfo/nmr-processing/compare/v6.0.2...v6.0.3) (2022-01-23)
+
+
+### Bug Fixes
+
+* update dependencies ([2dcd4e3](https://www.github.com/cheminfo/nmr-processing/commit/2dcd4e332112231e4e27ff10a373792f1521a7ed))
+* web browser build ([08bc00f](https://www.github.com/cheminfo/nmr-processing/commit/08bc00f006735da794c07cb29dfc2520a4e283dc))
+
 ### [6.0.2](https://www.github.com/cheminfo/nmr-processing/compare/v6.0.1...v6.0.2) (2021-12-15)
 
 
