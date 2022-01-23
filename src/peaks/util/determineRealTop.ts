@@ -1,4 +1,4 @@
-import LM from 'ml-levenberg-marquardt';
+import { levenbergMarquardt } from 'ml-levenberg-marquardt';
 import type { Peak2D } from 'ml-matrix-peaks-finder';
 import { Gaussian2D } from 'ml-peak-shape-generator';
 
@@ -121,7 +121,7 @@ function fitGaussian(
   let gradientDifference = [1e-4, 1e-4, 1e-3, 1e-3, 1e-3];
   let func = paramGaussian2D(intervalX, intervalY, 3);
 
-  let pFit = LM({ x: xAxis, y: z }, func, {
+  let pFit = levenbergMarquardt({ x: xAxis, y: z }, func, {
     damping: 1.5,
     maxIterations: 100,
     errorTolerance: 1e-8,
