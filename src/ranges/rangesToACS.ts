@@ -3,7 +3,15 @@ import { signalMultiplicityPattern } from '../signal/signalMultiplicityPattern';
 import type { NMRSignal1D } from '../signals/NMRSignal1D';
 import type { NMRRange } from '../xy/NMRRange';
 
-const globalOptions = {
+const globalOptions: Record<
+  string,
+  {
+    nucleus: string;
+    nbDecimalDelta: number;
+    nbDecimalJ: number;
+    observedFrequency: number;
+  }
+> = {
   h: {
     nucleus: '1H',
     nbDecimalDelta: 2,
@@ -62,9 +70,8 @@ export function rangesToACS(
   options: RangesToACSOptions = {},
 ) {
   if (!options.nucleus) options.nucleus = '1H';
-  let nucleus = options.nucleus.toLowerCase().replace(/[0-9]/g, '');
-  //@ts-expect-error
-  let defaultOptions = globalOptions[nucleus];
+  const nucleus = options.nucleus.toLowerCase().replace(/[0-9]/g, '');
+  const defaultOptions = globalOptions[nucleus];
   options = Object.assign(
     {},
     defaultOptions,
@@ -75,13 +82,13 @@ export function rangesToACS(
   ranges = JSON.parse(JSON.stringify(ranges));
   if (options.ascending === true) {
     ranges.sort((a, b) => {
-      let fromA = Math.min(a.from, a.to);
-      let fromB = Math.min(b.from, b.to);
+      const fromA = Math.min(a.from, a.to);
+      const fromB = Math.min(b.from, b.to);
       return fromA - fromB;
     });
   }
-  let acsString = formatAcs(ranges, options);
 
+  let acsString = formatAcs(ranges, options);
   if (acsString.length > 0) acsString += '.';
 
   return acsString;
@@ -90,8 +97,8 @@ export function rangesToACS(
 function formatAcs(ranges: NMRRange[], options: any) {
   let acs = spectroInformation(options);
   if (acs.length === 0) acs = 'δ ';
-  let acsRanges: string[] = [];
-  for (let range of ranges) {
+  const acsRanges: string[] = [];
+  for (const range of ranges) {
     if (uselessKind(range.kind, options.filter)) continue;
     pushDelta(range, acsRanges, options);
   }
@@ -103,7 +110,7 @@ function formatAcs(ranges: NMRRange[], options: any) {
 }
 
 function spectroInformation(options: any) {
-  let parenthesis = [];
+  const parenthesis = [];
   let strings = `${formatNucleus(options.nucleus)} NMR`;
   if (options.solvent) {
     parenthesis.push(formatMF(options.solvent));
@@ -122,7 +129,7 @@ function spectroInformation(options: any) {
 function pushDelta(range: NMRRange, acsRanges: string[], options: any) {
   let strings = '';
   let parenthesis: any = [];
-  let fromTo = [range.from, range.to];
+  const fromTo = [range.from, range.to];
 
   if (range.signals) {
     range.signals = range.signals.filter(

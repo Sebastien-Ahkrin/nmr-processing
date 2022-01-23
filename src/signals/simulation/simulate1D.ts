@@ -133,7 +133,8 @@ export default function simulate1D(
         clusterFake,
       );
       const hamSize = hamiltonian.rows;
-      //@ts-expect-error
+      // TODO: add support for sparse matrix in matrix types.
+      // @ts-expect-error sparse matrix not supported
       const evd = new EVD(hamiltonian);
       const V = evd.eigenvectorMatrix;
       const diagB = evd.realEigenvalues;

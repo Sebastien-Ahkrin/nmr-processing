@@ -46,7 +46,7 @@ export async function predictProton(
     formData.append('molfile', molfile);
     const response = await fetch('https://www.nmrdb.org/service/predictor', {
       method: 'POST',
-      //@ts-expect-error
+      // @ts-expect-error RequestInit type does not include FormData.
       body: formData,
     });
     result = await response.text();

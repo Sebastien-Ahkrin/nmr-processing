@@ -12,7 +12,7 @@ export async function getPredictions(
   predictions?: Predictions,
 ) {
   let prediction: Prediction1D | undefined;
-  if (predictions && predictions[key]) {
+  if (predictions?.[key]) {
     prediction = predictions[key];
   } else if (predictor) {
     const fromPredictor = predictor[key];
