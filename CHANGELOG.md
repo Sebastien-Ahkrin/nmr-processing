@@ -1,5 +1,12 @@
 # Changelog
 
+### [6.0.4](https://www.github.com/cheminfo/nmr-processing/compare/v6.0.3...v6.0.4) (2022-01-23)
+
+
+### Bug Fixes
+
+* import levenberg-marquardt correctly ([1f8a84c](https://www.github.com/cheminfo/nmr-processing/commit/1f8a84c35b1130338fcc58b49bb9ef71e27aeb73))
+
 ### [6.0.3](https://www.github.com/cheminfo/nmr-processing/compare/v6.0.2...v6.0.3) (2022-01-23)
 
 
