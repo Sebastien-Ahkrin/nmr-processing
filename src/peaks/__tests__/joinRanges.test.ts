@@ -49,6 +49,44 @@ test('with two overlapping element in array', () => {
   expect(result).toStrictEqual([{ from: 0, to: 2 }]);
 });
 
+test('with two overlapping element one in another', () => {
+  const ranges: Array<NMRRange> = [
+    { from: 0, to: 2 },
+    { from: 1.4, to: 1.5 },
+  ];
+
+  const result = joinRanges(ranges);
+  expect(result).toStrictEqual([{ from: 0, to: 2 }]);
+});
+
+test('with three overlapping element one in another', () => {
+  const ranges: Array<NMRRange> = [
+    { from: 0, to: 2 },
+    { from: 1.4, to: 1.5 },
+    { from: 1.6, to: 3 },
+  ];
+
+  const result = joinRanges(ranges);
+  expect(result).toStrictEqual([{ from: 0, to: 3 }]);
+});
+
+test('complex overlapping ranges', () => {
+  const ranges: Array<NMRRange> = [
+    { from: -2, to: -1 },
+    { from: 0, to: 2 },
+    { from: 1.4, to: 1.5 },
+    { from: 1.6, to: 3 },
+    { from: 5, to: 6 },
+  ];
+
+  const result = joinRanges(ranges);
+  expect(result).toStrictEqual([
+    { from: -2, to: -1 },
+    { from: 0, to: 3 },
+    { from: 5, to: 6 },
+  ]);
+});
+
 test('with two overlapping elements & signals in array', () => {
   const ranges: Array<NMRRange> = [
     { from: -2, to: -1.5 },
