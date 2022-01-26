@@ -7,7 +7,8 @@ expect.extend({ toBeDeepCloseTo, toMatchCloseTo });
 
 describe('xyAutoRangesPicking', () => {
   it('a triplet and a quadruplet', () => {
-    let ranges = xyAutoRangesPicking(tripletQuadruplet, {});
+    let ranges = xyAutoRangesPicking(tripletQuadruplet);
+
     expect(ranges).toHaveLength(2);
     expect(ranges[1]).toMatchCloseTo(
       {

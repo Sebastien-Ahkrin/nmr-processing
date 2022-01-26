@@ -258,7 +258,6 @@ export function peaksToRanges(
   }
 
   if (joinOverlapRanges) ranges = joinRanges(ranges);
-  // return new Ranges(ranges);
   return ranges;
 }
 
